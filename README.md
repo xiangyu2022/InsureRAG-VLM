@@ -2,10 +2,10 @@
 Built a citation-grounded multimodal RAG system for insurance policy and endorsement review using page-image retrieval and VLM generation, with selective abstention and clause-diff analysis.
 
 ## What it does
-Page-image retrieval + grounded VLM answering for insurance policy review.
+Page-image retrieval + grounded VLM answering for insurance-related questions.
 
 ## Why this project
-Insurance policy packets are visually rich and OCR-only RAG often misses layout, tables, and endorsement drift.
+Insurance policy packets are visually rich, and OCR-only RAG often misses layout, tables, and endorsement drift.
 
 ## Data
 CUAD, ACORD, InsuranceQA, FUNSD/CORD proxies, plus synthetic policy QA pairs.
