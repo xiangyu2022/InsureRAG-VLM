@@ -1,0 +1,8 @@
+numpy
+pandas
+pyarrow
+Pillow
+requests
+openai
+pytesseract
+PyMuPDF

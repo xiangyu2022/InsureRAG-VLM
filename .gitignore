@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.*
+venv/
+notebook_env/
+data/index.npy
+data/index_meta.json
+data/00_raw/internal/
+data/01_interim/
+data/02_processed/
+data/03_index/
+data/manifests/
