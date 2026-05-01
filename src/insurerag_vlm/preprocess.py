@@ -288,6 +288,7 @@ def _build_page_manifest(pages: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
             "image_path": page["image_path"],
             "page_index": page["page_index"],
             "page_number": page["page_number"],
+            "source": page.get("source"),
             "section_hint": page.get("section_hint"),
             "version_id": page["version_id"],
             "source_type": page["source_type"],

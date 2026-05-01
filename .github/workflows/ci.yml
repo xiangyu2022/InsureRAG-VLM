@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  smoke-test:
+    name: No-key smoke test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install system dependencies
+        run: sudo apt-get install -y libgl1 libglib2.0-0 poppler-utils
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run smoke test
+        env:
+          INSURERAG_USE_OLLAMA: "0"
+        run: bash scripts/smoke_test.sh
+
+  lint:
+    name: Import check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check imports
+        run: |
+          python -c "from src.insurerag_vlm.pipeline import DocumentRetrievalPipeline"
+          python -c "from src.insurerag_vlm.knowledge import search_knowledge"
+          python -c "from src.insurerag_vlm.visual import build_visual_index"
+          echo "All imports OK"

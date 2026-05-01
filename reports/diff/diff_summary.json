@@ -1,0 +1,81 @@
+{
+  "coverage_changes": [
+    {
+      "change_type": "added",
+      "text": "Glass Coverage Endorsement waives the comprehensive deductible for covered windshield"
+    },
+    {
+      "change_type": "added",
+      "text": "Liability Coverage limit: $250,000 per person / $500,000 per accident."
+    },
+    {
+      "change_type": "added",
+      "text": "Medical Payments Coverage applies up to $10,000 per person for reasonable medical"
+    },
+    {
+      "change_type": "added",
+      "text": "This policy excludes coverage for intentional loss, racing, rideshare use, and commercial"
+    },
+    {
+      "change_type": "removed",
+      "text": "Liability Coverage limit: $100,000 per person / $300,000 per accident."
+    },
+    {
+      "change_type": "removed",
+      "text": "Medical Payments Coverage applies up to $5,000 per person for reasonable medical expenses"
+    },
+    {
+      "change_type": "removed",
+      "text": "This policy excludes coverage for intentional loss, racing, and commercial delivery use unless"
+    }
+  ],
+  "deductible_changes": [
+    {
+      "change_type": "added",
+      "text": "Comprehensive deductible: $750."
+    },
+    {
+      "change_type": "added",
+      "text": "Glass Coverage Endorsement waives the comprehensive deductible for covered windshield"
+    },
+    {
+      "change_type": "removed",
+      "text": "Comprehensive deductible: $500."
+    }
+  ],
+  "endorsement_drift": [
+    {
+      "change_type": "added",
+      "text": "Glass Coverage Endorsement waives the comprehensive deductible for covered windshield"
+    },
+    {
+      "change_type": "added",
+      "text": "Rental Reimbursement Endorsement provides up to $50 per day for a maximum of 30 days"
+    },
+    {
+      "change_type": "removed",
+      "text": "Rental Reimbursement Endorsement provides up to $40 per day for a maximum of 30 days"
+    }
+  ],
+  "exclusion_changes": [
+    {
+      "change_type": "added",
+      "text": "This policy excludes coverage for intentional loss, racing, rideshare use, and commercial"
+    },
+    {
+      "change_type": "removed",
+      "text": "This policy excludes coverage for intentional loss, racing, and commercial delivery use unless"
+    }
+  ],
+  "duties_after_loss_changes": [
+    {
+      "change_type": "added",
+      "text": "After a loss, the insured must promptly notify the insurer, cooperate with the investigation,"
+    },
+    {
+      "change_type": "removed",
+      "text": "After a loss, the insured must promptly notify the insurer, cooperate with the investigation, and"
+    }
+  ],
+  "summary": "Detected changes in: deductible, coverage, endorsement, exclusion, duties."
+}

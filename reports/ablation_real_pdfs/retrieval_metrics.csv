@@ -1,0 +1,5 @@
+backend,recall_at_1,recall_at_5,mrr_at_10,ndcg_at_10,evaluated_count
+local_text,0.0567,0.2600,0.1238,0.1573,300
+visual_stub,0.0300,0.1367,0.0634,0.0813,300
+local_image,0.0300,0.1367,0.0634,0.0813,300
+colqwen2_local,,,,,

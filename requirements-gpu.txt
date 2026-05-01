@@ -1,0 +1,9 @@
+# Optional GPU stack for real ColPali/ColQwen2 page-image retrieval.
+# Install this only on a GPU machine or cloud runtime.
+torch
+torchvision
+transformers>=4.53
+accelerate
+safetensors
+Pillow
+

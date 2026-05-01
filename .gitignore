@@ -9,7 +9,24 @@ notebook_env/
 data/index.npy
 data/index_meta.json
 data/00_raw/internal/
+data/00_raw/external/
 data/01_interim/
 data/02_processed/
 data/03_index/
 data/manifests/
+notebooks/data/
+# Allow compact metric reports (*.md, *.csv, *.json); ignore binaries and page images
+reports/**/*.pt
+reports/**/*.npy
+reports/**/*.pkl
+reports/**/*.parquet
+reports/**/*.pdf
+reports/**/*.png
+reports/**/*.jpg
+reports/**/index/
+reports/demo_uploads/
+reports/public_docs_smoke/
+reports/public_docs_qa/
+reports/synthetic_qa_check/
+reports/synthetic_visual_check/
+

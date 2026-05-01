@@ -1,7 +1,9 @@
 import difflib
+import json
 import re
 from collections import Counter
 from dataclasses import dataclass
+from pathlib import Path
 from typing import List
 
 SENTENCE_SPLIT_RE = re.compile(r"(?<=[.!?])\s+")
@@ -108,3 +110,57 @@ def render_clause_diff(changes: List[ClauseChange]) -> str:
         }.get(change.change_type, " ")
         output_lines.append(f"{prefix} {change.text}")
     return "\n".join(output_lines)
+
+
+def _matching_lines(text: str, patterns: List[str]) -> List[str]:
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    matches = []
+    for line in lines:
+        lowered = line.lower()
+        if any(pattern in lowered for pattern in patterns):
+            matches.append(line)
+    return matches
+
+
+def _line_changes(old_text: str, new_text: str, patterns: List[str]) -> List[dict]:
+    old_lines = set(_matching_lines(old_text, patterns))
+    new_lines = set(_matching_lines(new_text, patterns))
+    changes = []
+    for line in sorted(new_lines - old_lines):
+        changes.append({"change_type": "added", "text": line})
+    for line in sorted(old_lines - new_lines):
+        changes.append({"change_type": "removed", "text": line})
+    return changes
+
+
+def summarize_policy_diff(old_text: str, new_text: str) -> dict:
+    deductible_changes = _line_changes(old_text, new_text, ["deductible"])
+    coverage_changes = _line_changes(old_text, new_text, ["coverage", "limit", "liability"])
+    endorsement_drift = _line_changes(old_text, new_text, ["endorsement", "rider"])
+    exclusion_changes = _line_changes(old_text, new_text, ["exclusion", "excludes"])
+    duties_changes = _line_changes(old_text, new_text, ["insured must", "duties", "after a loss", "promptly notify"])
+
+    counts = {
+        "deductible": len(deductible_changes),
+        "coverage": len(coverage_changes),
+        "endorsement": len(endorsement_drift),
+        "exclusion": len(exclusion_changes),
+        "duties": len(duties_changes),
+    }
+    changed = [name for name, count in counts.items() if count]
+    summary = "No material policy-rule changes detected." if not changed else "Detected changes in: " + ", ".join(changed) + "."
+    return {
+        "coverage_changes": coverage_changes,
+        "deductible_changes": deductible_changes,
+        "endorsement_drift": endorsement_drift,
+        "exclusion_changes": exclusion_changes,
+        "duties_after_loss_changes": duties_changes,
+        "summary": summary,
+    }
+
+
+def write_policy_diff(old_text: str, new_text: str, output_path: Path) -> dict:
+    result = summarize_policy_diff(old_text, new_text)
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    Path(output_path).write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+    return result
