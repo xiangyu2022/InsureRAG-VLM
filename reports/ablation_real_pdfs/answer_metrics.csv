@@ -1,0 +1,2 @@
+backend,evaluated_count,f1,citation_precision,evidence_recall,unsupported_abstention_accuracy,p50_latency_ms,p95_latency_ms
+local_text,303,0.36952642154115845,0.25333333333333335,0.25333333333333335,0.6666666666666666,2.6763780042529106,3.197165031451732

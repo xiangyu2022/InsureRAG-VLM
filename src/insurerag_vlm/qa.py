@@ -114,6 +114,76 @@ PUBLIC_DATA_SOURCES = {
                 "local_name": "nc_business_guide.pdf",
                 "description": "Scanned business/commercial insurance consumer guide.",
             },
+            {
+                "name": "NC Consumers Guide to Disability Insurance",
+                "source": "North Carolina Department of Insurance",
+                "url": "https://www.ncdoi.gov/consumers-guide-disability-insurance/open",
+                "local_name": "nc_disability_insurance_guide.pdf",
+                "description": "Consumer guide for disability income insurance.",
+            },
+            {
+                "name": "NC Consumers Guide to Travel Insurance",
+                "source": "North Carolina Department of Insurance",
+                "url": "https://www.ncdoi.gov/consumers-guide-travel-insurance/open",
+                "local_name": "nc_travel_insurance_guide.pdf",
+                "description": "Consumer guide for travel insurance.",
+            },
+            {
+                "name": "Maryland Consumer Guide to Homeowners Insurance",
+                "source": "Maryland Insurance Administration",
+                "url": "https://insurance.maryland.gov/Consumer/Documents/publications/homeownersinsguide.pdf",
+                "local_name": "md_homeowners_insurance_guide.pdf",
+                "description": "Consumer guide to homeowners insurance coverage, claims, and rates.",
+            },
+            {
+                "name": "Maryland Homeowners Disclosure Notice",
+                "source": "Maryland Insurance Administration",
+                "url": "https://insurance.maryland.gov/Consumer/Documents/HomeownersDisclosureNotice.pdf",
+                "local_name": "md_homeowners_disclosure_notice.pdf",
+                "description": "Required homeowners insurance disclosure notice.",
+            },
+            {
+                "name": "Maryland Uninsured Motorist Claims Advisory",
+                "source": "Maryland Insurance Administration",
+                "url": "https://insurance.maryland.gov/Consumer/Documents/publications/ConsumerAdvisory-What-You-Need-To-Know-About-Uninsured-Motorist-Claims.pdf",
+                "local_name": "md_uninsured_motorist_claims_advisory.pdf",
+                "description": "Consumer advisory on uninsured motorist claims.",
+            },
+            {
+                "name": "Maryland College-Bound Child Insurance Advisory",
+                "source": "Maryland Insurance Administration",
+                "url": "https://insurance.maryland.gov/Consumer/Documents/publications/Consumer-Advisory-Hitting-the-Books-on-Insurance-for-Your-College-Bound-Child.pdf",
+                "local_name": "md_college_bound_child_insurance_advisory.pdf",
+                "description": "Consumer advisory about property, auto, and health insurance for college-bound students.",
+            },
+            {
+                "name": "Maryland Licensed Drivers in Household Advisory",
+                "source": "Maryland Insurance Administration",
+                "url": "https://insurance.maryland.gov/Consumer/Documents/publicnew/ConsumerAdvisory-Licensed-Drivers-Household.pdf",
+                "local_name": "md_licensed_drivers_household_advisory.pdf",
+                "description": "Consumer advisory on undisclosed licensed drivers and auto coverage.",
+            },
+            {
+                "name": "Maryland Insurance Coverage Review Tips Advisory",
+                "source": "Maryland Insurance Administration",
+                "url": "https://insurance.maryland.gov/Consumer/Documents/publicnew/ConsumerAdvisory-Insurance-Coverage-Tips.pdf",
+                "local_name": "md_insurance_coverage_tips_advisory.pdf",
+                "description": "Consumer advisory with tips for reviewing insurance coverage.",
+            },
+            {
+                "name": "NC Consumers Guide to Homeowners Insurance Archive",
+                "source": "North Carolina Department of Insurance",
+                "url": "https://www.ncdoi.gov/consumers-guide-homeowners-insurance/open",
+                "local_name": "nc_homeowners_guide_archive.pdf",
+                "description": "Archived consumers guide to homeowners insurance.",
+            },
+            {
+                "name": "Maryland Homeowners Insurance Still Important Advisory",
+                "source": "Maryland Insurance Administration",
+                "url": "https://insurance.maryland.gov/Consumer/Documents/publicnew/ConsumerAlert-Homeowners-3152022.pdf",
+                "local_name": "md_homeowners_still_important_advisory.pdf",
+                "description": "Consumer advisory about maintaining homeowners insurance after paying off a mortgage.",
+            },
         ],
     },
 }
@@ -125,6 +195,7 @@ class QAResult:
     hard_negatives_path: Path
     qa_count: int
     hard_negative_count: int
+    splits_path: Optional[Path] = None
 
 
 @dataclass
@@ -207,6 +278,11 @@ def download_public_datasets(
                         timeout=120,
                     )
                     response.raise_for_status()
+                    if not response.content.lstrip().startswith(b"%PDF"):
+                        raise ValueError(
+                            f"Downloaded content is not a PDF "
+                            f"(content-type={response.headers.get('content-type', 'unknown')})"
+                        )
                     doc_path.write_bytes(response.content)
                     doc_record["status"] = "downloaded"
                     doc_record["bytes"] = len(response.content)
@@ -420,6 +496,20 @@ def _infer_topic(evidence: str) -> str:
     return sorted(counts.items(), key=lambda item: (-item[1], item[0]))[0][0].replace("-", " ")
 
 
+def _distinctive_phrase(evidence: str, max_terms: int = 4) -> str:
+    tokens = _content_tokens(evidence)
+    if not tokens:
+        return ""
+    counts: Dict[str, int] = {}
+    ordered_tokens = []
+    for token in tokens:
+        if token not in counts:
+            ordered_tokens.append(token)
+        counts[token] = counts.get(token, 0) + 1
+    ranked = sorted(ordered_tokens, key=lambda token: (-counts[token], ordered_tokens.index(token)))
+    return " ".join(ranked[:max_terms]).replace("-", " ")
+
+
 def _expanded_qa_from_page(doc: PageDocument, qa_index: int, max_per_page: int = 8) -> List[Dict[str, Any]]:
     source = doc.metadata.get("source", doc.doc_id)
     doc_id = doc.metadata.get("path") or doc.doc_id
@@ -430,14 +520,18 @@ def _expanded_qa_from_page(doc: PageDocument, qa_index: int, max_per_page: int =
 
     for chunk_idx, chunk in enumerate(chunks):
         topic = _infer_topic(chunk)
+        phrase = _distinctive_phrase(chunk)
+        anchor = f" mentioning {phrase}" if phrase else ""
         templates = [
-            f"What does the document say about {topic}?",
-            f"Which evidence explains {topic}?",
-            f"Summarize the policy guidance on {topic}.",
-            f"Find the page evidence related to {topic}.",
+            f"What does the page{anchor} say about {topic}?",
+            f"Which evidence{anchor} explains {topic}?",
+            f"Summarize the policy guidance{anchor} on {topic}.",
+            f"Find the page evidence{anchor} related to {topic}.",
+            f"How is {topic} described in the evidence{anchor}?",
+            f"What should a consumer know about {topic} from the passage{anchor}?",
         ]
         if "$" in chunk or re.search(r"\b\d+%|\b\d+/\d+/\d+\b", chunk):
-            templates.append(f"What amount, limit, or numeric detail is stated about {topic}?")
+            templates.append(f"What amount, limit, or numeric detail{anchor} is stated about {topic}?")
         for template_idx, question in enumerate(templates):
             key = question.lower()
             if key in seen_questions:
@@ -460,6 +554,102 @@ def _expanded_qa_from_page(doc: PageDocument, qa_index: int, max_per_page: int =
     return records
 
 
+def _augment_multi_positive_sources(
+    qa_pairs: List[Dict[str, Any]],
+    documents: List[PageDocument],
+    max_sources: int = 5,
+) -> None:
+    docs_by_name: Dict[str, List[PageDocument]] = {}
+    for doc in documents:
+        source = doc.metadata.get("source", doc.doc_id)
+        doc_name = source.split("#page=", 1)[0]
+        docs_by_name.setdefault(doc_name, []).append(doc)
+
+    for qa in qa_pairs:
+        if not qa.get("answerable", True) or qa.get("qa_source") != "real_pdf_evidence_rules":
+            continue
+        evidence_sources = list(qa.get("evidence_sources", []))
+        if not evidence_sources:
+            continue
+        doc_name = evidence_sources[0].split("#page=", 1)[0]
+        query_terms = set(_content_tokens(f"{qa.get('question', '')} {qa.get('evidence_text', '')}"))
+        if not query_terms:
+            continue
+        scored = []
+        for doc in docs_by_name.get(doc_name, []):
+            source = doc.metadata.get("source", doc.doc_id)
+            if source in evidence_sources:
+                continue
+            page_terms = set(_content_tokens(doc.text or ""))
+            overlap = len(query_terms & page_terms)
+            if overlap >= 3:
+                scored.append((overlap, source))
+        scored.sort(key=lambda item: (-item[0], item[1]))
+        for _, source in scored[: max(0, max_sources - len(evidence_sources))]:
+            evidence_sources.append(source)
+
+        qa["evidence_sources"] = evidence_sources
+        qa["citations"] = evidence_sources
+        qa["evidence_page_ids"] = [_source_to_page_id(source) for source in evidence_sources]
+
+
+def _build_document_split_records(
+    documents: List[PageDocument],
+    train_ratio: float = 0.8,
+    valid_ratio: float = 0.1,
+    seed: int = 42,
+) -> List[Dict[str, Any]]:
+    doc_ids = sorted({doc.metadata.get("path") or doc.doc_id.split("#page=", 1)[0] for doc in documents})
+    rng = random.Random(seed)
+    rng.shuffle(doc_ids)
+    total = len(doc_ids)
+    if total == 0:
+        return []
+
+    if total == 1:
+        split_names = ["train"]
+    else:
+        train_n = max(1, int(total * train_ratio))
+        valid_n = max(1, int(total * valid_ratio)) if total >= 3 else 0
+        if train_n + valid_n >= total:
+            train_n = max(1, total - 1)
+            valid_n = 0 if total == 2 else 1
+        test_n = max(0, total - train_n - valid_n)
+        if total >= 3 and test_n == 0:
+            train_n = max(1, train_n - 1)
+            test_n = 1
+        split_names = ["train"] * train_n + ["valid"] * valid_n + ["test"] * test_n
+
+    return [
+        {"doc_id": doc_id, "split": split_name}
+        for doc_id, split_name in zip(doc_ids, split_names)
+    ]
+
+
+def _assign_qa_document_splits(
+    qa_pairs: List[Dict[str, Any]],
+    documents: List[PageDocument],
+    output_dir: Path,
+) -> Path:
+    split_records = _build_document_split_records(documents)
+    split_by_doc = {record["doc_id"]: record["split"] for record in split_records}
+    for qa in qa_pairs:
+        doc_id = qa.get("doc_id")
+        if doc_id and doc_id in split_by_doc:
+            qa["split"] = split_by_doc[doc_id]
+            qa["split_doc_id"] = doc_id
+        elif qa.get("answerable", True):
+            qa["split"] = "train"
+            qa["split_doc_id"] = doc_id
+        else:
+            qa["split"] = "test"
+            qa["split_doc_id"] = None
+
+    splits_path = Path(output_dir) / "qa_splits.jsonl"
+    _write_jsonl(split_records, splits_path)
+    return splits_path
+
+
 def generate_policy_qa_pairs(
     data_folder: Path,
     output_dir: Path = Path("data/02_processed"),
@@ -472,24 +662,41 @@ def generate_policy_qa_pairs(
         qa_pairs.extend(_policy_qa_from_page(doc, idx))
 
     if target_count and len([item for item in qa_pairs if item.get("answerable", True)]) < target_count:
-        per_page = max(4, min(16, math.ceil(target_count / max(1, len(documents)))))
-        expanded: List[Dict[str, Any]] = []
+        per_page = max(8, min(24, math.ceil(target_count / max(1, len(documents))) + 6))
         seen = {
             (item.get("question"), item.get("answer"), tuple(item.get("evidence_sources", [])))
             for item in qa_pairs
         }
+        expanded_by_doc: List[List[Dict[str, Any]]] = []
         for idx, doc in enumerate(documents):
+            doc_records: List[Dict[str, Any]] = []
             for item in _expanded_qa_from_page(doc, idx, max_per_page=per_page):
                 key = (item.get("question"), item.get("answer"), tuple(item.get("evidence_sources", [])))
                 if key in seen:
                     continue
                 seen.add(key)
-                expanded.append(item)
+                doc_records.append(item)
+            if doc_records:
+                expanded_by_doc.append(doc_records)
+
+        expanded: List[Dict[str, Any]] = []
+        offsets = [0 for _ in expanded_by_doc]
+        while len(qa_pairs) + len(expanded) < target_count:
+            added_this_round = False
+            for bucket_idx, bucket in enumerate(expanded_by_doc):
+                offset = offsets[bucket_idx]
+                if offset >= len(bucket):
+                    continue
+                expanded.append(bucket[offset])
+                offsets[bucket_idx] += 1
+                added_this_round = True
                 if len(qa_pairs) + len(expanded) >= target_count:
                     break
-            if len(qa_pairs) + len(expanded) >= target_count:
+            if not added_this_round:
                 break
         qa_pairs.extend(expanded)
+
+    _augment_multi_positive_sources(qa_pairs, documents)
 
     if include_unsupported:
         unsupported_questions = [
@@ -510,12 +717,13 @@ def generate_policy_qa_pairs(
                 )
             )
 
+    splits_path = _assign_qa_document_splits(qa_pairs, documents, Path(output_dir))
     hard_negatives = build_hard_negatives(qa_pairs, documents)
     qa_path = Path(output_dir) / "qa_pairs.jsonl"
     hard_path = Path(output_dir) / "hard_negatives.jsonl"
     _write_jsonl(qa_pairs, qa_path)
     _write_jsonl(hard_negatives, hard_path)
-    return QAResult(qa_path, hard_path, len(qa_pairs), len(hard_negatives))
+    return QAResult(qa_path, hard_path, len(qa_pairs), len(hard_negatives), splits_path)
 
 
 def build_hard_negatives(

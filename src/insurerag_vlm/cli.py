@@ -259,6 +259,8 @@ def main() -> None:
         qa_files = [policy_result.qa_path]
         print(f"Policy QA: {policy_result.qa_count} examples -> {policy_result.qa_path}")
         print(f"Policy hard negatives: {policy_result.hard_negative_count} -> {policy_result.hard_negatives_path}")
+        if policy_result.splits_path:
+            print(f"Policy QA document splits: {policy_result.splits_path}")
 
         if args.cuad_master:
             cuad_path = args.output_dir / "cuad_qa_pairs.jsonl"

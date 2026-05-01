@@ -27,6 +27,7 @@ reports/**/index/
 reports/demo_uploads/
 reports/public_docs_smoke/
 reports/public_docs_qa/
+reports/public_docs_qa_v2/
+reports/public_docs_qa_v3/
 reports/synthetic_qa_check/
 reports/synthetic_visual_check/
-

@@ -70,44 +70,58 @@ Implemented:
 - Local image-aware retrieval backend (`local_image`) that reads page images and preserves the future ColPali/ColQwen2 output schema.
 - Weak query-page training pairs from section hints.
 - Document-level train/valid/test splits.
-- Public PDF data importer for a small real insurance document smoke-test set.
+- Public PDF data importer with 20 downloadable state insurance department PDFs.
+- 200-500 scale real-PDF QA/evidence generation with QA-level document split labels.
 - No-key local demo baseline with hashing retrieval and extractive cited answers.
 - Synthetic insurance policy PDF and evaluation examples for immediate smoke tests.
 - Existing text-RAG scaffold, PDF extraction, evaluation helpers, and policy diff utilities.
 - Calibration report for selective answering and unsupported-question abstention.
-- Animated browser demo for cited answers, retrieval trace, abstention, and policy-version diff.
+- Animated browser demo for cited answers, cited-page thumbnails, highlighted evidence snippets, retrieval trace, abstention, upload flow, and policy-version diff.
+- Optional Hugging Face Transformers GPU backends for `colqwen2_hf` / `colqwen2_local` and `colpali_hf` / `colpali_local`.
 
 Still planned:
-- Real GPU ColQwen2/ColPali embedding generation beyond the current `local_image` baseline.
+- Measured CUDA results for ColQwen2/ColPali beyond the current `local_image` baseline.
 - Layout/table extraction as explanation and evaluation metadata.
-- Multi-file upload sessions and visual page thumbnails inside the browser app. The current browser demo can upload and index one local PDF for Q&A, while the policy-diff animation uses the bundled v1/v2 sample pair.
+- Multi-file upload sessions. The current browser demo can upload and index one local PDF for Q&A, while the policy-diff animation uses the bundled v1/v2 sample pair.
 
 ## Current Reproducible Results
 
-### Real Public PDF Evaluation (primary eval set)
+### Real Public PDF Evaluation
 
-Evaluated on **300 QA pairs from real public insurance PDFs** — Maryland and North Carolina state
-insurance department consumer guides. Document-level splits: 8 train / 1 val / 1 test documents.
-64 pages across 10 documents (2 text-extractable, 8 scanned/image-only).
+Latest local run: **20 public insurance PDFs**, **168 rendered pages**, and **303 QA rows**
+from Maryland and North Carolina insurance department documents. The QA set contains
+300 answerable examples plus 3 unsupported examples, with document-level split labels.
 
 | Backend | Recall@1 | Recall@5 | MRR@10 | nDCG@10 |
 | --- | ---: | ---: | ---: | ---: |
-| local_text (OCR + hashing) | 0.0567 | 0.2600 | 0.1238 | 0.1573 |
-| visual_stub (random baseline) | 0.0300 | 0.1367 | 0.0634 | 0.0813 |
-| local_image (image hash baseline) | 0.0300 | 0.1367 | 0.0634 | 0.0813 |
-| colqwen2_local (GPU, pending) | — | — | — | — |
+| local_text (text + hashing) | 0.2033 | 0.4467 | 0.2974 | 0.3348 |
+| visual_stub | 0.1733 | 0.4400 | 0.2733 | 0.3149 |
+| local_image (image-aware local baseline) | 0.1733 | 0.4400 | 0.2733 | 0.3149 |
+| colqwen2_local / colpali_local (GPU) | pending CUDA run | pending CUDA run | pending CUDA run | pending CUDA run |
 
-`local_text` outperforms visual baselines on text-extractable pages; the 8 scanned NC PDFs
-have no extractable text and require visual retrieval to be answerable — motivating ColQwen2.
-See `reports/ablation_real_pdfs/` and `notebooks/colqwen2_gpu_embed.ipynb` for GPU instructions.
+Answering and calibration reports from the same run:
+
+| Metric | Value |
+| --- | ---: |
+| Extractive answer F1 | 0.3695 |
+| Citation precision | 0.2533 |
+| Evidence recall | 0.2533 |
+| Unsupported abstention accuracy | 0.6667 |
+| Calibration suggested threshold | 0.40 |
+| Calibration coverage at threshold | 0.6898 |
+
+These are local baselines, not final benchmark claims. The close `local_text` vs `local_image`
+gap is useful as a sanity check; the next meaningful result is a CUDA run with real
+ColQwen2/ColPali embeddings. See `reports/ablation_real_pdfs/`,
+`reports/calibration_real_pdfs/`, and `notebooks/colqwen2_gpu_embed.ipynb`.
 
 ### Synthetic Policy Smoke Test (reproducibility check)
 
-Local smoke-test results on the bundled synthetic policy QA set (16 pages, 19 QA pairs):
+Local smoke-test results on the bundled synthetic policy QA set:
 
 | Backend | Recall@1 | Recall@5 | MRR@10 | nDCG@10 |
 | --- | ---: | ---: | ---: | ---: |
-| local_text | 0.3125 | 0.8125 | 0.5521 | 0.6198 |
+| local_text | 0.3125 | 1.0000 | 0.5958 | 0.6978 |
 | visual_stub | 0.3125 | 0.6250 | 0.4479 | 0.4933 |
 | local_image | 0.3125 | 0.6250 | 0.4479 | 0.4933 |
 
@@ -260,34 +274,47 @@ Generate a 200-500 example real-PDF QA/evidence set:
 ```bash
 .venv/bin/python main.py import-data --output-root data --datasets public_docs
 .venv/bin/python main.py generate-qa data/00_raw/external/public_docs \
-  --output-dir reports/public_docs_qa \
-  --target-count 250
+  --output-dir reports/public_docs_qa_v3 \
+  --target-count 300
 .venv/bin/python main.py build-index data/00_raw/external/public_docs \
-  --index-dir reports/public_docs_qa/index
+  --index-dir reports/public_docs_qa_v3/index
 .venv/bin/python main.py retrieval-metrics data/00_raw/external/public_docs \
-  reports/public_docs_qa/qa_pairs.jsonl \
-  --index-dir reports/public_docs_qa/index \
+  reports/public_docs_qa_v3/qa_pairs.jsonl \
+  --index-dir reports/public_docs_qa_v3/index \
   --top-k 5
 ```
+
+The real-PDF QA generator creates evidence-anchored questions, supports multi-positive page labels for broad topics, and writes `qa_splits.jsonl` plus per-example `split` / `split_doc_id` fields to keep evaluation document-aware. The GPU ColQwen2/ColPali run should be reported separately once executed on a CUDA machine.
 
 Run the ablation harness:
 
 ```bash
-.venv/bin/python main.py run-ablation --data-folder data/00_raw/public --qa-path data/02_processed/qa_pairs.jsonl --output-dir reports/ablation --top-k 3
+.venv/bin/python main.py run-ablation \
+  --data-folder data/00_raw/external/public_docs \
+  --qa-path reports/public_docs_qa_v3/qa_pairs.jsonl \
+  --output-dir reports/ablation_real_pdfs \
+  --index-dir reports/public_docs_qa_v3/index \
+  --visual-index-dir data/03_index/colqwen2 \
+  --top-k 5
 ```
 
 Run the calibration and selective-abstention report:
 
 ```bash
-.venv/bin/python main.py run-calibration --data-folder data/00_raw/public --qa-path data/02_processed/qa_pairs.jsonl --output-dir reports/calibration --top-k 3
+.venv/bin/python main.py run-calibration \
+  --data-folder data/00_raw/external/public_docs \
+  --qa-path reports/public_docs_qa_v3/qa_pairs.jsonl \
+  --output-dir reports/calibration_real_pdfs \
+  --index-dir reports/public_docs_qa_v3/index \
+  --top-k 5
 ```
 
 Outputs:
 
 ```text
-reports/calibration/calibration_scores.jsonl
-reports/calibration/calibration_curve.csv
-reports/calibration/summary.md
+reports/calibration_real_pdfs/calibration_scores.jsonl
+reports/calibration_real_pdfs/calibration_curve.csv
+reports/calibration_real_pdfs/summary.md
 ```
 
 Emit structured grounded-answer JSON:

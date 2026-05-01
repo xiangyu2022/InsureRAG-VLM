@@ -54,12 +54,42 @@ def _write_jsonl(records: Iterable[Dict[str, Any]], path: Path) -> None:
 def _visual_stub_text(page: Dict[str, Any]) -> str:
     parts = [
         page.get("section_hint") or "",
+        page.get("text_layer") or "",
+        page.get("ocr_text") or "",
         page.get("source") or "",
         page.get("doc_id") or "",
         page.get("version_id") or "",
         str(page.get("page_number") or page.get("page_index") or ""),
     ]
     return " ".join(str(part) for part in parts if part)
+
+
+def _candidate_ocr_aux_paths(page_manifest_path: Path) -> List[Path]:
+    path = Path(page_manifest_path)
+    return [
+        path.parent / "ocr_aux.jsonl",
+        path.parent.parent / "02_processed" / "ocr_aux.jsonl",
+        path.parent.parent.parent / "02_processed" / "ocr_aux.jsonl",
+        Path("data/02_processed/ocr_aux.jsonl"),
+    ]
+
+
+def _enrich_pages_with_aux_text(pages: List[Dict[str, Any]], page_manifest_path: Path) -> List[Dict[str, Any]]:
+    aux_path = next((candidate for candidate in _candidate_ocr_aux_paths(page_manifest_path) if candidate.exists()), None)
+    if aux_path is None:
+        return pages
+
+    aux_by_page = {item.get("page_id"): item for item in _read_jsonl(aux_path)}
+    enriched_pages = []
+    for page in pages:
+        enriched = dict(page)
+        aux = aux_by_page.get(page.get("page_id"), {})
+        if aux:
+            enriched["text_layer"] = aux.get("text_layer", "")
+            enriched["ocr_text"] = aux.get("ocr_text", "")
+            enriched["aux_text_chars"] = len(enriched["text_layer"] or enriched["ocr_text"] or "")
+        enriched_pages.append(enriched)
+    return enriched_pages
 
 
 def _resolve_image_path(image_path: str | None, manifest_path: Path | None = None) -> Path | None:
@@ -257,7 +287,7 @@ def _batch_items(items: List[Any], batch_size: int) -> Iterable[List[Any]]:
 
 def _build_hf_visual_index(page_manifest_path: Path, index_dir: Path, backend: str) -> VisualIndexResult:
     torch, model, processor, model_name = _load_hf_model_and_processor(backend)
-    pages = _read_jsonl(page_manifest_path)
+    pages = _enrich_pages_with_aux_text(_read_jsonl(page_manifest_path), page_manifest_path)
     batch_size = int(os.environ.get("INSURERAG_VISUAL_BATCH_SIZE", "2"))
     device = _model_device(model)
     embedding_dir = _embedding_dir(index_dir, backend)
@@ -351,7 +381,7 @@ def build_visual_index(
     if backend in HF_VISUAL_BACKENDS:
         return _build_hf_visual_index(page_manifest_path, index_dir, backend)
 
-    pages = _read_jsonl(page_manifest_path)
+    pages = _enrich_pages_with_aux_text(_read_jsonl(page_manifest_path), page_manifest_path)
     texts = [_visual_stub_text(page) for page in pages]
     text_embeddings = _page_text_embeddings(texts)
 

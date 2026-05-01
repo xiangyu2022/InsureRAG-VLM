@@ -14,6 +14,7 @@ from .vlm import VLMClient, format_prompt
 class DocumentRetrievalPipeline:
     def __init__(self, config: ModelConfig):
         self.config = config
+        self._documents_cache: Dict[tuple[str, bool, str], List[PageDocument]] = {}
         self.retriever = EmbeddingRetriever(
             config.retrieval_model,
             use_hf_api=config.use_hf_api,
@@ -47,6 +48,13 @@ class DocumentRetrievalPipeline:
         self.retriever.build_index(serialized_documents, self.config.index_path, self.config.metadata_path)
 
     def _load_documents(self, data_folder: Path) -> List[PageDocument]:
+        cache_key = (
+            str(Path(data_folder).resolve()),
+            bool(self.config.render_pdf_pages),
+            str(Path(self.config.pdf_render_dir).resolve()) if self.config.pdf_render_dir else "",
+        )
+        if cache_key in self._documents_cache:
+            return self._documents_cache[cache_key]
         documents = load_documents(
             data_folder,
             render_pdf_pages=self.config.render_pdf_pages,
@@ -55,6 +63,7 @@ class DocumentRetrievalPipeline:
         for doc in documents:
             if doc.image_path and not doc.text:
                 doc.text = extract_text_from_image(doc.image_path)
+        self._documents_cache[cache_key] = documents
         return documents
 
     def query(self, question: str, data_folder: Path, top_k: Optional[int] = None) -> str:
@@ -194,8 +203,31 @@ class DocumentRetrievalPipeline:
         top_score = max(0.0, min(1.0, float(ranked_pages[0].get("score", 0.0))))
         question_terms = {term for term in re.findall(r"[a-zA-Z0-9$%]+", question.lower()) if len(term) > 2}
         answer_terms = {term for term in re.findall(r"[a-zA-Z0-9$%]+", answer.lower()) if len(term) > 2}
+        generic_terms = {
+            "what", "which", "does", "this", "that", "policy", "coverage", "include",
+            "includes", "provide", "provides", "listed", "insurance", "from", "your",
+            "about", "page", "evidence", "mentioning", "explains", "summarize",
+            "guidance", "consumer", "know", "passage", "related", "described",
+            "find", "amount", "numeric", "detail", "stated",
+        }
+        key_terms = question_terms - generic_terms
+        evidence_terms = {
+            term
+            for page in ranked_pages[:3]
+            for term in re.findall(r"[a-zA-Z0-9$%]+", str(page.get("text_snippet", "")).lower())
+            if len(term) > 2
+        }
         overlap = len(question_terms & answer_terms) / max(1, len(question_terms))
-        return round(0.7 * top_score + 0.3 * overlap, 4)
+        evidence_overlap = len(key_terms & evidence_terms) / max(1, len(key_terms))
+        confidence = 0.55 * top_score + 0.20 * overlap + 0.25 * evidence_overlap
+        missing_specific_terms = [
+            term for term in key_terms if len(term) >= 7 and term not in evidence_terms
+        ]
+        if missing_specific_terms and evidence_overlap <= 0.50:
+            confidence = min(confidence, 0.19)
+        elif key_terms and evidence_overlap < 0.25:
+            confidence = min(confidence, 0.19)
+        return round(confidence, 4)
 
     @staticmethod
     def _select_evidence_snippet(question: str, text: str, max_chars: int = 900) -> str:

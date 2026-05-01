@@ -1,5 +1,6 @@
 import json
 import re
+import hashlib
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -17,6 +18,7 @@ DATA_FOLDER = PROJECT_ROOT / "data" / "00_raw" / "public"
 INDEX_DIR = PROJECT_ROOT / "data"
 UPLOAD_DIR = PROJECT_ROOT / "reports" / "demo_uploads" / "current"
 UPLOAD_INDEX_DIR = PROJECT_ROOT / "reports" / "demo_uploads" / "index"
+PAGE_CACHE_DIR = PROJECT_ROOT / "reports" / "demo_uploads" / "page_cache"
 SAMPLE_PDF = PROJECT_ROOT / "data" / "00_raw" / "public" / "synthetic_auto_policy.pdf"
 
 _DIFF_TRIGGERS = re.compile(
@@ -436,6 +438,36 @@ HTML = r"""<!doctype html>
       border-left: 3px solid var(--blue);
       background: rgba(96,165,250,.04);
     }
+    .citation-preview {
+      display: grid;
+      grid-template-columns: 116px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+    }
+    .citation-thumb {
+      width: 116px;
+      max-height: 154px;
+      object-fit: contain;
+      background: #111;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+    .citation-evidence {
+      min-width: 0;
+      border-left: 3px solid var(--accent);
+      padding: 8px 10px;
+      border-radius: 6px;
+      background: rgba(25,195,125,.055);
+      color: #d9d9d9;
+      overflow-wrap: anywhere;
+    }
+    .citation-evidence mark {
+      color: inherit;
+      background: rgba(251,191,36,.22);
+      border-bottom: 1px solid rgba(251,191,36,.42);
+      border-radius: 3px;
+      padding: 0 2px;
+    }
 
     /* Retrieval trace */
     details.trace {
@@ -572,6 +604,8 @@ HTML = r"""<!doctype html>
     @media (max-width: 780px) {
       .sidebar { display: none; }
       .suggest-grid { grid-template-columns: 1fr; }
+      .citation-preview { grid-template-columns: 1fr; }
+      .citation-thumb { width: 100%; max-height: 220px; }
     }
   </style>
 </head>
@@ -761,6 +795,7 @@ fileInput.addEventListener('change', async () => {
    RENDER helpers
 ──────────────────────────────────────────────────────────── */
 function escHtml(s) {
+  s = String(s ?? '');
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 
@@ -848,10 +883,24 @@ function appendRow(role, html, meta) {
         const det = document.createElement('details');
         det.className = 'citation';
         const sum = document.createElement('summary');
-        sum.innerHTML = '&#x1F4CE; ' + escHtml(c.source);
+        sum.innerHTML = '&#x1F4CE; ' + escHtml(c.source || 'cited page');
         const body = document.createElement('div');
         body.className = 'citation-body';
-        body.textContent = c.evidence_text;
+        const preview = document.createElement('div');
+        preview.className = 'citation-preview';
+        const thumb = document.createElement('img');
+        thumb.className = 'citation-thumb';
+        thumb.loading = 'lazy';
+        thumb.alt = 'Cited PDF page preview';
+        thumb.src = '/api/page-image?source=' + encodeURIComponent(c.source || '');
+        thumb.onerror = () => { thumb.remove(); preview.style.gridTemplateColumns = '1fr'; };
+        const evidence = document.createElement('div');
+        evidence.className = 'citation-evidence';
+        const snippet = escHtml(c.evidence_text || 'Retrieved cited page.');
+        evidence.innerHTML = '<mark>' + snippet + '</mark>';
+        preview.appendChild(thumb);
+        preview.appendChild(evidence);
+        body.appendChild(preview);
         det.appendChild(sum); det.appendChild(body);
         cw.appendChild(det);
       });
@@ -997,6 +1046,14 @@ async function send() {
 """
 
 
+def _is_relative_to(path: Path, root: Path) -> bool:
+    try:
+        path.relative_to(root)
+        return True
+    except ValueError:
+        return False
+
+
 class DemoHandler(BaseHTTPRequestHandler):
     _pipeline: DocumentRetrievalPipeline | None = None
     _data_folder: Path = DATA_FOLDER
@@ -1057,6 +1114,16 @@ class DemoHandler(BaseHTTPRequestHandler):
                 self._send(200, json.dumps(result, ensure_ascii=False).encode(), "application/json")
             return
 
+        if parsed.path == "/api/page-image":
+            source = parse_qs(parsed.query).get("source", [""])[0].strip()
+            page_image = self._render_source_page_image(source)
+            if page_image and page_image.exists():
+                image_bytes = page_image.read_bytes()
+                self._send(200, image_bytes, "image/png")
+            else:
+                self._send(404, b"Page image not available", "text/plain")
+            return
+
         if parsed.path == "/api/diff":
             old_pdf = DATA_FOLDER / "synthetic_auto_policy.pdf"
             new_pdf = DATA_FOLDER / "synthetic_auto_policy_v2.pdf"
@@ -1113,6 +1180,66 @@ class DemoHandler(BaseHTTPRequestHandler):
 
     def _send_json(self, payload: dict, status: int = 200) -> None:
         self._send(status, json.dumps(payload, ensure_ascii=False).encode(), "application/json")
+
+    @classmethod
+    def _render_source_page_image(cls, source: str) -> Path | None:
+        pdf_path, page_number = cls._resolve_source_pdf(source)
+        if pdf_path is None:
+            return None
+        PAGE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        cache_key = hashlib.sha1(
+            f"{pdf_path.resolve()}:{pdf_path.stat().st_mtime_ns}:{page_number}".encode("utf-8")
+        ).hexdigest()[:16]
+        output_path = PAGE_CACHE_DIR / f"{cache_key}_p{page_number:04d}.png"
+        if output_path.exists():
+            return output_path
+        try:
+            import fitz
+
+            with fitz.open(pdf_path) as document:
+                if page_number < 1 or page_number > len(document):
+                    return None
+                pix = document[page_number - 1].get_pixmap(dpi=92, annots=False)
+                pix.save(str(output_path))
+            return output_path
+        except Exception:
+            return None
+
+    @classmethod
+    def _resolve_source_pdf(cls, source: str) -> tuple[Path | None, int]:
+        if not source:
+            return None, 1
+        doc_ref, page_number = source, 1
+        if "#page=" in source:
+            doc_ref, page_blob = source.split("#page=", 1)
+            match = re.search(r"\d+", page_blob)
+            page_number = int(match.group(0)) if match else 1
+
+        candidate_ref = Path(doc_ref)
+        candidates: list[Path] = []
+        if candidate_ref.is_absolute():
+            candidates.append(candidate_ref)
+        else:
+            candidates.extend(
+                [
+                    cls._data_folder / candidate_ref,
+                    UPLOAD_DIR / candidate_ref.name,
+                    DATA_FOLDER / candidate_ref,
+                    PROJECT_ROOT / candidate_ref,
+                ]
+            )
+            for root in [cls._data_folder, UPLOAD_DIR, DATA_FOLDER]:
+                if root.exists():
+                    candidates.extend(root.rglob(candidate_ref.name))
+
+        safe_roots = [PROJECT_ROOT / "data", PROJECT_ROOT / "reports" / "demo_uploads"]
+        for candidate in candidates:
+            if candidate.suffix.lower() != ".pdf" or not candidate.exists():
+                continue
+            resolved = candidate.resolve()
+            if any(_is_relative_to(resolved, root.resolve()) for root in safe_roots if root.exists()):
+                return resolved, page_number
+        return None, page_number
 
     @staticmethod
     def _safe_filename(filename: str) -> str:
