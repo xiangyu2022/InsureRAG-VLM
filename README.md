@@ -2,6 +2,28 @@
 
 Citation-grounded multimodal RAG for insurance policy and endorsement review. The project is designed around page-image retrieval first: PDFs are rendered into full-page visual units for ColQwen2/ColPali-style retrieval, while OCR and text layers are kept as auxiliary evidence for snippets, weak labels, baselines, and error analysis.
 
+## Demo Walkthrough
+
+![InsureRAG-VLM animated demo](assets/demo/insurerag_vlm_demo.gif)
+
+The browser demo shows the core workflow:
+
+- Upload or use a policy PDF.
+- Render each PDF page into a page-image retrieval unit.
+- Ask an insurance question, such as a deductible, limit, endorsement, exclusion, or glossary question.
+- Retrieve ranked pages and show the retrieval trace.
+- Return a structured answer with page-level citation, confidence, and highlighted evidence.
+- Abstain when the retrieved evidence does not support the question.
+- Compare policy versions and summarize deductible, limit, endorsement, and exclusion drift.
+
+Run the interactive version locally with:
+
+```bash
+.venv/bin/python main.py demo-web --port 7860
+```
+
+Then open `http://127.0.0.1:7860`.
+
 ## What It Does
 
 Input: a 20-200 page policy packet, endorsement, claim document, or internal training PDF plus a user question.
@@ -72,6 +94,7 @@ Implemented:
 - Document-level train/valid/test splits.
 - Public PDF data importer with 20 downloadable state insurance department PDFs.
 - 200-500 scale real-PDF QA/evidence generation with QA-level document split labels.
+- Deterministic insurance glossary with 250+ terms, acronyms, metrics, roles, and aliases.
 - No-key local demo baseline with hashing retrieval and extractive cited answers.
 - Synthetic insurance policy PDF and evaluation examples for immediate smoke tests.
 - Existing text-RAG scaffold, PDF extraction, evaluation helpers, and policy diff utilities.

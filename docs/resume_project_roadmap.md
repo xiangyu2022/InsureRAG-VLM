@@ -29,7 +29,8 @@ intelligence:
 - Structured grounded answer schema with citations, confidence, and abstention.
 - Calibration runner for confidence thresholds, selective risk, coverage, and
   unsupported abstention accuracy.
-- Knowledge-base answers for common insurance terms and acronyms.
+- Deterministic knowledge-base answers for 250+ insurance terms, acronyms,
+  metrics, roles, and common aliases.
 - Ollama integration with `qwen2.5:3b` for open-ended local LLM answers.
 - Token-efficient evidence selection before LLM generation.
 - Policy diff summaries for deductible, coverage, endorsement, exclusions, and
@@ -311,7 +312,8 @@ Use only measured results once they are final:
   precision, evidence recall, unsupported abstention accuracy, latency reporting,
   and calibration curves.
 - Added token-efficient local LLM integration with Qwen2.5-3B and deterministic
-  evidence extraction to reduce hallucination risk on high-stakes policy questions.
+  evidence extraction plus a 250+ term insurance glossary to reduce hallucination
+  risk on high-stakes policy questions.
 
 ## Immediate Action Plan
 

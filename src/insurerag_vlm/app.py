@@ -7,7 +7,7 @@ from urllib.parse import parse_qs, urlparse
 
 from .config import ModelConfig
 from .diff import summarize_policy_diff
-from .knowledge import format_knowledge_answer, search_knowledge
+from .knowledge import format_knowledge_answer, knowledge_base_size, search_knowledge
 from .pdf import extract_text_by_page
 from .pipeline import DocumentRetrievalPipeline
 from .vlm import _ANTHROPIC_SYSTEM
@@ -643,6 +643,8 @@ HTML = r"""<!doctype html>
       <div class="presets">
         <button class="preset-btn" data-q="What is PI in insurance?">What is PI in insurance?</button>
         <button class="preset-btn" data-q="What does E&O stand for?">What does E&amp;O stand for?</button>
+        <button class="preset-btn" data-q="What is the difference between ACV and RCV?">ACV vs RCV?</button>
+        <button class="preset-btn" data-q="What is waiver of subrogation?">Waiver of subrogation?</button>
         <button class="preset-btn" data-q="Explain the difference between occurrence and claims-made policies.">Occurrence vs claims-made?</button>
         <button class="preset-btn" data-q="What is the comprehensive deductible in my policy?">Comprehensive deductible?</button>
         <button class="preset-btn" data-q="What does the rental reimbursement endorsement provide?">Rental reimbursement?</button>
@@ -653,7 +655,7 @@ HTML = r"""<!doctype html>
     <div class="sb-footer">
       <strong>InsureRAG-VLM</strong><br>
       LLM: <strong id="backendLabel">detecting…</strong><br>
-      Knowledge base: 40+ terms
+      Knowledge base: __KNOWLEDGE_BASE_SIZE__ terms
     </div>
   </aside>
 
@@ -1044,6 +1046,8 @@ async function send() {
 </body>
 </html>
 """
+
+HTML = HTML.replace("__KNOWLEDGE_BASE_SIZE__", str(knowledge_base_size()))
 
 
 def _is_relative_to(path: Path, root: Path) -> bool:
