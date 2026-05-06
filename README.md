@@ -185,6 +185,25 @@ Import a small real public PDF set for local experiments:
 
 `public_docs` downloads a small set of public insurance PDF samples into `data/00_raw/external/public_docs/`. These files are for local reproducibility and are not intended to be committed to GitHub.
 
+Import a broader real-domain mix to replace synthetic-only experiments:
+
+```bash
+.venv/bin/python main.py import-data --output-root data --datasets real_domain_mix
+.venv/bin/python main.py build-index data/00_raw/external/real_domain_mix --index-dir data
+.venv/bin/python main.py generate-qa data/00_raw/external/real_domain_mix --output-dir data/02_processed --target-count 300
+```
+
+`real_domain_mix` maps to the requested data categories:
+
+- Domain-specific text datasets: CUAD and ACORD source files.
+- Domain web content: insurance regulator and consumer-information pages.
+- Domain news articles: current insurance news/issue pages.
+- Industry reports and white papers: NAIC Journal of Insurance Regulation article pages.
+- Social media data: manifest-only pointers for API/terms-compliant collection.
+- Domain conversation data: insurance FAQ pages and InsuranceQA source pointers.
+
+Downloaded HTML pages are converted to `.txt` for the text retriever. Social/forum and restricted-license sources are registered in manifests instead of scraped by default.
+
 Render PDFs into a page-image dataset:
 
 ```bash

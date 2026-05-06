@@ -103,13 +103,13 @@ def main() -> None:
     generate_parser.add_argument("--answer-key", type=str, default="answer")
     generate_parser.add_argument("--citations-key", type=str, default="citations")
 
-    import_parser = subparsers.add_parser("import-data", help="Download or register public CUAD/ACORD/InsuranceQA/public PDF data sources")
+    import_parser = subparsers.add_parser("import-data", help="Download or register public CUAD/ACORD/InsuranceQA/public PDF/real web data sources")
     import_parser.add_argument("--output-root", type=Path, default=Path("data"))
     import_parser.add_argument(
         "--datasets",
         nargs="+",
         default=["cuad", "acord", "insuranceqa"],
-        choices=["cuad", "acord", "insuranceqa", "public_docs"],
+        choices=["cuad", "acord", "insuranceqa", "public_docs", "real_domain_mix"],
     )
 
     qa_parser = subparsers.add_parser("generate-qa", help="Generate QA/evidence pairs and hard negatives")

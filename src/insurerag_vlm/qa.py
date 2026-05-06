@@ -1,11 +1,14 @@
 import ast
 import csv
+import hashlib
+import html
 import json
 import math
 import random
 import re
 import zipfile
 from dataclasses import dataclass
+from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
@@ -186,6 +189,108 @@ PUBLIC_DATA_SOURCES = {
             },
         ],
     },
+    "real_domain_mix": {
+        "name": "Real Insurance Domain Mix",
+        "license": "mixed public web documents; verify source terms before redistribution",
+        "url": "multiple",
+        "local_path": "data/00_raw/external/real_domain_mix",
+        "description": (
+            "Real insurance-domain text sources aligned to domain datasets, web pages, "
+            "news, reports/white papers, social/forum pointers, and conversation/FAQ data."
+        ),
+        "documents": [
+            {
+                "category": "domain_specific_text_dataset",
+                "name": "CUAD master clauses",
+                "source": "The Atticus Project / Hugging Face",
+                "url": "https://huggingface.co/datasets/theatticusproject/cuad/resolve/main/CUAD_v1/master_clauses.csv",
+                "local_name": "domain_text/cuad_master_clauses.csv",
+                "description": "Contract clause extraction and QA supervision dataset.",
+            },
+            {
+                "category": "domain_specific_text_dataset",
+                "name": "ACORD dataset and readme",
+                "source": "The Atticus Project / Hugging Face",
+                "url": "https://huggingface.co/datasets/theatticusproject/acord/resolve/main/ACORD%20Dataset%20%26%20ReadMe.zip",
+                "local_name": "domain_text/acord.zip",
+                "description": "Clause retrieval benchmark for insurance/reinsurance contracts.",
+            },
+            {
+                "category": "domain_web_content",
+                "name": "Maryland insurance consumer publications",
+                "source": "Maryland Insurance Administration",
+                "url": "https://insurance.maryland.gov/consumer/pages/consumerpublications.aspx",
+                "local_name": "web/md_consumer_publications.txt",
+                "description": "Consumer insurance publication index with auto, homeowners, health, life, travel, and fraud topics.",
+            },
+            {
+                "category": "domain_web_content",
+                "name": "NAIC transparency and readability topic",
+                "source": "National Association of Insurance Commissioners",
+                "url": "https://content.naic.org/insurance-topics/transparency-and-readability-of-consumer-information",
+                "local_name": "web/naic_transparency_readability.txt",
+                "description": "Regulatory topic page about consumer access to readable personal-lines policy information.",
+            },
+            {
+                "category": "domain_news_article",
+                "name": "Triple-I severe convective storms insured losses news",
+                "source": "Insurance Information Institute",
+                "url": "https://www.iii.org/press-release/triple-i-severe-convective-storms-generate-more-than-50b-in-insured-losses-for-third-consecutive-year-041326",
+                "local_name": "news/iii_severe_convective_storms_2026.txt",
+                "description": "News release on 2025 severe convective storm insured losses.",
+            },
+            {
+                "category": "domain_news_article",
+                "name": "Triple-I flood insurance state of the risk news",
+                "source": "Insurance Information Institute",
+                "url": "https://www.iii.org/press-release/record-2025-us-flooding-highlights-urgent-need-for-flood-insurance-and-resilience-measures-triple-is-new-issues-brief-explains-021626",
+                "local_name": "news/iii_flood_insurance_state_of_risk_2026.txt",
+                "description": "News release summarizing recent flooding trends and flood insurance need.",
+            },
+            {
+                "category": "industry_report_whitepaper",
+                "name": "NAIC Artificial Intelligence and Insurance Regulation",
+                "source": "NAIC Journal of Insurance Regulation",
+                "url": "https://content.naic.org/research/jir/artificial-intelligence-and-insurance-regulation",
+                "local_name": "reports/naic_ai_insurance_regulation.txt",
+                "description": "Research article page on AI use, model bulletins, and insurance regulation.",
+            },
+            {
+                "category": "industry_report_whitepaper",
+                "name": "NAIC Trial by Fire: Reimagining Wildfire Insurance in California",
+                "source": "NAIC Journal of Insurance Regulation",
+                "url": "https://content.naic.org/research/jir/trial-fire-reimagining-wildfire-insurance-california",
+                "local_name": "reports/naic_wildfire_insurance_california.txt",
+                "description": "Research article page on a public-private wildfire insurance/reinsurance mechanism.",
+            },
+            {
+                "category": "conversation_qa_data",
+                "name": "NAIC health reform frequently asked questions",
+                "source": "National Association of Insurance Commissioners",
+                "url": "https://content.naic.org/index.php/index_health_reform_faq.htm",
+                "local_name": "conversations/naic_health_reform_faq.txt",
+                "description": "Consumer and employer FAQ page about health reform and state insurance regulation.",
+            },
+            {
+                "category": "conversation_qa_data",
+                "name": "InsuranceQA repository pointer",
+                "source": "GitHub / shuzi",
+                "url": "https://github.com/shuzi/insuranceQA",
+                "local_name": "conversations/insuranceqa_source_manifest.txt",
+                "description": "Manifest pointer to InsuranceQA question-answer language data; local cloning is left explicit because terms are research-use oriented.",
+                "manifest_only": True,
+            },
+            {
+                "category": "social_media_data",
+                "name": "Reddit insurance discussions source pointer",
+                "source": "Reddit",
+                "url": "https://www.reddit.com/r/Insurance/",
+                "local_name": "social/reddit_insurance_source_manifest.txt",
+                "description": "Manifest pointer for opt-in/API-based collection of insurance discussion posts; importer does not scrape social platforms by default.",
+                "manifest_only": True,
+            },
+        ],
+    },
 }
 
 
@@ -226,6 +331,170 @@ def _read_jsonl(path: Path) -> List[Dict[str, Any]]:
     return records
 
 
+class _HTMLTextExtractor(HTMLParser):
+    _BLOCK_TAGS = {
+        "article", "aside", "blockquote", "br", "dd", "div", "dl", "dt", "figcaption",
+        "footer", "h1", "h2", "h3", "h4", "h5", "h6", "header", "li", "main", "nav",
+        "ol", "p", "section", "table", "td", "th", "tr", "ul",
+    }
+    _SKIP_TAGS = {"script", "style", "noscript", "svg"}
+
+    def __init__(self) -> None:
+        super().__init__()
+        self._parts: List[str] = []
+        self._skip_depth = 0
+
+    def handle_starttag(self, tag: str, attrs: List[tuple[str, Optional[str]]]) -> None:
+        if tag in self._SKIP_TAGS:
+            self._skip_depth += 1
+        if tag in self._BLOCK_TAGS:
+            self._parts.append("\n")
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag in self._SKIP_TAGS and self._skip_depth:
+            self._skip_depth -= 1
+        if tag in self._BLOCK_TAGS:
+            self._parts.append("\n")
+
+    def handle_data(self, data: str) -> None:
+        if self._skip_depth:
+            return
+        text = html.unescape(data).strip()
+        if text:
+            self._parts.append(text)
+
+    def text(self) -> str:
+        text = " ".join(part.strip() for part in self._parts)
+        text = re.sub(r"[ \t\r\f\v]+", " ", text)
+        text = re.sub(r"\n\s*", "\n", text)
+        return re.sub(r"\n{3,}", "\n\n", text).strip()
+
+
+def _html_to_text(content: bytes) -> str:
+    parser = _HTMLTextExtractor()
+    parser.feed(content.decode("utf-8", errors="ignore"))
+    return parser.text()
+
+
+def _write_source_pointer(path: Path, doc: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    lines = [
+        f"name: {doc.get('name', '')}",
+        f"category: {doc.get('category', '')}",
+        f"source: {doc.get('source', '')}",
+        f"url: {doc.get('url', '')}",
+        f"description: {doc.get('description', '')}",
+        "",
+        "This source is recorded as manifest-only. Collect it through the platform's",
+        "official export/API or after reviewing its license and redistribution terms.",
+    ]
+    path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def _download_document(doc: Dict[str, Any], doc_path: Path) -> Dict[str, Any]:
+    doc_record = {
+        "name": doc["name"],
+        "category": doc.get("category", ""),
+        "source": doc.get("source", ""),
+        "url": doc["url"],
+        "description": doc.get("description", ""),
+        "local_path": str(doc_path),
+        "status": "pending",
+    }
+
+    if doc.get("manifest_only"):
+        _write_source_pointer(doc_path, doc)
+        doc_record["status"] = "manifest_only"
+        return doc_record
+
+    response = requests.get(
+        doc["url"],
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0 Safari/537.36"
+            )
+        },
+        timeout=120,
+    )
+    response.raise_for_status()
+    content = response.content
+    content_type = response.headers.get("content-type", "").lower()
+    doc_path.parent.mkdir(parents=True, exist_ok=True)
+
+    if content.lstrip().startswith(b"%PDF"):
+        if doc_path.suffix.lower() != ".pdf":
+            doc_path = doc_path.with_suffix(".pdf")
+            doc_record["local_path"] = str(doc_path)
+        doc_path.write_bytes(content)
+    elif doc_path.suffix.lower() in {".zip", ".csv", ".json", ".jsonl"}:
+        doc_path.write_bytes(content)
+    elif "html" in content_type or doc_path.suffix.lower() == ".txt":
+        text = _html_to_text(content)
+        if not text:
+            text = content.decode("utf-8", errors="ignore")
+        header = [
+            f"Title: {doc.get('name', '')}",
+            f"Category: {doc.get('category', '')}",
+            f"Source: {doc.get('source', '')}",
+            f"URL: {doc.get('url', '')}",
+            "",
+        ]
+        doc_path.write_text("\n".join(header) + text, encoding="utf-8")
+    else:
+        doc_path.write_bytes(content)
+
+    doc_record["status"] = "downloaded"
+    doc_record["bytes"] = doc_path.stat().st_size
+    doc_record["sha256"] = hashlib.sha256(doc_path.read_bytes()).hexdigest()
+    return doc_record
+
+
+def _download_document_collection(source: Dict[str, Any], local_path: Path) -> Dict[str, Any]:
+    local_path.mkdir(parents=True, exist_ok=True)
+    documents = []
+    downloaded_count = 0
+    manifest_count = 0
+    for doc in source.get("documents", []):
+        doc_path = local_path / doc["local_name"]
+        try:
+            doc_record = _download_document(doc, doc_path)
+            actual_path = Path(doc_record.get("local_path", doc_path))
+            if doc_record["status"] == "downloaded" and actual_path.suffix.lower() == ".zip":
+                extract_dir = actual_path.parent / actual_path.stem
+                extract_dir.mkdir(parents=True, exist_ok=True)
+                with zipfile.ZipFile(actual_path) as archive:
+                    archive.extractall(extract_dir)
+                doc_record["extract_dir"] = str(extract_dir)
+            if doc_record["status"] == "downloaded":
+                downloaded_count += 1
+            elif doc_record["status"] == "manifest_only":
+                manifest_count += 1
+        except Exception as exc:
+            doc_record = {
+                "name": doc["name"],
+                "category": doc.get("category", ""),
+                "source": doc.get("source", ""),
+                "url": doc["url"],
+                "description": doc.get("description", ""),
+                "local_path": str(doc_path),
+                "status": "error",
+                "error": str(exc),
+            }
+        documents.append(doc_record)
+    metadata_path = local_path / "source_metadata.jsonl"
+    _write_jsonl(documents, metadata_path)
+    status = "downloaded" if downloaded_count else "manifest_only" if manifest_count else "error"
+    return {
+        "status": status,
+        "documents": documents,
+        "downloaded_count": downloaded_count,
+        "manifest_only_count": manifest_count,
+        "metadata_path": str(metadata_path),
+    }
+
+
 def download_public_datasets(
     output_root: Path = Path("data"),
     datasets: Optional[List[str]] = None,
@@ -251,48 +520,9 @@ def download_public_datasets(
             "status": "manifest_only",
         }
 
-        if dataset_name == "public_docs":
-            local_path.mkdir(parents=True, exist_ok=True)
-            documents = []
-            any_downloaded = False
-            for doc in source.get("documents", []):
-                doc_path = local_path / doc["local_name"]
-                doc_record = {
-                    "name": doc["name"],
-                    "source": doc.get("source", ""),
-                    "url": doc["url"],
-                    "description": doc.get("description", ""),
-                    "local_path": str(doc_path),
-                    "status": "pending",
-                }
-                try:
-                    response = requests.get(
-                        doc["url"],
-                        headers={
-                            "User-Agent": (
-                                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                                "Chrome/124.0 Safari/537.36"
-                            )
-                        },
-                        timeout=120,
-                    )
-                    response.raise_for_status()
-                    if not response.content.lstrip().startswith(b"%PDF"):
-                        raise ValueError(
-                            f"Downloaded content is not a PDF "
-                            f"(content-type={response.headers.get('content-type', 'unknown')})"
-                        )
-                    doc_path.write_bytes(response.content)
-                    doc_record["status"] = "downloaded"
-                    doc_record["bytes"] = len(response.content)
-                    any_downloaded = True
-                except Exception as exc:
-                    doc_record["status"] = "error"
-                    doc_record["error"] = str(exc)
-                documents.append(doc_record)
-            record["status"] = "downloaded" if any_downloaded else "error"
-            record["documents"] = documents
+        if dataset_name in {"public_docs", "real_domain_mix"}:
+            collection_result = _download_document_collection(source, local_path)
+            record.update(collection_result)
             manifest.append(record)
             continue
 
@@ -560,10 +790,12 @@ def _augment_multi_positive_sources(
     max_sources: int = 5,
 ) -> None:
     docs_by_name: Dict[str, List[PageDocument]] = {}
+    page_token_cache: Dict[str, set[str]] = {}
     for doc in documents:
         source = doc.metadata.get("source", doc.doc_id)
         doc_name = source.split("#page=", 1)[0]
         docs_by_name.setdefault(doc_name, []).append(doc)
+        page_token_cache[source] = set(_content_tokens(doc.text or ""))
 
     for qa in qa_pairs:
         if not qa.get("answerable", True) or qa.get("qa_source") != "real_pdf_evidence_rules":
@@ -580,7 +812,7 @@ def _augment_multi_positive_sources(
             source = doc.metadata.get("source", doc.doc_id)
             if source in evidence_sources:
                 continue
-            page_terms = set(_content_tokens(doc.text or ""))
+            page_terms = page_token_cache.get(source, set())
             overlap = len(query_terms & page_terms)
             if overlap >= 3:
                 scored.append((overlap, source))
@@ -739,6 +971,7 @@ def build_hard_negatives(
                 "page_id": _source_to_page_id(source),
                 "source": source,
                 "text": doc.text or "",
+                "tokens": _tokenize(doc.text or ""),
             }
         )
 
@@ -752,7 +985,7 @@ def build_hard_negatives(
         for candidate in candidates:
             if candidate["source"] in positive_sources:
                 continue
-            score = len(q_terms & _tokenize(candidate["text"]))
+            score = len(q_terms & candidate["tokens"])
             scored.append((score, candidate))
         scored.sort(key=lambda item: item[0], reverse=True)
         for rank, (_, candidate) in enumerate(scored[:negatives_per_question]):

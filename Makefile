@@ -5,10 +5,11 @@ VISUAL  ?= data/03_index/colqwen2
 QA      ?= data/02_processed/qa_pairs.jsonl
 REPORTS ?= reports
 
-.PHONY: help smoke-test install index visual-index eval ablation clean
+.PHONY: help local-setup smoke-test install index visual-index eval ablation clean
 
 help:
 	@echo "InsureRAG-VLM — available targets"
+	@echo "  make local-setup  Create .venv and install local dependencies"
 	@echo "  make install       Install Python dependencies"
 	@echo "  make smoke-test    End-to-end no-key smoke test (synthetic data)"
 	@echo "  make index         Build text index from public docs"
@@ -20,12 +21,11 @@ help:
 install:
 	pip install -r requirements.txt
 
+local-setup:
+	bash scripts/setup_local.sh
+
 smoke-test:
-	@echo "=== InsureRAG-VLM smoke test ==="
-	$(PYTHON) main.py build-index data/00_raw/public
-	$(PYTHON) main.py generate-qa data/00_raw/public --output-dir /tmp/insurerag_smoke
-	$(PYTHON) main.py retrieval-metrics data/00_raw/public /tmp/insurerag_smoke/qa_pairs.jsonl
-	@echo "=== Smoke test passed ==="
+	PYTHON=$(PYTHON) bash scripts/smoke_test.sh
 
 index:
 	$(PYTHON) main.py build-index $(DATA)
