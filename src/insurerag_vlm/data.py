@@ -5,9 +5,10 @@ from typing import Dict, Iterable, List, Optional
 
 from .pdf import extract_text_by_page
 
-SUPPORTED_TEXT_EXTENSIONS = {".txt"}
+SUPPORTED_TEXT_EXTENSIONS = {".txt", ".csv", ".jsonl", ".md"}
 SUPPORTED_IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".tiff", ".bmp"}
 SUPPORTED_PDF_EXTENSIONS = {".pdf"}
+MAX_TEXT_DOCUMENT_CHARS = 12000
 
 @dataclass
 class PageDocument:
@@ -20,6 +21,37 @@ class PageDocument:
 
 def _read_text_file(path: Path) -> str:
     return path.read_text(encoding="utf-8", errors="ignore").strip()
+
+
+def _split_text_documents(path: Path, data_folder: Path, text: str) -> List[PageDocument]:
+    relative_path = str(path.relative_to(data_folder))
+    if len(text) <= MAX_TEXT_DOCUMENT_CHARS:
+        return [
+            PageDocument(
+                doc_id=relative_path,
+                text=text,
+                metadata={"source": relative_path, "path": relative_path},
+            )
+        ]
+
+    documents: List[PageDocument] = []
+    for chunk_number, start in enumerate(range(0, len(text), MAX_TEXT_DOCUMENT_CHARS), start=1):
+        chunk = text[start : start + MAX_TEXT_DOCUMENT_CHARS].strip()
+        if not chunk:
+            continue
+        source = f"{relative_path}#chunk={chunk_number}"
+        documents.append(
+            PageDocument(
+                doc_id=source,
+                text=chunk,
+                metadata={
+                    "source": source,
+                    "path": relative_path,
+                    "chunk": str(chunk_number),
+                },
+            )
+        )
+    return documents
 
 
 def _render_pdf_pages(path: Path, output_dir: Path, dpi: int = 150) -> List[Path]:
@@ -68,13 +100,7 @@ def load_documents(data_folder: Path, render_pdf_pages: bool = False, pdf_render
             text = _read_text_file(path)
             if not text:
                 continue
-            documents.append(
-                PageDocument(
-                    doc_id=str(path.relative_to(data_folder)),
-                    text=text,
-                    metadata={"source": str(path.relative_to(data_folder)), "path": str(path.relative_to(data_folder))},
-                )
-            )
+            documents.extend(_split_text_documents(path, data_folder, text))
         elif suffix in SUPPORTED_IMAGE_EXTENSIONS:
             documents.append(
                 PageDocument(
