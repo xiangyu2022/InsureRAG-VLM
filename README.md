@@ -418,11 +418,6 @@ Key ablations:
 - Qwen2.5-VL vs PaliGemma 2 / Florence-2 baselines.
 - Without vs with abstention/calibration.
 
-## Resume Project Roadmap
-
-See [docs/resume_project_roadmap.md](docs/resume_project_roadmap.md) for the current
-MVP status, next milestones, common MLE interview questions, known limitations, and
-resume bullet templates.
 
 ## Resume Blurb
 
