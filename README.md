@@ -418,13 +418,3 @@ Key ablations:
 - Qwen2.5-VL vs PaliGemma 2 / Florence-2 baselines.
 - Without vs with abstention/calibration.
 
-
-## Resume Blurb
-
-PolicyLens-VLM / InsureRAG-VLM: Built a citation-grounded multimodal RAG system for insurance policy and endorsement review using page-image retrieval and VLM generation, with selective abstention and clause-diff analysis.
-
-Implemented result-oriented bullet draft:
-
-- Built a reproducible insurance document intelligence pipeline that renders PDFs into page-image manifests, constructs QA/evidence pairs from policy documents plus CUAD/ACORD, and evaluates retrieval with Recall@k, MRR, and nDCG.
-- Added a no-key local baseline with structured cited answers and abstention, plus an ablation harness for comparing OCR/text retrieval against page-image retrieval backends.
-- Implemented rule-based policy drift summaries for deductible, coverage limit, endorsement, exclusion, and duties-after-loss changes.
