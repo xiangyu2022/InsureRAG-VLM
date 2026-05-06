@@ -1,0 +1,52 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Demo Web",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "console": "integratedTerminal",
+      "args": ["demo-web", "--port", "7860"],
+      "env": {
+        "INSURERAG_USE_OLLAMA": "0"
+      }
+    },
+    {
+      "name": "Query Synthetic Policy",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "console": "integratedTerminal",
+      "args": [
+        "query",
+        "data/00_raw/public",
+        "What is the liability coverage limit?",
+        "--index-dir",
+        "data",
+        "--top-k",
+        "3"
+      ],
+      "env": {
+        "INSURERAG_USE_OLLAMA": "0"
+      }
+    },
+    {
+      "name": "Smoke Test",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/main.py",
+      "console": "integratedTerminal",
+      "args": [
+        "query",
+        "data/00_raw/public",
+        "What is the comprehensive deductible?",
+        "--index-dir",
+        "data",
+        "--top-k",
+        "3"
+      ],
+      "preLaunchTask": "Smoke Test"
+    }
+  ]
+}
