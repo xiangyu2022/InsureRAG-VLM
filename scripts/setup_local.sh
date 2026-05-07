@@ -40,12 +40,12 @@ echo "[2/4] Upgrading pip..."
 echo "[3/4] Installing project dependencies..."
 "$VENV_PYTHON" -m pip install -r requirements.txt
 
-echo "[4/4] Checking bundled sample data..."
-if [ -f "data/00_raw/public/synthetic_auto_policy.pdf" ]; then
-  echo "Found synthetic sample policy PDF."
+echo "[4/4] Checking real public PDF data..."
+if find "data/00_raw/external/public_docs" -name '*.pdf' -print -quit 2>/dev/null | grep -q .; then
+  echo "Found real public PDF data."
 else
-  echo "WARNING: data/00_raw/public/synthetic_auto_policy.pdf was not found."
-  echo "The app can still run, but the bundled smoke test needs sample data."
+  echo "WARNING: real public PDFs were not found."
+  echo "Download them with: python main.py import-data --output-root data --datasets public_docs"
 fi
 
 cat <<'EOF'

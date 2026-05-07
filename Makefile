@@ -11,7 +11,7 @@ help:
 	@echo "InsureRAG-VLM — available targets"
 	@echo "  make local-setup  Create .venv and install local dependencies"
 	@echo "  make install       Install Python dependencies"
-	@echo "  make smoke-test    End-to-end no-key smoke test (synthetic data)"
+	@echo "  make smoke-test    End-to-end no-key smoke test on real public PDFs"
 	@echo "  make index         Build text index from public docs"
 	@echo "  make visual-index  Build visual_stub + local_image indexes"
 	@echo "  make eval          Run retrieval metrics on QA set"

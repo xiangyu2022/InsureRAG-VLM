@@ -14,12 +14,11 @@ from .vlm import _ANTHROPIC_SYSTEM
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DATA_FOLDER = PROJECT_ROOT / "data" / "00_raw" / "public"
+DATA_FOLDER = PROJECT_ROOT / "data" / "00_raw" / "external" / "public_docs"
 INDEX_DIR = PROJECT_ROOT / "data"
 UPLOAD_DIR = PROJECT_ROOT / "reports" / "demo_uploads" / "current"
 UPLOAD_INDEX_DIR = PROJECT_ROOT / "reports" / "demo_uploads" / "index"
 PAGE_CACHE_DIR = PROJECT_ROOT / "reports" / "demo_uploads" / "page_cache"
-SAMPLE_PDF = PROJECT_ROOT / "data" / "00_raw" / "public" / "synthetic_auto_policy.pdf"
 
 _DIFF_TRIGGERS = re.compile(
     r"\b(compar|diff|version|drift|v1|v2|chang|updat)\w*\b", re.I
@@ -31,8 +30,19 @@ def _is_diff_query(question: str) -> bool:
     return len(hits) >= 2
 
 
+def _is_document_first_query(question: str) -> bool:
+    return bool(re.search(r"\b(document|policy|guide|pdf|uploaded|file)\b", question, re.I))
+
+
 def _backend_label(pipeline: DocumentRetrievalPipeline) -> str:
     return pipeline.vlm_client.backend_label()
+
+
+def _first_two_pdfs(folder: Path) -> tuple[Path, Path] | None:
+    pdfs = sorted(Path(folder).rglob("*.pdf")) if Path(folder).exists() else []
+    if len(pdfs) < 2:
+        return None
+    return pdfs[0], pdfs[1]
 
 
 def _retrieval_trace(rag_result: dict, limit: int = 3) -> list[dict]:
@@ -57,6 +67,7 @@ def build_chat_response(question: str, pipeline: DocumentRetrievalPipeline, data
 
     vlm = pipeline.vlm_client
     kb_entries = search_knowledge(question)
+    document_first = _is_document_first_query(question)
 
     # ── Path A: Ollama available ─────────────────────────────────────────────
     # Small local LLMs are best used as a last-mile explainer. For exact
@@ -67,6 +78,18 @@ def build_chat_response(question: str, pipeline: DocumentRetrievalPipeline, data
         has_kb = len(kb_entries) > 0
         has_doc = not rag.get("abstain") and bool(rag.get("answer"))
 
+        if has_doc and document_first:
+            return {
+                "source": "document",
+                "answer": rag["answer"],
+                "knowledge_terms": [],
+                "citations": rag.get("citations", []),
+                "confidence": rag.get("confidence", 0.0),
+                "abstain": False,
+                "abstain_reason": None,
+                "backend": "deterministic evidence extraction",
+                "retrieval_trace": _retrieval_trace(rag),
+            }
         if has_kb and has_doc:
             return {
                 "source": "combined",
@@ -152,7 +175,9 @@ def build_chat_response(question: str, pipeline: DocumentRetrievalPipeline, data
         answer = vlm.generate_chat(_ANTHROPIC_SYSTEM, user_prompt)
 
         # Determine source label
-        if kb_entries and ranked and not rag.get("abstain"):
+        if ranked and not rag.get("abstain") and document_first:
+            source = "document"
+        elif kb_entries and ranked and not rag.get("abstain"):
             source = "combined"
         elif kb_entries:
             source = "knowledge"
@@ -164,7 +189,7 @@ def build_chat_response(question: str, pipeline: DocumentRetrievalPipeline, data
         return {
             "source": source,
             "answer": answer,
-            "knowledge_terms": [e.term for e in kb_entries],
+            "knowledge_terms": [] if document_first and ranked and not rag.get("abstain") else [e.term for e in kb_entries],
             "citations": rag.get("citations", []) if not rag.get("abstain") else [],
             "confidence": 1.0,
             "abstain": False,
@@ -179,7 +204,10 @@ def build_chat_response(question: str, pipeline: DocumentRetrievalPipeline, data
     has_kb = len(kb_entries) > 0
     has_doc = not rag.get("abstain") and bool(rag.get("answer"))
 
-    if has_kb and has_doc:
+    if has_doc and document_first:
+        answer = rag["answer"]
+        source = "document"
+    elif has_kb and has_doc:
         kb_text = format_knowledge_answer(kb_entries)
         answer = f"{kb_text}\n\n**From your policy documents:**\n{rag['answer']}"
         source = "combined"
@@ -213,7 +241,7 @@ def build_chat_response(question: str, pipeline: DocumentRetrievalPipeline, data
     return {
         "source": source,
         "answer": answer,
-        "knowledge_terms": [e.term for e in kb_entries],
+        "knowledge_terms": [] if source == "document" and document_first else [e.term for e in kb_entries],
         "citations": rag.get("citations", []),
         "confidence": rag.get("confidence", 1.0 if has_kb else 0.0),
         "abstain": False,
@@ -305,16 +333,6 @@ HTML = r"""<!doctype html>
     .file-status { font-size: 11px; color: var(--muted); padding: 6px 2px; line-height: 1.4; }
     .file-status.ok { color: var(--accent); }
     .file-status.err { color: var(--warn); }
-
-    .sample-btn {
-      display: flex; align-items: center; gap: 7px;
-      padding: 8px 10px; margin-top: 6px;
-      border-radius: 7px; border: 1px solid rgba(96,165,250,.25);
-      background: rgba(96,165,250,.07);
-      color: var(--blue); font-size: 12px; font-weight: 600;
-      text-decoration: none; transition: background .15s;
-    }
-    .sample-btn:hover { background: rgba(96,165,250,.15); }
 
     /* Presets */
     .presets { display: flex; flex-direction: column; gap: 3px; }
@@ -630,10 +648,7 @@ HTML = r"""<!doctype html>
         <div class="uz-hint">Click or drag &amp; drop</div>
         <input id="fileInput" type="file" accept=".pdf" />
       </div>
-      <div id="fileStatus" class="file-status">No file uploaded — using built-in sample</div>
-      <a class="sample-btn" href="/api/sample-pdf" download="synthetic_auto_policy.pdf">
-        &#x2B07; Download sample policy PDF
-      </a>
+      <div id="fileStatus" class="file-status">No file uploaded</div>
     </div>
 
     <div class="sb-divider"></div>
@@ -646,9 +661,9 @@ HTML = r"""<!doctype html>
         <button class="preset-btn" data-q="What is the difference between ACV and RCV?">ACV vs RCV?</button>
         <button class="preset-btn" data-q="What is waiver of subrogation?">Waiver of subrogation?</button>
         <button class="preset-btn" data-q="Explain the difference between occurrence and claims-made policies.">Occurrence vs claims-made?</button>
-        <button class="preset-btn" data-q="What is the comprehensive deductible in my policy?">Comprehensive deductible?</button>
-        <button class="preset-btn" data-q="What does the rental reimbursement endorsement provide?">Rental reimbursement?</button>
-        <button class="preset-btn" data-q="Compare the two policy versions and what changed.">Compare policy versions</button>
+        <button class="preset-btn" data-q="What coverage limits are described in the document?">Coverage limits?</button>
+        <button class="preset-btn" data-q="What exclusions are described in the document?">Exclusions?</button>
+        <button class="preset-btn" data-q="Compare the first two uploaded or indexed policy documents and what changed.">Compare documents</button>
       </div>
     </div>
 
@@ -1098,7 +1113,7 @@ class DemoHandler(BaseHTTPRequestHandler):
 
         if parsed.path == "/api/backend":
             label = _backend_label(self.pipeline())
-            self._send(200, json.dumps({"backend": label}).encode(), "application/json")
+            self._send(200, json.dumps({"backend": label}).encode(), "application/json; charset=utf-8")
             return
 
         if parsed.path == "/api/chat":
@@ -1108,14 +1123,22 @@ class DemoHandler(BaseHTTPRequestHandler):
                 return
             result = build_chat_response(question, self.pipeline(), self._data_folder)
             if result.get("source") == "diff":
-                old_pdf = DATA_FOLDER / "synthetic_auto_policy.pdf"
-                new_pdf = DATA_FOLDER / "synthetic_auto_policy_v2.pdf"
-                old_text = "\n\n".join(extract_text_by_page(old_pdf))
-                new_text = "\n\n".join(extract_text_by_page(new_pdf))
+                pair = _first_two_pdfs(self._data_folder)
+                if pair is None:
+                    self._send_json(
+                        {
+                            "source": "diff",
+                            "summary": "Upload or index at least two real PDF documents before running policy diff.",
+                        },
+                        status=400,
+                    )
+                    return
+                old_text = "\n\n".join(extract_text_by_page(pair[0]))
+                new_text = "\n\n".join(extract_text_by_page(pair[1]))
                 diff = summarize_policy_diff(old_text, new_text)
-                self._send(200, json.dumps(diff, ensure_ascii=False).encode(), "application/json")
+                self._send(200, json.dumps(diff, ensure_ascii=False).encode(), "application/json; charset=utf-8")
             else:
-                self._send(200, json.dumps(result, ensure_ascii=False).encode(), "application/json")
+                self._send(200, json.dumps(result, ensure_ascii=False).encode(), "application/json; charset=utf-8")
             return
 
         if parsed.path == "/api/page-image":
@@ -1129,25 +1152,20 @@ class DemoHandler(BaseHTTPRequestHandler):
             return
 
         if parsed.path == "/api/diff":
-            old_pdf = DATA_FOLDER / "synthetic_auto_policy.pdf"
-            new_pdf = DATA_FOLDER / "synthetic_auto_policy_v2.pdf"
-            old_text = "\n\n".join(extract_text_by_page(old_pdf))
-            new_text = "\n\n".join(extract_text_by_page(new_pdf))
+            pair = _first_two_pdfs(self._data_folder)
+            if pair is None:
+                self._send_json(
+                    {
+                        "source": "diff",
+                        "summary": "Upload or index at least two real PDF documents before running policy diff.",
+                    },
+                    status=400,
+                )
+                return
+            old_text = "\n\n".join(extract_text_by_page(pair[0]))
+            new_text = "\n\n".join(extract_text_by_page(pair[1]))
             result = summarize_policy_diff(old_text, new_text)
-            self._send(200, json.dumps(result, ensure_ascii=False).encode(), "application/json")
-            return
-
-        if parsed.path == "/api/sample-pdf":
-            if SAMPLE_PDF.exists():
-                pdf_bytes = SAMPLE_PDF.read_bytes()
-                self.send_response(200)
-                self.send_header("Content-Type", "application/pdf")
-                self.send_header("Content-Length", str(len(pdf_bytes)))
-                self.send_header("Content-Disposition", 'attachment; filename="synthetic_auto_policy.pdf"')
-                self.end_headers()
-                self.wfile.write(pdf_bytes)
-            else:
-                self._send(404, b"Sample PDF not found", "text/plain")
+            self._send(200, json.dumps(result, ensure_ascii=False).encode(), "application/json; charset=utf-8")
             return
 
         self._send(404, b"Not found", "text/plain")
@@ -1183,7 +1201,7 @@ class DemoHandler(BaseHTTPRequestHandler):
             self._send_json({"ok": False, "error": str(exc)}, status=500)
 
     def _send_json(self, payload: dict, status: int = 200) -> None:
-        self._send(status, json.dumps(payload, ensure_ascii=False).encode(), "application/json")
+        self._send(status, json.dumps(payload, ensure_ascii=False).encode(), "application/json; charset=utf-8")
 
     @classmethod
     def _render_source_page_image(cls, source: str) -> Path | None:

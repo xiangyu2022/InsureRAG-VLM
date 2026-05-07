@@ -44,7 +44,11 @@ bash scripts/setup_local.sh
 
 ## 3. Verify The Project
 
-Run the no-key smoke test:
+Download real public PDFs, then run the no-key smoke test:
+
+```bash
+python main.py import-data --output-root data --datasets public_docs
+```
 
 ```bash
 make smoke-test
@@ -81,7 +85,7 @@ Open this folder in VS Code and select the `.venv` interpreter.
 The repo includes `.vscode/launch.json` with these debug targets:
 
 - `Demo Web`: starts the browser app on port `7860`.
-- `Query Synthetic Policy`: runs a deterministic local query.
+- `Query Public Docs`: runs a deterministic local query against downloaded public PDFs.
 - `Smoke Test`: runs the project smoke test script.
 
 ## 6. Move Data From Codespaces
@@ -103,8 +107,9 @@ reports/
 If you do not copy generated files, you can rebuild them locally:
 
 ```bash
-python main.py build-index data/00_raw/public --index-dir data
-python main.py preprocess-pages data/00_raw/public --output-root data --render-dpi 150
+python main.py import-data --output-root data --datasets public_docs
+python main.py build-index data/00_raw/external/public_docs --index-dir data
+python main.py preprocess-pages data/00_raw/external/public_docs --output-root data --render-dpi 150
 python main.py build-visual-index data/03_index/colqwen2/page_manifest.jsonl --index-dir data/03_index/colqwen2 --backend local_image
 ```
 

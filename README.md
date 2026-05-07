@@ -96,7 +96,6 @@ Implemented:
 - 200-500 scale real-PDF QA/evidence generation with QA-level document split labels.
 - Deterministic insurance glossary with 250+ terms, acronyms, metrics, roles, and aliases.
 - No-key local demo baseline with hashing retrieval and extractive cited answers.
-- Synthetic insurance policy PDF and evaluation examples for immediate smoke tests.
 - Existing text-RAG scaffold, PDF extraction, evaluation helpers, and policy diff utilities.
 - Calibration report for selective answering and unsupported-question abstention.
 - Animated browser demo for cited answers, cited-page thumbnails, highlighted evidence snippets, retrieval trace, abstention, upload flow, and policy-version diff.
@@ -105,7 +104,7 @@ Implemented:
 Still planned:
 - Measured CUDA results for ColQwen2/ColPali beyond the current `local_image` baseline.
 - Layout/table extraction as explanation and evaluation metadata.
-- Multi-file upload sessions. The current browser demo can upload and index one local PDF for Q&A, while the policy-diff animation uses the bundled v1/v2 sample pair.
+- Multi-file upload sessions. The current browser demo can upload and index one local PDF for Q&A; policy diff uses the first two PDFs available in the active real-document folder.
 
 ## Current Reproducible Results
 
@@ -138,37 +137,27 @@ gap is useful as a sanity check; the next meaningful result is a CUDA run with r
 ColQwen2/ColPali embeddings. See `reports/ablation_real_pdfs/`,
 `reports/calibration_real_pdfs/`, and `notebooks/colqwen2_gpu_embed.ipynb`.
 
-### Synthetic Policy Smoke Test (reproducibility check)
-
-Local smoke-test results on the bundled synthetic policy QA set:
-
-| Backend | Recall@1 | Recall@5 | MRR@10 | nDCG@10 |
-| --- | ---: | ---: | ---: | ---: |
-| local_text | 0.3125 | 1.0000 | 0.5958 | 0.6978 |
-| visual_stub | 0.3125 | 0.6250 | 0.4479 | 0.4933 |
-| local_image | 0.3125 | 0.6250 | 0.4479 | 0.4933 |
-
-These numbers are reproducibility checks on synthetic data, not benchmark claims.
-
 ## Quickstart
 
 ```bash
 pip install -r requirements.txt
 
-# End-to-end smoke test (no API keys needed)
+# Download real public PDFs, then run the no-key smoke test.
+python main.py import-data --output-root data --datasets public_docs
 make smoke-test
 
 # Or manually:
-python main.py build-index data/00_raw/public --index-dir data
-python main.py query data/00_raw/public "What is the comprehensive deductible?" --index-dir data --top-k 3
+python main.py build-index data/00_raw/external/public_docs --index-dir data
+python main.py query data/00_raw/external/public_docs "What coverage limits are described?" --index-dir data --top-k 3
 ```
 
 Run the animated browser demo:
 
 ```bash
-.venv/bin/python main.py preprocess-pages data/00_raw/public --output-root data --render-dpi 150
-.venv/bin/python main.py generate-qa data/00_raw/public --output-dir data/02_processed
-.venv/bin/python main.py build-index data/00_raw/public --index-dir data
+.venv/bin/python main.py import-data --output-root data --datasets public_docs
+.venv/bin/python main.py preprocess-pages data/00_raw/external/public_docs --output-root data --render-dpi 150
+.venv/bin/python main.py generate-qa data/00_raw/external/public_docs --output-dir data/02_processed --target-count 300
+.venv/bin/python main.py build-index data/00_raw/external/public_docs --index-dir data
 .venv/bin/python main.py build-visual-index data/03_index/colqwen2/page_manifest.jsonl --index-dir data/03_index/colqwen2 --backend local_image
 .venv/bin/python main.py demo-web --port 7860
 ```
@@ -183,9 +172,9 @@ Import a small real public PDF set for local experiments:
 .venv/bin/python main.py build-visual-index data/03_index/colqwen2/page_manifest.jsonl --index-dir data/03_index/colqwen2 --backend local_image
 ```
 
-`public_docs` downloads a small set of public insurance PDF samples into `data/00_raw/external/public_docs/`. These files are for local reproducibility and are not intended to be committed to GitHub.
+`public_docs` downloads a small set of public insurance PDFs into `data/00_raw/external/public_docs/`. These files are for local reproducibility and are not intended to be committed to GitHub.
 
-Import a broader real-domain mix to replace synthetic-only experiments:
+Import a broader real-domain mix:
 
 ```bash
 .venv/bin/python main.py import-data --output-root data --datasets real_domain_mix
@@ -207,13 +196,13 @@ Downloaded HTML pages are converted to `.txt` for the text retriever. Social/for
 Render PDFs into a page-image dataset:
 
 ```bash
-.venv/bin/python main.py preprocess-pages data/00_raw/public --output-root data --render-dpi 200
+.venv/bin/python main.py preprocess-pages data/00_raw/external/public_docs --output-root data --render-dpi 200
 ```
 
 Optional OCR auxiliary metadata:
 
 ```bash
-.venv/bin/python main.py preprocess-pages data/00_raw/public --output-root data --render-dpi 200 --run-ocr
+.venv/bin/python main.py preprocess-pages data/00_raw/external/public_docs --output-root data --render-dpi 200 --run-ocr
 ```
 
 Expected outputs:
@@ -244,14 +233,8 @@ data/manifests/
 Run the older text-RAG scaffold:
 
 ```bash
-.venv/bin/python main.py build-index data/00_raw/public --render-pdf-pages --pdf-render-dir data/01_interim/legacy_pdf_pages
-.venv/bin/python main.py query data/00_raw/public "What does the endorsement cover?"
-```
-
-Run a small evaluation smoke test:
-
-```bash
-.venv/bin/python main.py evaluate data/00_raw/public data/00_raw/public/synthetic_eval_examples.json --index-dir data --top-k 3
+.venv/bin/python main.py build-index data/00_raw/external/public_docs --render-pdf-pages --pdf-render-dir data/01_interim/legacy_pdf_pages
+.venv/bin/python main.py query data/00_raw/external/public_docs "What coverage does the document describe?"
 ```
 
 Import external CUAD/ACORD manifests and local files:
@@ -263,7 +246,7 @@ Import external CUAD/ACORD manifests and local files:
 Generate QA/evidence pairs and hard negatives:
 
 ```bash
-.venv/bin/python main.py generate-qa data/00_raw/public \
+.venv/bin/python main.py generate-qa data/00_raw/external/public_docs \
   --output-dir data/02_processed \
   --cuad-master data/00_raw/external/cuad/master_clauses.csv \
   --acord-root data/00_raw/external/acord/extracted \
@@ -274,7 +257,7 @@ Generate QA/evidence pairs and hard negatives:
 Compute retrieval metrics over generated policy QA:
 
 ```bash
-.venv/bin/python main.py retrieval-metrics data/00_raw/public data/02_processed/qa_pairs.jsonl --index-dir data --top-k 3
+.venv/bin/python main.py retrieval-metrics data/00_raw/external/public_docs data/02_processed/qa_pairs.jsonl --index-dir data --top-k 3
 ```
 
 Build and evaluate the page-image retrieval interface:
@@ -362,13 +345,13 @@ reports/calibration_real_pdfs/summary.md
 Emit structured grounded-answer JSON:
 
 ```bash
-.venv/bin/python main.py query data/00_raw/public "What is the comprehensive deductible?" --index-dir data --top-k 3 --json
+.venv/bin/python main.py query data/00_raw/external/public_docs "What coverage limits are described?" --index-dir data --top-k 3 --json
 ```
 
 Summarize policy version drift:
 
 ```bash
-.venv/bin/python main.py policy-diff data/00_raw/public/synthetic_auto_policy.pdf data/00_raw/public/synthetic_auto_policy_v2.pdf --output reports/diff/diff_summary.json
+.venv/bin/python main.py policy-diff path/to/original_policy.pdf path/to/revised_policy.pdf --output reports/diff/diff_summary.json
 ```
 
 Use OpenAI instead of the local baseline by setting:

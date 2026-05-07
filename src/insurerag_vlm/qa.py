@@ -935,6 +935,16 @@ def generate_policy_qa_pairs(
             "What is the earthquake deductible?",
             "Does this policy include jewelry scheduled property coverage?",
             "What is the cyber liability sublimit?",
+            "What is the flood insurance deductible?",
+            "What is the umbrella liability limit?",
+            "Does the policy provide pet injury coverage?",
+            "What is the named storm percentage deductible?",
+            "What is the identity theft reimbursement limit?",
+            "Does this policy include mechanical breakdown coverage?",
+            "What is the rental car loss of use sublimit?",
+            "What is the replacement cost roof settlement provision?",
+            "Does the policy cover business property away from premises?",
+            "What is the water backup endorsement limit?",
         ]
         for idx, question in enumerate(unsupported_questions):
             qa_pairs.append(

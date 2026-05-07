@@ -13,15 +13,15 @@
       }
     },
     {
-      "name": "Query Synthetic Policy",
+      "name": "Query Public Docs",
       "type": "python",
       "request": "launch",
       "program": "${workspaceFolder}/main.py",
       "console": "integratedTerminal",
       "args": [
         "query",
-        "data/00_raw/public",
-        "What is the liability coverage limit?",
+        "data/00_raw/external/public_docs",
+        "What coverage limits are described?",
         "--index-dir",
         "data",
         "--top-k",
@@ -39,8 +39,8 @@
       "console": "integratedTerminal",
       "args": [
         "query",
-        "data/00_raw/public",
-        "What is the comprehensive deductible?",
+        "data/00_raw/external/public_docs",
+        "What coverage limits are described?",
         "--index-dir",
         "data",
         "--top-k",

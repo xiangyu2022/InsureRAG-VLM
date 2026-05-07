@@ -439,24 +439,39 @@ def visual_search(
     similarities = (index @ query_embedding) / (
         np.linalg.norm(index, axis=1) * np.linalg.norm(query_embedding) + 1e-10
     )
-    top_indices = np.argsort(-similarities)[:top_k]
+    candidate_pool = min(len(similarities), max(top_k, top_k * 4, 20))
+    top_indices = np.argsort(-similarities)[:candidate_pool]
 
     ranked_pages = []
     for idx in top_indices:
         page = pages[int(idx)]
+        source = page.get("source") or page.get("page_id")
+        rerank_score = 0.0
+        if backend in {"visual_stub", "local_image"}:
+            from .pipeline import DocumentRetrievalPipeline
+
+            rerank_score = DocumentRetrievalPipeline._score_insurance_evidence(
+                query,
+                _visual_stub_text(page),
+                source,
+                page.get("page_number"),
+            )
         ranked_pages.append(
             {
                 "page_id": page.get("page_id"),
                 "image_path": page.get("image_path"),
-                "score": float(similarities[idx]),
-                "source": page.get("source") or page.get("page_id"),
+                "score": round(float(similarities[idx]) + rerank_score, 6),
+                "retrieval_score": float(similarities[idx]),
+                "rerank_score": round(rerank_score, 6),
+                "source": source,
                 "page_number": page.get("page_number"),
                 "section_hint": page.get("section_hint"),
                 "image_stats": page.get("image_stats"),
                 "backend": backend,
             }
         )
-    return ranked_pages
+    ranked_pages.sort(key=lambda page: float(page.get("score", 0.0)), reverse=True)
+    return ranked_pages[:top_k]
 
 
 def _source_page_number(source: str) -> int | None:
