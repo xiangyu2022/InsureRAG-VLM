@@ -25,6 +25,8 @@ class ModelConfig:
     max_answer_pages: int = field(default_factory=lambda: int(os.environ.get("INSURERAG_MAX_ANSWER_PAGES", "3")))
     max_page_chars: int = field(default_factory=lambda: int(os.environ.get("INSURERAG_MAX_PAGE_CHARS", "900")))
     max_context_chars: int = field(default_factory=lambda: int(os.environ.get("INSURERAG_MAX_CONTEXT_CHARS", "2400")))
+    abstain_threshold: float = field(default_factory=lambda: float(os.environ.get("INSURERAG_ABSTAIN_THRESHOLD", "0.20")))
+    citation_min_overlap: float = field(default_factory=lambda: float(os.environ.get("INSURERAG_CITATION_MIN_OVERLAP", "0.20")))
     index_dir: Path = field(default_factory=lambda: Path("data"))
     index_path: Path | None = None
     metadata_path: Path | None = None

@@ -4,8 +4,13 @@ __pycache__/
 *.pyd
 .env
 .env.*
+.tmp/
+.test-tmp/
+.venv/
+.venv-*/
 venv/
 notebook_env/
+demo-web.*.log
 data/index.npy
 data/index_meta.json
 data/00_raw/internal/
@@ -14,6 +19,10 @@ data/01_interim/
 data/02_processed/
 data/03_index/
 data/manifests/
+data/04_curated/rag_*.json
+data/04_curated/sft_dataset.json
+data/04_curated/source_cache/
+models/
 notebooks/data/
 # Allow compact metric reports (*.md, *.csv, *.json); ignore binaries and page images
 reports/**/*.pt
@@ -24,6 +33,7 @@ reports/**/*.pdf
 reports/**/*.png
 reports/**/*.jpg
 reports/**/index/
+reports/**/artifacts/
 reports/demo_uploads/
 reports/public_docs_smoke/
 reports/public_docs_qa/

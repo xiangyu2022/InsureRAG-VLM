@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import List
 
 from .ablation import run_ablation
+from .benchmark import RunGpuBenchmarkConfig, run_gpu_benchmark
 from .app import run_demo_server
 from .calibration import run_calibration
 from .config import ModelConfig
@@ -20,6 +21,8 @@ from .qa import (
     import_cuad_qa,
     merge_qa_files,
 )
+from .sft import DEFAULT_QWEN_7B_MODEL, QwenLoraSFTConfig, run_lora_sft, run_lora_smoke_test
+from .validation import CuratedValidationConfig, validate_curated_data
 from .visual import SUPPORTED_VISUAL_BACKENDS, build_visual_index, compute_visual_retrieval_metrics, visual_search
 
 
@@ -125,6 +128,7 @@ def main() -> None:
         default=None,
         help="Expand rule-based PDF QA/evidence generation until roughly this many answerable examples exist",
     )
+    qa_parser.add_argument("--unsupported-count", type=int, default=50, help="Number of unsupported questions for abstention evaluation")
 
     metrics_parser = subparsers.add_parser("retrieval-metrics", help="Compute retrieval metrics against generated QA evidence pages")
     metrics_parser.add_argument("data_folder", type=Path)
@@ -157,6 +161,74 @@ def main() -> None:
     calibration_parser.add_argument("--output-dir", type=Path, default=Path("reports/calibration"))
     calibration_parser.add_argument("--index-dir", type=Path, default=Path("data"))
     calibration_parser.add_argument("--top-k", type=int, default=3)
+
+    gpu_benchmark_parser = subparsers.add_parser(
+        "run-gpu-benchmark",
+        help="Run reproducible text/local-image/GPU visual benchmark and write a compact report",
+    )
+    gpu_benchmark_parser.add_argument("--data-folder", type=Path, required=True)
+    gpu_benchmark_parser.add_argument("--output-dir", type=Path, default=Path("reports/research_proof"))
+    gpu_benchmark_parser.add_argument("--backend", type=str, default="colqwen2_local", choices=sorted(SUPPORTED_VISUAL_BACKENDS))
+    gpu_benchmark_parser.add_argument("--target-count", type=int, default=300)
+    gpu_benchmark_parser.add_argument("--unsupported-count", type=int, default=50)
+    gpu_benchmark_parser.add_argument("--top-k", type=int, default=10)
+    gpu_benchmark_parser.add_argument("--render-dpi", type=int, default=200)
+    gpu_benchmark_parser.add_argument("--run-ocr", action="store_true")
+    gpu_benchmark_parser.add_argument(
+        "--allow-backend-failures",
+        action="store_true",
+        help="Write partial metrics if the requested GPU backend cannot be loaded on the current machine",
+    )
+
+    sft_parser = subparsers.add_parser("sft-lora-qwen", help="SFT Qwen 7B with LoRA/QLoRA on the curated SFT dataset")
+    sft_parser.add_argument("--dataset-path", type=Path, default=Path("data/04_curated/sft_dataset.jsonl"))
+    sft_parser.add_argument("--output-dir", type=Path, default=Path("models/qwen7b-insurerag-lora"))
+    sft_parser.add_argument("--model-name", type=str, default=DEFAULT_QWEN_7B_MODEL)
+    sft_parser.add_argument("--max-samples", type=int, default=None, help="Optional cap for quick GPU tests")
+    sft_parser.add_argument("--max-length", type=int, default=2048)
+    sft_parser.add_argument("--lora-r", type=int, default=16)
+    sft_parser.add_argument("--lora-alpha", type=int, default=32)
+    sft_parser.add_argument("--lora-dropout", type=float, default=0.05)
+    sft_parser.add_argument("--learning-rate", type=float, default=2e-4)
+    sft_parser.add_argument("--num-train-epochs", type=float, default=1.0)
+    sft_parser.add_argument("--max-steps", type=int, default=-1, help="Use 1 for a tiny end-to-end GPU demo")
+    sft_parser.add_argument("--per-device-train-batch-size", type=int, default=1)
+    sft_parser.add_argument("--gradient-accumulation-steps", type=int, default=8)
+    sft_parser.add_argument("--logging-steps", type=int, default=10)
+    sft_parser.add_argument("--save-steps", type=int, default=100)
+    sft_parser.add_argument("--seed", type=int, default=42)
+    sft_parser.add_argument("--no-4bit", action="store_true", help="Disable 4-bit QLoRA loading")
+    sft_parser.add_argument("--fp16", action="store_true", help="Use fp16 instead of bf16")
+    sft_parser.add_argument("--no-gradient-checkpointing", action="store_true")
+
+    sft_smoke_parser = subparsers.add_parser(
+        "sft-lora-smoke-test",
+        help="Validate curated SFT records, Qwen tokenization, and CUDA visibility",
+    )
+    sft_smoke_parser.add_argument("--dataset-path", type=Path, default=Path("data/04_curated/sft_dataset.jsonl"))
+    sft_smoke_parser.add_argument("--model-name", type=str, default=DEFAULT_QWEN_7B_MODEL)
+    sft_smoke_parser.add_argument("--max-length", type=int, default=1024)
+    sft_smoke_parser.add_argument(
+        "--skip-cuda-check",
+        action="store_true",
+        help="Only for local CPU syntax checks; real SFT still requires CUDA",
+    )
+    sft_smoke_parser.add_argument(
+        "--format-only",
+        action="store_true",
+        help="Validate SFT prompt/label formatting without torch, CUDA, or Hugging Face downloads",
+    )
+
+    validate_parser = subparsers.add_parser(
+        "validate-curated-data",
+        help="Validate curated RAG/SFT JSONL datasets and write research-proof data quality reports",
+    )
+    validate_parser.add_argument("--dataset-dir", type=Path, default=Path("data/04_curated"))
+    validate_parser.add_argument("--output-dir", type=Path, default=Path("reports/research_proof"))
+    validate_parser.add_argument("--min-unsupported", type=int, default=50)
+    validate_parser.add_argument("--min-sft-records", type=int, default=1)
+    validate_parser.add_argument("--min-rag-records", type=int, default=1)
+    validate_parser.add_argument("--no-update-summary", action="store_true")
 
     diff_parser = subparsers.add_parser("diff", help="Compare two text or PDF sources for clause changes")
     diff_parser.add_argument("original", type=Path, help="Original text or PDF file")
@@ -219,6 +291,60 @@ def main() -> None:
         run_demo_server(host=args.host, port=args.port)
         return
 
+    if args.command == "sft-lora-smoke-test":
+        result = run_lora_smoke_test(
+            dataset_path=args.dataset_path,
+            model_name=args.model_name,
+            max_length=args.max_length,
+            skip_cuda_check=args.skip_cuda_check,
+            format_only=args.format_only,
+        )
+        print(json.dumps({key: str(value) if isinstance(value, Path) else value for key, value in result.__dict__.items()}, indent=2))
+        return
+
+    if args.command == "sft-lora-qwen":
+        result = run_lora_sft(
+            QwenLoraSFTConfig(
+                dataset_path=args.dataset_path,
+                output_dir=args.output_dir,
+                model_name=args.model_name,
+                max_samples=args.max_samples,
+                max_length=args.max_length,
+                lora_r=args.lora_r,
+                lora_alpha=args.lora_alpha,
+                lora_dropout=args.lora_dropout,
+                learning_rate=args.learning_rate,
+                num_train_epochs=args.num_train_epochs,
+                max_steps=args.max_steps,
+                per_device_train_batch_size=args.per_device_train_batch_size,
+                gradient_accumulation_steps=args.gradient_accumulation_steps,
+                logging_steps=args.logging_steps,
+                save_steps=args.save_steps,
+                seed=args.seed,
+                load_in_4bit=not args.no_4bit,
+                bf16=not args.fp16,
+                gradient_checkpointing=not args.no_gradient_checkpointing,
+            )
+        )
+        print(json.dumps(result, indent=2))
+        return
+
+    if args.command == "validate-curated-data":
+        result = validate_curated_data(
+            CuratedValidationConfig(
+                dataset_dir=args.dataset_dir,
+                output_dir=args.output_dir,
+                min_unsupported=args.min_unsupported,
+                min_sft_records=args.min_sft_records,
+                min_rag_records=args.min_rag_records,
+                update_summary=not args.no_update_summary,
+            )
+        )
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+        if not result["passed"]:
+            raise SystemExit(1)
+        return
+
     pipeline = DocumentRetrievalPipeline(config)
 
     if args.command == "build-index":
@@ -255,7 +381,12 @@ def main() -> None:
             print(f"- {record['dataset']}: {record['status']} -> {record['local_path']}")
     elif args.command == "generate-qa":
         args.output_dir.mkdir(parents=True, exist_ok=True)
-        policy_result = generate_policy_qa_pairs(args.data_folder, args.output_dir, target_count=args.target_count)
+        policy_result = generate_policy_qa_pairs(
+            args.data_folder,
+            args.output_dir,
+            target_count=args.target_count,
+            unsupported_count=args.unsupported_count,
+        )
         qa_files = [policy_result.qa_path]
         print(f"Policy QA: {policy_result.qa_count} examples -> {policy_result.qa_path}")
         print(f"Policy hard negatives: {policy_result.hard_negative_count} -> {policy_result.hard_negatives_path}")
@@ -332,6 +463,23 @@ def main() -> None:
             top_k=args.top_k,
         )
         print("Calibration complete.")
+        for name, path in outputs.items():
+            print(f"{name}: {path}")
+    elif args.command == "run-gpu-benchmark":
+        outputs = run_gpu_benchmark(
+            RunGpuBenchmarkConfig(
+                data_folder=args.data_folder,
+                output_dir=args.output_dir,
+                backend=args.backend,
+                target_count=args.target_count,
+                unsupported_count=args.unsupported_count,
+                top_k=args.top_k,
+                render_dpi=args.render_dpi,
+                run_ocr=args.run_ocr,
+                allow_backend_failures=args.allow_backend_failures,
+            )
+        )
+        print("GPU benchmark complete.")
         for name, path in outputs.items():
             print(f"{name}: {path}")
     elif args.command == "diff":

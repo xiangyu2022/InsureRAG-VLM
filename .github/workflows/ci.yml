@@ -50,4 +50,8 @@ jobs:
           python -c "from src.insurerag_vlm.pipeline import DocumentRetrievalPipeline"
           python -c "from src.insurerag_vlm.knowledge import search_knowledge"
           python -c "from src.insurerag_vlm.visual import build_visual_index"
+          python -c "from src.insurerag_vlm.benchmark import run_gpu_benchmark"
           echo "All imports OK"
+
+      - name: Run unit tests
+        run: python -m unittest discover tests

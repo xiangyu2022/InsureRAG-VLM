@@ -5,7 +5,7 @@ VISUAL  ?= data/03_index/colqwen2
 QA      ?= data/02_processed/qa_pairs.jsonl
 REPORTS ?= reports
 
-.PHONY: help local-setup smoke-test install index visual-index eval ablation clean
+.PHONY: help local-setup smoke-test install index visual-index eval ablation validate-curated-data research-proof-local gpu-benchmark clean
 
 help:
 	@echo "InsureRAG-VLM — available targets"
@@ -16,6 +16,9 @@ help:
 	@echo "  make visual-index  Build visual_stub + local_image indexes"
 	@echo "  make eval          Run retrieval metrics on QA set"
 	@echo "  make ablation      Run full ablation (all CPU backends)"
+	@echo "  make validate-curated-data  Validate curated RAG/SFT datasets"
+	@echo "  make research-proof-local   Run CPU-local research-proof smoke report"
+	@echo "  make gpu-benchmark Run reproducible benchmark report (GPU backend configurable)"
 	@echo "  make clean         Remove generated indexes and reports"
 
 install:
@@ -47,6 +50,29 @@ ablation:
 		--qa-path $(QA) \
 		--output-dir $(REPORTS)/ablation_real_pdfs \
 		--visual-index-dir $(VISUAL)
+
+validate-curated-data:
+	$(PYTHON) main.py validate-curated-data \
+		--dataset-dir data/04_curated \
+		--output-dir $(REPORTS)/research_proof
+
+research-proof-local:
+	$(PYTHON) main.py run-gpu-benchmark \
+		--data-folder $(DATA) \
+		--output-dir $(REPORTS)/research_proof_local \
+		--backend local_image \
+		--target-count 50 \
+		--unsupported-count 20 \
+		--allow-backend-failures
+
+gpu-benchmark:
+	$(PYTHON) main.py run-gpu-benchmark \
+		--data-folder $(DATA) \
+		--output-dir $(REPORTS)/research_proof \
+		--backend colqwen2_local \
+		--target-count 300 \
+		--unsupported-count 50 \
+		--top-k 10
 
 clean:
 	rm -rf data/index.npy data/index_meta.json

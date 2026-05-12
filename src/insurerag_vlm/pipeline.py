@@ -168,16 +168,24 @@ class DocumentRetrievalPipeline:
             )
 
         confidence = self._estimate_confidence(question, clean_answer, ranked_pages)
-        supported = self._answer_supported_by_citations(question, clean_answer, citations)
+        supported, support_reason = self._citation_support_details(
+            question,
+            clean_answer,
+            citations,
+            min_overlap=getattr(self.config, "citation_min_overlap", 0.20),
+        )
         if not supported:
             confidence = min(confidence, 0.19)
-        abstain = confidence < 0.20 or "insufficient_evidence" in answer.lower() or not supported
+        threshold = getattr(self.config, "abstain_threshold", 0.20)
+        abstain = confidence < threshold or "insufficient_evidence" in answer.lower() or not supported
         return {
             "answer": "" if abstain else clean_answer,
             "citations": [] if abstain else citations,
             "confidence": confidence,
             "abstain": abstain,
             "abstain_reason": "insufficient_retrieved_evidence" if abstain else None,
+            "citation_support": supported,
+            "citation_support_reason": support_reason,
             "source_ranking": ranked_pages,
         }
 
@@ -346,25 +354,36 @@ class DocumentRetrievalPipeline:
         answer: str,
         citations: List[Dict[str, object]],
     ) -> bool:
+        supported, _ = cls._citation_support_details(question, answer, citations)
+        return supported
+
+    @classmethod
+    def _citation_support_details(
+        cls,
+        question: str,
+        answer: str,
+        citations: List[Dict[str, object]],
+        min_overlap: float = 0.20,
+    ) -> tuple[bool, str]:
         if "insufficient_evidence" in (answer or "").lower():
-            return False
+            return False, "model_reported_insufficient_evidence"
         if not citations:
-            return False
+            return False, "missing_citation"
         evidence = " ".join(str(citation.get("evidence_text", "")) for citation in citations)
         if not evidence.strip():
-            return False
+            return False, "missing_citation_evidence"
 
         answer_amounts = set(_AMOUNT_RE.findall(answer or ""))
         evidence_amounts = set(_AMOUNT_RE.findall(evidence))
         if answer_amounts and not answer_amounts <= evidence_amounts:
-            return False
+            return False, "answer_amount_not_in_citation"
         if cls._question_requires_numeric_evidence(question) and not answer_amounts:
-            return False
+            return False, "numeric_question_without_answer_amount"
 
         key_terms = cls._key_terms(question)
         evidence_terms = cls._terms(evidence, min_len=3)
         if key_terms and not (key_terms & evidence_terms):
-            return False
+            return False, "question_terms_not_in_citation"
         broad_value_terms = {
             "coverage", "cover", "include", "policy", "insurance", "limit", "limits",
             "sublimit", "deductible", "endorsement", "reimbursement", "provision",
@@ -373,8 +392,18 @@ class DocumentRetrievalPipeline:
         }
         specific_terms = {term for term in key_terms if len(term) >= 4 and term not in broad_value_terms}
         if specific_terms and not specific_terms <= evidence_terms:
-            return False
-        return True
+            return False, "specific_question_terms_not_in_citation"
+
+        answer_terms = cls._key_terms(answer)
+        answer_specific_terms = {
+            term for term in answer_terms
+            if len(term) >= 4 and term not in broad_value_terms
+        }
+        if answer_specific_terms:
+            overlap_ratio = len(answer_specific_terms & evidence_terms) / max(1, len(answer_specific_terms))
+            if overlap_ratio < min_overlap:
+                return False, "answer_terms_not_supported_by_citation"
+        return True, "supported"
 
     @staticmethod
     def _extract_answer_source(answer: str, ranked_pages: Optional[List[Dict[str, object]]] = None) -> Optional[str]:

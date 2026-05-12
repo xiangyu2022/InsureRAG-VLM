@@ -6,4 +6,6 @@ transformers>=4.53
 accelerate
 safetensors
 Pillow
+peft
+bitsandbytes
 

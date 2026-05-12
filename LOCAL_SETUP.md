@@ -122,3 +122,17 @@ pip install -r requirements-gpu.txt
 ```
 
 The normal CPU/local baseline does not require GPU dependencies or API keys.
+
+Windows PowerShell quick CUDA check:
+
+```powershell
+py -3 -m venv .venv-cu
+.\.venv-cu\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install --index-url https://download.pytorch.org/whl/cu128 torch torchvision
+python -m pip install -r requirements.txt
+python scripts\gpu_smoke_test.py
+```
+
+Expected result includes `cuda_available=True`, your NVIDIA GPU name, and
+`gpu_smoke_test=PASSED`.

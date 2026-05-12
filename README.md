@@ -40,16 +40,18 @@ Insurance documents are visually rich. Coverage limits, deductibles, declaration
 
 ## Architecture
 
-Primary path:
+System stages:
 
 ```text
 PDF / policy packet
-  -> document registry + hashes
-  -> render each page as a standardized image
-  -> page-level metadata
-  -> ColQwen2/ColPali-compatible page manifest
-  -> visual page retrieval
-  -> Qwen2.5-VL grounded answer with citations
+  -> document registry, SHA-256 hashes, document split metadata
+  -> page rendering into normalized image units
+  -> page manifest + auxiliary text/OCR metadata
+  -> text index, local image-layout index, or ColQwen2/ColPali GPU index
+  -> retrieval + insurance-domain reranking
+  -> extractive/LLM answer generation
+  -> citation validation + configurable abstention threshold
+  -> retrieval, answer, calibration, and error-group reports
 ```
 
 Auxiliary path:
@@ -98,44 +100,45 @@ Implemented:
 - No-key local demo baseline with hashing retrieval and extractive cited answers.
 - Existing text-RAG scaffold, PDF extraction, evaluation helpers, and policy diff utilities.
 - Calibration report for selective answering and unsupported-question abstention.
+- Reproducible benchmark entrypoint with experiment manifest, dataset hash, environment metadata, retrieval metrics, answer metrics, calibration outputs, and grouped reliability errors.
 - Animated browser demo for cited answers, cited-page thumbnails, highlighted evidence snippets, retrieval trace, abstention, upload flow, and policy-version diff.
 - Optional Hugging Face Transformers GPU backends for `colqwen2_hf` / `colqwen2_local` and `colpali_hf` / `colpali_local`.
 
 Still planned:
-- Measured CUDA results for ColQwen2/ColPali beyond the current `local_image` baseline.
+- Cloud GPU run with committed ColQwen2/ColPali benchmark numbers beyond the current `local_image` baseline.
 - Layout/table extraction as explanation and evaluation metadata.
 - Multi-file upload sessions. The current browser demo can upload and index one local PDF for Q&A; policy diff uses the first two PDFs available in the active real-document folder.
 
 ## Current Reproducible Results
 
-### Real Public PDF Evaluation
+### Research-Proof Local Baseline
 
-Latest local run: **20 public insurance PDFs**, **168 rendered pages**, and **303 QA rows**
-from Maryland and North Carolina insurance department documents. The QA set contains
-300 answerable examples plus 3 unsupported examples, with document-level split labels.
+Current curated-data validation passes on **169 RAG pages**, **1,090 snippets**, **1,259 RAG corpus
+records**, and **3,600 SFT records** with **400 unsupported examples**. The validator writes
+`reports/research_proof/dataset_validation.json` and regenerates `data/04_curated/dataset_summary.json`.
+
+Latest local CPU benchmark smoke: **20 public insurance PDFs**, **168 rendered pages**, and
+**70 QA rows** with **20 unsupported examples**, written to `reports/research_proof_local/`.
 
 | Backend | Recall@1 | Recall@5 | MRR@10 | nDCG@10 |
 | --- | ---: | ---: | ---: | ---: |
-| local_text (text + hashing) | 0.2033 | 0.4467 | 0.2974 | 0.3348 |
-| visual_stub | 0.1733 | 0.4400 | 0.2733 | 0.3149 |
-| local_image (image-aware local baseline) | 0.1733 | 0.4400 | 0.2733 | 0.3149 |
-| colqwen2_local / colpali_local (GPU) | pending CUDA run | pending CUDA run | pending CUDA run | pending CUDA run |
+| local_text (text + hashing) | 0.2200 | 0.4800 | 0.3347 | 0.4109 |
+| local_image (image-aware local baseline) | 0.2000 | 0.5200 | 0.3429 | 0.4266 |
+| colqwen2_local / colpali_local (GPU) | pending cloud GPU run | pending cloud GPU run | pending cloud GPU run | pending cloud GPU run |
 
 Answering and calibration reports from the same run:
 
 | Metric | Value |
 | --- | ---: |
-| Extractive answer F1 | 0.3695 |
-| Citation precision | 0.2533 |
-| Evidence recall | 0.2533 |
-| Unsupported abstention accuracy | 0.6667 |
-| Calibration suggested threshold | 0.40 |
-| Calibration coverage at threshold | 0.6898 |
+| Extractive answer F1 | 0.0801 |
+| Citation precision | 0.0800 |
+| Evidence recall | 0.0800 |
+| Unsupported abstention accuracy | 0.9000 |
+| Coverage | 0.3143 |
 
-These are local baselines, not final benchmark claims. The close `local_text` vs `local_image`
-gap is useful as a sanity check; the next meaningful result is a CUDA run with real
-ColQwen2/ColPali embeddings. See `reports/ablation_real_pdfs/`,
-`reports/calibration_real_pdfs/`, and `notebooks/colqwen2_gpu_embed.ipynb`.
+These are CPU-local smoke numbers, not final model-quality claims. The next research-proof result
+should come from `main.py run-gpu-benchmark --backend colqwen2_local` on a cloud GPU and should be
+written to `reports/research_proof/`.
 
 ## Quickstart
 
@@ -269,6 +272,46 @@ Build and evaluate the page-image retrieval interface:
 .venv/bin/python main.py visual-retrieval-metrics data/02_processed/qa_pairs.jsonl --index-dir data/03_index/colqwen2 --backend local_image --top-k 3
 ```
 
+Run the reproducible benchmark harness:
+
+```bash
+.venv/bin/python main.py validate-curated-data \
+  --dataset-dir data/04_curated \
+  --output-dir reports/research_proof
+
+.venv/bin/python main.py run-gpu-benchmark \
+  --data-folder data/00_raw/external/public_docs \
+  --output-dir reports/research_proof_local \
+  --backend local_image \
+  --target-count 50 \
+  --unsupported-count 20 \
+  --allow-backend-failures
+
+.venv/bin/python main.py run-gpu-benchmark \
+  --data-folder data/00_raw/external/public_docs \
+  --output-dir reports/research_proof \
+  --backend colqwen2_local \
+  --target-count 300 \
+  --unsupported-count 50 \
+  --top-k 10
+```
+
+This command renders pages, generates answerable and unsupported QA, builds the text baseline,
+builds `local_image`, builds the requested GPU visual backend, and writes:
+
+```text
+reports/research_proof/summary.md
+reports/research_proof/experiment_manifest.json
+reports/research_proof/retrieval_metrics.csv
+reports/research_proof/answer_metrics.json
+reports/research_proof/error_cases_by_type.jsonl
+reports/research_proof/calibration/
+```
+
+The manifest records the git commit, dataset hash/counts, CUDA/PyTorch environment, GPU name,
+backend, model environment variables, dtype, batch size, indexing time, latency, and peak CUDA memory.
+For a CPU-only dry run, use `--backend local_image --allow-backend-failures`.
+
 Run a real ColQwen2 / ColPali visual retriever on a GPU machine:
 
 ```bash
@@ -294,6 +337,40 @@ export INSURERAG_COLPALI_MODEL="vidore/colpali-v1.3-hf"
 
 The `colqwen2_hf` and `colpali_hf` backends use Hugging Face Transformers retrieval classes and save multi-vector page embeddings to `data/03_index/colqwen2/<backend>.pt`. Set `INSURERAG_REQUIRE_CUDA=1` if you want the command to fail instead of falling back to CPU/MPS.
 
+Fine-tune Qwen 7B with LoRA/QLoRA on the curated SFT dataset:
+
+```bash
+.venv/bin/python -m pip install -r requirements-gpu.txt
+
+# Validates CUDA, tokenizer formatting, and the first curated SFT record.
+.venv/bin/python main.py sft-lora-smoke-test \
+  --dataset-path data/04_curated/sft_dataset.jsonl \
+  --model-name Qwen/Qwen2.5-7B-Instruct
+
+# Dependency-free local check for the curated SFT prompt/label formatting.
+.venv/bin/python main.py sft-lora-smoke-test \
+  --dataset-path data/04_curated/sft_dataset.jsonl \
+  --format-only
+
+# Tiny end-to-end GPU demo: loads Qwen 7B in 4-bit, trains one optimizer step,
+# and writes a LoRA adapter to models/qwen7b-insurerag-lora-smoke.
+.venv/bin/python main.py sft-lora-qwen \
+  --dataset-path data/04_curated/sft_dataset.jsonl \
+  --model-name Qwen/Qwen2.5-7B-Instruct \
+  --output-dir models/qwen7b-insurerag-lora-smoke \
+  --max-samples 2 \
+  --max-steps 1 \
+  --logging-steps 1 \
+  --save-steps 1
+
+# Full curated-set LoRA run.
+.venv/bin/python main.py sft-lora-qwen \
+  --dataset-path data/04_curated/sft_dataset.jsonl \
+  --output-dir models/qwen7b-insurerag-lora
+```
+
+The SFT command requires `torch.cuda.is_available()` to be true. By default it uses 4-bit QLoRA with LoRA adapters on Qwen attention and MLP projection layers (`q_proj`, `k_proj`, `v_proj`, `o_proj`, `gate_proj`, `up_proj`, `down_proj`).
+
 Generate a 200-500 example real-PDF QA/evidence set:
 
 ```bash
@@ -310,6 +387,9 @@ Generate a 200-500 example real-PDF QA/evidence set:
 ```
 
 The real-PDF QA generator creates evidence-anchored questions, supports multi-positive page labels for broad topics, and writes `qa_splits.jsonl` plus per-example `split` / `split_doc_id` fields to keep evaluation document-aware. The GPU ColQwen2/ColPali run should be reported separately once executed on a CUDA machine.
+
+Unsupported abstention coverage defaults to 50 generated unsupported questions. Use
+`--unsupported-count` on `generate-qa` or `run-gpu-benchmark` to change that validation set size.
 
 Run the ablation harness:
 
@@ -419,4 +499,18 @@ Key ablations:
 - Without vs with citation constraints.
 - Qwen2.5-VL vs PaliGemma 2 / Florence-2 baselines.
 - Without vs with abstention/calibration.
+
+## System Design Notes
+
+- Scalability: indexing is separated from query serving; page rendering, visual embedding, and scoring can be batched offline and cached by dataset hash.
+- GPU indexing: cloud GPU runs should use small visual batches, record dtype/device settings, and commit only compact reports rather than generated embeddings or page images.
+- Reliability: answer serving validates cited evidence before returning a response and uses `INSURERAG_ABSTAIN_THRESHOLD` plus calibration curves to tune selective answering.
+- Privacy: internal policy PDFs belong under ignored local data folders; reports should contain manifests, hashes, metrics, and redacted snippets rather than raw private documents.
+- Failure analysis: benchmark reports group errors into retrieval misses, citation mismatches, unsupported false positives, and weak answer extraction cases.
+
+## Resume Bullets
+
+- Built a multimodal RAG system for insurance policy PDFs with page-image retrieval, citation-grounded answering, and abstention over public regulatory documents.
+- Implemented a reproducible benchmark harness comparing text, local image-layout, and ColQwen2/ColPali GPU visual retrieval with dataset hashes, CUDA environment manifests, latency, indexing time, and calibration reports.
+- Designed an evaluation pipeline measuring Recall@K, MRR, nDCG, citation precision, evidence recall, unsupported abstention accuracy, coverage, selective risk, and grouped error cases.
 

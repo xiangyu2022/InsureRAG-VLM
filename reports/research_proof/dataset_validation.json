@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "dataset_dir": "data\\04_curated",
+  "counts": {
+    "rag_pages": 169,
+    "rag_snippets": 1090,
+    "rag_corpus": 1259,
+    "sft_dataset": 3600
+  },
+  "files": {
+    "rag_pages": {
+      "path": "data\\04_curated\\rag_pages.jsonl",
+      "bytes": 1216198,
+      "sha256": "83b7bdbc81b788b553d73a4de3f08d6e43b29afa9a4a3fa9ec596af257a7398a"
+    },
+    "rag_snippets": {
+      "path": "data\\04_curated\\rag_snippets.jsonl",
+      "bytes": 1438705,
+      "sha256": "6197017e01695e54910926aa327a8d4ae89af4f41a0a2385f475c50672b0e6c8"
+    },
+    "rag_corpus": {
+      "path": "data\\04_curated\\rag_corpus.jsonl",
+      "bytes": 2654903,
+      "sha256": "90d25c316d56ab8779ed96b0ae5c0e9af114a7153d01bcb003e99e980e5af49f"
+    },
+    "sft_dataset": {
+      "path": "data\\04_curated\\sft_dataset.jsonl",
+      "bytes": 6667739,
+      "sha256": "df8454a648e0dac412c680322e78ec159084f1444cca7e240b15ded719f53b02"
+    }
+  },
+  "quality": {
+    "sft_answerable_count": 3200,
+    "sft_unsupported_count": 400,
+    "empty_answerable_evidence_count": 0,
+    "sft_duplicate_prompts": {
+      "duplicate_groups": 81,
+      "duplicate_records": 162
+    },
+    "rag_duplicate_citations": {
+      "duplicate_groups": 37,
+      "duplicate_records": 74
+    },
+    "split_leakage": {
+      "checked_records": 0,
+      "leaked_source_count": 0,
+      "leaked_sources": {},
+      "status": "not_applicable"
+    }
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "type": "split_metadata_absent",
+      "message": "SFT records do not contain split metadata; source-level leakage cannot be checked for SFT training splits."
+    },
+    {
+      "type": "low_value_source_cache",
+      "source": "data\\04_curated\\source_cache\\mn_doi_auto_basics.txt",
+      "bytes": 190,
+      "message": "Low-value cached source text should remain excluded or manifest-only: data\\04_curated\\source_cache\\mn_doi_auto_basics.txt (190 bytes)"
+    },
+    {
+      "type": "low_value_source_cache",
+      "source": "data\\04_curated\\source_cache\\mn_doi_auto_shopping.txt",
+      "bytes": 190,
+      "message": "Low-value cached source text should remain excluded or manifest-only: data\\04_curated\\source_cache\\mn_doi_auto_shopping.txt (190 bytes)"
+    },
+    {
+      "type": "low_value_source_cache",
+      "source": "data\\04_curated\\source_cache\\mn_doi_home_claims.txt",
+      "bytes": 190,
+      "message": "Low-value cached source text should remain excluded or manifest-only: data\\04_curated\\source_cache\\mn_doi_home_claims.txt (190 bytes)"
+    },
+    {
+      "type": "low_value_source_cache",
+      "source": "data\\04_curated\\source_cache\\mn_doi_homeowner_guide.txt",
+      "bytes": 190,
+      "message": "Low-value cached source text should remain excluded or manifest-only: data\\04_curated\\source_cache\\mn_doi_homeowner_guide.txt (190 bytes)"
+    },
+    {
+      "type": "low_value_source_cache",
+      "source": "data\\04_curated\\source_cache\\mn_doi_property_coverage.txt",
+      "bytes": 190,
+      "message": "Low-value cached source text should remain excluded or manifest-only: data\\04_curated\\source_cache\\mn_doi_property_coverage.txt (190 bytes)"
+    }
+  ]
+}

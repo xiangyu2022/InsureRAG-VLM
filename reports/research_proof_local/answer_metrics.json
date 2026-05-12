@@ -1,0 +1,11 @@
+{
+  "backend": "local_text",
+  "evaluated_count": 70,
+  "answerable_count": 50,
+  "unsupported_count": 20,
+  "f1": 0.08013028281452986,
+  "citation_precision": 0.08,
+  "evidence_recall": 0.08,
+  "unsupported_abstention_accuracy": 0.9,
+  "coverage": 0.3142857142857143
+}

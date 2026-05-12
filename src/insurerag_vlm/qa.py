@@ -882,11 +882,99 @@ def _assign_qa_document_splits(
     return splits_path
 
 
+def generate_unsupported_questions(count: int = 50) -> List[str]:
+    """Generate unsupported insurance questions for abstention evaluation."""
+    topics = [
+        "earthquake deductible",
+        "jewelry scheduled property coverage",
+        "cyber liability sublimit",
+        "flood insurance deductible",
+        "umbrella liability limit",
+        "pet injury coverage",
+        "named storm percentage deductible",
+        "identity theft reimbursement limit",
+        "mechanical breakdown coverage",
+        "rental car loss of use sublimit",
+        "replacement cost roof settlement provision",
+        "business property away from premises",
+        "water backup endorsement limit",
+        "ordinance or law increased cost limit",
+        "service line coverage deductible",
+        "equipment breakdown endorsement limit",
+        "valuable papers and records limit",
+        "green rebuilding upgrade coverage",
+        "loss assessment coverage limit",
+        "sinkhole collapse deductible",
+        "mold remediation sublimit",
+        "sewer backup waiting period",
+        "vacant home exclusion period",
+        "short-term rental endorsement",
+        "rideshare coverage endorsement",
+        "classic car agreed value coverage",
+        "new car replacement coverage",
+        "diminished value claim coverage",
+        "gap insurance limit",
+        "custom equipment coverage limit",
+        "trip interruption reimbursement",
+        "accidental death benefit",
+        "home cyber protection endorsement",
+        "data restoration coverage",
+        "private flood policy waiting period",
+        "mine subsidence endorsement",
+        "earth movement exclusion exception",
+        "animal liability exclusion",
+        "home daycare liability limit",
+        "domestic worker compensation coverage",
+        "personal injury endorsement",
+        "fungi wet rot dry rot limit",
+        "matching siding and roofing coverage",
+        "cosmetic roof damage exclusion",
+        "foundation water seepage coverage",
+        "backup generator breakdown coverage",
+        "solar panel replacement coverage",
+        "underground utility line coverage",
+        "smart home device discount",
+        "claim forgiveness feature",
+        "vanishing deductible feature",
+        "deductible waiver for large loss",
+        "emergency travel expense coverage",
+        "lock replacement reimbursement",
+        "food spoilage sublimit",
+        "credit card forgery coverage",
+        "student property away at school limit",
+        "assisted living facility property coverage",
+        "personal umbrella retained limit",
+        "watercraft liability horsepower limit",
+    ]
+    templates = [
+        "What is the {topic}?",
+        "Does this policy include {topic}?",
+        "What limit is stated for {topic}?",
+        "Which page describes {topic}?",
+    ]
+    scopes = ["", " in this policy", " in the uploaded document", " in the cited page"]
+    questions: List[str] = []
+    seen = set()
+    for scope in scopes:
+        for template in templates:
+            for topic in topics:
+                question = template.format(topic=f"{topic}{scope}")
+                key = question.lower()
+                if key in seen:
+                    continue
+                seen.add(key)
+                questions.append(question)
+                if len(questions) >= count:
+                    return questions
+    return questions[:count]
+
+
 def generate_policy_qa_pairs(
     data_folder: Path,
     output_dir: Path = Path("data/02_processed"),
     include_unsupported: bool = True,
     target_count: Optional[int] = None,
+    unsupported_count: int = 50,
 ) -> QAResult:
     documents = load_documents(Path(data_folder), render_pdf_pages=False)
     qa_pairs: List[Dict[str, Any]] = []
@@ -931,22 +1019,7 @@ def generate_policy_qa_pairs(
     _augment_multi_positive_sources(qa_pairs, documents)
 
     if include_unsupported:
-        unsupported_questions = [
-            "What is the earthquake deductible?",
-            "Does this policy include jewelry scheduled property coverage?",
-            "What is the cyber liability sublimit?",
-            "What is the flood insurance deductible?",
-            "What is the umbrella liability limit?",
-            "Does the policy provide pet injury coverage?",
-            "What is the named storm percentage deductible?",
-            "What is the identity theft reimbursement limit?",
-            "Does this policy include mechanical breakdown coverage?",
-            "What is the rental car loss of use sublimit?",
-            "What is the replacement cost roof settlement provision?",
-            "Does the policy cover business property away from premises?",
-            "What is the water backup endorsement limit?",
-        ]
-        for idx, question in enumerate(unsupported_questions):
+        for idx, question in enumerate(generate_unsupported_questions(unsupported_count)):
             qa_pairs.append(
                 _make_qa(
                     qa_id=f"unsupported_{idx}",

@@ -1,0 +1,67 @@
+{
+  "command": "python main.py run-gpu-benchmark",
+  "git_commit": "31a19f9441bce02e9eeb8667d95e80d4731755cf",
+  "environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch_error": "No module named 'torch'",
+    "nvidia_smi": "NVIDIA GeForce RTX 4070 Laptop GPU, 576.83, 8188 MiB, 908 MiB"
+  },
+  "dataset": {
+    "data_folder": "data\\00_raw\\external\\public_docs",
+    "file_count": 21,
+    "pdf_count": 20,
+    "total_bytes": 25888119,
+    "sha256": "3b1b961d8ce352ae337e7f62295ebe917d1ea015e8749db7e3cf60b8c3395091"
+  },
+  "config": {
+    "data_folder": "data\\00_raw\\external\\public_docs",
+    "output_dir": "reports\\research_proof_local",
+    "backend": "local_image",
+    "target_count": 50,
+    "unsupported_count": 20,
+    "top_k": 10,
+    "render_dpi": 200,
+    "run_ocr": false,
+    "allow_backend_failures": true
+  },
+  "indexing": [
+    {
+      "backend": "local_text",
+      "index_seconds": 0.28550720000203,
+      "model_name": "local-hashing",
+      "dtype": "float32",
+      "batch_size": null,
+      "peak_cuda_memory_mb": null
+    },
+    {
+      "backend": "local_image",
+      "index_seconds": 1.6704561000005924,
+      "model_name": null,
+      "dtype": "bfloat16",
+      "batch_size": 2,
+      "peak_cuda_memory_mb": null
+    }
+  ],
+  "preprocess": {
+    "document_count": 20,
+    "page_count": 168,
+    "seconds": 16.80845760000011,
+    "page_manifest_path": "reports\\research_proof_local\\artifacts\\preprocess\\03_index\\colqwen2\\page_manifest.jsonl"
+  },
+  "qa": {
+    "qa_path": "reports\\research_proof_local\\artifacts\\qa\\qa_pairs.jsonl",
+    "qa_count": 70,
+    "answerable_count": 50,
+    "unsupported_count": 20,
+    "hard_negative_count": 150,
+    "splits_path": "reports\\research_proof_local\\artifacts\\qa\\qa_splits.jsonl"
+  },
+  "backend_errors": [],
+  "calibration": {
+    "calibration_scores": "reports\\research_proof_local\\calibration\\calibration_scores.jsonl",
+    "calibration_curve": "reports\\research_proof_local\\calibration\\calibration_curve.csv",
+    "summary": "reports\\research_proof_local\\calibration\\summary.md"
+  },
+  "total_seconds": 33.851169099998515
+}
