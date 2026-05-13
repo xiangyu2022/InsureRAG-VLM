@@ -20,7 +20,7 @@ jobs:
           cache: pip
 
       - name: Install system dependencies
-        run: sudo apt-get install -y libgl1 libglib2.0-0 poppler-utils
+        run: sudo apt-get install -y libgl1 libglib2.0-0 poppler-utils tesseract-ocr
 
       - name: Install Python dependencies
         run: pip install -r requirements.txt
