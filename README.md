@@ -1,29 +1,58 @@
+<div align="center">
+
 # InsureRAG-VLM
+
+### Citation-grounded hybrid multimodal RAG for insurance policy review
+
+[![CI](https://github.com/xiangyu2022/InsureRAG-VLM/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/xiangyu2022/InsureRAG-VLM/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.11%2B-3776AB?logo=python&logoColor=white)](LOCAL_SETUP.md)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+</div>
 
 Insurance RAG breaks when the system treats a policy packet like ordinary text.
 This project is built around that premise.
 
-**InsureRAG-VLM** is a citation-grounded, hybrid multimodal RAG system for insurance policy review.
-It is designed for the questions that actually matter in policy packets:
+InsureRAG-VLM is designed for the questions that actually matter in policy packets:
 
 - What is the deductible, limit, or premium?
 - Does an endorsement override the base exclusion?
 - Is the answer on the declarations page, the schedule, or the main form?
 - Is the evidence strong enough to answer at all?
 
-The current default pipeline is not image-only and not text-only. It uses **hybrid text retrieval as
-the backbone**, adds **lightweight page-image layout priors**, performs **table-aware and graph-aware
-retrieval**, and returns **structured answers with page citations, evidence roles, conflict notes,
-and abstention when support is weak**.
+The default system is **not image-only** and **not text-only**.
+It uses **hybrid text retrieval as the backbone**, adds **lightweight page-image layout priors**,
+performs **table-aware and graph-aware retrieval**, and returns **structured answers with citations,
+conflict notes, and abstention when support is weak**.
 
-Heavy ColQwen2/ColPali-style page-image retrieval remains in the repo as an **optional research
+Heavy ColQwen2/ColPali-style page-image retrieval remains available as an **optional research
 backend**, but it is no longer the main product path.
+
+## Highlights
+
+| | |
+| --- | --- |
+| Retrieval | Dense + sparse + lightweight page-image priors + graph expansion |
+| Evidence | Snippet-to-page rollup with page citations and evidence roles |
+| Insurance logic | Declarations, endorsements, exclusions, definitions, tables |
+| Reliability | Structured output, conflict notes, caveats, abstention |
+| Training | Dense retriever training + retrieval-conditioned QLoRA |
+
+## Example Questions
+
+```text
+What is the personal liability limit?
+Does endorsement HO-123 override the water damage exclusion?
+Is cyber coverage listed on the declarations page?
+What deductible applies to this claim?
+What changed between policy version A and version B?
+```
 
 ## Demo Walkthrough
 
 ![InsureRAG-VLM animated demo](assets/demo/insurerag_vlm_demo.gif)
 
-The browser demo shows the full loop:
+The browser demo is designed to feel deliberate rather than noisy. It walks through the full review loop:
 
 - Upload or select a policy PDF
 - Ask deductible, limit, endorsement, exclusion, declaration, glossary, or policy-diff questions
@@ -51,6 +80,12 @@ Insurance review needs more:
 - **Selective answering** because unsupported answers are worse than abstaining
 
 This repo is optimized around that workflow rather than generic semantic search.
+
+## At a Glance
+
+| Input | Output |
+| --- | --- |
+| policy packet, endorsement packet, claim or billing PDF, or curated insurance dataset | grounded answer, page-level citations, evidence snippets, structured fields, conflict notes, abstention |
 
 ## What The System Returns
 
@@ -305,4 +340,3 @@ Key ablations:
 - Without vs with citation constraints.
 - Qwen2.5-VL vs PaliGemma 2 / Florence-2 baselines.
 - Without vs with abstention/calibration.
-
