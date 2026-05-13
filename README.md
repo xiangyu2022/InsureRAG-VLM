@@ -127,36 +127,28 @@ Main code lives in:
 
 ## Data
 
-The repo supports two main modes:
+The repo supports two working modes:
 
-- **Curated mode** via `data/04_curated/` for development, SFT, and structured training
-- **Raw document mode** via imported or local PDFs for end-to-end document experiments
+- **Curated mode** via `data/04_curated/` for development, evaluation, and training
+- **Raw PDF mode** via imported or local insurance documents for end-to-end experiments
 
-Recommended public-data mix:
-
-- CUAD for clause extraction and QA supervision
-- ACORD for clause retrieval and hard negatives
-- InsuranceQA for insurance question language style
-- FUNSD/CORD as structured-document proxies
-- public policy PDFs for real page-level retrieval demos
-
-Private policy documents should stay outside Git. Keep raw internal files in ignored local folders
-and commit only manifests, hashes, scripts, and redacted reports.
+Keep private policy documents outside Git. Commit manifests, hashes, scripts, and redacted reports,
+not raw internal files.
 
 ## Current Status
 
-The system has already moved beyond the original page-image-first prototype.
+The project has moved beyond the original page-image-first prototype.
 
-What changed in the current generation:
+What defines the current generation:
 
-- the default stack is now `hybrid_multimodal`
-- the answer path is centered on `text evidence -> page citation`, not pure image retrieval
+- the default stack is `hybrid_multimodal`
+- the answer path is centered on `text evidence -> page citation`
 - table and graph signals are first-class retrieval inputs
-- the project now includes a full training path:
-  - build retrieval triples
-  - train a dense retriever
-  - rebuild retrieval-conditioned corpora
-  - continue QLoRA SFT from an existing adapter
+- the training workflow now includes:
+  - retrieval triples
+  - dense retriever training
+  - retrieval-conditioned corpus rebuild
+  - QLoRA continuation from an existing adapter
 
 For migration details, see `reports/hybrid_multimodal/summary.md`.
 
@@ -173,299 +165,67 @@ Curated-data validation currently passes on:
 The validator writes `reports/research_proof/dataset_validation.json` and regenerates
 `data/04_curated/dataset_summary.json`.
 
-The latest committed local benchmark numbers in the repo are still **legacy baselines** from before
-the hybrid-multimodal migration. They are useful as a historical floor, not as the final claim for
-the current default system.
-
-| Backend | Recall@1 | Recall@5 | MRR@10 | nDCG@10 |
-| --- | ---: | ---: | ---: | ---: |
-| local_text (text + hashing) | 0.2200 | 0.4800 | 0.3347 | 0.4109 |
-| local_image (image-aware local baseline) | 0.2000 | 0.5200 | 0.3429 | 0.4266 |
-| colqwen2_local / colpali_local (GPU) | pending | pending | pending | pending |
-
-Legacy smoke-run answer metrics:
-
-| Metric | Value |
-| --- | ---: |
-| Extractive answer F1 | 0.0801 |
-| Citation precision | 0.0800 |
-| Evidence recall | 0.0800 |
-| Unsupported abstention accuracy | 0.9000 |
-| Coverage | 0.3143 |
-
-The next benchmark that matters should be a **post-migration** run for `hybrid_multimodal` and
-`hybrid_text`, written to `reports/research_proof/`.
+The benchmark tables already in the repo are **legacy pre-migration baselines**. They are useful as
+a floor, but the result that matters next is a clean post-migration run for `hybrid_multimodal`
+and `hybrid_text`, written to `reports/research_proof/`.
 
 ## Quickstart
 
-Fastest path to a working local demo:
+Fastest path to a working local setup:
 
 ```bash
 pip install -r requirements.txt
 
-# 1. Download a small public insurance PDF set.
+# 1. Download a small public insurance PDF set
 python main.py import-data --output-root data --datasets public_docs
 
-# 2. Optional smoke test.
+# 2. Optional smoke test
 make smoke-test
 
-# 3. Query with the default hybrid multimodal pipeline.
+# 3. Build the default hybrid multimodal index
 python main.py build-index data/00_raw/external/public_docs --index-dir data --retrieval-mode hybrid_multimodal
+
+# 4. Ask a question
 python main.py query data/00_raw/external/public_docs "What coverage limits are described?" --index-dir data --top-k 3 --retrieval-mode hybrid_multimodal
 ```
 
-If you want the browser demo instead of CLI querying, jump straight to `demo-web` below.
-
-Run the animated browser demo:
+Run the browser demo:
 
 ```bash
 .venv/bin/python main.py import-data --output-root data --datasets public_docs
 .venv/bin/python main.py preprocess-pages data/00_raw/external/public_docs --output-root data --render-dpi 150
-.venv/bin/python main.py generate-qa data/00_raw/external/public_docs --output-dir data/02_processed --target-count 300
 .venv/bin/python main.py build-index data/00_raw/external/public_docs --index-dir data --retrieval-mode hybrid_multimodal
 .venv/bin/python main.py demo-web --port 7860
 ```
 
-Then open `http://127.0.0.1:7860`. The UI lets you upload a PDF, asks questions against the active indexed file, and shows grounded citations, confidence/abstention, policy diff, and an expandable retrieval trace with top ranked pages.
+Then open `http://127.0.0.1:7860`.
 
-Import a small real public PDF set for local experiments:
-
-```bash
-.venv/bin/python main.py import-data --output-root data --datasets public_docs
-.venv/bin/python main.py preprocess-pages data/00_raw/external/public_docs --output-root data --render-dpi 150
-.venv/bin/python main.py build-index data/00_raw/external/public_docs --index-dir data --retrieval-mode hybrid_multimodal
-```
-
-`public_docs` downloads a small set of public insurance PDFs into `data/00_raw/external/public_docs/`. These files are for local reproducibility and are not intended to be committed to GitHub.
-
-Import a broader real-domain mix:
+Ask for structured grounded JSON:
 
 ```bash
-.venv/bin/python main.py import-data --output-root data --datasets real_domain_mix
-.venv/bin/python main.py build-index data/00_raw/external/real_domain_mix --index-dir data
-.venv/bin/python main.py generate-qa data/00_raw/external/real_domain_mix --output-dir data/02_processed --target-count 300
+.venv/bin/python main.py query data/00_raw/external/public_docs \
+  "What coverage limits are described?" \
+  --index-dir data \
+  --top-k 3 \
+  --retrieval-mode hybrid_multimodal \
+  --json
 ```
 
-`real_domain_mix` maps to the requested data categories:
-
-- Domain-specific text datasets: CUAD and ACORD source files.
-- Domain web content: insurance regulator and consumer-information pages.
-- Domain news articles: current insurance news/issue pages.
-- Industry reports and white papers: NAIC Journal of Insurance Regulation article pages.
-- Social media data: manifest-only pointers for API/terms-compliant collection.
-- Domain conversation data: insurance FAQ pages and InsuranceQA source pointers.
-
-Downloaded HTML pages are converted to `.txt` for the text retriever. Social/forum and restricted-license sources are registered in manifests instead of scraped by default.
-
-Render PDFs into a page-image dataset:
+Compare policy versions:
 
 ```bash
-.venv/bin/python main.py preprocess-pages data/00_raw/external/public_docs --output-root data --render-dpi 200
+.venv/bin/python main.py policy-diff path/to/original_policy.pdf path/to/revised_policy.pdf \
+  --output reports/diff/diff_summary.json
 ```
 
-Optional OCR auxiliary metadata:
+For a deeper local walkthrough, see [LOCAL_SETUP.md](LOCAL_SETUP.md).
 
-```bash
-.venv/bin/python main.py preprocess-pages data/00_raw/external/public_docs --output-root data --render-dpi 200 --run-ocr
-```
-
-Expected outputs:
-
-```text
-data/01_interim/page_images/
-  <doc_id>_p0001.png
-  <doc_id>_p0002.png
-
-data/02_processed/
-  documents.parquet
-  documents.jsonl
-  pages.parquet
-  pages.jsonl
-  ocr_aux.jsonl
-  colqwen2_retrieval_pairs.jsonl
-  splits.parquet
-  splits.jsonl
-
-data/03_index/colqwen2/
-  page_embeddings/
-  page_manifest.jsonl
-
-data/
-  hybrid_snippets_dense.npy
-  hybrid_snippets_sparse.json
-  hybrid_snippets.jsonl
-  hybrid_pages_dense.npy
-  hybrid_pages_sparse.json
-  hybrid_pages.jsonl
-  hybrid_tables_sparse.json
-  hybrid_tables.jsonl
-  hybrid_graph.jsonl
-  hybrid_page_image.npy
-  hybrid_page_image_pages.jsonl
-
-data/manifests/
-  preprocess_run_manifest.jsonl
-```
-
-Run the hybrid text-only path without the image auxiliary signal:
-
-```bash
-.venv/bin/python main.py build-index data/00_raw/external/public_docs --retrieval-mode hybrid_text --disable-image-signal
-.venv/bin/python main.py query data/00_raw/external/public_docs "What coverage does the document describe?" --retrieval-mode hybrid_text --disable-image-signal
-```
-
-Import external CUAD/ACORD manifests and local files:
-
-```bash
-.venv/bin/python main.py import-data --output-root data --datasets cuad acord insuranceqa public_docs
-```
-
-Generate QA/evidence pairs and hard negatives:
-
-```bash
-.venv/bin/python main.py generate-qa data/00_raw/external/public_docs \
-  --output-dir data/02_processed \
-  --cuad-master data/00_raw/external/cuad/master_clauses.csv \
-  --acord-root data/00_raw/external/acord/extracted \
-  --max-cuad 500 \
-  --max-acord 500
-```
-
-Compute retrieval metrics over generated policy QA:
-
-```bash
-.venv/bin/python main.py retrieval-metrics data/00_raw/external/public_docs data/02_processed/qa_pairs.jsonl --index-dir data --top-k 3 --retrieval-mode hybrid_multimodal
-```
-
-Build and evaluate the optional page-image retrieval interface:
-
-```bash
-.venv/bin/python main.py build-visual-index data/03_index/colqwen2/page_manifest.jsonl --index-dir data/03_index/colqwen2 --backend visual_stub
-.venv/bin/python main.py visual-retrieval-metrics data/02_processed/qa_pairs.jsonl --index-dir data/03_index/colqwen2 --backend visual_stub --top-k 3
-.venv/bin/python main.py build-visual-index data/03_index/colqwen2/page_manifest.jsonl --index-dir data/03_index/colqwen2 --backend local_image
-.venv/bin/python main.py visual-retrieval-metrics data/02_processed/qa_pairs.jsonl --index-dir data/03_index/colqwen2 --backend local_image --top-k 3
-```
-
-Run the reproducible benchmark harness:
-
-```bash
-.venv/bin/python main.py validate-curated-data \
-  --dataset-dir data/04_curated \
-  --output-dir reports/research_proof
-
-.venv/bin/python main.py run-gpu-benchmark \
-  --data-folder data/00_raw/external/public_docs \
-  --output-dir reports/research_proof_local \
-  --backend local_image \
-  --target-count 50 \
-  --unsupported-count 20 \
-  --allow-backend-failures
-
-.venv/bin/python main.py run-gpu-benchmark \
-  --data-folder data/00_raw/external/public_docs \
-  --output-dir reports/research_proof \
-  --backend colqwen2_local \
-  --target-count 300 \
-  --unsupported-count 50 \
-  --top-k 10
-```
-
-This command renders pages, generates answerable and unsupported QA, builds the text baseline,
-builds `local_image`, builds the requested GPU visual backend, and writes:
-
-```text
-reports/research_proof/summary.md
-reports/research_proof/experiment_manifest.json
-reports/research_proof/retrieval_metrics.csv
-reports/research_proof/answer_metrics.json
-reports/research_proof/error_cases_by_type.jsonl
-reports/research_proof/calibration/
-```
-
-The manifest records the git commit, dataset hash/counts, CUDA/PyTorch environment, GPU name,
-backend, model environment variables, dtype, batch size, indexing time, latency, and peak CUDA memory.
-For a CPU-only dry run, use `--backend local_image --allow-backend-failures`.
-
-The default application path does not depend on these visual-only commands. They are intended for
-side-by-side comparison against the hybrid multimodal default rather than for day-to-day querying.
-
-Run a real ColQwen2 / ColPali visual retriever on a GPU machine:
+## Training
 
 ```bash
 .venv/bin/python -m pip install -r requirements-gpu.txt
 
-# ColQwen2 via Hugging Face Transformers
-export INSURERAG_COLQWEN2_MODEL="vidore/colqwen2-v1.0-hf"
-export INSURERAG_VISUAL_BATCH_SIZE=2
-.venv/bin/python main.py build-visual-index data/03_index/colqwen2/page_manifest.jsonl \
-  --index-dir data/03_index/colqwen2 \
-  --backend colqwen2_hf
-.venv/bin/python main.py visual-retrieval-metrics data/02_processed/qa_pairs.jsonl \
-  --index-dir data/03_index/colqwen2 \
-  --backend colqwen2_hf \
-  --top-k 5
-
-# ColPali alternative
-export INSURERAG_COLPALI_MODEL="vidore/colpali-v1.3-hf"
-.venv/bin/python main.py build-visual-index data/03_index/colqwen2/page_manifest.jsonl \
-  --index-dir data/03_index/colqwen2 \
-  --backend colpali_hf
-```
-
-The `colqwen2_hf` and `colpali_hf` backends use Hugging Face Transformers retrieval classes and save multi-vector page embeddings to `data/03_index/colqwen2/<backend>.pt`. Set `INSURERAG_REQUIRE_CUDA=1` if you want the command to fail instead of falling back to CPU/MPS.
-
-Fine-tune Qwen 7B with LoRA/QLoRA on the curated SFT dataset:
-
-```bash
-.venv/bin/python -m pip install -r requirements-gpu.txt
-
-# Validates CUDA, tokenizer formatting, and the first curated SFT record.
-.venv/bin/python main.py sft-lora-smoke-test \
-  --dataset-path data/04_curated/sft_dataset.jsonl \
-  --model-name Qwen/Qwen2.5-7B-Instruct
-
-# Dependency-free local check for the curated SFT prompt/label formatting.
-.venv/bin/python main.py sft-lora-smoke-test \
-  --dataset-path data/04_curated/sft_dataset.jsonl \
-  --format-only
-
-# Tiny end-to-end GPU demo: loads Qwen 7B in 4-bit, trains one optimizer step,
-# and writes a LoRA adapter to models/qwen7b-insurerag-lora-smoke.
-.venv/bin/python main.py sft-lora-qwen \
-  --dataset-path data/04_curated/sft_dataset.jsonl \
-  --model-name Qwen/Qwen2.5-7B-Instruct \
-  --output-dir models/qwen7b-insurerag-lora-smoke \
-  --max-samples 2 \
-  --max-steps 1 \
-  --logging-steps 1 \
-  --save-steps 1
-
-# Full curated-set LoRA run.
-.venv/bin/python main.py sft-lora-qwen \
-  --dataset-path data/04_curated/sft_dataset.jsonl \
-  --output-dir models/qwen7b-insurerag-lora
-
-# More frequent checkpoints for cluster jobs.
-.venv/bin/python main.py sft-lora-qwen \
-  --dataset-path data/04_curated/sft_dataset.jsonl \
-  --output-dir models/qwen7b-insurerag-lora \
-  --save-steps 50 \
-  --save-total-limit 4
-
-# Resume from the latest checkpoint under the output directory.
-.venv/bin/python main.py sft-lora-qwen \
-  --dataset-path data/04_curated/sft_dataset.jsonl \
-  --output-dir models/qwen7b-insurerag-lora \
-  --auto-resume
-```
-
-The SFT command requires `torch.cuda.is_available()` to be true. By default it uses 4-bit QLoRA with LoRA adapters on Qwen attention and MLP projection layers (`q_proj`, `k_proj`, `v_proj`, `o_proj`, `gate_proj`, `up_proj`, `down_proj`).
-During training, Hugging Face checkpoints are saved every `--save-steps` steps, `sft_progress.json` is updated in the output directory, and `SIGTERM` / `SIGINT` will request a final checkpoint before stopping so cluster jobs can resume from the latest saved state.
-
-Build staged training corpora and a trainable dense retriever:
-
-```bash
-# Build doc-disjoint retrieval triples, retrieval-conditioned SFT, and calibration manifests.
+# 1. Build doc-disjoint retrieval triples and retrieval-conditioned SFT corpora
 .venv/bin/python main.py build-training-corpora \
   --data-folder data/04_curated \
   --output-dir reports/training_data \
@@ -475,19 +235,19 @@ Build staged training corpora and a trainable dense retriever:
   --corpus-source curated \
   --disable-image-signal
 
-# Train a local dense retriever from retrieval_train.jsonl.
-.venv/bin/python -m pip install -r requirements-gpu.txt
+# 2. Train a local dense retriever
 .venv/bin/python main.py train-dense-retriever \
   --dataset-path reports/training_data/retrieval_train.jsonl \
   --output-dir models/retrieval/bge-base-insurerag
 
-# Rebuild the hybrid index with the trained dense model and evaluate retrieval.
+# 3. Rebuild with the trained retriever and evaluate retrieval
 .venv/bin/python main.py build-index data/04_curated \
   --index-dir reports/training_data/dense_index \
   --retrieval-model models/retrieval/bge-base-insurerag \
   --retrieval-mode hybrid_multimodal \
   --corpus-source curated \
   --disable-image-signal
+
 .venv/bin/python main.py retrieval-metrics data/04_curated \
   reports/training_data/calibration_test.jsonl \
   --index-dir reports/training_data/dense_index \
@@ -496,7 +256,7 @@ Build staged training corpora and a trainable dense retriever:
   --corpus-source curated \
   --disable-image-signal
 
-# Continue QLoRA from the current adapter using retrieval-conditioned evidence.
+# 4. Continue QLoRA from the current adapter using retrieval-conditioned evidence
 .venv/bin/python main.py sft-lora-qwen \
   --dataset-path reports/training_data/rag_sft_train.jsonl \
   --output-dir models/qwen7b-insurerag-lora-rag \
@@ -504,162 +264,32 @@ Build staged training corpora and a trainable dense retriever:
   --auto-resume
 ```
 
-`build-training-corpora` writes:
-- `retrieval_train.jsonl`, `retrieval_dev.jsonl`, `retrieval_test.jsonl`
-- `rag_sft_train.jsonl`, `rag_sft_dev.jsonl`, `rag_sft_test.jsonl`
-- `calibration_dev.jsonl`, `calibration_test.jsonl`
-- `training_corpora_summary.json`
+MSI GPU batch scripts for this workflow live in `scripts/`.
 
-Generate a 200-500 example real-PDF QA/evidence set:
+## Optional Research Backends
 
-```bash
-.venv/bin/python main.py import-data --output-root data --datasets public_docs
-.venv/bin/python main.py generate-qa data/00_raw/external/public_docs \
-  --output-dir reports/public_docs_qa_v3 \
-  --target-count 300
-.venv/bin/python main.py build-index data/00_raw/external/public_docs \
-  --index-dir reports/public_docs_qa_v3/index \
-  --retrieval-mode hybrid_multimodal
-.venv/bin/python main.py retrieval-metrics data/00_raw/external/public_docs \
-  reports/public_docs_qa_v3/qa_pairs.jsonl \
-  --index-dir reports/public_docs_qa_v3/index \
-  --top-k 5 \
-  --retrieval-mode hybrid_multimodal
-```
-
-The real-PDF QA generator creates evidence-anchored questions, supports multi-positive page labels for broad topics, and writes `qa_splits.jsonl` plus per-example `split` / `split_doc_id` fields to keep evaluation document-aware. The post-migration `hybrid_multimodal` run should be reported first; GPU ColQwen2/ColPali numbers should then be reported separately as optional visual-backend comparisons.
-
-Unsupported abstention coverage defaults to 50 generated unsupported questions. Use
-`--unsupported-count` on `generate-qa` or `run-gpu-benchmark` to change that validation set size.
-
-Run the ablation harness:
+The repo still includes visual-only retrieval backends for side-by-side research comparisons.
+Example:
 
 ```bash
-.venv/bin/python main.py run-ablation \
-  --data-folder data/00_raw/external/public_docs \
-  --qa-path reports/public_docs_qa_v3/qa_pairs.jsonl \
-  --output-dir reports/ablation_real_pdfs \
-  --index-dir reports/public_docs_qa_v3/index \
-  --visual-index-dir data/03_index/colqwen2 \
-  --top-k 5
+.venv/bin/python main.py build-visual-index \
+  data/03_index/colqwen2/page_manifest.jsonl \
+  --index-dir data/03_index/colqwen2 \
+  --backend local_image
+
+.venv/bin/python main.py visual-retrieval-metrics \
+  data/02_processed/qa_pairs.jsonl \
+  --index-dir data/03_index/colqwen2 \
+  --backend local_image \
+  --top-k 3
 ```
 
-Run the calibration and selective-abstention report:
+These are optional experiments, not the default serving path.
 
-```bash
-.venv/bin/python main.py run-calibration \
-  --data-folder data/00_raw/external/public_docs \
-  --qa-path reports/public_docs_qa_v3/qa_pairs.jsonl \
-  --output-dir reports/calibration_real_pdfs \
-  --index-dir reports/public_docs_qa_v3/index \
-  --top-k 5
-```
+## Roadmap
 
-Outputs:
-
-```text
-reports/calibration_real_pdfs/calibration_scores.jsonl
-reports/calibration_real_pdfs/calibration_curve.csv
-reports/calibration_real_pdfs/summary.md
-```
-
-Emit structured grounded-answer JSON:
-
-```bash
-.venv/bin/python main.py query data/00_raw/external/public_docs "What coverage limits are described?" --index-dir data --top-k 3 --json
-```
-
-The structured query response now includes:
-- `query_understanding` flags such as `needs_limit`, `needs_endorsement_check`, and `needs_table_lookup`.
-- citation metadata including `document_type` and `primary_clause_type`.
-- normalized structured fields such as `coverage`, `limit`, and `evidence_role` when they can be extracted from the cited evidence.
-- `conflict_notes`, `conflicts`, and `override_summary` for low-latency declarations/endorsement/exclusion review signals.
-- `caveats` when the retrieved evidence suggests a declarations-page or endorsement override review is still warranted.
-
-Summarize policy version drift:
-
-```bash
-.venv/bin/python main.py policy-diff path/to/original_policy.pdf path/to/revised_policy.pdf --output reports/diff/diff_summary.json
-```
-
-Use OpenAI instead of the local baseline by setting:
-
-```bash
-export OPENAI_API_KEY="sk-..."
-export OPENAI_EMBEDDING_MODEL="text-embedding-3-small"
-export OPENAI_CHAT_MODEL="gpt-4o-mini"
-```
-
-Use a local Ollama model for open-ended questions:
-
-```bash
-ollama pull qwen2.5:3b
-export OLLAMA_MODEL="qwen2.5:3b"
-export OLLAMA_NUM_PREDICT=384
-export OLLAMA_NUM_CTX=4096
-python main.py demo-web --port 7860
-```
-
-For the fastest deterministic demo, bypass Ollama entirely:
-
-```bash
-export INSURERAG_USE_OLLAMA=0
-python main.py demo-web --port 7860
-```
-
-Token-efficiency controls:
-
-```bash
-export INSURERAG_MAX_ANSWER_PAGES=3
-export INSURERAG_MAX_PAGE_CHARS=900
-export INSURERAG_MAX_CONTEXT_CHARS=2400
-export OLLAMA_NUM_PREDICT=384
-```
-
-The pipeline sends only question-relevant evidence snippets to the LLM rather than full retrieved pages. Exact policy answers and glossary hits are handled deterministically when possible, so small local LLMs are reserved for open-ended explanation.
-
-Extract PDF text/layout:
-
-```bash
-.venv/bin/python main.py extract-pdf policy.pdf
-.venv/bin/python main.py extract-pdf policy.pdf --layout
-.venv/bin/python main.py extract-pdf policy.pdf --render --output-dir rendered_pages
-```
-
-Compare two policy versions:
-
-```bash
-.venv/bin/python main.py diff policy_v1.pdf policy_v2.pdf
-```
-
-## Evaluation Plan
-
-Core metrics:
-- Retrieval: Recall@5, MRR@10, nDCG@10.
-- Answering: EM/F1 and ANLS for short answers.
-- Evidence: citation precision and evidence recall.
-- Abstention: unsupported-question accuracy and selective risk curves.
-- Efficiency: p50/p95 latency, index size, and per-query cost.
-
-Key ablations:
-- Hybrid text-only vs hybrid multimodal.
-- Hybrid multimodal vs optional page-image-only visual backends.
-- Without vs with table retrieval and graph expansion.
-- Without vs with hard negatives.
-- Without vs with citation constraints.
-- Qwen2.5-VL vs PaliGemma 2 / Florence-2 baselines.
-- Without vs with abstention/calibration.
-
-## System Design Notes
-
-- Scalability: indexing is separated from query serving; snippet/page/table corpora, dense/sparse indices, document-graph artifacts, and lightweight page-image embeddings can be batched offline and cached by dataset hash.
-- GPU indexing: cloud GPU runs should use small visual batches, record dtype/device settings, and commit only compact reports rather than generated embeddings or page images.
-- Reliability: answer serving validates cited evidence before returning a response, surfaces query-understanding and citation-role metadata, and uses `INSURERAG_ABSTAIN_THRESHOLD` plus calibration curves to tune selective answering.
-- Privacy: internal policy PDFs belong under ignored local data folders; reports should contain manifests, hashes, metrics, and redacted snippets rather than raw private documents.
-- Failure analysis: benchmark reports should group errors into retrieval misses, citation mismatches, unsupported false positives, weak answer extraction cases, table-lookup misses, graph-expansion misses, text-only hits, image-assisted hits, multimodal-rerank rescues, and image-noise false positives.
-
-## Resume Bullets
-
-- Built a hybrid multimodal RAG system for insurance policy PDFs with dense+sparse text retrieval, lightweight page-image reranking, citation-grounded answering, and abstention over public regulatory documents.
-- Implemented a reproducible benchmark harness comparing text, local image-layout, and ColQwen2/ColPali GPU visual retrieval with dataset hashes, CUDA environment manifests, latency, indexing time, and calibration reports, then migrated the product default to the hybrid multimodal path.
-- Designed an evaluation pipeline measuring Recall@K, MRR, nDCG, citation precision, evidence recall, unsupported abstention accuracy, coverage, selective risk, and grouped error cases.
+- stronger clause-level override resolution
+- stronger table and layout extraction
+- post-migration benchmark results for `hybrid_multimodal`
+- gated VLM escalation for scanned or visually difficult pages
+- deeper learned reranking after the low-latency stack is fully benchmarked
