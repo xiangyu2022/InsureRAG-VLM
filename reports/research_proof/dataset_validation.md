@@ -1,5 +1,17 @@
 # Curated Dataset Validation
 
+This curated dataset is now more than a validation artifact: when available, `rag_pages.jsonl`
+and `rag_snippets.jsonl` are also the preferred default retrieval corpus for the repository's
+`hybrid_multimodal` query pipeline.
+
+The current hybrid pipeline also derives lightweight table records and document-graph edges from
+this curated corpus during `build-index`, so the curated pages now feed:
+
+- dense and sparse snippet retrieval
+- dense and sparse page retrieval
+- lightweight table retrieval
+- graph expansion across declarations, endorsements, exclusions, and definitions
+
 - Status: PASSED
 - Dataset directory: `data\04_curated`
 - RAG pages: 169

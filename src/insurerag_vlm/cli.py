@@ -9,6 +9,7 @@ from .app import run_demo_server
 from .calibration import run_calibration
 from .config import ModelConfig
 from .diff import compare_clause_diff, render_clause_diff, summarize_clause_diff, write_policy_diff
+from .dense_training import DEFAULT_DENSE_BASE_MODEL, DenseRetrieverTrainConfig, run_dense_retriever_training
 from .evaluation import generate_evaluation_examples
 from .pdf import extract_layout_by_page, extract_text_by_page, render_pdf_pages
 from .pipeline import DocumentRetrievalPipeline
@@ -22,6 +23,7 @@ from .qa import (
     merge_qa_files,
 )
 from .sft import DEFAULT_QWEN_7B_MODEL, QwenLoraSFTConfig, run_lora_sft, run_lora_smoke_test
+from .training_data import TrainingCorpusBuildConfig, build_training_corpora
 from .validation import CuratedValidationConfig, validate_curated_data
 from .visual import SUPPORTED_VISUAL_BACKENDS, build_visual_index, compute_visual_retrieval_metrics, visual_search
 
@@ -37,6 +39,26 @@ def _load_source_text(path: Path) -> str:
     return _read_text_file(path)
 
 
+def _add_retrieval_mode_args(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
+        "--retrieval-mode",
+        type=str,
+        default=ModelConfig().retrieval_mode,
+        choices=["hybrid_multimodal", "hybrid_text", "dense_only", "sparse_only", "visual"],
+    )
+    parser.add_argument(
+        "--corpus-source",
+        type=str,
+        default=ModelConfig().corpus_source,
+        choices=["auto", "curated", "documents"],
+    )
+    parser.add_argument(
+        "--disable-image-signal",
+        action="store_true",
+        help="Disable the lightweight page-image auxiliary signal and run text-only retrieval.",
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="InsureRAG-VLM retrieval and inference pipeline")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -47,6 +69,7 @@ def main() -> None:
     build_parser.add_argument("--index-dir", type=Path, default=ModelConfig().index_dir)
     build_parser.add_argument("--render-pdf-pages", action="store_true", help="Render PDF pages as images for page-image indexing")
     build_parser.add_argument("--pdf-render-dir", type=Path, default=ModelConfig().pdf_render_dir)
+    _add_retrieval_mode_args(build_parser)
 
     preprocess_parser = subparsers.add_parser(
         "preprocess-pages",
@@ -73,6 +96,7 @@ def main() -> None:
     query_parser.add_argument("--render-pdf-pages", action="store_true", help="Render PDF pages as images for page-image retrieval")
     query_parser.add_argument("--pdf-render-dir", type=Path, default=ModelConfig().pdf_render_dir)
     query_parser.add_argument("--json", action="store_true", help="Emit structured grounded answer JSON")
+    _add_retrieval_mode_args(query_parser)
 
     demo_parser = subparsers.add_parser("demo", help="Run a quick interactive demo")
     demo_parser.add_argument("data_folder", type=Path, help="Path to the folder containing text, image, or PDF files")
@@ -81,6 +105,7 @@ def main() -> None:
     demo_parser.add_argument("--index-dir", type=Path, default=ModelConfig().index_dir)
     demo_parser.add_argument("--render-pdf-pages", action="store_true", help="Render PDF pages as images for page-image retrieval")
     demo_parser.add_argument("--pdf-render-dir", type=Path, default=ModelConfig().pdf_render_dir)
+    _add_retrieval_mode_args(demo_parser)
 
     web_demo_parser = subparsers.add_parser("demo-web", help="Run the animated local browser demo")
     web_demo_parser.add_argument("--host", type=str, default="127.0.0.1")
@@ -94,9 +119,11 @@ def main() -> None:
     eval_parser.add_argument("--hf-token", type=str, default=None)
     eval_parser.add_argument("--openai-key", type=str, default=None)
     eval_parser.add_argument("--vlm-model", type=str, default=ModelConfig().vlm_model)
+    eval_parser.add_argument("--retrieval-model", type=str, default=ModelConfig().retrieval_model)
     eval_parser.add_argument("--index-dir", type=Path, default=ModelConfig().index_dir)
     eval_parser.add_argument("--render-pdf-pages", action="store_true", help="Render PDF pages as images for page-image retrieval")
     eval_parser.add_argument("--pdf-render-dir", type=Path, default=ModelConfig().pdf_render_dir)
+    _add_retrieval_mode_args(eval_parser)
 
     generate_parser = subparsers.add_parser("generate-eval", help="Generate evaluation examples from QA input")
     generate_parser.add_argument("input_path", type=Path, help="Path to the QA input file (csv, json, jsonl)")
@@ -134,7 +161,9 @@ def main() -> None:
     metrics_parser.add_argument("data_folder", type=Path)
     metrics_parser.add_argument("qa_path", type=Path)
     metrics_parser.add_argument("--top-k", type=int, default=10)
+    metrics_parser.add_argument("--retrieval-model", type=str, default=ModelConfig().retrieval_model)
     metrics_parser.add_argument("--index-dir", type=Path, default=ModelConfig().index_dir)
+    _add_retrieval_mode_args(metrics_parser)
 
     visual_build_parser = subparsers.add_parser("build-visual-index", help="Build a page-image retrieval index from page_manifest.jsonl")
     visual_build_parser.add_argument("page_manifest", type=Path)
@@ -180,10 +209,52 @@ def main() -> None:
         help="Write partial metrics if the requested GPU backend cannot be loaded on the current machine",
     )
 
+    training_corpora_parser = subparsers.add_parser(
+        "build-training-corpora",
+        help="Build doc-disjoint retrieval triples, retrieval-conditioned SFT, and calibration manifests",
+    )
+    training_corpora_parser.add_argument("--data-folder", type=Path, required=True)
+    training_corpora_parser.add_argument("--output-dir", type=Path, default=Path("reports/training_data"))
+    training_corpora_parser.add_argument("--qa-path", type=Path, default=None)
+    training_corpora_parser.add_argument("--hard-negatives-path", type=Path, default=None)
+    training_corpora_parser.add_argument("--sft-dataset-path", type=Path, default=Path("data/04_curated/sft_dataset.jsonl"))
+    training_corpora_parser.add_argument("--index-dir", type=Path, default=Path("data/train_index"))
+    training_corpora_parser.add_argument("--retrieval-model", type=str, default="local-hashing")
+    training_corpora_parser.add_argument("--target-qa-count", type=int, default=300)
+    training_corpora_parser.add_argument("--unsupported-count", type=int, default=50)
+    training_corpora_parser.add_argument("--top-k", type=int, default=5)
+    training_corpora_parser.add_argument("--max-negatives", type=int, default=4)
+    training_corpora_parser.add_argument("--max-sft-pages", type=int, default=3)
+    _add_retrieval_mode_args(training_corpora_parser)
+
+    dense_train_parser = subparsers.add_parser(
+        "train-dense-retriever",
+        help="Train a local dense retriever from retrieval_train.jsonl triples",
+    )
+    dense_train_parser.add_argument("--dataset-path", type=Path, required=True)
+    dense_train_parser.add_argument("--output-dir", type=Path, default=Path("models/retrieval/bge-base-insurerag"))
+    dense_train_parser.add_argument("--model-name", type=str, default=DEFAULT_DENSE_BASE_MODEL)
+    dense_train_parser.add_argument("--max-samples", type=int, default=None)
+    dense_train_parser.add_argument("--max-length", type=int, default=384)
+    dense_train_parser.add_argument("--learning-rate", type=float, default=2e-5)
+    dense_train_parser.add_argument("--num-train-epochs", type=float, default=2.0)
+    dense_train_parser.add_argument("--max-steps", type=int, default=-1)
+    dense_train_parser.add_argument("--per-device-train-batch-size", type=int, default=8)
+    dense_train_parser.add_argument("--gradient-accumulation-steps", type=int, default=1)
+    dense_train_parser.add_argument("--logging-steps", type=int, default=10)
+    dense_train_parser.add_argument("--save-steps", type=int, default=200)
+    dense_train_parser.add_argument("--save-total-limit", type=int, default=2)
+    dense_train_parser.add_argument("--seed", type=int, default=42)
+    dense_train_parser.add_argument("--fp16", action="store_true", help="Use fp16 instead of bf16")
+    dense_train_parser.add_argument("--margin", type=float, default=0.2)
+    dense_train_parser.add_argument("--resume-from-checkpoint", type=Path, default=None)
+    dense_train_parser.add_argument("--auto-resume", action="store_true")
+
     sft_parser = subparsers.add_parser("sft-lora-qwen", help="SFT Qwen 7B with LoRA/QLoRA on the curated SFT dataset")
     sft_parser.add_argument("--dataset-path", type=Path, default=Path("data/04_curated/sft_dataset.jsonl"))
     sft_parser.add_argument("--output-dir", type=Path, default=Path("models/qwen7b-insurerag-lora"))
     sft_parser.add_argument("--model-name", type=str, default=DEFAULT_QWEN_7B_MODEL)
+    sft_parser.add_argument("--adapter-path", type=Path, default=None, help="Optional existing LoRA adapter to continue training from")
     sft_parser.add_argument("--max-samples", type=int, default=None, help="Optional cap for quick GPU tests")
     sft_parser.add_argument("--max-length", type=int, default=2048)
     sft_parser.add_argument("--lora-r", type=int, default=16)
@@ -196,10 +267,17 @@ def main() -> None:
     sft_parser.add_argument("--gradient-accumulation-steps", type=int, default=8)
     sft_parser.add_argument("--logging-steps", type=int, default=10)
     sft_parser.add_argument("--save-steps", type=int, default=100)
+    sft_parser.add_argument("--save-total-limit", type=int, default=2)
     sft_parser.add_argument("--seed", type=int, default=42)
     sft_parser.add_argument("--no-4bit", action="store_true", help="Disable 4-bit QLoRA loading")
     sft_parser.add_argument("--fp16", action="store_true", help="Use fp16 instead of bf16")
     sft_parser.add_argument("--no-gradient-checkpointing", action="store_true")
+    sft_parser.add_argument("--resume-from-checkpoint", type=Path, default=None)
+    sft_parser.add_argument(
+        "--auto-resume",
+        action="store_true",
+        help="Resume from the latest checkpoint-* directory under --output-dir when present",
+    )
 
     sft_smoke_parser = subparsers.add_parser(
         "sft-lora-smoke-test",
@@ -258,6 +336,9 @@ def main() -> None:
         use_hf_api=use_hf_api,
         hf_api_token=getattr(args, "hf_token", None),
         openai_api_key=getattr(args, "openai_key", None),
+        retrieval_mode=getattr(args, "retrieval_mode", ModelConfig().retrieval_mode),
+        corpus_source=getattr(args, "corpus_source", ModelConfig().corpus_source),
+        enable_image_signal=not getattr(args, "disable_image_signal", False),
         index_dir=getattr(args, "index_dir", ModelConfig().index_dir),
         render_pdf_pages=getattr(args, "render_pdf_pages", False),
         pdf_render_dir=getattr(args, "pdf_render_dir", ModelConfig().pdf_render_dir),
@@ -308,6 +389,7 @@ def main() -> None:
                 dataset_path=args.dataset_path,
                 output_dir=args.output_dir,
                 model_name=args.model_name,
+                adapter_path=args.adapter_path,
                 max_samples=args.max_samples,
                 max_length=args.max_length,
                 lora_r=args.lora_r,
@@ -320,10 +402,13 @@ def main() -> None:
                 gradient_accumulation_steps=args.gradient_accumulation_steps,
                 logging_steps=args.logging_steps,
                 save_steps=args.save_steps,
+                save_total_limit=args.save_total_limit,
                 seed=args.seed,
                 load_in_4bit=not args.no_4bit,
                 bf16=not args.fp16,
                 gradient_checkpointing=not args.no_gradient_checkpointing,
+                resume_from_checkpoint=args.resume_from_checkpoint,
+                auto_resume=args.auto_resume,
             )
         )
         print(json.dumps(result, indent=2))
@@ -343,6 +428,55 @@ def main() -> None:
         print(json.dumps(result, indent=2, ensure_ascii=False))
         if not result["passed"]:
             raise SystemExit(1)
+        return
+
+    if args.command == "build-training-corpora":
+        result = build_training_corpora(
+            TrainingCorpusBuildConfig(
+                data_folder=args.data_folder,
+                output_dir=args.output_dir,
+                qa_path=args.qa_path,
+                hard_negatives_path=args.hard_negatives_path,
+                sft_dataset_path=args.sft_dataset_path,
+                index_dir=args.index_dir,
+                retrieval_model=args.retrieval_model,
+                retrieval_mode=args.retrieval_mode,
+                corpus_source=args.corpus_source,
+                enable_image_signal=not args.disable_image_signal,
+                target_qa_count=args.target_qa_count,
+                unsupported_count=args.unsupported_count,
+                top_k=args.top_k,
+                max_negatives=args.max_negatives,
+                max_sft_pages=args.max_sft_pages,
+            )
+        )
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+        return
+
+    if args.command == "train-dense-retriever":
+        result = run_dense_retriever_training(
+            DenseRetrieverTrainConfig(
+                dataset_path=args.dataset_path,
+                output_dir=args.output_dir,
+                model_name=args.model_name,
+                max_samples=args.max_samples,
+                max_length=args.max_length,
+                learning_rate=args.learning_rate,
+                num_train_epochs=args.num_train_epochs,
+                max_steps=args.max_steps,
+                per_device_train_batch_size=args.per_device_train_batch_size,
+                gradient_accumulation_steps=args.gradient_accumulation_steps,
+                logging_steps=args.logging_steps,
+                save_steps=args.save_steps,
+                save_total_limit=args.save_total_limit,
+                seed=args.seed,
+                bf16=not args.fp16,
+                margin=args.margin,
+                resume_from_checkpoint=args.resume_from_checkpoint,
+                auto_resume=args.auto_resume,
+            )
+        )
+        print(json.dumps(result, indent=2, ensure_ascii=False))
         return
 
     pipeline = DocumentRetrievalPipeline(config)
@@ -416,10 +550,15 @@ def main() -> None:
         merged_count = merge_qa_files(qa_files, merged_path)
         print(f"Merged QA: {merged_count} examples -> {merged_path}")
     elif args.command == "retrieval-metrics":
-        metrics_config = ModelConfig(index_dir=args.index_dir)
+        metrics_config = ModelConfig(
+            retrieval_model=args.retrieval_model,
+            index_dir=args.index_dir,
+            retrieval_mode=args.retrieval_mode,
+            corpus_source=args.corpus_source,
+            enable_image_signal=not args.disable_image_signal,
+        )
         metrics_pipeline = DocumentRetrievalPipeline(metrics_config)
-        if not metrics_config.index_path.exists() or not metrics_config.metadata_path.exists():
-            metrics_pipeline.build_index(args.data_folder)
+        metrics_pipeline.build_index(args.data_folder)
         metrics = compute_retrieval_metrics(metrics_pipeline, args.data_folder, args.qa_path, top_k=args.top_k)
         print("\n=== RETRIEVAL METRICS ===")
         print(f"evaluated_count: {metrics.evaluated_count}")

@@ -108,10 +108,19 @@ If you do not copy generated files, you can rebuild them locally:
 
 ```bash
 python main.py import-data --output-root data --datasets public_docs
-python main.py build-index data/00_raw/external/public_docs --index-dir data
+python main.py build-index data/00_raw/external/public_docs --index-dir data --retrieval-mode hybrid_multimodal
 python main.py preprocess-pages data/00_raw/external/public_docs --output-root data --render-dpi 150
-python main.py build-visual-index data/03_index/colqwen2/page_manifest.jsonl --index-dir data/03_index/colqwen2 --backend local_image
 ```
+
+The default application path is now the hybrid multimodal retriever:
+- dense text retrieval
+- sparse text retrieval
+- rule-based query understanding
+- table-aware retrieval and graph expansion
+- lightweight page-image auxiliary scoring
+- insurance-logic reranking, page-level context packing, and cited answering
+
+`build-visual-index` is still available, but it is now an optional research or comparison path rather than a prerequisite for normal local querying.
 
 ## Optional GPU Setup
 

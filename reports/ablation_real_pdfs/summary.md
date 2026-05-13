@@ -1,5 +1,9 @@
 # InsureRAG-VLM Ablation Summary
 
+> Note: This summary predates the repository's `hybrid_multimodal` migration. Treat the
+> numbers below as pre-migration baselines for `local_text`, `visual_stub`, and `local_image`,
+> not as metrics for the current default retrieval stack.
+
 ## Retrieval
 
 - local_text: Recall@1=0.2033, Recall@5=0.4467, MRR@10=0.2974, nDCG@10=0.3348

@@ -174,6 +174,38 @@ def _query_layout_hint_vector(query: str) -> np.ndarray:
     return hints / (norm + 1e-10) if norm else hints
 
 
+def build_lightweight_page_image_embeddings(
+    pages: List[Dict[str, Any]],
+    manifest_path: Path | None = None,
+) -> tuple[np.ndarray, List[Dict[str, Any]]]:
+    image_features = np.vstack(
+        [_image_feature_vector(page.get("image_path"), manifest_path) for page in pages]
+    ).astype(np.float32) if pages else np.zeros((0, IMAGE_FEATURE_DIM), dtype=np.float32)
+    enriched_pages = []
+    for page, features in zip(pages, image_features):
+        enriched = dict(page)
+        enriched["image_stats"] = {
+            "layout_density": float(features[3]) if len(features) > 3 else 0.0,
+            "edge_density": float(features[5]) if len(features) > 5 else 0.0,
+            "feature_dim": IMAGE_FEATURE_DIM,
+        }
+        enriched_pages.append(enriched)
+    norms = np.linalg.norm(image_features, axis=1, keepdims=True)
+    return image_features / (norms + 1e-10), enriched_pages
+
+
+def lightweight_image_query_embedding(query: str) -> np.ndarray:
+    return _query_layout_hint_vector(query)
+
+
+def score_lightweight_page_image_query(query: str, image_embeddings: np.ndarray) -> np.ndarray:
+    if image_embeddings.size == 0:
+        return np.zeros((0,), dtype=np.float32)
+    query_embedding = lightweight_image_query_embedding(query)
+    denom = np.linalg.norm(image_embeddings, axis=1) * np.linalg.norm(query_embedding) + 1e-10
+    return (image_embeddings @ query_embedding) / denom
+
+
 def _page_text_embeddings(texts: List[str]) -> np.ndarray:
     retriever = EmbeddingRetriever("local-hashing")
     embeddings = retriever.embed_texts(texts)
@@ -386,20 +418,8 @@ def build_visual_index(
     text_embeddings = _page_text_embeddings(texts)
 
     if backend == "local_image":
-        image_features = np.vstack(
-            [_image_feature_vector(page.get("image_path"), page_manifest_path) for page in pages]
-        ).astype(np.float32) if pages else np.zeros((0, IMAGE_FEATURE_DIM), dtype=np.float32)
+        image_features, pages = build_lightweight_page_image_embeddings(pages, page_manifest_path)
         embeddings = np.hstack([LOCAL_IMAGE_TEXT_WEIGHT * text_embeddings, LOCAL_IMAGE_LAYOUT_WEIGHT * image_features]).astype(np.float32)
-        enriched_pages = []
-        for page, features in zip(pages, image_features):
-            enriched = dict(page)
-            enriched["image_stats"] = {
-                "layout_density": float(features[3]) if len(features) > 3 else 0.0,
-                "edge_density": float(features[5]) if len(features) > 5 else 0.0,
-                "feature_dim": IMAGE_FEATURE_DIM,
-            }
-            enriched_pages.append(enriched)
-        pages = enriched_pages
     else:
         embeddings = text_embeddings
 
@@ -432,7 +452,7 @@ def visual_search(
     query_text = _page_text_embeddings([query])[0]
     if backend == "local_image":
         query_embedding = np.concatenate(
-            [LOCAL_IMAGE_TEXT_WEIGHT * query_text, LOCAL_IMAGE_LAYOUT_WEIGHT * _query_layout_hint_vector(query)]
+            [LOCAL_IMAGE_TEXT_WEIGHT * query_text, LOCAL_IMAGE_LAYOUT_WEIGHT * lightweight_image_query_embedding(query)]
         ).astype(np.float32)
     else:
         query_embedding = query_text

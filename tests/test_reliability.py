@@ -39,6 +39,9 @@ class ConfigTests(unittest.TestCase):
     def test_abstain_threshold_has_safe_default(self):
         self.assertEqual(ModelConfig().abstain_threshold, 0.20)
 
+    def test_hybrid_multimodal_is_default_retrieval_mode(self):
+        self.assertEqual(ModelConfig().retrieval_mode, "hybrid_multimodal")
+
 
 if __name__ == "__main__":
     unittest.main()

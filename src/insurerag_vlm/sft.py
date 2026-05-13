@@ -1,5 +1,6 @@
 import json
 import os
+import signal
 from hashlib import sha256
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -23,6 +24,7 @@ class QwenLoraSFTConfig:
     dataset_path: Path = Path("data/04_curated/sft_dataset.jsonl")
     output_dir: Path = Path("models/qwen7b-insurerag-lora")
     model_name: str = DEFAULT_QWEN_7B_MODEL
+    adapter_path: Optional[Path] = None
     max_samples: Optional[int] = None
     max_length: int = 2048
     lora_r: int = 16
@@ -35,15 +37,22 @@ class QwenLoraSFTConfig:
     gradient_accumulation_steps: int = 8
     logging_steps: int = 10
     save_steps: int = 100
+    save_total_limit: int = 2
     seed: int = 42
     load_in_4bit: bool = True
     bf16: bool = True
     gradient_checkpointing: bool = True
+    resume_from_checkpoint: Optional[Path] = None
+    auto_resume: bool = False
     lora_target_modules: List[str] = None
 
     def __post_init__(self) -> None:
         self.dataset_path = Path(self.dataset_path)
         self.output_dir = Path(self.output_dir)
+        if self.adapter_path is not None:
+            self.adapter_path = Path(self.adapter_path)
+        if self.resume_from_checkpoint is not None:
+            self.resume_from_checkpoint = Path(self.resume_from_checkpoint)
         if self.lora_target_modules is None:
             self.lora_target_modules = list(DEFAULT_LORA_TARGET_MODULES)
 
@@ -215,6 +224,13 @@ class _FormatOnlyTokenizer:
         return {"input_ids": ids or [1]}
 
 
+class _TrainerCallbackCompat:
+    def __getattr__(self, name: str) -> Any:
+        if name.startswith("on_"):
+            return lambda args, state, control, **kwargs: control
+        raise AttributeError(name)
+
+
 def _require_cuda() -> Any:
     try:
         import torch
@@ -252,10 +268,117 @@ def _iter_trainable_parameters(model: Any) -> Iterable[tuple[str, Any]]:
             yield name, parameter
 
 
+def _find_latest_checkpoint(output_dir: Path) -> Optional[Path]:
+    checkpoints = []
+    for candidate in Path(output_dir).glob("checkpoint-*"):
+        if not candidate.is_dir():
+            continue
+        try:
+            step = int(candidate.name.rsplit("-", 1)[1])
+        except (IndexError, ValueError):
+            continue
+        checkpoints.append((step, candidate))
+    if not checkpoints:
+        return None
+    checkpoints.sort(key=lambda item: item[0])
+    return checkpoints[-1][1]
+
+
+class _SignalSaveCallback(_TrainerCallbackCompat):
+    def __init__(self) -> None:
+        self._signal_name: Optional[str] = None
+        self._previous_handlers: Dict[int, Any] = {}
+
+    def register(self) -> None:
+        for signum in (getattr(signal, "SIGTERM", None), getattr(signal, "SIGINT", None)):
+            if signum is None:
+                continue
+            self._previous_handlers[signum] = signal.getsignal(signum)
+            signal.signal(signum, self._handle_signal)
+
+    def restore(self) -> None:
+        for signum, handler in self._previous_handlers.items():
+            signal.signal(signum, handler)
+        self._previous_handlers.clear()
+
+    def _handle_signal(self, signum: int, _frame: Any) -> None:
+        self._signal_name = signal.Signals(signum).name
+        print(f"Received {self._signal_name}; will save a checkpoint and stop training.", flush=True)
+
+    def on_step_end(self, args: Any, state: Any, control: Any, **kwargs: Any) -> Any:
+        del args, state, kwargs
+        if self._signal_name:
+            control.should_save = True
+            control.should_training_stop = True
+        return control
+
+
+class _SFTProgressCallback(_TrainerCallbackCompat):
+    def __init__(self, output_dir: Path):
+        self.output_dir = Path(output_dir)
+        self.progress_path = self.output_dir / "sft_progress.json"
+
+    def _write_progress(self, payload: Dict[str, Any]) -> None:
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        self.progress_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    def on_train_begin(self, args: Any, state: Any, control: Any, **kwargs: Any) -> Any:
+        del args, control, kwargs
+        self._write_progress(
+            {
+                "status": "running",
+                "global_step": int(state.global_step),
+                "max_steps": int(state.max_steps),
+                "epoch": float(state.epoch or 0.0),
+                "last_checkpoint": None,
+            }
+        )
+
+    def on_log(self, args: Any, state: Any, control: Any, logs: Optional[Dict[str, Any]] = None, **kwargs: Any) -> Any:
+        del args, control, kwargs
+        payload = {
+            "status": "running",
+            "global_step": int(state.global_step),
+            "max_steps": int(state.max_steps),
+            "epoch": float(state.epoch or 0.0),
+            "logs": logs or {},
+        }
+        if self.progress_path.exists():
+            existing = json.loads(self.progress_path.read_text(encoding="utf-8"))
+            if existing.get("last_checkpoint"):
+                payload["last_checkpoint"] = existing["last_checkpoint"]
+        self._write_progress(payload)
+
+    def on_save(self, args: Any, state: Any, control: Any, **kwargs: Any) -> Any:
+        del args, control, kwargs
+        checkpoint_dir = self.output_dir / f"checkpoint-{int(state.global_step)}"
+        payload = {
+            "status": "running",
+            "global_step": int(state.global_step),
+            "max_steps": int(state.max_steps),
+            "epoch": float(state.epoch or 0.0),
+            "last_checkpoint": str(checkpoint_dir),
+        }
+        self._write_progress(payload)
+
+    def on_train_end(self, args: Any, state: Any, control: Any, **kwargs: Any) -> Any:
+        del args, control, kwargs
+        payload = {
+            "status": "completed",
+            "global_step": int(state.global_step),
+            "max_steps": int(state.max_steps),
+            "epoch": float(state.epoch or 0.0),
+        }
+        latest = _find_latest_checkpoint(self.output_dir)
+        if latest is not None:
+            payload["last_checkpoint"] = str(latest)
+        self._write_progress(payload)
+
+
 def run_lora_sft(config: QwenLoraSFTConfig) -> Dict[str, Any]:
     torch = _require_cuda()
     try:
-        from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
+        from peft import LoraConfig, PeftModel, get_peft_model, prepare_model_for_kbit_training
         from transformers import AutoModelForCausalLM, BitsAndBytesConfig, Trainer, TrainingArguments
     except ImportError as exc:
         raise ImportError("Install GPU SFT dependencies: pip install -r requirements-gpu.txt") from exc
@@ -289,15 +412,18 @@ def run_lora_sft(config: QwenLoraSFTConfig) -> Dict[str, Any]:
     if config.load_in_4bit:
         model = prepare_model_for_kbit_training(model)
 
-    lora_config = LoraConfig(
-        r=config.lora_r,
-        lora_alpha=config.lora_alpha,
-        lora_dropout=config.lora_dropout,
-        bias="none",
-        task_type="CAUSAL_LM",
-        target_modules=config.lora_target_modules,
-    )
-    model = get_peft_model(model, lora_config)
+    if config.adapter_path is not None:
+        model = PeftModel.from_pretrained(model, str(config.adapter_path), is_trainable=True)
+    else:
+        lora_config = LoraConfig(
+            r=config.lora_r,
+            lora_alpha=config.lora_alpha,
+            lora_dropout=config.lora_dropout,
+            bias="none",
+            task_type="CAUSAL_LM",
+            target_modules=config.lora_target_modules,
+        )
+        model = get_peft_model(model, lora_config)
 
     training_args = TrainingArguments(
         output_dir=str(config.output_dir),
@@ -306,9 +432,11 @@ def run_lora_sft(config: QwenLoraSFTConfig) -> Dict[str, Any]:
         learning_rate=config.learning_rate,
         num_train_epochs=config.num_train_epochs,
         max_steps=config.max_steps,
+        logging_strategy="steps",
         logging_steps=config.logging_steps,
+        save_strategy="steps",
         save_steps=config.save_steps,
-        save_total_limit=2,
+        save_total_limit=config.save_total_limit,
         bf16=config.bf16,
         fp16=not config.bf16,
         optim="paged_adamw_8bit" if config.load_in_4bit else "adamw_torch",
@@ -316,13 +444,29 @@ def run_lora_sft(config: QwenLoraSFTConfig) -> Dict[str, Any]:
         remove_unused_columns=False,
         seed=config.seed,
     )
+    signal_callback = _SignalSaveCallback()
+    progress_callback = _SFTProgressCallback(config.output_dir)
     trainer = Trainer(
         model=model,
         args=training_args,
         train_dataset=train_dataset,
         data_collator=CausalLMDataCollator(tokenizer),
+        callbacks=[signal_callback, progress_callback],
     )
-    train_result = trainer.train()
+    resume_checkpoint = None
+    if config.resume_from_checkpoint is not None:
+        resume_checkpoint = str(config.resume_from_checkpoint)
+    elif config.auto_resume:
+        latest_checkpoint = _find_latest_checkpoint(config.output_dir)
+        if latest_checkpoint is not None:
+            resume_checkpoint = str(latest_checkpoint)
+            print(f"Auto-resuming from checkpoint: {resume_checkpoint}", flush=True)
+
+    signal_callback.register()
+    try:
+        train_result = trainer.train(resume_from_checkpoint=resume_checkpoint)
+    finally:
+        signal_callback.restore()
     peak_memory_mb = round(torch.cuda.max_memory_allocated() / 1024 / 1024, 1)
     config.output_dir.mkdir(parents=True, exist_ok=True)
     trainer.save_model(str(config.output_dir))
@@ -340,6 +484,7 @@ def run_lora_sft(config: QwenLoraSFTConfig) -> Dict[str, Any]:
         "torch_version": torch.__version__,
         "torch_cuda_version": torch.version.cuda,
         "peak_cuda_memory_mb": peak_memory_mb,
+        "resume_from_checkpoint": resume_checkpoint,
         "cuda_device_count": torch.cuda.device_count(),
         "cuda_device_name": torch.cuda.get_device_name(0),
     }
