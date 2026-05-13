@@ -196,10 +196,17 @@ def main() -> None:
     sft_parser.add_argument("--gradient-accumulation-steps", type=int, default=8)
     sft_parser.add_argument("--logging-steps", type=int, default=10)
     sft_parser.add_argument("--save-steps", type=int, default=100)
+    sft_parser.add_argument("--save-total-limit", type=int, default=2)
     sft_parser.add_argument("--seed", type=int, default=42)
     sft_parser.add_argument("--no-4bit", action="store_true", help="Disable 4-bit QLoRA loading")
     sft_parser.add_argument("--fp16", action="store_true", help="Use fp16 instead of bf16")
     sft_parser.add_argument("--no-gradient-checkpointing", action="store_true")
+    sft_parser.add_argument("--resume-from-checkpoint", type=Path, default=None)
+    sft_parser.add_argument(
+        "--auto-resume",
+        action="store_true",
+        help="Resume from the latest checkpoint-* directory under --output-dir when present",
+    )
 
     sft_smoke_parser = subparsers.add_parser(
         "sft-lora-smoke-test",
@@ -320,10 +327,13 @@ def main() -> None:
                 gradient_accumulation_steps=args.gradient_accumulation_steps,
                 logging_steps=args.logging_steps,
                 save_steps=args.save_steps,
+                save_total_limit=args.save_total_limit,
                 seed=args.seed,
                 load_in_4bit=not args.no_4bit,
                 bf16=not args.fp16,
                 gradient_checkpointing=not args.no_gradient_checkpointing,
+                resume_from_checkpoint=args.resume_from_checkpoint,
+                auto_resume=args.auto_resume,
             )
         )
         print(json.dumps(result, indent=2))

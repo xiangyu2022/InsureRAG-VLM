@@ -367,9 +367,23 @@ Fine-tune Qwen 7B with LoRA/QLoRA on the curated SFT dataset:
 .venv/bin/python main.py sft-lora-qwen \
   --dataset-path data/04_curated/sft_dataset.jsonl \
   --output-dir models/qwen7b-insurerag-lora
+
+# More frequent checkpoints for cluster jobs.
+.venv/bin/python main.py sft-lora-qwen \
+  --dataset-path data/04_curated/sft_dataset.jsonl \
+  --output-dir models/qwen7b-insurerag-lora \
+  --save-steps 50 \
+  --save-total-limit 4
+
+# Resume from the latest checkpoint under the output directory.
+.venv/bin/python main.py sft-lora-qwen \
+  --dataset-path data/04_curated/sft_dataset.jsonl \
+  --output-dir models/qwen7b-insurerag-lora \
+  --auto-resume
 ```
 
 The SFT command requires `torch.cuda.is_available()` to be true. By default it uses 4-bit QLoRA with LoRA adapters on Qwen attention and MLP projection layers (`q_proj`, `k_proj`, `v_proj`, `o_proj`, `gate_proj`, `up_proj`, `down_proj`).
+During training, Hugging Face checkpoints are saved every `--save-steps` steps, `sft_progress.json` is updated in the output directory, and `SIGTERM` / `SIGINT` will request a final checkpoint before stopping so cluster jobs can resume from the latest saved state.
 
 Generate a 200-500 example real-PDF QA/evidence set:
 
@@ -513,4 +527,3 @@ Key ablations:
 - Built a multimodal RAG system for insurance policy PDFs with page-image retrieval, citation-grounded answering, and abstention over public regulatory documents.
 - Implemented a reproducible benchmark harness comparing text, local image-layout, and ColQwen2/ColPali GPU visual retrieval with dataset hashes, CUDA environment manifests, latency, indexing time, and calibration reports.
 - Designed an evaluation pipeline measuring Recall@K, MRR, nDCG, citation precision, evidence recall, unsupported abstention accuracy, coverage, selective risk, and grouped error cases.
-
