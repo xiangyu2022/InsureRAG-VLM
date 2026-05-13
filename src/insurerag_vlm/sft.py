@@ -24,6 +24,7 @@ class QwenLoraSFTConfig:
     dataset_path: Path = Path("data/04_curated/sft_dataset.jsonl")
     output_dir: Path = Path("models/qwen7b-insurerag-lora")
     model_name: str = DEFAULT_QWEN_7B_MODEL
+    adapter_path: Optional[Path] = None
     max_samples: Optional[int] = None
     max_length: int = 2048
     lora_r: int = 16
@@ -48,6 +49,8 @@ class QwenLoraSFTConfig:
     def __post_init__(self) -> None:
         self.dataset_path = Path(self.dataset_path)
         self.output_dir = Path(self.output_dir)
+        if self.adapter_path is not None:
+            self.adapter_path = Path(self.adapter_path)
         if self.resume_from_checkpoint is not None:
             self.resume_from_checkpoint = Path(self.resume_from_checkpoint)
         if self.lora_target_modules is None:
@@ -375,7 +378,7 @@ class _SFTProgressCallback(_TrainerCallbackCompat):
 def run_lora_sft(config: QwenLoraSFTConfig) -> Dict[str, Any]:
     torch = _require_cuda()
     try:
-        from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
+        from peft import LoraConfig, PeftModel, get_peft_model, prepare_model_for_kbit_training
         from transformers import AutoModelForCausalLM, BitsAndBytesConfig, Trainer, TrainingArguments
     except ImportError as exc:
         raise ImportError("Install GPU SFT dependencies: pip install -r requirements-gpu.txt") from exc
@@ -409,15 +412,18 @@ def run_lora_sft(config: QwenLoraSFTConfig) -> Dict[str, Any]:
     if config.load_in_4bit:
         model = prepare_model_for_kbit_training(model)
 
-    lora_config = LoraConfig(
-        r=config.lora_r,
-        lora_alpha=config.lora_alpha,
-        lora_dropout=config.lora_dropout,
-        bias="none",
-        task_type="CAUSAL_LM",
-        target_modules=config.lora_target_modules,
-    )
-    model = get_peft_model(model, lora_config)
+    if config.adapter_path is not None:
+        model = PeftModel.from_pretrained(model, str(config.adapter_path), is_trainable=True)
+    else:
+        lora_config = LoraConfig(
+            r=config.lora_r,
+            lora_alpha=config.lora_alpha,
+            lora_dropout=config.lora_dropout,
+            bias="none",
+            task_type="CAUSAL_LM",
+            target_modules=config.lora_target_modules,
+        )
+        model = get_peft_model(model, lora_config)
 
     training_args = TrainingArguments(
         output_dir=str(config.output_dir),

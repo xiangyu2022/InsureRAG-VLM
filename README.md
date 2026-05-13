@@ -1,22 +1,37 @@
 # InsureRAG-VLM
 
-Citation-grounded multimodal RAG for insurance policy and endorsement review. The project is designed around page-image retrieval first: PDFs are rendered into full-page visual units for ColQwen2/ColPali-style retrieval, while OCR and text layers are kept as auxiliary evidence for snippets, weak labels, baselines, and error analysis.
+Insurance RAG breaks when the system treats a policy packet like ordinary text.
+This project is built around that premise.
+
+**InsureRAG-VLM** is a citation-grounded, hybrid multimodal RAG system for insurance policy review.
+It is designed for the questions that actually matter in policy packets:
+
+- What is the deductible, limit, or premium?
+- Does an endorsement override the base exclusion?
+- Is the answer on the declarations page, the schedule, or the main form?
+- Is the evidence strong enough to answer at all?
+
+The current default pipeline is not image-only and not text-only. It uses **hybrid text retrieval as
+the backbone**, adds **lightweight page-image layout priors**, performs **table-aware and graph-aware
+retrieval**, and returns **structured answers with page citations, evidence roles, conflict notes,
+and abstention when support is weak**.
+
+Heavy ColQwen2/ColPali-style page-image retrieval remains in the repo as an **optional research
+backend**, but it is no longer the main product path.
 
 ## Demo Walkthrough
 
 ![InsureRAG-VLM animated demo](assets/demo/insurerag_vlm_demo.gif)
 
-The browser demo shows the core workflow:
+The browser demo shows the full loop:
 
-- Upload or use a policy PDF.
-- Render each PDF page into a page-image retrieval unit.
-- Ask an insurance question, such as a deductible, limit, endorsement, exclusion, or glossary question.
-- Retrieve ranked pages and show the retrieval trace.
-- Return a structured answer with page-level citation, confidence, and highlighted evidence.
-- Abstain when the retrieved evidence does not support the question.
-- Compare policy versions and summarize deductible, limit, endorsement, and exclusion drift.
+- Upload or select a policy PDF
+- Ask deductible, limit, endorsement, exclusion, declaration, glossary, or policy-diff questions
+- Inspect ranked pages, evidence snippets, and retrieval traces
+- Get a structured answer with citations, confidence, conflict notes, and caveats
+- Abstain when the evidence does not support a reliable answer
 
-Run the interactive version locally with:
+Run it locally:
 
 ```bash
 .venv/bin/python main.py demo-web --port 7860
@@ -24,109 +39,151 @@ Run the interactive version locally with:
 
 Then open `http://127.0.0.1:7860`.
 
-## What It Does
+## Why This Project Is Different
 
-Input: a 20-200 page policy packet, endorsement, claim document, or internal training PDF plus a user question.
+Most RAG systems stop at "retrieve top-k text chunks and ask an LLM."
+Insurance review needs more:
+
+- **Declarations-aware retrieval** because limits often live outside the main form text
+- **Endorsement-aware reasoning** because base policy language may be modified later
+- **Table-aware evidence** because deductible, premium, and schedule questions are numeric and brittle
+- **Structure-aware ranking** because section titles, clause types, and form codes matter
+- **Selective answering** because unsupported answers are worse than abstaining
+
+This repo is optimized around that workflow rather than generic semantic search.
+
+## What The System Returns
+
+Input:
+- a policy packet, endorsement packet, claim or billing PDF, or curated insurance dataset
+- a user question
 
 Output:
-- An answer grounded in retrieved pages.
-- Page-level citations and evidence snippets.
-- Clause/version diff summaries for policy packet comparisons.
-- Abstention when the retrieved evidence is insufficient.
+- a grounded answer
+- page-level citations
+- supporting snippets
+- structured fields such as `coverage`, `limit`, and `evidence_role` when available
+- conflict / override notes for declaration-vs-policy and endorsement-vs-exclusion cases
+- abstention when support is insufficient
 
-## Why This Project
-
-Insurance documents are visually rich. Coverage limits, deductibles, declarations, exclusions, endorsements, and version drift often depend on tables, layout, section hierarchy, and page-level context. OCR-only chunking can lose these signals. This project uses the page image as the primary retrieval object and keeps OCR/layout/table extraction as an explanation and evaluation layer.
-
-## Architecture
-
-System stages:
+## Default Architecture
 
 ```text
-PDF / policy packet
-  -> document registry, SHA-256 hashes, document split metadata
-  -> page rendering into normalized image units
-  -> page manifest + auxiliary text/OCR metadata
-  -> text index, local image-layout index, or ColQwen2/ColPali GPU index
-  -> retrieval + insurance-domain reranking
-  -> extractive/LLM answer generation
-  -> citation validation + configurable abstention threshold
-  -> retrieval, answer, calibration, and error-group reports
+Insurance PDFs / images
+  -> document registry, hashes, and split metadata
+  -> snippet / page / table corpus construction
+  -> document typing, clause typing, coverage tags, section parsing, form-code hints
+  -> dense text index + sparse text index + table sparse index + lightweight page-image auxiliary index + document graph
+  -> query understanding
+  -> dense retrieval + sparse retrieval + metadata-targeted retrieval + graph expansion
+  -> reciprocal-rank fusion + insurance-aware reranking
+  -> snippet-to-page rollup + insurance-logic context packing
+  -> extractive / LLM answering
+  -> citation validation + abstention + structured output
 ```
 
-Auxiliary path:
+The default online path is intentionally **low latency**:
 
-```text
-text layer / lightweight OCR / layout blocks / tables
-  -> weak QA labels
-  -> citation snippets
-  -> keyword filters
-  -> OCR-text RAG baseline
-  -> error analysis and policy diff support
-```
+- lightweight query understanding instead of an extra LLM call
+- lightweight table normalization instead of full table reconstruction
+- lightweight page-image features instead of mandatory VLM inference
+- rule and metadata signals before any expensive multimodal escalation
+
+## Core Capabilities
+
+Implemented today:
+
+- Hybrid multimodal default retrieval with dense text, sparse text, reciprocal-rank fusion, and lightweight page-image auxiliary scoring
+- Snippet-to-page rollup with insurance-logic long-context packing
+- Rule-based query understanding for limits, deductibles, declarations, definitions, endorsements, exclusions, and policy-diff questions
+- Lightweight section parsing with `section_titles`, `section_path`, `section_anchor`, and endorsement form-code hints
+- Table extraction and normalization for limit, deductible, premium, and schedule-style evidence
+- Insurance document structure heuristics for `document_type`, `clause_type`, `coverage_tags`, and graph expansion across declarations, endorsements, exclusions, and definitions
+- Metadata-targeted retrieval prioritization and lightweight override/conflict summaries
+- Structured answer JSON with citations, caveats, `coverage`, `limit`, `evidence_role`, `conflicts`, and `override_summary`
+- Policy-version diff utilities
+- Reproducible evaluation, calibration, and error-group reporting
+- QLoRA SFT for Qwen 7B plus dense retriever training and retrieval-conditioned SFT data generation
+
+Still intentionally lightweight or still in progress:
+
+- stronger clause-level override resolution
+- stronger table/layout extraction
+- post-migration committed benchmark numbers for the new default stack
+- gated VLM escalation for visually difficult scanned pages
+- learned rerankers beyond the current low-latency rule stack
+
+## Repository Map
+
+Main code lives in:
+
+- `src/insurerag_vlm/hybrid_pipeline.py`: default retrieval and answering pipeline
+- `src/insurerag_vlm/query_understanding.py`: low-latency insurance query schema inference
+- `src/insurerag_vlm/tables.py`: table normalization and field extraction
+- `src/insurerag_vlm/graph.py`: lightweight document graph construction and expansion
+- `src/insurerag_vlm/insurance_structure.py`: document typing, clause typing, section parsing, coverage tagging
+- `src/insurerag_vlm/training_data.py`: retrieval triples and retrieval-conditioned SFT corpus builder
+- `src/insurerag_vlm/dense_training.py`: trainable dense retriever
 
 ## Data
 
+The repo supports two main modes:
+
+- **Curated mode** via `data/04_curated/` for development, SFT, and structured training
+- **Raw document mode** via imported or local PDFs for end-to-end document experiments
+
 Recommended public-data mix:
-- CUAD for clause extraction and QA supervision.
-- ACORD for clause retrieval and hard negatives.
-- InsuranceQA for insurance question language style.
-- FUNSD/CORD as form and structured-document proxies.
-- Public policy PDFs for end-to-end page-image demos.
 
-Private or internal policy files should stay outside Git. Use `data/00_raw/internal/` locally and keep only manifests, hashes, and processing scripts in the repository.
+- CUAD for clause extraction and QA supervision
+- ACORD for clause retrieval and hard negatives
+- InsuranceQA for insurance question language style
+- FUNSD/CORD as structured-document proxies
+- public policy PDFs for real page-level retrieval demos
 
-## Models
-
-- Retriever: ColQwen2/ColPali-style page-image retrieval.
-- Generator: Qwen2.5-VL-7B-Instruct with future LoRA/QLoRA fine-tuning.
-- Baselines: OCR-text RAG, Florence-2, PaliGemma 2.
-- Calibration: selective prediction / conformal abstention for unsupported questions.
+Private policy documents should stay outside Git. Keep raw internal files in ignored local folders
+and commit only manifests, hashes, scripts, and redacted reports.
 
 ## Current Status
 
-Implemented:
-- PDF page rendering and page-image preprocessing.
-- Document registry with SHA-256 hashes.
-- Page-level metadata with page IDs, dimensions, render DPI, source, version hints, and image hashes.
-- Auxiliary text-layer/OCR metadata.
-- ColQwen2-compatible `page_manifest.jsonl`.
-- Local image-aware retrieval backend (`local_image`) that reads page images and preserves the future ColPali/ColQwen2 output schema.
-- Weak query-page training pairs from section hints.
-- Document-level train/valid/test splits.
-- Public PDF data importer with 20 downloadable state insurance department PDFs.
-- 200-500 scale real-PDF QA/evidence generation with QA-level document split labels.
-- Deterministic insurance glossary with 250+ terms, acronyms, metrics, roles, and aliases.
-- No-key local demo baseline with hashing retrieval and extractive cited answers.
-- Existing text-RAG scaffold, PDF extraction, evaluation helpers, and policy diff utilities.
-- Calibration report for selective answering and unsupported-question abstention.
-- Reproducible benchmark entrypoint with experiment manifest, dataset hash, environment metadata, retrieval metrics, answer metrics, calibration outputs, and grouped reliability errors.
-- Animated browser demo for cited answers, cited-page thumbnails, highlighted evidence snippets, retrieval trace, abstention, upload flow, and policy-version diff.
-- Optional Hugging Face Transformers GPU backends for `colqwen2_hf` / `colqwen2_local` and `colpali_hf` / `colpali_local`.
+The system has already moved beyond the original page-image-first prototype.
 
-Still planned:
-- Cloud GPU run with committed ColQwen2/ColPali benchmark numbers beyond the current `local_image` baseline.
-- Layout/table extraction as explanation and evaluation metadata.
-- Multi-file upload sessions. The current browser demo can upload and index one local PDF for Q&A; policy diff uses the first two PDFs available in the active real-document folder.
+What changed in the current generation:
 
-## Current Reproducible Results
+- the default stack is now `hybrid_multimodal`
+- the answer path is centered on `text evidence -> page citation`, not pure image retrieval
+- table and graph signals are first-class retrieval inputs
+- the project now includes a full training path:
+  - build retrieval triples
+  - train a dense retriever
+  - rebuild retrieval-conditioned corpora
+  - continue QLoRA SFT from an existing adapter
 
-### Research-Proof Local Baseline
+For migration details, see `reports/hybrid_multimodal/summary.md`.
 
-Current curated-data validation passes on **169 RAG pages**, **1,090 snippets**, **1,259 RAG corpus
-records**, and **3,600 SFT records** with **400 unsupported examples**. The validator writes
-`reports/research_proof/dataset_validation.json` and regenerates `data/04_curated/dataset_summary.json`.
+## Current Reproducible State
 
-Latest local CPU benchmark smoke: **20 public insurance PDFs**, **168 rendered pages**, and
-**70 QA rows** with **20 unsupported examples**, written to `reports/research_proof_local/`.
+Curated-data validation currently passes on:
+
+- **169** RAG pages
+- **1,090** snippets
+- **1,259** RAG corpus records
+- **3,600** SFT records
+- **400** unsupported examples
+
+The validator writes `reports/research_proof/dataset_validation.json` and regenerates
+`data/04_curated/dataset_summary.json`.
+
+The latest committed local benchmark numbers in the repo are still **legacy baselines** from before
+the hybrid-multimodal migration. They are useful as a historical floor, not as the final claim for
+the current default system.
 
 | Backend | Recall@1 | Recall@5 | MRR@10 | nDCG@10 |
 | --- | ---: | ---: | ---: | ---: |
 | local_text (text + hashing) | 0.2200 | 0.4800 | 0.3347 | 0.4109 |
 | local_image (image-aware local baseline) | 0.2000 | 0.5200 | 0.3429 | 0.4266 |
-| colqwen2_local / colpali_local (GPU) | pending cloud GPU run | pending cloud GPU run | pending cloud GPU run | pending cloud GPU run |
+| colqwen2_local / colpali_local (GPU) | pending | pending | pending | pending |
 
-Answering and calibration reports from the same run:
+Legacy smoke-run answer metrics:
 
 | Metric | Value |
 | --- | ---: |
@@ -136,23 +193,28 @@ Answering and calibration reports from the same run:
 | Unsupported abstention accuracy | 0.9000 |
 | Coverage | 0.3143 |
 
-These are CPU-local smoke numbers, not final model-quality claims. The next research-proof result
-should come from `main.py run-gpu-benchmark --backend colqwen2_local` on a cloud GPU and should be
-written to `reports/research_proof/`.
+The next benchmark that matters should be a **post-migration** run for `hybrid_multimodal` and
+`hybrid_text`, written to `reports/research_proof/`.
 
 ## Quickstart
+
+Fastest path to a working local demo:
 
 ```bash
 pip install -r requirements.txt
 
-# Download real public PDFs, then run the no-key smoke test.
+# 1. Download a small public insurance PDF set.
 python main.py import-data --output-root data --datasets public_docs
+
+# 2. Optional smoke test.
 make smoke-test
 
-# Or manually:
-python main.py build-index data/00_raw/external/public_docs --index-dir data
-python main.py query data/00_raw/external/public_docs "What coverage limits are described?" --index-dir data --top-k 3
+# 3. Query with the default hybrid multimodal pipeline.
+python main.py build-index data/00_raw/external/public_docs --index-dir data --retrieval-mode hybrid_multimodal
+python main.py query data/00_raw/external/public_docs "What coverage limits are described?" --index-dir data --top-k 3 --retrieval-mode hybrid_multimodal
 ```
+
+If you want the browser demo instead of CLI querying, jump straight to `demo-web` below.
 
 Run the animated browser demo:
 
@@ -160,8 +222,7 @@ Run the animated browser demo:
 .venv/bin/python main.py import-data --output-root data --datasets public_docs
 .venv/bin/python main.py preprocess-pages data/00_raw/external/public_docs --output-root data --render-dpi 150
 .venv/bin/python main.py generate-qa data/00_raw/external/public_docs --output-dir data/02_processed --target-count 300
-.venv/bin/python main.py build-index data/00_raw/external/public_docs --index-dir data
-.venv/bin/python main.py build-visual-index data/03_index/colqwen2/page_manifest.jsonl --index-dir data/03_index/colqwen2 --backend local_image
+.venv/bin/python main.py build-index data/00_raw/external/public_docs --index-dir data --retrieval-mode hybrid_multimodal
 .venv/bin/python main.py demo-web --port 7860
 ```
 
@@ -172,7 +233,7 @@ Import a small real public PDF set for local experiments:
 ```bash
 .venv/bin/python main.py import-data --output-root data --datasets public_docs
 .venv/bin/python main.py preprocess-pages data/00_raw/external/public_docs --output-root data --render-dpi 150
-.venv/bin/python main.py build-visual-index data/03_index/colqwen2/page_manifest.jsonl --index-dir data/03_index/colqwen2 --backend local_image
+.venv/bin/python main.py build-index data/00_raw/external/public_docs --index-dir data --retrieval-mode hybrid_multimodal
 ```
 
 `public_docs` downloads a small set of public insurance PDFs into `data/00_raw/external/public_docs/`. These files are for local reproducibility and are not intended to be committed to GitHub.
@@ -229,15 +290,28 @@ data/03_index/colqwen2/
   page_embeddings/
   page_manifest.jsonl
 
+data/
+  hybrid_snippets_dense.npy
+  hybrid_snippets_sparse.json
+  hybrid_snippets.jsonl
+  hybrid_pages_dense.npy
+  hybrid_pages_sparse.json
+  hybrid_pages.jsonl
+  hybrid_tables_sparse.json
+  hybrid_tables.jsonl
+  hybrid_graph.jsonl
+  hybrid_page_image.npy
+  hybrid_page_image_pages.jsonl
+
 data/manifests/
   preprocess_run_manifest.jsonl
 ```
 
-Run the older text-RAG scaffold:
+Run the hybrid text-only path without the image auxiliary signal:
 
 ```bash
-.venv/bin/python main.py build-index data/00_raw/external/public_docs --render-pdf-pages --pdf-render-dir data/01_interim/legacy_pdf_pages
-.venv/bin/python main.py query data/00_raw/external/public_docs "What coverage does the document describe?"
+.venv/bin/python main.py build-index data/00_raw/external/public_docs --retrieval-mode hybrid_text --disable-image-signal
+.venv/bin/python main.py query data/00_raw/external/public_docs "What coverage does the document describe?" --retrieval-mode hybrid_text --disable-image-signal
 ```
 
 Import external CUAD/ACORD manifests and local files:
@@ -260,10 +334,10 @@ Generate QA/evidence pairs and hard negatives:
 Compute retrieval metrics over generated policy QA:
 
 ```bash
-.venv/bin/python main.py retrieval-metrics data/00_raw/external/public_docs data/02_processed/qa_pairs.jsonl --index-dir data --top-k 3
+.venv/bin/python main.py retrieval-metrics data/00_raw/external/public_docs data/02_processed/qa_pairs.jsonl --index-dir data --top-k 3 --retrieval-mode hybrid_multimodal
 ```
 
-Build and evaluate the page-image retrieval interface:
+Build and evaluate the optional page-image retrieval interface:
 
 ```bash
 .venv/bin/python main.py build-visual-index data/03_index/colqwen2/page_manifest.jsonl --index-dir data/03_index/colqwen2 --backend visual_stub
@@ -311,6 +385,9 @@ reports/research_proof/calibration/
 The manifest records the git commit, dataset hash/counts, CUDA/PyTorch environment, GPU name,
 backend, model environment variables, dtype, batch size, indexing time, latency, and peak CUDA memory.
 For a CPU-only dry run, use `--backend local_image --allow-backend-failures`.
+
+The default application path does not depend on these visual-only commands. They are intended for
+side-by-side comparison against the hybrid multimodal default rather than for day-to-day querying.
 
 Run a real ColQwen2 / ColPali visual retriever on a GPU machine:
 
@@ -385,6 +462,54 @@ Fine-tune Qwen 7B with LoRA/QLoRA on the curated SFT dataset:
 The SFT command requires `torch.cuda.is_available()` to be true. By default it uses 4-bit QLoRA with LoRA adapters on Qwen attention and MLP projection layers (`q_proj`, `k_proj`, `v_proj`, `o_proj`, `gate_proj`, `up_proj`, `down_proj`).
 During training, Hugging Face checkpoints are saved every `--save-steps` steps, `sft_progress.json` is updated in the output directory, and `SIGTERM` / `SIGINT` will request a final checkpoint before stopping so cluster jobs can resume from the latest saved state.
 
+Build staged training corpora and a trainable dense retriever:
+
+```bash
+# Build doc-disjoint retrieval triples, retrieval-conditioned SFT, and calibration manifests.
+.venv/bin/python main.py build-training-corpora \
+  --data-folder data/04_curated \
+  --output-dir reports/training_data \
+  --index-dir reports/training_data/index \
+  --retrieval-model local-hashing \
+  --retrieval-mode hybrid_multimodal \
+  --corpus-source curated \
+  --disable-image-signal
+
+# Train a local dense retriever from retrieval_train.jsonl.
+.venv/bin/python -m pip install -r requirements-gpu.txt
+.venv/bin/python main.py train-dense-retriever \
+  --dataset-path reports/training_data/retrieval_train.jsonl \
+  --output-dir models/retrieval/bge-base-insurerag
+
+# Rebuild the hybrid index with the trained dense model and evaluate retrieval.
+.venv/bin/python main.py build-index data/04_curated \
+  --index-dir reports/training_data/dense_index \
+  --retrieval-model models/retrieval/bge-base-insurerag \
+  --retrieval-mode hybrid_multimodal \
+  --corpus-source curated \
+  --disable-image-signal
+.venv/bin/python main.py retrieval-metrics data/04_curated \
+  reports/training_data/calibration_test.jsonl \
+  --index-dir reports/training_data/dense_index \
+  --retrieval-model models/retrieval/bge-base-insurerag \
+  --retrieval-mode hybrid_multimodal \
+  --corpus-source curated \
+  --disable-image-signal
+
+# Continue QLoRA from the current adapter using retrieval-conditioned evidence.
+.venv/bin/python main.py sft-lora-qwen \
+  --dataset-path reports/training_data/rag_sft_train.jsonl \
+  --output-dir models/qwen7b-insurerag-lora-rag \
+  --adapter-path models/qwen7b-insurerag-lora \
+  --auto-resume
+```
+
+`build-training-corpora` writes:
+- `retrieval_train.jsonl`, `retrieval_dev.jsonl`, `retrieval_test.jsonl`
+- `rag_sft_train.jsonl`, `rag_sft_dev.jsonl`, `rag_sft_test.jsonl`
+- `calibration_dev.jsonl`, `calibration_test.jsonl`
+- `training_corpora_summary.json`
+
 Generate a 200-500 example real-PDF QA/evidence set:
 
 ```bash
@@ -393,14 +518,16 @@ Generate a 200-500 example real-PDF QA/evidence set:
   --output-dir reports/public_docs_qa_v3 \
   --target-count 300
 .venv/bin/python main.py build-index data/00_raw/external/public_docs \
-  --index-dir reports/public_docs_qa_v3/index
+  --index-dir reports/public_docs_qa_v3/index \
+  --retrieval-mode hybrid_multimodal
 .venv/bin/python main.py retrieval-metrics data/00_raw/external/public_docs \
   reports/public_docs_qa_v3/qa_pairs.jsonl \
   --index-dir reports/public_docs_qa_v3/index \
-  --top-k 5
+  --top-k 5 \
+  --retrieval-mode hybrid_multimodal
 ```
 
-The real-PDF QA generator creates evidence-anchored questions, supports multi-positive page labels for broad topics, and writes `qa_splits.jsonl` plus per-example `split` / `split_doc_id` fields to keep evaluation document-aware. The GPU ColQwen2/ColPali run should be reported separately once executed on a CUDA machine.
+The real-PDF QA generator creates evidence-anchored questions, supports multi-positive page labels for broad topics, and writes `qa_splits.jsonl` plus per-example `split` / `split_doc_id` fields to keep evaluation document-aware. The post-migration `hybrid_multimodal` run should be reported first; GPU ColQwen2/ColPali numbers should then be reported separately as optional visual-backend comparisons.
 
 Unsupported abstention coverage defaults to 50 generated unsupported questions. Use
 `--unsupported-count` on `generate-qa` or `run-gpu-benchmark` to change that validation set size.
@@ -441,6 +568,13 @@ Emit structured grounded-answer JSON:
 ```bash
 .venv/bin/python main.py query data/00_raw/external/public_docs "What coverage limits are described?" --index-dir data --top-k 3 --json
 ```
+
+The structured query response now includes:
+- `query_understanding` flags such as `needs_limit`, `needs_endorsement_check`, and `needs_table_lookup`.
+- citation metadata including `document_type` and `primary_clause_type`.
+- normalized structured fields such as `coverage`, `limit`, and `evidence_role` when they can be extracted from the cited evidence.
+- `conflict_notes`, `conflicts`, and `override_summary` for low-latency declarations/endorsement/exclusion review signals.
+- `caveats` when the retrieved evidence suggests a declarations-page or endorsement override review is still warranted.
 
 Summarize policy version drift:
 
@@ -508,7 +642,9 @@ Core metrics:
 - Efficiency: p50/p95 latency, index size, and per-query cost.
 
 Key ablations:
-- OCR-text RAG vs page-image VLM-RAG.
+- Hybrid text-only vs hybrid multimodal.
+- Hybrid multimodal vs optional page-image-only visual backends.
+- Without vs with table retrieval and graph expansion.
 - Without vs with hard negatives.
 - Without vs with citation constraints.
 - Qwen2.5-VL vs PaliGemma 2 / Florence-2 baselines.
@@ -516,14 +652,14 @@ Key ablations:
 
 ## System Design Notes
 
-- Scalability: indexing is separated from query serving; page rendering, visual embedding, and scoring can be batched offline and cached by dataset hash.
+- Scalability: indexing is separated from query serving; snippet/page/table corpora, dense/sparse indices, document-graph artifacts, and lightweight page-image embeddings can be batched offline and cached by dataset hash.
 - GPU indexing: cloud GPU runs should use small visual batches, record dtype/device settings, and commit only compact reports rather than generated embeddings or page images.
-- Reliability: answer serving validates cited evidence before returning a response and uses `INSURERAG_ABSTAIN_THRESHOLD` plus calibration curves to tune selective answering.
+- Reliability: answer serving validates cited evidence before returning a response, surfaces query-understanding and citation-role metadata, and uses `INSURERAG_ABSTAIN_THRESHOLD` plus calibration curves to tune selective answering.
 - Privacy: internal policy PDFs belong under ignored local data folders; reports should contain manifests, hashes, metrics, and redacted snippets rather than raw private documents.
-- Failure analysis: benchmark reports group errors into retrieval misses, citation mismatches, unsupported false positives, and weak answer extraction cases.
+- Failure analysis: benchmark reports should group errors into retrieval misses, citation mismatches, unsupported false positives, weak answer extraction cases, table-lookup misses, graph-expansion misses, text-only hits, image-assisted hits, multimodal-rerank rescues, and image-noise false positives.
 
 ## Resume Bullets
 
-- Built a multimodal RAG system for insurance policy PDFs with page-image retrieval, citation-grounded answering, and abstention over public regulatory documents.
-- Implemented a reproducible benchmark harness comparing text, local image-layout, and ColQwen2/ColPali GPU visual retrieval with dataset hashes, CUDA environment manifests, latency, indexing time, and calibration reports.
+- Built a hybrid multimodal RAG system for insurance policy PDFs with dense+sparse text retrieval, lightweight page-image reranking, citation-grounded answering, and abstention over public regulatory documents.
+- Implemented a reproducible benchmark harness comparing text, local image-layout, and ColQwen2/ColPali GPU visual retrieval with dataset hashes, CUDA environment manifests, latency, indexing time, and calibration reports, then migrated the product default to the hybrid multimodal path.
 - Designed an evaluation pipeline measuring Recall@K, MRR, nDCG, citation precision, evidence recall, unsupported abstention accuracy, coverage, selective risk, and grouped error cases.

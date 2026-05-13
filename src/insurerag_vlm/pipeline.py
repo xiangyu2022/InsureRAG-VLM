@@ -597,3 +597,9 @@ class DocumentRetrievalPipeline:
                 break
             answer = self.query(question, data_folder)
             print("\n=== ANSWER ===\n", answer)
+
+
+from .hybrid_pipeline import DocumentRetrievalPipeline as _HybridDocumentRetrievalPipeline
+
+LegacyDocumentRetrievalPipeline = DocumentRetrievalPipeline
+DocumentRetrievalPipeline = _HybridDocumentRetrievalPipeline

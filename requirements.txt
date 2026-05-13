@@ -6,3 +6,4 @@ requests
 openai
 pytesseract
 PyMuPDF
+rank-bm25

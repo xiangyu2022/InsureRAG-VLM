@@ -42,3 +42,6 @@ reports/public_docs_qa_v2/
 reports/public_docs_qa_v3/
 reports/synthetic_qa_check/
 reports/synthetic_visual_check/
+reports/training_data/
+reports/training_data_seed/
+reports/training_data_dense/
