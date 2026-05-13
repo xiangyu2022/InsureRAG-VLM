@@ -288,8 +288,21 @@ These are optional experiments, not the default serving path.
 
 ## Roadmap
 
-- stronger clause-level override resolution
-- stronger table and layout extraction
-- post-migration benchmark results for `hybrid_multimodal`
-- gated VLM escalation for scanned or visually difficult pages
-- deeper learned reranking after the low-latency stack is fully benchmarked
+## Evaluation Plan
+
+Core metrics:
+- Retrieval: Recall@5, MRR@10, nDCG@10.
+- Answering: EM/F1 and ANLS for short answers.
+- Evidence: citation precision and evidence recall.
+- Abstention: unsupported-question accuracy and selective risk curves.
+- Efficiency: p50/p95 latency, index size, and per-query cost.
+
+Key ablations:
+- Hybrid text-only vs hybrid multimodal.
+- Hybrid multimodal vs optional page-image-only visual backends.
+- Without vs with table retrieval and graph expansion.
+- Without vs with hard negatives.
+- Without vs with citation constraints.
+- Qwen2.5-VL vs PaliGemma 2 / Florence-2 baselines.
+- Without vs with abstention/calibration.
+
