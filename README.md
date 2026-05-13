@@ -650,16 +650,3 @@ Key ablations:
 - Qwen2.5-VL vs PaliGemma 2 / Florence-2 baselines.
 - Without vs with abstention/calibration.
 
-## System Design Notes
-
-- Scalability: indexing is separated from query serving; snippet/page/table corpora, dense/sparse indices, document-graph artifacts, and lightweight page-image embeddings can be batched offline and cached by dataset hash.
-- GPU indexing: cloud GPU runs should use small visual batches, record dtype/device settings, and commit only compact reports rather than generated embeddings or page images.
-- Reliability: answer serving validates cited evidence before returning a response, surfaces query-understanding and citation-role metadata, and uses `INSURERAG_ABSTAIN_THRESHOLD` plus calibration curves to tune selective answering.
-- Privacy: internal policy PDFs belong under ignored local data folders; reports should contain manifests, hashes, metrics, and redacted snippets rather than raw private documents.
-- Failure analysis: benchmark reports should group errors into retrieval misses, citation mismatches, unsupported false positives, weak answer extraction cases, table-lookup misses, graph-expansion misses, text-only hits, image-assisted hits, multimodal-rerank rescues, and image-noise false positives.
-
-## Resume Bullets
-
-- Built a hybrid multimodal RAG system for insurance policy PDFs with dense+sparse text retrieval, lightweight page-image reranking, citation-grounded answering, and abstention over public regulatory documents.
-- Implemented a reproducible benchmark harness comparing text, local image-layout, and ColQwen2/ColPali GPU visual retrieval with dataset hashes, CUDA environment manifests, latency, indexing time, and calibration reports, then migrated the product default to the hybrid multimodal path.
-- Designed an evaluation pipeline measuring Recall@K, MRR, nDCG, citation precision, evidence recall, unsupported abstention accuracy, coverage, selective risk, and grouped error cases.
