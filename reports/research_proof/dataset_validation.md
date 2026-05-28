@@ -2,19 +2,19 @@
 
 - Status: PASSED
 - Dataset directory: `data/04_curated`
-- RAG pages: 192
-- RAG snippets: 1141
-- RAG corpus records: 1333
-- SFT records: 3600
-- SFT answerable records: 3200
-- SFT unsupported records: 400
+- RAG pages: 201
+- RAG snippets: 1180
+- RAG corpus records: 1381
+- SFT records: 3850
+- SFT answerable records: 3400
+- SFT unsupported records: 450
 - Errors: 0
 - Warnings: 6
 
 ## Quality Checks
 
 - Empty answerable SFT evidence: 0
-- Duplicate SFT prompt groups: 81
+- Duplicate SFT prompt groups: 87
 - Duplicate RAG citation groups: 37
 - Split leakage status: not_applicable
 

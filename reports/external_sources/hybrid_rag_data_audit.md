@@ -6,39 +6,45 @@ Audit date: 2026-05-28
 
 The curated hybrid RAG corpus in `data/04_curated` now contains:
 
-- `192` page records
-- `1,141` snippet records
-- `1,333` total RAG records
-- `47` source documents
-- `3,600` SFT records, including `3,200` answerable records and `400` unsupported counterexamples
+- `201` page records
+- `1,180` snippet records
+- `1,381` total RAG records
+- `56` source documents
+- `3,850` SFT records, including `3,400` answerable records and `450` unsupported counterexamples
 
 This is enough for the current hybrid RAG research loop around consumer insurance coverage, declarations pages, deductibles, limits, endorsements, replacement cost, actual cash value, and policy-review abstention behavior.
 
 ## Supplemental Data Added
 
-The latest curation run pulled two previously local-but-not-curated Delaware DOI PDF guides into the active curated RAG corpus:
+Recent curation runs pulled two previously local-but-not-curated Delaware DOI PDF guides into the active curated RAG corpus:
 
 - `de_auto_insurance_guide.pdf`
 - `de_homeowners_guide.pdf`
 
-This raised the active RAG corpus from `45` to `47` source documents and from `1,259` to `1,333` records.
+The latest expansion also added nine high-signal official DOI/OCI sources:
+
+- Nebraska DOI policy forms, coverages and limits, homeowners terms, auto coverage, and auto shopping pages
+- Wisconsin OCI homeowners guide, homeowners FAQ, and homeowners savings / ACV-vs-replacement-cost page
+- Pennsylvania DOI homeowners insurance guide PDF
+
+Together, these updates raised the active RAG corpus from `45` to `56` source documents and from `1,259` to `1,381` records.
 
 ## Source Mix
 
 The active corpus is grounded in regulator or quasi-regulator sources:
 
 - NAIC glossary and topic-style consumer material
-- State DOI / insurance regulator material from CA, DE, FL, MD, NC, NY, SC, TX, and WA
+- State DOI / insurance regulator material from CA, DE, FL, MD, NC, NE, NY, PA, SC, TX, WA, and WI
 - Local official PDF guides and declarations-page explainers
 
 Coverage by page-level domain:
 
-- homeowners: `104`
-- auto: `70`
+- homeowners: `110`
+- auto: `72`
 - insurance-general: `11`
 - disability: `5`
 - travel: `3`
-- renters: `2`
+- renters: `3`
 - flood: `1`
 
 High-value content types now include:
@@ -83,7 +89,7 @@ Result:
 
 - status: passed
 - empty answerable SFT evidence: `0`
-- unsupported records: `400`
-- RAG corpus records: `1,333`
+- unsupported records: `450`
+- RAG corpus records: `1,381`
 
 Smoke retrieval also built a temporary curated index successfully at `/tmp/insurerag_curated_index`.

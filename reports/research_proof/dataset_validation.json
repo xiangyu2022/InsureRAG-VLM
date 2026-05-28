@@ -2,40 +2,40 @@
   "passed": true,
   "dataset_dir": "data/04_curated",
   "counts": {
-    "rag_pages": 192,
-    "rag_snippets": 1141,
-    "rag_corpus": 1333,
-    "sft_dataset": 3600
+    "rag_pages": 201,
+    "rag_snippets": 1180,
+    "rag_corpus": 1381,
+    "sft_dataset": 3850
   },
   "files": {
     "rag_pages": {
       "path": "data/04_curated/rag_pages.jsonl",
-      "bytes": 1266267,
-      "sha256": "4054583789daec0fbea58e26a87e41dee3b09dd06fc71ffd572eb04f00618ad0"
+      "bytes": 1321016,
+      "sha256": "aecbb9e83ff773736d5afb60a917437b0870d9b0b6b705da85e56248921ab323"
     },
     "rag_snippets": {
       "path": "data/04_curated/rag_snippets.jsonl",
-      "bytes": 1495598,
-      "sha256": "d5e490fad985acb93e13b32f032e8d1ccb0747ddee856e549c582a4911320f34"
+      "bytes": 1547556,
+      "sha256": "97520f544fcac2fe33b00dbe63f87a1583827a5f3a0ee30470c2a9e0edb125f5"
     },
     "rag_corpus": {
       "path": "data/04_curated/rag_corpus.jsonl",
-      "bytes": 2761865,
-      "sha256": "1f927f9e4a92a14e916abcf4ef723b165fef9a521c6cf30061784a872bce3b6f"
+      "bytes": 2868572,
+      "sha256": "752c4c21df96c6e56d703362754c8ad637eaae3a1e1e2865e45cf763512f0a08"
     },
     "sft_dataset": {
       "path": "data/04_curated/sft_dataset.jsonl",
-      "bytes": 6664139,
-      "sha256": "7c56eaf15504be8a61ce7a67f2a532dedf9f624f1324059affb8bd7be64fd6a8"
+      "bytes": 7114241,
+      "sha256": "e59cfe8246e3319352797d4c62c6dc73dafa958197eacb742c5313c5d54ee5f3"
     }
   },
   "quality": {
-    "sft_answerable_count": 3200,
-    "sft_unsupported_count": 400,
+    "sft_answerable_count": 3400,
+    "sft_unsupported_count": 450,
     "empty_answerable_evidence_count": 0,
     "sft_duplicate_prompts": {
-      "duplicate_groups": 81,
-      "duplicate_records": 162
+      "duplicate_groups": 87,
+      "duplicate_records": 174
     },
     "rag_duplicate_citations": {
       "duplicate_groups": 37,

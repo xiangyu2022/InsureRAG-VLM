@@ -1,20 +1,20 @@
 {
   "rag_pages": {
     "path": "data/04_curated/rag_pages.jsonl",
-    "records": 192,
-    "source_documents": 47
+    "records": 201,
+    "source_documents": 56
   },
   "rag_snippets": {
     "path": "data/04_curated/rag_snippets.jsonl",
-    "records": 1141,
-    "source_documents": 47
+    "records": 1180,
+    "source_documents": 56
   },
   "rag_corpus": {
     "path": "data/04_curated/rag_corpus.jsonl",
-    "records": 1333,
-    "page_records": 192,
-    "snippet_records": 1141,
-    "source_documents": 47,
+    "records": 1381,
+    "page_records": 201,
+    "snippet_records": 1180,
+    "source_documents": 56,
     "documents": [
       "ca_doi_auto_guide.html",
       "ca_doi_auto_terms.html",
@@ -42,10 +42,16 @@
       "nc_disability_insurance_guide.pdf",
       "nc_homeowners_guide_archive.pdf",
       "nc_travel_insurance_guide.pdf",
+      "ne_doi_auto_coverages.html",
+      "ne_doi_auto_shopping.html",
+      "ne_doi_home_coverages_limits.html",
+      "ne_doi_home_policy_forms.html",
+      "ne_doi_home_terms.html",
       "ny_dfs_choosing_policy.html",
       "ny_dfs_home_basic_coverage.html",
       "ny_dfs_how_much_insurance.html",
       "ny_dfs_problems_obtaining.html",
+      "pa_doi_homeowners_guide_pdf.html",
       "sc_doi_auto_basics.html",
       "sc_doi_deductible.html",
       "sc_doi_home_coverage_types.html",
@@ -62,17 +68,25 @@
       "wa_oic_lender_placed.html",
       "wa_oic_renter_insurance.html",
       "wa_oic_totaled_car.html",
-      "wa_oic_water_damage_mold.html"
+      "wa_oic_water_damage_mold.html",
+      "wi_oci_home_savings.html",
+      "wi_oci_homeowners_faq.html",
+      "wi_oci_homeowners_guide.html"
     ]
   },
   "sft_dataset": {
     "path": "data/04_curated/sft_dataset.jsonl",
-    "records": 3600,
-    "answerable_records": 3200,
-    "unsupported_records": 400,
-    "source_documents": 38,
+    "records": 3850,
+    "answerable_records": 3400,
+    "unsupported_records": 450,
+    "source_documents": 47,
     "documents": [
       "https://content.naic.org/consumer_glossary",
+      "https://doi.nebraska.gov/common-homeowners-insurance-terms",
+      "https://doi.nebraska.gov/important-auto-insurance-and-types-coverage",
+      "https://doi.nebraska.gov/policy-forms-what-you-need-know",
+      "https://doi.nebraska.gov/shopping-auto-insurance-where-go",
+      "https://doi.nebraska.gov/types-coverages-and-their-limits",
       "https://doi.sc.gov/615/Types-of-Coverage-in-Homeowners-Insuranc",
       "https://doi.sc.gov/618/Purchasing-Home-Insurance-Knowledge",
       "https://doi.sc.gov/957/Understanding-Your-Insurance-Policy",
@@ -81,6 +95,9 @@
       "https://insurance.maryland.gov/Consumer/Pages/Auto-Understanding-Declarations.aspx",
       "https://insurance.maryland.gov/Consumer/Pages/Home-Understanding-Declarations.aspx",
       "https://myfloridacfo.com/division/ica/fullcoverage/auto",
+      "https://oci.wi.gov/Pages/Consumers/PI-015.aspx",
+      "https://oci.wi.gov/Pages/Consumers/PI-219.aspx",
+      "https://oci.wi.gov/Pages/Consumers/PI-232.aspx",
       "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/basic_coverage",
       "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/choosing_a_policy",
       "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/determining_how_much_insurance_you_need",
@@ -90,6 +107,7 @@
       "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-auto/autoterms.cfm",
       "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/03-res/Residential_Insurance.cfm",
       "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/20-Glossary/",
+      "https://www.insurance.pa.gov/Coverage/homeowners/Documents/Homeowners%20Insurance%20Guide.pdf",
       "https://www.insurance.wa.gov/consumers-insurance-glossary",
       "https://www.insurance.wa.gov/insurance-resources/auto-insurance/auto-insurance-claims/what-happens-after-your-car-gets-totaled",
       "https://www.insurance.wa.gov/insurance-resources/home-insurance/home-insurance-claims/filing-homeowner-insurance-claim",
@@ -113,7 +131,7 @@
     ]
   },
   "external_sources": {
-    "included": 33,
+    "included": 42,
     "included_sources": [
       {
         "source_id": "naic_consumer_glossary",
@@ -311,6 +329,60 @@
         "source_id": "fl_doi_auto_overview",
         "name": "Florida CFO Automobile Insurance",
         "url": "https://myfloridacfo.com/division/ica/fullcoverage/auto",
+        "sft_eligible": true
+      },
+      {
+        "source_id": "ne_doi_home_policy_forms",
+        "name": "Nebraska DOI Policy Forms: What You Need to Know",
+        "url": "https://doi.nebraska.gov/policy-forms-what-you-need-know",
+        "sft_eligible": true
+      },
+      {
+        "source_id": "ne_doi_home_coverages_limits",
+        "name": "Nebraska DOI Types of Coverages and Their Limits",
+        "url": "https://doi.nebraska.gov/types-coverages-and-their-limits",
+        "sft_eligible": true
+      },
+      {
+        "source_id": "ne_doi_home_terms",
+        "name": "Nebraska DOI Common Homeowners Insurance Terms",
+        "url": "https://doi.nebraska.gov/common-homeowners-insurance-terms",
+        "sft_eligible": true
+      },
+      {
+        "source_id": "ne_doi_auto_coverages",
+        "name": "Nebraska DOI Importance of Auto Insurance and Types of Coverage",
+        "url": "https://doi.nebraska.gov/important-auto-insurance-and-types-coverage",
+        "sft_eligible": true
+      },
+      {
+        "source_id": "ne_doi_auto_shopping",
+        "name": "Nebraska DOI Shopping for Auto Insurance",
+        "url": "https://doi.nebraska.gov/shopping-auto-insurance-where-go",
+        "sft_eligible": true
+      },
+      {
+        "source_id": "wi_oci_homeowners_guide",
+        "name": "Wisconsin OCI Consumer Guide to Homeowners Insurance",
+        "url": "https://oci.wi.gov/Pages/Consumers/PI-015.aspx",
+        "sft_eligible": true
+      },
+      {
+        "source_id": "wi_oci_homeowners_faq",
+        "name": "Wisconsin OCI Homeowners Insurance FAQ",
+        "url": "https://oci.wi.gov/Pages/Consumers/PI-232.aspx",
+        "sft_eligible": true
+      },
+      {
+        "source_id": "wi_oci_home_savings",
+        "name": "Wisconsin OCI Tips for Saving on Homeowners Insurance",
+        "url": "https://oci.wi.gov/Pages/Consumers/PI-219.aspx",
+        "sft_eligible": true
+      },
+      {
+        "source_id": "pa_doi_homeowners_guide_pdf",
+        "name": "Pennsylvania DOI Homeowners Insurance Guide PDF",
+        "url": "https://www.insurance.pa.gov/Coverage/homeowners/Documents/Homeowners%20Insurance%20Guide.pdf",
         "sft_eligible": true
       }
     ],
