@@ -170,6 +170,22 @@ The repo supports two working modes:
 Keep private policy documents outside Git. Commit manifests, hashes, scripts, and redacted reports,
 not raw internal files.
 
+### Local Real Policy Packets
+
+For real policy interpretation, the preferred input is a local policy packet described with
+`packet_manifest.json` so the pipeline can group:
+
+- declarations pages
+- base policy forms
+- endorsements
+- schedules
+
+The manifest lets the index preserve packet-aware metadata such as `packet_id`, `document_role`,
+`form_code`, and `endorsement_code` across separate files. See:
+
+- `examples/packet_manifest.example.json`
+- `reports/external_sources/policy_packet_real_sources.md`
+
 ## Current Status
 
 The project has moved beyond the original page-image-first prototype.
@@ -199,6 +215,18 @@ Curated-data validation currently passes on:
 
 The validator writes `reports/research_proof/dataset_validation.json` and regenerates
 `data/04_curated/dataset_summary.json`.
+
+Latest MSI training run:
+
+- trained `models/retrieval/bge-base-insurerag` from the doc-disjoint retrieval corpus
+- trained `models/qwen7b-insurerag-lora-retrieval` by continuing from `models/qwen7b-insurerag-lora`
+- used `3231` retrieval-conditioned SFT records for `2` epochs on `1x A40`
+- reached `train_loss=0.3378` with `peak_cuda_memory_mb=10930.2`
+- improved the 8-sample adapter spot check over the base model from `overall_f1=0.2168` to `0.7443`
+- preserved `unsupported_abstain_rate=1.0`, but did **not** beat the earlier clean-evidence adapter on answerable quote fidelity
+
+See `reports/sft_eval/retrieval_adapter_summary.md` and
+`reports/sft_eval/retrieval_adapter_spot_check.md`.
 
 The benchmark tables already in the repo are **legacy pre-migration baselines**. They are useful as
 a floor, but the result that matters next is a clean post-migration run for `hybrid_multimodal`
@@ -300,6 +328,9 @@ For a deeper local walkthrough, see [LOCAL_SETUP.md](LOCAL_SETUP.md).
 ```
 
 MSI GPU batch scripts for this workflow live in `scripts/`.
+
+The latest completed MSI run and spot-check summary are documented in
+`reports/sft_eval/retrieval_adapter_summary.md`.
 
 ## Optional Research Backends
 

@@ -4,6 +4,7 @@ __pycache__/
 *.pyd
 .env
 .env.*
+.vscode/
 .tmp/
 .test-tmp/
 .venv/
@@ -20,6 +21,7 @@ data/01_interim/
 data/02_processed/
 data/03_index/
 data/manifests/
+data/pdf_pages/
 data/04_curated/rag_*.json
 data/04_curated/sft_dataset.json
 data/04_curated/source_cache/

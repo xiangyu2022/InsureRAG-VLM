@@ -168,10 +168,10 @@ def infer_clause_types(text: str) -> List[str]:
 def primary_clause_type(text: str) -> str:
     clause_types = infer_clause_types(text)
     priority = [
+        "exception",
         "endorsement",
         "definition",
         "exclusion",
-        "exception",
         "limit",
         "deductible",
         "premium",

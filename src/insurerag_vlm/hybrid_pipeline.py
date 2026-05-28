@@ -92,6 +92,23 @@ class DocumentRetrievalPipeline:
     def _source_to_page_id(source: str) -> str:
         return str(source).replace("/", "_").replace("#page=", "_p")
 
+    @staticmethod
+    def _document_priority(document_role: str) -> int:
+        priorities = {
+            "declarations": 0,
+            "schedule": 1,
+            "endorsement": 2,
+            "base_policy": 3,
+            "definition": 4,
+            "claim_form": 5,
+            "billing": 6,
+        }
+        return priorities.get(str(document_role or ""), 7)
+
+    @staticmethod
+    def _has_metadata_value(value: Any) -> bool:
+        return value is not None and value != ""
+
     def _augment_record_metadata(self, record: Dict[str, Any]) -> Dict[str, Any]:
         text = str(record.get("text") or "")
         source = str(record.get("source") or record.get("record_id") or "")
@@ -99,21 +116,76 @@ class DocumentRetrievalPipeline:
         coverage_tags = extract_coverage_tags(text)
         clause_types = infer_clause_types(text)
         section_meta = extract_section_metadata(text)
+        document_type = infer_document_type(source, text)
         updated["coverage_tags"] = coverage_tags
         updated["clause_types"] = clause_types
         updated["primary_clause_type"] = primary_clause_type(text)
-        updated["document_type"] = infer_document_type(source, text)
+        updated["document_type"] = document_type
+        updated["document_role"] = str(record.get("document_role") or document_type)
+        updated["packet_id"] = str(record.get("packet_id") or record.get("policy_family_id") or record.get("doc_id") or source)
+        try:
+            updated["document_priority"] = int(record.get("document_priority"))
+        except (TypeError, ValueError):
+            updated["document_priority"] = self._document_priority(updated["document_role"])
         updated["section_titles"] = section_meta["section_titles"]
         updated["section_path"] = section_meta["section_path"]
         updated["section_anchor"] = section_meta["section_anchor"]
         updated["section_tokens"] = section_meta["section_tokens"]
         updated["form_codes"] = section_meta["form_codes"]
+        explicit_form_codes = [
+            str(value).replace(" ", "-")
+            for value in [record.get("form_code"), record.get("endorsement_code")]
+            if str(value or "").strip()
+        ]
+        if explicit_form_codes:
+            updated["form_codes"] = sorted(set(updated["form_codes"]) | set(explicit_form_codes))
+        for key in [
+            "effective_date",
+            "form_code",
+            "endorsement_code",
+            "sequence_order",
+            "source_origin",
+            "source_name",
+            "source_url",
+            "source_authority",
+            "authority",
+            "content_type",
+            "source_file",
+            "policy_family_id",
+            "version_id",
+            "policy_number",
+        ]:
+            if self._has_metadata_value(record.get(key)):
+                updated[key] = record.get(key)
         return updated
 
     @staticmethod
     def _inherit_page_structure(record: Dict[str, Any], page_record: Dict[str, Any]) -> Dict[str, Any]:
         updated = dict(record)
-        for key in ["section_titles", "section_path", "section_anchor", "section_tokens", "form_codes"]:
+        for key in [
+            "section_titles",
+            "section_path",
+            "section_anchor",
+            "section_tokens",
+            "form_codes",
+            "packet_id",
+            "document_role",
+            "document_priority",
+            "effective_date",
+            "form_code",
+            "endorsement_code",
+            "sequence_order",
+            "source_origin",
+            "source_name",
+            "source_url",
+            "source_authority",
+            "authority",
+            "content_type",
+            "source_file",
+            "policy_family_id",
+            "version_id",
+            "policy_number",
+        ]:
             if not updated.get(key):
                 updated[key] = list(page_record.get(key, [])) if isinstance(page_record.get(key), list) else page_record.get(key)
         if not updated.get("coverage_tags"):
@@ -201,6 +273,15 @@ class DocumentRetrievalPipeline:
                         "source": source,
                         "text": str(record.get("text") or ""),
                         "image_path": None,
+                        "packet_id": record.get("packet_id") or record.get("doc_id"),
+                        "document_role": record.get("document_role"),
+                        "source_origin": record.get("source_origin") or "curated_real_official_document",
+                        "source_name": record.get("name") or record.get("source_file") or record.get("doc_id"),
+                        "source_url": record.get("source_url"),
+                        "source_authority": record.get("authority"),
+                        "authority": record.get("authority"),
+                        "content_type": record.get("content_type"),
+                        "source_file": record.get("source_file"),
                     }
                 )
             )
@@ -221,6 +302,15 @@ class DocumentRetrievalPipeline:
                     "source": source,
                     "text": str(record.get("text") or ""),
                     "image_path": None,
+                    "packet_id": record.get("packet_id") or record.get("doc_id"),
+                    "document_role": record.get("document_role"),
+                    "source_origin": record.get("source_origin") or "curated_real_official_document",
+                    "source_name": record.get("name") or record.get("source_file") or record.get("doc_id"),
+                    "source_url": record.get("source_url"),
+                    "source_authority": record.get("authority"),
+                    "authority": record.get("authority"),
+                    "content_type": record.get("content_type"),
+                    "source_file": record.get("source_file"),
                 }
             )
             snippets.append(self._inherit_page_structure(snippet_record, page_by_key.get(page_key, {})))
@@ -237,6 +327,11 @@ class DocumentRetrievalPipeline:
             source = str(doc.metadata.get("source", doc.doc_id))
             doc_id = str(doc.metadata.get("path") or doc.doc_id.split("#page=", 1)[0])
             page_key = self._page_key(doc_id, doc.page_number)
+            document_metadata = {
+                key: value
+                for key, value in doc.metadata.items()
+                if key not in {"source", "page", "path"} and self._has_metadata_value(value)
+            }
             page_record = self._augment_record_metadata(
                 {
                     "record_id": page_key,
@@ -248,6 +343,7 @@ class DocumentRetrievalPipeline:
                     "source": source,
                     "text": doc.text or "",
                     "image_path": str(doc.image_path) if doc.image_path else None,
+                    **document_metadata,
                 }
             )
             pages.append(page_record)
@@ -263,6 +359,7 @@ class DocumentRetrievalPipeline:
                         "source": source,
                         "text": chunk,
                         "image_path": str(doc.image_path) if doc.image_path else None,
+                        **document_metadata,
                     }
                 )
                 snippets.append(self._inherit_page_structure(snippet_record, page_record))
@@ -705,6 +802,10 @@ class DocumentRetrievalPipeline:
                 insurance_logic_boost += 0.10
             if graph_relation.endswith("defines_limit_for") or graph_relation == "defines_limit_for":
                 insurance_logic_boost += 0.08
+            if graph_relation.endswith("qualified_by") or graph_relation == "qualified_by":
+                insurance_logic_boost += 0.08
+            if graph_relation.endswith("limited_by") or graph_relation == "limited_by":
+                insurance_logic_boost += 0.06
             insurance_logic_boost += min(0.10, graph_confidence * 0.08)
             final_score = (
                 rrf_score
@@ -750,12 +851,19 @@ class DocumentRetrievalPipeline:
                     "dense_rank": candidate.get("dense_rank"),
                     "sparse_rank": candidate.get("sparse_rank"),
                     "document_type": candidate.get("document_type"),
+                    "document_role": candidate.get("document_role"),
+                    "packet_id": candidate.get("packet_id"),
+                    "document_priority": candidate.get("document_priority"),
                     "primary_clause_type": candidate.get("primary_clause_type"),
                     "coverage_tags": set(candidate.get("coverage_tags", []) or []),
                     "section_titles": list(candidate.get("section_titles", []) or []),
                     "section_path": list(candidate.get("section_path", []) or []),
                     "section_anchor": candidate.get("section_anchor"),
                     "form_codes": set(candidate.get("form_codes", []) or []),
+                    "source_origin": candidate.get("source_origin"),
+                    "source_name": candidate.get("source_name"),
+                    "source_url": candidate.get("source_url"),
+                    "source_authority": candidate.get("source_authority") or candidate.get("authority"),
                     "graph_relations": set(),
                     "graph_details": [],
                     "record_types": set(),
@@ -836,12 +944,19 @@ class DocumentRetrievalPipeline:
                     "dense_rank": page_entry["dense_rank"],
                     "sparse_rank": page_entry["sparse_rank"],
                     "document_type": page_entry["document_type"],
+                    "document_role": page_entry["document_role"],
+                    "packet_id": page_entry["packet_id"],
+                    "document_priority": page_entry["document_priority"],
                     "primary_clause_type": page_entry["primary_clause_type"],
                     "coverage_tags": sorted(page_entry["coverage_tags"]),
                     "section_titles": page_entry["section_titles"][:3],
                     "section_path": page_entry["section_path"][:3],
                     "section_anchor": page_entry["section_anchor"],
                     "form_codes": sorted(page_entry["form_codes"]),
+                    "source_origin": page_entry["source_origin"],
+                    "source_name": page_entry["source_name"],
+                    "source_url": page_entry["source_url"],
+                    "source_authority": page_entry["source_authority"],
                     "table_fields": page_entry["table_fields"][:3],
                     "graph_relations": sorted(page_entry["graph_relations"]),
                     "graph_details": page_entry["graph_details"][:3],
@@ -1035,13 +1150,18 @@ class DocumentRetrievalPipeline:
     def _page_sections(page: Dict[str, object]) -> List[str]:
         return list(page.get("section_path", []) or page.get("section_titles", []) or [])
 
+    @staticmethod
+    def _question_mentions_exception(question: str) -> bool:
+        lowered = (question or "").lower()
+        return any(term in lowered for term in ["exception", "except", "does not apply", "carve out"])
+
     def _resolve_conflicts(
         self,
         question: str,
         understanding: QueryUnderstanding,
         ranked_pages: List[Dict[str, object]],
     ) -> List[Dict[str, object]]:
-        del question
+        needs_exception_review = self._question_mentions_exception(question)
         top_pages = ranked_pages[:5]
         declarations_pages = [page for page in top_pages if page.get("document_type") == "declarations"]
         endorsement_pages = [
@@ -1049,6 +1169,7 @@ class DocumentRetrievalPipeline:
             if page.get("document_type") == "endorsement" or page.get("primary_clause_type") == "endorsement"
         ]
         exclusion_pages = [page for page in top_pages if page.get("primary_clause_type") == "exclusion"]
+        exception_pages = [page for page in top_pages if page.get("primary_clause_type") == "exception"]
         conflicts: List[Dict[str, object]] = []
 
         if understanding.needs_endorsement_check and endorsement_pages and exclusion_pages:
@@ -1068,6 +1189,48 @@ class DocumentRetrievalPipeline:
                     "coverages": shared_labels,
                     "sections": shared_sections,
                     "endorsement_forms": endorsement_pages[0].get("form_codes", []),
+                }
+            )
+        elif understanding.needs_endorsement_check and exclusion_pages and not endorsement_pages:
+            conflicts.append(
+                {
+                    "type": "missing_endorsement_evidence",
+                    "status": "insufficient_counterevidence",
+                    "severity": "blocking",
+                    "message": "Exclusion evidence was retrieved without a matching endorsement page; final coverage should not be decided from the exclusion alone.",
+                    "sources": [exclusion_pages[0].get("source")],
+                    "coverages": normalize_coverage_labels(exclusion_pages[0].get("coverage_tags", []) or []),
+                    "sections": self._page_sections(exclusion_pages[0]),
+                    "endorsement_forms": [],
+                }
+            )
+
+        if needs_exception_review and exclusion_pages and exception_pages:
+            shared_labels = self._shared_coverage_labels([exception_pages[0], exclusion_pages[0]])
+            shared_sections = sorted(set(self._page_sections(exception_pages[0])) & set(self._page_sections(exclusion_pages[0])))
+            conflicts.append(
+                {
+                    "type": "exception_qualifies_exclusion",
+                    "status": "possible_exception_carveout",
+                    "severity": "review",
+                    "message": "Exclusion and exception evidence were both retrieved and should be read together before deciding coverage.",
+                    "sources": [exclusion_pages[0].get("source"), exception_pages[0].get("source")],
+                    "coverages": shared_labels,
+                    "sections": shared_sections,
+                    "endorsement_forms": exception_pages[0].get("form_codes", []),
+                }
+            )
+        elif needs_exception_review and exclusion_pages and not exception_pages:
+            conflicts.append(
+                {
+                    "type": "missing_exception_evidence",
+                    "status": "insufficient_counterevidence",
+                    "severity": "blocking",
+                    "message": "Exclusion evidence was retrieved without a matching exception page; final coverage should not be decided from the exclusion alone.",
+                    "sources": [exclusion_pages[0].get("source")],
+                    "coverages": normalize_coverage_labels(exclusion_pages[0].get("coverage_tags", []) or []),
+                    "sections": self._page_sections(exclusion_pages[0]),
+                    "endorsement_forms": [],
                 }
             )
 
@@ -1093,20 +1256,32 @@ class DocumentRetrievalPipeline:
         for page in top_pages:
             for detail in page.get("graph_details", []) or []:
                 relation = str(detail.get("relation", ""))
-                if "overridden_by" not in relation:
-                    continue
-                conflicts.append(
-                    {
-                        "type": "graph_override_relation",
-                        "status": "graph_supported_override",
-                        "severity": "info",
-                        "message": "Graph expansion identified endorsement override relationships in the retrieved evidence.",
-                        "sources": [detail.get("source_page_key"), page.get("source")],
-                        "coverages": normalize_coverage_labels(detail.get("shared_coverages", []) or []),
-                        "sections": detail.get("shared_sections", []) or [],
-                        "endorsement_forms": detail.get("source_form_codes", []) or [],
-                    }
-                )
+                if "overridden_by" in relation:
+                    conflicts.append(
+                        {
+                            "type": "graph_override_relation",
+                            "status": "graph_supported_override",
+                            "severity": "info",
+                            "message": "Graph expansion identified endorsement override relationships in the retrieved evidence.",
+                            "sources": [detail.get("source_page_key"), page.get("source")],
+                            "coverages": normalize_coverage_labels(detail.get("shared_coverages", []) or []),
+                            "sections": detail.get("shared_sections", []) or [],
+                            "endorsement_forms": detail.get("source_form_codes", []) or [],
+                        }
+                    )
+                if "qualified_by" in relation:
+                    conflicts.append(
+                        {
+                            "type": "graph_exception_relation",
+                            "status": "graph_supported_exception",
+                            "severity": "info",
+                            "message": "Graph expansion identified exception-to-exclusion relationships in the retrieved evidence.",
+                            "sources": [detail.get("source_page_key"), page.get("source")],
+                            "coverages": normalize_coverage_labels(detail.get("shared_coverages", []) or []),
+                            "sections": detail.get("shared_sections", []) or [],
+                            "endorsement_forms": detail.get("source_form_codes", []) or [],
+                        }
+                    )
 
         deduped: List[Dict[str, object]] = []
         seen = set()
@@ -1139,6 +1314,7 @@ class DocumentRetrievalPipeline:
         ranked_pages: List[Dict[str, object]],
     ) -> Dict[str, object]:
         conflicts = self._resolve_conflicts(question, understanding, ranked_pages)
+        blocking_conflicts = [conflict for conflict in conflicts if conflict.get("severity") == "blocking"]
         return {
             "coverage": self._extract_structured_coverage(understanding, cited_page),
             "limit": self._extract_structured_limit(question, cited_page),
@@ -1146,6 +1322,7 @@ class DocumentRetrievalPipeline:
                 f"{cited_page.get('document_type', 'page')}:{cited_page.get('primary_clause_type', 'general')}"
                 if cited_page else None
             ),
+            "policy_logic_status": "blocked" if blocking_conflicts else "review" if conflicts else "clear",
             "conflict_notes": [str(conflict.get("message")) for conflict in conflicts],
             "conflicts": conflicts,
             "override_summary": next((conflict for conflict in conflicts if conflict.get("type") == "endorsement_override"), None),
@@ -1182,9 +1359,15 @@ class DocumentRetrievalPipeline:
                     "page_id": self._source_to_page_id(str(cited_page["source"])),
                     "evidence_text": cited_page.get("text_snippet", ""),
                     "document_type": cited_page.get("document_type"),
+                    "document_role": cited_page.get("document_role"),
+                    "packet_id": cited_page.get("packet_id"),
                     "primary_clause_type": cited_page.get("primary_clause_type"),
                     "section_anchor": cited_page.get("section_anchor"),
                     "form_codes": cited_page.get("form_codes", []),
+                    "source_origin": cited_page.get("source_origin"),
+                    "source_name": cited_page.get("source_name"),
+                    "source_url": cited_page.get("source_url"),
+                    "source_authority": cited_page.get("source_authority"),
                 }
             )
 
@@ -1195,22 +1378,29 @@ class DocumentRetrievalPipeline:
             citations,
             min_overlap=getattr(self.config, "citation_min_overlap", 0.20),
         )
+        structured_fields = self._structured_answer_fields(question, understanding, cited_page, ranked_pages)
         if not supported:
             confidence = min(confidence, 0.19)
+        blocking_conflicts = [conflict for conflict in structured_fields.get("conflicts", []) if conflict.get("severity") == "blocking"]
+        if blocking_conflicts:
+            confidence = min(confidence, 0.15)
         threshold = getattr(self.config, "abstain_threshold", 0.20)
-        abstain = confidence < threshold or "insufficient_evidence" in answer.lower() or not supported
-        structured_fields = self._structured_answer_fields(question, understanding, cited_page, ranked_pages)
+        abstain = confidence < threshold or "insufficient_evidence" in answer.lower() or not supported or bool(blocking_conflicts)
         caveats: List[str] = []
         if citations and citations[0].get("document_type") != "declarations" and self._question_requires_numeric_evidence(question):
             caveats.append("Numeric answer was not cited from a declarations-style page.")
         if ranked_pages and any("overridden_by" in relation for relation in ranked_pages[0].get("graph_relations", []) or []):
             caveats.append("Retrieved evidence includes endorsement override relationships that should be reviewed.")
+        if ranked_pages and any("qualified_by" in relation for relation in ranked_pages[0].get("graph_relations", []) or []):
+            caveats.append("Retrieved evidence includes exception relationships that should be reviewed with the underlying exclusion.")
+        if blocking_conflicts:
+            caveats.extend(str(conflict.get("message")) for conflict in blocking_conflicts)
         return {
             "answer": "" if abstain else clean_answer,
             "citations": [] if abstain else citations,
             "confidence": confidence,
             "abstain": abstain,
-            "abstain_reason": "insufficient_retrieved_evidence" if abstain else None,
+            "abstain_reason": "missing_policy_packet_counterevidence" if blocking_conflicts else "insufficient_retrieved_evidence" if abstain else None,
             "citation_support": supported,
             "citation_support_reason": support_reason,
             "source_ranking": ranked_pages,
@@ -1220,6 +1410,7 @@ class DocumentRetrievalPipeline:
             "coverage": None if abstain else structured_fields.get("coverage"),
             "limit": None if abstain else structured_fields.get("limit"),
             "evidence_role": None if abstain else structured_fields.get("evidence_role"),
+            "policy_logic_status": structured_fields.get("policy_logic_status"),
             "conflict_notes": structured_fields.get("conflict_notes", []),
             "conflicts": structured_fields.get("conflicts", []),
             "override_summary": structured_fields.get("override_summary"),
@@ -1238,7 +1429,7 @@ class DocumentRetrievalPipeline:
             "summarize", "guidance", "consumer", "know", "passage", "related",
             "described", "find", "amount", "numeric", "detail", "stated", "for",
             "and", "after", "before", "with", "into", "under", "document", "guide",
-            "pdf",
+            "pdf", "apply", "applies",
         }
 
     @classmethod
@@ -1414,7 +1605,7 @@ class DocumentRetrievalPipeline:
             "coverage", "cover", "include", "policy", "insurance", "limit", "limits",
             "sublimit", "deductible", "endorsement", "reimbursement", "provision",
             "amount", "liability", "property", "loss", "use", "auto", "automobile",
-            "guide", "document", "pdf",
+            "guide", "document", "pdf", "apply", "applies",
         }
         specific_terms = {term for term in key_terms if len(term) >= 4 and term not in broad_value_terms}
         if specific_terms and not specific_terms <= evidence_terms:

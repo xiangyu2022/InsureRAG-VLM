@@ -2,7 +2,7 @@ import unittest
 
 from src.insurerag_vlm.config import ModelConfig
 from src.insurerag_vlm.pipeline import DocumentRetrievalPipeline
-from src.insurerag_vlm.qa import generate_unsupported_questions
+from src.insurerag_vlm.qa import compute_retrieval_metrics, generate_unsupported_questions
 
 
 class UnsupportedQuestionTests(unittest.TestCase):
@@ -41,6 +41,47 @@ class ConfigTests(unittest.TestCase):
 
     def test_hybrid_multimodal_is_default_retrieval_mode(self):
         self.assertEqual(ModelConfig().retrieval_mode, "hybrid_multimodal")
+
+
+class RetrievalMetricNormalizationTests(unittest.TestCase):
+    def test_retrieval_metrics_match_page_key_when_url_page_fragment_differs(self):
+        class StubPipeline:
+            def rank_pages(self, question, data_folder, top_k=10):
+                return [
+                    {
+                        "source": "https://insurance.maryland.gov/Consumer/Pages/Auto-Understanding-Declarations.aspx",
+                        "page_key": "https://insurance.maryland.gov/Consumer/Pages/Auto-Understanding-Declarations.aspx::p0001",
+                    }
+                ]
+
+        import json
+        import tempfile
+        from pathlib import Path
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            qa_path = Path(tmpdir) / "retrieval_eval.jsonl"
+            qa_path.write_text(
+                json.dumps(
+                    {
+                        "question": "What does replacement cost mean in this insurance context?",
+                        "answerable": True,
+                        "evidence_sources": [
+                            "https://insurance.maryland.gov/Consumer/Pages/Auto-Understanding-Declarations.aspx#page=1"
+                        ],
+                        "gold_page_keys": [
+                            "https://insurance.maryland.gov/Consumer/Pages/Auto-Understanding-Declarations.aspx::p0001"
+                        ],
+                    }
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            metrics = compute_retrieval_metrics(StubPipeline(), Path("."), qa_path, top_k=10)
+
+        self.assertEqual(metrics.evaluated_count, 1)
+        self.assertEqual(metrics.recall_at_1, 1.0)
+        self.assertEqual(metrics.recall_at_5, 1.0)
+        self.assertEqual(metrics.mrr_at_10, 1.0)
 
 
 if __name__ == "__main__":

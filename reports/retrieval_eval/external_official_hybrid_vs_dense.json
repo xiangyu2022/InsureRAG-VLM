@@ -1,0 +1,87 @@
+{
+  "corpus_root": "reports/retrieval_eval/external_official/corpus",
+  "manifest_root": "reports/retrieval_eval/external_official",
+  "manifest_metadata": {
+    "count": 137,
+    "source_families": {
+      "state_public_doc": 101,
+      "naic": 22,
+      "state_doi": 14
+    },
+    "document_kinds": {
+      "glossary": 22,
+      "consumer_guide": 96,
+      "declarations_guide": 3,
+      "topic_guide": 9,
+      "coverage_guide": 6,
+      "consumer_advisory": 1
+    },
+    "preferred_terms": {
+      "liability": 30,
+      "limit": 5,
+      "deductible": 16,
+      "premium": 15,
+      "coverage": 41,
+      "replacement cost": 18,
+      "actual cash value": 11,
+      "declarations": 1
+    },
+    "selected_documents": 20,
+    "valid_count": 42,
+    "test_count": 95
+  },
+  "retrieval_model": "models/retrieval/bge-base-insurerag",
+  "hybrid_mode": "hybrid_text",
+  "dense_mode": "dense_only",
+  "top_k": 10,
+  "results": {
+    "valid": {
+      "qa_path": "reports/retrieval_eval/external_official/valid.jsonl",
+      "dense": {
+        "evaluated_count": 42,
+        "recall_at_1": 0.07142857142857142,
+        "recall_at_5": 0.3333333333333333,
+        "mrr_at_10": 0.18100907029478458,
+        "ndcg_at_10": 0.2503670986605173
+      },
+      "hybrid": {
+        "evaluated_count": 42,
+        "recall_at_1": 0.023809523809523808,
+        "recall_at_5": 0.19047619047619047,
+        "mrr_at_10": 0.10114323507180652,
+        "ndcg_at_10": 0.16019068013240503
+      },
+      "delta": {
+        "evaluated_count": 0,
+        "recall_at_1": -0.047619047619047616,
+        "recall_at_5": -0.14285714285714285,
+        "mrr_at_10": -0.07986583522297806,
+        "ndcg_at_10": -0.09017641852811228
+      }
+    },
+    "test": {
+      "qa_path": "reports/retrieval_eval/external_official/test.jsonl",
+      "dense": {
+        "evaluated_count": 95,
+        "recall_at_1": 0.021052631578947368,
+        "recall_at_5": 0.08421052631578947,
+        "mrr_at_10": 0.045935672514619885,
+        "ndcg_at_10": 0.06664175207224632
+      },
+      "hybrid": {
+        "evaluated_count": 95,
+        "recall_at_1": 0.05263157894736842,
+        "recall_at_5": 0.11578947368421053,
+        "mrr_at_10": 0.08421052631578946,
+        "ndcg_at_10": 0.1149835876711504
+      },
+      "delta": {
+        "evaluated_count": 0,
+        "recall_at_1": 0.031578947368421054,
+        "recall_at_5": 0.031578947368421054,
+        "mrr_at_10": 0.03827485380116957,
+        "ndcg_at_10": 0.04834183559890408
+      }
+    }
+  }
+}

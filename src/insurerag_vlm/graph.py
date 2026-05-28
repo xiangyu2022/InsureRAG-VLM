@@ -16,6 +16,13 @@ def _shared_sections(left: Dict[str, Any], right: Dict[str, Any]) -> List[str]:
     return sorted(left_tokens & right_tokens)
 
 
+def _graph_group_id(record: Dict[str, Any]) -> str:
+    packet_id = str(record.get("packet_id") or "").strip()
+    if packet_id:
+        return f"packet::{packet_id}"
+    return f"doc::{record.get('doc_id')}"
+
+
 def _edge(
     source_page_key: str,
     target_page_key: str,
@@ -52,17 +59,18 @@ def build_document_graph(
     edges: List[Dict[str, Any]] = []
     pages_by_doc: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
     for page in page_records:
-        pages_by_doc[str(page.get("doc_id"))].append(page)
+        pages_by_doc[_graph_group_id(page)].append(page)
 
     declarations_by_doc = defaultdict(list)
     endorsements_by_doc = defaultdict(list)
     definitions_by_doc = defaultdict(list)
     exclusions_by_doc = defaultdict(list)
+    exceptions_by_doc = defaultdict(list)
     coverages_by_doc = defaultdict(list)
     limits_by_doc = defaultdict(list)
 
     for page in page_records:
-        doc_id = str(page.get("doc_id"))
+        doc_id = _graph_group_id(page)
         document_type = str(page.get("document_type", ""))
         clause_types = set(page.get("clause_types", []) or [])
         if document_type == "declarations":
@@ -73,6 +81,8 @@ def build_document_graph(
             definitions_by_doc[doc_id].append(page)
         if "exclusion" in clause_types:
             exclusions_by_doc[doc_id].append(page)
+        if "exception" in clause_types:
+            exceptions_by_doc[doc_id].append(page)
         if "coverage" in clause_types:
             coverages_by_doc[doc_id].append(page)
         if "limit" in clause_types or "deductible" in clause_types or "premium" in clause_types:
@@ -131,6 +141,30 @@ def build_document_graph(
                         )
                     )
 
+    for doc_id, coverage_pages in coverages_by_doc.items():
+        for coverage_page in coverage_pages:
+            for exclusion in exclusions_by_doc.get(doc_id, []):
+                if coverage_page.get("page_key") == exclusion.get("page_key"):
+                    continue
+                shared_coverages = _shared_coverages(coverage_page, exclusion)
+                shared_sections = _shared_sections(coverage_page, exclusion)
+                if shared_coverages or shared_sections:
+                    edges.append(
+                        _edge(
+                            coverage_page.get("page_key"),
+                            exclusion.get("page_key"),
+                            "limited_by",
+                            doc_id,
+                            confidence=0.78 if shared_coverages else 0.7,
+                            reason="coverage_exclusion_overlap",
+                            shared_coverages=shared_coverages,
+                            shared_sections=shared_sections,
+                            source_section_title=coverage_page.get("section_anchor"),
+                            target_section_title=exclusion.get("section_anchor"),
+                            source_form_codes=list(coverage_page.get("form_codes", []) or []),
+                        )
+                    )
+
     for doc_id, exclusion_pages in exclusions_by_doc.items():
         for exclusion in exclusion_pages:
             for endorsement in endorsements_by_doc.get(doc_id, []):
@@ -150,6 +184,30 @@ def build_document_graph(
                             source_section_title=exclusion.get("section_anchor"),
                             target_section_title=endorsement.get("section_anchor"),
                             source_form_codes=list(endorsement.get("form_codes", []) or []),
+                        )
+                    )
+
+    for doc_id, exception_pages in exceptions_by_doc.items():
+        for exception in exception_pages:
+            for exclusion in exclusions_by_doc.get(doc_id, []):
+                if exception.get("page_key") == exclusion.get("page_key"):
+                    continue
+                shared_coverages = _shared_coverages(exception, exclusion)
+                shared_sections = _shared_sections(exception, exclusion)
+                if shared_coverages or shared_sections:
+                    edges.append(
+                        _edge(
+                            exclusion.get("page_key"),
+                            exception.get("page_key"),
+                            "qualified_by",
+                            doc_id,
+                            confidence=0.8 if shared_coverages and shared_sections else 0.72,
+                            reason="exception_qualifies_exclusion",
+                            shared_coverages=shared_coverages,
+                            shared_sections=shared_sections,
+                            source_section_title=exclusion.get("section_anchor"),
+                            target_section_title=exception.get("section_anchor"),
+                            source_form_codes=list(exception.get("form_codes", []) or []),
                         )
                     )
 
@@ -229,7 +287,16 @@ def expand_candidate_page_keys(
     if needs_definition:
         allowed_relations.update({"defines_term_for", "reverse::defines_term_for"})
     if needs_exclusion_review:
-        allowed_relations.update({"overridden_by", "reverse::overridden_by"})
+        allowed_relations.update(
+            {
+                "overridden_by",
+                "reverse::overridden_by",
+                "limited_by",
+                "reverse::limited_by",
+                "qualified_by",
+                "reverse::qualified_by",
+            }
+        )
 
     expanded: List[Dict[str, Any]] = []
     seen_targets: Set[str] = set()

@@ -16,6 +16,7 @@ import requests
 
 from .data import PageDocument, load_documents
 from .retriever import load_index
+from .state_doi_sources import STATE_DOI_DOCS
 
 
 PUBLIC_DATA_SOURCES = {
@@ -45,8 +46,32 @@ PUBLIC_DATA_SOURCES = {
         "license": "public web documents; verify source terms before redistribution",
         "url": "multiple",
         "local_path": "data/00_raw/external/public_docs",
-        "description": "Real public insurance PDFs from state departments for page-image preprocessing and eval.",
+        "description": (
+            "Real public insurance PDFs and official consumer pages from state departments "
+            "and NAIC for page-image preprocessing, retrieval eval, and external-domain QA."
+        ),
         "documents": [
+            {
+                "name": "NAIC Glossary of Insurance Terms",
+                "source": "National Association of Insurance Commissioners",
+                "url": "https://content.naic.org/index.php/glossary-insurance-terms",
+                "local_name": "naic_glossary_insurance_terms.txt",
+                "description": "Official NAIC glossary covering common insurance definitions such as replacement cost, premium, deductible, and endorsement-related terms.",
+            },
+            {
+                "name": "NAIC Auto Insurance Topic Guide",
+                "source": "National Association of Insurance Commissioners",
+                "url": "https://content.naic.org/insurance-topics/auto-insurance",
+                "local_name": "naic_auto_insurance_topic.txt",
+                "description": "Official NAIC consumer page explaining personal auto coverage, policy components, and claims concepts.",
+            },
+            {
+                "name": "NAIC Homeowners Insurance Topic Guide",
+                "source": "National Association of Insurance Commissioners",
+                "url": "https://content.naic.org/insurance-topics/homeowners-insurance",
+                "local_name": "naic_homeowners_insurance_topic.txt",
+                "description": "Official NAIC consumer page for homeowners coverage, exclusions, disaster perils, and shopping guidance.",
+            },
             {
                 "name": "Maryland Homeowners Insurance Declarations Page Example",
                 "source": "Maryland Insurance Administration",
@@ -187,7 +212,95 @@ PUBLIC_DATA_SOURCES = {
                 "local_name": "md_homeowners_still_important_advisory.pdf",
                 "description": "Consumer advisory about maintaining homeowners insurance after paying off a mortgage.",
             },
+            {
+                "name": "California Automobile Insurance Terms",
+                "source": "California Department of Insurance",
+                "url": "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-auto/autoterms.cfm",
+                "local_name": "ca_auto_insurance_terms.txt",
+                "description": "Official California glossary for declarations pages, endorsements, deductibles, liability limits, and related auto terms.",
+            },
+            {
+                "name": "California Automobile Insurance Guide",
+                "source": "California Department of Insurance",
+                "url": "https://www.insurance.ca.gov/01-consumers/105-type/1-auto",
+                "local_name": "ca_auto_insurance_guide.txt",
+                "description": "Official California consumer guide to automobile insurance coverage, shopping, and claims basics.",
+            },
+            {
+                "name": "Washington Consumer Insurance Glossary",
+                "source": "Washington Office of the Insurance Commissioner",
+                "url": "https://www.insurance.wa.gov/consumers-insurance-glossary",
+                "local_name": "wa_consumer_insurance_glossary.txt",
+                "description": "Official Washington glossary covering broad insurance terminology across personal lines and life insurance.",
+            },
+            {
+                "name": "Texas Auto Insurance Glossary",
+                "source": "Texas Department of Insurance",
+                "url": "https://www.tdi.texas.gov/consumer/auto-insurance-glossary.html",
+                "local_name": "tx_auto_insurance_glossary.txt",
+                "description": "Official Texas glossary for declarations pages, deductibles, liability limits, actual cash value, and endorsements.",
+            },
+            {
+                "name": "Texas Home Insurance Guide",
+                "source": "Texas Department of Insurance",
+                "url": "https://www.tdi.texas.gov/CONSUMER/home-insurance.html",
+                "local_name": "tx_home_insurance_guide.txt",
+                "description": "Official Texas consumer home insurance guide covering policy types, claims, replacement cost, and exclusions.",
+            },
+            {
+                "name": "Delaware Homeowners Guide",
+                "source": "Delaware Department of Insurance",
+                "url": "https://insurance.delaware.gov/wp-content/uploads/sites/15/2022/09/Homeowners-Guide.pdf",
+                "local_name": "de_homeowners_guide.pdf",
+                "description": "Official Delaware homeowners and renters guide with coverage, replacement cost, and disaster-preparedness concepts.",
+            },
+            {
+                "name": "Delaware Auto Insurance Guide",
+                "source": "Delaware Department of Insurance",
+                "url": "https://insurance.delaware.gov/wp-content/uploads/sites/15/2022/09/Auto-Insurance-Guide.pdf",
+                "local_name": "de_auto_insurance_guide.pdf",
+                "description": "Official Delaware auto insurance guide with coverage, premium, and consumer shopping concepts.",
+            },
+            {
+                "name": "New York Homeowners Insurance Coverage Guide",
+                "source": "New York State Department of Financial Services",
+                "url": "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/basic_coverage",
+                "local_name": "ny_homeowners_basic_coverage.txt",
+                "description": "Official New York guide to homeowners and tenants insurance, limits, deductibles, and additional coverage.",
+            },
+            {
+                "name": "New York Home Insurance Replacement Cost Guide",
+                "source": "New York State Department of Financial Services",
+                "url": "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/determining_how_much_insurance_you_need",
+                "local_name": "ny_home_insurance_replacement_cost.txt",
+                "description": "Official New York guidance on replacement cost, valuation, and setting adequate homeowners coverage limits.",
+            },
+            {
+                "name": "South Carolina Understanding Your Deductible",
+                "source": "South Carolina Department of Insurance",
+                "url": "https://www.doi.sc.gov/1019/Understanding-Your-Deductible",
+                "local_name": "sc_understanding_your_deductible.txt",
+                "description": "Official South Carolina consumer explainer focused on deductibles, premiums, and covered expenses.",
+            },
+            {
+                "name": "South Carolina Purchasing Home Insurance Knowledge",
+                "source": "South Carolina Department of Insurance",
+                "url": "https://www.doi.sc.gov/618/Purchasing-Home-Insurance-Knowledge",
+                "local_name": "sc_purchasing_home_insurance.txt",
+                "description": "Official South Carolina home insurance guide discussing replacement cost, actual cash value, and core coverages.",
+            },
         ],
+    },
+    "state_doi_docs": {
+        "name": "State DOI Official Pages",
+        "license": "public web documents; verify source terms before redistribution",
+        "url": "multiple",
+        "local_path": "data/00_raw/external/state_doi_docs",
+        "description": (
+            "Official insurance department pages and consumer-facing materials from all U.S. "
+            "states, with manifest-only pointers where direct download is blocked."
+        ),
+        "documents": STATE_DOI_DOCS,
     },
     "real_domain_mix": {
         "name": "Real Insurance Domain Mix",
@@ -382,6 +495,9 @@ def _write_source_pointer(path: Path, doc: Dict[str, Any]) -> None:
         f"name: {doc.get('name', '')}",
         f"category: {doc.get('category', '')}",
         f"source: {doc.get('source', '')}",
+        f"source_type: {doc.get('source_type', '')}",
+        f"policy_interpretation_tier: {doc.get('policy_interpretation_tier', '')}",
+        f"rag_role: {doc.get('rag_role', '')}",
         f"url: {doc.get('url', '')}",
         f"description: {doc.get('description', '')}",
         "",
@@ -396,6 +512,10 @@ def _download_document(doc: Dict[str, Any], doc_path: Path) -> Dict[str, Any]:
         "name": doc["name"],
         "category": doc.get("category", ""),
         "source": doc.get("source", ""),
+        "source_type": doc.get("source_type", ""),
+        "policy_interpretation_tier": doc.get("policy_interpretation_tier", ""),
+        "rag_role": doc.get("rag_role", ""),
+        "download_policy": doc.get("download_policy", ""),
         "url": doc["url"],
         "description": doc.get("description", ""),
         "local_path": str(doc_path),
@@ -407,16 +527,22 @@ def _download_document(doc: Dict[str, Any], doc_path: Path) -> Dict[str, Any]:
         doc_record["status"] = "manifest_only"
         return doc_record
 
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/124.0 Safari/537.36"
+        ),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,application/pdf;q=0.8,*/*;q=0.7",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Referer": "https://www.google.com/",
+    }
+    headers.update(doc.get("request_headers", {}))
     response = requests.get(
         doc["url"],
-        headers={
-            "User-Agent": (
-                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) "
-                "Chrome/124.0 Safari/537.36"
-            )
-        },
+        headers=headers,
         timeout=120,
+        verify=doc.get("verify_ssl", True),
     )
     response.raise_for_status()
     content = response.content
@@ -520,7 +646,7 @@ def download_public_datasets(
             "status": "manifest_only",
         }
 
-        if dataset_name in {"public_docs", "real_domain_mix"}:
+        if dataset_name in {"public_docs", "state_doi_docs", "real_domain_mix"}:
             collection_result = _download_document_collection(source, local_path)
             record.update(collection_result)
             manifest.append(record)
@@ -603,6 +729,27 @@ TOPIC_KEYWORDS = {
 
 def _source_to_page_id(source: str) -> str:
     return source.replace("/", "_").replace("#page=", "_p")
+
+
+def _normalize_source(source: str) -> str:
+    value = str(source or "").strip()
+    if not value:
+        return ""
+    doc_id, sep, page_part = value.partition("#page=")
+    if sep and page_part.isdigit():
+        page_number = int(page_part)
+        if value.startswith(("http://", "https://")) and page_number == 1:
+            return doc_id
+        return f"{doc_id}#page={page_number}"
+    return value
+
+
+def _source_to_page_key(source: str) -> str:
+    normalized = _normalize_source(source)
+    doc_id, sep, page_part = normalized.partition("#page=")
+    if sep and page_part.isdigit():
+        return f"{doc_id}::p{int(page_part):04d}"
+    return normalized
 
 
 def _make_qa(
@@ -1221,16 +1368,34 @@ def compute_retrieval_metrics(
 
     for item in examples:
         gold_sources = set(item.get("evidence_sources") or item.get("citations") or [])
+        gold_page_keys = {
+            str(page_key)
+            for page_key in (
+                item.get("gold_page_keys")
+                or [_source_to_page_key(source) for source in gold_sources]
+            )
+            if str(page_key)
+        }
+        normalized_gold_sources = {_normalize_source(source) for source in gold_sources if str(source)}
         ranked = pipeline.rank_pages(item["question"], Path(data_folder), top_k=top_k)
-        ranked_sources = [candidate["source"] for candidate in ranked]
+        ranked_sources = [str(candidate.get("source") or "") for candidate in ranked]
+        ranked_page_keys = [
+            str(candidate.get("page_key") or _source_to_page_key(candidate.get("source") or ""))
+            for candidate in ranked
+        ]
         hit_positions = [
             idx + 1
-            for idx, source in enumerate(ranked_sources[:10])
-            if source in gold_sources
+            for idx, (source, page_key) in enumerate(zip(ranked_sources[:10], ranked_page_keys[:10]))
+            if page_key in gold_page_keys or _normalize_source(source) in normalized_gold_sources
         ]
-        if ranked_sources[:1] and ranked_sources[0] in gold_sources:
+        if ranked_sources[:1] and (
+            ranked_page_keys[0] in gold_page_keys or _normalize_source(ranked_sources[0]) in normalized_gold_sources
+        ):
             recall_1 += 1
-        if any(source in gold_sources for source in ranked_sources[:5]):
+        if any(
+            page_key in gold_page_keys or _normalize_source(source) in normalized_gold_sources
+            for source, page_key in zip(ranked_sources[:5], ranked_page_keys[:5])
+        ):
             recall_5 += 1
         if hit_positions:
             first_hit = hit_positions[0]

@@ -1,0 +1,48 @@
+{
+  "manifest_path": "reports/retrieval_eval/clean_exact_source.jsonl",
+  "manifest_metadata": {
+    "count": 59,
+    "document_types": {
+      "declarations": 17,
+      "base_policy": 17,
+      "claim_form": 1,
+      "endorsement": 20,
+      "billing": 3,
+      "schedule": 1
+    },
+    "primary_clause_types": {
+      "endorsement": 31,
+      "deductible": 4,
+      "limit": 9,
+      "definition": 9,
+      "premium": 3,
+      "exception": 2,
+      "exclusion": 1
+    }
+  },
+  "retrieval_mode": "hybrid_multimodal",
+  "corpus_source": "curated",
+  "enable_image_signal": false,
+  "top_k": 10,
+  "before": {
+    "evaluated_count": 59,
+    "recall_at_1": 0.03389830508474576,
+    "recall_at_5": 0.1016949152542373,
+    "mrr_at_10": 0.07704465967177831,
+    "ndcg_at_10": 0.1064459199025428
+  },
+  "after": {
+    "evaluated_count": 59,
+    "recall_at_1": 0.03389830508474576,
+    "recall_at_5": 0.13559322033898305,
+    "mrr_at_10": 0.0788808178638687,
+    "ndcg_at_10": 0.11511664159464305
+  },
+  "delta": {
+    "evaluated_count": 0,
+    "recall_at_1": 0.0,
+    "recall_at_5": 0.033898305084745756,
+    "mrr_at_10": 0.0018361581920903897,
+    "ndcg_at_10": 0.008670721692100244
+  }
+}

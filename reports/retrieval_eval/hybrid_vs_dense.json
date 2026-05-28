@@ -1,0 +1,81 @@
+{
+  "manifest_root": "reports/retrieval_eval/expanded_targeted",
+  "manifest_metadata": {
+    "count": 63,
+    "document_types": {
+      "declarations": 18,
+      "endorsement": 20,
+      "base_policy": 20,
+      "claim_form": 1,
+      "schedule": 1,
+      "billing": 3
+    },
+    "primary_clause_types": {
+      "endorsement": 31,
+      "limit": 13,
+      "deductible": 4,
+      "premium": 3,
+      "exception": 2,
+      "definition": 9,
+      "exclusion": 1
+    },
+    "valid_count": 20,
+    "test_count": 43
+  },
+  "retrieval_model": "models/retrieval/bge-base-insurerag",
+  "hybrid_mode": "hybrid_multimodal",
+  "dense_mode": "dense_only",
+  "corpus_source": "curated",
+  "enable_image_signal": false,
+  "top_k": 10,
+  "results": {
+    "valid": {
+      "qa_path": "reports/retrieval_eval/expanded_targeted/valid.jsonl",
+      "dense": {
+        "evaluated_count": 20,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.25,
+        "mrr_at_10": 0.0875,
+        "ndcg_at_10": 0.12808031558224253
+      },
+      "hybrid": {
+        "evaluated_count": 20,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.15,
+        "mrr_at_10": 0.061726190476190476,
+        "ndcg_at_10": 0.11623579218357456
+      },
+      "delta": {
+        "evaluated_count": 0,
+        "recall_at_1": 0.0,
+        "recall_at_5": -0.1,
+        "mrr_at_10": -0.02577380952380952,
+        "ndcg_at_10": -0.01184452339866797
+      }
+    },
+    "test": {
+      "qa_path": "reports/retrieval_eval/expanded_targeted/test.jsonl",
+      "dense": {
+        "evaluated_count": 43,
+        "recall_at_1": 0.023255813953488372,
+        "recall_at_5": 0.06976744186046512,
+        "mrr_at_10": 0.046797711332595054,
+        "ndcg_at_10": 0.07269176370547613
+      },
+      "hybrid": {
+        "evaluated_count": 43,
+        "recall_at_1": 0.046511627906976744,
+        "recall_at_5": 0.13953488372093023,
+        "mrr_at_10": 0.08649870801033593,
+        "ndcg_at_10": 0.11960659637127623
+      },
+      "delta": {
+        "evaluated_count": 0,
+        "recall_at_1": 0.023255813953488372,
+        "recall_at_5": 0.06976744186046512,
+        "mrr_at_10": 0.03970099667774088,
+        "ndcg_at_10": 0.0469148326658001
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "source_name": "Carrier-issued local packet corpus",
+  "source_origin": "local_real_policy_packet",
+  "packets": [
+    {
+      "packet_id": "policy-packet-001",
+      "policy_family_id": "policy-packet-001",
+      "policy_number": "ABC-1234567",
+      "effective_date": "2026-01-01",
+      "documents": [
+        {
+          "path": "packet_001/declarations.pdf",
+          "document_role": "declarations",
+          "sequence_order": 5
+        },
+        {
+          "path": "packet_001/base_policy.pdf",
+          "document_role": "base_policy",
+          "sequence_order": 10,
+          "form_code": "HO-3"
+        },
+        {
+          "path": "packet_001/cyber_endorsement.pdf",
+          "document_role": "endorsement",
+          "sequence_order": 20,
+          "endorsement_code": "HO-123"
+        },
+        {
+          "path": "packet_001/schedule.pdf",
+          "document_role": "schedule",
+          "sequence_order": 30
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -73,6 +74,88 @@ class HybridPipelineTests(unittest.TestCase):
             corpus_source="documents",
             enable_image_signal=enable_image_signal,
             pdf_render_dir=root / "rendered_pages",
+        )
+        pipeline = DocumentRetrievalPipeline(config)
+        pipeline.build_index(docs_dir)
+        return pipeline, docs_dir, index_dir
+
+    def _build_packeted_pipeline(self, root: Path):
+        docs_dir = root / "packet_docs"
+        index_dir = root / "packet_index"
+        docs_dir.mkdir()
+
+        base_pdf = docs_dir / "base_policy.pdf"
+        doc = fitz.open()
+        base_page = doc.new_page()
+        base_page.insert_text(
+            (72, 72),
+            "Section II - Liability Coverages\nElectronic Data Exclusion\nWe do not cover electronic data loss under Personal Liability coverage.",
+        )
+        base_exception_page = doc.new_page()
+        base_exception_page.insert_text(
+            (72, 72),
+            "Electronic Data Exception\nHowever, this exclusion does not apply when an attached cyber endorsement modifies Coverage E.",
+        )
+        doc.save(base_pdf)
+        doc.close()
+
+        endorsement_pdf = docs_dir / "cyber_endorsement.pdf"
+        doc = fitz.open()
+        endorsement_page = doc.new_page()
+        endorsement_page.insert_text(
+            (72, 72),
+            "Cyber Liability Endorsement HO-123\nThis endorsement modifies Section II - Liability Coverages to add back coverage for electronic data loss.",
+        )
+        doc.save(endorsement_pdf)
+        doc.close()
+
+        declarations_pdf = docs_dir / "declarations.pdf"
+        doc = fitz.open()
+        declarations_page = doc.new_page()
+        declarations_page.insert_text(
+            (72, 72),
+            "Policy Declarations\nCoverage E - Personal Liability Limit: $300000\nCyber Liability Sublimit: $25000",
+        )
+        doc.save(declarations_pdf)
+        doc.close()
+
+        manifest = {
+            "source_name": "Carrier-issued local packet",
+            "source_origin": "local_real_policy_packet",
+            "packets": [
+                {
+                    "packet_id": "packet-001",
+                    "policy_family_id": "packet-001",
+                    "documents": [
+                        {
+                            "path": "base_policy.pdf",
+                            "document_role": "base_policy",
+                            "sequence_order": 10,
+                            "form_code": "HO-3",
+                        },
+                        {
+                            "path": "cyber_endorsement.pdf",
+                            "document_role": "endorsement",
+                            "sequence_order": 20,
+                            "endorsement_code": "HO-123",
+                        },
+                        {
+                            "path": "declarations.pdf",
+                            "document_role": "declarations",
+                            "sequence_order": 5,
+                        },
+                    ],
+                }
+            ],
+        }
+        (docs_dir / "packet_manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+
+        config = ModelConfig(
+            index_dir=index_dir,
+            retrieval_mode="hybrid_multimodal",
+            corpus_source="documents",
+            enable_image_signal=False,
+            pdf_render_dir=root / "packet_rendered_pages",
         )
         pipeline = DocumentRetrievalPipeline(config)
         pipeline.build_index(docs_dir)
@@ -239,6 +322,83 @@ class HybridPipelineTests(unittest.TestCase):
             self.assertTrue(result.get("conflict_notes"))
             self.assertTrue(result.get("conflicts"))
             self.assertEqual(result.get("override_summary", {}).get("type"), "endorsement_override")
+
+    def test_packet_manifest_propagates_packet_metadata(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            pipeline, docs_dir, _ = self._build_packeted_pipeline(root)
+            ranked = pipeline.rank_pages(
+                "What limit is shown for personal liability on the declarations page?",
+                docs_dir,
+                top_k=3,
+            )
+            declarations_page = next(page for page in ranked if page.get("document_role") == "declarations")
+            self.assertEqual(declarations_page.get("packet_id"), "packet-001")
+            self.assertEqual(declarations_page.get("source_origin"), "local_real_policy_packet")
+            self.assertEqual(declarations_page.get("source_name"), "Carrier-issued local packet")
+
+    def test_packet_graph_expands_across_files(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            pipeline, docs_dir, _ = self._build_packeted_pipeline(root)
+            merged = pipeline.merge_candidates(
+                "Does the cyber liability endorsement modify the electronic data exclusion?",
+                docs_dir,
+                top_k=5,
+            )
+            sources = {candidate.get("source") for candidate in merged}
+            self.assertIn("cyber_endorsement.pdf#page=1", sources)
+            endorsement_candidate = next(candidate for candidate in merged if candidate.get("source") == "cyber_endorsement.pdf#page=1")
+            self.assertEqual(endorsement_candidate.get("packet_id"), "packet-001")
+
+    def test_query_structured_abstains_when_endorsement_counterevidence_is_missing(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            docs_dir = root / "docs"
+            index_dir = root / "index"
+            docs_dir.mkdir()
+            pdf_path = docs_dir / "policy.pdf"
+            doc = fitz.open()
+            page = doc.new_page()
+            page.insert_text(
+                (72, 72),
+                "Section II - Liability Coverages\nElectronic Data Exclusion\nWe do not cover electronic data loss.",
+            )
+            doc.save(pdf_path)
+            doc.close()
+            config = ModelConfig(
+                index_dir=index_dir,
+                retrieval_mode="hybrid_multimodal",
+                corpus_source="documents",
+                enable_image_signal=False,
+                pdf_render_dir=root / "rendered_pages",
+            )
+            pipeline = DocumentRetrievalPipeline(config)
+            pipeline.build_index(docs_dir)
+            result = pipeline.query_structured(
+                "Does an endorsement override the exclusion for electronic data loss?",
+                docs_dir,
+                top_k=3,
+                force_extractive=True,
+            )
+            self.assertTrue(result.get("abstain"))
+            self.assertEqual(result.get("abstain_reason"), "missing_policy_packet_counterevidence")
+            self.assertEqual(result.get("policy_logic_status"), "blocked")
+
+    def test_query_structured_reports_exception_relationships(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            pipeline, docs_dir, _ = self._build_packeted_pipeline(root)
+            result = pipeline.query_structured(
+                "What exception applies to the electronic data exclusion?",
+                docs_dir,
+                top_k=4,
+                force_extractive=True,
+            )
+            self.assertFalse(result.get("abstain"))
+            self.assertIn("exception", str(result.get("evidence_role")))
+            conflict_types = {conflict.get("type") for conflict in result.get("conflicts", [])}
+            self.assertIn("exception_qualifies_exclusion", conflict_types)
 
 
 if __name__ == "__main__":

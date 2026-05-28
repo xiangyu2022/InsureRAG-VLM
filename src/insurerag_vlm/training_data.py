@@ -6,7 +6,7 @@ from typing import Any, Dict, Iterable, List, Optional
 
 from .config import ModelConfig
 from .hybrid_pipeline import DocumentRetrievalPipeline
-from .qa import generate_policy_qa_pairs
+from .qa import _normalize_source, _source_to_page_key, generate_policy_qa_pairs
 from .query_understanding import understand_query
 from .sft import read_sft_records
 
@@ -30,14 +30,29 @@ def _write_jsonl(records: Iterable[Dict[str, Any]], path: Path) -> Path:
 
 
 def _source_doc_id(source: str) -> str:
-    return str(source or "").split("#page=", 1)[0]
+    return _normalize_source(str(source or "")).split("#page=", 1)[0]
 
 
 def _source_page_key(source: str) -> str:
-    doc_id, _, page_part = str(source or "").partition("#page=")
-    if page_part.isdigit():
-        return f"{doc_id}::p{int(page_part):04d}"
-    return str(source or "")
+    return _source_to_page_key(str(source or ""))
+
+
+def _candidate_page_lookup_keys(source: str) -> List[str]:
+    raw = str(source or "")
+    normalized = _normalize_source(raw)
+    page_key = _source_page_key(raw)
+    keys: List[str] = []
+    for value in [raw, normalized, page_key]:
+        if value and value not in keys:
+            keys.append(value)
+    return keys
+
+
+def _lookup_page(page_lookup: Dict[str, Dict[str, Any]], source: str) -> Optional[Dict[str, Any]]:
+    for key in _candidate_page_lookup_keys(source):
+        if key in page_lookup:
+            return page_lookup[key]
+    return None
 
 
 def _split_record_lists(records: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
@@ -173,7 +188,10 @@ def build_training_corpora(config: TrainingCorpusBuildConfig) -> Dict[str, Any]:
     )
     pipeline.build_index(config.data_folder)
     corpus = pipeline._load_hybrid_corpus(config.data_folder, include_images=config.enable_image_signal)  # noqa: SLF001
-    page_by_source = {str(page.get("source")): page for page in corpus["pages"]}
+    page_lookup: Dict[str, Dict[str, Any]] = {}
+    for page in corpus["pages"]:
+        for key in _candidate_page_lookup_keys(str(page.get("source") or "")):
+            page_lookup.setdefault(key, page)
     snippets_by_page: Dict[str, List[Dict[str, Any]]] = {}
     for snippet in corpus["snippets"]:
         snippets_by_page.setdefault(str(snippet.get("page_key")), []).append(snippet)
@@ -205,7 +223,8 @@ def build_training_corpora(config: TrainingCorpusBuildConfig) -> Dict[str, Any]:
                 break
 
         if answerable and positive_sources:
-            first_positive = page_by_source.get(positive_sources[0])
+            first_positive = _lookup_page(page_lookup, positive_sources[0])
+            positive_pages = [page for source in positive_sources for page in [_lookup_page(page_lookup, source)] if page]
             positive_snippets = _pick_positive_snippets(
                 first_positive or {},
                 snippets_by_page,
@@ -220,15 +239,20 @@ def build_training_corpora(config: TrainingCorpusBuildConfig) -> Dict[str, Any]:
                     "question_type": understanding.intent,
                     "coverage_tags": understanding.target_coverages,
                     "gold_sources": positive_sources,
-                    "gold_page_keys": [_source_page_key(source) for source in positive_sources],
+                    "gold_page_keys": [
+                        str(page.get("page_key") or _source_page_key(source))
+                        for source in positive_sources
+                        for page in [_lookup_page(page_lookup, source) or {}]
+                    ],
                     "gold_snippet_ids": [snippet.get("record_id") for snippet in positive_snippets],
-                    "positive_page_texts": [page_by_source[source]["text"] for source in positive_sources if source in page_by_source],
+                    "positive_page_texts": [str(page.get("text") or "") for page in positive_pages],
                     "positive_snippet_texts": [snippet.get("text") for snippet in positive_snippets],
                     "hard_negative_sources": hard_negative_sources[: config.max_negatives],
                     "hard_negative_texts": [
-                        page_by_source[source]["text"]
+                        page["text"]
                         for source in hard_negative_sources[: config.max_negatives]
-                        if source in page_by_source
+                        for page in [_lookup_page(page_lookup, source)]
+                        if page
                     ],
                     "evidence_text": qa.get("evidence_text") or qa.get("evidence") or "",
                     "has_table_signal": bool(first_positive and first_positive.get("primary_clause_type") in {"limit", "deductible", "premium"}),
@@ -270,8 +294,9 @@ def build_training_corpora(config: TrainingCorpusBuildConfig) -> Dict[str, Any]:
         split = split_by_source.get(_source_doc_id(source), "train" if record.get("answerable", True) else "test")
         ranked_pages = pipeline.rank_pages(question, config.data_folder, top_k=max(config.max_sft_pages + 2, 6))
         selected_pages: List[Dict[str, Any]] = []
-        if record.get("answerable", True) and source in page_by_source:
-            selected_pages.append(page_by_source[source])
+        positive_page = _lookup_page(page_lookup, source)
+        if record.get("answerable", True) and positive_page:
+            selected_pages.append(positive_page)
         for page in ranked_pages:
             if any(str(existing.get("source")) == str(page.get("source")) for existing in selected_pages):
                 continue

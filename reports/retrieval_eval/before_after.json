@@ -1,0 +1,57 @@
+{
+  "data_folder": "data/04_curated",
+  "retrieval_mode": "hybrid_multimodal",
+  "corpus_source": "curated",
+  "enable_image_signal": false,
+  "top_k": 10,
+  "results": {
+    "dev": {
+      "qa_path": "reports/training_data_dense/retrieval_dev.jsonl",
+      "before": {
+        "evaluated_count": 29,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      "after": {
+        "evaluated_count": 29,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      "delta": {
+        "evaluated_count": 0,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "ndcg_at_10": 0.0
+      }
+    },
+    "test": {
+      "qa_path": "reports/training_data_dense/retrieval_test.jsonl",
+      "before": {
+        "evaluated_count": 298,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      "after": {
+        "evaluated_count": 298,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "ndcg_at_10": 0.0
+      },
+      "delta": {
+        "evaluated_count": 0,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.0,
+        "mrr_at_10": 0.0,
+        "ndcg_at_10": 0.0
+      }
+    }
+  }
+}
