@@ -1,32 +1,32 @@
 {
   "passed": true,
-  "dataset_dir": "data\\04_curated",
+  "dataset_dir": "data/04_curated",
   "counts": {
-    "rag_pages": 169,
-    "rag_snippets": 1090,
-    "rag_corpus": 1259,
+    "rag_pages": 192,
+    "rag_snippets": 1141,
+    "rag_corpus": 1333,
     "sft_dataset": 3600
   },
   "files": {
     "rag_pages": {
-      "path": "data\\04_curated\\rag_pages.jsonl",
-      "bytes": 1216198,
-      "sha256": "83b7bdbc81b788b553d73a4de3f08d6e43b29afa9a4a3fa9ec596af257a7398a"
+      "path": "data/04_curated/rag_pages.jsonl",
+      "bytes": 1266267,
+      "sha256": "4054583789daec0fbea58e26a87e41dee3b09dd06fc71ffd572eb04f00618ad0"
     },
     "rag_snippets": {
-      "path": "data\\04_curated\\rag_snippets.jsonl",
-      "bytes": 1438705,
-      "sha256": "6197017e01695e54910926aa327a8d4ae89af4f41a0a2385f475c50672b0e6c8"
+      "path": "data/04_curated/rag_snippets.jsonl",
+      "bytes": 1495598,
+      "sha256": "d5e490fad985acb93e13b32f032e8d1ccb0747ddee856e549c582a4911320f34"
     },
     "rag_corpus": {
-      "path": "data\\04_curated\\rag_corpus.jsonl",
-      "bytes": 2654903,
-      "sha256": "90d25c316d56ab8779ed96b0ae5c0e9af114a7153d01bcb003e99e980e5af49f"
+      "path": "data/04_curated/rag_corpus.jsonl",
+      "bytes": 2761865,
+      "sha256": "1f927f9e4a92a14e916abcf4ef723b165fef9a521c6cf30061784a872bce3b6f"
     },
     "sft_dataset": {
-      "path": "data\\04_curated\\sft_dataset.jsonl",
-      "bytes": 6667739,
-      "sha256": "df8454a648e0dac412c680322e78ec159084f1444cca7e240b15ded719f53b02"
+      "path": "data/04_curated/sft_dataset.jsonl",
+      "bytes": 6664139,
+      "sha256": "7c56eaf15504be8a61ce7a67f2a532dedf9f624f1324059affb8bd7be64fd6a8"
     }
   },
   "quality": {
@@ -56,33 +56,33 @@
     },
     {
       "type": "low_value_source_cache",
-      "source": "data\\04_curated\\source_cache\\mn_doi_auto_basics.txt",
+      "source": "data/04_curated/source_cache/mn_doi_auto_basics.txt",
       "bytes": 190,
-      "message": "Low-value cached source text should remain excluded or manifest-only: data\\04_curated\\source_cache\\mn_doi_auto_basics.txt (190 bytes)"
+      "message": "Low-value cached source text should remain excluded or manifest-only: data/04_curated/source_cache/mn_doi_auto_basics.txt (190 bytes)"
     },
     {
       "type": "low_value_source_cache",
-      "source": "data\\04_curated\\source_cache\\mn_doi_auto_shopping.txt",
+      "source": "data/04_curated/source_cache/mn_doi_auto_shopping.txt",
       "bytes": 190,
-      "message": "Low-value cached source text should remain excluded or manifest-only: data\\04_curated\\source_cache\\mn_doi_auto_shopping.txt (190 bytes)"
+      "message": "Low-value cached source text should remain excluded or manifest-only: data/04_curated/source_cache/mn_doi_auto_shopping.txt (190 bytes)"
     },
     {
       "type": "low_value_source_cache",
-      "source": "data\\04_curated\\source_cache\\mn_doi_home_claims.txt",
+      "source": "data/04_curated/source_cache/mn_doi_home_claims.txt",
       "bytes": 190,
-      "message": "Low-value cached source text should remain excluded or manifest-only: data\\04_curated\\source_cache\\mn_doi_home_claims.txt (190 bytes)"
+      "message": "Low-value cached source text should remain excluded or manifest-only: data/04_curated/source_cache/mn_doi_home_claims.txt (190 bytes)"
     },
     {
       "type": "low_value_source_cache",
-      "source": "data\\04_curated\\source_cache\\mn_doi_homeowner_guide.txt",
+      "source": "data/04_curated/source_cache/mn_doi_homeowner_guide.txt",
       "bytes": 190,
-      "message": "Low-value cached source text should remain excluded or manifest-only: data\\04_curated\\source_cache\\mn_doi_homeowner_guide.txt (190 bytes)"
+      "message": "Low-value cached source text should remain excluded or manifest-only: data/04_curated/source_cache/mn_doi_homeowner_guide.txt (190 bytes)"
     },
     {
       "type": "low_value_source_cache",
-      "source": "data\\04_curated\\source_cache\\mn_doi_property_coverage.txt",
+      "source": "data/04_curated/source_cache/mn_doi_property_coverage.txt",
       "bytes": 190,
-      "message": "Low-value cached source text should remain excluded or manifest-only: data\\04_curated\\source_cache\\mn_doi_property_coverage.txt (190 bytes)"
+      "message": "Low-value cached source text should remain excluded or manifest-only: data/04_curated/source_cache/mn_doi_property_coverage.txt (190 bytes)"
     }
   ]
 }
