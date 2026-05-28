@@ -1,0 +1,98 @@
+{
+  "source_name": "Synthetic local policy packet examples",
+  "source_origin": "synthetic_policy_packet",
+  "usage": "demo_and_regression_testing_only",
+  "packets": [
+    {
+      "packet_id": "synthetic-homeowners-001",
+      "policy_family_id": "homeowners-demo",
+      "policy_number": "SYN-HO-001",
+      "effective_date": "2026-01-01",
+      "documents": [
+        {
+          "path": "homeowners_001/declarations.txt",
+          "document_role": "declarations",
+          "sequence_order": 5
+        },
+        {
+          "path": "homeowners_001/base_policy.txt",
+          "document_role": "base_policy",
+          "sequence_order": 10,
+          "form_code": "SYN-HO-3"
+        },
+        {
+          "path": "homeowners_001/water_backup_endorsement.txt",
+          "document_role": "endorsement",
+          "sequence_order": 20,
+          "endorsement_code": "SYN-HO-WB"
+        },
+        {
+          "path": "homeowners_001/property_schedule.txt",
+          "document_role": "schedule",
+          "sequence_order": 30
+        }
+      ]
+    },
+    {
+      "packet_id": "synthetic-auto-001",
+      "policy_family_id": "auto-demo",
+      "policy_number": "SYN-AU-001",
+      "effective_date": "2026-02-01",
+      "documents": [
+        {
+          "path": "auto_001/declarations.txt",
+          "document_role": "declarations",
+          "sequence_order": 5
+        },
+        {
+          "path": "auto_001/base_policy.txt",
+          "document_role": "base_policy",
+          "sequence_order": 10,
+          "form_code": "SYN-AU-1"
+        },
+        {
+          "path": "auto_001/rideshare_endorsement.txt",
+          "document_role": "endorsement",
+          "sequence_order": 20,
+          "endorsement_code": "SYN-AU-RS"
+        },
+        {
+          "path": "auto_001/vehicle_schedule.txt",
+          "document_role": "schedule",
+          "sequence_order": 30
+        }
+      ]
+    },
+    {
+      "packet_id": "synthetic-renters-001",
+      "policy_family_id": "renters-demo",
+      "policy_number": "SYN-RT-001",
+      "effective_date": "2026-03-01",
+      "documents": [
+        {
+          "path": "renters_001/declarations.txt",
+          "document_role": "declarations",
+          "sequence_order": 5
+        },
+        {
+          "path": "renters_001/base_policy.txt",
+          "document_role": "base_policy",
+          "sequence_order": 10,
+          "form_code": "SYN-RT-1"
+        },
+        {
+          "path": "renters_001/identity_theft_endorsement.txt",
+          "document_role": "endorsement",
+          "sequence_order": 20,
+          "endorsement_code": "SYN-RT-ID"
+        },
+        {
+          "path": "renters_001/property_schedule.txt",
+          "document_role": "schedule",
+          "sequence_order": 30
+        }
+      ]
+    }
+  ]
+}
+

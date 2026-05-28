@@ -1,0 +1,14 @@
+Vehicle Schedule
+
+Covered auto: 2022 Example Sedan
+VIN: DEMOSEDAN2022
+Garaging location: 200 Sample Street
+Primary use: personal and commuter use
+
+Installed equipment:
+Factory safety package
+Anti-theft alarm
+Dash camera
+
+The vehicle schedule confirms the covered auto for the policy period. It does not change liability limits, collision deductible, comprehensive deductible, or rideshare coverage.
+

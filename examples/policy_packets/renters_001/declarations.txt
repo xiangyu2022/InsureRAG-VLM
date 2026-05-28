@@ -1,0 +1,21 @@
+Renters Policy Declarations
+Policy number: SYN-RT-001
+Named insured: Demo Renter
+Residence premises: 300 Apartment Avenue Unit 4
+Policy period: March 1, 2026 to March 1, 2027
+
+Coverage C - Personal Property Limit: $35,000
+Coverage D - Loss of Use Limit: $7,000
+Coverage E - Personal Liability Limit: $100,000
+Coverage F - Medical Payments to Others Limit: $1,000
+
+All Peril Deductible: $500
+Identity Theft Expense Endorsement Limit: $5,000
+Identity Theft Expense Endorsement Deductible: $0
+Laptop Schedule Limit: $2,500
+Annual Premium: $214
+
+Forms and endorsements attached:
+SYN-RT-1 Base Renters Policy
+SYN-RT-ID Identity Theft Expense Endorsement
+Scheduled Property Schedule

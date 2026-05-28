@@ -77,6 +77,18 @@ Remaining useful additions:
 - more flood, renters, umbrella, cyber, and commercial insurance packet examples
 - explicit train / validation / test split metadata for SFT records, so source-level leakage can be checked directly
 
+## Synthetic Packet Examples
+
+The repository also includes synthetic packet examples in `examples/policy_packets/`.
+
+These examples are not part of the official curated regulator corpus. They are redistribution-safe local demo packets for testing packet-aware retrieval behavior:
+
+- `synthetic-homeowners-001`: declarations, base homeowners policy, water backup endorsement, scheduled property
+- `synthetic-auto-001`: declarations, base auto policy, rideshare endorsement, vehicle schedule
+- `synthetic-renters-001`: declarations, base renters policy, identity theft endorsement, property schedule
+
+They are useful for exercising cross-document logic before private or carrier-issued packet data is available.
+
 ## Validation
 
 Validation command:

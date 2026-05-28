@@ -1,0 +1,24 @@
+Policy Declarations
+Policy number: SYN-HO-001
+Named insured: Demo Homeowner
+Residence premises: 100 Example Lane
+Policy period: January 1, 2026 to January 1, 2027
+
+Coverage A - Dwelling Limit: $420,000
+Coverage B - Other Structures Limit: $42,000
+Coverage C - Personal Property Limit: $210,000
+Coverage D - Loss of Use Limit: $84,000
+Coverage E - Personal Liability Limit: $300,000
+Coverage F - Medical Payments to Others Limit: $5,000
+
+All Peril Deductible: $1,000
+Wind and Hail Deductible: 2% of Coverage A
+Water Backup Endorsement Limit: $10,000
+Scheduled Jewelry Limit: $15,000
+Annual Premium: $1,482
+
+Forms and endorsements attached:
+SYN-HO-3 Base Homeowners Policy
+SYN-HO-WB Water Backup and Sump Overflow Endorsement
+Scheduled Personal Property Schedule
+

@@ -1,0 +1,23 @@
+Auto Policy Declarations
+Policy number: SYN-AU-001
+Named insured: Demo Driver
+Policy period: February 1, 2026 to February 1, 2027
+
+Covered auto: 2022 Example Sedan
+VIN: DEMOSEDAN2022
+
+Bodily Injury Liability Limit: $100,000 each person / $300,000 each accident
+Property Damage Liability Limit: $100,000 each accident
+Uninsured Motorist Bodily Injury Limit: $100,000 each person / $300,000 each accident
+Medical Payments Limit: $5,000 each person
+Comprehensive Deductible: $500
+Collision Deductible: $1,000
+Rental Reimbursement Limit: $40 per day / $1,200 maximum
+Rideshare Endorsement: Included
+Rideshare status: coverage applies only as described in the rideshare endorsement.
+Annual Premium: $1,126
+
+Forms and endorsements attached:
+SYN-AU-1 Base Auto Policy
+SYN-AU-RS Rideshare Coverage Endorsement
+Vehicle Schedule
