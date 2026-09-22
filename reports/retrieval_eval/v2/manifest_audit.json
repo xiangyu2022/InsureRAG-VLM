@@ -1,0 +1,39 @@
+{
+  "metric_version": "binary_page_v2",
+  "primary_metric": "recall_at_5",
+  "benchmark_scope": "document_scoped_synthetic",
+  "model_scores": "not_run",
+  "note": "Existing positives only; document IDs are query context, page IDs and answers are not. Human relevance review remains necessary.",
+  "manifests": {
+    "clean_exact_source.jsonl": {
+      "original_rows": 59,
+      "queries": 43,
+      "multi_gold_queries": 7,
+      "unique_documents": 33
+    },
+    "expanded_targeted/valid.jsonl": {
+      "original_rows": 20,
+      "queries": 12,
+      "multi_gold_queries": 3,
+      "unique_documents": 9
+    },
+    "expanded_targeted/test.jsonl": {
+      "original_rows": 43,
+      "queries": 33,
+      "multi_gold_queries": 5,
+      "unique_documents": 24
+    },
+    "external_official/valid.jsonl": {
+      "original_rows": 42,
+      "queries": 15,
+      "multi_gold_queries": 6,
+      "unique_documents": 5
+    },
+    "external_official/test.jsonl": {
+      "original_rows": 95,
+      "queries": 40,
+      "multi_gold_queries": 16,
+      "unique_documents": 14
+    }
+  }
+}

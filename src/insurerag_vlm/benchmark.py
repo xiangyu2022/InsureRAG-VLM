@@ -16,6 +16,7 @@ from .pipeline import DocumentRetrievalPipeline
 from .preprocess import PageImagePreprocessConfig, preprocess_page_images
 from .qa import _read_jsonl, generate_policy_qa_pairs
 from .visual import build_visual_index, compute_visual_retrieval_metrics
+from .retrieval_metrics import METRIC_VERSION, PRIMARY_METRIC, evaluation_depth, mean_scores, score_ranking, validate_queries
 
 
 @dataclass
@@ -161,56 +162,19 @@ def _text_retrieval_metrics(
     qa_path: Path,
     top_k: int,
 ) -> Dict[str, Any]:
+    evaluation_depth(top_k)
     examples = [item for item in _read_jsonl(qa_path) if item.get("answerable", True)]
-    if not examples:
-        return {
-            "backend": "local_text",
-            "evaluated_count": 0,
-            "recall_at_1": 0.0,
-            "recall_at_5": 0.0,
-            "mrr_at_10": 0.0,
-            "ndcg_at_10": 0.0,
-            "p50_latency_ms": 0.0,
-            "p95_latency_ms": 0.0,
-        }
-
-    recall_1 = 0
-    recall_5 = 0
-    mrr_10 = 0.0
-    ndcg_10 = 0.0
-    latencies: List[float] = []
+    validate_queries(examples)
+    scores = []
+    latencies = []
     for item in examples:
         start = time.perf_counter()
         ranked = pipeline.rank_pages(item["question"], data_folder, top_k=top_k)
         latencies.append((time.perf_counter() - start) * 1000)
-        gold_sources = set(item.get("evidence_sources") or item.get("citations") or [])
-        ranked_sources = [candidate["source"] for candidate in ranked]
-        hit_positions = [
-            idx + 1
-            for idx, source in enumerate(ranked_sources[:10])
-            if source in gold_sources
-        ]
-        recall_1 += int(bool(ranked_sources[:1]) and ranked_sources[0] in gold_sources)
-        recall_5 += int(any(source in gold_sources for source in ranked_sources[:5]))
-        if hit_positions:
-            first_hit = hit_positions[0]
-            mrr_10 += 1.0 / first_hit
-            import math
-
-            ndcg_10 += 1.0 / math.log2(first_hit + 1)
-
-    count = len(examples)
-    p50, p95 = _latency_percentiles(latencies)
-    return {
-        "backend": "local_text",
-        "evaluated_count": count,
-        "recall_at_1": recall_1 / count,
-        "recall_at_5": recall_5 / count,
-        "mrr_at_10": mrr_10 / count,
-        "ndcg_at_10": ndcg_10 / count,
-        "p50_latency_ms": p50,
-        "p95_latency_ms": p95,
-    }
+        scores.append(score_ranking(item, ranked))
+    p50, p95 = _latency_percentiles(latencies) if latencies else (0.0, 0.0)
+    return {"backend": "local_text", "evaluated_count": len(examples),
+            **mean_scores(scores), "p50_latency_ms": p50, "p95_latency_ms": p95}
 
 
 def _citation_hit(predicted_sources: List[str], gold_sources: List[str]) -> bool:
@@ -331,6 +295,8 @@ def _write_summary(
         "",
         "## Retrieval",
         "",
+        "Primary metric: **Recall@5** (macro-average over binary relevant evidence pages).",
+        "",
         "| Backend | Recall@1 | Recall@5 | MRR@10 | nDCG@10 | p50 ms | p95 ms | Index sec | Peak CUDA MB |",
         "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
@@ -371,6 +337,7 @@ def _write_summary(
 
 
 def run_gpu_benchmark(config: RunGpuBenchmarkConfig) -> Dict[str, Path]:
+    evaluation_depth(config.top_k)
     output_dir = Path(config.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     artifact_root = output_dir / "artifacts"
@@ -380,6 +347,8 @@ def run_gpu_benchmark(config: RunGpuBenchmarkConfig) -> Dict[str, Path]:
 
     started = time.perf_counter()
     manifest: Dict[str, Any] = {
+        "metric_version": METRIC_VERSION,
+        "primary_metric": PRIMARY_METRIC,
         "command": " ".join(["python", "main.py", "run-gpu-benchmark"]),
         "git_commit": _git_commit(),
         "environment": _torch_environment(),

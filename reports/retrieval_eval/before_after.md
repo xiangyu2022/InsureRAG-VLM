@@ -1,5 +1,7 @@
 # Retrieval Before/After Evaluation
 
+> **Historical evaluation — not a v2 benchmark.** Historical result: generated before the binary_page_v2 evaluation contract. Repeated synthetic questions, legacy first-hit scoring and the former heuristic dense_only baseline limit interpretation. These scores have not been recomputed. See docs/retrieval_evaluation.md and reports/retrieval_eval/v2/manifest_audit.json.
+
 - Data folder: `data/04_curated`
 - Retrieval mode: `hybrid_multimodal`
 - Corpus source: `curated`

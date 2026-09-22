@@ -535,6 +535,8 @@ class DocumentRetrievalPipeline:
     ) -> List[Dict[str, Any]]:
         if not rows:
             return rows
+        if self.config.retrieval_mode == "dense_only":
+            return sorted(rows, key=lambda row: (-float(row["raw_score"]), str(row["record"].get("record_id", ""))))[:target_k]
         enriched = []
         for row in rows:
             metadata_match_score = self._metadata_match_score(row["record"], understanding)
@@ -564,7 +566,7 @@ class DocumentRetrievalPipeline:
                     {
                         **row["record"],
                         "rrf_score": 0.0,
-                        "retrieval_score": 0.0,
+                        "retrieval_score": float("-inf"),
                         "metadata_match_score": 0.0,
                         "dense_rank": None,
                         "sparse_rank": None,
@@ -587,7 +589,8 @@ class DocumentRetrievalPipeline:
                 if "snippet" in list_name:
                     merged_row["snippet_rank"] = min(rank, merged_row["snippet_rank"] or rank)
         merged_rows = list(merged.values())
-        merged_rows.sort(key=lambda item: float(item.get("rrf_score", 0.0)), reverse=True)
+        score_key = "retrieval_score" if self.config.retrieval_mode == "dense_only" else "rrf_score"
+        merged_rows.sort(key=lambda item: (-float(item.get(score_key, 0.0)), str(item.get("record_id", ""))))
         return merged_rows[: max(top_k, self.config.candidate_pool_size)]
 
     def _retrieve_ranked_lists(
@@ -628,7 +631,7 @@ class DocumentRetrievalPipeline:
                 understanding,
                 target_k=target_k,
             )
-        if understanding.needs_table_lookup:
+        if understanding.needs_table_lookup and mode != "dense_only":
             table_rows = self.sparse_retriever.search(question, indices["table_sparse"], top_k=max(6, self.config.page_top_k), return_scores=True)
             ranked_lists["table_sparse"] = self._prioritize_ranked_rows(
                 [{"record": indices["table_meta"][idx], "raw_score": score} for idx, score in table_rows],
@@ -682,7 +685,7 @@ class DocumentRetrievalPipeline:
         indices: Dict[str, Any],
         understanding: QueryUnderstanding,
     ) -> List[Dict[str, Any]]:
-        if not understanding.needs_graph_expansion:
+        if self.config.retrieval_mode == "dense_only" or not understanding.needs_graph_expansion:
             return merged_candidates
 
         page_by_key = {str(record.get("page_key")): record for record in indices["page_meta"]}
@@ -754,6 +757,10 @@ class DocumentRetrievalPipeline:
         image_scores: Optional[Dict[str, float]] = None,
     ) -> List[Dict[str, Any]]:
         understanding = understanding or understand_query(question)
+        if self.config.retrieval_mode == "dense_only":
+            rows = [{**candidate, "score": float(candidate["retrieval_score"]), "rerank_score": 0.0, "image_score": 0.0}
+                    for candidate in candidates]
+            return sorted(rows, key=lambda row: (-row["score"], str(row.get("record_id", ""))))
         page_type_counts: Dict[str, Set[str]] = defaultdict(set)
         question_key_terms = self._key_terms(question)
         for candidate in candidates:
@@ -929,12 +936,12 @@ class DocumentRetrievalPipeline:
                     break
             support_text = " ".join(snippets) or page_entry["page_text"]
             score = float(page_entry["score"])
-            if page_entry["record_types"] >= {"page", "snippet"}:
+            if self.config.retrieval_mode != "dense_only" and page_entry["record_types"] >= {"page", "snippet"}:
                 score += 0.04
             ranked_pages.append(
                 {
                     "source": page_entry["source"],
-                    "score": round(score, 6),
+                    "score": score,
                     "retrieval_score": round(float(page_entry["retrieval_score"]), 6),
                     "rerank_score": round(float(page_entry["rerank_score"]), 6),
                     "page_number": page_entry["page_number"],
@@ -962,7 +969,7 @@ class DocumentRetrievalPipeline:
                     "graph_details": page_entry["graph_details"][:3],
                 }
             )
-        ranked_pages.sort(key=lambda page: float(page.get("score", 0.0)), reverse=True)
+        ranked_pages.sort(key=lambda page: (-float(page.get("score", 0.0)), str(page.get("source", ""))))
         return ranked_pages[:top_k]
 
     def _page_order_bucket(self, page: Dict[str, object], understanding: QueryUnderstanding) -> int:

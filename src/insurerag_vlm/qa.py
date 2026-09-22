@@ -17,6 +17,7 @@ import requests
 from .data import PageDocument, load_documents
 from .retriever import load_index
 from .state_doi_sources import STATE_DOI_DOCS
+from .retrieval_metrics import evaluation_depth, mean_scores, score_ranking, validate_queries
 
 
 PUBLIC_DATA_SOURCES = {
@@ -423,6 +424,7 @@ class RetrievalMetrics:
     mrr_at_10: float
     ndcg_at_10: float
     evaluated_count: int
+    hit_at_5: float = 0.0
 
 
 def _write_jsonl(records: Iterable[Dict[str, Any]], path: Path) -> None:
@@ -1357,56 +1359,9 @@ def compute_retrieval_metrics(
     qa_path: Path,
     top_k: int = 10,
 ) -> RetrievalMetrics:
+    evaluation_depth(top_k)
     examples = [item for item in _read_jsonl(qa_path) if item.get("answerable", True)]
-    if not examples:
-        return RetrievalMetrics(0.0, 0.0, 0.0, 0.0, 0)
-
-    recall_1 = 0
-    recall_5 = 0
-    mrr_10 = 0.0
-    ndcg_10 = 0.0
-
-    for item in examples:
-        gold_sources = set(item.get("evidence_sources") or item.get("citations") or [])
-        gold_page_keys = {
-            str(page_key)
-            for page_key in (
-                item.get("gold_page_keys")
-                or [_source_to_page_key(source) for source in gold_sources]
-            )
-            if str(page_key)
-        }
-        normalized_gold_sources = {_normalize_source(source) for source in gold_sources if str(source)}
-        ranked = pipeline.rank_pages(item["question"], Path(data_folder), top_k=top_k)
-        ranked_sources = [str(candidate.get("source") or "") for candidate in ranked]
-        ranked_page_keys = [
-            str(candidate.get("page_key") or _source_to_page_key(candidate.get("source") or ""))
-            for candidate in ranked
-        ]
-        hit_positions = [
-            idx + 1
-            for idx, (source, page_key) in enumerate(zip(ranked_sources[:10], ranked_page_keys[:10]))
-            if page_key in gold_page_keys or _normalize_source(source) in normalized_gold_sources
-        ]
-        if ranked_sources[:1] and (
-            ranked_page_keys[0] in gold_page_keys or _normalize_source(ranked_sources[0]) in normalized_gold_sources
-        ):
-            recall_1 += 1
-        if any(
-            page_key in gold_page_keys or _normalize_source(source) in normalized_gold_sources
-            for source, page_key in zip(ranked_sources[:5], ranked_page_keys[:5])
-        ):
-            recall_5 += 1
-        if hit_positions:
-            first_hit = hit_positions[0]
-            mrr_10 += 1.0 / first_hit
-            ndcg_10 += 1.0 / math.log2(first_hit + 1)
-
-    count = len(examples)
-    return RetrievalMetrics(
-        recall_at_1=recall_1 / count,
-        recall_at_5=recall_5 / count,
-        mrr_at_10=mrr_10 / count,
-        ndcg_at_10=ndcg_10 / count,
-        evaluated_count=count,
-    )
+    validate_queries(examples)
+    scores = [score_ranking(item, pipeline.rank_pages(item["question"], Path(data_folder), top_k=top_k))
+              for item in examples]
+    return RetrievalMetrics(**mean_scores(scores), evaluated_count=len(examples))

@@ -83,5 +83,7 @@
         "ndcg_at_10": 0.04834183559890408
       }
     }
-  }
+  },
+  "evaluation_status": "historical_not_recomputed",
+  "evaluation_note": "Historical result: generated before the binary_page_v2 evaluation contract. Repeated synthetic questions, legacy first-hit scoring and the former heuristic dense_only baseline limit interpretation. These scores have not been recomputed. See docs/retrieval_evaluation.md and reports/retrieval_eval/v2/manifest_audit.json."
 }

@@ -1,5 +1,7 @@
 # InsureRAG-VLM GPU Benchmark
 
+> **Historical evaluation.** Uses legacy first-hit retrieval scoring; the @10 cutoff was not enforced. Scores have not been recomputed. See [the v2 evaluation contract](../../docs/retrieval_evaluation.md).
+
 > Note: This benchmark summary predates the `hybrid_multimodal` default pipeline. The recorded
 > `local_text` and `local_image` numbers remain useful as historical baselines, but they do not
 > represent the current default query path after the hybrid multimodal migration.

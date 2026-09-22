@@ -1,5 +1,4 @@
 import json
-import math
 import os
 import re
 import time
@@ -10,6 +9,7 @@ from typing import Any, Dict, Iterable, List
 import numpy as np
 
 from .retriever import EmbeddingRetriever
+from .retrieval_metrics import evaluation_depth, mean_scores, score_ranking, validate_queries
 
 SUPPORTED_VISUAL_BACKENDS = {
     "visual_stub",
@@ -460,7 +460,7 @@ def visual_search(
         np.linalg.norm(index, axis=1) * np.linalg.norm(query_embedding) + 1e-10
     )
     candidate_pool = min(len(similarities), max(top_k, top_k * 4, 20))
-    top_indices = np.argsort(-similarities)[:candidate_pool]
+    top_indices = np.argsort(-similarities, kind="stable")[:candidate_pool]
 
     ranked_pages = []
     for idx in top_indices:
@@ -494,82 +494,24 @@ def visual_search(
     return ranked_pages[:top_k]
 
 
-def _source_page_number(source: str) -> int | None:
-    match = re.search(r"#page=(\d+)", source or "")
-    return int(match.group(1)) if match else None
-
-
-def _source_doc_name(source: str) -> str:
-    source = (source or "").split("#page=", 1)[0]
-    return Path(source).name
-
-
-def _is_hit(candidate: Dict[str, Any], gold_sources: set[str], gold_page_ids: set[str]) -> bool:
-    if candidate.get("source") in gold_sources or candidate.get("page_id") in gold_page_ids:
-        return True
-    candidate_page = candidate.get("page_number")
-    candidate_doc = _source_doc_name(str(candidate.get("source") or ""))
-    return any(
-        _source_page_number(source) == candidate_page
-        and (not candidate_doc or candidate_doc == _source_doc_name(source))
-        for source in gold_sources
-    )
-
-
 def compute_visual_retrieval_metrics(
     qa_path: Path,
     index_dir: Path,
     backend: str = "visual_stub",
     top_k: int = 10,
 ) -> Dict[str, float]:
+    evaluation_depth(top_k)
     examples = [item for item in _read_jsonl(Path(qa_path)) if item.get("answerable", True)]
-    if not examples:
-        return {
-            "evaluated_count": 0,
-            "recall_at_1": 0.0,
-            "recall_at_5": 0.0,
-            "mrr_at_10": 0.0,
-            "ndcg_at_10": 0.0,
-            "p50_latency_ms": 0.0,
-            "p95_latency_ms": 0.0,
-        }
-
-    recall_1 = 0
-    recall_5 = 0
-    mrr_10 = 0.0
-    ndcg_10 = 0.0
+    validate_queries(examples)
+    scores = []
     latencies = []
-
     for item in examples:
         start = time.perf_counter()
         ranked = visual_search(item["question"], index_dir=index_dir, backend=backend, top_k=top_k)
         latencies.append((time.perf_counter() - start) * 1000)
-        gold_sources = set(item.get("evidence_sources", []))
-        gold_page_ids = set(item.get("evidence_page_ids", []))
-        hit_positions = [
-            idx + 1
-            for idx, candidate in enumerate(ranked[:10])
-            if _is_hit(candidate, gold_sources, gold_page_ids)
-        ]
-        if ranked[:1] and _is_hit(ranked[0], gold_sources, gold_page_ids):
-            recall_1 += 1
-        if any(_is_hit(candidate, gold_sources, gold_page_ids) for candidate in ranked[:5]):
-            recall_5 += 1
-        if hit_positions:
-            first_hit = hit_positions[0]
-            mrr_10 += 1.0 / first_hit
-            ndcg_10 += 1.0 / math.log2(first_hit + 1)
-
-    count = len(examples)
+        scores.append(score_ranking(item, ranked))
     latencies.sort()
-    p50 = latencies[int(0.5 * (len(latencies) - 1))]
-    p95 = latencies[int(0.95 * (len(latencies) - 1))]
-    return {
-        "evaluated_count": count,
-        "recall_at_1": recall_1 / count,
-        "recall_at_5": recall_5 / count,
-        "mrr_at_10": mrr_10 / count,
-        "ndcg_at_10": ndcg_10 / count,
-        "p50_latency_ms": p50,
-        "p95_latency_ms": p95,
-    }
+    p50 = latencies[int(0.5 * (len(latencies) - 1))] if latencies else 0.0
+    p95 = latencies[int(0.95 * (len(latencies) - 1))] if latencies else 0.0
+    return {"evaluated_count": len(examples), **mean_scores(scores),
+            "p50_latency_ms": p50, "p95_latency_ms": p95}

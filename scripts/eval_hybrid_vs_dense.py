@@ -1,12 +1,19 @@
 #!/usr/bin/env python3
 import argparse
 import json
+import sys
 import random
 from collections import Counter
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Tuple
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
 from src.insurerag_vlm.config import ModelConfig
+from src.insurerag_vlm.retrieval_manifest import scope_and_merge
+from src.insurerag_vlm.retrieval_metrics import METRIC_VERSION, PRIMARY_METRIC
 from src.insurerag_vlm.pipeline import DocumentRetrievalPipeline
 from src.insurerag_vlm.qa import _normalize_source, compute_retrieval_metrics
 from src.insurerag_vlm.query_understanding import understand_query
@@ -160,6 +167,7 @@ def _metrics_to_dict(metrics) -> Dict[str, float]:
         "evaluated_count": metrics.evaluated_count,
         "recall_at_1": metrics.recall_at_1,
         "recall_at_5": metrics.recall_at_5,
+        "hit_at_5": metrics.hit_at_5,
         "mrr_at_10": metrics.mrr_at_10,
         "ndcg_at_10": metrics.ndcg_at_10,
     }
@@ -192,6 +200,10 @@ def _write_markdown(output_md: Path, payload: Dict[str, Any]) -> None:
     lines = [
         "# Hybrid vs Dense Retrieval Evaluation",
         "",
+        "Primary retrieval metric: **Recall@5**. Binary multi-page relevance, v2 document-scoped synthetic queries.",
+        "Historical scores are not directly comparable. See docs/retrieval_evaluation.md.",
+        "",
+        "",
         f"- Manifest root: `{payload['manifest_root']}`",
         f"- Retrieval model: `{payload['retrieval_model']}`",
         f"- Hybrid mode: `{payload['hybrid_mode']}`",
@@ -203,8 +215,8 @@ def _write_markdown(output_md: Path, payload: Dict[str, Any]) -> None:
         "## Composition",
         "",
         f"- Total examples: `{payload['manifest_metadata']['count']}`",
-        f"- Document types: `{payload['manifest_metadata']['document_types']}`",
-        f"- Primary clause types: `{payload['manifest_metadata']['primary_clause_types']}`",
+        f"- Document types (original rows): `{payload['manifest_metadata']['document_types']}`",
+        f"- Primary clause types (original rows): `{payload['manifest_metadata']['primary_clause_types']}`",
         "",
     ]
 
@@ -223,6 +235,7 @@ def _write_markdown(output_md: Path, payload: Dict[str, Any]) -> None:
                 f"| evaluated_count | {dense['evaluated_count']} | {hybrid['evaluated_count']} | {delta['evaluated_count']} |",
                 f"| recall_at_1 | {dense['recall_at_1']:.4f} | {hybrid['recall_at_1']:.4f} | {delta['recall_at_1']:.4f} |",
                 f"| recall_at_5 | {dense['recall_at_5']:.4f} | {hybrid['recall_at_5']:.4f} | {delta['recall_at_5']:.4f} |",
+                f"| hit_at_5 | {dense['hit_at_5']:.4f} | {hybrid['hit_at_5']:.4f} | {delta['hit_at_5']:.4f} |",
                 f"| mrr_at_10 | {dense['mrr_at_10']:.4f} | {hybrid['mrr_at_10']:.4f} | {delta['mrr_at_10']:.4f} |",
                 f"| ndcg_at_10 | {dense['ndcg_at_10']:.4f} | {hybrid['ndcg_at_10']:.4f} | {delta['ndcg_at_10']:.4f} |",
                 "",
@@ -236,7 +249,7 @@ def main() -> None:
     parser.add_argument("--data-folder", type=Path, default=Path("data/04_curated"))
     parser.add_argument("--sft-path", type=Path, default=Path("data/04_curated/sft_dataset.jsonl"))
     parser.add_argument("--page-index", type=Path, default=Path("reports/training_data_dense/index/hybrid_pages.jsonl"))
-    parser.add_argument("--manifest-root", type=Path, default=Path("reports/retrieval_eval/expanded_targeted"))
+    parser.add_argument("--manifest-root", type=Path, default=Path("reports/retrieval_eval/v2/expanded_targeted"))
     parser.add_argument("--index-dir", type=Path, default=Path("reports/training_data_dense/index"))
     parser.add_argument("--retrieval-model", type=str, default="models/retrieval/bge-base-insurerag")
     parser.add_argument("--hybrid-mode", type=str, default="hybrid_multimodal")
@@ -246,8 +259,8 @@ def main() -> None:
     parser.add_argument("--top-k", type=int, default=10)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--valid-ratio", type=float, default=0.3)
-    parser.add_argument("--output-json", type=Path, default=Path("reports/retrieval_eval/hybrid_vs_dense.json"))
-    parser.add_argument("--output-md", type=Path, default=Path("reports/retrieval_eval/hybrid_vs_dense.md"))
+    parser.add_argument("--output-json", type=Path, default=Path("reports/retrieval_eval/v2/hybrid_vs_dense.json"))
+    parser.add_argument("--output-md", type=Path, default=Path("reports/retrieval_eval/v2/hybrid_vs_dense.md"))
     args = parser.parse_args()
 
     page_lookup = _load_page_metadata(args.page_index)
@@ -264,6 +277,11 @@ def main() -> None:
         else:
             test_rows.append(clean_row)
 
+    valid_rows = scope_and_merge(valid_rows)
+    test_rows = scope_and_merge(test_rows)
+    metadata["composition_counts_unit"] = "original_rows"
+    metadata["original_count"] = metadata["count"]
+    metadata["count"] = len(valid_rows) + len(test_rows)
     valid_path = args.manifest_root / "valid.jsonl"
     test_path = args.manifest_root / "test.jsonl"
     _write_jsonl(valid_rows, valid_path)
@@ -300,6 +318,9 @@ def main() -> None:
         }
 
     payload = {
+        "metric_version": METRIC_VERSION,
+        "primary_metric": PRIMARY_METRIC,
+        "benchmark_scope": "document_scoped_synthetic",
         "manifest_root": str(args.manifest_root),
         "manifest_metadata": {
             **metadata,

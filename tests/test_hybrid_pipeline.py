@@ -2,6 +2,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import fitz
 from PIL import Image, ImageDraw
@@ -191,6 +192,37 @@ class HybridPipelineTests(unittest.TestCase):
             self.assertIn("document_type", first)
             self.assertIn("primary_clause_type", first)
             self.assertIn("section_anchor", first)
+
+    def test_dense_only_ranks_by_cosine_without_hybrid_signals(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            pipeline, docs_dir, _ = self._build_pipeline(Path(tmpdir), enable_image_signal=False, retrieval_mode="dense_only")
+            question = "What deductible and liability limit does the endorsement override on the declarations page?"
+            indices = pipeline._ensure_indices(docs_dir)
+            expected = {}
+            for kind in ("page", "snippet"):
+                for idx, score in pipeline.retriever.search(question, indices[f"{kind}_dense"], top_k=100, return_scores=True):
+                    source = indices[f"{kind}_meta"][idx]["source"]
+                    expected[source] = max(expected.get(source, float("-inf")), score)
+            with patch.object(pipeline.sparse_retriever, "search", side_effect=AssertionError("sparse signal in dense baseline")), \
+                 patch.object(pipeline, "_metadata_match_score", side_effect=AssertionError("metadata signal in dense baseline")), \
+                 patch.object(pipeline, "_score_insurance_evidence", side_effect=AssertionError("rule signal in dense baseline")), \
+                 patch("src.insurerag_vlm.hybrid_pipeline.expand_candidate_page_keys", side_effect=AssertionError("graph signal in dense baseline")):
+                ranked = pipeline.rank_pages(question, docs_dir, top_k=4)
+            self.assertEqual([page["source"] for page in ranked], sorted(expected, key=lambda source: (-expected[source], source)))
+            for page in ranked:
+                self.assertAlmostEqual(page["score"], expected[page["source"]])
+                self.assertEqual(page["rerank_score"], 0)
+
+    def test_dense_negative_scores_are_preserved(self):
+        pipeline = DocumentRetrievalPipeline.__new__(DocumentRetrievalPipeline)
+        pipeline.config = ModelConfig(retrieval_mode="dense_only", candidate_pool_size=1)
+        rows = {"page_dense": [
+            {"record": {"record_id": "a", "source": "a"}, "raw_score": -0.8},
+            {"record": {"record_id": "b", "source": "b"}, "raw_score": -0.2},
+        ]}
+        merged = pipeline._merge_ranked_lists(rows, top_k=1)
+        self.assertEqual(merged[0]["source"], "b")
+        self.assertEqual(merged[0]["retrieval_score"], -0.2)
 
     def test_disable_image_signal_skips_auxiliary_index(self):
         with tempfile.TemporaryDirectory() as tmpdir:
