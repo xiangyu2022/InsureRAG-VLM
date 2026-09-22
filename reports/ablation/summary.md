@@ -1,5 +1,7 @@
 # InsureRAG-VLM Ablation Summary
 
+> **Historical evaluation.** Uses legacy first-hit retrieval scoring; the @10 cutoff was not enforced. Scores have not been recomputed. See [the v2 evaluation contract](../../docs/retrieval_evaluation.md).
+
 > Note: This summary predates the repository's `hybrid_multimodal` migration. Treat the
 > numbers below as pre-migration baselines for `local_text`, `visual_stub`, and `local_image`,
 > not as metrics for the current default retrieval stack.

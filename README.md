@@ -347,7 +347,7 @@ Example:
   data/02_processed/qa_pairs.jsonl \
   --index-dir data/03_index/colqwen2 \
   --backend local_image \
-  --top-k 3
+  --top-k 10
 ```
 
 These are optional experiments, not the default serving path.
@@ -357,11 +357,26 @@ These are optional experiments, not the default serving path.
 ## Evaluation Plan
 
 Core metrics:
-- Retrieval: Recall@5, MRR@10, nDCG@10.
+- **Primary retrieval metric: Recall@5**, averaged per query over all labeled relevant evidence pages.
+- Secondary retrieval diagnostics: Hit@5, MRR@10 and binary nDCG@10.
 - Answering: EM/F1 and ANLS for short answers.
 - Evidence: citation precision and evidence recall.
 - Abstention: unsupported-question accuracy and selective risk curves.
 - Efficiency: p50/p95 latency, index size, and per-query cost.
+
+Recall@5 measures whether evidence is available in the five retrieved pages before
+LLM answering. The answer packer currently selects at most three pages and applies
+a context budget, so retrieval scores must be checked alongside answer and citation
+quality. Select models on validation Recall@5 and report test metrics after selection.
+
+The corrected evaluator supports multiple gold pages, counts each retrieved page
+only once, and requires at least ten requested results for the @10 diagnostics.
+Earlier synthetic manifests reused ambiguous questions with different gold sources;
+their historical scores are not results from the corrected protocol. Reproducible
+document-scoped manifests live in `reports/retrieval_eval/v2/`; they still require
+human relevance review and a fresh trained-model evaluation. See the
+[evaluation contract](docs/retrieval_evaluation.md) for formulas, provenance,
+limitations, and the corrected cosine-only `dense_only` baseline.
 
 Key ablations:
 - Hybrid text-only vs hybrid multimodal.

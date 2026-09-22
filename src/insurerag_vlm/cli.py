@@ -182,7 +182,7 @@ def main() -> None:
     ablation_parser.add_argument("--output-dir", type=Path, default=Path("reports/ablation"))
     ablation_parser.add_argument("--index-dir", type=Path, default=Path("data"))
     ablation_parser.add_argument("--visual-index-dir", type=Path, default=Path("data/03_index/colqwen2"))
-    ablation_parser.add_argument("--top-k", type=int, default=5)
+    ablation_parser.add_argument("--top-k", type=int, default=10)
 
     calibration_parser = subparsers.add_parser("run-calibration", help="Run selective prediction and abstention calibration report")
     calibration_parser.add_argument("--data-folder", type=Path, required=True)
@@ -563,7 +563,9 @@ def main() -> None:
         print("\n=== RETRIEVAL METRICS ===")
         print(f"evaluated_count: {metrics.evaluated_count}")
         print(f"recall_at_1: {metrics.recall_at_1:.4f}")
+        print("primary_metric: recall_at_5")
         print(f"recall_at_5: {metrics.recall_at_5:.4f}")
+        print(f"hit_at_5: {metrics.hit_at_5:.4f}")
         print(f"mrr_at_10: {metrics.mrr_at_10:.4f}")
         print(f"ndcg_at_10: {metrics.ndcg_at_10:.4f}")
     elif args.command == "build-visual-index":

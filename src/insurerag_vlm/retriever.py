@@ -143,7 +143,7 @@ class EmbeddingRetriever:
         query_norm = np.linalg.norm(query_embedding)
         index_norm = np.linalg.norm(index, axis=1)
         similarities = (index @ query_embedding) / (index_norm * query_norm + 1e-10)
-        top_indices = np.argsort(-similarities)[:top_k]
+        top_indices = np.argsort(-similarities, kind="stable")[:top_k]
         if return_scores:
             return [(int(idx), float(similarities[idx])) for idx in top_indices]
         return top_indices.tolist()
@@ -221,7 +221,7 @@ class SparseRetriever:
                 score += term_idf * (numerator / max(denominator, 1e-10))
             scores[doc_idx] = score
 
-        top_indices = np.argsort(-scores)[:top_k]
+        top_indices = np.argsort(-scores, kind="stable")[:top_k]
         if return_scores:
             return [(int(idx), float(scores[idx])) for idx in top_indices if float(scores[idx]) > 0.0]
         return [int(idx) for idx in top_indices if float(scores[idx]) > 0.0]

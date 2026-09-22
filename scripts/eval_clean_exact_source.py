@@ -1,11 +1,18 @@
 #!/usr/bin/env python3
 import argparse
 import json
+import sys
 from collections import Counter
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
 from src.insurerag_vlm.config import ModelConfig
+from src.insurerag_vlm.retrieval_manifest import scope_and_merge
+from src.insurerag_vlm.retrieval_metrics import METRIC_VERSION, PRIMARY_METRIC
 from src.insurerag_vlm.pipeline import DocumentRetrievalPipeline
 from src.insurerag_vlm.qa import _normalize_source, compute_retrieval_metrics
 
@@ -154,6 +161,7 @@ def _run_eval(
         "evaluated_count": metrics.evaluated_count,
         "recall_at_1": metrics.recall_at_1,
         "recall_at_5": metrics.recall_at_5,
+        "hit_at_5": metrics.hit_at_5,
         "mrr_at_10": metrics.mrr_at_10,
         "ndcg_at_10": metrics.ndcg_at_10,
     }
@@ -166,6 +174,10 @@ def _write_markdown(output_md: Path, payload: Dict[str, Any]) -> None:
     lines = [
         "# Clean Exact-Source Retrieval Evaluation",
         "",
+        "Primary retrieval metric: **Recall@5**. Binary multi-page relevance, v2 document-scoped synthetic queries.",
+        "Historical scores are not directly comparable. See docs/retrieval_evaluation.md.",
+        "",
+        "",
         f"- Manifest: `{payload['manifest_path']}`",
         f"- Example count: `{payload['manifest_metadata']['count']}`",
         f"- Retrieval mode: `{payload['retrieval_mode']}`",
@@ -175,8 +187,8 @@ def _write_markdown(output_md: Path, payload: Dict[str, Any]) -> None:
         "",
         "## Composition",
         "",
-        f"- Document types: `{payload['manifest_metadata']['document_types']}`",
-        f"- Primary clause types: `{payload['manifest_metadata']['primary_clause_types']}`",
+        f"- Document types (original rows): `{payload['manifest_metadata']['document_types']}`",
+        f"- Primary clause types (original rows): `{payload['manifest_metadata']['primary_clause_types']}`",
         "",
         "## Before vs After",
         "",
@@ -185,6 +197,7 @@ def _write_markdown(output_md: Path, payload: Dict[str, Any]) -> None:
         f"| evaluated_count | {before['evaluated_count']} | {after['evaluated_count']} | {delta['evaluated_count']} |",
         f"| recall_at_1 | {before['recall_at_1']:.4f} | {after['recall_at_1']:.4f} | {delta['recall_at_1']:.4f} |",
         f"| recall_at_5 | {before['recall_at_5']:.4f} | {after['recall_at_5']:.4f} | {delta['recall_at_5']:.4f} |",
+        f"| hit_at_5 | {before['hit_at_5']:.4f} | {after['hit_at_5']:.4f} | {delta['hit_at_5']:.4f} |",
         f"| mrr_at_10 | {before['mrr_at_10']:.4f} | {after['mrr_at_10']:.4f} | {delta['mrr_at_10']:.4f} |",
         f"| ndcg_at_10 | {before['ndcg_at_10']:.4f} | {after['ndcg_at_10']:.4f} | {delta['ndcg_at_10']:.4f} |",
         "",
@@ -197,7 +210,7 @@ def main() -> None:
     parser.add_argument("--data-folder", type=Path, default=Path("data/04_curated"))
     parser.add_argument("--sft-path", type=Path, default=Path("data/04_curated/sft_dataset.jsonl"))
     parser.add_argument("--page-index", type=Path, default=Path("reports/training_data_dense/index/hybrid_pages.jsonl"))
-    parser.add_argument("--manifest-path", type=Path, default=Path("reports/retrieval_eval/clean_exact_source.jsonl"))
+    parser.add_argument("--manifest-path", type=Path, default=Path("reports/retrieval_eval/v2/clean_exact_source.jsonl"))
     parser.add_argument("--before-index-dir", type=Path, default=Path("reports/training_data_seed/index"))
     parser.add_argument("--after-index-dir", type=Path, default=Path("reports/training_data_dense/index"))
     parser.add_argument("--before-retrieval-model", type=str, default="local-hashing")
@@ -206,12 +219,16 @@ def main() -> None:
     parser.add_argument("--corpus-source", type=str, default="curated")
     parser.add_argument("--enable-image-signal", action="store_true")
     parser.add_argument("--top-k", type=int, default=10)
-    parser.add_argument("--output-json", type=Path, default=Path("reports/retrieval_eval/clean_exact_source_before_after.json"))
-    parser.add_argument("--output-md", type=Path, default=Path("reports/retrieval_eval/clean_exact_source_before_after.md"))
+    parser.add_argument("--output-json", type=Path, default=Path("reports/retrieval_eval/v2/clean_exact_source_before_after.json"))
+    parser.add_argument("--output-md", type=Path, default=Path("reports/retrieval_eval/v2/clean_exact_source_before_after.md"))
     args = parser.parse_args()
 
     page_lookup = _load_page_metadata(args.page_index)
     manifest_rows, manifest_metadata = _select_clean_examples(args.sft_path, page_lookup)
+    manifest_rows = scope_and_merge(manifest_rows)
+    manifest_metadata["composition_counts_unit"] = "original_rows"
+    manifest_metadata["original_count"] = manifest_metadata["count"]
+    manifest_metadata["count"] = len(manifest_rows)
     _write_jsonl(manifest_rows, args.manifest_path)
 
     before = _run_eval(
@@ -236,6 +253,9 @@ def main() -> None:
     )
     delta = {key: after[key] - before[key] for key in before.keys()}
     payload = {
+        "metric_version": METRIC_VERSION,
+        "primary_metric": PRIMARY_METRIC,
+        "benchmark_scope": "document_scoped_synthetic",
         "manifest_path": str(args.manifest_path),
         "manifest_metadata": manifest_metadata,
         "retrieval_mode": args.retrieval_mode,

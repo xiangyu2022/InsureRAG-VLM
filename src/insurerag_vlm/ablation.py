@@ -117,8 +117,11 @@ def run_ablation(
     output_dir: Path,
     index_dir: Path = Path("data"),
     visual_index_dir: Path = Path("data/03_index/colqwen2"),
-    top_k: int = 5,
+    top_k: int = 10,
 ) -> Dict[str, Path]:
+    from .retrieval_metrics import evaluation_depth
+
+    evaluation_depth(top_k)
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -185,7 +188,7 @@ def run_ablation(
 
 
 def _write_summary(retrieval_rows: List[Dict[str, Any]], answer_rows: List[Dict[str, Any]], path: Path) -> None:
-    lines = ["# InsureRAG-VLM Ablation Summary", "", "## Retrieval", ""]
+    lines = ["# InsureRAG-VLM Ablation Summary", "", "Primary metric: **Recall@5**, binary_page_v2. Hit@5 is a separate diagnostic.", "", "## Retrieval", ""]
     for row in retrieval_rows:
         lines.append(
             f"- {row['backend']}: Recall@1={row.get('recall_at_1', 0):.4f}, "

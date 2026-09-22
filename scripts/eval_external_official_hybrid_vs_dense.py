@@ -14,6 +14,8 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from src.insurerag_vlm.config import ModelConfig
+from src.insurerag_vlm.retrieval_manifest import scope_and_merge
+from src.insurerag_vlm.retrieval_metrics import METRIC_VERSION, PRIMARY_METRIC
 from src.insurerag_vlm.data import PageDocument, load_documents
 from src.insurerag_vlm.pipeline import DocumentRetrievalPipeline
 from src.insurerag_vlm.qa import compute_retrieval_metrics
@@ -422,6 +424,7 @@ def _metrics_to_dict(metrics) -> Dict[str, float]:
         "evaluated_count": metrics.evaluated_count,
         "recall_at_1": metrics.recall_at_1,
         "recall_at_5": metrics.recall_at_5,
+        "hit_at_5": metrics.hit_at_5,
         "mrr_at_10": metrics.mrr_at_10,
         "ndcg_at_10": metrics.ndcg_at_10,
     }
@@ -453,6 +456,10 @@ def _write_markdown(output_md: Path, payload: Dict[str, Any]) -> None:
     lines = [
         "# External Official Hybrid vs Dense Evaluation",
         "",
+        "Primary retrieval metric: **Recall@5**. Binary multi-page relevance, v2 document-scoped synthetic queries.",
+        "Historical scores are not directly comparable. See docs/retrieval_evaluation.md.",
+        "",
+        "",
         f"- Corpus root: `{payload['corpus_root']}`",
         f"- Manifest root: `{payload['manifest_root']}`",
         f"- Retrieval model: `{payload['retrieval_model']}`",
@@ -464,9 +471,9 @@ def _write_markdown(output_md: Path, payload: Dict[str, Any]) -> None:
         "",
         f"- Total examples: `{payload['manifest_metadata']['count']}`",
         f"- Selected documents: `{payload['manifest_metadata']['selected_documents']}`",
-        f"- Source families: `{payload['manifest_metadata']['source_families']}`",
-        f"- Document kinds: `{payload['manifest_metadata']['document_kinds']}`",
-        f"- Preferred terms: `{payload['manifest_metadata']['preferred_terms']}`",
+        f"- Source families (original rows): `{payload['manifest_metadata']['source_families']}`",
+        f"- Document kinds (original rows): `{payload['manifest_metadata']['document_kinds']}`",
+        f"- Preferred terms (original rows): `{payload['manifest_metadata']['preferred_terms']}`",
         "",
     ]
     if not payload.get("results"):
@@ -496,6 +503,7 @@ def _write_markdown(output_md: Path, payload: Dict[str, Any]) -> None:
                 f"| evaluated_count | {dense['evaluated_count']} | {hybrid['evaluated_count']} | {delta['evaluated_count']} |",
                 f"| recall_at_1 | {dense['recall_at_1']:.4f} | {hybrid['recall_at_1']:.4f} | {delta['recall_at_1']:.4f} |",
                 f"| recall_at_5 | {dense['recall_at_5']:.4f} | {hybrid['recall_at_5']:.4f} | {delta['recall_at_5']:.4f} |",
+                f"| hit_at_5 | {dense['hit_at_5']:.4f} | {hybrid['hit_at_5']:.4f} | {delta['hit_at_5']:.4f} |",
                 f"| mrr_at_10 | {dense['mrr_at_10']:.4f} | {hybrid['mrr_at_10']:.4f} | {delta['mrr_at_10']:.4f} |",
                 f"| ndcg_at_10 | {dense['ndcg_at_10']:.4f} | {hybrid['ndcg_at_10']:.4f} | {delta['ndcg_at_10']:.4f} |",
                 "",
@@ -507,7 +515,7 @@ def _write_markdown(output_md: Path, payload: Dict[str, Any]) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build a low-noise external official benchmark and compare hybrid vs dense retrieval.")
     parser.add_argument("--corpus-root", type=Path, default=Path("reports/retrieval_eval/external_official/corpus"))
-    parser.add_argument("--manifest-root", type=Path, default=Path("reports/retrieval_eval/external_official"))
+    parser.add_argument("--manifest-root", type=Path, default=Path("reports/retrieval_eval/v2/external_official"))
     parser.add_argument("--index-dir", type=Path, default=Path("reports/retrieval_eval/external_official/index"))
     parser.add_argument("--retrieval-model", type=str, default="models/retrieval/bge-base-insurerag")
     parser.add_argument("--hybrid-mode", type=str, default="hybrid_text")
@@ -518,8 +526,8 @@ def main() -> None:
     parser.add_argument("--min-valid-examples", type=int, default=40)
     parser.add_argument("--max-questions-per-doc", type=int, default=4)
     parser.add_argument("--prepare-only", action="store_true")
-    parser.add_argument("--output-json", type=Path, default=Path("reports/retrieval_eval/external_official_hybrid_vs_dense.json"))
-    parser.add_argument("--output-md", type=Path, default=Path("reports/retrieval_eval/external_official_hybrid_vs_dense.md"))
+    parser.add_argument("--output-json", type=Path, default=Path("reports/retrieval_eval/v2/external_official_hybrid_vs_dense.json"))
+    parser.add_argument("--output-md", type=Path, default=Path("reports/retrieval_eval/v2/external_official_hybrid_vs_dense.md"))
     args = parser.parse_args()
 
     if args.corpus_root.exists():
@@ -543,12 +551,20 @@ def main() -> None:
         else:
             test_rows.append(clean_row)
 
+    valid_rows = scope_and_merge(valid_rows)
+    test_rows = scope_and_merge(test_rows)
+    metadata["composition_counts_unit"] = "original_rows"
+    metadata["original_count"] = metadata["count"]
+    metadata["count"] = len(valid_rows) + len(test_rows)
     valid_path = args.manifest_root / "valid.jsonl"
     test_path = args.manifest_root / "test.jsonl"
     _write_jsonl(valid_rows, valid_path)
     _write_jsonl(test_rows, test_path)
 
     payload: Dict[str, Any] = {
+        "metric_version": METRIC_VERSION,
+        "primary_metric": PRIMARY_METRIC,
+        "benchmark_scope": "document_scoped_synthetic",
         "corpus_root": str(args.corpus_root),
         "manifest_root": str(args.manifest_root),
         "manifest_metadata": {
