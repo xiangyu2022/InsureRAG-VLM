@@ -1,0 +1,53 @@
+{
+  "sealed_utc": "2026-10-04T07:34:23.376754+00:00",
+  "source_assignment": {
+    "oregon_dfr": "dev",
+    "ccpc_ireland": "test",
+    "australia_privatehealth": "dev",
+    "fsra_ontario": "test",
+    "hia_ireland": "dev"
+  },
+  "counts": {
+    "dev": {
+      "oregon_dfr": 8,
+      "australia_privatehealth": 9,
+      "hia_ireland": 30
+    },
+    "test": {
+      "ccpc_ireland": 30,
+      "fsra_ontario": 7
+    }
+  },
+  "eligible_independent_source_pilot": false,
+  "interpretation": "EXPLORATORY: preregistered minimum source/question counts not met",
+  "prior_exposed_publishers_excluded": [],
+  "near_or_exact_exclusions": 10,
+  "new_answer_chunks": 219,
+  "raw_publisher_qa_pairs": 218,
+  "chunker": "whitespace-normalized, non-overlapping word-boundary chunks <=2000 characters; no label-based span trimming",
+  "question_input": "original publisher question, with no gold source or answer injected into inference",
+  "new_index_content": "answer chunks only, no original question text indexed",
+  "candidate_scope": "all 192231 pinned historical answer records plus every new FAQ answer chunk, identical for every arm",
+  "baseline": "original BGE document embeddings; original/adapted query blend .5; dense100 union positive BM25 top100; lexical .2; selected trained cross encoder .5",
+  "retrieval_depth": 10,
+  "packing_top_k": 5,
+  "context_budget_chars": 8000,
+  "page_cap_chars": 2400,
+  "fixed_denominators": true,
+  "selection_test_status": "sealed; no test inference or per-question inspection permitted until selection lock",
+  "files_sha256": {
+    "answers.json": "bdfc0f407af1e9a73138bf0fb44369cfc039f8d6890e54a285e6074f85eb5e84",
+    "dev.json": "39200c5bf139e896e8d3f7e1d2e48c64487b6ae9dc557991170c1477397d0d77",
+    "test.json": "93c339c3c547a8200c065d2e5ba3f03eb0d8aa57190c30ebc8589654d2710d05"
+  },
+  "overlap_audit_sha256": "532c28a24f898dd867382f4fa81704a0fdae5bf609ab9123e1796a57b324b09d",
+  "preregistration_sha256": "7135de19e7b3254eb01e891e36d23b0d29f4310f6e847572065c7cd12e437dfd",
+  "prepare_script_sha256": "21471c9beb2c97ed6b3ca6575b97024bb878c1337f62e7153bce8747cd2f61f8",
+  "seal_script_sha256": "83fc59c77ad3cff00ddfe2840ab92c0a8d7736b85a775fa9446aa64ac60c2469",
+  "limitations": [
+    "Original FAQ questions can omit document/jurisdiction context; other source answers may be semantically valid but unlabeled.",
+    "Full publisher-answer retention is stricter than sufficient semantic evidence and is not answer correctness.",
+    "Pretraining exposure unknown; full historical access limited to listed accessible project assets.",
+    "Near-duplicate screening conservatively excludes cosine upper bounds, so may exclude more than a full-vocabulary cosine screen."
+  ]
+}
