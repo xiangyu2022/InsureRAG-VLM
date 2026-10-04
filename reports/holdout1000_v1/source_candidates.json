@@ -254,5 +254,75 @@
     "id": "malta_mfsa",
     "jurisdiction": "MT",
     "seed": "https://www.mfsa.mt/consumers/insurance/"
+  },
+  {
+    "id": "uk_financial_ombudsman",
+    "jurisdiction": "UK",
+    "seed": "https://www.financial-ombudsman.org.uk/consumers/complaints-can-help/insurance"
+  },
+  {
+    "id": "ireland_fspo",
+    "jurisdiction": "IE",
+    "seed": "https://www.fspo.ie/decisions/"
+  },
+  {
+    "id": "massachusetts_doi",
+    "jurisdiction": "US-MA",
+    "seed": "https://www.mass.gov/orgs/division-of-insurance"
+  },
+  {
+    "id": "georgia_oci",
+    "jurisdiction": "US-GA",
+    "seed": "https://oci.georgia.gov/insurance-resources"
+  },
+  {
+    "id": "delaware_doi",
+    "jurisdiction": "US-DE",
+    "seed": "https://insurance.delaware.gov/divisions/consumerhp/"
+  },
+  {
+    "id": "minnesota_commerce",
+    "jurisdiction": "US-MN",
+    "seed": "https://mn.gov/commerce/insurance/"
+  },
+  {
+    "id": "australia_afca",
+    "jurisdiction": "AU",
+    "seed": "https://www.afca.org.au/make-a-complaint/insurance"
+  },
+  {
+    "id": "canada_osfi",
+    "jurisdiction": "CA",
+    "seed": "https://www.osfi-bsif.gc.ca/en/supervision/insurance"
+  },
+  {
+    "id": "us_opm",
+    "jurisdiction": "US-FED",
+    "seed": "https://www.opm.gov/healthcare-insurance/insurance-faqs/"
+  },
+  {
+    "id": "us_va",
+    "jurisdiction": "US-FED",
+    "seed": "https://www.va.gov/life-insurance/"
+  },
+  {
+    "id": "us_tricare",
+    "jurisdiction": "US-FED",
+    "seed": "https://www.tricare.mil/FAQs"
+  },
+  {
+    "id": "saskatchewan_fcaa",
+    "jurisdiction": "CA-SK",
+    "seed": "https://fcaa.gov.sk.ca/consumers-investors-pension-plan-members/consumers/purchasing-and-using-insurance"
+  },
+  {
+    "id": "manitoba_insurance",
+    "jurisdiction": "CA-MB",
+    "seed": "https://www.gov.mb.ca/finance/cca/insurance/"
+  },
+  {
+    "id": "novascotia_insurance",
+    "jurisdiction": "CA-NS",
+    "seed": "https://novascotia.ca/finance/en/home/insurance/default.aspx"
   }
 ]

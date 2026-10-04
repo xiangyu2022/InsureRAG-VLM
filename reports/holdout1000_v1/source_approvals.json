@@ -12,7 +12,8 @@
     "seeds": [
       "https://www.tdi.texas.gov/consumer/index.html"
     ],
-    "max_pages": 150
+    "max_pages": 300,
+    "expansion_reason": "Existing screened dev FAQ queue has only 133 candidates before content review; expand unique source discovery rather than reusing test publishers."
   },
   {
     "id": "newyork_dfs",
@@ -139,5 +140,79 @@
       "https://www.alberta.ca/insurance-consumer-complaints"
     ],
     "max_pages": 80
+  },
+  {
+    "id": "australia_apra",
+    "terms": "https://www.apra.gov.au/copyright",
+    "decision": "local_noncommercial_research",
+    "basis": "APRA website material is CC BY 4.0 except Commonwealth coat of arms, APRA logos and third-party intellectual property. Preserve attribution; use only APRA-authored insurance guidance.",
+    "prefixes": [
+      "/financial-claims-scheme"
+    ],
+    "seeds": [
+      "https://www.apra.gov.au/financial-claims-scheme/financial-claims-scheme-general-insurers",
+      "https://www.apra.gov.au/financial-claims-scheme/frequently-asked-questions-about-financial-claims-scheme"
+    ],
+    "max_pages": 35,
+    "exclude_patterns": [
+      "banks-building-societies",
+      "deposit-checker"
+    ]
+  },
+  {
+    "id": "us_tricare",
+    "terms": "https://www.tricare.mil/Privacy",
+    "decision": "local_noncommercial_research",
+    "basis": "TRICARE privacy/website notice section2 explicitly permits copying/distribution of information not identified as copyright-protected, with attribution. Use only official insurance-benefit/eligibility/cost guidance; exclude third-party copyrighted material and medical treatment advice.",
+    "prefixes": [
+      "/FAQs",
+      "/Costs",
+      "/Plans",
+      "/LifeEvents"
+    ],
+    "seeds": [
+      "https://www.tricare.mil/FAQs",
+      "https://www.tricare.mil/Costs",
+      "https://www.tricare.mil/Plans",
+      "https://www.tricare.mil/LifeEvents"
+    ],
+    "max_pages": 180
+  },
+  {
+    "id": "us_opm",
+    "terms": "https://www.opm.gov/information-management/privacy-policy/",
+    "decision": "local_noncommercial_research",
+    "basis": "Limited to official OPM-authored explanatory FAQs for federal insurance programs. Authorship/program scope is reviewed per document; U.S. government employee works are excluded from domestic copyright by17USC101/105. This is not a blanket license for everything hosted on a government domain. Exclude third-party carrier plan brochures, contractor publications, photos/logos, and any unclear authorship. Raw text remains local.",
+    "legal_basis_url": "https://www.copyright.gov/title17/92chap1.html#105",
+    "reuse_basis_type": "government_authored_material_with_per_document_authorship_review",
+    "prefixes": [
+      "/frequently-asked-questions/insure-faq/",
+      "/healthcare-insurance/life-insurance/",
+      "/healthcare-insurance/healthcare/",
+      "/healthcare-insurance/dental-vision/"
+    ],
+    "seeds": [
+      "https://www.opm.gov/frequently-asked-questions/insure-faq/health/",
+      "https://www.opm.gov/frequently-asked-questions/insure-faq/life/",
+      "https://www.opm.gov/frequently-asked-questions/insure-faq/dental-vision/"
+    ],
+    "max_pages": 240
+  },
+  {
+    "id": "us_va",
+    "terms": "https://department.va.gov/copyright-policy/",
+    "terms_sha256": "35b976b2d2b3939cf3b3b1fe9c1a57a4d31bd24db15de6fd71522ecb68de7684",
+    "reviewed_utc": "2026-10-04T16:28:13.104851+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "VA copyright policy explicitly states government-produced material on this and other VA websites is not copyright protected, while assigned copyrights may exist. Restrict to official agency-authored insurance explanations; exclude logos, images, third-party carrier publications and assigned-rights material pending per-document review.",
+    "reuse_basis_type": "explicit_agency_copyright_policy_with_per_document_authorship_review",
+    "prefixes": [
+      "/life-insurance/",
+      "/resources/"
+    ],
+    "seeds": [
+      "https://www.va.gov/life-insurance/"
+    ],
+    "max_pages": 120
   }
 ]

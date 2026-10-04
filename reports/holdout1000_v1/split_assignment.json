@@ -1,0 +1,54 @@
+{
+  "status": "PUBLISHER_ASSIGNMENT_BEFORE_BENCHMARK_INFERENCE_NOT_FROZEN_DATASET",
+  "assigned_utc": "2026-10-04T15:15:33.274718+00:00",
+  "dev_publishers": [
+    "texas_tdi"
+  ],
+  "test_publishers": [
+    "alabama_doi",
+    "alberta_goa",
+    "california_cdi",
+    "canada_fcac",
+    "newjersey_dobi",
+    "newyork_dfs",
+    "northcarolina_doi",
+    "utah_uid",
+    "wisconsin_oci",
+    "australia_apra",
+    "us_tricare",
+    "us_opm",
+    "us_va"
+  ],
+  "rationale": "Reserve the largest sufficiently diverse single-publisher FAQ pool for independent development; retain nine other approved publisher groups for test construction, including source-grounded authored cases from Canada and Alberta. Allocation uses source yield only, with no model task-performance measurements.",
+  "conditions": [
+    "No dev question counts toward the 1000 accepted test target.",
+    "Historical exact/near-contaminated documents remain excluded in both splits; merely reserving a publisher does not clear historical exposure.",
+    "Publisher aliases, reused third-party sources and cross-publisher near-duplicate components require resolution before freeze.",
+    "Local curator classification receives the original source answer and is advisory data triage, not a baseline answer-generation evaluation.",
+    "No baseline tuning, final evaluation, or acceptance is authorized by this assignment file alone."
+  ],
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "amendments": [
+    {
+      "reason": "Add newly verified CC BY 4.0 publisher; no model benchmark results observed.",
+      "source": "australia_apra"
+    },
+    {
+      "reason": "Explicit public-information reuse notice verified; adds military insurance benefit scope before any benchmark evaluation.",
+      "source": "us_tricare"
+    },
+    {
+      "reason": "Add official federal insurance-program FAQs with government-work legal basis and mandatory per-document authorship check; excludes all private carrier publications. No benchmark results observed.",
+      "source": "us_opm"
+    }
+  ],
+  "additions": [
+    {
+      "publisher": "us_va",
+      "split": "test",
+      "assigned_utc": "2026-10-04T16:28:13.104851+00:00",
+      "reason": "Independent VA life-insurance agency source approved before benchmark model evaluation; dev remains Texas-only."
+    }
+  ]
+}

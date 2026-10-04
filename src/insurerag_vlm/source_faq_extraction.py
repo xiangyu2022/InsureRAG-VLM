@@ -1,26 +1,35 @@
 """Extract original FAQ structures; all output requires downstream QA review."""
 import re
-from bs4 import BeautifulSoup,Tag,NavigableString
+from bs4 import BeautifulSoup,Tag,NavigableString,Comment,ProcessingInstruction
 
 def clean(text):return ' '.join(text.split())
 def content_root(soup):
-    main=soup.find('main') or soup.select_one('#main-content') or soup.select_one('#main') or soup
+    main=(soup.select_one('#main_content .content_left_column') or soup.find('main')
+          or soup.select_one('[role="main"]') or soup.select_one('#main-main-content')
+          or soup.select_one('#main-content') or soup.select_one('#main') or soup)
+    for comment in main.find_all(string=lambda value:isinstance(value,(Comment,ProcessingInstruction))):comment.extract()
     for tag in main.find_all(['script','style','nav','header','footer']):tag.decompose()
+    for link in main.find_all('a'):
+        if clean(link.get_text(' ',strip=True)).casefold()=='shareable link to answer':link.decompose()
     return main
 
 def extract_original_faq(raw):
     soup=BeautifulSoup(raw,'html.parser');main=content_root(soup);headings=[]
-    for node in main.find_all(['h1','h2','h3','h4','h5','h6','summary','strong','b','dt','button']):
-        text=clean(node.get_text(' ',strip=True))
+    def question_text(node):
+        return clean(node.get('header','') if node.name=='va-accordion-item' else node.get_text(' ',strip=True))
+    for node in main.find_all(['h1','h2','h3','h4','h5','h6','summary','strong','b','dt','button','va-accordion-item']):
+        text=question_text(node)
         if not text.endswith('?') or not 12<=len(text)<=450:continue
-        if node.find_parent(['h1','h2','h3','h4','h5','h6','summary','strong','b','button','a']):continue
+        if node.find_parent(['h1','h2','h3','h4','h5','h6','summary','strong','b','button','a','va-accordion-item']):continue
         if {'nav-link','tab-button'}&set(node.get('class',[])):continue
         if re.search(r'(more questions|was this|find what|helpful|help us|how can we help)',text,re.I):continue
         if node.name=='button' and not (node.get('aria-controls') or 'acc' in ' '.join(node.get('class',[]))):continue
         headings.append(node)
     identities={id(n) for n in headings};output=[]
     for node in headings:
-        question=clean(node.get_text(' ',strip=True));answer=None;method='adjacent_dom';flags=[]
+        question=question_text(node);answer=None;method='adjacent_dom';flags=[]
+        if node.name=='va-accordion-item':
+            answer=clean(node.get_text(' ',strip=True));method='va_accordion_header_attribute'
         control=node if node.name=='button' else node.find('button',attrs={'aria-controls':True})
         if control is not None and control.get('aria-controls'):
             panel=main.find(id=control['aria-controls'])

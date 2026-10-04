@@ -4,14 +4,49 @@ Passing structural checks is not semantic or human review. Both audit and
 content-review dispositions must be provided before any record is accepted.
 """
 from collections import Counter,defaultdict
-from decimal import Decimal,InvalidOperation
-import hashlib,re,unicodedata
+from decimal import Decimal,DecimalException,localcontext
+import ast,hashlib,re,unicodedata
 
 TASKS={'ordinary_qa','numerical_calculation','multi_evidence','insufficient_evidence'}
 def normalize(text):
     return ' '.join(re.findall(r'\w+',unicodedata.normalize('NFKC',text).casefold()))
 def digest(text):return hashlib.sha256(text.encode('utf8')).hexdigest()
 def _text(value):return isinstance(value,str) and bool(value.strip())
+
+def evaluate_calculation(formula, operands):
+    """Evaluate a small arithmetic language; never execute supplied Python."""
+    if len(formula)>1000:raise ValueError('Formula too long')
+    values={}
+    for operand in operands:
+        name=operand['name']
+        if not isinstance(name,str) or not name.isidentifier() or name in values:raise ValueError('Invalid or duplicate operand')
+        value=Decimal(str(operand['value']))
+        if not value.is_finite():raise ValueError('Non-finite operand')
+        values[name]=value
+    tree=ast.parse(formula,mode='eval')
+    if sum(1 for _ in ast.walk(tree))>100:raise ValueError('Formula too complex')
+    used={node.id for node in ast.walk(tree) if isinstance(node,ast.Name) and node.id not in {'min','max'}}
+    if used!=set(values):raise ValueError('Formula must use exactly the supplied operands')
+    def visit(node):
+        if isinstance(node,ast.Constant) and type(node.value) in (int,float):
+            return Decimal(ast.get_source_segment(formula,node))
+        if isinstance(node,ast.Name) and node.id in values:return values[node.id]
+        if isinstance(node,ast.UnaryOp) and isinstance(node.op,(ast.USub,ast.UAdd)):
+            value=visit(node.operand);return -value if isinstance(node.op,ast.USub) else value
+        if isinstance(node,ast.BinOp) and isinstance(node.op,(ast.Add,ast.Sub,ast.Mult,ast.Div)):
+            left,right=visit(node.left),visit(node.right)
+            if isinstance(node.op,ast.Add):return left+right
+            if isinstance(node.op,ast.Sub):return left-right
+            if isinstance(node.op,ast.Mult):return left*right
+            return left/right
+        if isinstance(node,ast.Call) and isinstance(node.func,ast.Name) and node.func.id in ('min','max') and node.args and not node.keywords:
+            return (min if node.func.id=='min' else max)(visit(arg) for arg in node.args)
+        raise ValueError('Unsupported arithmetic expression')
+    with localcontext() as context:
+        context.prec=40
+        result=visit(tree.body)
+    if not result.is_finite():raise ValueError('Non-finite result')
+    return result
 
 def verify_item(item,documents,source_approvals):
     errors=[]
@@ -45,7 +80,7 @@ def verify_item(item,documents,source_approvals):
     if audit.get('status')!='clear_in_accessible_scope' or not _text(audit.get('report_sha256')):errors.append('missing_contamination_clearance')
     if item.get('duplicate_audit',{}).get('status')!='unique_information_need':errors.append('missing_duplicate_clearance')
     review=item.get('content_review') or {}
-    if review.get('decision')=='reject' or review.get('unresolved_errors'):errors.append('content_review_rejection_or_hold')
+    if review.get('decision') in {'reject','hold'} or review.get('unresolved_errors'):errors.append('content_review_rejection_or_hold')
     if item.get('task')!='ordinary_qa':
         if review.get('decision')!='pass' or review.get('reviewer_type')!='codex_agent_content_review' or not _text(review.get('rationale')):
             errors.append('complex_item_requires_content_review')
@@ -65,7 +100,15 @@ def verify_item(item,documents,source_approvals):
         try:
             value=Decimal(str(calculation['result']));check=Decimal(str(calculation['verified_result']))
             if not value.is_finite() or value!=check:errors.append('calculation_result_mismatch')
-        except (KeyError,InvalidOperation,ValueError):errors.append('invalid_calculation_result')
+            computed=evaluate_calculation(calculation['formula'],operands)
+            quantum=calculation.get('rounding_quantum')
+            if quantum is not None:
+                quantum=Decimal(str(quantum))
+                if not quantum.is_finite() or quantum<=0 or quantum.normalize().as_tuple().digits!=(1,):raise ValueError('Rounding quantum must be a positive power of ten')
+                if calculation.get('rounding_mode') not in {'ROUND_HALF_UP','ROUND_HALF_EVEN','ROUND_DOWN','ROUND_UP'}:raise ValueError('Unspecified rounding mode')
+                computed=computed.quantize(quantum,rounding=calculation['rounding_mode'])
+            if value!=computed:errors.append('calculation_formula_mismatch')
+        except (KeyError,DecimalException,ValueError,SyntaxError,TypeError):errors.append('invalid_calculation_result')
     if item.get('task')=='insufficient_evidence':
         missing=item.get('information_gap',{})
         if not missing.get('missing_facts') or not _text(missing.get('why_required')) or not _text(missing.get('available_evidence_not_sufficient')):
@@ -103,8 +146,10 @@ def verify_dataset(test,dev,documents,source_approvals,protocol):
     for task,target in protocol['test_task_targets'].items():
         if tasks[task]<target:errors.append('task_count_below_target:'+task)
     ordinary=defaultdict(list)
-    for row in test:
-        if row.get('task')=='ordinary_qa':ordinary[(row.get('publisher'),row.get('insurance_type'))].append(row)
+    for split,row in combined:
+        if row.get('task')=='ordinary_qa':
+            ordinary[(split,row.get('publisher'),row.get('insurance_type'))].append(row)
+            ordinary[(split,'document_group',row.get('document_group'))].append(row)
     for stratum,rows in ordinary.items():
         reviewed=sum((r.get('content_review') or {}).get('decision')=='pass' and (r.get('content_review') or {}).get('reviewer_type')=='codex_agent_content_review' for r in rows)
         if reviewed/len(rows)<.25:errors.append('insufficient_ordinary_review:'+str(stratum))

@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-10-04T14:55:16.724875+00:00",
+  "checked_utc": "2026-10-04T17:02:45.668505+00:00",
   "sources": [
     {
       "publisher": "texas_tdi",
@@ -15,7 +15,7 @@
       },
       "access_denial_urls": [],
       "historical_host_url_mentions": 5972,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "newyork_dfs",
@@ -31,7 +31,7 @@
       },
       "access_denial_urls": [],
       "historical_host_url_mentions": 5681,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "california_cdi",
@@ -47,7 +47,7 @@
       },
       "access_denial_urls": [],
       "historical_host_url_mentions": 5789,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "northcarolina_doi",
@@ -63,7 +63,7 @@
       },
       "access_denial_urls": [],
       "historical_host_url_mentions": 28,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "newjersey_dobi",
@@ -79,7 +79,7 @@
       },
       "access_denial_urls": [],
       "historical_host_url_mentions": 209,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "wisconsin_oci",
@@ -95,7 +95,7 @@
       },
       "access_denial_urls": [],
       "historical_host_url_mentions": 4343,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "maryland_mia",
@@ -106,7 +106,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 1601,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "maine_boi",
@@ -117,7 +117,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 633,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "pennsylvania_pid",
@@ -128,7 +128,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "newhampshire_nhid",
@@ -141,7 +141,7 @@
         "https://www.insurance.nh.gov/consumers"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "vermont_dfr",
@@ -152,7 +152,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 1,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "australia_asic",
@@ -163,7 +163,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 5,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "canada_fcac",
@@ -179,7 +179,7 @@
       },
       "access_denial_urls": [],
       "historical_host_url_mentions": 3,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "us_dol_ebsa",
@@ -192,7 +192,7 @@
         "https://www.dol.gov/general/aboutdol/copyright"
       ],
       "historical_host_url_mentions": 6889,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "us_cms",
@@ -203,7 +203,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 5274,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "us_fema_nfip",
@@ -216,7 +216,7 @@
         "https://www.fema.gov/about/website-information"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "india_irdai",
@@ -227,7 +227,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "singapore_moneysense",
@@ -238,7 +238,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "singapore_sdic",
@@ -249,7 +249,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "hongkong_ia",
@@ -262,7 +262,7 @@
         "https://www.ia.org.hk/robots.txt"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "hongkong_ifec",
@@ -273,7 +273,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "newzealand_fma",
@@ -286,7 +286,7 @@
         "https://www.fma.govt.nz/robots.txt"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "newzealand_icnz",
@@ -297,7 +297,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "newzealand_ifso",
@@ -310,7 +310,7 @@
         "https://www.ifso.nz/robots.txt"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "australia_financialrights",
@@ -321,7 +321,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "australia_insurancelaw",
@@ -332,18 +332,23 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "australia_apra",
       "jurisdiction": "AU",
       "seed_url": "https://www.apra.gov.au/frequently-asked-questions",
-      "status": "pending_source_or_terms_review",
+      "status": "approved_local_noncommercial_acquisition",
       "reason": null,
-      "terms": null,
+      "terms": {
+        "url": "https://www.apra.gov.au/copyright",
+        "sha256": "61a285ec18338dcd4d92c9e545952f7ceff6e4c14c85dd76aa07222b89abf9d5",
+        "acquired_utc": "2026-10-04T15:27:24.277435+00:00",
+        "basis": "APRA website material is CC BY 4.0 except Commonwealth coat of arms, APRA logos and third-party intellectual property. Preserve attribution; use only APRA-authored insurance guidance."
+      },
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "uk_moneyhelper",
@@ -356,7 +361,7 @@
         "https://www.moneyhelper.org.uk/robots.txt"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "ireland_citizens",
@@ -369,7 +374,7 @@
         "https://www.citizensinformation.ie/robots.txt"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "quebec_amf",
@@ -382,7 +387,7 @@
         "https://lautorite.qc.ca/robots.txt"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "newbrunswick_fcnb",
@@ -395,7 +400,7 @@
         "https://fcnb.ca/en/insurance"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "uk_fca",
@@ -406,7 +411,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "ohio_odi",
@@ -417,7 +422,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "illinois_idoi",
@@ -428,7 +433,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "indiana_idoi",
@@ -439,7 +444,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 4,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "colorado_doi",
@@ -452,7 +457,7 @@
         "https://doi.colorado.gov/robots.txt"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "connecticut_cid",
@@ -463,7 +468,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 6,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "virginia_scc",
@@ -474,7 +479,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "alaska_doi",
@@ -487,7 +492,7 @@
         "https://www.commerce.alaska.gov/robots.txt"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "alabama_doi",
@@ -503,7 +508,7 @@
       },
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "missouri_dci",
@@ -516,7 +521,7 @@
         "https://insurance.mo.gov/robots.txt"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "kansas_kid",
@@ -529,7 +534,7 @@
         "https://insurance.kansas.gov/consumer-assistance/"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "southcarolina_doi",
@@ -540,7 +545,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 1869,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "utah_uid",
@@ -556,7 +561,7 @@
       },
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "louisiana_ldi",
@@ -569,7 +574,7 @@
         "https://www.ldi.la.gov/consumers"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "nebraska_ndoi",
@@ -580,7 +585,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 1423,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "alberta_goa",
@@ -596,7 +601,7 @@
       },
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "britishcolumbia_bcfsa",
@@ -607,7 +612,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "malaysia_pidm",
@@ -618,7 +623,7 @@
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     },
     {
       "publisher": "malta_mfsa",
@@ -631,13 +636,186 @@
         "https://www.mfsa.mt/consumers/insurance/"
       ],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only, not proof that every document is contaminated or that zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "uk_financial_ombudsman",
+      "jurisdiction": "UK",
+      "seed_url": "https://www.financial-ombudsman.org.uk/consumers/complaints-can-help/insurance",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Terms prohibit electronic retrieval-system storage without permission; excluded.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 3,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "ireland_fspo",
+      "jurisdiction": "IE",
+      "seed_url": "https://www.fspo.ie/decisions/",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Privacy policy does not establish benchmark reuse permission.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "massachusetts_doi",
+      "jurisdiction": "US-MA",
+      "seed_url": "https://www.mass.gov/orgs/division-of-insurance",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.mass.gov/orgs/division-of-insurance"
+      ],
+      "historical_host_url_mentions": 35,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "georgia_oci",
+      "jurisdiction": "US-GA",
+      "seed_url": "https://oci.georgia.gov/insurance-resources",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Reuse permission unresolved.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "delaware_doi",
+      "jurisdiction": "US-DE",
+      "seed_url": "https://insurance.delaware.gov/divisions/consumerhp/",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Reuse permission unresolved.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 1829,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "minnesota_commerce",
+      "jurisdiction": "US-MN",
+      "seed_url": "https://mn.gov/commerce/insurance/",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Redirect outside reviewed host; held.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 8,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "australia_afca",
+      "jurisdiction": "AU",
+      "seed_url": "https://www.afca.org.au/make-a-complaint/insurance",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.afca.org.au/robots.txt"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "canada_osfi",
+      "jurisdiction": "CA",
+      "seed_url": "https://www.osfi-bsif.gc.ca/en/supervision/insurance",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Seed returned404; valid public navigation unresolved.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "us_opm",
+      "jurisdiction": "US-FED",
+      "seed_url": "https://www.opm.gov/healthcare-insurance/insurance-faqs/",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://www.opm.gov/information-management/privacy-policy/",
+        "sha256": "243e5263ce17f5842b8b8f83887ba60937e83cce158aa73b4d3e55cfeaf1384b",
+        "acquired_utc": "2026-10-04T15:32:04.350479+00:00",
+        "basis": "Limited to official OPM-authored explanatory FAQs for federal insurance programs. Authorship/program scope is reviewed per document; U.S. government employee works are excluded from domestic copyright by17USC101/105. This is not a blanket license for everything hosted on a government domain. Exclude third-party carrier plan brochures, contractor publications, photos/logos, and any unclear authorship. Raw text remains local."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 19280,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "us_va",
+      "jurisdiction": "US-FED",
+      "seed_url": "https://www.va.gov/life-insurance/",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://department.va.gov/copyright-policy/",
+        "sha256": "35b976b2d2b3939cf3b3b1fe9c1a57a4d31bd24db15de6fd71522ecb68de7684",
+        "acquired_utc": "2026-10-04T16:26:45.302931+00:00",
+        "basis": "VA copyright policy explicitly states government-produced material on this and other VA websites is not copyright protected, while assigned copyrights may exist. Restrict to official agency-authored insurance explanations; exclude logos, images, third-party carrier publications and assigned-rights material pending per-document review."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 3,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "us_tricare",
+      "jurisdiction": "US-FED",
+      "seed_url": "https://www.tricare.mil/FAQs",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://www.tricare.mil/Privacy",
+        "sha256": "3eb2c8a93a357a0cd9d19c03abb17ab57a19ba2a7dd145953dc4788daae5da29",
+        "acquired_utc": "2026-10-04T15:32:08.070887+00:00",
+        "basis": "TRICARE privacy/website notice section2 explicitly permits copying/distribution of information not identified as copyright-protected, with attribution. Use only official insurance-benefit/eligibility/cost guidance; exclude third-party copyrighted material and medical treatment advice."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "saskatchewan_fcaa",
+      "jurisdiction": "CA-SK",
+      "seed_url": "https://fcaa.gov.sk.ca/consumers-investors-pension-plan-members/consumers/purchasing-and-using-insurance",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Provincial copyright permission scope on FCAA host unresolved.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "manitoba_insurance",
+      "jurisdiction": "CA-MB",
+      "seed_url": "https://www.gov.mb.ca/finance/cca/insurance/",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "novascotia_insurance",
+      "jurisdiction": "CA-NS",
+      "seed_url": "https://novascotia.ca/finance/en/home/insurance/default.aspx",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Canonical-host redirect requires review.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
     }
   ],
   "excluded_previously_known": [
     "Hawaii DCCA automated-access prohibition",
-    "Washington OIC 403",
+    "Washington OIC403",
     "All previously denied local memory/demo-upload paths"
   ],
-  "publication": "No raw source, question, answer, prompt or weight content is included in this ledger."
+  "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items."
 }

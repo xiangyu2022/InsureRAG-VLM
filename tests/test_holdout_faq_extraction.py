@@ -21,3 +21,27 @@ def test_subsection_content_is_retained_and_flagged_for_review():
     row=extract_original_faq(raw)[0]
     assert A in row['answer'] and B in row['answer'] and 'Not evidence.' not in row['answer']
     assert row['extraction_flags']==['answer_contains_subsections']
+def test_legacy_content_column_excludes_comments_and_side_navigation():
+    from src.insurerag_vlm.source_faq_extraction import extract_original_faq
+    html=b'''<div id="main_content"><div class="content_left_column"><h2>What does the policy cover?</h2>
+    <p>The synthetic policy covers damage from fire subject to the stated limits.</p><!-- hidden control marker -->
+    </div><div class="content_right_column">Navigation insurance links</div></div>'''
+    rows=extract_original_faq(html)
+    assert len(rows)==1
+    assert rows[0]['answer']=='The synthetic policy covers damage from fire subject to the stated limits.'
+def test_role_main_and_processing_instructions_do_not_leak_into_answer():
+    from src.insurerag_vlm.source_faq_extraction import extract_original_faq
+    html=b'''<div role="main"><h2>Which expenses are covered?</h2>
+    <p>The synthetic contract covers eligible repair expenses after the specified deductible.</p>
+    <?xml version="1.0"?><a href="/question">Shareable Link to Answer</a></div>
+    <aside>Find a plan or phone number here.</aside>'''
+    rows=extract_original_faq(html)
+    assert rows[0]['answer']=='The synthetic contract covers eligible repair expenses after the specified deductible.'
+def test_va_component_attribute_question_keeps_its_own_answer():
+    from src.insurerag_vlm.source_faq_extraction import extract_original_faq
+    html='<main><va-accordion-item header="Can I receive benefits early?"><p>You must meet both eligibility conditions described in your policy before applying.</p></va-accordion-item><va-accordion-item header="How can I apply for these benefits?"><p>Submit the completed request to the designated benefits office with supporting evidence.</p></va-accordion-item></main>'
+    rows=extract_original_faq(html)
+    assert len(rows)==2
+    assert rows[0]['question']=='Can I receive benefits early?'
+    assert 'Submit' not in rows[0]['answer']
+    assert rows[1]['extraction_method']=='va_accordion_header_attribute'

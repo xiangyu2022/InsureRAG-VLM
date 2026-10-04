@@ -45,9 +45,9 @@ def fetch(url,folder,allowed_hosts=None):
                 (folder/artifact).write_bytes(raw)
                 soup=BeautifulSoup(raw,'html.parser')
                 links=[]
-                for a in soup.find_all('a',href=True):
+                for a in soup.find_all(['a','va-link'],href=True):
                     href=urldefrag(urljoin(response.url,a['href']))[0]
-                    if urlparse(href).scheme in {'http','https'}:links.append({'title':a.get_text(' ',strip=True),'url':href})
+                    if urlparse(href).scheme in {'http','https'}:links.append({'title':a.get_text(' ',strip=True) or a.get('text',''),'url':href})
                 for element in soup(['script','style','noscript']):element.decompose()
                 text=soup.get_text('\n',strip=True)
                 (folder/(key+'.txt')).write_text(text,encoding='utf8')

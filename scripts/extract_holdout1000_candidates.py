@@ -9,28 +9,33 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from scripts.prepare_source_faq import clean,norm
-from src.insurerag_vlm.source_faq_extraction import extract_original_faq
+from src.insurerag_vlm.source_faq_extraction import extract_original_faq,content_root
 LOCAL=ROOT/'reports/holdout1000_v1/local'
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 
 def extract(root=LOCAL):
     registry={r['id']:r for r in json.loads((ROOT/'reports/holdout1000_v1/source_candidates.json').read_text(encoding='utf8'))}
-    records=[];documents=[];errors=[]
+    records=[];documents=[];errors=[];canonical_documents={}
     for path in sorted((root/'documents').glob('*/*.json')):
         m=json.loads(path.read_text(encoding='utf8'));publisher=path.parent.name
         if m.get('status')!=200:continue
         raw=(path.parent/m['artifact']).read_bytes()
         if sha(raw)!=m['sha256']:raise ValueError('Source bytes changed: '+str(path))
         if raw.startswith(b'%PDF'):errors.append({'url':m['url'],'reason':'pdf_not_html'});continue
-        soup=BeautifulSoup(raw,'html.parser');main=soup.find('main') or soup.select_one('#main-content') or soup.select_one('#main') or soup
-        for element in main.find_all(['script','style','nav','header','footer']):element.decompose()
+        soup=BeautifulSoup(raw,'html.parser');main=content_root(soup)
         text=clean(main.get_text(' ',strip=True));url=m.get('final_url',m['url']);doc_id=sha(url.encode())[:24]
         title=m.get('title','');h1=main.find('h1')
         if h1:title=clean(h1.get_text(' ',strip=True))
         doc={'id':doc_id,'publisher':publisher,'jurisdiction':registry[publisher]['jurisdiction'],'source_url':url,
              'source_title':title,'source_sha256':m['sha256'],'acquired_utc':m['acquired_utc'],
              'normalized_text_sha256':sha(text.encode()),'text':text,'source_artifact':str(path.relative_to(root)).replace('\\','/')}
-        documents.append(doc)
+        previous=canonical_documents.get(doc_id)
+        if previous:
+            if previous['normalized_text_sha256']!=doc['normalized_text_sha256']:
+                raise ValueError('Canonical URL has conflicting snapshots; explicit version resolution required: '+url)
+            previous.setdefault('source_aliases',[]).append({'requested_url':m['url'],'source_artifact':doc['source_artifact'],'source_sha256':doc['source_sha256']})
+            continue
+        canonical_documents[doc_id]=doc;documents.append(doc)
         seen=set()
         for pair in extract_original_faq(raw):
             q=pair['question'];answer=pair['answer'];key=norm(q)+'|'+norm(answer)

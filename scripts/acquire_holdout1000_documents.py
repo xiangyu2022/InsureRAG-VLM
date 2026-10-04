@@ -17,6 +17,7 @@ def relevant(url,title,policy):
     if re.search(r'\.(pdf|docx?|xlsx?|zip|jpg|png|mp4|xml)$',p.path,re.I):return False
     if re.search(r'(spanish|espanol|chinese|vietnamese|korean|tagalog|contact|subscribe|complaint.?form|find.?agent|license.?lookup)',url+' '+title,re.I):return False
     if policy['id']=='newyork_dfs' and re.search(r'banking|mortgage|foreclosure|student|credit|debt|bail|holocaust|virtual_currency',p.path,re.I):return False
+    if policy['id']=='us_va' and p.path.startswith('/resources/') and not re.search(r'insurance|\b[sv]gli\b|\bfsgli\b|\btsgli\b|\bvalife\b',url+' '+title,re.I):return False
     return True
 
 def acquire(policy):
