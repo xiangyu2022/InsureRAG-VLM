@@ -1,0 +1,67 @@
+{
+  "status": "Expanded corrective audit after selection lock; no resplitting, retuning or removal from fixed evaluation denominators.",
+  "initial_preseal_scope": "Project data roots plus prior 26-case diagnostic; did not include all historical report JSON.",
+  "initial_unique_files": 142,
+  "initial_unique_texts": 313423,
+  "initial_questions": 43976,
+  "expanded_scope": "All string values in readable JSON/JSONL in explicitly listed project data and report roots; no PDF bytes or inaccessible paths read.",
+  "files_examined": 3552,
+  "unique_file_contents": 1743,
+  "unique_normalized_strings": 724751,
+  "question_key_strings": 44581,
+  "by_root_file_counts": {
+    "historical_full_data": 144,
+    "historical_full_reports": 2580,
+    "pr5_data": 5,
+    "pr5_reports": 146,
+    "pr6_data": 105,
+    "pr6_reports": 572
+  },
+  "read_failures_in_included_roots": [],
+  "excluded_roots": [
+    {
+      "root": "historical_full_reports",
+      "relative": "demo_uploads",
+      "reason": "Explicitly excluded; known access restriction or demo upload scope"
+    }
+  ],
+  "known_access_gaps": "Ten historical demo session directories denied enumeration. Their containing demo_uploads tree was excluded from the corrective scan; no escalation, permission changes or bypass. Raw PDF bytes were not separately re-extracted for historical matching.",
+  "publisher_url_domain_mentions": {
+    "ccpc.ie": 0,
+    "hia.ie": 0,
+    "privatehealth.gov.au": 0,
+    "fsrao.ca": 0,
+    "fsco.gov.on.ca": 0,
+    "dfr.oregon.gov": 0
+  },
+  "publisher_exposure_caveat": "No matching URL-domain mentions is a recorded screen, not proof against model pretraining, implicit publisher-name mentions, or inaccessible material.",
+  "audit_method": "char_wb 3-5, raw term counts, smoothed corpus IDF, cosine upper bound after omitting historical-only dimensions",
+  "threshold": 0.9,
+  "candidate_original_pairs": 218,
+  "initial_flagged": 10,
+  "expanded_flagged": 10,
+  "union_flagged": 11,
+  "newly_flagged_ids": [
+    "87354b338bf386586979"
+  ],
+  "no_longer_flagged_ids": [
+    "d18fabb1c23bd3101286"
+  ],
+  "idf_change_caveat": "Expanded corpus changes smoothed IDF; preserve the initial exclusions and report the union, never reinstate initially excluded questions.",
+  "frozen_split_counts": {
+    "dev": 47,
+    "test": 37
+  },
+  "frozen_split_flagged_by_either_audit": {
+    "dev": [],
+    "test": []
+  },
+  "audit_runtime_seconds": 263.4780166000128,
+  "hashes": {
+    "overlap_audit.json": "532c28a24f898dd867382f4fa81704a0fdae5bf609ab9123e1796a57b324b09d",
+    "overlap_audit_v2.json": "4f36476e73cbc0a0b1b5f05273e4829fa33b04bdbaf41f770eb193f991ce81d3",
+    "history_v2/historical_inventory.json": "7af7ec103b8788a4080329612a301ad43975c69d4a79394043c2043b17d09eec",
+    "history_v2/historical_texts.jsonl": "7c9abffe5784720560b36a1942991a6fa5b97b1bc8080ab577faf9391018fd33"
+  },
+  "limits": "EXPLORATORY regardless of overlap result: heldout has only two publisher groups, below preregistered minimum. Full-answer relevance labels are mechanical, not expert semantic labels."
+}

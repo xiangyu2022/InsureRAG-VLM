@@ -11,12 +11,14 @@ from src.insurerag_vlm.evidence_evaluation import token_f1,abstention_metrics,ci
 def clean_answer(text):return re.split(r'(?i)\bsources?\s*:',text,maxsplit=1)[0].strip()
 def numbers(text):
     return {str(Decimal(m.group(1).replace(',','')))+('%' if m.group(2) else '')
-            for m in re.finditer(r'(?<!\w)(\d+(?:,\d{3})*(?:\.\d+)?)(%)?',text)}
+            for m in re.finditer(r'(?<![\w.])(-?\d+(?:,\d{3})*(?:\.\d+)?)(%)?(?![\w.])',text)}
 
-def summarize(split,arm):
+def summarize(split,arm,output_name='summary.json'):
     if split=='test' and not (ROOT/'reports/source_holdout_v1/selection.lock.json').exists():raise ValueError('Test sealed')
     cases=read(LOCAL/'sealed'/(split+'.json'));lookup={r['id']:r for r in cases}
     run=LOCAL/(split+'_'+arm)/'generation';completed=read(run/'completion.json')
+    if Path(output_name).name!=output_name or not output_name.endswith('.json'):raise ValueError('Output must be a JSON filename')
+    if (run/output_name).exists():raise ValueError('Preserve previous summaries; supply a fresh --output-name')
     if sha(run/'answers.jsonl')!=completed['answers_sha256']:raise ValueError('Generation changed')
     rows=[json.loads(l) for l in (run/'answers.jsonl').read_text(encoding='utf8').splitlines()]
     if Counter((r['id'],r['cohort']) for r in rows)!=Counter((r['id'],cohort) for r in cases for cohort in ['retrieved','empty_control']):
@@ -26,10 +28,11 @@ def summarize(split,arm):
         positive=r['cohort']=='retrieved';s=r.get('served',{});a=clean_answer(r.get('raw_answer',''));ref=lookup[r['id']]['answer']
         markers=citation_markers(r.get('raw_answer',''));ids=markers['ids']
         known=set(re.findall(r'(?m)^SOURCE:\s*([^\n]+)',r['context']))
-        pred_nums=numbers(a);ref_nums=numbers(ref);sn=numbers(s.get('answer',''))
+        served_content=clean_answer(s.get('answer',''))
+        pred_nums=numbers(a);ref_nums=numbers(ref);sn=numbers(served_content)
         row={'id':r['id'],'publisher':lookup[r['id']]['publisher'],'cohort':r['cohort'],'error':r.get('error'),
              'raw_token_f1':token_f1(a,ref) if positive else None,
-             'served_token_f1':token_f1(s.get('answer',''),ref) if positive else None,
+             'served_token_f1':token_f1(served_content,ref) if positive else None,
              'raw_abstained_heuristic':bool(s.get('explicit_abstention',True)),
              'served_abstained':bool(s.get('abstain',True)),
              'citation_ids':len(ids),'valid_citation_ids':sum(i in known for i in ids),'unknown_citation_ids':[i for i in ids if i not in known],
@@ -70,7 +73,8 @@ def summarize(split,arm):
             except (ValueError,IndexError):pass
         g=r.get('generation',{}).get('last_generation',{})
         if g.get('eval_duration'):tps.append(g.get('eval_count',0)/(g['eval_duration']/1e9))
-    report={'split':split,'arm':arm,'original_answerable_questions':len(pos),'synthetic_empty_controls':len(rows)-len(pos),
+    report={'schema_version':2,'metric_correction':'Remove emitted SOURCE fields consistently from both raw and served lexical/numeric metrics; numeric tokens exclude alphanumeric IDs.',
+            'split':split,'arm':arm,'original_answerable_questions':len(pos),'synthetic_empty_controls':len(rows)-len(pos),
             'errors':sum(bool(r['error']) for r in metrics),'raw_abstention_heuristic':abstention_metrics(raw),
             'served_abstention':abstention_metrics(served),'raw_content_token_f1':float(np.mean([r['raw_token_f1'] for r in pos])),
             'served_content_token_f1_all_answerable':float(np.mean([r['served_token_f1'] for r in pos])),
@@ -91,7 +95,8 @@ def summarize(split,arm):
                            'Literal numeric agreement scans entire publisher answer, not expert annotated target quantities.',
                            'Content token F1 is lexical agreement, not semantic or legal correctness.',
                            'Raw abstention is a wording heuristic and requires separate review for false positives.']}
-    write(run/'summary.json',report)
+    write(run/output_name,report)
     print(json.dumps({k:v for k,v in report.items() if k!='rows'},indent=2))
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--split',choices=['dev','test'],required=True);p.add_argument('--arm',required=True);a=p.parse_args();summarize(a.split,a.arm)
+    p=argparse.ArgumentParser();p.add_argument('--split',choices=['dev','test'],required=True);p.add_argument('--arm',required=True)
+    p.add_argument('--output-name',default='summary.json');a=p.parse_args();summarize(a.split,a.arm,a.output_name)

@@ -5,7 +5,7 @@ dimensions are omitted from historical norms, making each cosine an UPPER
 BOUND on its full-vocabulary counterpart. Excluding upper bounds >= .90 may
 over-exclude, but cannot miss a >= .90 full-space match with this tokenization.
 """
-import hashlib,json,time
+import argparse,hashlib,json,time
 from pathlib import Path
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
@@ -15,13 +15,16 @@ ROOT=Path(__file__).resolve().parents[1]
 LOCAL=ROOT/'reports/source_holdout_v1/local'
 
 def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--historical',type=Path,default=LOCAL/'historical_texts.jsonl')
+    parser.add_argument('--output',type=Path,default=LOCAL/'overlap_audit.json');args=parser.parse_args()
+    if args.output.exists():raise ValueError('Preserve previous audit; supply a fresh output path')
     started=time.perf_counter()
     pairs=json.loads((LOCAL/'extracted_pairs.json').read_text(encoding='utf8'))
     import sys
     sys.path.insert(0,str(ROOT))
     from scripts.prepare_source_faq import norm
     historical=[]; origins=[]
-    with (LOCAL/'historical_texts.jsonl').open(encoding='utf8') as handle:
+    with args.historical.open(encoding='utf8') as handle:
         for line in handle:
             r=json.loads(line);historical.append(r['text']);origins.append(r['origin'])
     candidates=[norm(r[k]) for r in pairs for k in ['question','answer']]
@@ -61,7 +64,7 @@ def main():
             'method':'char_wb 3-5, raw term counts, smoothed corpus IDF, cosine upper bound after omitting historical-only dimensions',
             'threshold':.9,'excluded':sum(r['excluded'] for r in rows),'cross_publisher_conflicts':conflicts,'rows':rows,
             'seconds':time.perf_counter()-started,'candidate_file_sha256':hashlib.sha256((LOCAL/'extracted_pairs.json').read_bytes()).hexdigest(),
-            'historical_file_sha256':hashlib.sha256((LOCAL/'historical_texts.jsonl').read_bytes()).hexdigest()}
-    (LOCAL/'overlap_audit.json').write_text(json.dumps(report,indent=2),encoding='utf8')
+            'historical_file_sha256':hashlib.sha256(args.historical.read_bytes()).hexdigest()}
+    args.output.write_text(json.dumps(report,indent=2),encoding='utf8')
     print(json.dumps({k:v for k,v in report.items() if k not in ['rows','cross_publisher_conflicts']},indent=2),flush=True)
 if __name__=='__main__':main()

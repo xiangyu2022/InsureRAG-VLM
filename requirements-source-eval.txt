@@ -1,0 +1,8 @@
+# Optional research acquisition/audit dependencies; not needed for default serving.
+-r requirements-dev.txt
+beautifulsoup4==4.15.0
+scikit-learn==1.9.1
+scipy==1.18.1
+threadpoolctl==3.7.0
+# Local GPU inference additionally uses the existing pinned model artifacts and
+# compatible torch/transformers packages recorded in each retrieval protocol.

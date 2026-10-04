@@ -1,0 +1,89 @@
+{
+  "verified_utc": "2026-10-04T08:33:14.676585+00:00",
+  "status": "passed",
+  "frozen_inference_files_equal_git_blobs": true,
+  "selection_lock_sha256": "260c41ab0bacbe4dc85c293326b971a80647e9db31911960a3b62238e384c7a0",
+  "independent_retrieval_recalculation": {
+    "dev_baseline": {
+      "questions": 47,
+      "complete_answers": 36,
+      "publisher_macro_primary": 0.7296296296296297,
+      "packing_lost_complete": 0
+    },
+    "dev_cross_only": {
+      "questions": 47,
+      "complete_answers": 29,
+      "publisher_macro_primary": 0.5388888888888889,
+      "packing_lost_complete": 0
+    },
+    "dev_original_query": {
+      "questions": 47,
+      "complete_answers": 36,
+      "publisher_macro_primary": 0.7296296296296297,
+      "packing_lost_complete": 0
+    },
+    "dev_cross_quarter": {
+      "questions": 47,
+      "complete_answers": 38,
+      "publisher_macro_primary": 0.7824074074074074,
+      "packing_lost_complete": 0
+    },
+    "dev_cross_quarter_timing": {
+      "questions": 47,
+      "complete_answers": 38,
+      "publisher_macro_primary": 0.7824074074074074,
+      "packing_lost_complete": 0
+    },
+    "test_baseline": {
+      "questions": 37,
+      "complete_answers": 20,
+      "publisher_macro_primary": 0.44285714285714284,
+      "packing_lost_complete": 0
+    },
+    "test_cross_quarter": {
+      "questions": 37,
+      "complete_answers": 20,
+      "publisher_macro_primary": 0.4976190476190476,
+      "packing_lost_complete": 0
+    }
+  },
+  "all_fixed_question_ids_preserved": true,
+  "generation_outputs": 336,
+  "exact_label_free_prompt_construction_verified": 336,
+  "test_started_after_selection_lock": true,
+  "all_model_digests_and_options_verified": true,
+  "errors": 0,
+  "truncations": 0,
+  "answer_repairs": 0,
+  "cpu_tests": {
+    "passed": 357,
+    "subtests_passed": 58,
+    "seconds": 10.41,
+    "log_sha256": "c11ca69c5d2249d7745d2d174b7377500e6bf4c2f010697002e22f36561e3c6e"
+  },
+  "offline_smoke": "passed",
+  "runtime_cleanup": {
+    "utc": "2026-10-04T08:31:49.9020600Z",
+    "task_pid": 10540,
+    "task_port": 11437,
+    "identity_verified": true,
+    "models_unloaded": [],
+    "remaining_loaded_models": 0,
+    "task_server_stopped": true,
+    "other_services_modified": false
+  },
+  "versions": {
+    "python": "3.12.10",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.18.0",
+    "numpy": "2.5.2",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "beautifulsoup4": "4.15.0",
+    "pytest": "9.1.1",
+    "threadpoolctl": "3.7.0"
+  },
+  "platform": "Windows",
+  "hardware": "NVIDIA RTX 4070 Laptop GPU, 8 GiB",
+  "limits": "Consistency checks do not establish semantic correctness, independent publisher sufficiency, or unseen pretraining."
+}

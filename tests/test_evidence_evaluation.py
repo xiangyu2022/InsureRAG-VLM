@@ -1,6 +1,6 @@
 import pytest
 from src.insurerag_vlm.evidence_evaluation import (
-    retrieval_metrics, packing_metrics, aggregate_by_publisher, abstention_metrics, citation_markers,
+    retrieval_metrics, packing_metrics, aggregate_by_publisher, abstention_metrics, citation_markers, publisher_cluster_delta,
 )
 
 
@@ -61,3 +61,13 @@ def test_no_source_sentinel_is_not_a_valid_citation_or_proof_of_refusal():
     result=citation_markers('An unsupported factual assertion. SOURCE: N/A')
     assert result['ids']==[] and result['sentinels']==['N/A']
     assert citation_markers('SOURCE: none, unknown')['ids']==['unknown']
+
+
+def test_cluster_contrast_is_paired_and_equal_publisher_weighted():
+    base=[{'id':'a','publisher':'A','score':0},{'id':'b','publisher':'B','score':1},{'id':'c','publisher':'B','score':1}]
+    candidate=[dict(r,score=1) for r in base]
+    result=publisher_cluster_delta(base,candidate,'score')
+    assert result['publisher_macro_delta']==.5
+    assert result['questions']==3 and result['publisher_groups']==2
+    assert result['paired_publisher_cluster_bootstrap_95ci']==[0.,1.]
+    with pytest.raises(ValueError):publisher_cluster_delta(base,candidate[:2],'score')

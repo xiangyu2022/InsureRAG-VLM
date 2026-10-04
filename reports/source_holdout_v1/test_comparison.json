@@ -1,0 +1,486 @@
+{
+  "split": "test",
+  "interpretation": "EXPLORATORY; preregistered minimum of 3 publisher groups in each split not met",
+  "decision": "NO PROMOTION; retain existing default strategy",
+  "retrieval": {
+    "baseline": {
+      "questions": 37,
+      "publishers": 2,
+      "by_publisher": {
+        "ccpc_ireland": {
+          "questions": 30,
+          "recall_at_1": 0.3,
+          "hit_at_1": 0.3,
+          "complete_at_1": 0.3,
+          "ndcg_at_1": 0.3,
+          "recall_at_5": 0.6,
+          "hit_at_5": 0.6,
+          "complete_at_5": 0.6,
+          "ndcg_at_5": 0.45847141256203866,
+          "recall_at_10": 0.6666666666666666,
+          "hit_at_10": 0.6666666666666666,
+          "complete_at_10": 0.6666666666666666,
+          "ndcg_at_10": 0.4796168568619491,
+          "gold_chunks_before_packing": 0.6,
+          "gold_chunks_after_packing": 0.6,
+          "chunk_recall_before_packing": 0.6,
+          "chunk_recall_after_packing": 0.6,
+          "complete_before_packing": 0.6,
+          "complete_after_packing": 0.6,
+          "retrieval_incomplete": 0.4,
+          "packing_lost_complete_evidence": 0.0,
+          "packing_lost_chunks": 0.0
+        },
+        "fsra_ontario": {
+          "questions": 7,
+          "recall_at_1": 0.14285714285714285,
+          "hit_at_1": 0.14285714285714285,
+          "complete_at_1": 0.14285714285714285,
+          "ndcg_at_1": 0.14285714285714285,
+          "recall_at_5": 0.2857142857142857,
+          "hit_at_5": 0.2857142857142857,
+          "complete_at_5": 0.2857142857142857,
+          "ndcg_at_5": 0.23298996479592252,
+          "recall_at_10": 0.42857142857142855,
+          "hit_at_10": 0.42857142857142855,
+          "complete_at_10": 0.42857142857142855,
+          "ndcg_at_10": 0.2806090124149701,
+          "gold_chunks_before_packing": 0.2857142857142857,
+          "gold_chunks_after_packing": 0.2857142857142857,
+          "chunk_recall_before_packing": 0.2857142857142857,
+          "chunk_recall_after_packing": 0.2857142857142857,
+          "complete_before_packing": 0.2857142857142857,
+          "complete_after_packing": 0.2857142857142857,
+          "retrieval_incomplete": 0.7142857142857143,
+          "packing_lost_complete_evidence": 0.0,
+          "packing_lost_chunks": 0.0
+        }
+      },
+      "question_macro": {
+        "recall_at_1": 0.2702702702702703,
+        "hit_at_1": 0.2702702702702703,
+        "complete_at_1": 0.2702702702702703,
+        "ndcg_at_1": 0.2702702702702703,
+        "recall_at_5": 0.5405405405405406,
+        "hit_at_5": 0.5405405405405406,
+        "complete_at_5": 0.5405405405405406,
+        "ndcg_at_5": 0.4158127602819626,
+        "recall_at_10": 0.6216216216216216,
+        "hit_at_10": 0.6216216216216216,
+        "complete_at_10": 0.6216216216216216,
+        "ndcg_at_10": 0.4419667241287369,
+        "gold_chunks_before_packing": 0.5405405405405406,
+        "gold_chunks_after_packing": 0.5405405405405406,
+        "chunk_recall_before_packing": 0.5405405405405406,
+        "chunk_recall_after_packing": 0.5405405405405406,
+        "complete_before_packing": 0.5405405405405406,
+        "complete_after_packing": 0.5405405405405406,
+        "retrieval_incomplete": 0.4594594594594595,
+        "packing_lost_complete_evidence": 0.0,
+        "packing_lost_chunks": 0.0
+      },
+      "publisher_macro": {
+        "recall_at_1": 0.22142857142857142,
+        "hit_at_1": 0.22142857142857142,
+        "complete_at_1": 0.22142857142857142,
+        "ndcg_at_1": 0.22142857142857142,
+        "recall_at_5": 0.44285714285714284,
+        "hit_at_5": 0.44285714285714284,
+        "complete_at_5": 0.44285714285714284,
+        "ndcg_at_5": 0.3457306886789806,
+        "recall_at_10": 0.5476190476190476,
+        "hit_at_10": 0.5476190476190476,
+        "complete_at_10": 0.5476190476190476,
+        "ndcg_at_10": 0.38011293463845963,
+        "gold_chunks_before_packing": 0.44285714285714284,
+        "gold_chunks_after_packing": 0.44285714285714284,
+        "chunk_recall_before_packing": 0.44285714285714284,
+        "chunk_recall_after_packing": 0.44285714285714284,
+        "complete_before_packing": 0.44285714285714284,
+        "complete_after_packing": 0.44285714285714284,
+        "retrieval_incomplete": 0.5571428571428572,
+        "packing_lost_complete_evidence": 0.0,
+        "packing_lost_chunks": 0.0
+      },
+      "arm": "baseline",
+      "split": "test",
+      "multi_gold_questions": 0,
+      "latency_seconds": {
+        "p50": 0.15523581094788136,
+        "p95": 0.18476569088855502,
+        "definition": "per-query ranking/scoring/packing plus amortized batch query encoding; model/index setup excluded"
+      },
+      "denominator_ids_sha256": "93c339c3c547a8200c065d2e5ba3f03eb0d8aa57190c30ebc8589654d2710d05",
+      "retrieval_sha256": "6dbd97f91a0d1f092924d1394abcf08b642cb5d46c74db9cc88f5ae0cab776de"
+    },
+    "cross_quarter": {
+      "questions": 37,
+      "publishers": 2,
+      "by_publisher": {
+        "ccpc_ireland": {
+          "questions": 30,
+          "recall_at_1": 0.3,
+          "hit_at_1": 0.3,
+          "complete_at_1": 0.3,
+          "ndcg_at_1": 0.3,
+          "recall_at_5": 0.5666666666666667,
+          "hit_at_5": 0.5666666666666667,
+          "complete_at_5": 0.5666666666666667,
+          "ndcg_at_5": 0.45053339613346916,
+          "recall_at_10": 0.6,
+          "hit_at_10": 0.6,
+          "complete_at_10": 0.6,
+          "ndcg_at_10": 0.4610488920263267,
+          "gold_chunks_before_packing": 0.5666666666666667,
+          "gold_chunks_after_packing": 0.5666666666666667,
+          "chunk_recall_before_packing": 0.5666666666666667,
+          "chunk_recall_after_packing": 0.5666666666666667,
+          "complete_before_packing": 0.5666666666666667,
+          "complete_after_packing": 0.5666666666666667,
+          "retrieval_incomplete": 0.43333333333333335,
+          "packing_lost_complete_evidence": 0.0,
+          "packing_lost_chunks": 0.0
+        },
+        "fsra_ontario": {
+          "questions": 7,
+          "recall_at_1": 0.2857142857142857,
+          "hit_at_1": 0.2857142857142857,
+          "complete_at_1": 0.2857142857142857,
+          "ndcg_at_1": 0.2857142857142857,
+          "recall_at_5": 0.42857142857142855,
+          "hit_at_5": 0.42857142857142855,
+          "complete_at_5": 0.42857142857142855,
+          "ndcg_at_5": 0.3758471076530654,
+          "recall_at_10": 0.5714285714285714,
+          "hit_at_10": 0.5714285714285714,
+          "complete_at_10": 0.5714285714285714,
+          "ndcg_at_10": 0.4171420828413351,
+          "gold_chunks_before_packing": 0.42857142857142855,
+          "gold_chunks_after_packing": 0.42857142857142855,
+          "chunk_recall_before_packing": 0.42857142857142855,
+          "chunk_recall_after_packing": 0.42857142857142855,
+          "complete_before_packing": 0.42857142857142855,
+          "complete_after_packing": 0.42857142857142855,
+          "retrieval_incomplete": 0.5714285714285714,
+          "packing_lost_complete_evidence": 0.0,
+          "packing_lost_chunks": 0.0
+        }
+      },
+      "question_macro": {
+        "recall_at_1": 0.2972972972972973,
+        "hit_at_1": 0.2972972972972973,
+        "complete_at_1": 0.2972972972972973,
+        "ndcg_at_1": 0.2972972972972973,
+        "recall_at_5": 0.5405405405405406,
+        "hit_at_5": 0.5405405405405406,
+        "complete_at_5": 0.5405405405405406,
+        "ndcg_at_5": 0.43640355777231166,
+        "recall_at_10": 0.5945945945945946,
+        "hit_at_10": 0.5945945945945946,
+        "complete_at_10": 0.5945945945945946,
+        "ndcg_at_10": 0.4527421983967338,
+        "gold_chunks_before_packing": 0.5405405405405406,
+        "gold_chunks_after_packing": 0.5405405405405406,
+        "chunk_recall_before_packing": 0.5405405405405406,
+        "chunk_recall_after_packing": 0.5405405405405406,
+        "complete_before_packing": 0.5405405405405406,
+        "complete_after_packing": 0.5405405405405406,
+        "retrieval_incomplete": 0.4594594594594595,
+        "packing_lost_complete_evidence": 0.0,
+        "packing_lost_chunks": 0.0
+      },
+      "publisher_macro": {
+        "recall_at_1": 0.2928571428571428,
+        "hit_at_1": 0.2928571428571428,
+        "complete_at_1": 0.2928571428571428,
+        "ndcg_at_1": 0.2928571428571428,
+        "recall_at_5": 0.4976190476190476,
+        "hit_at_5": 0.4976190476190476,
+        "complete_at_5": 0.4976190476190476,
+        "ndcg_at_5": 0.4131902518932673,
+        "recall_at_10": 0.5857142857142856,
+        "hit_at_10": 0.5857142857142856,
+        "complete_at_10": 0.5857142857142856,
+        "ndcg_at_10": 0.43909548743383087,
+        "gold_chunks_before_packing": 0.4976190476190476,
+        "gold_chunks_after_packing": 0.4976190476190476,
+        "chunk_recall_before_packing": 0.4976190476190476,
+        "chunk_recall_after_packing": 0.4976190476190476,
+        "complete_before_packing": 0.4976190476190476,
+        "complete_after_packing": 0.4976190476190476,
+        "retrieval_incomplete": 0.5023809523809524,
+        "packing_lost_complete_evidence": 0.0,
+        "packing_lost_chunks": 0.0
+      },
+      "arm": "cross_quarter",
+      "split": "test",
+      "multi_gold_questions": 0,
+      "latency_seconds": {
+        "p50": 0.15685554056403203,
+        "p95": 0.18469706059408347,
+        "definition": "per-query ranking/scoring/packing plus amortized batch query encoding; model/index setup excluded"
+      },
+      "denominator_ids_sha256": "93c339c3c547a8200c065d2e5ba3f03eb0d8aa57190c30ebc8589654d2710d05",
+      "retrieval_sha256": "5ed1a0384de31ddad5fc8e91cec151d188103b481c7823bc0658b591d59a606e"
+    }
+  },
+  "generation": {
+    "baseline": {
+      "schema_version": 2,
+      "metric_correction": "Remove emitted SOURCE fields consistently from both raw and served lexical/numeric metrics; numeric tokens exclude alphanumeric IDs.",
+      "split": "test",
+      "arm": "baseline",
+      "original_answerable_questions": 37,
+      "synthetic_empty_controls": 37,
+      "errors": 0,
+      "raw_abstention_heuristic": {
+        "n": 74,
+        "answerable_n": 37,
+        "unanswerable_n": 37,
+        "abstention_precision": 0.9473684210526315,
+        "abstention_recall": 0.4864864864864865,
+        "answerable_coverage": 0.972972972972973,
+        "abstentions": 19
+      },
+      "served_abstention": {
+        "n": 74,
+        "answerable_n": 37,
+        "unanswerable_n": 37,
+        "abstention_precision": 0.6065573770491803,
+        "abstention_recall": 1.0,
+        "answerable_coverage": 0.35135135135135137,
+        "abstentions": 61
+      },
+      "raw_content_token_f1": 0.34455092507033325,
+      "served_content_token_f1_all_answerable": 0.14299311422934682,
+      "served_content_token_f1_answered_only": 0.4069804020373718,
+      "raw_numeric_output_questions": 5,
+      "raw_all_literal_numbers_in_reference": 0.4,
+      "served_numeric_output_questions": 1,
+      "served_all_literal_numbers_in_reference": 0.0,
+      "raw_citation_id_precision": 0.7479674796747967,
+      "raw_citation_ids": 123,
+      "raw_valid_citation_ids": 92,
+      "citation_cohorts": {
+        "retrieved": {
+          "questions": 37,
+          "raw_emitted_ids": 92,
+          "raw_valid_ids": 92,
+          "raw_id_precision": 1.0,
+          "raw_questions_with_invalid_id": 0,
+          "raw_questions_without_source_id": 0,
+          "raw_questions_with_no_source_sentinel": 0,
+          "served_emitted_ids": 13,
+          "served_valid_ids": 13,
+          "served_id_precision": 1.0
+        },
+        "empty_control": {
+          "questions": 37,
+          "raw_emitted_ids": 31,
+          "raw_valid_ids": 0,
+          "raw_id_precision": 0.0,
+          "raw_questions_with_invalid_id": 28,
+          "raw_questions_without_source_id": 9,
+          "raw_questions_with_no_source_sentinel": 7,
+          "served_emitted_ids": 0,
+          "served_valid_ids": 0,
+          "served_id_precision": null
+        }
+      },
+      "source_semantic_support": "not established by ID validity or token overlap; see separately labelled source review",
+      "served_reason_counts": {
+        "specific_question_terms_not_in_citation": 20,
+        "supported": 13,
+        "answer_terms_not_supported_by_citation": 1,
+        "answer_amount_not_in_citation": 1,
+        "numeric_question_without_answer_amount": 1,
+        "model_reported_insufficient_evidence": 1
+      },
+      "truncated": 0,
+      "repaired": 0,
+      "generation_wall_seconds": {
+        "p50": 1.537177799968049,
+        "p95": 2.0865410598926233,
+        "includes": "provider call and postprocessing; excludes retrieval; first request may include model loading"
+      },
+      "whole_gpu_observed_peak_mib": 4979.0,
+      "median_output_tokens_per_second": 72.16081774657368,
+      "answers_sha256": "cbe6ff042a349e53e9b4e8e55f35763b1a5adea45f07c04f42393a3a941db3b0",
+      "limitations": [
+        "Original questions answerable in publisher source; actual retrieved context may be insufficient.",
+        "Empty-context controls are synthetic and do not measure real-world refusal performance.",
+        "Literal numeric agreement scans entire publisher answer, not expert annotated target quantities.",
+        "Content token F1 is lexical agreement, not semantic or legal correctness.",
+        "Raw abstention is a wording heuristic and requires separate review for false positives."
+      ]
+    },
+    "cross_quarter": {
+      "schema_version": 2,
+      "metric_correction": "Remove emitted SOURCE fields consistently from both raw and served lexical/numeric metrics; numeric tokens exclude alphanumeric IDs.",
+      "split": "test",
+      "arm": "cross_quarter",
+      "original_answerable_questions": 37,
+      "synthetic_empty_controls": 37,
+      "errors": 0,
+      "raw_abstention_heuristic": {
+        "n": 74,
+        "answerable_n": 37,
+        "unanswerable_n": 37,
+        "abstention_precision": 0.8947368421052632,
+        "abstention_recall": 0.4594594594594595,
+        "answerable_coverage": 0.9459459459459459,
+        "abstentions": 19
+      },
+      "served_abstention": {
+        "n": 74,
+        "answerable_n": 37,
+        "unanswerable_n": 37,
+        "abstention_precision": 0.578125,
+        "abstention_recall": 1.0,
+        "answerable_coverage": 0.2702702702702703,
+        "abstentions": 64
+      },
+      "raw_content_token_f1": 0.357539211885885,
+      "served_content_token_f1_all_answerable": 0.13135877564232318,
+      "served_content_token_f1_answered_only": 0.48602746987659573,
+      "raw_numeric_output_questions": 5,
+      "raw_all_literal_numbers_in_reference": 0.4,
+      "served_numeric_output_questions": 1,
+      "served_all_literal_numbers_in_reference": 0.0,
+      "raw_citation_id_precision": 0.7454545454545455,
+      "raw_citation_ids": 110,
+      "raw_valid_citation_ids": 82,
+      "citation_cohorts": {
+        "retrieved": {
+          "questions": 37,
+          "raw_emitted_ids": 82,
+          "raw_valid_ids": 82,
+          "raw_id_precision": 1.0,
+          "raw_questions_with_invalid_id": 0,
+          "raw_questions_without_source_id": 0,
+          "raw_questions_with_no_source_sentinel": 0,
+          "served_emitted_ids": 10,
+          "served_valid_ids": 10,
+          "served_id_precision": 1.0
+        },
+        "empty_control": {
+          "questions": 37,
+          "raw_emitted_ids": 28,
+          "raw_valid_ids": 0,
+          "raw_id_precision": 0.0,
+          "raw_questions_with_invalid_id": 25,
+          "raw_questions_without_source_id": 12,
+          "raw_questions_with_no_source_sentinel": 9,
+          "served_emitted_ids": 0,
+          "served_valid_ids": 0,
+          "served_id_precision": null
+        }
+      },
+      "source_semantic_support": "not established by ID validity or token overlap; see separately labelled source review",
+      "served_reason_counts": {
+        "specific_question_terms_not_in_citation": 23,
+        "supported": 10,
+        "answer_terms_not_supported_by_citation": 1,
+        "model_reported_insufficient_evidence": 2,
+        "numeric_question_without_answer_amount": 1
+      },
+      "truncated": 0,
+      "repaired": 0,
+      "generation_wall_seconds": {
+        "p50": 1.4720462001860142,
+        "p95": 1.990793060138821,
+        "includes": "provider call and postprocessing; excludes retrieval; first request may include model loading"
+      },
+      "whole_gpu_observed_peak_mib": 4978.0,
+      "median_output_tokens_per_second": 72.50819999354648,
+      "answers_sha256": "aba6d9f30f5dacb87a91a0cf7186cbd788ebb42ac83e3237ff1662847d3a678d",
+      "limitations": [
+        "Original questions answerable in publisher source; actual retrieved context may be insufficient.",
+        "Empty-context controls are synthetic and do not measure real-world refusal performance.",
+        "Literal numeric agreement scans entire publisher answer, not expert annotated target quantities.",
+        "Content token F1 is lexical agreement, not semantic or legal correctness.",
+        "Raw abstention is a wording heuristic and requires separate review for false positives."
+      ]
+    }
+  },
+  "paired_retrieval_contrasts": [
+    {
+      "metric": "complete_after_packing",
+      "questions": 37,
+      "publisher_groups": 2,
+      "publisher_deltas": {
+        "ccpc_ireland": -0.03333333333333333,
+        "fsra_ontario": 0.14285714285714285
+      },
+      "publisher_macro_delta": 0.05476190476190476,
+      "paired_publisher_cluster_bootstrap_95ci": [
+        -0.03333333333333333,
+        0.14285714285714285
+      ],
+      "draws": 2000,
+      "seed": 42,
+      "limitation": "Exploratory, unstable interval with few publisher clusters; no independent question bootstrap claim."
+    },
+    {
+      "metric": "recall_at_10",
+      "questions": 37,
+      "publisher_groups": 2,
+      "publisher_deltas": {
+        "ccpc_ireland": -0.06666666666666667,
+        "fsra_ontario": 0.14285714285714285
+      },
+      "publisher_macro_delta": 0.03809523809523809,
+      "paired_publisher_cluster_bootstrap_95ci": [
+        -0.06666666666666667,
+        0.14285714285714285
+      ],
+      "draws": 2000,
+      "seed": 42,
+      "limitation": "Exploratory, unstable interval with few publisher clusters; no independent question bootstrap claim."
+    },
+    {
+      "metric": "hit_at_10",
+      "questions": 37,
+      "publisher_groups": 2,
+      "publisher_deltas": {
+        "ccpc_ireland": -0.06666666666666667,
+        "fsra_ontario": 0.14285714285714285
+      },
+      "publisher_macro_delta": 0.03809523809523809,
+      "paired_publisher_cluster_bootstrap_95ci": [
+        -0.06666666666666667,
+        0.14285714285714285
+      ],
+      "draws": 2000,
+      "seed": 42,
+      "limitation": "Exploratory, unstable interval with few publisher clusters; no independent question bootstrap claim."
+    },
+    {
+      "metric": "ndcg_at_10",
+      "questions": 37,
+      "publisher_groups": 2,
+      "publisher_deltas": {
+        "ccpc_ireland": -0.018567964835622352,
+        "fsra_ontario": 0.13653307042636495
+      },
+      "publisher_macro_delta": 0.0589825527953713,
+      "paired_publisher_cluster_bootstrap_95ci": [
+        -0.018567964835622352,
+        0.13653307042636495
+      ],
+      "draws": 2000,
+      "seed": 42,
+      "limitation": "Exploratory, unstable interval with few publisher clusters; no independent question bootstrap claim."
+    }
+  ],
+  "selection_lock_sha256": "260c41ab0bacbe4dc85c293326b971a80647e9db31911960a3b62238e384c7a0",
+  "no_new_training": true,
+  "no_default_promotion": true,
+  "metric_caveats": [
+    "FAQ answer chunks are relevance proxies, not adjudicated sufficient evidence.",
+    "Original FAQ questions may omit jurisdiction; exact source recall is not universal factual correctness.",
+    "Both raw and served outputs retain the same original question denominators; errors are not discarded.",
+    "Citation-ID correctness does not establish claim entailment. No blinded expert semantic review was performed.",
+    "One generation per question/cohort/arm; fixed seed does not imply byte-for-byte deterministic GPU output."
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "raw_unique_original_qa": 218,
+  "preseal_overlap_exclusions": 10,
+  "eligible_original_qa": 208,
+  "per_publisher_cap": 30,
+  "cap_exclusions": 124,
+  "evaluated_original_questions": 84,
+  "by_publisher": {
+    "australia_privatehealth": {
+      "unique_original_qa": 10,
+      "preseal_overlap_exclusions": 1,
+      "eligible_after_preseal_screen": 9,
+      "deterministic_cap_exclusions": 0,
+      "split": "dev",
+      "evaluated_original_questions": 9
+    },
+    "ccpc_ireland": {
+      "unique_original_qa": 150,
+      "preseal_overlap_exclusions": 8,
+      "eligible_after_preseal_screen": 142,
+      "deterministic_cap_exclusions": 112,
+      "split": "test",
+      "evaluated_original_questions": 30
+    },
+    "fsra_ontario": {
+      "unique_original_qa": 7,
+      "preseal_overlap_exclusions": 0,
+      "eligible_after_preseal_screen": 7,
+      "deterministic_cap_exclusions": 0,
+      "split": "test",
+      "evaluated_original_questions": 7
+    },
+    "hia_ireland": {
+      "unique_original_qa": 43,
+      "preseal_overlap_exclusions": 1,
+      "eligible_after_preseal_screen": 42,
+      "deterministic_cap_exclusions": 12,
+      "split": "dev",
+      "evaluated_original_questions": 30
+    },
+    "oregon_dfr": {
+      "unique_original_qa": 8,
+      "preseal_overlap_exclusions": 0,
+      "eligible_after_preseal_screen": 8,
+      "deterministic_cap_exclusions": 0,
+      "split": "dev",
+      "evaluated_original_questions": 8
+    }
+  },
+  "answer_chunk_occurrences_before_dedup": 219,
+  "unique_new_answer_chunks": 219,
+  "corpus_scope": "All 218 original answers remain retrieval distractors, including questions excluded from evaluation. Deterministic answer splitting and publisher+normalized-text ID dedup yield 219 unique chunks.",
+  "historical_answer_records": 192231,
+  "total_retrieval_answer_records": 192450,
+  "source_snapshots": [
+    {
+      "group": "oregon_dfr",
+      "url": "https://dfr.oregon.gov/insure/auto/Pages/auto-insurance-faqs.aspx",
+      "final_url": "https://dfr.oregon.gov/insure/auto/Pages/auto-insurance-faqs.aspx",
+      "acquired_utc": "2026-10-04T07:18:37.177635+00:00",
+      "sha256": "dc78547975b36c92df07d0a51c1b7ecd2378804ead93b7aedc7d855d943af865",
+      "bytes": 80702,
+      "status_code": 200
+    },
+    {
+      "group": "australia_privatehealth",
+      "url": "https://privatehealth.gov.au/faq.htm",
+      "final_url": "https://privatehealth.gov.au/faq.htm",
+      "acquired_utc": "2026-10-04T07:25:27.492313+00:00",
+      "sha256": "984afeb40875147bd3ac7e10061db20e2ac76d2917aef31fcbe893cb0b6aa19d",
+      "bytes": 27522,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/car-insurance",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/car-insurance",
+      "acquired_utc": "2026-10-04T07:15:52.479739+00:00",
+      "sha256": "5057ff9eb4dd1fa3f61975a80524077e0be430ce949668edcf1db0c2022a7b35",
+      "bytes": 1194703,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/gadget-insurance",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/gadget-insurance",
+      "acquired_utc": "2026-10-04T07:15:56.094645+00:00",
+      "sha256": "d8445f1bd8cc6bb8f2091e409a50c10344bc719ea624199f0b623067e505ede8",
+      "bytes": 1018446,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/getting-insurance-quotes",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/getting-insurance-quotes",
+      "acquired_utc": "2026-10-04T07:15:52.023674+00:00",
+      "sha256": "809fef6c62aa197e33657cf7750b13140062755f6d99023485469230b8f3147e",
+      "bytes": 1015293,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/health-insurance",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/health-insurance",
+      "acquired_utc": "2026-10-04T07:15:52.922184+00:00",
+      "sha256": "81914bcb626d6042d267e095b13d5fd3b0e5a73a333625ba6b06ba5e98560d9a",
+      "bytes": 1039059,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/home-insurance",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/home-insurance",
+      "acquired_utc": "2026-10-04T07:15:52.754019+00:00",
+      "sha256": "7351f47cf613d8f3d9f0d5ee4212c58f991e0d793a9542fc253def9c9d5f7654",
+      "bytes": 1150656,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/income-protection-insurance",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/income-protection-insurance",
+      "acquired_utc": "2026-10-04T07:15:53.863148+00:00",
+      "sha256": "6722143927e00be6f8f4c4fbe926c0182323d9debf834add58803a84e3e861bd",
+      "bytes": 1098095,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/life-insurance",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/life-insurance",
+      "acquired_utc": "2026-10-04T07:15:54.308832+00:00",
+      "sha256": "43ba0fb2ee11c10ad3f4f3098163c9af7708955df13ebac5f21e1dd179015af4",
+      "bytes": 1072890,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/making-an-insurance-claim",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/making-an-insurance-claim",
+      "acquired_utc": "2026-10-04T07:15:52.308208+00:00",
+      "sha256": "9d1fc1a6cf02a708bd058686fcbf48d80886f272161daa258ffef112c031646f",
+      "bytes": 1055115,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/mortgage-protection-insurance",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/mortgage-protection-insurance",
+      "acquired_utc": "2026-10-04T07:15:52.934766+00:00",
+      "sha256": "3cff0fdeb70d97830eb3e522b5473e74dd61a1e6918976435128858783fbe4f5",
+      "bytes": 1021316,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/payment-protection-insurance-ppi",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/payment-protection-insurance-ppi",
+      "acquired_utc": "2026-10-04T07:15:54.116654+00:00",
+      "sha256": "10bec394ebc9511f6b9c3e4351dd616ddb3514b134b0d48f6d394d4642383793",
+      "bytes": 976948,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/pet-insurance",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/pet-insurance",
+      "acquired_utc": "2026-10-04T07:15:55.384900+00:00",
+      "sha256": "b13279789c33dcf44ad208fece65ac2e3691857808f77a8905e7f5ebc8a5fb8b",
+      "bytes": 976585,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/serious-illness-insurance",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/serious-illness-insurance",
+      "acquired_utc": "2026-10-04T07:15:54.485367+00:00",
+      "sha256": "e1e59d4754d4778568af8388ca4db8fb0bb00a4cd882bd4557b470c84e654f6a",
+      "bytes": 1082776,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/travel-insurance",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/travel-insurance",
+      "acquired_utc": "2026-10-04T07:15:54.594006+00:00",
+      "sha256": "541a3884b6a18e22aacff17bab0be242796ee5d7b0c71761dd1bc96c3263ee2a",
+      "bytes": 1012522,
+      "status_code": 200
+    },
+    {
+      "group": "ccpc_ireland",
+      "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/whole-of-life-insurance",
+      "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/whole-of-life-insurance",
+      "acquired_utc": "2026-10-04T07:15:54.412261+00:00",
+      "sha256": "216c46569712d2a086ab0fecb6bba3d10932ecf4b7ec8588875423744f9e81f8",
+      "bytes": 1011305,
+      "status_code": 200
+    },
+    {
+      "group": "fsra_ontario",
+      "url": "https://www.fsrao.ca/consumers/auto-insurance",
+      "final_url": "https://www.fsrao.ca/consumers/auto-insurance",
+      "acquired_utc": "2026-10-04T07:14:03.259029+00:00",
+      "sha256": "e6c27792a80c9884b91b941523eeb4e5777bc84bfe7a7dfb0f967222a2614ba8",
+      "bytes": 105322,
+      "status_code": 200
+    },
+    {
+      "group": "fsra_ontario",
+      "url": "https://www.fsrao.ca/consumers/auto-insurance/protect-yourself/claims-process-after-accident",
+      "final_url": "https://www.fsrao.ca/consumers/auto-insurance/protect-yourself/after-accident-understanding-claims-process",
+      "acquired_utc": "2026-10-04T07:15:57.080854+00:00",
+      "sha256": "3afc6e64c11e469c9b07549571628d2718b3041aacffe069c59cc013cfb0448d",
+      "bytes": 95905,
+      "status_code": 200
+    },
+    {
+      "group": "hia_ireland",
+      "url": "https://www.hia.ie/consumer-information/faq",
+      "final_url": "https://www.hia.ie/consumer-information/faq",
+      "acquired_utc": "2026-10-04T07:25:27.490867+00:00",
+      "sha256": "88413e3c339d9416f2d8f55005a20138a27b1f9c48889f7ae2f982ea19881d5a",
+      "bytes": 146065,
+      "status_code": 200
+    }
+  ],
+  "extracted_pairs_sha256": "595b31e6a8aac65de497a64732db51b159d7e4a9f4c06b624918cbcce2d9ab34",
+  "preseal_audit_sha256": "532c28a24f898dd867382f4fa81704a0fdae5bf609ab9123e1796a57b324b09d",
+  "not_claimed": [
+    "A production corpus expansion",
+    "Training examples",
+    "Expert adjudicated evidence sufficiency",
+    "Independent publisher minimum achieved"
+  ]
+}

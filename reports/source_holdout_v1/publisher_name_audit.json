@@ -1,0 +1,69 @@
+{
+  "normalized_strings_screened": 724751,
+  "literal_name_probes": {
+    "ccpc_full": "competition and consumer protection commission",
+    "ccpc_acronym": "ccpc",
+    "hia_full": "health insurance authority",
+    "fsra_full": "financial services regulatory authority",
+    "fsra_acronym": "fsra",
+    "fsco_full": "financial services commission of ontario",
+    "australia_private_health_ombudsman": "private health insurance ombudsman",
+    "australia_commonwealth_ombudsman": "commonwealth ombudsman",
+    "oregon_dfr": "oregon division of financial regulation",
+    "oregon_dcbs": "oregon department of consumer and business services"
+  },
+  "name_hit_counts": {
+    "ccpc_full": 0,
+    "ccpc_acronym": 2,
+    "hia_full": 0,
+    "fsra_full": 0,
+    "fsra_acronym": 0,
+    "fsco_full": 0,
+    "australia_private_health_ombudsman": 0,
+    "australia_commonwealth_ombudsman": 0,
+    "oregon_dfr": 0,
+    "oregon_dcbs": 0
+  },
+  "hits": {
+    "ccpc_full": [],
+    "ccpc_acronym": [
+      {
+        "origin": "historical_full_data/benchmarks/fiqa_v1/answers.jsonl",
+        "normalized_string_sha256": "71f9bda03b78cb0404ca1c55d8c80308024c1c6c162c90754920e284248bd11e"
+      },
+      {
+        "origin": "historical_full_data/benchmarks/fiqa_v1/answers.jsonl",
+        "normalized_string_sha256": "f031e8f560807cb9ac0116c23fa082b61db75de81dc24ca9843cfa6c5e645d99"
+      }
+    ],
+    "hia_full": [],
+    "fsra_full": [],
+    "fsra_acronym": [],
+    "fsco_full": [],
+    "australia_private_health_ombudsman": [],
+    "australia_commonwealth_ombudsman": [],
+    "oregon_dfr": [],
+    "oregon_dcbs": []
+  },
+  "broader_domain_hits": {
+    "oregon.gov": {
+      "www.oregon.gov": 14
+    },
+    "ombudsman.gov.au": {},
+    "fsco.gov.on.ca": {},
+    "fsrao.ca": {},
+    "ccpc.ie": {},
+    "consumerhelp.ie": {},
+    "hia.ie": {},
+    "privatehealth.gov.au": {}
+  },
+  "history_sha256": "7c9abffe5784720560b36a1942991a6fa5b97b1bc8080ab577faf9391018fd33",
+  "timing": "Supplemental post-lock audit; no reselection or question removal.",
+  "limitation": "Absence of these names/domains cannot establish unseen model pretraining or exclude unnamed/inaccessible publisher exposure.",
+  "manual_hit_review": {
+    "review_type": "Non-blinded local inspection of the matching historical strings; no inference change.",
+    "ccpc": "The two hits concern Canadian corporate taxation and the Canadian-controlled private corporation acronym, not the Irish Competition and Consumer Protection Commission.",
+    "oregon": "Broader state-domain references are present in historical tax, Medicaid/OHA and DHS material. This is not a state-disjoint study. No exact DFR/DCBS full-name or dfr.oregon.gov URL hit was found by these probes; agency-level absence remains conditional on accessible records and probe coverage.",
+    "consequence": "Retain all frozen denominators and the exploratory status. Do not describe all five jurisdictions or state governments as previously unseen."
+  }
+}

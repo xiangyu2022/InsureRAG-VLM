@@ -109,3 +109,24 @@ def abstention_metrics(rows):
             'abstention_recall': tp / len(absent) if absent else None,
             'answerable_coverage': sum(not r['abstained'] for r in present) / len(present) if present else None,
             'abstentions': len(refused)}
+
+
+def publisher_cluster_delta(baseline, candidate, metric, draws=2000, seed=42):
+    """Paired equal-publisher contrast; few clusters cannot support broad claims."""
+    import numpy as np
+    if len({r['id'] for r in baseline})!=len(baseline) or len({r['id'] for r in candidate})!=len(candidate):
+        raise ValueError('Duplicate paired question')
+    b={r['id']:r for r in baseline};c={r['id']:r for r in candidate}
+    if not b or b.keys()!=c.keys():raise ValueError('Different paired denominators')
+    groups=defaultdict(list)
+    for key in b:
+        if b[key]['publisher']!=c[key]['publisher']:raise ValueError('Paired publisher changed')
+        groups[b[key]['publisher']].append(float(c[key][metric])-float(b[key][metric]))
+    deltas={g:float(np.mean(v)) for g,v in sorted(groups.items())}
+    values=np.asarray(list(deltas.values()));rng=np.random.default_rng(seed)
+    samples=values[rng.integers(0,len(values),size=(draws,len(values)))].mean(axis=1)
+    lo,hi=np.quantile(samples,[.025,.975])
+    return {'metric':metric,'questions':len(b),'publisher_groups':len(groups),
+            'publisher_deltas':deltas,'publisher_macro_delta':float(values.mean()),
+            'paired_publisher_cluster_bootstrap_95ci':[float(lo),float(hi)],'draws':draws,'seed':seed,
+            'limitation':'Exploratory, unstable interval with few publisher clusters; no independent question bootstrap claim.'}
