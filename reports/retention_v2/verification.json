@@ -1,0 +1,74 @@
+{
+  "status": "verified",
+  "created_utc": "2026-10-01T21:31:40.959138+00:00",
+  "selected_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+  "selected_epoch": 2,
+  "promoted": true,
+  "domain_weight": 1.0,
+  "parameter_delta_from_previous_v2": {
+    "total_parameters": 22713601,
+    "changed_values": 22372706,
+    "changed_tensors": 105,
+    "mean_absolute_change": 0.00017080232305341237,
+    "maximum_absolute_change": 0.006508849561214447
+  },
+  "training_optimizer_steps": 2574,
+  "training_pair_exposures": 246960,
+  "data_audit_sha256": "32e02ef13a615fbe70837b4667cb5a575e99076a23490646bd6bbde42565be57",
+  "selection_lock_sha256": "111a12d841ff50fe1006c4c76d464f905394a14e1c5e172690f1f8255b255261",
+  "score_artifacts": [
+    {
+      "artifact": "reports/retention_v2/test_new_previous",
+      "questions": 681,
+      "scores_sha256": "7359d867684c9e2e80955bf434c8cb0d464b76a961e344d823c27d44eb072331"
+    },
+    {
+      "artifact": "reports/retention_v2/test_new_public",
+      "questions": 681,
+      "scores_sha256": "3942a172301edf337825ecc4dcb63a258de79a7e92f242386f44460602f388dc"
+    },
+    {
+      "artifact": "reports/retention_v2/test_new_selected",
+      "questions": 681,
+      "scores_sha256": "7b3b58de006b371a63703dbdccd5c8f538eac8da0fa2983ca2630c68a468aa4f"
+    },
+    {
+      "artifact": "reports/retention_v2/valid_new_epoch_1",
+      "questions": 527,
+      "scores_sha256": "49962c34b15bb804e4aeacb9d4dd8fc4d985542297976fb8c74a747d29f5a72d"
+    },
+    {
+      "artifact": "reports/retention_v2/valid_new_epoch_2",
+      "questions": 527,
+      "scores_sha256": "843ef5b14c643efac8a9a8bb428b09718a589ed25b55f488935849dd7daccd87"
+    },
+    {
+      "artifact": "reports/retention_v2/valid_new_previous",
+      "questions": 527,
+      "scores_sha256": "bcafb905a8720450f17a1dc780730500a490f4deda55d6f84e91bcc680bbd6c0"
+    },
+    {
+      "artifact": "reports/retention_v2/valid_new_public",
+      "questions": 527,
+      "scores_sha256": "f7cbf63f37d30c5e0f722bec1c7070d3f12a6a99c056738ff00749b227a2747a"
+    },
+    {
+      "artifact": "reports/retention_v2/test_legacy_selected",
+      "questions": 2000,
+      "scores_sha256": "15ace06eb8b7341a5791bf72bdbc5159f730b500abcb787269085088da8d429a"
+    },
+    {
+      "artifact": "reports/retention_v2/valid_legacy_epoch_1",
+      "questions": 2000,
+      "scores_sha256": "c1280afd1ce4573beadfa54cbb612fc2d098c7efd9cb9e965c4c1e34ce2798f2"
+    },
+    {
+      "artifact": "reports/retention_v2/valid_legacy_epoch_2",
+      "questions": 2000,
+      "scores_sha256": "e6963b2eb88bb4027ceb001f404e18816a7d46b34beb43a86c73f73797e93611"
+    }
+  ],
+  "test_evaluation_sha256": "ab6adf9e6156e24c21ae35667e9cac097d876287ccd8b843bf93e0de6234663b",
+  "historical_government_sha256": "fd5ec030268381149e051b4e75206f7aded4d6ed6ae6bc953cec123dc8df4c17",
+  "verification_code_sha256": "f502b234cded0aff4837219acac5c6a0dd0a913dcf78f9eae9bd603683f732c0"
+}

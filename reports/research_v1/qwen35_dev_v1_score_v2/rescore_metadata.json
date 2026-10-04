@@ -1,0 +1,24 @@
+{
+  "role": "posthoc_scoring_audit_without_new_inference",
+  "score_version": "v2_context_audit",
+  "primary_answer_metric": "context_grounded_key_pass",
+  "created_utc": "2026-09-20T22:27:25.542556+00:00",
+  "source_run": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\InsureRAG-VLM\\reports\\research_v1\\qwen35_dev_v1",
+  "source_predictions_sha256": "18a90b469aab4b09329601e2ea445177f7e953e68d37eb3151163b0935e0a45b",
+  "source_run_metadata_sha256": "bfabaa122dde89055d8cce969711538bfb7583d5fdefbea334ea654f6ccd8b78",
+  "benchmark_lock_sha256": "e97695307070c6d1974c56644c31cc3b6df8227aa989f370231e628b9f635f82",
+  "predictions_sha256": "2e42684bcf36e0cfd275f60ce5f5184eca813e2d6e44615bc64f95ef8e4682a4",
+  "requests": 24,
+  "code_sha256": {
+    "scripts\\rescore_research_benchmark.py": "d943a1368b7635c2b9c1c12af260a245ac89668d932a8c5f2cddbe2783cb0e85",
+    "scripts\\eval_research_benchmark.py": "8ed2d3edc9390085ee0235083e589ac13a772084698cb73a41c4ce1b0a3553a5"
+  },
+  "changed_historical_grounded_key_pass": 0,
+  "historical_passes_without_context_support": 0,
+  "limitations": [
+    "This is a posthoc audit of the exact recorded prompt and response, not an independent model rerun.",
+    "Historical grounded_key_pass is retained; compare context_grounded_key_pass only across scoring-v2 runs.",
+    "Missing prompt or completion metadata fails the new primary metric closed.",
+    "String containment and answer-key checks are not semantic entailment or production error rates."
+  ]
+}

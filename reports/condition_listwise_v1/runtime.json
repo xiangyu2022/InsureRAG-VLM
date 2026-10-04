@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-10-01T22:17:15.963019+00:00",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "libraries": {
+    "torch": "2.14.0+cu130",
+    "transformers": "5.17.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "safetensors": "0.8.0",
+    "tokenizers": "0.23.2"
+  },
+  "torch_cuda": "13.0",
+  "gpu_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "gpu_total_memory_bytes": 8585216000,
+  "compute_capability": [
+    8,
+    9
+  ],
+  "training_precision": "FP32 parameters, BF16 autocast",
+  "inference_precision": "FP16 on CUDA",
+  "seeds": [
+    42,
+    123
+  ],
+  "deterministic_algorithms_forced": false,
+  "note": "Random seeds fixed; byte-identical retraining across GPU/library versions is not promised."
+}

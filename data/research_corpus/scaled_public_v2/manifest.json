@@ -1,0 +1,44 @@
+{
+  "version": "scaled_public_v2",
+  "created_utc": "2026-10-01T16:57:57.834843+00:00",
+  "counts": {
+    "documents": 73,
+    "page_records": 1592,
+    "pdf_text_pages": 1550,
+    "html_records": 42,
+    "snippets": 6804,
+    "explicit_page_references": 177
+  },
+  "files": {
+    "rag_pages.jsonl": "22814aab59fd8ec8ab4073c3f8b06587387415e0537b3112f6bb906f178b44c6",
+    "rag_snippets.jsonl": "ad5a23bd189d0b717fe5c9c37bfeac275a05bef313e8785af424fe4c67d88a10",
+    "sources/fema_nfip_claims_2024.pdf": "13ff0d9ce9e5f71cffb211ea889a8da4f346b355c0e5317ea24a77b4b7695859",
+    "sources/fema_nfip_coverage_2023.pdf": "32590b3b46b7f8fa8aae89c81656b4ac4c5537db141a8b9b08f80aca1052f51d",
+    "sources/md_life_guide.pdf": "654936be4928bd7350432bc45893417f021cb76858585e871548624911f7271e",
+    "sources/nj_auto_guide_2026.pdf": "80f3c4d7c9b77b86c2e230582577a33c003f82f9eae5c0fb7f235268a9878424",
+    "sources/opm_2026_71-004.pdf": "87c2e63e0005c0f806df50007ac3f323e71aff3780448dbe124e9ba021dad9f3",
+    "sources/opm_2026_71-006.pdf": "84ae6e29cb2f65c1f56a7f7e1191a813cdd1aec0bf8978a5de57a98660b5a21a",
+    "sources/opm_2026_71-014.pdf": "c93430bcc42e9ada4799d964e4bb95817827d069c96fd031f637bd1deeab222f",
+    "sources/opm_2026_71-015.pdf": "91541648b9ad4eb2743fa4612b97802bed475efd9b0fa4176d6fe74e2fe69b77",
+    "sources/opm_2026_71-024.pdf": "93cb62cb8b41ea354f62928423e3b7f5c4dcbaa30e12122604a0bba5cdaad6e1",
+    "sources/opm_2026_71-027.pdf": "e5966e3e882b15758192d9af8e78e177958e7b2e0dc2eaa6b9d861de6d8ec702",
+    "sources/opm_2026_71-028.pdf": "05e71a2e92d83681ce4eaef0f39234d7ef8bf28de1779c9f136948ea83b60b56",
+    "sources/opm_2026_72-001.pdf": "a4405dd58ea865fc4991a564cbef031316248134aaa603a6b6bdefeeb170a7f7",
+    "sources/wi_auto_pi057.pdf": "2bb9e72bc5483210bc353982118f9988dfee3f7724f61ff5a531596d26610a59",
+    "sources/wi_health_pi225.pdf": "aae64417ece7459783d72b28a42bedede54afdbf1b93956921d442c31cb7c03b",
+    "sources/wi_ltc_pi047.pdf": "f3fca20d4e56fd8a763c765aa8c491c2ac88f8e5eda3806c90006e546543d531",
+    "sources/wi_property_claims_pi084.pdf": "ce46b7c9e9c39bc4f453e198ad214119b68fa97547661cb3e096909db24bbfc1",
+    "sources/wi_renters_pi017.pdf": "6e134771e51f2714bab95f3920747896cbb6c8f3b6213d746a1ce65bc655e5d2"
+  },
+  "inputs": {
+    "data/research_corpus/source_linked_public_v1/manifest.json": "93422b6913d125edfcea01684a2933a19402194dda258667637122a9a2b7fbd9",
+    "data/research_corpus/policy_wordings_v1/manifest.json": "1eafa206d8d16b36e49b040fda46f9880d4ba41e032ba4953799cf193a61c54c"
+  },
+  "limitations": [
+    "Eight plan brochures from seven plan families, all use an OPM format; not eight independent document genres.",
+    "Official archived benefit wordings; not personal issued policies, coverage decisions, or current advice.",
+    "Links validate published references and footer mappings, not legal applicability or reference correctness.",
+    "Native PDF text extraction can flatten tables; no VLM/table semantic accuracy is established.",
+    "FAQ answers are evaluated separately, never counted as PDF pages."
+  ]
+}

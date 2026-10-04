@@ -183,6 +183,10 @@ def main() -> None:
     ablation_parser.add_argument("--index-dir", type=Path, default=Path("data"))
     ablation_parser.add_argument("--visual-index-dir", type=Path, default=Path("data/03_index/colqwen2"))
     ablation_parser.add_argument("--top-k", type=int, default=5)
+    ablation_parser.add_argument(
+        "--include-openai", action="store_true",
+        help="Explicitly opt in to paid OpenAI embedding and answer ablations (requires OPENAI_API_KEY).",
+    )
 
     calibration_parser = subparsers.add_parser("run-calibration", help="Run selective prediction and abstention calibration report")
     calibration_parser.add_argument("--data-folder", type=Path, required=True)
@@ -589,6 +593,7 @@ def main() -> None:
             index_dir=args.index_dir,
             visual_index_dir=args.visual_index_dir,
             top_k=args.top_k,
+            include_openai=args.include_openai,
         )
         print("Ablation complete.")
         for name, path in outputs.items():

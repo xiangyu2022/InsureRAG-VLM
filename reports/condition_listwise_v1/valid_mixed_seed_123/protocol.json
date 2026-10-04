@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-10-01T23:01:41.164267+00:00",
+  "split": "valid",
+  "questions": 527,
+  "question_file_sha256": "96ff4137d801114086ceda75e16683e5b94036eaf40cba76a9d09c513dc86a71",
+  "answer_file_sha256": "c0afa04bc29fe46104994b5eeac921ccd27be03b52043deb9cf8ff31fff8adcb",
+  "answer_count": 47969,
+  "gold_injection": false,
+  "code_sha256": "f6c57011feb0f585343e9f215bc1594743075e64ed10400098ed78b8615792e0",
+  "selection_lock_sha256": null,
+  "selection_protocol_sha256": "d8d956f2f66e159e494e0e09dccb937d85e6bc8771c75287834140b568d5eed2",
+  "model": {
+    "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\insurerag-condition-listwise-v1-seed-123\\epoch-1",
+    "files_sha256": {
+      "config.json": "bde16d9648b01e19b9d4c5f3deca28cd2851fbbc660f8a90cecd87efde5c5429",
+      "model.safetensors": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+      "tokenizer.json": "91f1def9b9391fdabe028cd3f3fcc4efd34e5d1f08c3bf2de513ebb5911a1854",
+      "tokenizer_config.json": "88eb33800f51cc08e19ebe4dffbde5afbc9e517a993ede2861a22ed9c7e0be7f",
+      "training_provenance.json": "97987c9165c45f7178e42eeb9a5dcc032a00197bd2da096cece26cf8246528c0"
+    },
+    "checkpoint_sha256": "36f2ab73a0a6da26f10df0b031422651d4e26c79db6be5fd6bc37be6f603dc3c",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "max_length": 512,
+    "batch_size": 64,
+    "truncation": "longest_first",
+    "score": "raw single relevance logit",
+    "remote_code": false,
+    "fine_tuned_in_this_project": true,
+    "training_provenance": {
+      "fine_tuned_in_this_project": true,
+      "weights_sha256": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+      "initial_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+      "training_manifest_sha256": "7ec5f1d6b86775214c759ef816ff043e18a3ba19f3d37809b2c0f2e8c8a4fba6",
+      "training_protocol_sha256": "31b9dc43986a584dcc1b3fb16f792b90bedda5ef3406cd72f6b83b44b83828c5",
+      "training_code_sha256": "e85c73bd5c03f0d78ac14ad094686249cd7120c7877249d92dbcce3a526dee5d",
+      "seed": 123,
+      "epoch": 1,
+      "optimizer_steps": 2471,
+      "unique_training_questions": 25987,
+      "pair_exposures": 237174,
+      "recipe": "confidence-adjusted listwise ranking + previous specialist retention"
+    }
+  },
+  "candidate_source_sha256": "843ef5b14c643efac8a9a8bb428b09718a589ed25b55f488935849dd7daccd87"
+}

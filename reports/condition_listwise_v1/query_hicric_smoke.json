@@ -1,0 +1,49 @@
+{
+  "question": "How does COBRA coverage coordinate with Medicare?",
+  "corpus": "hicric",
+  "answer_candidates": 78830,
+  "candidates_scored": 156,
+  "config": {
+    "pool": "union200",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "selected_model": "seed_123",
+  "generation_calls": 0,
+  "research_retrieval_only": true,
+  "selection_lock_sha256": "f4eebfdb45836d31edc9152732dcf9f4e4c4622eeb9d34b3e310682e3a8b3dc0",
+  "model_weights_sha256": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+  "seconds_including_loading": 11.649095699889585,
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "rag_snippet::hicric_674deac7095547ee::p0001::s0003",
+      "text": "procurement costs. Consolidated Omnibus Budget Reconciliation Act of 1985 (COBRA) - A Title X provision that provides continuation of GHP coverage if elected. For aged or disabled Medicare beneficiaries, COBRA continuation coverage is secondary to Medicare because the coverage is by virtue of COBRA law rather than by virtue of current employment status. For an ESRD related Medicare beneficiary, COBRA continuation coverage, if elected, is primary to Medicare during the 30-month ESRD coordination period. See 42 CFR 411.161(a)(3) and 411.162(a)(3). Compromise - A settlement of differences by mutual consent or adjustment of matters in dispute by mutual concession; a negotiated settlement between parties who are in essentially equal bargaining positions, wherein neither party admits or concedes that he is entitled to less than he desires, but accepts less to affect the goal of ending the dispute. In an MSP situation under the Federal Claims Collection Act, a compromise represents the acceptance by the Regional Office (RO) of less than the full debt owed to Medicare, when the amount of the full debt does not exceed $100,000, or by Central Office",
+      "source_url": "https://web.archive.org/web/20230922171738/https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/msp105c01.pdf",
+      "doc_id": "hicric_674deac7095547ee",
+      "start_word": 360,
+      "end_word": 540,
+      "page_unit": "Logical source record; not a physical PDF page"
+    },
+    {
+      "rank": 2,
+      "answer_id": "rag_snippet::hicric_ff917b9347bbbae9::p0001::s0070",
+      "text": "came first, the employer may terminate existing COBRA coverage under its health plan when Medicare entitlement occurs. Where COBRA expressly permits termination of continuation coverage upon entitlement to Medicare there is one exception. The exception is that the plan may not terminate continuation coverage of an individual (and the individual's qualified dependents) if the individual retires on or before the date the employer substantially eliminates regular plan coverage by filing for Chapter 11, Bankruptcy. (See 26 U.S.C. 4980B(g)(1)(D), 29 U.S.C. 1162(2)(D), and 1167(3)(C).) B. Medicare is Secondary to COBRA Coverage To the extent COBRA coverage overlaps the 30-month ESRD MSP coordination period, Medicare is secondary payer for benefits that a GHP: Is required to keep in effect under the COBRA continuation requirements where Medicare entitlement occurs first; or Is required to keep in effect under the COBRA continuation requirements even after the individual becomes entitled to Medicare based on ESRD (i.e., the bankruptcy situation as described in subsection A above); or Voluntarily keeps in effect after the individual becomes entitled to Medicare on the basis of ESRD even though not",
+      "source_url": "https://web.archive.org/web/20230922171738/https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/msp105c02.pdf",
+      "doc_id": "hicric_ff917b9347bbbae9",
+      "start_word": 8400,
+      "end_word": 8580,
+      "page_unit": "Logical source record; not a physical PDF page"
+    },
+    {
+      "rank": 3,
+      "answer_id": "rag_snippet::hicric_ff917b9347bbbae9::p0001::s0069",
+      "text": "a GHP may terminate COBRA coverage. The court ruled that individuals who obtain other coverage (including Medicare) on or before the COBRA election date are permitted to continue this coverage along with COBRA. Thus, where ESRD-based Medicare Part A entitlement predates the COBRA qualifying event, the plan is obligated to offer COBRA coverage for a qualifying event such as termination of employment. To the extent the period of COBRA coverage overlaps the ESRD MSP coordination period, COBRA is primary and the employer plan has no discretion to terminate COBRA because of the ESRD-based Medicare entitlement. Those individuals who obtain other coverage (including Medicare) after the COBRA election date can be terminated from COBRA coverage. This means that where COBRA coverage came first, the employer may terminate existing COBRA coverage under its health plan when Medicare entitlement occurs. Where COBRA expressly permits termination of continuation coverage upon entitlement to Medicare there is one exception. The exception is that the plan may not terminate continuation coverage of an individual (and the individual's qualified dependents) if the individual retires on or before the",
+      "source_url": "https://web.archive.org/web/20230922171738/https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/msp105c02.pdf",
+      "doc_id": "hicric_ff917b9347bbbae9",
+      "start_word": 8280,
+      "end_word": 8460,
+      "page_unit": "Logical source record; not a physical PDF page"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "created_utc": "2026-10-03T02:07:14.591611+00:00",
+  "status": "verified",
+  "training_runs": [
+    {
+      "seed": 42,
+      "ablation": false,
+      "unique_questions": 31351,
+      "seconds": 246.5788364999462,
+      "peak_cuda_allocated_bytes": 1377132544,
+      "optimizer_steps": 3142,
+      "query_presentations": 100514,
+      "epochs": [
+        {
+          "epoch": 1,
+          "weights_sha256": "1e8accf999651729bd5122d608a41f974f0d0fa99b9fa665b92750ae84de0dd5",
+          "changed_parameters": 33212000,
+          "changed_tensors": 197,
+          "optimizer_steps": 1571,
+          "query_presentations": 50257
+        },
+        {
+          "epoch": 2,
+          "weights_sha256": "e067a9a14428aabb32dbd2f0e84a7af31bcb8290ffc6fe422faed906d4d5b857",
+          "changed_parameters": 33212027,
+          "changed_tensors": 197,
+          "optimizer_steps": 3142,
+          "query_presentations": 100514
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "ablation": false,
+      "unique_questions": 31351,
+      "seconds": 241.27445150003769,
+      "peak_cuda_allocated_bytes": 1366289408,
+      "optimizer_steps": 3142,
+      "query_presentations": 100514,
+      "epochs": [
+        {
+          "epoch": 1,
+          "weights_sha256": "226722ec2070363a426c944ec298704e852c114808c9e630b2388bdd48303ef0",
+          "changed_parameters": 33212003,
+          "changed_tensors": 197,
+          "optimizer_steps": 1571,
+          "query_presentations": 50257
+        },
+        {
+          "epoch": 2,
+          "weights_sha256": "83c810415c6db64dde15622ffc69abf2bc78ed3aa6573a9bddfdf4367f3afa76",
+          "changed_parameters": 33212045,
+          "changed_tensors": 197,
+          "optimizer_steps": 3142,
+          "query_presentations": 100514
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "ablation": true,
+      "unique_questions": 25887,
+      "seconds": 244.35368399997242,
+      "peak_cuda_allocated_bytes": 1380442112,
+      "optimizer_steps": 3142,
+      "query_presentations": 100514,
+      "epochs": [
+        {
+          "epoch": 1,
+          "weights_sha256": "9c34068408ad4eb7882a2995884f1ee3737934bc4cc61059bc5c26757afada71",
+          "changed_parameters": 33212040,
+          "changed_tensors": 197,
+          "optimizer_steps": 1571,
+          "query_presentations": 50257
+        },
+        {
+          "epoch": 2,
+          "weights_sha256": "84b7fcb1dd4bc4038bc1ff0d3bba6f5383d52e46f874018902a64ddbf242e5aa",
+          "changed_parameters": 33212056,
+          "changed_tensors": 197,
+          "optimizer_steps": 3142,
+          "query_presentations": 100514
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "ablation": true,
+      "unique_questions": 25887,
+      "seconds": 249.44034790014848,
+      "peak_cuda_allocated_bytes": 1366289408,
+      "optimizer_steps": 3142,
+      "query_presentations": 100514,
+      "epochs": [
+        {
+          "epoch": 1,
+          "weights_sha256": "159c055e1b4ca60334c2ed5f0787934f9e67a5b8003b19d6746f02c36d7a8676",
+          "changed_parameters": 33212027,
+          "changed_tensors": 197,
+          "optimizer_steps": 1571,
+          "query_presentations": 50257
+        },
+        {
+          "epoch": 2,
+          "weights_sha256": "39d7992696bd29d27aa6fe3b346e92d91b05ab4dc143134096b4275fd928e298",
+          "changed_parameters": 33212068,
+          "changed_tensors": 197,
+          "optimizer_steps": 3142,
+          "query_presentations": 100514
+        }
+      ]
+    }
+  ],
+  "primary_optimizer_steps": 6284,
+  "ablation_optimizer_steps": 6284,
+  "primary_query_presentations": 201028,
+  "ablation_query_presentations": 201028,
+  "original_document_encoder_weights_unchanged": true,
+  "fixed_reranker_weights_unchanged": true,
+  "serialization_buffer_difference": {
+    "name": "embeddings.position_ids",
+    "verified_value": "arange(512).expand(1, -1)",
+    "reason": "Deterministic non-persistent buffer omitted by Transformers 5 save_pretrained"
+  },
+  "forbidden_training_positive_or_denominator_overlap": 0,
+  "selection_lock_sha256": "431317429ff2eaabe0891902628aa71b78f703395e5efc031963b5cdd05227dd",
+  "evaluation": {
+    "valid": {
+      "summary_sha256": "8bbdce6a727ac6558e55b902646751faaa8480c41004e59f6112040edba1cb20",
+      "new_cross_pairs": 185482,
+      "reused_cross_pairs": 440049
+    },
+    "test": {
+      "summary_sha256": "fd36e7b17d520b7a8a8392725a0deb7e4055e9bffd81003147e8d7e4a87c1b95",
+      "new_cross_pairs": 183675,
+      "reused_cross_pairs": 565509
+    }
+  },
+  "checkpoint_files_sha256": "e4f6f6252eeb91c452804ae4d590dda73cf328205f47aa8dab54deb70266ed46",
+  "code_sha256": "62b64eae88cdc67fea9de813777a6d6e4acd8128395fcd08e71949bc72e06a2f"
+}

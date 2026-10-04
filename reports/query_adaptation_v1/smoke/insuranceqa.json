@@ -1,0 +1,44 @@
+{
+  "question": "What does renters liability insurance cover?",
+  "corpus": "insuranceqa",
+  "corpus_size": 27413,
+  "candidate_count": 179,
+  "query_configuration": {
+    "name": "seed_42_epoch_2_a50",
+    "model": "seed_42_epoch_2",
+    "seed": 42,
+    "epoch": 2,
+    "alpha": 0.5
+  },
+  "ranking_configuration": {
+    "pool": "union200",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "query_encoder_passes": 2,
+  "document_encoder": "unchanged BGE-small-en-v1.5",
+  "reranker_changed_this_iteration": false,
+  "selection_lock_sha256": "431317429ff2eaabe0891902628aa71b78f703395e5efc031963b5cdd05227dd",
+  "selected_query_weights_sha256": "e067a9a14428aabb32dbd2f0e84a7af31bcb8290ffc6fe422faed906d4d5b857",
+  "generation_calls": 0,
+  "research_retrieval_only": true,
+  "answers_expert_adjudicated": false,
+  "seconds_including_loading": 6.968806399963796,
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "13890",
+      "text": "A renters policy contains two major coverages. The property being covered is the personal property that the renter owns that is located in the rental unit (some coverage away from the unit.) The liability coverage provides assistance when you are sued for personal liability or property damage. There are other coverages included such as extra living expense and medical payments."
+    },
+    {
+      "rank": 2,
+      "answer_id": "18872",
+      "text": "Typically your personal property is covered by a renters insurance policy up to the policy limits and less your deductible. Liability coverage is also provided to help provide coveragefor accidents on your rented premise that you are deemed responsible for. There are many, many coverages offered by a renters policy. Contact a local agent to allow them to provide you with informationthe coverages and pricing with your area."
+    },
+    {
+      "rank": 3,
+      "answer_id": "6317",
+      "text": "Renters Insurance is an essential form of liability protection for renters that are concerned about protecting themselves from the result of what could be perceived as a negligent act. For example, there could be a smoke damage claim, a fire claim, a water damage claim or perhaps a slip & fall involving neglgence. The Landlord and in the case of an apartment, other tenants, could bring legal action against a renter. The only form of protection in such a case would be liability insurance provided as a section of your Renters Insurance. In some States and jurisdictions, Renters Insurance is a requirement on all lease agreements (standard) due to the court system being inundated with unnecessary law suits which could be settled by insurance. Renters Insurance is very inexpensive; if one doesn't wish to cover their own personal belongings, they could purchase only the minimum Personal Contents requirement but it would be recommended to purchase the maximum amount of Liability Insurance which in many cases would only be approximately $25 - $50 difference per year. For quotes in CA, AZ or NV, you may obtain a quote at the following link: WEBSITELINK"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-03T03:53:40.046728+00:00",
+  "answer_count": 192231,
+  "query_count": 33454,
+  "answer_file_sha256": "b7a2129398e131ed7844bffd9f97a0ebf64893f67c7cea6cd40a902820db2961",
+  "query_groups_sha256": "fe472a73c1e401da4c25a89a31166092f334aadf5fef2f2f56b15b38445b4a67",
+  "answer_embeddings_sha256": "0a6492fa82b870b50a63ca85945b675beb3489bbfbd30785254889a32690aa8f",
+  "training_queries_sha256": "daddd496c518ea55153031712cfc02c9910fdf63fc84e02145dc41cc3e859137",
+  "query_selection_sha256": "431317429ff2eaabe0891902628aa71b78f703395e5efc031963b5cdd05227dd",
+  "original_document_weights_sha256": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+  "adapted_query_weights_sha256": "e067a9a14428aabb32dbd2f0e84a7af31bcb8290ffc6fe422faed906d4d5b857",
+  "query_alpha": 0.5,
+  "test_queries_encoded": false
+}

@@ -1,0 +1,18 @@
+{
+  "version": "visual_counterfactual_v1",
+  "frozen_before_model_inference": true,
+  "label": "AI-authored synthetic image-only counterfactual diagnostic; not real-policy visual accuracy",
+  "files": {
+    "design.json": "1c0faea17011bb198b9c146c7a0ac5fc20dca9ec277ba6e66d571bb6d32eed1b",
+    "cases.jsonl": "9f318679c8e2de9e32da397f36565356e038f850b41088141f56f1aa4d10ca22",
+    "assets/visual_A.pdf": "40b53b0b9b17995b224ec7ca45a7347590ddb6848a54fb791b2d009508ef3923",
+    "assets/visual_A.png": "0ab8b099037c8011e27d842cfbbbaf4018cf65df025cbe728f706817e872e92a",
+    "assets/visual_B.pdf": "d6bc02d957d802ab12f6ae9915ba1babed09eac2fa1ca86558fa7b27fc8c0027",
+    "assets/visual_B.png": "4819c6eb824c812f389ee5bbe554c6ce496ba9bb78da100b9703828f264cb301",
+    "assets/visual_C.pdf": "b93a0136f810db6c27a0652a43a94f365ff7f30dc509dde4a44f2842ea95208c",
+    "assets/visual_C.png": "38381270f7994478445f8f8899a7d5f624f34ccfa91adcb7be34ffece6ed966a"
+  },
+  "cases": 12,
+  "answerable": 9,
+  "unsupported": 3
+}

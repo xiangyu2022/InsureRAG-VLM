@@ -1,0 +1,50 @@
+{
+  "question": "What are the requirements for Medicaid to pay after a third-party insurer?",
+  "corpus": "hicric",
+  "answer_candidates": 78830,
+  "retrieval_only": true,
+  "generation_calls": 0,
+  "fine_tuned_in_this_project": true,
+  "profile": "trained",
+  "selected_epoch": 1,
+  "config": {
+    "pool": "hybrid100",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "candidates_scored": 145,
+  "seconds_including_loading": 10.99926620000042,
+  "scope": "Archived public research evidence; snippet search is not evaluated policy reasoning",
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "rag_snippet::hicric_d6746b52dcaf0d28::p0001::s0001",
+      "text": "the payer of last resort. Except for certain statutory exclusions, you are required to cost avoid claims, rejecting those that may be payable by a third party. If probable third party liability is not established or benefits are not available from a third party, you must pay the claim if the services are covered by Medicaid. If the Medicaid agency learns of the existence of a liable third party after a claim is paid, or benefits become available from a third party after the claim is paid, you must seek recovery from that third party. When that third party is Medicare, neither the Medicare nor Medicaid statute, nor HHS's regulations or policies prohibit any state from recouping its Medicaid payment from providers in the situations where: (1) Medicare has determined that it is liable for the service at issue; or (2) a beneficiary, beneficiary representative, or state (as the beneficiarys subrogee) timely requests the provider to file a claim with Medicare and the provider fails to submit timely a complete claim to Medicare for the service at issue, and/or fails",
+      "source_url": "https://www.medicaid.gov/media/38961",
+      "doc_id": "hicric_d6746b52dcaf0d28",
+      "start_word": 120,
+      "end_word": 300,
+      "page_unit": "Logical source record; not a physical PDF page"
+    },
+    {
+      "rank": 2,
+      "answer_id": "rag_snippet::hicric_0376a78a4f256b46::p0001::s0069",
+      "text": "meet federal and state Medicaid provider requirements, including billing the beneficiarys third-party health insurance first (where applicable), before billing Medicaid, to determine the extent of the insurers payment liability. Whether or not an individual has an IEP/IFSP under the IDEA, the state Medicaid agency may suspend or terminate efforts to seek reimbursement from a liable third party if they determine that the recovery would not be cost-effective per the requirements set forth in 42 C.F.R. 433.139. Additionally, states may exempt certain items or services from TPL requirements when submission of claims for those items or services would always result in denial because they generally are not health care services covered by health insurers. The state must have clear and convincing documentation of non-coverage by insurers. If a state has adequate documentation of non-coverage, there is no need to further verify by submitting claims because there would be no liable third party and Medicaid TPL rules would not come into play. The controlling regulation is found at 42 C.F.R. 433.139(b)(1), which states that \"[t]he establishment of third-party liability takes place when",
+      "source_url": "https://www.medicaid.gov/media/142261",
+      "doc_id": "hicric_0376a78a4f256b46",
+      "start_word": 8280,
+      "end_word": 8460,
+      "page_unit": "Logical source record; not a physical PDF page"
+    },
+    {
+      "rank": 3,
+      "answer_id": "rag_snippet::hicric_2d14a1d31150fc2f::p0001::s0068",
+      "text": "Act) funded Medicaid funded Medicaid Expansions) Expansions) apply. Third Party N/A N/A Group health plan is Qualified employer- Liability/Resource treated as a third party sponsored coverage is treated resource to pay all or part as a third party resource to of the cost of care for the pay all or part of the cost of individual with respect to care for the individual (and items or services covered the Medicaid-eligible under the Medicaid State parent). plan. Substitution States must have a States must apply same No requirement. No requirement. Strategy six-month waiting waiting period (if period. applicable) to premium assistance as is applied to direct coverage. Employer States must Employer must No minimum employer Employer must contribute at Contribution identify a contribute at least 40 contribution. least 40 percent toward the minimum percent toward the cost cost of the premium. contribution level; of the premium. there is no Federal minimum. Cost Effectiveness CHIPRA changes This program does not Expenditures for an The provision is not subject the cost require a cost- individual enrolled in a to a cost effectiveness test.",
+      "source_url": "https://www.medicaid.gov/media/37251",
+      "doc_id": "hicric_2d14a1d31150fc2f",
+      "start_word": 8160,
+      "end_word": 8340,
+      "page_unit": "Logical source record; not a physical PDF page"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "documents": [
+    {
+      "path": "SCENARIO-A.pdf",
+      "packet_id": "SCENARIO-A",
+      "document_role": "declarations",
+      "source_origin": "synthetic_stress_fixture",
+      "source_name": "SCENARIO-A.pdf",
+      "source_authority": "Invented regression fixture; no legal authority",
+      "policy_number": "SYN-A-001"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Official PDF source check
+
+All six benchmark guides were downloaded from their official agency URLs on 2026-09-20 with normal TLS verification. `audit.json` records resolved URLs, byte sizes, SHA-256 hashes, and physical page counts. The freshly downloaded files stay outside the source archive; `scripts/audit_public_pdf_sources.py` reproduces the audit.
+
+Of the 24 annotated answerable evidence spans, **23 matched their stated physical PDF page** under whitespace and Unicode NFKC normalization. The remaining development span, `dev_de_homeowners_guide_04`, uses a straight apostrophe in `property's`, while the official Delaware homeowners PDF page 10 contains a typographic apostrophe in `property’s`. Reading the actual extracted passage confirms the same 2% deductible wording on that page. This is a typography difference, not a different factual value or page. The original audit count, corpus, benchmark labels, and scores were preserved.
+
+Thus this check supports the provenance/page alignment of those 24 selected spans, with one documented typography normalization difference. It does not authenticate the unavailable original PDF downloads, establish that all56 corpus sources are current, or validate current insurance law. The frozen evaluation continues to use the committed archived corpus.
+
+Original sources: [Delaware auto](https://insurance.delaware.gov/wp-content/uploads/sites/15/2022/09/Auto-Insurance-Guide.pdf), [Delaware homeowners](https://insurance.delaware.gov/wp-content/uploads/sites/15/2022/09/Homeowners-Guide.pdf), [Maryland auto](https://insurance.maryland.gov/Consumer/Documents/publications/autoinsuranceguide.pdf), [Maryland homeowners](https://insurance.maryland.gov/Consumer/Documents/publications/homeownersinsguide.pdf), [North Carolina disability](https://www.ncdoi.gov/consumers-guide-disability-insurance/open), [North Carolina travel](https://www.ncdoi.gov/consumers-guide-travel-insurance/open).

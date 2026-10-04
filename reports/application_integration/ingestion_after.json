@@ -1,0 +1,196 @@
+{
+  "default-images": {
+    "scanned_rejected": {
+      "status": 422,
+      "payload": {
+        "ok": false,
+        "error": "No readable text was found in 1 document page(s). This page has no selectable text and local OCR could not run. Install/configure Tesseract or upload a searchable PDF. The separate image-QA API was not invoked. This upload was not activated.",
+        "active_documents_unchanged": true
+      },
+      "failed_file_retained": false
+    },
+    "valid_upload_after_failure": {
+      "status": 200,
+      "payload": {
+        "ok": true,
+        "filename": "policy.pdf",
+        "corpus": {
+          "mode": "uploaded",
+          "label": "policy.pdf",
+          "filenames": [
+            "policy.pdf"
+          ],
+          "ingestion": {
+            "answer_input": "text",
+            "total_pages": 2,
+            "readable_pages": 1,
+            "blank_pages": 1,
+            "unreadable_pages": 0,
+            "pages": [
+              {
+                "source": "policy.pdf#page=1",
+                "status": "readable_text",
+                "text_characters": 27,
+                "warning": null
+              },
+              {
+                "source": "policy.pdf#page=2",
+                "status": "blank_page",
+                "text_characters": 0,
+                "warning": null
+              }
+            ]
+          }
+        }
+      },
+      "answer": "- Collision deductible: $735.",
+      "abstain": false,
+      "generation_used": false
+    },
+    "mixed_readable_scanned_pdf": {
+      "status": 200,
+      "payload": {
+        "ok": true,
+        "filename": "mixed.pdf",
+        "corpus": {
+          "mode": "uploaded",
+          "label": "mixed.pdf, policy.pdf",
+          "filenames": [
+            "mixed.pdf",
+            "policy.pdf"
+          ],
+          "ingestion": {
+            "answer_input": "text",
+            "total_pages": 4,
+            "readable_pages": 2,
+            "blank_pages": 1,
+            "unreadable_pages": 1,
+            "pages": [
+              {
+                "source": "mixed.pdf#page=1",
+                "status": "readable_text",
+                "text_characters": 27,
+                "warning": null
+              },
+              {
+                "source": "mixed.pdf#page=2",
+                "status": "ocr_unavailable",
+                "text_characters": 0,
+                "warning": "This page has no selectable text and local OCR could not run. Install/configure Tesseract or upload a searchable PDF. The separate image-QA API was not invoked."
+              },
+              {
+                "source": "policy.pdf#page=1",
+                "status": "readable_text",
+                "text_characters": 27,
+                "warning": null
+              },
+              {
+                "source": "policy.pdf#page=2",
+                "status": "blank_page",
+                "text_characters": 0,
+                "warning": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "text-only": {
+    "scanned_rejected": {
+      "status": 422,
+      "payload": {
+        "ok": false,
+        "error": "No readable text was found in 1 document page(s). No selectable text was found and page rendering/OCR is disabled. Upload a searchable PDF or enable local OCR. This upload was not activated.",
+        "active_documents_unchanged": true
+      },
+      "failed_file_retained": false
+    },
+    "valid_upload_after_failure": {
+      "status": 200,
+      "payload": {
+        "ok": true,
+        "filename": "policy.pdf",
+        "corpus": {
+          "mode": "uploaded",
+          "label": "policy.pdf",
+          "filenames": [
+            "policy.pdf"
+          ],
+          "ingestion": {
+            "answer_input": "text",
+            "total_pages": 2,
+            "readable_pages": 1,
+            "blank_pages": 0,
+            "unreadable_pages": 1,
+            "pages": [
+              {
+                "source": "policy.pdf#page=1",
+                "status": "readable_text",
+                "text_characters": 27,
+                "warning": null
+              },
+              {
+                "source": "policy.pdf#page=2",
+                "status": "no_selectable_text",
+                "text_characters": 0,
+                "warning": "No selectable text was found and page rendering/OCR is disabled. Upload a searchable PDF or enable local OCR."
+              }
+            ]
+          }
+        }
+      },
+      "answer": "- Collision deductible: $735.",
+      "abstain": false,
+      "generation_used": false
+    },
+    "mixed_readable_scanned_pdf": {
+      "status": 200,
+      "payload": {
+        "ok": true,
+        "filename": "mixed.pdf",
+        "corpus": {
+          "mode": "uploaded",
+          "label": "mixed.pdf, policy.pdf",
+          "filenames": [
+            "mixed.pdf",
+            "policy.pdf"
+          ],
+          "ingestion": {
+            "answer_input": "text",
+            "total_pages": 4,
+            "readable_pages": 2,
+            "blank_pages": 0,
+            "unreadable_pages": 2,
+            "pages": [
+              {
+                "source": "mixed.pdf#page=1",
+                "status": "readable_text",
+                "text_characters": 27,
+                "warning": null
+              },
+              {
+                "source": "mixed.pdf#page=2",
+                "status": "no_selectable_text",
+                "text_characters": 0,
+                "warning": "No selectable text was found and page rendering/OCR is disabled. Upload a searchable PDF or enable local OCR."
+              },
+              {
+                "source": "policy.pdf#page=1",
+                "status": "readable_text",
+                "text_characters": 27,
+                "warning": null
+              },
+              {
+                "source": "policy.pdf#page=2",
+                "status": "no_selectable_text",
+                "text_characters": 0,
+                "warning": "No selectable text was found and page rendering/OCR is disabled. Upload a searchable PDF or enable local OCR."
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

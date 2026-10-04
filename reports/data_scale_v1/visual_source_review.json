@@ -1,0 +1,23 @@
+{
+  "author": "AI visual inspection, not insurance expert adjudication",
+  "inspected_pairs": [
+    {
+      "doc": "opm_2026_71-015",
+      "source": 16,
+      "target": 36,
+      "printed_target": "34",
+      "source_quote": ", after the calendar year deductible under High Option and 80%, after the calendar year deductible under Standard Option. See Section 5(a), page 34. \u2022 The double contrast barium enema tests are not included under the USPSTF A&B",
+      "target_quote": "High and Standard Option Benefit Description You Pay After the calendar year deductible... Preventive care, adult (cont.) High Option Standard Option Note: Contact us for informati"
+    },
+    {
+      "doc": "opm_2026_71-024",
+      "source": 113,
+      "target": 31,
+      "printed_target": "29",
+      "source_quote": "protection out-of-pocket maximum and CDHP Section 5. Traditional Health Coverage for more details. If you are enrolled in our PDP EGWP, see page 29 for additional information about your out-of-pocket maximum. Wellness and Other",
+      "target_quote": "Your catastrophic After your (deductible, copayments and coinsurance) reaches the out-of-pocket maximum protection out-of-pocket you do not have to pay any more for covered service"
+    }
+  ],
+  "finding": "Source literal references and target printed labels align; physical page = printed page + 2 in the four inspected pages. Cost-share tables contain multiple plan columns, so flat text is not semantic table validation.",
+  "other_documents": "Native source text and footer geometry checked programmatically; no claim of visual review for every page."
+}

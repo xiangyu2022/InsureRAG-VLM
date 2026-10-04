@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-10-03T01:18:37.205444+00:00",
+  "training_questions": 31351,
+  "source_domains": {
+    "insuranceqa": 11629,
+    "government": 259,
+    "general": 13999,
+    "finance": 5464
+  },
+  "additional_finance_questions": 5464,
+  "answer_candidates": 105810,
+  "eligible_training_answers": 100465,
+  "removed_previous_training_questions": 100,
+  "parent_training_sha256": "7ec5f1d6b86775214c759ef816ff043e18a3ba19f3d37809b2c0f2e8c8a4fba6",
+  "fiqa_fixture_sha256": "b591c40c5454148d30f1c3f1aaa2b523befc54a826e19680171b9df224301bb2",
+  "code_sha256": "98cb7464d94c532a2672797ef8416ae91eae5ab8beb0eee9f0331b42d4c306a5",
+  "files": {
+    "answers.jsonl": "8f923f2c81e2d512c875b377be5b118f86b21c377ae91b84bb6d52c4b852eabb",
+    "isolation.json": "b032affee53eaf3f13ad72f37d770b708bc08a2331c6c45d9ee4dc00f0ad2b6d",
+    "train_groups.jsonl": "4f94cf9d1d7c3401626738072f31867d6fefa6ace660de1e237658ee3e514ba0"
+  }
+}

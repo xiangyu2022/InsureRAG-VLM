@@ -1,0 +1,68 @@
+{
+  "created_utc": "2026-10-01T20:47:59.294373+00:00",
+  "counts": {
+    "train": {
+      "government": 213,
+      "general": 7999
+    },
+    "valid": {
+      "government": 127,
+      "general": 400
+    },
+    "test": {
+      "government": 81,
+      "general": 600
+    }
+  },
+  "source_groups": {
+    "train": {
+      "government": 28,
+      "general": 442
+    },
+    "valid": {
+      "government": 14,
+      "general": 24
+    },
+    "test": {
+      "government": 14,
+      "general": 24
+    }
+  },
+  "answer_candidates": 20556,
+  "squad_upstream": {
+    "train": {
+      "url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v1.1.json",
+      "sha256": "3527663986b8295af4f7fcdff1ba1ff3f72d07d61a20f487cb238a6ef92fd955",
+      "version": "1.1"
+    },
+    "dev": {
+      "url": "https://rajpurkar.github.io/SQuAD-explorer/dataset/dev-v1.1.json",
+      "sha256": "95aa6a52d5d6a735563366753ca50492a658031da74f301ac5238b03966972c9",
+      "version": "1.1"
+    }
+  },
+  "government_upstream_manifest_sha256": "7770250b6a456ba9cfee852e19f0d2776a1331a6f02b5f2db4cb005f3fd9228a",
+  "legacy_government_test_manifest_sha256": "f41791e48e6a18a88caa95ae28073e54371873baa75ae0a16484b4207826f6bd",
+  "split_unit": "canonical government URL or Wikipedia article title; new train/valid/test source groups disjoint",
+  "government_split_seed": "gov-split-20261001",
+  "squad_split_seed": "squad-split-20261001",
+  "frozen_before_inference": true,
+  "extraction_code_sha256": "66be7a7f5c120a6ef453399e6322f2d5af3fa52c27b5c3030eb7d3462e24fa61",
+  "licenses": [
+    "SQuAD CC BY-SA 4.0 with original Wikipedia attribution",
+    "HICRIC CC BY-SA 4.0 with original government source attribution"
+  ],
+  "limitations": [
+    "Derived paragraph/answer retrieval, not official SQuAD span EM/F1.",
+    "Public pretrained-model exposure unknown.",
+    "Government mechanical extraction is not expert adjudication.",
+    "Source disjointness is not publisher/topic disjointness."
+  ],
+  "files": {
+    "train.jsonl": "d754968a0544e32c480f67909e760219ea29d2c6049c96ba7cf4aec7a3ac507d",
+    "valid.jsonl": "96ff4137d801114086ceda75e16683e5b94036eaf40cba76a9d09c513dc86a71",
+    "test.jsonl": "66e781bb4554c0aae6a7e7c414d8857abd5041f7b6a7b43dc8e17c7b5373ec07",
+    "answers.jsonl": "a668460f5b7616ffbd7a82513820f1df63d598e07ad10306a545803dd84f5dbf",
+    "audit.json": "e820540fa56faf7706fe280cc9300434dc3f3238d4a61aec74d18d93d7a169b4"
+  }
+}

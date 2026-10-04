@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-10-01T17:00:27.271999+00:00",
+  "fixture_lock_sha256": "506c6691a4b99fb5f5936eb3afd654b3d8fe59d911d3db638f51d537add25ec0",
+  "code_sha256": {
+    "scripts/eval_policy_navigation.py": "94985b373f050ea9a639b4044ec1e5b64a7d277016da87e816e2b732d9649974",
+    "src/insurerag_vlm/graph.py": "b93be4303a195b05d6dfd831b16a984f8de69226f51fc2cfccad44b247bdfa4e",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872",
+    "scripts/build_policy_wordings.py": "b298ad3a2dc35f1282c7c2cba1992596661418eb350a265913848516d665aa32"
+  },
+  "generation_calls": 0,
+  "seed": "Known anchor page is supplied to every arm",
+  "candidate_scope": "Same explicitly identified plan brochure",
+  "budgets": {
+    "context_pages": 3,
+    "graph_hops": 2,
+    "graph_expansions": 8
+  },
+  "arms": [
+    "anchor_plus_bm25",
+    "anchor_plus_graph_then_bm25",
+    "direct_printed_page_lookup"
+  ],
+  "limitations": [
+    "Labels and edges share literal reference extraction; this is an integration diagnostic, not independent graph extraction accuracy.",
+    "Anchor is supplied. Does not measure end-to-end natural-question answering or support legal precedence.",
+    "No synthetic numeric variants. Multiple references from the same plan are correlated; do not use question-level confidence intervals.",
+    "Direct lookup is included because following a literal page number does not require a graph."
+  ]
+}

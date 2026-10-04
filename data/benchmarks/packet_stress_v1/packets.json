@@ -1,0 +1,204 @@
+{
+  "version": "packet_stress_v1",
+  "seed": 42,
+  "status": "AI-authored synthetic regression, not held-out policy accuracy",
+  "numeric_values": [
+    9200,
+    2500,
+    1400,
+    4600,
+    4200,
+    3900,
+    2800,
+    2400,
+    9700,
+    8000,
+    2200,
+    8600
+  ],
+  "packets": [
+    {
+      "packet_id": "SCENARIO-A",
+      "description": "Multi-coverage declarations with separate values.",
+      "documents": [
+        {
+          "filename": "SCENARIO-A.pdf",
+          "title": "Synthetic property declarations",
+          "pages": [
+            "Policy identifier SYN-A-001. Coverage A dwelling limit: $535,000. Coverage C personal property limit: $85,000. These are separate coverage limits, not a combined limit.",
+            "For policy SYN-A-001, the property damage deductible is $9,200 per loss. The personal liability limit is $305,000 per occurrence. The liability limit is not the property deductible."
+          ],
+          "metadata": {
+            "document_role": "declarations",
+            "source_origin": "synthetic_stress_fixture",
+            "source_name": "SCENARIO-A.pdf",
+            "source_authority": "Invented regression fixture; no legal authority",
+            "policy_number": "SYN-A-001"
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "SCENARIO-B",
+      "description": "Actual declarations alongside a clearly labeled educational example.",
+      "documents": [
+        {
+          "filename": "SCENARIO-B-DECLARATIONS.pdf",
+          "title": "Synthetic auto declarations",
+          "pages": [
+            "Policy identifier SYN-B-001. Collision deductible: $2,500. Comprehensive deductible: $1,400. These are the actual deductible amounts declared in this invented policy. The annual premium is not stated in this packet."
+          ],
+          "metadata": {
+            "document_role": "declarations",
+            "source_origin": "synthetic_stress_fixture",
+            "source_name": "SCENARIO-B-DECLARATIONS.pdf",
+            "source_authority": "Invented regression fixture; no legal authority",
+            "policy_number": "SYN-B-001"
+          }
+        },
+        {
+          "filename": "SCENARIO-B-GUIDE.pdf",
+          "title": "Educational worked example only",
+          "pages": [
+            "This page is an educational example and is not a declaration for SYN-B-001. In this example only, collision repair costs are $2,900 and the collision deductible is $500, so the example insurer payment is $2,400. None of these example amounts establish the terms of any issued policy."
+          ],
+          "metadata": {
+            "document_role": "guide",
+            "source_origin": "synthetic_stress_fixture",
+            "source_name": "SCENARIO-B-GUIDE.pdf",
+            "source_authority": "Invented regression fixture; no legal authority"
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "SCENARIO-C",
+      "description": "Declarations and a claim report whose policy identifiers do not match.",
+      "documents": [
+        {
+          "filename": "SCENARIO-C-DECLARATIONS.pdf",
+          "title": "Synthetic property declarations",
+          "pages": [
+            "Policy identifier SYN-C-001. Dwelling limit: $265,000. This declarations page supplies no policy effective or expiration date. It does not list an approved settlement amount for any claim."
+          ],
+          "metadata": {
+            "document_role": "declarations",
+            "source_origin": "synthetic_stress_fixture",
+            "source_name": "SCENARIO-C-DECLARATIONS.pdf",
+            "source_authority": "Invented regression fixture; no legal authority",
+            "policy_number": "SYN-C-001"
+          }
+        },
+        {
+          "filename": "SCENARIO-C-CLAIM.pdf",
+          "title": "Unmatched synthetic claim report",
+          "pages": [
+            "Claim identifier SYN-CLAIM-OTHER. Policy identifier on this claim report: SYN-OTHER-009. Reported cause of loss: hail. Reported repair estimate: $8,600. No coverage acceptance or approved insurer payment is recorded. This report does not identify policy SYN-C-001."
+          ],
+          "metadata": {
+            "document_role": "claim_form",
+            "source_origin": "synthetic_stress_fixture",
+            "source_name": "SCENARIO-C-CLAIM.pdf",
+            "source_authority": "Invented regression fixture; no legal authority",
+            "policy_number": "SYN-OTHER-009"
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "SCENARIO-D",
+      "description": "An explicit dated endorsement that replaces one base-policy limit.",
+      "documents": [
+        {
+          "filename": "SCENARIO-D-BASE.pdf",
+          "title": "Synthetic base policy",
+          "pages": [
+            "Policy identifier SYN-D-001. Base form effective January 1, 2026. Section WB: Water backup coverage limit is $4,600. Later issued endorsements explicitly replacing Section WB control that limit. Earthquake coverage is not described on this page."
+          ],
+          "metadata": {
+            "document_role": "base_policy",
+            "source_origin": "synthetic_stress_fixture",
+            "source_name": "SCENARIO-D-BASE.pdf",
+            "source_authority": "Invented regression fixture; no legal authority",
+            "policy_number": "SYN-D-001",
+            "effective_date": "2026-01-01"
+          }
+        },
+        {
+          "filename": "SCENARIO-D-ENDORSEMENT.pdf",
+          "title": "Synthetic issued endorsement WB-01",
+          "pages": [
+            "Policy identifier SYN-D-001. Endorsement WB-01 effective April 1, 2026. This issued endorsement replaces the entire Section WB water backup limit in the January 1, 2026 base form. The water backup coverage limit is now $4,200. No other coverage limit is established by this endorsement."
+          ],
+          "metadata": {
+            "document_role": "endorsement",
+            "source_origin": "synthetic_stress_fixture",
+            "source_name": "SCENARIO-D-ENDORSEMENT.pdf",
+            "source_authority": "Invented regression fixture; no legal authority",
+            "policy_number": "SYN-D-001",
+            "effective_date": "2026-04-01",
+            "form_code": "WB-01"
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "SCENARIO-E",
+      "description": "Conflicting unsequenced versions without dates or precedence.",
+      "documents": [
+        {
+          "filename": "SCENARIO-E-VERSION-A.pdf",
+          "title": "Synthetic unsequenced version A",
+          "pages": [
+            "Policy identifier SYN-E-001. Version label A. Equipment coverage limit: $3,900. Equipment deductible: $2,400. This copy has no effective date, issue date, signature, or precedence statement. The packet also includes a conflicting version B; which version controls is not established."
+          ],
+          "metadata": {
+            "document_role": "base_policy",
+            "source_origin": "synthetic_stress_fixture",
+            "source_name": "SCENARIO-E-VERSION-A.pdf",
+            "source_authority": "Invented regression fixture; no legal authority",
+            "policy_number": "SYN-E-001",
+            "version_id": "A"
+          }
+        },
+        {
+          "filename": "SCENARIO-E-VERSION-B.pdf",
+          "title": "Synthetic unsequenced version B",
+          "pages": [
+            "Policy identifier SYN-E-001. Version label B. Equipment coverage limit: $2,800. Equipment deductible: $9,700. This copy has no effective date, issue date, signature, or precedence statement. The packet also includes a conflicting version A; which version controls is not established."
+          ],
+          "metadata": {
+            "document_role": "base_policy",
+            "source_origin": "synthetic_stress_fixture",
+            "source_name": "SCENARIO-E-VERSION-B.pdf",
+            "source_authority": "Invented regression fixture; no legal authority",
+            "policy_number": "SYN-E-001",
+            "version_id": "B"
+          }
+        }
+      ]
+    },
+    {
+      "packet_id": "SCENARIO-F",
+      "description": "Near-duplicate scheduled property pages with different item limits.",
+      "documents": [
+        {
+          "filename": "SCENARIO-F-SCHEDULE.pdf",
+          "title": "Synthetic scheduled property",
+          "pages": [
+            "Policy identifier SYN-F-001. Schedule item CAMERA. The scheduled camera coverage limit is $8,000. This limit applies only to the camera, not to laptop or jewelry. No blanket limit for all property is stated.",
+            "Policy identifier SYN-F-001. Schedule item LAPTOP. The scheduled laptop coverage limit is $2,200. This limit applies only to the laptop, not to camera or jewelry. No blanket limit for all property is stated.",
+            "Policy identifier SYN-F-001. Schedule item JEWELRY. The scheduled jewelry coverage limit is $8,600. This limit applies only to jewelry, not to camera or laptop. No blanket limit for all property is stated."
+          ],
+          "metadata": {
+            "document_role": "schedule",
+            "source_origin": "synthetic_stress_fixture",
+            "source_name": "SCENARIO-F-SCHEDULE.pdf",
+            "source_authority": "Invented regression fixture; no legal authority",
+            "policy_number": "SYN-F-001"
+          }
+        }
+      ]
+    }
+  ]
+}

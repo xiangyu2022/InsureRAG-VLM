@@ -1,0 +1,21 @@
+{
+  "recorded_utc": "2026-10-01T23:01:16.189171+00:00",
+  "suites": {
+    "full": {
+      "passed": 288,
+      "skipped": 0,
+      "subtests_passed": 58,
+      "log_file": "pytest_full.txt",
+      "log_sha256": "90d1043f609a84f498aca24e5a077925d507472f33d8612dafb95a3954da69d3"
+    },
+    "minimal": {
+      "passed": 267,
+      "skipped": 9,
+      "subtests_passed": 58,
+      "log_file": "pytest_minimal.txt",
+      "log_sha256": "b8f1b3ce1ca73c726a352117a1ea6ec8633772e6f5231f5e3b441b0a8d6f33ef"
+    }
+  },
+  "includes": "Ambiguous-negative sampling/extraction and listwise gradient/invariance regression tests; existing project tests.",
+  "real_model_inference_checked_separately": true
+}

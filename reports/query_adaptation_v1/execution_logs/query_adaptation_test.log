@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\InsureRAG-VLM\scripts\verify_query_adaptation.py", line 137, in <module>
+    main(p.parse_args())
+  File "C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\InsureRAG-VLM\scripts\verify_query_adaptation.py", line 77, in main
+    assert set(produced) == set(weights)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\InsureRAG-VLM\scripts\run_query_adaptation_tests.py", line 24, in <module>
+    subprocess.run([sys.executable, 'scripts/verify_query_adaptation.py', '--require-ablation'], cwd=ROOT, check=True)
+  File "C:\Users\zhan6\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\.venv-qwen-smoke\\Scripts\\python.exe', 'scripts/verify_query_adaptation.py', '--require-ablation']' returned non-zero exit status 1.

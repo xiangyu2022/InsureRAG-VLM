@@ -1,0 +1,301 @@
+{
+  "created_utc": "2026-10-03T05:24:32.112288+00:00",
+  "split": "valid",
+  "checkpoint": "seed_42_epoch_1",
+  "cross_weight": 0.5,
+  "illustrative_cases_not_random_error_prevalence_sample": true,
+  "used_for_retraining_or_selection_rule_changes": false,
+  "source_score_files_sha256": {
+    "fiqa/previous": "307837dc0b610b368c9e74c8b1a15817ee8abf68f973135a0a1e9549500b23a7",
+    "fiqa/seed_42_epoch_1": "3a4836edd3f7ba0060c04938e6a3b0a89e58e9910b589d84a452937082af58ef",
+    "finqa/previous": "b62086046363f963434fa4264c6d97c4bcce7c91808e476174490b888209cf31",
+    "finqa/seed_42_epoch_1": "ae486c2e16f4325305e0d4a7d2759d5b62c50d5dba07f0787410079be7f83751"
+  },
+  "cases": [
+    {
+      "cohort": "fiqa",
+      "id": "fiqa_q_543",
+      "question": "What happens to your spouse's sole proprietorship if they die?",
+      "title_zh": "事件条件错配",
+      "assistant_observation_zh": "题目询问配偶去世后的独资企业处理。新首条文章讨论经营亏损与税务处理：保留了独资企业主题，遗漏了去世这一事件条件。这里只判断主题对应，不判断原文法律建议是否正确。",
+      "gold": [
+        {
+          "id": "fiqa_a_504419",
+          "text": "For sure you should get a lawyer on this one, but it would seem to me that the simplest path forward would be to convert the business to a partnership where both spouses are owners, and to write a clause into the partnership agreement stipulating what happens upon death of a partner.  Such an approach really should be done with a lawyer to make sure that it's all legally sound and will stand up in court if needed.",
+          "ranks": {
+            "previous": 1,
+            "seed_42_epoch_1": 2
+          }
+        }
+      ],
+      "top5": {
+        "previous": [
+          {
+            "id": "fiqa_a_504419",
+            "text": "For sure you should get a lawyer on this one, but it would seem to me that the simplest path forward would be to convert the business to a partnership where both spouses are owners, and to write a clause into the partnership agreement stipulating what happens upon death of a partner.  Such an approach really should be done with a lawyer to make sure that it's all legally sound and will stand up in court if needed."
+          },
+          {
+            "id": "fiqa_a_19183",
+            "text": "\"If your sole proprietorship losses exceed all other sources of taxable income, then you have what's called a Net Operating Loss (NOL). You will have the option to \"\"carry back\"\" and amend a return you filed in the last 2 years where you owed tax, or you can \"\"carry forward\"\" the losses and decrease your taxes in a future year, up to 20 years in the future. For more information see the IRS links for NOL. Note: it's important to make sure you file the NOL correctly so I'd advise speaking with an accountant. (Especially if the loss is greater than the cost of the accountant...)\""
+          },
+          {
+            "id": "fiqa_a_178942",
+            "text": "If your business name is your name, you are automatically considered a sole-proprietorship and any income you generate and expenses you incur can be calculated on your personal tax return. You can use QuickTax Home & Business tax software to lead you through the steps; you don't even need an accountant. One drawback of a sole-proprietorship in your name is liability. You are personally responsible for the business because you are the business. If you get sued, you can lose everything. To limit that liability you can look into opening a corporation. If the corporation gets sued you are insulated from that; the corporation goes bankrupt, not you. A lawyer and an accountant will be required to give you solid advice on this direction."
+          },
+          {
+            "id": "fiqa_a_599545",
+            "text": "You should probably consult an attorney. However, if the owner was a corporation/LLC and it has been officially dissolved, you can provide an evidence of that from your State's department of State/Corporations to show that their request is unfeasible. If the owner was a sole-proprietor, then that may be harder as you'll need to track the person down and have him close the plan."
+          },
+          {
+            "id": "fiqa_a_409184",
+            "text": "Generally speaking the bank accounts and credit card accounts remain open.  Banks and the credit card companies don't monitor public records on a daily basis.  Instead, whoever is handling your estate will need to obtain copies of your death certificate and they will then search your paper records to identify all accounts (reason to get your act together - there are books on the subject).  The executor will work with the banks and card companies to make sure all your charges and payments clear (common to have them open for months or even a year) and to make close or transfer autopays.  They will make sure to notify the credit agencies to flag your accounts so no new accounts can be created.  MANY copies of the death certicates are needed."
+          }
+        ],
+        "seed_42_epoch_1": [
+          {
+            "id": "fiqa_a_19183",
+            "text": "\"If your sole proprietorship losses exceed all other sources of taxable income, then you have what's called a Net Operating Loss (NOL). You will have the option to \"\"carry back\"\" and amend a return you filed in the last 2 years where you owed tax, or you can \"\"carry forward\"\" the losses and decrease your taxes in a future year, up to 20 years in the future. For more information see the IRS links for NOL. Note: it's important to make sure you file the NOL correctly so I'd advise speaking with an accountant. (Especially if the loss is greater than the cost of the accountant...)\""
+          },
+          {
+            "id": "fiqa_a_504419",
+            "text": "For sure you should get a lawyer on this one, but it would seem to me that the simplest path forward would be to convert the business to a partnership where both spouses are owners, and to write a clause into the partnership agreement stipulating what happens upon death of a partner.  Such an approach really should be done with a lawyer to make sure that it's all legally sound and will stand up in court if needed."
+          },
+          {
+            "id": "fiqa_a_409184",
+            "text": "Generally speaking the bank accounts and credit card accounts remain open.  Banks and the credit card companies don't monitor public records on a daily basis.  Instead, whoever is handling your estate will need to obtain copies of your death certificate and they will then search your paper records to identify all accounts (reason to get your act together - there are books on the subject).  The executor will work with the banks and card companies to make sure all your charges and payments clear (common to have them open for months or even a year) and to make close or transfer autopays.  They will make sure to notify the credit agencies to flag your accounts so no new accounts can be created.  MANY copies of the death certicates are needed."
+          },
+          {
+            "id": "fiqa_a_178942",
+            "text": "If your business name is your name, you are automatically considered a sole-proprietorship and any income you generate and expenses you incur can be calculated on your personal tax return. You can use QuickTax Home & Business tax software to lead you through the steps; you don't even need an accountant. One drawback of a sole-proprietorship in your name is liability. You are personally responsible for the business because you are the business. If you get sued, you can lose everything. To limit that liability you can look into opening a corporation. If the corporation gets sued you are insulated from that; the corporation goes bankrupt, not you. A lawyer and an accountant will be required to give you solid advice on this direction."
+          },
+          {
+            "id": "fiqa_a_356035",
+            "text": "Okay, I went through a similar situation when my mother died in March of this year. The estate still needs to go into probate. Especially if there was a will. And when you do this, your husband will be named as the executor. Then what he will need to do is produce both of their death certificates to the bank, have the account closed, and open an estate account with both of their names on it. Their debts & anything like this should be paid from this account as well. Then what you can do is endorse the check as the executor and deposit it into this account. After all debts are paid, the money can be disbursed to the beneficiaries (your husband). Basically, as long as they didn't have any huge debts to pay, he will see the money again. It just may be a couple of months. And you will have to pay some filing fees."
+          }
+        ]
+      },
+      "expert_adjudicated": false,
+      "labels_changed": false
+    },
+    {
+      "cohort": "fiqa",
+      "id": "fiqa_q_530",
+      "question": "why is buying trading-stock from cash not regarded as an expense?",
+      "title_zh": "更贴近问题意图",
+      "assistant_observation_zh": "题目询问现金购买交易股票为何不算费用。标注回答从第 5 升到第 1；它直接讨论资产交换与会计处理，旧首条主要讨论交易双方是否公平。",
+      "gold": [
+        {
+          "id": "fiqa_a_393483",
+          "text": "Because the stock still has the same value as the money paid for it - you are just exchanging one asset for another (of course the stock value starts to change immediately, but for the accounting the fictional value is the buying price). For the accounting, it is similar to changing a 100$ bill in five 20$ bills - same value, still assets.",
+          "ranks": {
+            "previous": 5,
+            "seed_42_epoch_1": 1
+          }
+        }
+      ],
+      "top5": {
+        "previous": [
+          {
+            "id": "fiqa_a_67006",
+            "text": "For stocks, I would not see these as profiting at the expense of another individual.  When you purchase/trade stocks, you are exchanging items of equal market value at the time of the trade. Both parties are getting a fair exchange when the transaction happens. If you buy a house, the seller has not profited at your expense. You have exchanged goods at market prices. If your house plummets in value and you lose $100k, it is not the sellers fault that you made the decision to purchase. The price was fair when you exchanged the goods. Future prices are speculative, so both parties must perform due diligence to make sure the exchange aligns with their interests.  Obviously, this is barring any sort of dishonesty or insider information on the part of either buyer or seller."
+          },
+          {
+            "id": "fiqa_a_148435",
+            "text": "I see a false assumption that you are making.  (Almost always) When you buy stock the cash you spend does not go to the company. Instead it goes to someone else who is selling their shares.  The exception to this is when you buy shares in an IPO.  Those of us who have saved all our lives for retirement want income producing investments once we retire. (Hopefully) We have saved up quite a bit of money. To have us purchase their stock companies have to offer us dividends."
+          },
+          {
+            "id": "fiqa_a_269782",
+            "text": "\"Another way to look at this is that pure insider trading is an activity with the aim to use secret information to make personal profit or let others make personal profit at the expense of the company shareholders or investors. In buybacks, it is not company managers to get personal gain in this would-be \"\"insider trading\"\". The end-winners in this case are the shareholders. So there is nothing inherently bad in buying back stock. Moreover, it is a general practice to buy shares back (as opposed to paying dividends) when the company sees its shares being undervalued (of course, provided that it has the cash/borrowing ability to implement this), since it creates shareholders value, thereby maximising shareholder wealth, which is one of the primary tasks of the company managers.\""
+          },
+          {
+            "id": "fiqa_a_272117",
+            "text": "There are a few reasons, dependent on the location of the company.  The first, as you mentioned is that it means that the employee is invested in the companies success - in theory this should motivate the employee to work hard in order to increase the value of their holdings. Sometimes these have a vestment period which requires that they hold the stock for a certain amount of time before they are able to sell, and that they continue working at the company for a certain amount of time. The second, is that unlike cash, providing stocks doesn't come out of the companies liquid cash. While it is still an expense and does devalue the shares of other shareholders, it doesn't effect the daily working capital which is important to maintain to ensure business continuity. And the third, and this is for the employee, is tax reasons. In particular for substantial amounts. Of course this is dependent on jurisdiction but you can often achieve lower tax rates on receiving shares vs a cash equivalent sum, as you can draw out the money over time lowering your tax obligation each year, or other methods which aren't possible to look into now. Hope this helps."
+          },
+          {
+            "id": "fiqa_a_393483",
+            "text": "Because the stock still has the same value as the money paid for it - you are just exchanging one asset for another (of course the stock value starts to change immediately, but for the accounting the fictional value is the buying price). For the accounting, it is similar to changing a 100$ bill in five 20$ bills - same value, still assets."
+          }
+        ],
+        "seed_42_epoch_1": [
+          {
+            "id": "fiqa_a_393483",
+            "text": "Because the stock still has the same value as the money paid for it - you are just exchanging one asset for another (of course the stock value starts to change immediately, but for the accounting the fictional value is the buying price). For the accounting, it is similar to changing a 100$ bill in five 20$ bills - same value, still assets."
+          },
+          {
+            "id": "fiqa_a_272117",
+            "text": "There are a few reasons, dependent on the location of the company.  The first, as you mentioned is that it means that the employee is invested in the companies success - in theory this should motivate the employee to work hard in order to increase the value of their holdings. Sometimes these have a vestment period which requires that they hold the stock for a certain amount of time before they are able to sell, and that they continue working at the company for a certain amount of time. The second, is that unlike cash, providing stocks doesn't come out of the companies liquid cash. While it is still an expense and does devalue the shares of other shareholders, it doesn't effect the daily working capital which is important to maintain to ensure business continuity. And the third, and this is for the employee, is tax reasons. In particular for substantial amounts. Of course this is dependent on jurisdiction but you can often achieve lower tax rates on receiving shares vs a cash equivalent sum, as you can draw out the money over time lowering your tax obligation each year, or other methods which aren't possible to look into now. Hope this helps."
+          },
+          {
+            "id": "fiqa_a_148435",
+            "text": "I see a false assumption that you are making.  (Almost always) When you buy stock the cash you spend does not go to the company. Instead it goes to someone else who is selling their shares.  The exception to this is when you buy shares in an IPO.  Those of us who have saved all our lives for retirement want income producing investments once we retire. (Hopefully) We have saved up quite a bit of money. To have us purchase their stock companies have to offer us dividends."
+          },
+          {
+            "id": "fiqa_a_176717",
+            "text": "\"The T+3 \"\"rule\"\" relates only to accounting and not to trading.  It does not prevent you from day trading.  It simply means that the postings in you cash account will not appear until three business days after you have executed a trade.  When you execute a trade and the order has been filled, you have all of the information you need to know the cash amounts that will hit your account three business days later. In a cash account, cash postings that arise from trading are treated as unsettled (for three days), but this does not mean that these funds are available for further trading.  If you have $25,000 in your account on day 1, this does not mean that you will be able to trade more than $25,000 because your cash account has not yet been debited.  Most cash accounts will include an item detailing \"\"Cash available for trading\"\".  This will net out any unsettled business transacted. For example, if you have a cash account balance of $25,000 on day one, and on the same day you purchase $10,000 worth of shares, then pending settlement in your cash account you will only have $15,000 \"\"Cash available for trading\"\". Similarly, if you have a cash balance of $25,000 on day one, and on the same day you \"\"day trade\"\", purchasing $15,000 and selling $10,000 worth of shares, then you will have the net of $20,000 \"\"Cash available for trading\"\" ($20,000 = $25,000 - $15,000 + $10,000). If by \"\"prop account\"\" you mean an account where you give discretion to a broker to trade on your behalf, then I think the issues of accounting will be the least of your worries.  You will need to be worried about not being fleeced out of your hard earned savings by someone far more interested in lining their own pockets than making money for you.\""
+          },
+          {
+            "id": "fiqa_a_67006",
+            "text": "For stocks, I would not see these as profiting at the expense of another individual.  When you purchase/trade stocks, you are exchanging items of equal market value at the time of the trade. Both parties are getting a fair exchange when the transaction happens. If you buy a house, the seller has not profited at your expense. You have exchanged goods at market prices. If your house plummets in value and you lose $100k, it is not the sellers fault that you made the decision to purchase. The price was fair when you exchanged the goods. Future prices are speculative, so both parties must perform due diligence to make sure the exchange aligns with their interests.  Obviously, this is barring any sort of dishonesty or insider information on the part of either buyer or seller."
+          }
+        ]
+      },
+      "expert_adjudicated": false,
+      "labels_changed": false
+    },
+    {
+      "cohort": "finqa",
+      "id": "finqa_q_9bb37e6fdf2804150cecdf84",
+      "question": "in 2010 what was the percentage change of the carrying amount of loan receivable net of the allowance",
+      "title_zh": "多事实证据补齐",
+      "assistant_observation_zh": "计算期内贷款账面值变动需要期初、期末行。新模型将期初行从第 6 提至第 4，使两条原始标注行都进入前五。未执行数值计算，也未验证生成答案。",
+      "gold": [
+        {
+          "id": "finqa_a_1b11eda079da82964c0c1c9b",
+          "text": "in millions of dollars the beginning balance of accretable yield is $ 27 ; the beginning balance of carrying amount of loan receivable is $ 920 ; the beginning balance of allowance is $ 95 ;",
+          "ranks": {
+            "previous": 6,
+            "seed_42_epoch_1": 4
+          }
+        },
+        {
+          "id": "finqa_a_528913d9b555f075041b9968",
+          "text": "in millions of dollars the balance at december 31 2010 ( 2 ) of accretable yield is $ 116 ; the balance at december 31 2010 ( 2 ) of carrying amount of loan receivable is $ 469 ; the balance at december 31 2010 ( 2 ) of allowance is $ 77 ;",
+          "ranks": {
+            "previous": 2,
+            "seed_42_epoch_1": 2
+          }
+        }
+      ],
+      "top5": {
+        "previous": [
+          {
+            "id": "finqa_a_f8d5ae28b22efe84df9a4a69",
+            "text": "the changes in the accretable yield , related allowance and carrying amount net of accretable yield for 2010 are as follows : in millions of dollars accretable carrying amount of loan receivable allowance ."
+          },
+          {
+            "id": "finqa_a_528913d9b555f075041b9968",
+            "text": "in millions of dollars the balance at december 31 2010 ( 2 ) of accretable yield is $ 116 ; the balance at december 31 2010 ( 2 ) of carrying amount of loan receivable is $ 469 ; the balance at december 31 2010 ( 2 ) of allowance is $ 77 ;"
+          },
+          {
+            "id": "finqa_a_e3bba5c9afc44aab47500c9e",
+            "text": "the carrying amount of the company 2019s purchased distressed loan portfolio at december 31 , 2010 was $ 392 million , net of an allowance of $ 77 million as of december 31 , 2010 ."
+          },
+          {
+            "id": "finqa_a_114cf4820039b01fb9b13608",
+            "text": "in millions of dollars the builds ( reductions ) to the allowance of accretable yield is 128 ; the builds ( reductions ) to the allowance of carrying amount of loan receivable is 2014 ; the builds ( reductions ) to the allowance of allowance is -18 ( 18 ) ;"
+          },
+          {
+            "id": "finqa_a_ec87e198c543a2e124920a33",
+            "text": "in millions of dollars the accretion of accretable yield is -44 ( 44 ) ; the accretion of carrying amount of loan receivable is 44 ; the accretion of allowance is 2014 ;"
+          }
+        ],
+        "seed_42_epoch_1": [
+          {
+            "id": "finqa_a_f8d5ae28b22efe84df9a4a69",
+            "text": "the changes in the accretable yield , related allowance and carrying amount net of accretable yield for 2010 are as follows : in millions of dollars accretable carrying amount of loan receivable allowance ."
+          },
+          {
+            "id": "finqa_a_528913d9b555f075041b9968",
+            "text": "in millions of dollars the balance at december 31 2010 ( 2 ) of accretable yield is $ 116 ; the balance at december 31 2010 ( 2 ) of carrying amount of loan receivable is $ 469 ; the balance at december 31 2010 ( 2 ) of allowance is $ 77 ;"
+          },
+          {
+            "id": "finqa_a_e3bba5c9afc44aab47500c9e",
+            "text": "the carrying amount of the company 2019s purchased distressed loan portfolio at december 31 , 2010 was $ 392 million , net of an allowance of $ 77 million as of december 31 , 2010 ."
+          },
+          {
+            "id": "finqa_a_1b11eda079da82964c0c1c9b",
+            "text": "in millions of dollars the beginning balance of accretable yield is $ 27 ; the beginning balance of carrying amount of loan receivable is $ 920 ; the beginning balance of allowance is $ 95 ;"
+          },
+          {
+            "id": "finqa_a_ec87e198c543a2e124920a33",
+            "text": "in millions of dollars the accretion of accretable yield is -44 ( 44 ) ; the accretion of carrying amount of loan receivable is 44 ; the accretion of allowance is 2014 ;"
+          }
+        ]
+      },
+      "expert_adjudicated": false,
+      "labels_changed": false
+    },
+    {
+      "cohort": "finqa",
+      "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+      "question": "what percentage of the total oil and gas mmboe comes from canada?",
+      "title_zh": "表头完整性失分",
+      "assistant_observation_zh": "加拿大行与总计行仍为前两条，但作为第三条标注证据的表头从第 3 降到第 6。序列化数值行本身也包含列名和单位，因此严格标注 ID 完整性不等同于最小充分语义证据或算术正确性。",
+      "gold": [
+        {
+          "id": "finqa_a_a52debe334f1cabce87badd0",
+          "text": "the canada of oil ( mmbbls ) is 23 ; the canada of gas ( bcf ) is 198 ; the canada of ngls ( mmbbls ) is 4 ; the canada of total ( mmboe ) is 60 ;",
+          "ranks": {
+            "previous": 1,
+            "seed_42_epoch_1": 1
+          }
+        },
+        {
+          "id": "finqa_a_5e334b80833da76c68fde197",
+          "text": "the total of oil ( mmbbls ) is 66 ; the total of gas ( bcf ) is 894 ; the total of ngls ( mmbbls ) is 28 ; the total of total ( mmboe ) is 243 ;",
+          "ranks": {
+            "previous": 2,
+            "seed_42_epoch_1": 2
+          }
+        },
+        {
+          "id": "finqa_a_9f55bb19e06154796baf3fd9",
+          "text": "oil gas ngls total ( mmbbls ) ( bcf ) ( mmbbls ) ( mmboe ) .",
+          "ranks": {
+            "previous": 3,
+            "seed_42_epoch_1": 6
+          }
+        }
+      ],
+      "top5": {
+        "previous": [
+          {
+            "id": "finqa_a_a52debe334f1cabce87badd0",
+            "text": "the canada of oil ( mmbbls ) is 23 ; the canada of gas ( bcf ) is 198 ; the canada of ngls ( mmbbls ) is 4 ; the canada of total ( mmboe ) is 60 ;"
+          },
+          {
+            "id": "finqa_a_5e334b80833da76c68fde197",
+            "text": "the total of oil ( mmbbls ) is 66 ; the total of gas ( bcf ) is 894 ; the total of ngls ( mmbbls ) is 28 ; the total of total ( mmboe ) is 243 ;"
+          },
+          {
+            "id": "finqa_a_9f55bb19e06154796baf3fd9",
+            "text": "oil gas ngls total ( mmbbls ) ( bcf ) ( mmbbls ) ( mmboe ) ."
+          },
+          {
+            "id": "finqa_a_077cd99c29cf0520ad1d671c",
+            "text": "the international of oil ( mmbbls ) is 23 ; the international of gas ( bcf ) is 2 ; the international of ngls ( mmbbls ) is 2014 ; the international of total ( mmboe ) is 23 ;"
+          },
+          {
+            "id": "finqa_a_482f7c4a8e39ee88990d4ea0",
+            "text": "the of oil ( mmbbls ) is oil ( mmbbls ) ; the of gas ( bcf ) is gas ( bcf ) ; the of ngls ( mmbbls ) is ngls ( mmbbls ) ; the of total ( mmboe ) is total ( mmboe ) ;"
+          }
+        ],
+        "seed_42_epoch_1": [
+          {
+            "id": "finqa_a_a52debe334f1cabce87badd0",
+            "text": "the canada of oil ( mmbbls ) is 23 ; the canada of gas ( bcf ) is 198 ; the canada of ngls ( mmbbls ) is 4 ; the canada of total ( mmboe ) is 60 ;"
+          },
+          {
+            "id": "finqa_a_5e334b80833da76c68fde197",
+            "text": "the total of oil ( mmbbls ) is 66 ; the total of gas ( bcf ) is 894 ; the total of ngls ( mmbbls ) is 28 ; the total of total ( mmboe ) is 243 ;"
+          },
+          {
+            "id": "finqa_a_077cd99c29cf0520ad1d671c",
+            "text": "the international of oil ( mmbbls ) is 23 ; the international of gas ( bcf ) is 2 ; the international of ngls ( mmbbls ) is 2014 ; the international of total ( mmboe ) is 23 ;"
+          },
+          {
+            "id": "finqa_a_532432ccb9987e661f07d246",
+            "text": "the u.s . onshore of oil ( mmbbls ) is 12 ; the u.s . onshore of gas ( bcf ) is 626 ; the u.s . onshore of ngls ( mmbbls ) is 23 ; the u.s . onshore of total ( mmboe ) is 140 ;"
+          },
+          {
+            "id": "finqa_a_7a80813e98d4ac55f657f66b",
+            "text": "the u.s . offshore of oil ( mmbbls ) is 8 ; the u.s . offshore of gas ( bcf ) is 68 ; the u.s . offshore of ngls ( mmbbls ) is 1 ; the u.s . offshore of total ( mmboe ) is 20 ;"
+          }
+        ]
+      },
+      "expert_adjudicated": false,
+      "labels_changed": false
+    }
+  ],
+  "code_sha256": "3904454fda761968e0cb2ede4981378dd21d633430998c94eb94533709fa30af"
+}

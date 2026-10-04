@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-10-01T21:16:37.488353+00:00",
+  "mode": "score",
+  "split": "valid",
+  "questions": 527,
+  "fixture_lock_sha256": "912f40bc9a696f7492ec02c61202e719dac362b460d57ae7f12cc46b050a667d",
+  "candidate_source_sha256": "4aec908843ae2cb932cb245b3e027901e329d95080becab2d6fb173cd8603052",
+  "selection_lock_sha256": null,
+  "model": {
+    "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\ms-marco-MiniLM-L6-v2",
+    "files_sha256": {
+      "config.json": "380e02c93f431831be65d99a4e7e5f67c133985bf2e77d9d4eba46847190bacc",
+      "download_provenance.json": "6f3f6cb2330ee56c4676228ca529b9f31a9704df3a28c92955feb51d758d9196",
+      "model.safetensors": "821d1aa69520101d6e0737f78a042ae25b19e5cb9160701909d10434f4aeb0ae",
+      "special_tokens_map.json": "3c3507f36dff57bce437223db3b3081d1e2b52ec3e56ee55438193ecb2c94dd6",
+      "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "tokenizer_config.json": "a5c2e5a7b1a29a0702cd28c08a399b5ecc110c263009d17f7e3b415f25905fd8",
+      "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    },
+    "checkpoint_sha256": "d889a9b6d961d5fbda537d7eae8dec7ba0aa440497fc0c92bf8871eeae44cf02",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "max_length": 512,
+    "batch_size": 64,
+    "truncation": "longest_first",
+    "score": "raw single relevance logit",
+    "remote_code": false,
+    "fine_tuned_in_this_project": false
+  },
+  "code_sha256": {
+    "scripts/score_multidomain.py": "25494c8d44dc9f2fdbd3b2669fa1095f0f4dd6638c02a64fabdf5ad04629aa7a",
+    "src/insurerag_vlm/domain_reranker.py": "7f1904228435358bfeb14483f5f599e961e5759f9d2c94f8faaa8368a049aeb5",
+    "src/insurerag_vlm/reranker.py": "bb90e6c134b44d7cb0c0cd6ca3165e098827bd908a3a86e73101040cf65734a3",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872"
+  },
+  "gold_injection": false
+}

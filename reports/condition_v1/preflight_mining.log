@@ -1,0 +1,18 @@
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2927.19it/s]
+{"query_embeddings": 256}
+{"query_embeddings": 4352}
+{"query_embeddings": 8448}
+{"query_embeddings": 12544}
+{"query_embeddings": 16640}
+{"query_embeddings": 20736}
+{"query_embeddings": 24832}
+{"retrieved_training_pools": 2000}
+{"retrieved_training_pools": 4000}
+{"retrieved_training_pools": 6000}
+{"retrieved_training_pools": 8000}
+{"retrieved_training_pools": 10000}
+{"retrieved_training_pools": 12000}
+{"retrieved_training_pools": 14000}
+{"retrieved_training_pools": 16000}

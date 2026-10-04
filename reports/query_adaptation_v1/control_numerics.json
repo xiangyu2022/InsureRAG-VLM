@@ -1,0 +1,99 @@
+{
+  "cohorts": {
+    "insuranceqa": {
+      "questions": 2000,
+      "candidate_set_changed": 1,
+      "top100_changed": 61,
+      "dense_max_absolute_change": 1.3113021850585938e-06,
+      "sparse_max_absolute_change": 0,
+      "cross_max_absolute_change": 0,
+      "largest_inverted_old_blend_score_gap": 9.111367857972397e-07,
+      "examples": [
+        {
+          "id": "iqa_v2_test_00038",
+          "largest_inverted_old_score_gap": 8.92067026914134e-08
+        },
+        {
+          "id": "iqa_v2_test_00043",
+          "largest_inverted_old_score_gap": 0.0
+        },
+        {
+          "id": "iqa_v2_test_00132",
+          "largest_inverted_old_score_gap": 7.008281244225145e-08
+        }
+      ]
+    },
+    "multidomain": {
+      "questions": 681,
+      "candidate_set_changed": 0,
+      "top100_changed": 5,
+      "dense_max_absolute_change": 8.940696716308594e-07,
+      "sparse_max_absolute_change": 0,
+      "cross_max_absolute_change": 0,
+      "largest_inverted_old_blend_score_gap": 6.114342663288141e-07,
+      "examples": [
+        {
+          "id": "squad_q_572650325951b619008f6faa",
+          "largest_inverted_old_score_gap": 6.114342663288141e-07
+        },
+        {
+          "id": "squad_q_57266dd4f1498d1400e8df7a",
+          "largest_inverted_old_score_gap": 4.937162384477389e-08
+        },
+        {
+          "id": "squad_q_5726d9935951b619008f7fef",
+          "largest_inverted_old_score_gap": 5.7040160428289965e-08
+        }
+      ]
+    },
+    "historical_government": {
+      "questions": 416,
+      "candidate_set_changed": 1,
+      "top100_changed": 15,
+      "dense_max_absolute_change": 1.0728836059570312e-06,
+      "sparse_max_absolute_change": 0,
+      "cross_max_absolute_change": 0,
+      "largest_inverted_old_blend_score_gap": 3.044929516304862e-07,
+      "examples": [
+        {
+          "id": "gov_question_433514c883502023",
+          "largest_inverted_old_score_gap": 0.0
+        },
+        {
+          "id": "gov_question_6e3791a4d67e160f",
+          "largest_inverted_old_score_gap": 0.0
+        },
+        {
+          "id": "gov_question_0ec404724ec35b6a",
+          "largest_inverted_old_score_gap": 0.0
+        }
+      ]
+    },
+    "condition_government": {
+      "questions": 157,
+      "candidate_set_changed": 0,
+      "top100_changed": 3,
+      "dense_max_absolute_change": 1.0728836059570312e-06,
+      "sparse_max_absolute_change": 0,
+      "cross_max_absolute_change": 0,
+      "largest_inverted_old_blend_score_gap": 1.2049952924364504e-07,
+      "examples": [
+        {
+          "id": "condgov_q_951266b71c23fd72",
+          "largest_inverted_old_score_gap": 1.2049952924364504e-07
+        },
+        {
+          "id": "condgov_q_cb2d4d2276dede74",
+          "largest_inverted_old_score_gap": 6.53787969873143e-08
+        },
+        {
+          "id": "condgov_q_ec3e0b108ab86b10",
+          "largest_inverted_old_score_gap": 0.0
+        }
+      ]
+    }
+  },
+  "reranker_scores_for_shared_candidates_exactly_reused": true,
+  "interpretation": "Original-query embeddings/matrix multiplication are recomputed; small dense-score changes can reorder near ties. Historical per-question retrieval metrics are verified separately, not assumed from top-list equality.",
+  "code_sha256": "e4416205e0df48c591354ed6af90bf9eafe0fe5237741464ffc1aa8892d9e079"
+}

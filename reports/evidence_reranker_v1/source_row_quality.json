@@ -1,0 +1,6 @@
+{
+  "raw_finqa_source_rows": 86421,
+  "rows_without_ascii_alphanumeric": 5486,
+  "not_a_count_of_clean_expert_examples": true,
+  "known_noise_not_advertised_as_additional_training_examples": true
+}

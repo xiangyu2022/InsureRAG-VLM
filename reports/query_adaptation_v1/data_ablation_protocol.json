@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-10-03T01:43:59.284832+00:00",
+  "purpose": "Separate effects of additional labelled finance questions from query adaptation at matched optimizer budget.",
+  "seeds": [
+    42,
+    123
+  ],
+  "participates_in_selection": false,
+  "primary_selection_protocol_sha256": "86232ef122b0bcd1e19d34e9470311c8bb56643238919b5240eae2573a7cfa1f",
+  "rule": "Replace every finance question group with a deterministic old-question group drawn from the repeat-weighted old-domain list. Preserve finance-slot repeat factor and retention coefficient; use the replacement question, original positive labels and corresponding original BGE anchor. Same document vectors, allowed-negative mask, initialization, batch schedule, epochs, learning rate, total presentations and optimizer updates as primary.",
+  "replacement_selection": "SHA256 of finance group ID modulo the deterministic old repeat-weighted index list; fixed for both seeds.",
+  "evaluation": "Validation-only ablation under each corresponding primary checkpoint/alpha and the primary validation-selected configuration; no test-based tuning or ablation test claims.",
+  "limitations": "This holds optimization slots and corpus fixed but changes labelled question distribution. It isolates added labelled finance supervision relative to replaying old questions, not the contribution of unlabelled FiQA corpus passages.",
+  "test_status": "New FiQA test has not been scored."
+}

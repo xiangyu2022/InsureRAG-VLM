@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-10-01T22:33:05.515793+00:00",
+  "split": "valid",
+  "questions": 2000,
+  "question_file_sha256": "acf03a69edc7e11f9c3d114a7fa676dd395b464cacc75aef0d24c131e974c502",
+  "answer_file_sha256": "50cffb3351cae585e21af23454e9946354eb88ce36028e59e1d1c286e994eda2",
+  "answer_count": 27413,
+  "gold_injection": false,
+  "code_sha256": "8acac3d7be2a8d837a4112e6f847f9d24e534e1dcce6e2acfc908716e72617c9",
+  "selection_lock_sha256": null,
+  "selection_protocol_sha256": "9ef9164a4959345939f095eab7278c6cdc7a5eaac4292b033f8637cf47c2a8ea",
+  "model": {
+    "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\insurerag-condition-v1-seed-123\\epoch-1",
+    "files_sha256": {
+      "config.json": "bde16d9648b01e19b9d4c5f3deca28cd2851fbbc660f8a90cecd87efde5c5429",
+      "model.safetensors": "f9639c3415257ba9507f5b8e6059d58294e03579531b414dc57da26a5c2ecf6b",
+      "tokenizer.json": "91f1def9b9391fdabe028cd3f3fcc4efd34e5d1f08c3bf2de513ebb5911a1854",
+      "tokenizer_config.json": "88eb33800f51cc08e19ebe4dffbde5afbc9e517a993ede2861a22ed9c7e0be7f",
+      "training_provenance.json": "0211d1849d444b6ec3c44a8150157887353708617344dbc5274add35e4a15c6a"
+    },
+    "checkpoint_sha256": "fa728c7840d8d02317bed7d434bea6ed032dfe7aae1fce76cf8073c0368353fe",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "max_length": 512,
+    "batch_size": 64,
+    "truncation": "longest_first",
+    "score": "raw single relevance logit",
+    "remote_code": false,
+    "fine_tuned_in_this_project": true,
+    "training_provenance": {
+      "fine_tuned_in_this_project": true,
+      "weights_sha256": "f9639c3415257ba9507f5b8e6059d58294e03579531b414dc57da26a5c2ecf6b",
+      "initial_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+      "training_manifest_sha256": "e8a3b024e12fe9e77b1e3f5b24e548479fbfec9fab356ca06b97a6fc1e960c26",
+      "training_protocol_sha256": "b75ad6cfbe9f87c14f3988465cf325dd2a43a6a3b6702f533fda3899d87f6702",
+      "training_code_sha256": "d3370035b3641c30ac23b5900a9f7b8f1f2ae6ff4ca419a27402975bf9d86607",
+      "seed": 123,
+      "epoch": 1,
+      "optimizer_steps": 2471,
+      "unique_training_questions": 25987,
+      "pair_exposures": 237174,
+      "recipe": "student-mined conservative pairwise ranking + public teacher retention"
+    }
+  },
+  "candidate_source_sha256": "e6963b2eb88bb4027ceb001f404e18816a7d46b34beb43a86c73f73797e93611"
+}

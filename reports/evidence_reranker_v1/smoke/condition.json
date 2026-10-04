@@ -1,0 +1,58 @@
+{
+  "question": "When can a health plan impose cost sharing on preventive services?",
+  "corpus": "condition",
+  "annual_report_scope": null,
+  "corpus_candidates": 48172,
+  "reranked_candidates": 157,
+  "selected_config": {
+    "name": "seed_123_epoch_2_cw50",
+    "model": "seed_123_epoch_2",
+    "cross_weight": 0.5
+  },
+  "new_training_promoted": true,
+  "selection_lock_sha256": "a40b41968aa39fc4f4967e5bc8f58ff96251558203ee33edf97ed16c8f070525",
+  "selected_weights_sha256": "697d3a725ad9d684c1b978365bda314114e8dbec2a27c2841a07f028ed2e81b8",
+  "fixed_encoders_match_inherited_inventories": true,
+  "query_encoder_passes": 2,
+  "generation_calls": 0,
+  "numerical_program_execution": false,
+  "expert_answer_adjudication": false,
+  "seconds_including_loading": 9.463530299952254,
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "gov2_a_9c15653b42abc900",
+      "text": "Yes. In the preamble to interim final rules issued in November 2020 in response to the COVID- 19 Public Health Emergency (November 2020 interim final rules), the Departments reiterated that regulations and guidance issued with respect to the preventive services requirements generally require plans and issuers subject to section 2713 of the PHS Act to cover, without cost sharing, items and services that are integral to the furnishing of the recommended preventive service, regardless of whether the item or service is billed separately.14 The preamble to the November 2020 interim final rules cited previous guidance issued with respect to colonoscopies, clarifying that a plan or issuer may not impose cost sharing for polyp removal during or anesthesia provided in connection with a preventive screening colonoscopy. Other examples included covering, without cost sharing, collection of a specimen for recommended screenings or tests typically performed by laboratories and administration of a recommended immunization by a medical professional. The requirement to cover, without cost sharing, items and services that are integral to the furnishing of a recommended preventive service also applies to coverage of contraceptive services under the HRSA-Supported Guidelines, including coverage for anesthesia for a tubal ligation procedure or pregnancy tests needed before provision of certain forms of contraceptives, such as an intrauterine device (also known as an IUD), regardless of whether the items and services are billed separately. 13 See FAQs Part 51, available at https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource- center/faqs/aca-part-51.pdf and https://www.cms.gov/CCIIO/Resources/Fact-Sheets-and-FAQs/Downloads/FAQs- Part-51.pdf. 14 85 FR 71142, 71174 (Nov. 6, 2020). 4",
+      "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-54.pdf",
+      "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-54.pdf"
+    },
+    {
+      "rank": 2,
+      "answer_id": "gov2_a_870edf7f675ea808",
+      "text": "No. While nothing in the interim final regulations generally requires a plan or issuer that has a network of providers to provide benefits for preventive services provided out-of-network, this 5 75 FR 41726 (July 19, 2010). 6 Womens Preventive Services: Required Health Plan Coverage Guidelines (HRSA Guidelines) were adopted and released on August 1, 2012, based on recommendations developed by the Institute of Medicine (IOM) at the request of HHS. These recommended womens preventive services are required to be covered without cost-sharing, for plan years (or, in the individual market, policy years) beginning on or after August 1, 2012. 7 See 26 CFR 54.9815-2713T(a)(4), 29 CFR 2590.715-2713(a)(4), 45 CFR 147.130(a)(4). 8 Certain non-grandfathered, non-profit religious organizations are not required to cover the contraceptive services recommendation that is part of the HRSA guidelines. For information on these entities, see 77 FR 8725 and http://cciio.cms.gov/resources/files/prev-services-guidance-08152012.pdf. See also proposed rules published on February 6, 2013, at 78 FR 8456. 3 provision is premised on enrollees being able to access the required preventive services from in- network providers. Thus, if a plan or issuer does not have in its network a provider who can provide the particular service, then the plan or issuer must cover the item or service when performed by an out-of-network provider and not impose cost-sharing with respect to the item or service. United States Preventive Services Task Force (USPSTF)",
+      "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-xii.pdf",
+      "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-xii.pdf"
+    },
+    {
+      "rank": 3,
+      "answer_id": "condgov_a_6c0bdd8964f83650",
+      "text": "The maximum annual limitation on cost sharing for the 2022 plan year will be $8,700 for self- only coverage, and $17,400 for other than self-only coverage.4",
+      "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-46.pdf",
+      "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-46.pdf"
+    },
+    {
+      "rank": 4,
+      "answer_id": "condgov_a_1866ef05670bc26b",
+      "text": "Under PHS Act section 2719A and its implementing regulations, non-grandfathered group health plans and health insurance issuers offering non-grandfathered group or individual health insurance coverage cannot impose cost sharing (expressed as a copayment amount or 18 See also Centers for Medicare & Medicaid Services, Price Transparency: Requirements for Providers to Make Public Cash Prices for COVID-19 Diagnostic Testing (May 12, 2020), available at https://www.cms.gov/files/document/covid-ffs-price-transparency-faqs.pdf. 9 coinsurance rate) on out-of-network emergency services in a greater amount than what is imposed for in-network emergency services. Additionally, the Departments regulations provide that a plan or issuer satisfies the cost-sharing limitations in the statute if it provides benefits for out-of-network emergency services in an amount at least equal to the greatest of the following three amounts (adjusted for in-network cost-sharing requirements): (1) the median amount negotiated with in-network providers for the emergency service; (2) the amount for the emergency service calculated using the same method the plan generally uses to determine payments for out-of-network services (such as the usual, customary, and reasonable amount); or (3) the amount that would be paid under Medicare for the emergency service (collectively, minimum payment standards).19 The minimum payment standards do not prohibit a group health plan or health insurance issuer from paying an amount for an emergency service that is greater than the amounts specified in the regulations. Because the Departments interpret the provisions of section 3202 of the CARES Act as specifying a rate that generally protects participants, beneficiaries, and enrollees from balance billing for a COVID-19 test (see Q9 above), the requirement to pay the greatest of three amounts under the regulations implementing section 2719A of the PHS Act is superseded by the requirements of section 3202(a) of the CARES Act with regard to COVID-19 diagnostic tests that are out-of-network emergency services. For these services, the plan or issuer must reimburse an out-of-network provider of COVID-19 testing an amount that equals the cash price for such service that is listed by the provider on a public website, or the plan or issuer may negotiate a rate that is lower than the cash price. For all other out-of-network emergency services, which are not subject to the requirements of section 3202(a) (see Q8 above), the minimum payment standards under section 2719A of the PHS Act continue to apply. Notice Requirements",
+      "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-43.pdf",
+      "source_url": "https://www.dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-43.pdf"
+    },
+    {
+      "rank": 5,
+      "answer_id": "gov2_a_4782a539c4c1e119",
+      "text": "No. As stated in a previous FAQ9, while nothing in the preventive services requirements under section 2713 of the PHS Act or its implementing regulations requires a plan or issuer that has a network of providers to provide benefits for preventive services provided out-of-network, these requirements are premised on enrollees being able to access the required preventive services from in-network providers. The FAQ also stated that if a plan or issuer does not have in its network a provider who can provide a particular service, then the plan or issuer must cover the item or service when performed by an out-of-network provider and not impose cost sharing with respect to the item or service. Therefore, if a plan or issuer does not have in its network a provider who can provide lactation counseling services, the plan or issuer must cover the item or service when performed by an out-of-network provider without cost sharing.",
+      "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-xxix.pdf",
+      "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-xxix.pdf"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-01T19:50:26.206833+00:00",
+  "upstream": "https://huggingface.co/datasets/Persius/hicric",
+  "revision": "e9304975feff9ccaaf15cf547f698590d00d78c3",
+  "attribution": "HICRIC Data, https://github.com/TPAFS/hicric",
+  "curated_data_license": "CC-BY-SA-4.0; upstream government sources retain their terms",
+  "raw_record_counts": {
+    "contract-coverage-rule-medical-policy": 3661,
+    "regulatory-guidance": 1110
+  },
+  "unique_normalized_text_records": 4398,
+  "duplicate_records_merged": 373,
+  "snippets": 78830,
+  "unique_source_urls": 1115,
+  "raw_files_sha256": {
+    "contract-coverage-rule-medical-policy/train-00000-of-00001.parquet": "7cd41e9f7b6ecb8ba7b299f1132e00b87f04b083fdd9b85d2c23c6dbada4c9a2",
+    "regulatory-guidance/train-00000-of-00001.parquet": "223032846f5e24d127a466176eddc996d0b3e995cb9065f1c2c8ee8dbe04695c"
+  },
+  "extraction_code_sha256": "40dc58fedc7000a082d96b8a00b00ae9253ca2362d9e1725cb76dd632ec64947",
+  "use": "Separate archived corpus; not merged into the frozen 73-document regression corpus",
+  "limitations": [
+    "Record counts are not counts of independent PDF documents.",
+    "Historical guidance is not necessarily current law or coverage."
+  ],
+  "files": {
+    "records.jsonl": "62d41421ebe6d0463638e5bcf57491579ccf10efe3220893cda3093366cba221",
+    "rag_pages.jsonl": "5ca7b822ccb227035fc22052fc8d89e9f59ee66d8cde5bddca1dfe53f19d6ea8",
+    "rag_snippets.jsonl": "57d40e491d9a4eb8da27ba5240ab62e359f3d2ca108230ff7be1c3f488a04098",
+    "UPSTREAM_README.md": "8690473304b9834add30d74892057e3b33c929a5901899651f460cda4e43816e"
+  }
+}

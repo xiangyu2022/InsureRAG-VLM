@@ -1,0 +1,3481 @@
+{
+  "review_version": "app_v4_manual_review_1",
+  "review_date_utc": "2026-09-20",
+  "reviewer": "AI-assisted/manual-agent review; not human expert certification",
+  "scope": "48 saved responses, read-only review; no new model calls or historical score/fixture/runtime edits",
+  "interpretation": "Small authored synthetic development regression, not held-out real-policy accuracy. Manual judgments supplement, not replace, automated metrics.",
+  "runs": {
+    "qwen25_app_v4": {
+      "prediction_sha256": "1d04ef55263ae7034135cf17bb83cdc5a15dd4e9a0c26d65f0b2e098fa72a057",
+      "started_utc": "2026-09-20T23:20:00.652822+00:00",
+      "completed_utc": "2026-09-20T23:20:21.419886+00:00",
+      "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_ctx": 4096,
+        "num_predict": 384,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "code_sha256": {
+        "scripts\\eval_packet_stress.py": "7df4552dcb134c843b72514c55dc4fd4f1e61fb2e38a41aa753476ab039dac3d",
+        "scripts\\build_packet_stress.py": "39e6020f42a535cc32dc10a8a02395b6f9d49bc991c1e0d4a7ab0cd87c3e24f0",
+        "src\\insurerag_vlm\\hybrid_pipeline.py": "cd311f69d6a4b7d951d117d68c6493742d18603594c65fb865657fd15c289488",
+        "src\\insurerag_vlm\\vlm.py": "109f2555cc767d4ef8119296d3edb54433abe1306157974c740a5b6637cada75",
+        "src\\insurerag_vlm\\answer_safety.py": "9ebe7c835714443fbef208410acf1f0c91e838c945181eb7c1437599b0a9d103",
+        "src\\insurerag_vlm\\retriever.py": "f9d17a456d84bda779bdf78a9c2135bae0c0a955e1ac15ba9bb6c4e44123f85e",
+        "src\\insurerag_vlm\\data.py": "b9706f4e9025a3092efa2192015f5703423f233bc5afe328f9a763216049ef0e",
+        "src\\insurerag_vlm\\config.py": "8f4f798e0d449376bf60424432f566b45b90c83ca09e59ecad4a9bfd4e55818f"
+      },
+      "original_summary": {
+        "label": "AI-authored synthetic PDF regression; not real-policy or held-out accuracy",
+        "cases": 24,
+        "answerable_cases": 16,
+        "unsupported_cases": 8,
+        "runtime_errors": 0,
+        "answer_repaired_count": 0,
+        "raw": {
+          "answer_key_match": {
+            "successes": 16,
+            "total": 16,
+            "rate": 1.0,
+            "ci95_low": 0.8063923194655637,
+            "ci95_high": 1.0
+          },
+          "citation_match": {
+            "successes": 2,
+            "total": 16,
+            "rate": 0.125,
+            "ci95_low": 0.03497748774324047,
+            "ci95_high": 0.36022827265758695
+          },
+          "supported_key_source_pass": {
+            "successes": 2,
+            "total": 16,
+            "rate": 0.125,
+            "ci95_low": 0.03497748774324047,
+            "ci95_high": 0.36022827265758695
+          },
+          "context_key_source_pass": {
+            "successes": 2,
+            "total": 16,
+            "rate": 0.125,
+            "ci95_low": 0.03497748774324047,
+            "ci95_high": 0.36022827265758695
+          },
+          "retrieved_evidence_key_source_pass": {
+            "successes": 2,
+            "total": 16,
+            "rate": 0.125,
+            "ci95_low": 0.03497748774324047,
+            "ci95_high": 0.36022827265758695
+          },
+          "unsupported_abstention": {
+            "successes": 5,
+            "total": 8,
+            "rate": 0.625,
+            "ci95_low": 0.30574239460262737,
+            "ci95_high": 0.8631557141764026
+          }
+        },
+        "served": {
+          "answer_key_match": {
+            "successes": 15,
+            "total": 16,
+            "rate": 0.9375,
+            "ci95_low": 0.7167126242970107,
+            "ci95_high": 0.9888806552353576
+          },
+          "citation_match": {
+            "successes": 15,
+            "total": 16,
+            "rate": 0.9375,
+            "ci95_low": 0.7167126242970107,
+            "ci95_high": 0.9888806552353576
+          },
+          "supported_key_source_pass": {
+            "successes": 15,
+            "total": 16,
+            "rate": 0.9375,
+            "ci95_low": 0.7167126242970107,
+            "ci95_high": 0.9888806552353576
+          },
+          "context_key_source_pass": {
+            "successes": 15,
+            "total": 16,
+            "rate": 0.9375,
+            "ci95_low": 0.7167126242970107,
+            "ci95_high": 0.9888806552353576
+          },
+          "retrieved_evidence_key_source_pass": {
+            "successes": 15,
+            "total": 16,
+            "rate": 0.9375,
+            "ci95_low": 0.7167126242970107,
+            "ci95_high": 0.9888806552353576
+          },
+          "unsupported_abstention": {
+            "successes": 8,
+            "total": 8,
+            "rate": 1.0,
+            "ci95_low": 0.6755924351161198,
+            "ci95_high": 1.0
+          }
+        },
+        "wall_seconds": {
+          "p50": 0.6998628999863286,
+          "p95": 1.4461595799948554,
+          "total": 20.406756099895574
+        },
+        "interval_note": "Wilson intervals are descriptive only; synthetic cases share six authored packets and are not a random population sample."
+      }
+    },
+    "qwen35_app_v4": {
+      "prediction_sha256": "7e3959abe86cb3c8325c8eaa2cd9452c230904459cf4bbbf817afa634fdccbe9",
+      "started_utc": "2026-09-20T23:20:38.340029+00:00",
+      "completed_utc": "2026-09-20T23:21:13.275906+00:00",
+      "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_ctx": 4096,
+        "num_predict": 384,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "code_sha256": {
+        "scripts\\eval_packet_stress.py": "7df4552dcb134c843b72514c55dc4fd4f1e61fb2e38a41aa753476ab039dac3d",
+        "scripts\\build_packet_stress.py": "39e6020f42a535cc32dc10a8a02395b6f9d49bc991c1e0d4a7ab0cd87c3e24f0",
+        "src\\insurerag_vlm\\hybrid_pipeline.py": "cd311f69d6a4b7d951d117d68c6493742d18603594c65fb865657fd15c289488",
+        "src\\insurerag_vlm\\vlm.py": "109f2555cc767d4ef8119296d3edb54433abe1306157974c740a5b6637cada75",
+        "src\\insurerag_vlm\\answer_safety.py": "9ebe7c835714443fbef208410acf1f0c91e838c945181eb7c1437599b0a9d103",
+        "src\\insurerag_vlm\\retriever.py": "f9d17a456d84bda779bdf78a9c2135bae0c0a955e1ac15ba9bb6c4e44123f85e",
+        "src\\insurerag_vlm\\data.py": "b9706f4e9025a3092efa2192015f5703423f233bc5afe328f9a763216049ef0e",
+        "src\\insurerag_vlm\\config.py": "8f4f798e0d449376bf60424432f566b45b90c83ca09e59ecad4a9bfd4e55818f"
+      },
+      "original_summary": {
+        "label": "AI-authored synthetic PDF regression; not real-policy or held-out accuracy",
+        "cases": 24,
+        "answerable_cases": 16,
+        "unsupported_cases": 8,
+        "runtime_errors": 0,
+        "answer_repaired_count": 1,
+        "raw": {
+          "answer_key_match": {
+            "successes": 16,
+            "total": 16,
+            "rate": 1.0,
+            "ci95_low": 0.8063923194655637,
+            "ci95_high": 1.0
+          },
+          "citation_match": {
+            "successes": 16,
+            "total": 16,
+            "rate": 1.0,
+            "ci95_low": 0.8063923194655637,
+            "ci95_high": 1.0
+          },
+          "supported_key_source_pass": {
+            "successes": 16,
+            "total": 16,
+            "rate": 1.0,
+            "ci95_low": 0.8063923194655637,
+            "ci95_high": 1.0
+          },
+          "context_key_source_pass": {
+            "successes": 16,
+            "total": 16,
+            "rate": 1.0,
+            "ci95_low": 0.8063923194655637,
+            "ci95_high": 1.0
+          },
+          "retrieved_evidence_key_source_pass": {
+            "successes": 16,
+            "total": 16,
+            "rate": 1.0,
+            "ci95_low": 0.8063923194655637,
+            "ci95_high": 1.0
+          },
+          "unsupported_abstention": {
+            "successes": 6,
+            "total": 8,
+            "rate": 0.75,
+            "ci95_low": 0.40927543031016883,
+            "ci95_high": 0.9285207872478909
+          }
+        },
+        "served": {
+          "answer_key_match": {
+            "successes": 16,
+            "total": 16,
+            "rate": 1.0,
+            "ci95_low": 0.8063923194655637,
+            "ci95_high": 1.0
+          },
+          "citation_match": {
+            "successes": 16,
+            "total": 16,
+            "rate": 1.0,
+            "ci95_low": 0.8063923194655637,
+            "ci95_high": 1.0
+          },
+          "supported_key_source_pass": {
+            "successes": 16,
+            "total": 16,
+            "rate": 1.0,
+            "ci95_low": 0.8063923194655637,
+            "ci95_high": 1.0
+          },
+          "context_key_source_pass": {
+            "successes": 16,
+            "total": 16,
+            "rate": 1.0,
+            "ci95_low": 0.8063923194655637,
+            "ci95_high": 1.0
+          },
+          "retrieved_evidence_key_source_pass": {
+            "successes": 16,
+            "total": 16,
+            "rate": 1.0,
+            "ci95_low": 0.8063923194655637,
+            "ci95_high": 1.0
+          },
+          "unsupported_abstention": {
+            "successes": 8,
+            "total": 8,
+            "rate": 1.0,
+            "ci95_low": 0.6755924351161198,
+            "ci95_high": 1.0
+          }
+        },
+        "wall_seconds": {
+          "p50": 1.0599862000381108,
+          "p95": 2.5539176899881566,
+          "total": 34.60185110010207
+        },
+        "interval_note": "Wilson intervals are descriptive only; synthetic cases share six authored packets and are not a random population sample."
+      }
+    }
+  },
+  "judgments": [
+    {
+      "run": "qwen25_app_v4",
+      "id": "A01",
+      "question": "For policy SYN-A-001, what is the Coverage A dwelling limit?",
+      "answerable": true,
+      "reference_answer": "$535,000",
+      "gold_sources": [
+        "SCENARIO-A.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_natural_filename_and_page",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "evidence_selection",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-A.pdf#page=1",
+          "origin": "evidence_selection",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For policy SYN-A-001, the Coverage A dwelling limit is $535,000. This information is directly stated in the table provided in the source page SCENARIO-A.pdf, physical page 1.",
+      "served_answer": "For policy SYN-A-001, the Coverage A dwelling limit is $535,000. This information is directly stated in the table provided in the source page SCENARIO-A.pdf, physical page 1.",
+      "prompt_sha256": "10822096d3d5df140d5a57927195edc246278678b3c95d882ab71cc371b390dc",
+      "raw_answer_sha256": "11e83368632016aefeedaf6b9f3bd0cb48d730c5efa873ad393435aa75ef35fa",
+      "served_answer_sha256": "11e83368632016aefeedaf6b9f3bd0cb48d730c5efa873ad393435aa75ef35fa",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-a.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "A02",
+      "question": "For policy SYN-A-001, what is the Coverage C personal property limit?",
+      "answerable": true,
+      "reference_answer": "$85,000",
+      "gold_sources": [
+        "SCENARIO-A.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_natural_filename_and_page",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "evidence_selection",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-A.pdf#page=1",
+          "origin": "evidence_selection",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For policy SYN-A-001, the Coverage C personal property limit is $85,000. This information is directly stated in the table provided in the source page SCENARIO-A.pdf, physical page 1.",
+      "served_answer": "For policy SYN-A-001, the Coverage C personal property limit is $85,000. This information is directly stated in the table provided in the source page SCENARIO-A.pdf, physical page 1.",
+      "prompt_sha256": "6ee1c915938ff1bee15214dfad7634d725523d0c08614465d1a7ea2fc5b37518",
+      "raw_answer_sha256": "316eb33c67f220570f8468cd53ed6d4fd95c939d36db3e4e377fad13005c79da",
+      "served_answer_sha256": "316eb33c67f220570f8468cd53ed6d4fd95c939d36db3e4e377fad13005c79da",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-a.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "A03",
+      "question": "For policy SYN-A-001, what is the property damage deductible per loss?",
+      "answerable": true,
+      "reference_answer": "$9,200",
+      "gold_sources": [
+        "SCENARIO-A.pdf#page=2"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_natural_filename_and_page",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "evidence_selection",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-A.pdf#page=2",
+          "origin": "evidence_selection",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For policy SYN-A-001, the property damage deductible per loss is $9,200. This information is directly stated in the table provided on physical page 2 of the document SCENARIO-A.pdf, which states: \"For policy SYN-A-001, the property damage deductible is $9,200 per loss.\"",
+      "served_answer": "For policy SYN-A-001, the property damage deductible per loss is $9,200. This information is directly stated in the table provided on physical page 2 of the document SCENARIO-A.pdf, which states: \"For policy SYN-A-001, the property damage deductible is $9,200 per loss.\"",
+      "prompt_sha256": "5d0627b8626299a676d088a46a6c0d91ba782c79a2eba1d28f036af32e66f245",
+      "raw_answer_sha256": "1749af94e67fb85736d3cfc1344b59a022527a436820c29c8fb18fbf4cd87c83",
+      "served_answer_sha256": "1749af94e67fb85736d3cfc1344b59a022527a436820c29c8fb18fbf4cd87c83",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-a.pdf#page=2"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "A04",
+      "question": "For policy SYN-A-001, what is the personal liability limit per occurrence?",
+      "answerable": true,
+      "reference_answer": "$305,000",
+      "gold_sources": [
+        "SCENARIO-A.pdf#page=2"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_natural_filename_and_page",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "evidence_selection",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-A.pdf#page=2",
+          "origin": "evidence_selection",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For policy SYN-A-001, the personal liability limit per occurrence is $305,000. This information is directly stated in the policy declarations provided in the source page SCENARIO-A.pdf, physical page 2.",
+      "served_answer": "For policy SYN-A-001, the personal liability limit per occurrence is $305,000. This information is directly stated in the policy declarations provided in the source page SCENARIO-A.pdf, physical page 2.",
+      "prompt_sha256": "d7d5139e2746e689b50e7ed4b070ab74fb175b715dfbb6d67208095738d2004c",
+      "raw_answer_sha256": "3cc1d84934a4aa4a3c29f1b3460e7cbf10a0ce91ed7a754d4bd7b6065d3833e5",
+      "served_answer_sha256": "3cc1d84934a4aa4a3c29f1b3460e7cbf10a0ce91ed7a754d4bd7b6065d3833e5",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-a.pdf#page=2"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "B01",
+      "question": "What collision deductible is actually declared for policy SYN-B-001, rather than the guide example?",
+      "answerable": true,
+      "reference_answer": "$2,500",
+      "gold_sources": [
+        "SCENARIO-B-DECLARATIONS.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "partial_document_description",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested $2,500 is correct, but calling the invented declaration a real policy declaration overstates source authority; this wording remains served.",
+      "recorded_citation_origin": "evidence_selection",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-B-DECLARATIONS.pdf#page=1",
+          "origin": "evidence_selection",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "The collision deductible actually declared for policy SYN-B-001 is $2,500, as stated in the SYN-B-001 synthetic auto declarations, which are not a guide example but a real policy declaration.",
+      "served_answer": "The collision deductible actually declared for policy SYN-B-001 is $2,500, as stated in the SYN-B-001 synthetic auto declarations, which are not a guide example but a real policy declaration.",
+      "prompt_sha256": "d0791101fc7ebd646f58bf71c927a799ed2ee6f075eb715e0cfc188ff47c8a39",
+      "raw_answer_sha256": "97c0f3aa71725d82a7d48058f168f8d8bdf8d1d806bb4699e467053453d89f63",
+      "served_answer_sha256": "97c0f3aa71725d82a7d48058f168f8d8bdf8d1d806bb4699e467053453d89f63",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-b-declarations.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "B02",
+      "question": "What comprehensive deductible is actually declared for policy SYN-B-001?",
+      "answerable": true,
+      "reference_answer": "$1,400",
+      "gold_sources": [
+        "SCENARIO-B-DECLARATIONS.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_natural_filename_and_page",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "evidence_selection",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-B-DECLARATIONS.pdf#page=1",
+          "origin": "evidence_selection",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "The comprehensive deductible for policy SYN-B-001 is $1,400, as declared in the SYNTHETIC REGRESSION FIXTURE - NO LEGAL FORCE Synthetic auto declarations document, found on physical page 1 of SCENARIO-B-DECLARATIONS.pdf.",
+      "served_answer": "The comprehensive deductible for policy SYN-B-001 is $1,400, as declared in the SYNTHETIC REGRESSION FIXTURE - NO LEGAL FORCE Synthetic auto declarations document, found on physical page 1 of SCENARIO-B-DECLARATIONS.pdf.",
+      "prompt_sha256": "a604c1457378b57471e862316cb32ee21568bfe47ed2e9e803c74a17ff446934",
+      "raw_answer_sha256": "222ea4cae942a4a46c37cfe1d450bc15d471052d77e135d038d6e0ae3b294d37",
+      "served_answer_sha256": "222ea4cae942a4a46c37cfe1d450bc15d471052d77e135d038d6e0ae3b294d37",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-b-declarations.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "B03",
+      "question": "In the educational collision example only, what is the example deductible?",
+      "answerable": true,
+      "reference_answer": "$500",
+      "gold_sources": [
+        "SCENARIO-B-GUIDE.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "no_attribution",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "evidence_selection",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-B-GUIDE.pdf#page=1",
+          "origin": "evidence_selection",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "In the educational collision example only, the example deductible is $500.",
+      "served_answer": "In the educational collision example only, the example deductible is $500.",
+      "prompt_sha256": "431977bb3aea575a9758f7549a7900734eb7952473edc1e68189793bbc34720a",
+      "raw_answer_sha256": "3ab396bf72237110ba0af2d3ef50d7f6df1bb0a3b98d0967dc846aacc340a77b",
+      "served_answer_sha256": "3ab396bf72237110ba0af2d3ef50d7f6df1bb0a3b98d0967dc846aacc340a77b",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-b-guide.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "B04",
+      "question": "What exact annual premium is payable for policy SYN-B-001?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Correctly declines to establish the unavailable requested fact; final answer and citations are empty.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": true,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "model_reported_insufficient_evidence",
+      "raw_answer": "Based on the provided evidence, the annual premium for policy SYN-B-001 is not specified. The evidence includes declarations and a worked example, but neither provides the annual premium amount for policy SYN-B-001.",
+      "served_answer": "",
+      "prompt_sha256": "5fd373db2d6e000eb8924e53a9a6283c6d5c22889a3297fbc16e9faca226e256",
+      "raw_answer_sha256": "0425341c3043da1f4fffcf532716b5d307fb980b178a41f4db1da10c7b5945ec",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "C01",
+      "question": "What dwelling limit is declared for policy SYN-C-001?",
+      "answerable": true,
+      "reference_answer": "$265,000",
+      "gold_sources": [
+        "SCENARIO-C-DECLARATIONS.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_natural_filename_and_page",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "evidence_selection",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-C-DECLARATIONS.pdf#page=1",
+          "origin": "evidence_selection",
+          "source_origin": null,
+          "source_authority": null,
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "The dwelling limit declared for policy SYN-C-001 is $265,000. This information is derived from the declarations page of the policy, which states \"Policy identifier SYN-C-001. Dwelling limit: $265,000.\" SCENARIO-C-DECLARATIONS.pdf - physical page 1",
+      "served_answer": "The dwelling limit declared for policy SYN-C-001 is $265,000. This information is derived from the declarations page of the policy, which states \"Policy identifier SYN-C-001. Dwelling limit: $265,000.\" SCENARIO-C-DECLARATIONS.pdf - physical page 1",
+      "prompt_sha256": "1d33d3c76f81e0824055c1e4945788f472295dc92271050bb694c3c0827e6585",
+      "raw_answer_sha256": "337a84b6161ac7484227fd137160d5d7eaab81683b63d653d37a104c99bca495",
+      "served_answer_sha256": "337a84b6161ac7484227fd137160d5d7eaab81683b63d653d37a104c99bca495",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-c-declarations.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "C02",
+      "question": "What policy identifier is printed on claim report SYN-CLAIM-OTHER?",
+      "answerable": true,
+      "reference_answer": "SYN-OTHER-009",
+      "gold_sources": [
+        "SCENARIO-C-CLAIM.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_natural_filename_and_page",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "evidence_selection",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-C-CLAIM.pdf#page=1",
+          "origin": "evidence_selection",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "Claim report SYN-CLAIM-OTHER is associated with the policy identifier SYN-OTHER-009. This information is directly stated in the source page SCENARIO-C-CLAIM.pdf, physical page 1.",
+      "served_answer": "Claim report SYN-CLAIM-OTHER is associated with the policy identifier SYN-OTHER-009. This information is directly stated in the source page SCENARIO-C-CLAIM.pdf, physical page 1.",
+      "prompt_sha256": "52082a822dc62973f99e5fe6961e86fb7b2a8032044076779ed75ac60d798306",
+      "raw_answer_sha256": "de9636b46c7e6b6839f3aa0ec2b73856635973dee015f4154a5d94a4d66fb2dc",
+      "served_answer_sha256": "de9636b46c7e6b6839f3aa0ec2b73856635973dee015f4154a5d94a4d66fb2dc",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-c-claim.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "C03",
+      "question": "What approved insurer payment does this packet establish for claim SYN-CLAIM-OTHER under policy SYN-C-001?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Correctly declines to establish the unavailable requested fact; final answer and citations are empty.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": true,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "model_reported_insufficient_evidence",
+      "raw_answer": "This packet does not establish any approved insurer payment for claim SYN-CLAIM-OTHER under policy SYN-C-001. The evidence provided is a synthetic claim report for claim identifier SYN-CLAIM-OTHER, which does not identify policy SYN-C-001. Additionally, the declarations page for policy SYN-C-001 does not list an approved settlement amount for any claim. Therefore, there is insufficient evidence to determine the approved insurer payment for claim SYN-CLAIM-OTHER under policy SYN-C-001. [SCENARIO-C-CLAIM.pdf#page=1, SCENARIO-C-DECLARATIONS.pdf#page=1]",
+      "served_answer": "",
+      "prompt_sha256": "f65606883df418d0a57b949af2017c16746af6d04e7616d02fca36d39c0a8bbd",
+      "raw_answer_sha256": "a8718b6c07e07873164324e38e8e192a93ed0976d32cc6931289725e8064b308",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [
+            "scenario-c-claim.pdf#page=1",
+            "scenario-c-declarations.pdf#page=1"
+          ],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": true,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "C04",
+      "question": "What is the exact policy expiration date for SYN-C-001?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Correctly declines to establish the unavailable requested fact; final answer and citations are empty.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": true,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "model_reported_insufficient_evidence",
+      "raw_answer": "The provided evidence does not contain the policy expiration date for policy identifier SYN-C-001. The evidence includes the dwelling limit of $265,000 for policy identifier SYN-C-001, but it lacks any information regarding the policy's effective or expiration date.",
+      "served_answer": "",
+      "prompt_sha256": "e5a3dc99b631838637f7ecc67f4367eb29d26f1f9a67da38fcb6f31439145582",
+      "raw_answer_sha256": "c7be90ec63c95dbcdb9b17cd9c44ff5a272750b4734ce4dd1fd55c852cb77325",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "D01",
+      "question": "For policy SYN-D-001 after April 1, 2026, what water backup limit is stated in the issued WB-01 endorsement?",
+      "answerable": true,
+      "reference_answer": "$4,200",
+      "gold_sources": [
+        "SCENARIO-D-ENDORSEMENT.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "partial_document_description",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "evidence_selection",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-D-ENDORSEMENT.pdf#page=1",
+          "origin": "evidence_selection",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For policy SYN-D-001 after April 1, 2026, the water backup limit stated in the issued WB-01 endorsement is $4,200. This information is derived from the endorsement WB-01, which was issued effective April 1, 2026, and replaces the entire Section WB water backup limit in the January 1, 2026 base form.",
+      "served_answer": "For policy SYN-D-001 after April 1, 2026, the water backup limit stated in the issued WB-01 endorsement is $4,200. This information is derived from the endorsement WB-01, which was issued effective April 1, 2026, and replaces the entire Section WB water backup limit in the January 1, 2026 base form.",
+      "prompt_sha256": "32297e2b4fa1c38a8f8d5a8759863524bc79d192af1f7436a83e4e7c1dd65764",
+      "raw_answer_sha256": "5cf7b1af9f0bb700bcfee3f8f65eb3299f1d40a98e1b22ad3fe4151a5fb0d4a2",
+      "served_answer_sha256": "5cf7b1af9f0bb700bcfee3f8f65eb3299f1d40a98e1b22ad3fe4151a5fb0d4a2",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-d-endorsement.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "D02",
+      "question": "What water backup limit was stated in the January 1, 2026 base form for SYN-D-001, before the endorsement?",
+      "answerable": true,
+      "reference_answer": "$4,600",
+      "gold_sources": [
+        "SCENARIO-D-BASE.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "wrong_filename_without_page",
+      "manual_served_disposition": "answerable_case_withheld",
+      "manual_notes": "Requested prior $4,600 is correct. Raw text names nonexistent SYN-D-BASE.pdf, instead of SCENARIO-D-BASE.pdf, and mixes endorsement $4,200/WB-01 in one paragraph. Neither candidate page supports all identifiers. Application withholds the whole answer; not a fully correct response with merely missing formatting.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "missing_citation",
+      "raw_answer": "The water backup coverage limit in the January 1, 2026 base form for SYN-D-001 was $4,600. This limit was stated in the SYN-D-BASE.pdf document, which is the base policy for the policy identifier SYN-D-001, effective January 1, 2026. The endorsement WB-01, Policy identifier SYN-D-001, issued by Synthetic, replaced the entire Section WB water backup limit with a new limit of $4,200. Therefore, the water backup limit before the endorsement was $4,600.",
+      "served_answer": "",
+      "prompt_sha256": "369550b0a3441c73afa346a71194ace3ceaeece0263fb4ae2961816d981b3564",
+      "raw_answer_sha256": "6a9325d939612573dade0797e6c08eed211cba332807f3f853add06a2670fa2d",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "D03",
+      "question": "What effective date is stated on endorsement WB-01 for policy SYN-D-001?",
+      "answerable": true,
+      "reference_answer": "April 1, 2026",
+      "gold_sources": [
+        "SCENARIO-D-ENDORSEMENT.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_natural_filename_and_page",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "evidence_selection",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-D-ENDORSEMENT.pdf#page=1",
+          "origin": "evidence_selection",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "Endorsement WB-01 for policy SYN-D-001 is effective April 1, 2026, as stated in the SYNTHETIC REGRESSION FIXTURE - NO LEGAL FORCE document, which is physical page 1 of SCENARIO-D-ENDORSEMENT.pdf.",
+      "served_answer": "Endorsement WB-01 for policy SYN-D-001 is effective April 1, 2026, as stated in the SYNTHETIC REGRESSION FIXTURE - NO LEGAL FORCE document, which is physical page 1 of SCENARIO-D-ENDORSEMENT.pdf.",
+      "prompt_sha256": "daaa6dfd400e7e857581b9cd34ad70e1b6ffdfafa572c56ec4c869c588b27a5d",
+      "raw_answer_sha256": "168d829a3801760812a621b3b6d5f58f81a4c9b8b5511ebf0a0905bb7f6b1c1f",
+      "served_answer_sha256": "168d829a3801760812a621b3b6d5f58f81a4c9b8b5511ebf0a0905bb7f6b1c1f",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-d-endorsement.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "D04",
+      "question": "What earthquake coverage dollar limit is established for policy SYN-D-001?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Semantically clear missing-earthquake-fact refusal now recognized; no unrelated water-backup repair is attempted.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": true,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "model_reported_insufficient_evidence",
+      "raw_answer": "Based on the evidence provided, there is no information about earthquake coverage limits established for policy SYN-D-001. The evidence only mentions water backup coverage limits, stating that earthquake coverage is not described on the relevant pages.",
+      "served_answer": "",
+      "prompt_sha256": "65eb3d2ec369b00039878401319b77b1de26452f7c9a7897c3d09abd38e88442",
+      "raw_answer_sha256": "2b7c0cbde9c11891f0424245eae5e023ea897e90b4b6fa12e923ae656e58382a",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "E01",
+      "question": "Which single equipment coverage limit currently controls policy SYN-E-001 across the conflicting unsequenced versions?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": true,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Invents controlling $2,800 and unsupported precedence; falsely says both versions contain it and then that only B is provided. Guard serves no answer.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "missing_citation",
+      "raw_answer": "The single equipment coverage limit that currently controls policy SYN-E-001 across the conflicting unsequenced versions is $2,800. This limit is found in both version A and version B of the policy, with version B having the equipment coverage limit of $2,800. Since version B is the only version provided and does not have a conflicting version established, it controls the policy. However, if version A were to be provided and it had a higher coverage limit, version A would control. Based on the provided information, version B controls the policy with the equipment coverage limit set at $2,800.",
+      "served_answer": "",
+      "prompt_sha256": "a155795461a7e0df5294f00180d9b83b1304af79cbba9c31a87e3a43a1c0639a",
+      "raw_answer_sha256": "1e69a01ae1a0ba12edb850bb6d0d105b6e903aef5c0bb13770ceb9cbfcd197d0",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "E02",
+      "question": "Which single equipment deductible currently controls policy SYN-E-001 across the conflicting unsequenced versions?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Valid semantic refusal: not possible to determine controlling version/deductible. Phrase detector misses it; no value is asserted as controlling.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "missing_citation",
+      "raw_answer": "The conflicting unsequenced versions of policy SYN-E-001 do not establish which version controls the equipment deductible. The provided versions have different equipment deductibles: version A has a deductible of $2,400, and version B has a deductible of $9,700. Without a precedence statement or effective date, it is not possible to determine which version is in effect and thus which deductible currently controls the policy.",
+      "served_answer": "",
+      "prompt_sha256": "fecfb96ac62ae3aa158788d284ad710ac37b64cec7092610d8e869b2d8bc1a21",
+      "raw_answer_sha256": "56fc7ca50fa12dd7baa391febe463dd9f02d4649b7d840a72f9fd054e4dd2fcc",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "E03",
+      "question": "Which version, A or B, was issued later for policy SYN-E-001?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": true,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Invents B as later-issued from alphabetic labels despite absent issue dates or precedence. Guard serves no answer.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "missing_citation",
+      "raw_answer": "Version B was issued later for policy SYN-E-001. This determination is based on the sequence of version labels: Version A and Version B are mentioned in the provided snippets, with Version B having the label \"B\" and Version A having the label \"A\". Since version labels typically follow a numerical or alphabetical sequence, Version B would be issued after Version A.",
+      "served_answer": "",
+      "prompt_sha256": "e40f580f493b1a35af2b8f86e73eb97ad3467688566762c97b0960ba43345f91",
+      "raw_answer_sha256": "01a2240e15a6cd09d4f1b49b0e19fbcb951902cc4f01d8ec52c78724d880e23b",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "E04",
+      "question": "Without deciding which version controls, what equipment coverage limit is printed in version A of SYN-E-001?",
+      "answerable": true,
+      "reference_answer": "$3,900",
+      "gold_sources": [
+        "SCENARIO-E-VERSION-A.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-E-VERSION-A.pdf#page=1",
+          "origin": "model_source",
+          "source_origin": null,
+          "source_authority": null,
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "Version A of SYN-E-001 prints an equipment coverage limit of $3,900. This information is directly extracted from the provided source page snippet in SCENARIO-E-VERSION-A.pdf#page=1.",
+      "served_answer": "Version A of SYN-E-001 prints an equipment coverage limit of $3,900. This information is directly extracted from the provided source page snippet in SCENARIO-E-VERSION-A.pdf#page=1.",
+      "prompt_sha256": "3611239ced002719d92f3c8dfce8475d41bf2a15959a1eae0cb48b94ddd0dc02",
+      "raw_answer_sha256": "9e2eaa8d9c25fcf32f3c31a8cf708c9be93c87b0cedbb0df15d2f3983c1a48e8",
+      "served_answer_sha256": "9e2eaa8d9c25fcf32f3c31a8cf708c9be93c87b0cedbb0df15d2f3983c1a48e8",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-e-version-a.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-e-version-a.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "F01",
+      "question": "For SYN-F-001, what is the scheduled camera coverage limit?",
+      "answerable": true,
+      "reference_answer": "$8,000",
+      "gold_sources": [
+        "SCENARIO-F-SCHEDULE.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "no_attribution",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "evidence_selection",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-F-SCHEDULE.pdf#page=1",
+          "origin": "evidence_selection",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For SYN-F-001, the scheduled camera coverage limit is $8,000. This limit applies only to the camera, not to laptop or jewelry.",
+      "served_answer": "For SYN-F-001, the scheduled camera coverage limit is $8,000. This limit applies only to the camera, not to laptop or jewelry.",
+      "prompt_sha256": "2a27d9f0c6a4db7e3745fae5f81f0585c966c3c88e731614c514c11d7cbcaaa8",
+      "raw_answer_sha256": "dbc3c85fd6b9f57c4117ad88c1ed3c59da2336e7da5ab273cc4b067a9396532f",
+      "served_answer_sha256": "dbc3c85fd6b9f57c4117ad88c1ed3c59da2336e7da5ab273cc4b067a9396532f",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-f-schedule.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "F02",
+      "question": "For SYN-F-001, what is the scheduled laptop coverage limit?",
+      "answerable": true,
+      "reference_answer": "$2,200",
+      "gold_sources": [
+        "SCENARIO-F-SCHEDULE.pdf#page=2"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "no_attribution",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "evidence_selection",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-F-SCHEDULE.pdf#page=2",
+          "origin": "evidence_selection",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For SYN-F-001, the scheduled laptop coverage limit is $2,200. This limit applies only to the laptop, not to camera or jewelry.",
+      "served_answer": "For SYN-F-001, the scheduled laptop coverage limit is $2,200. This limit applies only to the laptop, not to camera or jewelry.",
+      "prompt_sha256": "bda323d5336fa2570dc5114053542453b9a7f636d9b398c04a25ac0b626fa7dc",
+      "raw_answer_sha256": "87aee31081e491846c15aa383e9df639c70e2e491562fc16ca3d932c45619fa5",
+      "served_answer_sha256": "87aee31081e491846c15aa383e9df639c70e2e491562fc16ca3d932c45619fa5",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": false,
+          "sources": [],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-f-schedule.pdf#page=2"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "F03",
+      "question": "For SYN-F-001, what is the scheduled jewelry coverage limit?",
+      "answerable": true,
+      "reference_answer": "$8,600",
+      "gold_sources": [
+        "SCENARIO-F-SCHEDULE.pdf#page=3"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-F-SCHEDULE.pdf#page=3",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For SYN-F-001, the scheduled jewelry coverage limit is $8,600. This information is derived from the page of the policy document at SCENARIO-F-SCHEDULE.pdf#page=3, where it is explicitly stated that the scheduled jewelry coverage limit is $8,600.",
+      "served_answer": "For SYN-F-001, the scheduled jewelry coverage limit is $8,600. This information is derived from the page of the policy document at SCENARIO-F-SCHEDULE.pdf#page=3, where it is explicitly stated that the scheduled jewelry coverage limit is $8,600.",
+      "prompt_sha256": "2a35f5fdd9cce988885840d8bab457396e2f94650fdd224b2d7432ad7b10c73a",
+      "raw_answer_sha256": "3411a9b4ce8e9723a1922801f1cfa607be03b17a0df1c3826a245705ead6107d",
+      "served_answer_sha256": "3411a9b4ce8e9723a1922801f1cfa607be03b17a0df1c3826a245705ead6107d",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-f-schedule.pdf#page=3"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-f-schedule.pdf#page=3"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen25_app_v4",
+      "id": "F04",
+      "question": "What single blanket coverage limit for all property is stated for SYN-F-001?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Correctly declines to establish the unavailable requested fact; final answer and citations are empty.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": true,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "model_reported_insufficient_evidence",
+      "raw_answer": "No blanket limit for all property is stated for the policy identifier SYN-F-001. The coverage limits are as follows:\n- Scheduled camera coverage limit: $8,000\n- Scheduled jewelry coverage limit: $8,600\n- Scheduled laptop coverage limit: $2,200",
+      "served_answer": "",
+      "prompt_sha256": "03a2a8b7af4edc8881b13b8a42d5ea046cc6cc9bd1f3121dd0bcd2ce3392c78b",
+      "raw_answer_sha256": "3e5c1084bfc964a95a512dc809ad3e4a3cd39e091902ad827316078bf44ea5c4",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "A01",
+      "question": "For policy SYN-A-001, what is the Coverage A dwelling limit?",
+      "answerable": true,
+      "reference_answer": "$535,000",
+      "gold_sources": [
+        "SCENARIO-A.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-A.pdf#page=1",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For policy SYN-A-001, the Coverage A dwelling limit is $535,000.\n\n**Source:** SCENARIO-A.pdf#page=1",
+      "served_answer": "For policy SYN-A-001, the Coverage A dwelling limit is $535,000.",
+      "prompt_sha256": "10822096d3d5df140d5a57927195edc246278678b3c95d882ab71cc371b390dc",
+      "raw_answer_sha256": "79e3da914e209adb01ea8fedaef5335cc92a30e9caa1ac669dac090648e5d396",
+      "served_answer_sha256": "c096bffaf4e6befb8a65d9d8b01a8d61028de88a1d30aa8c224165a659ff9218",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-a.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-a.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "A02",
+      "question": "For policy SYN-A-001, what is the Coverage C personal property limit?",
+      "answerable": true,
+      "reference_answer": "$85,000",
+      "gold_sources": [
+        "SCENARIO-A.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-A.pdf#page=1",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For policy SYN-A-001, the Coverage C personal property limit is $85,000.\n\n**Source:** SCENARIO-A.pdf#page=1",
+      "served_answer": "For policy SYN-A-001, the Coverage C personal property limit is $85,000.",
+      "prompt_sha256": "6ee1c915938ff1bee15214dfad7634d725523d0c08614465d1a7ea2fc5b37518",
+      "raw_answer_sha256": "cf806a4c36140cd80909e5590f2df0cd5da187b5fef4ddee3764d23df66e897d",
+      "served_answer_sha256": "4b2859af2f2dc4e4325f8e37a2b3abd9d620a33c8945e880be9558f13a614caa",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-a.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-a.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "A03",
+      "question": "For policy SYN-A-001, what is the property damage deductible per loss?",
+      "answerable": true,
+      "reference_answer": "$9,200",
+      "gold_sources": [
+        "SCENARIO-A.pdf#page=2"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-A.pdf#page=2",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For policy SYN-A-001, the property damage deductible is $9,200 per loss.\n\n**Source:** SCENARIO-A.pdf#page=2",
+      "served_answer": "For policy SYN-A-001, the property damage deductible is $9,200 per loss.",
+      "prompt_sha256": "5d0627b8626299a676d088a46a6c0d91ba782c79a2eba1d28f036af32e66f245",
+      "raw_answer_sha256": "244457418b04319490148bb6c988eaeb3e01a18c040dc6d1941c256276ac18ff",
+      "served_answer_sha256": "9a50f52de8eefd0a2a923aa0f52368af3f079ea54ccfcc61f4be4e283d54f881",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-a.pdf#page=2"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-a.pdf#page=2"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "A04",
+      "question": "For policy SYN-A-001, what is the personal liability limit per occurrence?",
+      "answerable": true,
+      "reference_answer": "$305,000",
+      "gold_sources": [
+        "SCENARIO-A.pdf#page=2"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-A.pdf#page=2",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For policy SYN-A-001, the personal liability limit is **$305,000 per occurrence**.\n\n**Source:** SCENARIO-A.pdf#page=2",
+      "served_answer": "For policy SYN-A-001, the personal liability limit is **$305,000 per occurrence**.",
+      "prompt_sha256": "d7d5139e2746e689b50e7ed4b070ab74fb175b715dfbb6d67208095738d2004c",
+      "raw_answer_sha256": "dfeb7a00980099e49fec4cbbc1f65ee6039b72f159afbf0682bc6667b59d6b38",
+      "served_answer_sha256": "d69aaee36bc61199b048f0c46f8b8775b2347abd9a4d5cad7a27dc7d02360ed4",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-a.pdf#page=2"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-a.pdf#page=2"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "B01",
+      "question": "What collision deductible is actually declared for policy SYN-B-001, rather than the guide example?",
+      "answerable": true,
+      "reference_answer": "$2,500",
+      "gold_sources": [
+        "SCENARIO-B-DECLARATIONS.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Correct $2,500 primary fact and correct multi-source guide contrast. Raw official-declarations wording overstates synthetic authority. Single-citation checks reduce to the correct first paragraph; answer_repaired=true. This is explanation reduction, not correction of a wrong deductible.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-B-DECLARATIONS.pdf#page=1",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": true,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "The collision deductible actually declared for policy SYN-B-001 is **$2,500**.\n\nThis amount is found in the official declarations, whereas the public guide provides a different example ($500) that does not establish the actual policy terms.\n\n*   **Source:** SCENARIO-B-DECLARATIONS.pdf#page=1 (Policy identifier SYN-B-001. Collision deductible: $2,500.)\n*   **Source:** SCENARIO-B-GUIDE.pdf#page=1 (In this example only, collision repair costs are $2,900 and the collision deductible is $500... None of these example amounts establish the terms of any issued policy.)",
+      "served_answer": "The collision deductible actually declared for policy SYN-B-001 is **$2,500**.",
+      "prompt_sha256": "d0791101fc7ebd646f58bf71c927a799ed2ee6f075eb715e0cfc188ff47c8a39",
+      "raw_answer_sha256": "dd40bea408fb1da1417caf47183eab6d2e625a06beec2858492cf924a7ee0586",
+      "served_answer_sha256": "61bfe9fc588b8ec68969038e1a0944ebbc4623e0ef2a18520f0f48a4aed9603f",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-b-declarations.pdf#page=1",
+            "scenario-b-guide.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-b-declarations.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "B02",
+      "question": "What comprehensive deductible is actually declared for policy SYN-B-001?",
+      "answerable": true,
+      "reference_answer": "$1,400",
+      "gold_sources": [
+        "SCENARIO-B-DECLARATIONS.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-B-DECLARATIONS.pdf#page=1",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "The comprehensive deductible declared for policy SYN-B-001 is **$1,400**.\n\n*Source: SCENARIO-B-DECLARATIONS.pdf#page=1*",
+      "served_answer": "The comprehensive deductible declared for policy SYN-B-001 is **$1,400**.",
+      "prompt_sha256": "a604c1457378b57471e862316cb32ee21568bfe47ed2e9e803c74a17ff446934",
+      "raw_answer_sha256": "495ead17e4099f4c6a547c07a84adb21a1d9a32e348f2d5533d1a0b47364c5a4",
+      "served_answer_sha256": "f7ac0f0f5fe5412f99e5a9a2321132e26e697838eac49d80348cbaeb613682db",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-b-declarations.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-b-declarations.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "B03",
+      "question": "In the educational collision example only, what is the example deductible?",
+      "answerable": true,
+      "reference_answer": "$500",
+      "gold_sources": [
+        "SCENARIO-B-GUIDE.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-B-GUIDE.pdf#page=1",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "In the educational collision example, the deductible is **$500**.\n\n**Source:** SCENARIO-B-GUIDE.pdf#page=1",
+      "served_answer": "In the educational collision example, the deductible is **$500**.",
+      "prompt_sha256": "431977bb3aea575a9758f7549a7900734eb7952473edc1e68189793bbc34720a",
+      "raw_answer_sha256": "5ce7a543daaa1356fc9da6add97658d9142b8336e126266a8260464cdd75c718",
+      "served_answer_sha256": "fc670379d5c36c2f8ab177394a2f55a8a9e35448d0b46c1ab8be59f24eff36be",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-b-guide.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-b-guide.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "B04",
+      "question": "What exact annual premium is payable for policy SYN-B-001?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Correctly declines to establish the unavailable requested fact; final answer and citations are empty.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": true,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "model_reported_insufficient_evidence",
+      "raw_answer": "The exact annual premium for policy SYN-B-001 is not stated in the provided evidence.\n\n**Source:** SCENARIO-B-DECLARATIONS.pdf#page=1\n> \"The annual premium is not stated in this packet.\"",
+      "served_answer": "",
+      "prompt_sha256": "5fd373db2d6e000eb8924e53a9a6283c6d5c22889a3297fbc16e9faca226e256",
+      "raw_answer_sha256": "2c6c5f7a4a6c541e411e7a5a0340a5b2941c71f35b9138de7baa30c4467a9df3",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [
+            "scenario-b-declarations.pdf#page=1"
+          ],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": true,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "C01",
+      "question": "What dwelling limit is declared for policy SYN-C-001?",
+      "answerable": true,
+      "reference_answer": "$265,000",
+      "gold_sources": [
+        "SCENARIO-C-DECLARATIONS.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-C-DECLARATIONS.pdf#page=1",
+          "origin": "model_source",
+          "source_origin": null,
+          "source_authority": null,
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "The dwelling limit declared for policy SYN-C-001 is $265,000.\n\n**Source:** SCENARIO-C-DECLARATIONS.pdf#page=1",
+      "served_answer": "The dwelling limit declared for policy SYN-C-001 is $265,000.",
+      "prompt_sha256": "1d33d3c76f81e0824055c1e4945788f472295dc92271050bb694c3c0827e6585",
+      "raw_answer_sha256": "a308f8cd90454d3f2aadf40405bd78aa7b4a7fc1b8892a7885237ed1a231066f",
+      "served_answer_sha256": "a147cb7d491b00f0c37d24803a96de80aec67aa73da315fef10fec633ff17515",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-c-declarations.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-c-declarations.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "C02",
+      "question": "What policy identifier is printed on claim report SYN-CLAIM-OTHER?",
+      "answerable": true,
+      "reference_answer": "SYN-OTHER-009",
+      "gold_sources": [
+        "SCENARIO-C-CLAIM.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-C-CLAIM.pdf#page=1",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "The policy identifier printed on claim report SYN-CLAIM-OTHER is **SYN-OTHER-009**.\n\n**Source:** SCENARIO-C-CLAIM.pdf#page=1",
+      "served_answer": "The policy identifier printed on claim report SYN-CLAIM-OTHER is **SYN-OTHER-009**.",
+      "prompt_sha256": "52082a822dc62973f99e5fe6961e86fb7b2a8032044076779ed75ac60d798306",
+      "raw_answer_sha256": "d1445679ddf4563a7a10b2639b3d0495a918ccf7b764a7e84d6337d2626a56b4",
+      "served_answer_sha256": "c669beaf497fc4dcbb1355db96822d1d50e2babdfa2f77f643538541cdca75d1",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-c-claim.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-c-claim.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "C03",
+      "question": "What approved insurer payment does this packet establish for claim SYN-CLAIM-OTHER under policy SYN-C-001?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Valid refusal to establish approved payment under mismatched policy. Phrase detector misses it; identifier guard returns empty answer.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "identifier_not_in_citation",
+      "raw_answer": "This packet does not establish an approved insurer payment for claim SYN-CLAIM-OTHER under policy SYN-C-001.\n\nThe claim report (SYN-CLAIM-OTHER) explicitly states that \"No coverage acceptance or approved insurer payment is recorded\" and identifies the policy as SYN-OTHER-009, not SYN-C-001. Additionally, the declarations page for policy SYN-C-001 does not list an approved settlement amount for any claim.\n\n**Sources:**\n*   SCENARIO-C-CLAIM.pdf#page=1\n*   SCENARIO-C-DECLARATIONS.pdf#page=1",
+      "served_answer": "",
+      "prompt_sha256": "f65606883df418d0a57b949af2017c16746af6d04e7616d02fca36d39c0a8bbd",
+      "raw_answer_sha256": "350173b461e0986ece7ecf6f2ec1a24b2a11e1a16512b68d5e45003e6f569292",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [
+            "scenario-c-claim.pdf#page=1",
+            "scenario-c-declarations.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": true,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "C04",
+      "question": "What is the exact policy expiration date for SYN-C-001?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Correctly declines to establish the unavailable requested fact; final answer and citations are empty.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": true,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "model_reported_insufficient_evidence",
+      "raw_answer": "The provided evidence does not state the exact policy expiration date for SYN-C-001.\n\nAccording to the declarations page for policy SYN-C-001, it \"supplies no policy effective or expiration date\" (SCENARIO-C-DECLARATIONS.pdf#page=1). Additionally, the claim report for SYN-CLAIM-OTHER does not identify policy SYN-C-001 (SCENARIO-C-CLAIM.pdf#page=1).",
+      "served_answer": "",
+      "prompt_sha256": "e5a3dc99b631838637f7ecc67f4367eb29d26f1f9a67da38fcb6f31439145582",
+      "raw_answer_sha256": "e02f03ee9e53934e0cebed88328f1a707d488da71338df06597e22e4716eb182",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [
+            "(scenario-c-declarations.pdf#page=1",
+            "(scenario-c-claim.pdf#page=1"
+          ],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "D01",
+      "question": "For policy SYN-D-001 after April 1, 2026, what water backup limit is stated in the issued WB-01 endorsement?",
+      "answerable": true,
+      "reference_answer": "$4,200",
+      "gold_sources": [
+        "SCENARIO-D-ENDORSEMENT.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Correct $4,200, source, date, and completed generation. Second quoted fragment combines Synthetic issued title wording with the effective-date sentence; not a verbatim contiguous quote. Source lines removed from served answer; primary fact remains correct.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-D-ENDORSEMENT.pdf#page=1",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For policy SYN-D-001 after April 1, 2026, the issued WB-01 endorsement states that the water backup coverage limit is **$4,200**.\n\n*   **Source:** SCENARIO-D-ENDORSEMENT.pdf#page=1: \"Synthetic issued endorsement WB-01 Policy identifier SYN-D-001. This issued endorsement replaces the entire Section WB water backup limit in the January 1, 2026 base form. The water backup coverage limit is now $4,200.\"\n*   **Source:** SCENARIO-D-ENDORSEMENT.pdf#page=1: \"Synthetic issued endorsement WB-01 effective April 1, 2026.\"",
+      "served_answer": "For policy SYN-D-001 after April 1, 2026, the issued WB-01 endorsement states that the water backup coverage limit is **$4,200**.",
+      "prompt_sha256": "32297e2b4fa1c38a8f8d5a8759863524bc79d192af1f7436a83e4e7c1dd65764",
+      "raw_answer_sha256": "9decbfed7766309745d1aef1191bd2c852ee1e581cde2a1477f8cd7fc832b94c",
+      "served_answer_sha256": "10e485dfe361618eb576b1c2aeb7601da31a04bf42e303cf74a12b2e0267aec0",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-d-endorsement.pdf#page=1",
+            "scenario-d-endorsement.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-d-endorsement.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "D02",
+      "question": "What water backup limit was stated in the January 1, 2026 base form for SYN-D-001, before the endorsement?",
+      "answerable": true,
+      "reference_answer": "$4,600",
+      "gold_sources": [
+        "SCENARIO-D-BASE.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-D-BASE.pdf#page=1",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "The water backup coverage limit stated in the January 1, 2026 base form for policy SYN-D-001 was $4,600.\n\n**Source:** SCENARIO-D-BASE.pdf#page=1",
+      "served_answer": "The water backup coverage limit stated in the January 1, 2026 base form for policy SYN-D-001 was $4,600.",
+      "prompt_sha256": "369550b0a3441c73afa346a71194ace3ceaeece0263fb4ae2961816d981b3564",
+      "raw_answer_sha256": "01ef916d293b0811154cbffd79759967d775d8f5f68b2ba4a0823ab23cbed099",
+      "served_answer_sha256": "3388d2f26bda6aeada24db3e1f27f554d9a64cb4f34b553dcd6d52ec1c643e05",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-d-base.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-d-base.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "D03",
+      "question": "What effective date is stated on endorsement WB-01 for policy SYN-D-001?",
+      "answerable": true,
+      "reference_answer": "April 1, 2026",
+      "gold_sources": [
+        "SCENARIO-D-ENDORSEMENT.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-D-ENDORSEMENT.pdf#page=1",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "Endorsement WB-01 for policy SYN-D-001 is effective April 1, 2026.\n\n**Source:** SCENARIO-D-ENDORSEMENT.pdf#page=1",
+      "served_answer": "Endorsement WB-01 for policy SYN-D-001 is effective April 1, 2026.",
+      "prompt_sha256": "daaa6dfd400e7e857581b9cd34ad70e1b6ffdfafa572c56ec4c869c588b27a5d",
+      "raw_answer_sha256": "cce97f92e38321c478a693761c9234a086f0e5b0d8cb60906746551e259be6c4",
+      "served_answer_sha256": "f8c2001306e64924a51d71c16394f66f817aa2ee1176b52f546577340603b114",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-d-endorsement.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-d-endorsement.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "D04",
+      "question": "What earthquake coverage dollar limit is established for policy SYN-D-001?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Correctly declines to establish the unavailable requested fact; final answer and citations are empty.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": true,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "model_reported_insufficient_evidence",
+      "raw_answer": "The provided evidence does not establish the earthquake coverage dollar limit for policy SYN-D-001.\n\nThe retrieved documents only describe water backup coverage limits ($4,600 in the base policy and $4,200 in endorsement WB-01) and explicitly state that \"Earthquake coverage is not described on this page\" for the base policy. No information regarding earthquake coverage limits is present in the supplied snippets.",
+      "served_answer": "",
+      "prompt_sha256": "65eb3d2ec369b00039878401319b77b1de26452f7c9a7897c3d09abd38e88442",
+      "raw_answer_sha256": "cd64e36b6a84cb0494e7318947cbe65256f035ddaabc61ce91460bd97281c967",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "E01",
+      "question": "Which single equipment coverage limit currently controls policy SYN-E-001 across the conflicting unsequenced versions?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Valid refusal: neither version is established as controlling. Phrase detector misses it; identifier guard returns empty answer.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "identifier_not_in_citation",
+      "raw_answer": "The evidence does not support which single equipment coverage limit currently controls policy SYN-E-001.\n\nWhile Version A lists a limit of $3,900 and Version B lists a limit of $2,800, the documents explicitly state that \"which version controls is not established.\" Therefore, no single limit is confirmed as controlling.\n\n*   **Version A Limit:** $3,900 (Source: SCENARIO-E-VERSION-A.pdf#page=1)\n*   **Version B Limit:** $2,800 (Source: SCENARIO-E-VERSION-B.pdf#page=1)",
+      "served_answer": "",
+      "prompt_sha256": "a155795461a7e0df5294f00180d9b83b1304af79cbba9c31a87e3a43a1c0639a",
+      "raw_answer_sha256": "d6840eb0fa292dfda287982e3bc1600286eb72bda1e6c0a0316d4bdf6e46a692",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [
+            "scenario-e-version-a.pdf#page=1",
+            "scenario-e-version-b.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": true,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "E02",
+      "question": "Which single equipment deductible currently controls policy SYN-E-001 across the conflicting unsequenced versions?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Overall response clearly declines to determine the controlling deductible; final no-single-deductible wording should be read with its preceding evidence qualification, not as an adjudication of legal validity.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": true,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "model_reported_insufficient_evidence",
+      "raw_answer": "The answer cannot be determined from the provided evidence.\n\nWhile the retrieved documents show conflicting deductibles ($9,700 in Version B and $2,400 in Version A), the evidence explicitly states that \"which version controls is not established\" and that these copies have \"no effective date, issue date, signature, or precedence statement.\" Therefore, no single deductible currently controls the policy.",
+      "served_answer": "",
+      "prompt_sha256": "fecfb96ac62ae3aa158788d284ad710ac37b64cec7092610d8e869b2d8bc1a21",
+      "raw_answer_sha256": "da3bb4665058559a218d777cb0db4bec8808aa073a88c7ccd7bfb42eeed9ba25",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "E03",
+      "question": "Which version, A or B, was issued later for policy SYN-E-001?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Correctly declines to establish the unavailable requested fact; final answer and citations are empty.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": true,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "model_reported_insufficient_evidence",
+      "raw_answer": "The provided evidence does not establish which version (A or B) was issued later.\n\nBoth policy copies for identifier SYN-E-001 explicitly state they have \"no effective date, issue date, signature, or precedence statement,\" and both note that the controlling version is not established. Without an issue date or a precedence statement, it is impossible to determine which version was issued later.",
+      "served_answer": "",
+      "prompt_sha256": "e40f580f493b1a35af2b8f86e73eb97ad3467688566762c97b0960ba43345f91",
+      "raw_answer_sha256": "b99cd1a203e4b0e3b5f0e02f458b1f5872e5dd5b517ac9e717e2d086041640b7",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "E04",
+      "question": "Without deciding which version controls, what equipment coverage limit is printed in version A of SYN-E-001?",
+      "answerable": true,
+      "reference_answer": "$3,900",
+      "gold_sources": [
+        "SCENARIO-E-VERSION-A.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-E-VERSION-A.pdf#page=1",
+          "origin": "model_source",
+          "source_origin": null,
+          "source_authority": null,
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "Version A of policy SYN-E-001 lists an equipment coverage limit of **$3,900**.\n\n**Source:** SCENARIO-E-VERSION-A.pdf#page=1",
+      "served_answer": "Version A of policy SYN-E-001 lists an equipment coverage limit of **$3,900**.",
+      "prompt_sha256": "3611239ced002719d92f3c8dfce8475d41bf2a15959a1eae0cb48b94ddd0dc02",
+      "raw_answer_sha256": "53adc38d25460b5b032c302d5f6d3606857093e4978136b5150cbfa8d14ff26b",
+      "served_answer_sha256": "0a2ab4621d7a8848287318b0b10778f265721d6be2cb94e62bc7ca2f4ed3ad0f",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-e-version-a.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-e-version-a.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "F01",
+      "question": "For SYN-F-001, what is the scheduled camera coverage limit?",
+      "answerable": true,
+      "reference_answer": "$8,000",
+      "gold_sources": [
+        "SCENARIO-F-SCHEDULE.pdf#page=1"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-F-SCHEDULE.pdf#page=1",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For policy SYN-F-001, the scheduled camera coverage limit is **$8,000**. This limit applies only to the camera and does not cover laptops or jewelry.\n\n**Source:** SCENARIO-F-SCHEDULE.pdf#page=1",
+      "served_answer": "For policy SYN-F-001, the scheduled camera coverage limit is **$8,000**. This limit applies only to the camera and does not cover laptops or jewelry.",
+      "prompt_sha256": "2a27d9f0c6a4db7e3745fae5f81f0585c966c3c88e731614c514c11d7cbcaaa8",
+      "raw_answer_sha256": "1afd62d44a262deb7059605abfde72da49d8d5cb0b143a1c6739d4fff488fe67",
+      "served_answer_sha256": "2a65d3e07d58ef76d2227616611d7d0e376837e70337d76c10092d350f37ddb3",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-f-schedule.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-f-schedule.pdf#page=1"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "F02",
+      "question": "For SYN-F-001, what is the scheduled laptop coverage limit?",
+      "answerable": true,
+      "reference_answer": "$2,200",
+      "gold_sources": [
+        "SCENARIO-F-SCHEDULE.pdf#page=2"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-F-SCHEDULE.pdf#page=2",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "The scheduled laptop coverage limit for policy SYN-F-001 is $2,200.\n\n**Source:** SCENARIO-F-SCHEDULE.pdf#page=2",
+      "served_answer": "The scheduled laptop coverage limit for policy SYN-F-001 is $2,200.",
+      "prompt_sha256": "bda323d5336fa2570dc5114053542453b9a7f636d9b398c04a25ac0b626fa7dc",
+      "raw_answer_sha256": "a1500b6d85ce07062c82e1b0d58d199c3a5ba53d8599a5b3319248aeae5367b0",
+      "served_answer_sha256": "222ff612d0b3142a233a688e79e2328252580743ca6aa9c4e13752def1a81251",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-f-schedule.pdf#page=2"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-f-schedule.pdf#page=2"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "F03",
+      "question": "For SYN-F-001, what is the scheduled jewelry coverage limit?",
+      "answerable": true,
+      "reference_answer": "$8,600",
+      "gold_sources": [
+        "SCENARIO-F-SCHEDULE.pdf#page=3"
+      ],
+      "manual_primary_fact_correct": true,
+      "manual_raw_semantic_refusal": false,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "correct_exact_source_id",
+      "manual_served_disposition": "correct_supported_primary_answer",
+      "manual_notes": "Requested primary fact is correct; final answer and selected source support it.",
+      "recorded_citation_origin": "model_source",
+      "recorded_citations": [
+        {
+          "source": "SCENARIO-F-SCHEDULE.pdf#page=3",
+          "origin": "model_source",
+          "source_origin": "synthetic_stress_fixture",
+          "source_authority": "Invented regression fixture; no legal authority",
+          "evidence_visible_in_prompt": true
+        }
+      ],
+      "recorded_abstain": false,
+      "recorded_explicit_abstention": false,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "supported",
+      "raw_answer": "For policy SYN-F-001, the scheduled jewelry coverage limit is $8,600. This limit applies only to jewelry and does not cover cameras or laptops.\n\n**Source:** SCENARIO-F-SCHEDULE.pdf#page=3",
+      "served_answer": "For policy SYN-F-001, the scheduled jewelry coverage limit is $8,600. This limit applies only to jewelry and does not cover cameras or laptops.",
+      "prompt_sha256": "2a35f5fdd9cce988885840d8bab457396e2f94650fdd224b2d7432ad7b10c73a",
+      "raw_answer_sha256": "15731026cd9987ae077fde4e4c38d34bd751eed7b4538bb94fecb4162c654bc4",
+      "served_answer_sha256": "1bfd4b1f8e64899d5e0ad7e808c8d206fa14af06cd84cafddd293ee08f6c6951",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-f-schedule.pdf#page=3"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": true,
+          "citation_match": true,
+          "sources": [
+            "scenario-f-schedule.pdf#page=3"
+          ],
+          "abstain": false,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": true,
+          "context_source_present": true,
+          "context_answer_key_present": true,
+          "completed_generation": true,
+          "context_key_source_pass": true,
+          "retrieved_evidence_key_source_pass": true,
+          "unsupported_abstention": false,
+          "empty_served_abstention": false
+        }
+      }
+    },
+    {
+      "run": "qwen35_app_v4",
+      "id": "F04",
+      "question": "What single blanket coverage limit for all property is stated for SYN-F-001?",
+      "answerable": false,
+      "reference_answer": "",
+      "gold_sources": [],
+      "manual_primary_fact_correct": null,
+      "manual_raw_semantic_refusal": true,
+      "manual_raw_invented_requested_fact": false,
+      "manual_raw_attribution": "not_scored_for_unsupported_case",
+      "manual_served_disposition": "correct_empty_abstention",
+      "manual_notes": "Correctly declines to establish the unavailable requested fact; final answer and citations are empty.",
+      "recorded_citation_origin": null,
+      "recorded_citations": [],
+      "recorded_abstain": true,
+      "recorded_explicit_abstention": true,
+      "recorded_answer_repaired": false,
+      "recorded_generation_truncated": false,
+      "recorded_support_reason": "model_reported_insufficient_evidence",
+      "raw_answer": "No single blanket coverage limit for all property is stated for policy SYN-F-001.\n\nThe policy specifies individual limits for specific items:\n*   **Camera:** $8,000 (applies only to the camera) [SOURCE: SCENARIO-F-SCHEDULE.pdf#page=1]\n*   **Jewelry:** $8,600 (applies only to jewelry) [SOURCE: SCENARIO-F-SCHEDULE.pdf#page=3]\n*   **Laptop:** $2,200 (applies only to the laptop) [SOURCE: SCENARIO-F-SCHEDULE.pdf#page=2]\n\nThe evidence explicitly states: \"No blanket limit for all property is stated.\"",
+      "served_answer": "",
+      "prompt_sha256": "03a2a8b7af4edc8881b13b8a42d5ea046cc6cc9bd1f3121dd0bcd2ce3392c78b",
+      "raw_answer_sha256": "9a046fe525f08500338cc29c826ac4ca2e1c8706320dea60879ceb3f05367e04",
+      "served_answer_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "original_automated_scores": {
+        "raw": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [
+            "scenario-f-schedule.pdf#page=1",
+            "scenario-f-schedule.pdf#page=3",
+            "scenario-f-schedule.pdf#page=2"
+          ],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": true,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": false
+        },
+        "served": {
+          "answer_key_match": false,
+          "citation_match": false,
+          "sources": [],
+          "abstain": true,
+          "forbidden_key_present": false,
+          "supported_key_source_pass": false,
+          "context_source_present": false,
+          "context_answer_key_present": false,
+          "completed_generation": true,
+          "context_key_source_pass": false,
+          "retrieved_evidence_key_source_pass": false,
+          "unsupported_abstention": true,
+          "empty_served_abstention": true
+        }
+      }
+    }
+  ]
+}

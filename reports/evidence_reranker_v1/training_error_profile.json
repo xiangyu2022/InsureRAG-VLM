@@ -1,0 +1,1267 @@
+{
+  "created_utc": "2026-10-03T04:15:57.072957+00:00",
+  "training_only": true,
+  "labels_modified": false,
+  "counts": {
+    "insuranceqa": {
+      "unique_training_questions": 11629,
+      "all_questions": 11629,
+      "all_negative_ties_or_outranks_best_positive": 5914,
+      "condition_or_subject_keyword_questions": 2043,
+      "condition_or_subject_keyword_negative_ties_or_outranks_best_positive": 1128,
+      "numeric_keyword_questions": 1427,
+      "numeric_keyword_negative_ties_or_outranks_best_positive": 781
+    },
+    "government": {
+      "unique_training_questions": 259,
+      "all_questions": 259,
+      "numeric_keyword_questions": 94,
+      "all_negative_ties_or_outranks_best_positive": 60,
+      "condition_or_subject_keyword_questions": 126,
+      "condition_or_subject_keyword_negative_ties_or_outranks_best_positive": 34,
+      "numeric_keyword_negative_ties_or_outranks_best_positive": 25
+    },
+    "general": {
+      "unique_training_questions": 13999,
+      "all_questions": 13999,
+      "condition_or_subject_keyword_questions": 4843,
+      "all_negative_ties_or_outranks_best_positive": 1592,
+      "condition_or_subject_keyword_negative_ties_or_outranks_best_positive": 527,
+      "numeric_keyword_questions": 3297,
+      "numeric_keyword_negative_ties_or_outranks_best_positive": 266
+    },
+    "finance": {
+      "unique_training_questions": 5464,
+      "all_questions": 5464,
+      "all_negative_ties_or_outranks_best_positive": 3491,
+      "numeric_keyword_questions": 863,
+      "numeric_keyword_negative_ties_or_outranks_best_positive": 528,
+      "condition_or_subject_keyword_questions": 834,
+      "condition_or_subject_keyword_negative_ties_or_outranks_best_positive": 517
+    },
+    "financial_report": {
+      "unique_training_questions": 2075,
+      "all_questions": 2075,
+      "numeric_keyword_questions": 2000,
+      "all_negative_ties_or_outranks_best_positive": 856,
+      "numeric_keyword_negative_ties_or_outranks_best_positive": 815,
+      "condition_or_subject_keyword_questions": 82,
+      "condition_or_subject_keyword_negative_ties_or_outranks_best_positive": 35
+    }
+  },
+  "examples": {
+    "insuranceqa": [
+      {
+        "id": "iqa_v2_train_00001",
+        "question": "Is Disability Insurance Required By Law?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "20798",
+            "text": "Not generally. There are five states that require most all employers carry short term disability insurance on their employees. These states are: California, Hawaii, New Jersey, New York, and Rhode Island. Besides this mandatory short term disability law, there is no other legislative imperative for someone to purchase or be covered by disability insurance.",
+            "score": 6.23046875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "22993",
+          "text": "If by state disability insurance you are referring to mandatory short term disability insurance law, this is paid for by the employer as it is required by the state that the employer cover its employees with short term disability insurance. There are five states with this requirement; they are: California, Hawaii, New Jersey, New York, and Rhode Island",
+          "score": 6.39453125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "iqa_v2_train_00002",
+        "question": "Can Creditors Take Life Insurance After Death?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "26354",
+            "text": "If the person who passed away was the one with the debt, creditors generally cannot take the life insurance proceeds left as long as the beneficiary was a person. The money then belongs to that beneficiary, and as long as creditors do not have a claim against the beneficiary, they cannot take life insurance proceeds from them.",
+            "score": 7.55078125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "26694",
+          "text": "If you mean can creditors, rather than debtors, take life insurance proceeds upon the death of the insured, they generally cannot as long as the beneficiary of the policy is a person. If the beneficiary is the estate, creditors can go after the estate for payment of past debts on the part of the insured.",
+          "score": 8.359375
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "iqa_v2_train_00003",
+        "question": "Does Travelers Insurance Have Renters Insurance?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "5068",
+            "text": "One of the insurance carriers I represent is Travelers and yes, you can purchase Renters insurance through Travelers. I would look for a local agent who can assist you in placing a renters policy if you are interested. I am sure the local agent would be happy to quote Travelers if they have access and other carries as well.",
+            "score": 6.5859375
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "26875",
+          "text": "Travelers Insurance Company has an excellent renters insurance policy. The Form HO-4 covers Personal Property and Personal Liability Insurance for the tenant (insured). Renters Insurance is a very valuable coverage because it no only offers protection against damage to your personal property but also protection against negligence and personal liability cases that may be brought against you. One valuable example is if there is fire, smoke or water damage to the rented home or apartment unit, the property owner's insurance company will most likely attempt to collect damages from the tenant if they can prove negligence. In this case, Renters Insurance will provide the legal representation to handle the situation although the policy limit will apply. If you are not sure and don't really want to commit to purchase renters insurance but may or may not be required to according to your lease agreement, the best way to generate the lowest annual premium is to select the minimum personal property coverage available, the lowest limit of personal liability and the highest available deductible for the policy. There is a link providing an online format to obtain a quote and buy renters insurance online in multiple States; may be used by Escrow/Closing Professionals, Mortgage Professionals, Real Estate Agents and directly by Consumers. An exemplary online experience for all! WEBSITELINK",
+          "score": 8.5390625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "iqa_v2_train_00005",
+        "question": "Is The Cash Surrender Value Of Life Insurance Taxable?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "18502",
+            "text": "Cash surrender value comes only with Whole Life Insurance, never with Term. It is the amount you can terminate your policy and receive. That amount includes both what you put in and what profit you made. The profit is taxable, just as most profit would be taxable. A far better idea would be NOT to surrender your Whole Life Policy, but instead to keep it and borrow against it and either then not repay it or choose to repay it as you wish. You continue to grow in value, even when the loan is out, and your policy stays in force, although the death benefit is reduced by the loan until it is paid back. There are numerous option you should discuss with a qualified agent. Gary Lane, Registered Representative, New York Life, 949 797 2424. Call anytime. Thank you.",
+            "score": 7.80859375
+          },
+          {
+            "id": "23498",
+            "text": "The cash surrender value in life insurance is only taxable on the amount over your basis. Let me explain. Basis is considered the premium you paid in. For example, lets say over 20 years, you paid $1000 per year, totaling $20k. In this example, the cash value is $35k. The taxable amount is going to be what you have earned over the $20k you put in so $15,000 in this example is taxable. Consider however not surrendering this policy but taking loans out instead. Loans are not taxable, do not have to be paid back although I would recommend doing so in many situations, and as long as you pay the premiums on the policy to keep it in force, you will have no tax concerns. The Key here is NOT to let the policy lapse. Otherwise you may have a taxable event if the money you took out as a loan is greater that your basis. Contact your agent or reach out to me if you would like to learn why I would recommend you pay yourself back on the loan. Good Luck.",
+            "score": 9.65625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "13971",
+          "text": "In Canada, the cash surrender value of a life insurance policy is taxable if the cash value received exceeds the adjusted cost base. In simple terms the total premiums paid, less the cost of any riders and the net cost of pure insurance. The net cost is a rate using one year renewal term from a government table. In Canada, borrowing can trigger a taxable gain as can most transfers of ownership. Best to check your options and the consequences before you do. If you have further questions, or feel that I could be of assistance, please do not hesitate to contact me. If you would like to work with a local life insurance broker, you could start with a Google search. For example, if you search for: life insurance broker Halifax or life insurance agent Halifax, my name, along with several others, will come up. You can use the same method to find a life insurance broker in your community.",
+          "score": 9.890625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "iqa_v2_train_00010",
+        "question": "Is Car Insurance Prepaid?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "20900",
+            "text": "Yes, automobile insurance is typically paid in advance. Normally no less than thirty days at a time. Each carrier sets their own requirements as to the initial payment amount for new coverage. Most carriers allow clients to pay monthly, quarterly, semi-annually, or annually. If you pay your premium in full for semi-annual or annual you may also receive a discount on your rate ( this is solely at the discretion of the carrier ).",
+            "score": 6.5546875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "19727",
+          "text": "If you have received your billing for the upcoming policy period, you can immediately pay it. However, with the vast majority of carriers, there is no discount or reduction in your premium when you pay well in advance before the due date. Although you are probably earning a very low interest (if any) on your checking account or money market, why not leave the money in there as long as possible?",
+          "score": 7.48046875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "iqa_v2_train_00013",
+        "question": "Does My Homeowners Insurance Cover Lost Wedding Ring?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "7934",
+            "text": "Great answer by Tom. Remember even items covered under an endorsement may be subject to a deductible and possible exclusions. Many homeowners policies limit the amount of coverage provided for personal items. These items would typically be covered under an endorsement and as Tom had stated previously covered for a stated amount or an appraised value.",
+            "score": 6.859375
+          },
+          {
+            "id": "10982",
+            "text": "Great question. Generally no, your Homeowners' policy will not cover for anything that is lost. This is referred to as \"Mysterious Disappearance\" in your policy documents and is usually listed as a specific exclusion. That having been said, you can certainly obtain coverage for such a loss by working with your insurance professional and asking that the item be insured specifically either as a rider which is attached to your Homeowners' policy or as a stand alone separate policy. You will need to provide a current appraisal and the item would be insured to the stated amount on the appraisal. Such riders or separate policies (commonly referred to as \"Personal Inland Marine\") include much broader coverage than does a standard Homeowners policy and will cover for such a loss.",
+            "score": 4.5703125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "10216",
+          "text": "Your policy may provide some limited coverage for your ring under it's standard terms and conditions. However, keep in mind that the loss would be subject to your property deductible AND the coverage may be limited to specific causes of loss. Talk to your insurance professional about either a jewelry rider or stand-alone policy for your valuables. The coverage is usually much broader in that it includes loss due to, well, loss. A Homeowners policy does not provide coverage for items that are just lost. However this \"mysterious disappearance\" is usually covered under a rider or separate valuable items policy. In addition, there is usually no deductible applied.",
+          "score": 7.578125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "iqa_v2_train_00015",
+        "question": "Can My Boyfriend Add Me To His Car Insurance?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "15026",
+            "text": "If you are living in the same household then he should put you on the list of drivers. The insurance follows the car and that is linked to a household. The person buying the insurance is in the household and can loan the car to whoever he wishes. The insurance covers the automobile. If you are not living together there wouldnt be anything gained by putting you on the policy.",
+            "score": 6.9296875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "13709",
+          "text": "Some carriers will allow you to add your girlfriend to your auto insurance policy provided that she lives at the same address as you. Contact your local agent to find out more details about coverage availability and pricing within your geographic area. Some carriers may require each of you to have your own auto policies if you are not married.",
+          "score": 8.1796875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "iqa_v2_train_00023",
+        "question": "Will Homeowners Insurance Cover Pool?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "5723",
+            "text": "In short, the answer is yes. But it needs to be clarified whether you are asking for property damage to the pool itself or liability coverage. Both would be covered barring any specific pool exclusions, which I am not aware of any in the standard market. If someone were to get injured while swimming in the pool, yes, your homeowners policy should cover you for liability. Likewise, if you pool is damaged due to the standard homeowners causes of loss less any standard exclusions then the pool would be covered for property damage to the pool itself. Keep in mind that wear and tear would not be covered under your policy. So if your pool liner rips \"just because\" or the concrete foundation cracks, those would be considered wear and tear. Please note that many insurance carriers are very cautious when writing homeowners insurance on homes that have pools. Some do not like to write them with a pool exposure, some do not mind, so be sure to ask your agent how it might affect your current coverage and future coverage and what the premium impact might be. You also want to strongly consider higher liability limits in purchasing an umbrella or if you already have an umbrella policy then higher umbrella limits. It might cost you $150 for each additional $1 mil limit. Lastly, if you have a pool and want to make sure you are covered for the proper limits, make sure your coverage B (other structures) limit is sufficient to cover any losses to your pool and any other structures i.e. detached garages, sheds as well.",
+            "score": 8.390625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "12062",
+          "text": "Your homeowner's insurance will cover your pool, if properly explained to a broker and correctly listed on a policy. Typically, there will be specific requirements regarding the pool. For example, I am not aware of any carrier that does not require that the pool be fenced in and securely locked and maintained. The pool should be kept in good condition and free of hazards. And of course, you should enjoy your pool and all of the neighbors that willwantto visit you...especially in June and July!",
+          "score": 9.2734375
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "iqa_v2_train_00024",
+        "question": "When Do I Have To Sign Up For Medicare?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "10761",
+            "text": "You should sign up for Medicare in the three months before the month of your 65th birthday, the month of your 65th birthday, or in the three months following the month of your 65th birthday. If you miss that enrollment period you can sign up between Jan 1 and March 31 each year.",
+            "score": 7.71484375
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "8243",
+          "text": "Most people sign up when they're turning 65 - this is your initial open enrollment period. It starts the 3 months before the month you turn 65 through the 3rd month after you turn 65. If you're outside of this window, you will have to wait to sign up until the general enrollment period opens up for Part B (January 1-March 31 of each year), unless you qualify for a special enrollment period. Other situations where you can be eligible for Medicare are if you're under 65 and on social security disability (need to be on it for at least 24 months), or have end-stage renal disease.",
+          "score": 8.09375
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "iqa_v2_train_00025",
+        "question": "Will An MIP Affect My Car Insurance?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "24002",
+            "text": "That is a great question! If you are the minor in question with the possession charge, you better bet it will. If the minor was someone in your car with you, and not you, you might get lucky and the insurance company won't find out. Now the fact that you were allowing the breaking of the law, suggests that your decision making skills need some work, and that as a result, at some point yes, that will affect your policy, as you will most likely be filing some claims. Please consider this a serious wake up call. Too many teenagers die as a result of drunk driving, and you don't ( and neither does anyone else on the road with you) need to be another sad statistic. Seriously, stop. Thanks for asking.",
+            "score": 5.5390625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "17025",
+          "text": "That really depends upon the company and terms and conditions of your policy. The amount may vary but it is possible to see upwards of a 25% increase for about three years after an accident is settled. On the other hand, if you are a long time policy holder and this is your first such claim, you may have a benefit called \"first accident forgiveness\" which means you won't see any accident related increase at all.",
+          "score": 6.26953125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "iqa_v2_train_00027",
+        "question": "What Are The Advantages And Disadvantages To Long Term Care Insurance?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "16893",
+            "text": "The advantages of coverage in your senior years can be significant based on the average senior couple spending $250,000 in medical costs during their retirement years. The disadvantage is the loss of economic opportunity to invest or save the premium dollars spent on long term care insurance if you never use it.",
+            "score": 5.9140625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "19169",
+          "text": "Long Term Care has a few disadvantages. The first as the others have pointed out is the risk of the owner dying without using the coverage. The insurance company would collect premium for a number of years and never pay a claim. There are some alternatives to Long Term Care that could help with this issues such as the number of deposit products on the market. Companies like Lincoln, Equitrust and others offer plans that allow the consumer to simply deposit a lump sum of money with the carrier. They are given instant leverage on the lump sum toward LTC and a death benefit. For example 100K deposited may leverage to $220K for LTC and have an immediate DB of 150K. The negative is the client does not get any interest on the money but with the very low fixed rates of return on money today, that may be a better way to go. The plans come with an ROP rider so the money would be returned upon request. The other negative (That I have seen multiple examples of) is a person that buys long term care and doesn't really have any assets to protect. Arguments could be made that coverage is still useful in this situation but its hard to justify paying the premium when there is no accumulation of assets for the policy to protect. The money being spent on monthly premium could be put to use in other places. Last thought is LTC should be considered when you are in your 50's. It gets much more expensive once someone hits their 60's. Consumers also need to understand that it is likely the premium will increase down the road when the insurance companies applies for and is given a class action rate increase approval.",
+          "score": 7.93359375
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "iqa_v2_train_00028",
+        "question": "Will Medicare Pay For Life Alert?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "17077",
+            "text": "Medicare covers items that are considered medically necessary. This includes diagnosis and treatment of medical conditions caused by accident or illness. Medicare will also cover some DME (durable medical equipment) if prescribed by a doctor as part of your treatment plan. Services such as Life Alert are not considered medically necessary.",
+            "score": 5.71484375
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "238",
+          "text": "Life alert is not covered by Medicare. Most insurance companies won't cover them either. You're usually paying for a life alert system out of pocket. Some states may have their own programs that will help provide financial assistance for medical alert systems - certain criteria may be required to be met before the financial assistance can be provided however. I hope the information is helpful - please feel free to contact me for help and if you have any other questions. Thanks very much.",
+          "score": 7.0078125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      }
+    ],
+    "government": [
+      {
+        "id": "gov2_q_05bdcf2129885c06",
+        "question": "My group health plan requires prior authorization from the plans utilization reviewer that a treatment is medically necessary for all inpatient medical/surgical benefits and for all inpatient mental health and substance use disorder benefits. In practice, inpatient benefits for medical/surgical conditions are routinely approved for seven days, after which a treatment plan must be submitted by the patients attending provider and approved by the plan. On the other hand, for inpatient mental health and substance use disorder benefits, routine approval is given for only one day, after which a treatment plan must be submitted by the patients attending provider and approved by the plan. Is this permissible?",
+        "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-vii.pdf",
+        "gold": [
+          {
+            "id": "gov2_a_aa711b28a86623b9",
+            "text": "No. The plan is applying a stricter nonquantitative treatment limitation in practice to mental health and substance use disorder benefits than is applied to medical/surgical benefits. While some differences in prior authorization practices with respect to individual conditions or treatments might be permissible based on recognized clinically appropriate standards of care, the interim final regulations do not permit a plan to apply stricter nonquantitative treatment limitations to all benefits for mental health or substance use disorders than those applied to all medical/surgical benefits. The application of nonquantitative treatment limitations -- both with respect to the plans benefits and its care management practices -- must comply with the nonquantitative treatment limitation rules. 3",
+            "score": 5.75
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "gov2_a_e39488f0ec172261",
+          "text": "While some differences in plan requirements for prior authorization might be permissible based on recognized clinically appropriate standards of care, it is unlikely that the processes, strategies, evidentiary standards, and other factors considered by the plan in determining that those three (and only those three) outpatient medical/surgical benefits require prior authorization would also result in all outpatient mental health and substance use disorder outpatient benefits needing prior authorization. 4",
+          "score": 6.40625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "gov2_q_0a0ae9103351a79b",
+        "question": "To meet the definition of disability under the ADA and Section 504, a physical or mental impairment must be serious enough to limit a major life activity. What kinds of life activities are considered \"major,\" and when does an impairment \"substantially limit\" a major life activity?",
+        "source_group": "medicaid.gov/media/38346",
+        "gold": [
+          {
+            "id": "gov2_a_a327eb71c97f2d7f",
+            "text": "Examples of major life activities include caring for oneself, walking, seeing, hearing, speaking, breathing, working, performing manual tasks, and learning. They also include such basic activities as thinking, concentrating, interacting with others, and sleeping. An impairment \"substantially limits\" a major life activity when the individual's important life activities are restricted as to the conditions, manner, and duration under which they can be performed in comparison to most people. Some examples of impairments which may, even with the help of medication or devices, substantially limit major life activities are: AIDS, alcoholism, blindness or visual impairment, cancer, deafness or hearing impairment, diabetes, drug addiction, heart disease, and mental illness. The determination whether an impairment \"substantially limits\" a major life activity must be made on a case-by-case basis.",
+            "score": 5.32421875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "gov2_a_ed7adc2784103904",
+          "text": "No matter what specific impairment or group of people is at issue--including elderly people and children--each must meet the same threshold definition of disability in order to be covered by the ADA. The question is: \"Does the person have an impairment, have a record of impairment, or is he or she being regarded as having an impairment, that substantially limits a major life activity?\" With respect to elderly people, age alone is not equated with disability. However, if an elderly individual has a physical or mental impairment that substantially limits one of more of his or her major life activities, has a record of such an impairment, or is regarded as having such an impairment, he or she would be protected under the ADA.",
+          "score": 5.72265625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "gov2_q_1056879634185f8e",
+        "question": "Are plans and issuers required to cover COVID-19 tests intended for at-home testing under section 6001 of the FFCRA?",
+        "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-43.pdf",
+        "gold": [
+          {
+            "id": "gov2_a_37439f6f8817378d",
+            "text": "Yes. COVID-19 tests intended for at-home testing12 (including tests where the individual performs self-collection of a specimen at home) must be covered, when the test is ordered by an attending health care provider who has determined that the test is medically appropriate for the individual based on current accepted standards of medical practice and the test otherwise meets the statutory criteria in section 6001(a)(1) of the FFCRA. Consistent with section 6001 of the FFCRA, this coverage must be provided without imposing any cost-sharing requirements, prior authorization, or other medical management requirements.",
+            "score": 7.70703125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "condgov_a_225b8acbee730a9a",
+          "text": "No. Section 6001 of the FFCRA requires plans and issuers to cover COVID-19 diagnostic tests that meet statutory requirements and certain associated items and services without imposing any cost-sharing requirements, prior authorization, or other medical management requirements. However, that requirement is applicable only to diagnostic tests and associated items and services furnished during any portion of the PHE beginning on or after March 18, 2020. Therefore, a plan or issuer is not required under section 6001 of the FFCRA to cover COVID-19 diagnostic tests and associated items or services furnished after the PHE ends. Any plan or issuer that provides coverage for COVID-19 diagnostic testing furnished after the PHE ends, including over-the-counter (OTC) COVID-19 diagnostic tests purchased after the PHE ends, is not prohibited from imposing cost-sharing requirements, prior authorization, or other medical management requirements for those items and services under section 6001 of the FFCRA. However, plans and issuers are encouraged to continue to provide this coverage, without imposing cost sharing or medical management requirements, after the PHE ends.(10) In general, an item or service is furnished on the date the item or service was rendered to the individual (or for an OTC COVID-19 diagnostic test, the date the test was purchased) and not the date the claim is submitted. Plans and issuers should look to the earliest date on which an item or service is furnished within an episode of care to determine the date that a COVID-19 diagnostic test is rendered, when the test involves multiple items or services. For example, if a health care provider collects a specimen to perform a COVID-19 diagnostic test on the last day of the PHE but the laboratory analysis occurs on a later date, the plan or issuer should treat both the specimen collection and laboratory analysis as if they were furnished during the PHE and are therefore subject to the FFCRA and CARES Act requirements.",
+          "score": 7.921875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "gov2_q_10d08c8d818dadaa",
+        "question": "Does this provision require application of all Medicaid FQHC and RHC policies to CHIP programs?",
+        "source_group": "medicaid.gov/media/38061",
+        "gold": [
+          {
+            "id": "gov2_a_244cd3806f9909fe",
+            "text": "No. Where applicable, States may adopt policies from the Medicaid program (i.e., requiring out-of-network access in circumstances where FQHC or RHC services are not Page 7 State Health Official available in an MCO service area); however, these will not be required. Only the payment provisions described in section 1902(bb) of the Act are required.",
+            "score": 5.40625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "gov2_a_d27807a747fdf903",
+          "text": "Yes. This provision applies to all FQHCs and RHCs, including FQHCs that are qualified because they are outpatient health programs or facilities operated by an Indian tribe or an urban Indian health program, or because they have been determined to meet the requirements for a grant that would accord FQHC status.",
+          "score": 6.0390625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "gov2_q_16094e61d8aa3c58",
+        "question": "My plan uses medical management techniques (such as preauthorization) to manage care for mental health and substance use disorder services, and my mental health benefits were denied. What information am I entitled to receive from my plan?",
+        "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-xvii.pdf",
+        "gold": [
+          {
+            "id": "gov2_a_3ad8c39aa17e6e23",
+            "text": "MHPAEA provides that the criteria for medical necessity determinations with respect to mental health or substance use disorder benefits must be made available by the plan administrator or the health insurance issuer to any current or potential participant, beneficiary, or contracting provider upon request. In addition, under MHPAEA, the reason for any denial of reimbursement or payment for services with respect to mental health or substance use disorder benefits must be made available to participants and beneficiaries. Furthermore, under the internal appeals and external review requirements added by the Affordable Care Act, non-grandfathered group health plans and health insurance issuers must provide to an individual (or a provider or other individual acting as a patients authorized representative), upon request and free of charge, reasonable access to and copies of all documents, records, and other information relevant to the individuals claim for benefits consistent with the Department of Labor claims procedure regulation.7 This includes documents of a comparable nature with information on medical necessity criteria for both medical/surgical benefits and mental health and substance use disorder benefits, as well as the processes, strategies, evidentiary standards, and other factors used to apply a nonquantitative treatment limitation with respect to medical/surgical benefits and mental health or substance use disorder benefits under the plan. In addition, the plan or issuer must provide the claimant with any new or additional evidence considered, relied upon, or generated by the plan or issuer (or at the direction of the plan or issuer) in connection with a claim. If the plan or issuer is issuing an adverse benefit determination on review based on a new or additional rationale, the claimant must be provided, free of charge, with the rationale. Additionally, under ERISA, documents with information on medical necessity criteria for both medical/surgical and mental health or substance use disorder benefits, as well as the processes, strategies, evidentiary standards, and other factors used to apply a nonquantitative treatment limitation, are instruments under which the plan is established or operated, and copies must be furnished to a participant8 within 30 days of request.9",
+            "score": 3.361328125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "gov2_a_78e2d8b24bb919ef",
+          "text": "The interim final rules contained an exception for differences in nonquantitative treatment limitations between medical/surgical benefits and mental health or substance use disorder benefits based on clinically appropriate standards of care. This exception has been determined to be confusing, unnecessary, and subject to potential abuse. The underlying requirements regarding nonquantitative treatment limitations (even without this exception) are sufficiently flexible to allow plans and issuers to take into account clinical and other appropriate standards when applying nonquantitative treatment limitations such as medical management techniques to medical/surgical benefits and mental health or substance use disorder benefits. Thus, the final rules have eliminated this exception. The final rules also apply parity requirements to benefits for intermediate levels of care for mental health conditions and substance use disorders. The final rules accomplish this by providing that plans and issuers first identify what is meant by an intermediate service for mental health and substance use disorder care and medical/surgical care and requiring that such intermediate level services be treated comparably within the structure of plan benefits. Under the final rules, parity requirements for nonquantitative treatment limitations also apply to restrictions based on geographic location, facility type, provider specialty, and other criteria that limit the scope or duration of benefits for services (including access to intermediate level services). Finally, the final rules clarify the disclosure rights of plan participants with respect to both mental health and substance use disorder benefits and medical/surgical benefits. See Q8 regarding the type of information that individuals can receive from their plans and issuers under Federal law.",
+          "score": 4.8515625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "gov2_q_1d78a0094f22bd32",
+        "question": "What is the operating definition of incurred expenditures for purposes of determining whether the increased FMAP is available?",
+        "source_group": "medicaid.gov/media/39181",
+        "gold": [
+          {
+            "id": "gov2_a_f44ee3e70c861703",
+            "text": "The increased FMAP is available for expenditures incurred by states in the applicable quarters. The TRRA did not change the definition of incurred expenditures under the Medicaid program. In particular, under title XIX, medical assistance expenditures are considered to be incurred based on when the state makes a payment to a provider of services; it is not determined by the date of service. The quarter in which the state makes a payment is the quarter in which the expenditure will be considered to be incurred, and the FMAP applicable to that incurred quarter is that which must be applied. In this context, the increased FMAP will be available for expenditures incurred during one of the five quarters for which the increased FMAP is available. Page 9 - Qs and As on Increased FMAP Provision",
+            "score": 5.27734375
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "gov2_a_5a981d836ecdd7b7",
+          "text": "The definition of expenditures for which the increased FMAP is available is not based on the quarterly expenditure report in which the expenditure is reported. As indicated in the all state letter, dated June 13, 2003, the definition of expenditures for which the increased FMAP is available is contingent on when such expenditures are incurred by the state; and in this regard, \"incurred\" means the period in which the state makes such payment to a medical provider.",
+          "score": 5.43359375
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "gov2_q_272f1dc58465b8e8",
+        "question": "If a MFCU accepts a fraud referral from the State but does not want the State to suspend payments because it may alert a provider to a pending investigation, what should the State do?",
+        "source_group": "medicaid.gov/media/37256",
+        "gold": [
+          {
+            "id": "gov2_a_e981cb9f6009f43b",
+            "text": "If law enforcement officials have specifically requested that a State not impose a payment suspension due to the fact that such suspension may compromise an existing investigation, this qualifies as good cause to not suspend under the final rule. The State should get this request in writing and include the request in its file for purpose of annual reporting to the Secretary.",
+            "score": 3.798828125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "gov2_a_0867df558b99b693",
+          "text": "The effective date of the final rule directing States to suspend Medicaid payments based upon pending investigations of credible allegations of fraud is March 25, 2011. All MFCU referrals meeting the credible allegation requirement made prior to March 25 as well as all on or after that date, must have payments suspended unless there is good cause not to do so. We stated in the final rule: We will not require States to retroactively apply the law regarding suspension of payments based on pending investigations of credible allegations of fraud. However, upon the effective date of this final rule with comment period, we expect States, to the extent they have not already done so, to suspend payments to providers against whom there exist pending investigations of credible allegations of fraud. (76 Fed. Reg. 5860, 5938).",
+          "score": 4.3828125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "gov2_q_2a4fa464d91ce18f",
+        "question": "In situations where an Exchange makes Medicaid eligibility assessments rather than full determinations, will the determination be able to happen in real-time?",
+        "source_group": "medicaid.gov/media/39586",
+        "gold": [
+          {
+            "id": "gov2_a_a8f67af996bd85d1",
+            "text": "The goal is to have a seamless experience for consumers, with eligibility determinations made as quickly as possible regardless of which approach to eligibility determinations is in effect in a particular State. CMS will be establishing, in collaboration with States and with an opportunity for public input, data reporting measures that will allow States, CMS and the public to have information about the enrollment process including the timing of eligibility determinations under different design approaches.",
+            "score": 2.447265625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "gov2_a_3316212e7fb5379b",
+          "text": "States can work with the Federally-Facilitated Exchange (FFE) regarding Medicaid and CHIP eligibility determinations in one of two ways. The State may either establish an agreement whereby the FFE assesses applicants for Medicaid/CHIP eligibility based on MAGI and then transfers the applicants electronic accounts to the State Medicaid or CHIP agency to complete the eligibility determination. Or the State may elect to accept MAGI-based eligibility determinations completed by the FFE as final determinations. Regardless of the approach, the process should be as seamless as possible for the applicant with most eligibility determinations completed in near real-time as specified in our eligibility final rule at 435.912.",
+          "score": 4.4296875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "gov2_q_2bb11a1d0d56a3f6",
+        "question": "What expenditures must be considered in determining whether a state is in compliance with the provisions of section 401(a)(7) of TRRA?",
+        "source_group": "medicaid.gov/media/39181",
+        "gold": [
+          {
+            "id": "gov2_a_311b1a1d413bdc92",
+            "text": "Section 401(a)(7) of TRRA refers to the non-Federal share expenditures under the state Medicaid plan required under section 1902(a)(2) of the Social Security Act and including any title XIX and Section 1115 waivers. Section 1902(a)(2) of the Act, in turn refers to the non-Federal share of the expenditures under the plan with respect to which payment under section 1903 are authorized by this title. Finally, section 1903 of the Act refers to all Medicaid expenditures that a state may incur in its program, including both medical assistance and administrative expenditures for which a state may claim Federal matching payments.",
+            "score": 4.6484375
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "gov2_a_a3523a3f84df28f9",
+          "text": "Under section 401(a)(7) of TRRA, states may not require that the percentage of a states NFS of expenditures contributed by political subdivisions within a state to be greater than the percentage required under the states plan on April 1, 2003. Under existing Medicaid provisions at section 1902(a)(2) of the Act, and 42 CFR 433.53 of the regulations, a state plan must require that the NFS of total Medicaid spending statewide be comprised of at least 40 percent of state (as distinguished from local) funds. In order to implement section 401(a)(7) of TRRA, CMS will need to identify each state that has a requirement for political subdivisions within the state to contribute toward the non-Federal share of expenditures, and with respect to such states to determine the applicable percentage as of April 1, 2003. On a subsequent basis, with respect to the five-quarter period for which the increased FMAP is available, the state must maintain this NFS funding percentage. We note that since this is a state plan requirement, if this condition is not met, the state would be considered to be out of compliance resulting in the applicable compliance process and any appropriate sanctions. Page 12 - Qs and As on Increased FMAP Provision",
+          "score": 6.55859375
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "gov2_q_2d871111346d0ea7",
+        "question": "Will the Federally-Facilitated Exchange (FFE) only do assessments of Medicaid and CHIP eligibility or if a State desires will the FFE also make eligibility determinations for Medicaid and CHIP?",
+        "source_group": "medicaid.gov/media/39586",
+        "gold": [
+          {
+            "id": "gov2_a_3316212e7fb5379b",
+            "text": "States can work with the Federally-Facilitated Exchange (FFE) regarding Medicaid and CHIP eligibility determinations in one of two ways. The State may either establish an agreement whereby the FFE assesses applicants for Medicaid/CHIP eligibility based on MAGI and then transfers the applicants electronic accounts to the State Medicaid or CHIP agency to complete the eligibility determination. Or the State may elect to accept MAGI-based eligibility determinations completed by the FFE as final determinations. Regardless of the approach, the process should be as seamless as possible for the applicant with most eligibility determinations completed in near real-time as specified in our eligibility final rule at 435.912.",
+            "score": 7.171875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "gov2_a_d428203776adb97d",
+          "text": "The Exchange will utilize the States Medicaid and CHIP eligibility rules for conducting both eligibility determinations and eligibility assessments. This will include application of the States MAGI income standards and related eligibility rules for the MAGI population. The Exchange will also rely on a robust verification protocol that is consistent with Medicaid and CHIP regulations but which might not be the same protocol the State is otherwise using. If a State accepts assessments of eligibility from the Federally-Facilitated Exchange (FFE) and chooses to make the final eligibility determinations itself, once an individual has been assessed as Medicaid/CHIP eligible, their electronic account would be transferred to the State Medicaid or CHIP agency, which will complete the eligibility determination. This process will include any additional verification required by the State that is consistent with the Federal verification regulations.",
+          "score": 8.203125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "gov2_q_33961e27ec5dd415",
+        "question": "When is a Medicaid or CHIP termination triggered under section 6501?",
+        "source_group": "medicaid.gov/media/38166",
+        "gold": [
+          {
+            "id": "gov2_a_36b1dcd7e5b88d2f",
+            "text": "A Medicaid or CHIP termination is triggered when a provider is terminated by Medicare or terminated by Medicaid or CHIP for cause and the provider has either exhausted all applicable appeal rights or the timeline for appeal has expired.",
+            "score": 5.41015625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "gov2_a_f4d2cee494766dbc",
+          "text": "No. For purposes of section 6501, a termination occurs when the State terminates the participation of a Medicaid or CHIP provider from the program or the Medicare program has revoked a Medicare provider or suppliers billing privileges, and the provider has exhausted its appeal rights or the timeline for appeal has expired. Generally, exclusion from participation in a federal health care program, including Medicare, Medicaid, and CHIP is a penalty imposed on providers and suppliers by the Departments Office of Inspector General (HHS-OIG). Individuals and entities may be excluded from participating in federal health care programs for misconduct ranging from fraud convictions to patient abuse to defaulting on health education loans. We recognize, however, that certain States give the same meaning to the terms exclusion and termination and these actions; therefore, ultimately result in the providers involuntary departure from the Medicaid program or CHIP.",
+          "score": 6.69140625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "gov2_q_378eb1c236514435",
+        "question": "Does the process for making prospective payments to FQHCs and RHCs have to be the same for a States CHIP program as it is for a States Medicaid program?",
+        "source_group": "medicaid.gov/media/38061",
+        "gold": [
+          {
+            "id": "gov2_a_8f5f1a004a8a0997",
+            "text": "No. As long as the requirements for payment in section 1902(bb) are met, the process by which such requirements are met is up to the State CHIP program.",
+            "score": 3.029296875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "gov2_a_55ad8327089a97d6",
+          "text": "No. The exception at section 3(b) of CHIPRA does not change the effective date of this provision. It simply provides that, if the conditions for the exception were met, the State would not be regarded as failing to comply with the new requirement until the State has implemented the provision. Regardless of when implementation occurs, the State should make PPS payments to FQHCs and RHCs as required under section 2107(e)(1) of the Act retroactive to October 1, 2009.",
+          "score": 4.33203125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      }
+    ],
+    "general": [
+      {
+        "id": "squad_q_56bfa5b3a10cfb14005511f9",
+        "question": "Who joined Beyonce on her On The Run Tour?",
+        "source_group": "wikipedia:Beyoncé",
+        "gold": [
+          {
+            "id": "squad_a_b563aecdb55edab4",
+            "text": "On December 13, 2013, Beyoncé unexpectedly released her eponymous fifth studio album on the iTunes Store without any prior announcement or promotion. The album debuted atop the Billboard 200 chart, giving Beyoncé her fifth consecutive number-one album in the US. This made her the first woman in the chart's history to have her first five studio albums debut at number one. Beyoncé received critical acclaim and commercial success, selling one million digital copies worldwide in six days; The New York Times noted the album's unconventional, unexpected release as significant. Musically an electro-R&B album, it concerns darker themes previously unexplored in her work, such as \"bulimia, postnatal depression [and] the fears and insecurities of marriage and motherhood\". The single \"Drunk in Love\", featuring Jay Z, peaked at number two on the Billboard Hot 100 chart. In April 2014, after much speculation in the weeks before, Beyoncé and Jay Z officially announced their On the Run Tour. It served as the couple's first co-headlining stadium tour together. On August 24, 2014, she received the Video Vanguard Award at the 2014 MTV Video Music Awards. Knowles also took home three competitive awards: Best Video with a Social Message and Best Cinematography for \"Pretty Hurts\", as well as best collaboration for \"Drunk in Love\". In November, Forbes reported that Beyoncé was the top-earning woman in music for the second year in a row—earning $115 million in the year, more than double her earnings in 2013. Beyoncé was reissued with new material in three forms: as an extended play, a box set, as well as a full platinum edition.",
+            "score": 0.344482421875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "squad_a_62a4f63337a378ef",
+          "text": "Her first acting role of 2006 was in the comedy film The Pink Panther starring opposite Steve Martin, grossing $158.8 million at the box office worldwide. Her second film Dreamgirls, the film version of the 1981 Broadway musical loosely based on The Supremes, received acclaim from critics and grossed $154 million internationally. In it, she starred opposite Jennifer Hudson, Jamie Foxx, and Eddie Murphy playing a pop singer based on Diana Ross. To promote the film, Beyoncé released \"Listen\" as the lead single from the soundtrack album. In April 2007, Beyoncé embarked on The Beyoncé Experience, her first worldwide concert tour, visiting 97 venues and grossed over $24 million.[note 1] Beyoncé conducted pre-concert food donation drives during six major stops in conjunction with her pastor at St. John's and America's Second Harvest. At the same time, B'Day was re-released with five additional songs, including her duet with Shakira \"Beautiful Liar\".",
+          "score": 2.1640625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "squad_q_56bfdd3fa10cfb140055134b",
+        "question": "When did Beyonce begin her deals with name brands?",
+        "source_group": "wikipedia:Beyoncé",
+        "gold": [
+          {
+            "id": "squad_a_3b044017f1a95201",
+            "text": "The release of a video-game Starpower: Beyoncé was cancelled after Beyoncé pulled out of a $100 million with GateFive who alleged the cancellation meant the sacking of 70 staff and millions of pounds lost in development. It was settled out of court by her lawyers in June 2013 who said that they had cancelled because GateFive had lost its financial backers. Beyoncé also has had deals with American Express, Nintendo DS and L'Oréal since the age of 18.",
+            "score": 1.978515625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "squad_a_5480dedd284d3870",
+          "text": "In October 2014, Beyoncé signed a deal to launch an activewear line of clothing with British fashion retailer Topshop. The 50-50 venture is called Parkwood Topshop Athletic Ltd and is scheduled to launch its first dance, fitness and sports ranges in autumn 2015. The line will launch in April 2016.",
+          "score": 3.029296875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "squad_q_56cbdfbf6d243a140015edba",
+        "question": "What short poem spoke of Frédéric's popularity as a child?",
+        "source_group": "wikipedia:Frédéric_Chopin",
+        "gold": [
+          {
+            "id": "squad_a_ad4e181eb6d79c7e",
+            "text": "In 1817 the Saxon Palace was requisitioned by Warsaw's Russian governor for military use, and the Warsaw Lyceum was reestablished in the Kazimierz Palace (today the rectorate of Warsaw University). Fryderyk and his family moved to a building, which still survives, adjacent to the Kazimierz Palace. During this period, Fryderyk was sometimes invited to the Belweder Palace as playmate to the son of the ruler of Russian Poland, Grand Duke Constantine; he played the piano for the Duke and composed a march for him. Julian Ursyn Niemcewicz, in his dramatic eclogue, \"Nasze Przebiegi\" (\"Our Discourses\", 1818), attested to \"little Chopin's\" popularity.",
+            "score": -3.46875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "squad_a_0e5bc62c3817a847",
+          "text": "Frédéric François Chopin (/ˈʃoʊpæn/; French pronunciation: ​[fʁe.de.ʁik fʁɑ̃.swa ʃɔ.pɛ̃]; 22 February or 1 March 1810 – 17 October 1849), born Fryderyk Franciszek Chopin,[n 1] was a Polish and French (by citizenship and birth of father) composer and a virtuoso pianist of the Romantic era, who wrote primarily for the solo piano. He gained and has maintained renown worldwide as one of the leading musicians of his era, whose \"poetic genius was based on a professional technique that was without equal in his generation.\" Chopin was born in what was then the Duchy of Warsaw, and grew up in Warsaw, which after 1815 became part of Congress Poland. A child prodigy, he completed his musical education and composed his earlier works in Warsaw before leaving Poland at the age of 20, less than a month before the outbreak of the November 1830 Uprising.",
+          "score": -2.7265625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "squad_q_56cbe1996d243a140015edc4",
+        "question": "On what date was Frédéric's first performance that earned international esteem?",
+        "source_group": "wikipedia:Frédéric_Chopin",
+        "gold": [
+          {
+            "id": "squad_a_8f4b598095b6d331",
+            "text": "From September 1823 to 1826 Chopin attended the Warsaw Lyceum, where he received organ lessons from the Czech musician Wilhelm Würfel during his first year. In the autumn of 1826 he began a three-year course under the Silesian composer Józef Elsner at the Warsaw Conservatory, studying music theory, figured bass and composition.[n 3] Throughout this period he continued to compose and to give recitals in concerts and salons in Warsaw. He was engaged by the inventors of a mechanical organ, the \"eolomelodicon\", and on this instrument in May 1825 he performed his own improvisation and part of a concerto by Moscheles. The success of this concert led to an invitation to give a similar recital on the instrument before Tsar Alexander I, who was visiting Warsaw; the Tsar presented him with a diamond ring. At a subsequent eolomelodicon concert on 10 June 1825, Chopin performed his Rondo Op. 1. This was the first of his works to be commercially published and earned him his first mention in the foreign press, when the Leipzig Allgemeine Musikalische Zeitung praised his \"wealth of musical ideas\".",
+            "score": -3.193359375
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "squad_a_69bd552b366f66ab",
+          "text": "At the end of 1831, Chopin received the first major endorsement from an outstanding contemporary when Robert Schumann, reviewing the Op. 2 Variations in the Allgemeine musikalische Zeitung (his first published article on music), declared: \"Hats off, gentlemen! A genius.\" On 26 February 1832 Chopin gave a debut Paris concert at the Salle Pleyel which drew universal admiration. The critic François-Joseph Fétis wrote in the Revue et gazette musicale: \"Here is a young man who ... taking no model, has found, if not a complete renewal of piano music, ... an abundance of original ideas of a kind to be found nowhere else ...\" After this concert, Chopin realized that his essentially intimate keyboard technique was not optimal for large concert spaces. Later that year he was introduced to the wealthy Rothschild banking family, whose patronage also opened doors for him to other private salons (social gatherings of the aristocracy and artistic and literary elite). By the end of 1832 Chopin had established himself among the Parisian musical elite, and had earned the respect of his peers such as Hiller, Liszt, and Berlioz. He no longer depended financially upon his father, and in the winter of 1832 he began earning a handsome income from publishing his works and teaching piano to affluent students from all over Europe. This freed him from the strains of public concert-giving, which he disliked.",
+          "score": -1.7080078125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "squad_q_56cbfcda6d243a140015ee41",
+        "question": "What are the three names stated in Frédéric's letter that he had shown interest and curiosity in?",
+        "source_group": "wikipedia:Frédéric_Chopin",
+        "gold": [
+          {
+            "id": "squad_a_1676cde57a794b18",
+            "text": "Although it is not known exactly when Chopin first met Liszt after arriving in Paris, on 12 December 1831 he mentioned in a letter to his friend Woyciechowski that \"I have met Rossini, Cherubini, Baillot, etc.—also Kalkbrenner. You would not believe how curious I was about Herz, Liszt, Hiller, etc.\" Liszt was in attendance at Chopin's Parisian debut on 26 February 1832 at the Salle Pleyel, which led him to remark: \"The most vigorous applause seemed not to suffice to our enthusiasm in the presence of this talented musician, who revealed a new phase of poetic sentiment combined with such happy innovation in the form of his art.\"",
+            "score": -2.75
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "squad_a_8b554b11f9f3b199",
+          "text": "Four boarders at his parents' apartments became Chopin's intimates: Tytus Woyciechowski, Jan Nepomucen Białobłocki, Jan Matuszyński and Julian Fontana; the latter two would become part of his Paris milieu. He was friendly with members of Warsaw's young artistic and intellectual world, including Fontana, Józef Bohdan Zaleski and Stefan Witwicki. He was also attracted to the singing student Konstancja Gładkowska. In letters to Woyciechowski, he indicated which of his works, and even which of their passages, were influenced by his fascination with her; his letter of 15 May 1830 revealed that the slow movement (Larghetto) of his Piano Concerto No. 1 (in E minor) was secretly dedicated to her – \"It should be like dreaming in beautiful springtime – by moonlight.\" His final Conservatory report (July 1829) read: \"Chopin F., third-year student, exceptional talent, musical genius.\"",
+          "score": -2.529296875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "squad_q_56cc52186d243a140015ef02",
+        "question": "Which dynasty ruled all of china? ",
+        "source_group": "wikipedia:Sino-Tibetan_relations_during_the_Ming_dynasty",
+        "gold": [
+          {
+            "id": "squad_a_e53f97de58aed6e0",
+            "text": "Kublai Khan did not conquer the Song dynasty in South China until 1279, so Tibet was a component of the early Mongol Empire before it was combined into one of its descendant empires with the whole of China under the Yuan dynasty (1271–1368). Van Praag writes that this conquest \"marked the end of independent China,\" which was then incorporated into the Yuan dynasty that ruled China, Tibet, Mongolia, Korea, parts of Siberia and Upper Burma. Morris Rossabi, a professor of Asian history at Queens College, City University of New York, writes that \"Khubilai wished to be perceived both as the legitimate Khan of Khans of the Mongols and as the Emperor of China. Though he had, by the early 1260s, become closely identified with China, he still, for a time, claimed universal rule\", and yet \"despite his successes in China and Korea, Khubilai was unable to have himself accepted as the Great Khan\". Thus, with such limited acceptance of his position as Great Khan, Kublai Khan increasingly became identified with China and sought support as Emperor of China.",
+            "score": 2.0390625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "squad_a_2141a65197a29137",
+          "text": "Qing China reached its largest extent during the 18th century, when it ruled China proper (eighteen provinces) as well as the areas of present-day Northeast China, Inner Mongolia, Outer Mongolia, Xinjiang and Tibet, at approximately 13 million km2 in size. There were originally 18 provinces, all of which in China proper, but later this number was increased to 22, with Manchuria and Xinjiang being divided or turned into provinces. Taiwan, originally part of Fujian province, became a province of its own in the late 19th century, but was ceded to the Empire of Japan in 1895 following the First Sino-Japanese War. In addition, many surrounding countries, such as Korea (Joseon dynasty), Vietnam frequently paid tribute to China during much of this period. Khanate of Kokand were forced to submit as protectorate and pay tribute to the Qing dynasty in China between 1774 and 1798.",
+          "score": 3.564453125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "squad_q_56cc858b6d243a140015efe9",
+        "question": "Which product enabled users to view images on the device?",
+        "source_group": "wikipedia:IPod",
+        "gold": [
+          {
+            "id": "squad_a_94c2d8fd5b0f2dc2",
+            "text": "The iPod line can play several audio file formats including MP3, AAC/M4A, Protected AAC, AIFF, WAV, Audible audiobook, and Apple Lossless. The iPod photo introduced the ability to display JPEG, BMP, GIF, TIFF, and PNG image file formats. Fifth and sixth generation iPod Classics, as well as third generation iPod Nanos, can additionally play MPEG-4 (H.264/MPEG-4 AVC) and QuickTime video formats, with restrictions on video dimensions, encoding techniques and data-rates. Originally, iPod software only worked with Mac OS; iPod software for Microsoft Windows was launched with the second generation model. Unlike most other media players, Apple does not support Microsoft's WMA audio format—but a converter for WMA files without Digital Rights Management (DRM) is provided with the Windows version of iTunes. MIDI files also cannot be played, but can be converted to audio files using the \"Advanced\" menu in iTunes. Alternative open-source audio formats, such as Ogg Vorbis and FLAC, are not supported without installing custom firmware onto an iPod (e.g., Rockbox).",
+            "score": 0.39013671875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "squad_a_83eb4b686885fbae",
+          "text": "Photo Gallery is an optional application to view, create and group photos from PS3, which is installed separately from the system software at 105 MB. It was introduced in system software version 2.60 and provides a range of tools for sorting through and displaying the system's pictures. The key feature of this application is that it can organize photos into groups according to various criteria. Notable categorizations are colors, ages, or facial expressions of the people in the photos. Slideshows can be viewed with the application, along with music and playlists. The software was updated with the release of system software version 3.40 allowing users to upload and browse photos on Facebook and Picasa.",
+          "score": 2.56640625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "squad_q_56cd59a162d2951400fa652b",
+        "question": "What kind of other applications enable communication between iTunes and an iPod?",
+        "source_group": "wikipedia:IPod",
+        "gold": [
+          {
+            "id": "squad_a_df6bbdfff538d11c",
+            "text": "Unlike many other MP3 players, simply copying audio or video files to the drive with a typical file management application will not allow an iPod to properly access them. The user must use software that has been specifically designed to transfer media files to iPods, so that the files are playable and viewable. Usually iTunes is used to transfer media to an iPod, though several alternative third-party applications are available on a number of different platforms.",
+            "score": 1.4775390625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "squad_a_bff82af63bb97692",
+          "text": "Some independent stereo manufacturers including JVC, Pioneer, Kenwood, Alpine, Sony, and Harman Kardon also have iPod-specific integration solutions. Alternative connection methods include adapter kits (that use the cassette deck or the CD changer port), audio input jacks, and FM transmitters such as the iTrip—although personal FM transmitters are illegal in some countries. Many car manufacturers have added audio input jacks as standard.",
+          "score": 1.9169921875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "squad_q_56cd70e962d2951400fa65b3",
+        "question": "What years did the Rinpungpa regime start and end?",
+        "source_group": "wikipedia:Sino-Tibetan_relations_during_the_Ming_dynasty",
+        "gold": [
+          {
+            "id": "squad_a_1acec588797dbba1",
+            "text": "Helmut Hoffman states that the Ming upheld the facade of rule over Tibet through periodic missions of \"tribute emissaries\" to the Ming court and by granting nominal titles to ruling lamas, but did not actually interfere in Tibetan governance. Melvyn C. Goldstein writes that the Ming had no real administrative authority over Tibet, as the various titles given to Tibetan leaders did not confer authority as the earlier Mongol Yuan titles had. He asserts that \"by conferring titles on Tibetans already in power, the Ming emperors merely recognized political reality.\" Hugh Edward Richardson writes that the Ming dynasty exercised no authority over the succession of Tibetan ruling families, the Phagmodru (1354–1435), Rinpungpa (1435–1565), and Tsangpa (1565–1642).",
+            "score": 1.783203125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "squad_a_34cc757d0aeeb11f",
+          "text": "Between 1346 and 1354, Tai Situ Changchub Gyaltsen toppled the Sakya and founded the Phagmodrupa Dynasty. The following 80 years saw the founding of the Gelug school (also known as Yellow Hats) by the disciples of Je Tsongkhapa, and the founding of the important Ganden, Drepung and Sera monasteries near Lhasa. However, internal strife within the dynasty and the strong localism of the various fiefs and political-religious factions led to a long series of internal conflicts. The minister family Rinpungpa, based in Tsang (West Central Tibet), dominated politics after 1435. In 1565 they were overthrown by the Tsangpa Dynasty of Shigatse which expanded its power in different directions of Tibet in the following decades and favoured the Karma Kagyu sect.",
+          "score": 3.119140625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "squad_q_56cd8d2962d2951400fa66ea",
+        "question": "Who did Altan Khan overthrow?",
+        "source_group": "wikipedia:Sino-Tibetan_relations_during_the_Ming_dynasty",
+        "gold": [
+          {
+            "id": "squad_a_0a7f4542519c3639",
+            "text": "While the Ming dynasty traded horses with Tibet, it upheld a policy of outlawing border markets in the north, which Laird sees as an effort to punish the Mongols for their raids and to \"drive them from the frontiers of China.\" However, after Altan Khan (1507–1582)—leader of the Tümed Mongols who overthrew the Oirat Mongol confederation's hegemony over the steppes—made peace with the Ming dynasty in 1571, he persuaded the Ming to reopen their border markets in 1573. This provided the Chinese with a new supply of horses that the Mongols had in excess; it was also a relief to the Ming, since they were unable to stop the Mongols from periodic raiding. Laird says that despite the fact that later Mongols believed Altan forced the Ming to view him as an equal, Chinese historians argue that he was simply a loyal Chinese citizen. By 1578, Altan Khan formed a formidable Mongol-Tibetan alliance with the Gelug that the Ming viewed from afar without intervention.",
+            "score": 4.41796875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "squad_a_75f6eafa8c1774b9",
+          "text": "Laird writes that Altan Khan abolished the native Mongol practices of shamanism and blood sacrifice, while the Mongol princes and subjects were coerced by Altan to convert to Gelug Buddhism—or face execution if they persisted in their shamanistic ways. Committed to their religious leader, Mongol princes began requesting the Dalai Lama to bestow titles on them, which demonstrated \"the unique fusion of religious and political power\" wielded by the Dalai Lama, as Laird writes. Kolmaš states that the spiritual and secular Mongol-Tibetan alliance of the 13th century was renewed by this alliance constructed by Altan Khan and Sönam Gyatso. Van Praag writes that this restored the original Mongol patronage of a Tibetan lama and \"to this day, Mongolians are among the most devout followers of the Gelugpa and the Dalai Lama.\" Angela F. Howard writes that this unique relationship not only provided the Dalai Lama and Panchen Lama with religious and political authority in Tibet, but that Altan Khan gained \"enormous power among the entire Mongol population.\"",
+          "score": 4.453125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "squad_q_56cdca7862d2951400fa6827",
+        "question": "What was the earthquake named?",
+        "source_group": "wikipedia:2008_Sichuan_earthquake",
+        "gold": [
+          {
+            "id": "squad_a_31bee4cdd1e83e67",
+            "text": "The 2008 Sichuan earthquake or the Great Sichuan earthquake, measured at 8.0 Ms and 7.9 Mw, and occurred at 02:28:01 PM China Standard Time at epicenter (06:28:01 UTC) on May 12 in Sichuan province, killed 69,197 people and left 18,222 missing.",
+            "score": 0.5556640625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "squad_a_4e66c2824e6fc501",
+          "text": "It is also known as the Wenchuan earthquake (Chinese: 汶川大地震; pinyin: Wènchuān dà dìzhèn; literally: \"Great Wenchuan earthquake\"), after the location of the earthquake's epicenter, Wenchuan County, Sichuan. The epicenter was 80 kilometres (50 mi) west-northwest of Chengdu, the provincial capital, with a focal depth of 19 km (12 mi). The earthquake was also felt in nearby countries and as far away as both Beijing and Shanghai—1,500 km (930 mi) and 1,700 km (1,060 mi) away—where office buildings swayed with the tremor. Strong aftershocks, some exceeding magnitude 6, continued to hit the area even months after the main quake, causing new casualties and damage.",
+          "score": 2.109375
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "squad_q_56ce1d0caab44d1400b88461",
+        "question": "When was the Manchu Qing dynasty invasion?",
+        "source_group": "wikipedia:Sino-Tibetan_relations_during_the_Ming_dynasty",
+        "gold": [
+          {
+            "id": "squad_a_cbead578c6485c71",
+            "text": "Elliot Sperling, a specialist of Indian studies and the director of the Tibetan Studies program at Indiana University’s Department of Central Eurasia Studies, writes that \"the idea that Tibet became part of China in the 13th century is a very recent construction.\" He writes that Chinese writers of the early 20th century were of the view that Tibet was not annexed by China until the Manchu Qing dynasty invasion during the 18th century. He also states that Chinese writers of the early 20th century described Tibet as a feudal dependency of China, not an integral part of it. Sperling states that this is because \"Tibet was ruled as such, within the empires of the Mongols and the Manchus\" and also that \"China's intervening Ming dynasty ... had no control over Tibet.\" He writes that the Ming relationship with Tibet is problematic for China’s insistence of its unbroken sovereignty over Tibet since the 13th century. As for the Tibetan view that Tibet was never subject to the rule of the Yuan or Qing emperors of China, Sperling also discounts this by stating that Tibet was \"subject to rules, laws and decisions made by the Yuan and Qing rulers\" and that even Tibetans described themselves as subjects of these emperors.",
+            "score": 2.31640625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "squad_a_4568608540dd576b",
+          "text": "The Qing dynasty (1644–1911) was founded after the fall of the Ming, the last Han Chinese dynasty, by the Manchus. The Manchus were formerly known as the Jurchens. When Beijing was captured by Li Zicheng's peasant rebels in 1644, the Chongzhen Emperor, the last Ming emperor, committed suicide. The Manchus then allied with former Ming general Wu Sangui and seized control of Beijing, which became the new capital of the Qing dynasty. The Mancus adopted the Confucian norms of traditional Chinese government in their rule of China proper. Schoppa, the editor of The Columbia Guide to Modern Chinese History argues, \"A date around 1780 as the beginning of modern China is thus closer to what we know today as historical 'reality'. It also allows us to have a better baseline to understand the precipitous decline of the Chinese polity in the nineteenth and twentieth centuries.\"",
+          "score": 4.82421875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      }
+    ],
+    "finance": [
+      {
+        "id": "fiqa_q_0",
+        "question": "What is considered a business expense on a business trip?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "fiqa_a_18850",
+            "text": "The IRS Guidance pertaining to the subject.  In general the best I can say is your business expense may be deductible.  But it depends on the circumstances and what it is you want to deduct. Travel Taxpayers who travel away from home on business may deduct related   expenses, including the cost of reaching their destination, the cost   of lodging and meals and other ordinary and necessary expenses.   Taxpayers are considered “traveling away from home” if their duties   require them to be away from home substantially longer than an   ordinary day’s work and they need to sleep or rest to meet the demands   of their work. The actual cost of meals and incidental expenses may be   deducted or the taxpayer may use a standard meal allowance and reduced   record keeping requirements. Regardless of the method used, meal   deductions are generally limited to 50 percent as stated earlier.    Only actual costs for lodging may be claimed as an expense and   receipts must be kept for documentation. Expenses must be reasonable   and appropriate; deductions for extravagant expenses are not   allowable. More information is available in Publication 463, Travel,   Entertainment, Gift, and Car Expenses. Entertainment Expenses for entertaining clients, customers or employees may be   deducted if they are both ordinary and necessary and meet one of the   following tests: Directly-related test: The main purpose of the entertainment activity is the conduct of business, business was actually conducted   during the activity and the taxpayer had more than a general   expectation of getting income or some other specific business benefit   at some future time.   Associated test: The entertainment was associated with the active conduct of the taxpayer’s trade or business and occurred directly   before or after a substantial business discussion. Publication 463 provides more extensive explanation of these tests as   well as other limitations and requirements for deducting entertainment   expenses. Gifts Taxpayers may deduct some or all of the cost of gifts given in the   course of their trade or business. In general, the deduction is   limited to $25 for gifts given directly or indirectly to any one   person during the tax year. More discussion of the rules and   limitations can be found in Publication 463. If your LLC reimburses you for expenses outside of this guidance it should be treated as Income for tax purposes. Edit for Meal Expenses: Amount of standard meal allowance.   The standard meal allowance is   the federal M&IE rate. For travel in 2010, the rate for most small   localities in the United States is $46 a day. Source IRS P463 Alternately you could reimburse at a per diem rate",
+            "score": 3.5625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "fiqa_a_104464",
+          "text": "\"Disclaimer: My answer is based on US tax law, but I assume Australian situation would be similar. The IRS would not be likely to believe your statement that \"\"I wouldn't have gone to the country if it wasn't for the conference.\"\"  A two-week vacation, with a two-day conference in there, certainly looks like you threw in the conference in order to deduct vacation expenses.  At the very least, you would need a good reason why this conference is necessary to your business. If you can give that reason, it would then depend on the specifics of Australian law.  The vacation is clearly not just incidental to the trip. The registration for the conference is always claimable as a business expense.\"",
+          "score": 4.5546875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "fiqa_q_4",
+        "question": "Business Expense - Car Insurance Deductible For Accident That Occurred During a Business Trip",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "fiqa_a_196463",
+            "text": "As a general rule, you must choose between a mileage deduction or an actual expenses deduction.  The idea is that the mileage deduction is supposed to cover all costs of using the car.  Exceptions include parking fees and tolls, which can be deducted separately under either method.  You explicitly cannot deduct insurance costs if you claim a mileage deduction.   Separately, you probably won't be able to deduct the deductible for your car as a casualty loss.  You first subtract $100 from the deductible and then divide it by your Adjusted Gross Income (AGI) from your tax return.  If your deductible is over 10% of your AGI, you can deduct it.   Note that even with a $1500 deductible, you won't be able to deduct anything if you made more than $14,000 for the year.  For most people, the insurance deductible just isn't large enough relative to income to be tax deductible.   Source",
+            "score": 0.198486328125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "fiqa_a_107213",
+          "text": "\"The answer is \"\"Yes\"\", You can deduct them. As long as you showed that you put in effort to make a profit then you can deduct business expenses.\"",
+          "score": 3.724609375
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "fiqa_q_5",
+        "question": "Starting a new online business",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "fiqa_a_69306",
+            "text": "Most US states have rules that go something like this: You will almost certainly have to pay some registration fees, as noted above.  Depending on how you organize, you may or may not need to file a separate tax return for the business. (If you're sole proprietor for tax purposes, then you file on Schedule C on your personal Form 1040.)  Whether or not you pay taxes depends on whether you have net income.  It's possible that some losses might also be deductible. (Note that you may have to file a return even if you don't have net income - Filing and needing to pay are not the same since your return may indicate no tax due.)  In addition, at the state level, you may have to pay additional fees or taxes beyond income tax depending on what you sell and how you sell it. (Sales tax, for example, might come into play as might franchise taxes.)  You'll need to check your own state law for that. As always, it could be wise to get professional tax and accounting advice that's tailored to your situation and your state.  This is just an outline of some things that you'll need to consider.",
+            "score": -0.91455078125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "fiqa_a_88508",
+          "text": "Here are the basic questions I usually ask any new business startup: Do these numbers/answers seem reasonable to you and is some benchmark available that allows you to see how likely this is?   Remember, particularly in Internet-based advertising ventures, the client may be indirect.  The person who clicks on a Google context-based link is not directly Google's client.  The person who decided to host AdWords code on their site is the direct client. You're also going to want to see a Gant chart or some process chart indicating exactly what needs to be done, at what cost and by whom.  Answers to these questions give a sense of not only how seriously they are taking the business, but also how organised. My final question: who is your first client? They need either someone who is going to contract the service, or have a clear indication of where income is going to come from, on their first day of trading. Their task is to sell their idea to you by proving that it will return on your investment and be profitable.  From the strength of these answers you can gauge the value of your investment to them, how critical it is, how risky the opportunity and - ultimately - the stake and returns you should expect.",
+          "score": 6.88671875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "fiqa_q_7",
+        "question": "New business owner - How do taxes work for the business vs individual?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "fiqa_a_411063",
+            "text": "Through your question and then clarification through the comments, it looks like you have a U.S. LLC with at least two members.  If you did not elect some other tax treatment, your LLC will be treated as a partnership by the IRS.  The partnership should file a tax return on Form 1065.  Then each partner will get a Schedule K-1 from the partnership, which the partner should use to include their respective shares of the partnership income and expenses on their personal Forms 1040. You can also elect to be taxed as an S-Corp or a C-Corp instead of a partnership, but that requires you to file a form explicitly making such election.  If you go S-Corp, then you will file a different form for the company, but the procedure is roughly the same - Income gets passed through to the owners via a Schedule K-1.  If you go C-Corp, then the owners will pay no tax on their own Form 1040, but the C-Corp itself will pay income tax. As far as whether you should try to spend the money as business expense to avoid paying extra tax - That's highly dependent on your specific situation.  I'd think you'd want to get tailored advice for that.",
+            "score": 1.44140625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "fiqa_a_390368",
+          "text": "As a sole proprietor, the tax liability of your business is calculated based on combining your business income with your personal income together.  It is good advice to keep all personal and business financial matters separate. This makes it easier to prove to the IRS that all your business expenses are actually business related. In this case however, the two items [tax payment for personal income vs tax payment for business income] are inseparable. What you can do, however, for your own personal records, is calculate how much of your tax payment relates to your business. I wouldn't get complicated about this; I would simply take the net income of your business as a % of your taxable income, and multiply that against your tax payment. ie: if your business net income is $10,000, and your total taxable income is $50,000, and you paid $6,000 in taxes, I would record that 20% of the $6k was related to business income. If you have a separate bank account for your sole proprietorship, you could make a transfer to your personal account of $1,200, and then make the $6k payment from your personal account. Remember that tax payments for either your sole proprietorship and your personal income will be treated the same: federal tax payments are not tax deductible, and state tax payments are tax deductible, whether they were paid for your sole proprietorship or the rest of your personal income. So even though this method is simplistic [for example, it doesn't factor in that different investment income types earned personally will have a lower rate than your sole proprietorship income], any difference wouldn't have an impact on any future tax liability. This would only be for your own personal record keeping.",
+          "score": 4.46484375
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "fiqa_q_9",
+        "question": "Hobby vs. Business",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "fiqa_a_184698",
+            "text": "\"You can list it as other income reported on line 21 of form 1040.  In TurboTax, enter at: - Federal Taxes tab (Personal in  Home & Business) - Wages & Income -“I’ll choose what I work on” Button Scroll down to: -Less Common Income -Misc Income, 1099-A, 1099-C. -The next screen will give you several choices. Choose \"\"Other reportable Income\"\". You will reach a screen where you can type a description of the income and the amount. Type in the amount of income and categorize as Tutoring.\"",
+            "score": -6.4609375
+          },
+          {
+            "id": "fiqa_a_509122",
+            "text": "Miscellaneous income -- same category used for hobbies.",
+            "score": -2.5546875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "fiqa_a_402273",
+          "text": "You can see some IRS info on distinguishing a business from a hobby here.  Nolo also has some info. The upshot is that you can only deduct losses if your activity is, in the judgement of the IRS, a for-profit endeavor.  You don't have to make a profit right away, or make a profit every year, for it to be a for-profit endeavor, but you have to be able to convince the IRS that you're doing it in order to (eventually) make a profit, not just for fun.  You can't just keep deducting the losses year after year if (as in the worst case you suggest) it never makes a profit and doesn't seem to have any chance of doing so.",
+          "score": 6.65234375
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "fiqa_q_11",
+        "question": "Personal checks instead of business ones",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "fiqa_a_596427",
+            "text": "I'll assume you are asking about a check for some kind of work or service that you provided them, that they hired your company to do. No large business will do that. In their records they have a contract with your company to provide services. If they write you a personal check it won't match with the contract, and when the auditors see that they will scream blue murder. Whoever wrote the check will have to prove that you are legitimately the same thing as the company (that doesn't mean taking your word for it). They may also have to show they weren't conspiring with you to commit tax fraud ( that wasn't your intention of course, was it?) .",
+            "score": 4.5
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "fiqa_a_135196",
+          "text": "\"Checks sold as \"\"business checks\"\" are larger than checks sold as \"\"personal checks\"\". Personal checks are usually 6\"\" x 2 1/2\"\" while business checks are 8 1/2 \"\" x 3 to 4 \"\". Also, business checks typically have a tear-off stub where you can write who the check was made out to and what it was for. In this computer age that seems pretty obsolete to me, I enter the check into the computer, not write it on a stub, but I suppose there are still very small businesses out there that doesn't use a computerized record-keeping system. These days business checks are often printed on 8 1/2 by 11\"\" paper -- either one per sheet with a big tear-off or 3 per sheet with no tear off -- so you can feed them through a computer printer easily. Nothing requires you to use \"\"business checks\"\" for a business account. At least, I've always used personal checks for my business account with no problem. These days I make almost all payments electronically, I think I write like one paper check a year, so it's become a trivial issue. Oh, and I've never had any problem getting a check printer to put my business name on the checks or anything like that.\"",
+          "score": 6.7109375
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "fiqa_q_13",
+        "question": "How can I register a UK business without providing a business address?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "fiqa_a_503678",
+            "text": "You don't have to provide your personal home address per se. You can provide a legal address where Companies house can send across paper correspondence to. Companies house legally requires an address because directors are liable to their shareholders(even if you are the only shareholder) and to stop them from disappearing just like that with shareholder's money. Moreover your birth date will also be visible on websites which provide comapnies information. You can ask these websites to stop sharing your personal information. Every company must have a registered office within the UK which is the official legal address of the company. It must be a physical address (i.e. not a PO Box without a physical location) as Companies House will use this address to send correspondence to. To incorporate a private limited company you need at least one director, who has to be over 16 years of age. You may also have a secretary, but this is optional. The information you will need to supply for each officer includes: You may also have officers that are companies or firms, and for these you will need to supply the company or firm name, its registered office address, details of the legal form of the company, where it is registered and if applicable its registration number.",
+            "score": 4.453125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "fiqa_a_200023",
+          "text": "If you do business under your name, you don't need to register your business.  Your business will be treated as a sole proprietorship.  If your revenue exceeds 30,000 (or wish to collect GST for the government) then you will have to register with the CRA for a GST account, but that is free.",
+          "score": 5.12890625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "fiqa_q_16",
+        "question": "Business Investment Loss from prior year",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "fiqa_a_60590",
+            "text": "You need to give specific dates! In the United States, you have three years to file an amended tax return. https://www.irs.gov/uac/Newsroom/Ten-Facts-about-Amended-Tax-Returns Did the restaurant fail in 2012? If so, that's probably the year to take the loss. If you need to amend your 2012 return, which you filed in 2013, you should have until 2016 to file this. The exact date may be based on when you filed 2012 taxes!",
+            "score": -4.82421875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "fiqa_a_88972",
+          "text": "\"The key with analyzing financial statements is that you need to look at all angles of a particular item. ie: Sales has gone up, but has the cost of sales increased by even more, implying narrower margins? Or, interest expense has gone up, but is that because new debt was taken on to pay for expansion?  In the specific case you mentioned [buying assets that will create depreciation expense over time], there is a grouping on the cash flow statement called 'Investing', which will state the amount of cash used during the year to invest in the business. This could be a good thing or a bad thing, depending on other factors (and your personal preference regarding dividends being paid to shareholders). In addition, you can see the amount of depreciation expense separately listed on the cash flow statement. This tells you many things. Consider a company with $10M in assets on the balance sheet, but $2M in depreciation expense. This tells you that [in a very loose sense], every 5 years the assets owned by the company will all need to be replaced. Compare that with the Investing section of the cash flow statement - if they are buying $4M of new assets this year, this tells you that on an overall basis, they are likely expanding the business, because the new investments outpace the depreciation.  But, is your concern of under-reported earnings a common issue? Typically, keep in mind that the most common bias of a company is to over-report earnings. This is because management compensation (in the form of performance bonuses and stock option valuation) is increased by profitable years. However, in a year where a loss / poor performance is likely, a reverse-bias occurs, to take as much of a loss as possible in that year. This is because if a manager's bonus is already 0 due to poor company performance, having a worse year will not turn the bonus negative. So, by taking all expenses possible today on the financial statements, next year might have less allocated expenses, and therefore the manager might get a bigger bonus impact next year. This is called \"\"Taking a big bath\"\".  Note that public companies must meet certain reporting standards, and they are audited by external accounting firms to show that they meet those standards. Of course, there is no guarantee that the auditors will catch all cases of accounting manipulation (see Enron, etc., etc.).\"",
+          "score": 2.998046875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "fiqa_q_19",
+        "question": "How can I estimate business taxes / filing fees for a business that has $0 income?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "fiqa_a_142623",
+            "text": "\"You need to hire a tax professional and have them sort it out for you properly and advise you on how to proceed next. Don't do it yourself, you're way past the stage when you could. You're out of compliance, and you're right - there are penalties that a professional might know how to mitigate, and maybe even negotiate a waiver with the IRS, depending on the circumstances of the case. Be careful of answers like \"\"you don't need to pay anything\"\" that are based on nothing of facts. Based on what you said in the question and in the comments, it actually sounds like you do have to pay something, and you're in trouble with the IRS already. It might be that you misunderstood something in the past (e.g.: you said the business had filed taxes before, but in fact that might never happened and you're confusing \"\"business filed taxes\"\" with \"\"I filed schedule C\"\") or it might be the actual factual representation of things (you did in fact filed a tax return for your business with the IRS, either form 1120 of some kind or 1065). In any case a good licensed (CPA or EA) professional will help you sort it out and educate you on what you need to do in the future.\"",
+            "score": 1.955078125
+          },
+          {
+            "id": "fiqa_a_315086",
+            "text": "Is the business an S-Corp, LLC or Sole Prop? I am going to guess based on the question that it is an LLC that you never closed with the state and you live in a state (NY) that charges a fee for having an LLC in the state in which case you owe those fees to the state. I am not aware of any taxes on the mere existence of a business by the IRS. I think you are going to find out that the are no taxes owed to the IRS for this nonexistent activity.",
+            "score": 0.69384765625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "fiqa_a_304479",
+          "text": "You may be able to find the answers to your question on the IRS web site: http://www.irs.gov/businesses/small/article/0,,id=98263,00.html Specifically, using this form to estimate taxes for salary: http://www.irs.gov/pub/irs-pdf/f1120w.pdf and this form to estimate taxes for dividends: http://www.irs.gov/pub/irs-pdf/f1040es.pdf",
+          "score": 4.04296875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "fiqa_q_20",
+        "question": "Would the purchase of a car for a business through the use of a business loan be considered a business expense?",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "fiqa_a_447231",
+            "text": "You don't say what country you live in. If it's the U.S., the IRS has very specific rules for business use of a car. See, for starters at least, http://www.irs.gov/publications/p463/ch04.html. The gist of it is: If you use the car 100% for business purposes, you NEVER use it to drive to the grocery store or to your friend's house, etc, then it is a deductible business expense. If you use a car party for business use and partly for personal use, than you can deduct the portion of the expense of the car that is for business use, but not the portion that is for personal use. So basically, if you use the car 75% for business purposes and 25% for personal use, you can deduct 75% of the cost and expenses. You can calculate the business use by, (a) Keeping careful records of how much you spent on gas, oil, repairs, etc, tracking the percentage of business use versus percentage of personal use, and then multiplying the cost by the percentage business use and that is the amount you can deduct; or (b) Use the standard mileage allowance, so many cents per mile, which changes every year. Note that the fact that you paid for the car from a business account has absolutely nothing to do with it. (If it did, then everyone could create a small business, open a business account, pay all their bills from there, and all their personal expenses would magically become business expenses.) Just by the way: If you are going to try to stretch the rules on your taxes, business use of a car or personal computer or expenses for a home office are the worst place to do it. The IRS knows that cars and computers are things that can easily be used for either personal or business purposes and so they keep a special eye out on these.",
+            "score": 2.697265625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "fiqa_a_97719",
+          "text": "\"Disclaimer: This should go without saying, but this answer is definitely an opinion. (I'm pretty sure my current accountant would agree with this answer, and I'm also pretty sure that one of my past accountants would disagree.) When I started my own small business over 10 years ago I asked this very same question for pretty much every purchase I made that would be used by both the business and me personally. I was young(er) and naive then and I just assumed everything was deductible until my accountant could prove otherwise. At some point you need to come up with some rules of thumb to help make sense of it, or else you'll drive yourself and your accountant bonkers. Here is one of the rules I like to use in this scenario: If you never would have made the purchase for personal use, and if you   must purchase it for business use, and if using   it for personal use does not increase the expense to the business, it   can be fully deducted by the business even if you sometimes use it personally too. Here are some example implementations of this rule: Note about partial expenses: I didn't mention partial deductions above because I don't feel it applies when the criteria of my \"\"rule of thumb\"\" is met. Note that the IRS states: Personal versus Business Expenses Generally, you cannot deduct personal, living, or family expenses. However, if you have an expense for something that is used partly for business and partly for personal purposes, divide the total cost between the business and personal parts. You can deduct the business part. At first read that makes it sound like some of my examples above would need to be split into partial calulations, however, I think the key distinction is that you would never have made the purchase for personal use, and that the cost to the business does not increase because of allowing personal use. Partial deductions come into play when you have a shared car, or office, or something where the business cost is increased due to shared use. In general, I try to avoid anything that would be a partial expense, though I do allow my business to reimburse me for mileage when I lend it my personal car for business use.\"",
+          "score": 4.4296875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "fiqa_q_21",
+        "question": "Deducting last years (undocumented) side business loss",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "fiqa_a_497642",
+            "text": "You should speak to a good tax adviser. The less documentation you have the more problems IRS are going to cause you. Generally you can deduct business losses (in the year they occurred, which is 2011), but you have to show that that was a valid business, not just a way to reduce your tax bill with personal expenses. Thus lack of documentation reduces your ability to prove that you're entitled to the deduction. The burden of proof is generally on you. You can not deduct it from 2012 taxes, but you can still amend 2011. Keep in mind though that amended returns have higher chance of audit, and a significant business loss on a business that only existed that year is a major red flag which will raise the probability of an audit to very high percentage. Theoretically, if the business was real and just failed - you can definitely deduct this. But practically, lack of documentation may cause too big a problem, and a tax adviser might suggest you giving it up if he doesn't think you have a real chance to convince the IRS. Definitely don't do that without a professional advice. It is worth fighting for, its quite a loss, but don't do it on your own as you will definitely lose.",
+            "score": 2.705078125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "fiqa_a_402273",
+          "text": "You can see some IRS info on distinguishing a business from a hobby here.  Nolo also has some info. The upshot is that you can only deduct losses if your activity is, in the judgement of the IRS, a for-profit endeavor.  You don't have to make a profit right away, or make a profit every year, for it to be a for-profit endeavor, but you have to be able to convince the IRS that you're doing it in order to (eventually) make a profit, not just for fun.  You can't just keep deducting the losses year after year if (as in the worst case you suggest) it never makes a profit and doesn't seem to have any chance of doing so.",
+          "score": 3.0703125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "fiqa_q_23",
+        "question": "30% share in business",
+        "source_group": null,
+        "gold": [
+          {
+            "id": "fiqa_a_32102",
+            "text": "Get involved a lawyer and Accountant. Without it you may not be sure what you are getting. What exactly will 30% mean for me? It will mean exactly what gets written in contract. It can mean you are owner of 30% of the company. If this is structured as partnership, it would also mean you are party to 30% loss. It can mean by current valuation, you get x fixed shares. In future if the directors creates more shares, your % ownership can get diluted. Or anything else. It all depends on what is written in contract and how the contract is structured. Is there anything I should I be aware of before agreeing? Get a draft and talk to a Lawyer and Accountant, they should be able to tell you exactly what it means and you can then decide if you agree to it or not; or need this contract worded differently.",
+            "score": 4.12890625
+          },
+          {
+            "id": "fiqa_a_550624",
+            "text": "Keep in mind a good lawyer will have the contract cover the five D's: Its really best to lay these things out ahead of time.  I watched, first hand, two friends start a business.  When they were broke and struggling the worked very well together.  Then the money started rolling in.  Despite exceeding their dreams they were constantly at each other's throats fighting and bickering over stupid stuff.  In the end, because they had decent legal docs, they both were able to pull money out of the business.   Had that not been worked out they would have destroyed the business so that no one would have profited.",
+            "score": -3.857421875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "fiqa_a_67625",
+          "text": "It appears your company is offering roughly a 25% discount on its shares.  I start there as a basis to give you a perspective on what the 30% matching offer means to you in terms of value. Since you are asking for things to consider not whether to do it, below are a few considerations (there may be others) in general you should think about your sources of income. if this company is your only source of income, it is more prudent to make your investment in their shares a smaller portion of your overall investment/savings strategy. what is the holding period for the shares you purchase. some companies institute a holding period or hold duration which restricts when you can sell the shares.  Generally, the shorter the duration period the less risk there is for you.  So if you can buy the shares and immediately sell the shares that represents the least amount of relative risk. what are the tax implications for shares offered at such a discount.  this may be something you will need to consult a tax adviser to get a better understanding.  your company should also be able to provide a reasonable interpretation of the tax consequences for the offering as well. is the stock you are buying liquid. liquid, in this case, is just a fancy term for asking how many shares trade in a public market daily. if it is a very liquid stock you can have some confidence that you may be able to sell out of your shares when you need. personally, i would review the company's financial statements and public statements to investors to get a better understanding of their competitive positioning, market size and prospects for profitability and growth. given you are a novice at this it may be good idea to solicit the opinion of your colleagues at work and others who have insight on the financial performance of the company. you should consider other investment options as well.  since this seems to be your first foray into investing you should consider diversifying your savings into a few investments areas (such as big market indices which typically should be less volatile).   last, there is always the chance that your company could fail.  Companies like Enron, Lehman Brothers and many others that were much smaller than those two examples have failed in the past.  only you can gauge your tolerance for risk. As a young investor, the best place to start is to use index funds which track a broader universe of stocks or bonds as the first step in building an investment portfolio.  once you own a good set of index funds you can diversify with smaller investments.",
+          "score": 4.6640625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      }
+    ],
+    "financial_report": [
+      {
+        "id": "finqa_q_f675a1d3e9a693f64191a391",
+        "question": "what was the total operating expenses in 2018 in millions",
+        "source_group": "AAL/2018",
+        "gold": [
+          {
+            "id": "finqa_a_144dae64c872510c9cf11c63",
+            "text": "year the 2018 of gallons is 4447 ; the 2018 of average priceper gallon is $ 2.23 ; the 2018 of aircraft fuelexpense is $ 9896 ; the 2018 of percent of totaloperating expenses is 23.6% ( 23.6 % ) ;",
+            "score": 0.85009765625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "finqa_a_b543a9df27f56cd896c3bcc3",
+          "text": "the following table shows annual aircraft fuel consumption and costs , including taxes , for our mainline and regional operations for 2018 , 2017 and 2016 ( gallons and aircraft fuel expense in millions ) .",
+          "score": 2.57421875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "finqa_q_c6d44915ada7bfadeca6daba",
+        "question": "what is the percentage of consolidated communities among the total communities?",
+        "source_group": "MAA/2018",
+        "gold": [
+          {
+            "id": "finqa_a_460e15913e72f78800d6d829",
+            "text": "multifamily the consolidated of communities is 303 ; the consolidated of units is 100595 ;",
+            "score": 2.44921875
+          },
+          {
+            "id": "finqa_a_83ea25924565f7fa578ed75f",
+            "text": "multifamily the total of communities is 304 ; the total of units is 100864 ;",
+            "score": 0.64111328125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "finqa_a_058d991caa4acede08d8359c",
+          "text": "multifamily the consolidated of communities is 4 ; the consolidated of units is 260000 ;",
+          "score": 2.8671875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "finqa_q_d673b570eb4409d3dad0d26c",
+        "question": "as of december 31 , 2012 what was the percentage change in net reserves from 2011",
+        "source_group": "RE/2012",
+        "gold": [
+          {
+            "id": "finqa_a_bc5ce427589f8026c815e15a",
+            "text": "( dollars in millions ) the net reserves of years ended december 31 , 2012 is $ 425.7 ; the net reserves of years ended december 31 , 2011 is $ 480.2 ; the net reserves of years ended december 31 , 2010 is $ 532.9 ;",
+            "score": 3.736328125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "finqa_a_6aa9faa5d21c41c042d66b01",
+          "text": "( dollars in thousands ) the adjustments to reserves of at december 31 , 2012 is 2365 ; the adjustments to reserves of at december 31 , 2011 is 8449 ; the adjustments to reserves of at december 31 , 2010 is 2944 ;",
+          "score": 5.17578125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "finqa_q_60546d40e56278c931a2935d",
+        "question": "what is the percentage change in the balance of goodwill from 2015 to 2016?",
+        "source_group": "ADI/2016",
+        "gold": [
+          {
+            "id": "finqa_a_def06250b5919247dab5bf45",
+            "text": "the balance at end of year of 2016 is $ 1679116 ; the balance at end of year of 2015 is $ 1636526 ;",
+            "score": 0.38330078125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "finqa_a_069f8fc4e7bf40a50b400e85",
+          "text": "the goodwill adjustment related to other acquisitions ( 2 ) of 2016 is 44046 ; the goodwill adjustment related to other acquisitions ( 2 ) of 2015 is 3663 ;",
+          "score": 5.1015625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "finqa_q_2370d0270f9c63b41fc37364",
+        "question": "at january 29 , 2007 what was the percent of the estimated fair value of the goodwill to the total purchase price",
+        "source_group": "LLY/2008",
+        "gold": [
+          {
+            "id": "finqa_a_20a7c9958baaccfc1d3c2194",
+            "text": "cash and short-term investments the total purchase price of $ 197.7 is $ 2320.7 ;",
+            "score": -2.5390625
+          },
+          {
+            "id": "finqa_a_8130c5487b487baa5e514a4a",
+            "text": "the acquisition has been accounted for as a business combination under the purchase method of accounting , resulting in goodwill of $ 646.7 million .",
+            "score": -0.01171112060546875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "finqa_a_fad05161ccc2dc9e9e87c139",
+          "text": "estimated fair value at january 29 , 2007 .",
+          "score": 2.779296875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "finqa_q_b096de4749293dfb61fc20dc",
+        "question": "what is the percentage increase in inventories due to the adoption of lifo in 2005?",
+        "source_group": "AAP/2006",
+        "gold": [
+          {
+            "id": "finqa_a_f9bf3a2653543ed60d8f537d",
+            "text": "the inventories at fifo net of december 30 2006 is $ 1380573 ; the inventories at fifo net of december 31 2005 is $ 1294310 ;",
+            "score": -1.46484375
+          },
+          {
+            "id": "finqa_a_bd9cdce30a66c2249ad59a7a",
+            "text": "the adjustments to state inventories at lifo of december 30 2006 is 82767 ; the adjustments to state inventories at lifo of december 31 2005 is 72789 ;",
+            "score": 3.107421875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "finqa_a_d596d1d22c0ac9672301b58b",
+          "text": "inventories , net inventories are stated at the lower of cost or market , cost being determined using the last-in , first-out ( \"lifo\" ) method for approximately 93% ( 93 % ) of inventories at both december 30 , 2006 and december 31 , 2005 .",
+          "score": 4.73046875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "finqa_q_665c4c9245c443ba0575c224",
+        "question": "what was the difference in cumulative total return for the five year period ending 12/31/07 between a o smith corp and the s&p smallcap 600 index?",
+        "source_group": "AOS/2007",
+        "gold": [
+          {
+            "id": "finqa_a_11818789bfc72c565a54daf6",
+            "text": "company/index the a o smith corp of baseperiod 12/31/02 is 100.00 ; the a o smith corp of baseperiod 12/31/03 is 132.23 ; the a o smith corp of baseperiod 12/31/04 is 115.36 ; the a o smith corp of baseperiod 12/31/05 is 138.20 ; the a o smith corp of baseperiod 12/31/06 is 150.26 ; the a o smith corp of 12/31/07 is 142.72 ;",
+            "score": 0.0802001953125
+          },
+          {
+            "id": "finqa_a_72017565bf3f4756ad16f6c0",
+            "text": "company/index the s&p smallcap 600 index of baseperiod 12/31/02 is 100.00 ; the s&p smallcap 600 index of baseperiod 12/31/03 is 138.79 ; the s&p smallcap 600 index of baseperiod 12/31/04 is 170.22 ; the s&p smallcap 600 index of baseperiod 12/31/05 is 183.30 ; the s&p smallcap 600 index of baseperiod 12/31/06 is 211.01 ; the s&p smallcap 600 index of 12/31/07 is 210.39 ;",
+            "score": -2.314453125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "finqa_a_0c962bdc4e352edea2260d30",
+          "text": "the graph below shows a five-year comparison of the cumulative shareholder return on the company's common stock with the cumulative total return of the s&p smallcap 600 index and the s&p 600 electrical equipment index , all of which are published indices .",
+          "score": 2.552734375
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "finqa_q_93927687d842537420a16087",
+        "question": "what portion of the sentinelle medical's purchase price is related to contingent consideration?",
+        "source_group": "HOLX/2011",
+        "gold": [
+          {
+            "id": "finqa_a_325a75dbdae41388cccbc5c0",
+            "text": "cash the contingent consideration of $ 84751 is 29500 ;",
+            "score": 2.314453125
+          },
+          {
+            "id": "finqa_a_cc0e96df6916fb7bd46c006e",
+            "text": "cash the total purchase price of $ 84751 is $ 114251 ;",
+            "score": -1.7158203125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "finqa_a_eed7f66e9a6bdda48d1f70bc",
+          "text": "pursuant to asc 805 , the company recorded its estimate of the fair value of the contingent consideration liability based on future revenue projections of the sentinelle medical business under various potential scenarios and weighted probability assumptions of these outcomes .",
+          "score": 4.55078125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "finqa_q_90462a421ad508fcd26b6766",
+        "question": "in 2016 what was the percent of the cib markets net interest income as part of the net interest income 2013 managed basis",
+        "source_group": "JPM/2016",
+        "gold": [
+          {
+            "id": "finqa_a_52c35fcac072aa02083c2155",
+            "text": "year ended december 31 ( in millions except rates ) the net interest income 2013 managed basis ( a ) ( b ) of 2016 is $ 47292 ; the net interest income 2013 managed basis ( a ) ( b ) of 2015 is $ 44620 ; the net interest income 2013 managed basis ( a ) ( b ) of 2014 is $ 44619 ;",
+            "score": 5.21484375
+          },
+          {
+            "id": "finqa_a_b2997e8bc3fe7dd1d7dfc393",
+            "text": "year ended december 31 ( in millions except rates ) the less : cib markets net interest income ( c ) of 2016 is 6334 ; the less : cib markets net interest income ( c ) of 2015 is 5298 ; the less : cib markets net interest income ( c ) of 2014 is 6032 ;",
+            "score": 5.0078125
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "finqa_a_325d061b6e454352e2254076",
+          "text": "year ended december 31 , ( in millions , except rates ) 2016 2015 2014 net interest income 2013 managed basis ( a ) ( b ) $ 47292 $ 44620 $ 44619 less : cib markets net interest income ( c ) 6334 5298 6032 net interest income excluding cib markets ( a ) $ 40958 $ 39322 $ 38587 average interest-earning assets $ 2101604 $ 2088242 $ 2049093 less : average cib markets interest-earning assets ( c ) 520307 510292 522989 average interest-earning assets excluding cib markets $ 1581297 $ 1577950 $ 1526104 net interest yield on average interest-earning assets 2013 managed basis 2.25% ( 2.25 % ) 2.14% ( 2.14 % ) 2.18% ( 2.18 % ) net interest yield on average cib markets interest- earning assets ( c ) 1.22 1.04 1.15 net interest yield on average interest-earning assets excluding cib markets 2.59% ( 2.59 % ) 2.49% ( 2.49 % ) 2.53% ( 2.53 % ) ( a ) interest includes the effect of related hedges .",
+          "score": 7.81640625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "finqa_q_42532591c0f3b7829daf5f54",
+        "question": "what was the percentage cumulative total shareholder return on disca for the five year period ended december 21 , 2013?",
+        "source_group": "DISCA/2013",
+        "gold": [
+          {
+            "id": "finqa_a_f89fdc60968ea2bb06d06436",
+            "text": "the disca of december 312008 is $ 100.00 ; the disca of december 312009 is $ 216.60 ; the disca of december 312010 is $ 294.49 ; the disca of december 312011 is $ 289.34 ; the disca of december 312012 is $ 448.31 ; the disca of december 312013 is $ 638.56 ;",
+            "score": -3.619140625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "finqa_a_f4fd0a0f8b97c05724631ecc",
+          "text": "there were no repurchases of our series a and b common stock during the three months ended december 31 , 2013 .",
+          "score": -2.853515625
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "finqa_q_a90ee4a032c544f64d971bfb",
+        "question": "if you held 1000 shares on may 30 , 2014 , how much would you receive in dividends?",
+        "source_group": "CDW/2014",
+        "gold": [
+          {
+            "id": "finqa_a_221d6c15d1f7e3031459bd1e",
+            "text": "dividend amount the $ 0.0425 of declaration date is may 8 2014 ; the $ 0.0425 of record date is may 27 2014 ; the $ 0.0425 of payment date is june 10 2014 ;",
+            "score": 0.170654296875
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "finqa_a_cf43ab4746760b354ce18927",
+          "text": "the payment of any future dividends will be at the discretion of our board of directors and will depend upon our results of operations , financial condition , business prospects , capital requirements , contractual restrictions , any potential indebtedness we may incur , restrictions imposed by applicable law , tax considerations and other factors that our board of directors deems relevant .",
+          "score": 1.404296875
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      },
+      {
+        "id": "finqa_q_fb498f00c571ff0d8b444da8",
+        "question": "for the year ended december 31 2013 , what was the net margin for the 2nd qtr",
+        "source_group": "HII/2013",
+        "gold": [
+          {
+            "id": "finqa_a_f56abfb40b60fd64d2ced962",
+            "text": "( $ in millions except per share amounts ) the operating income ( loss ) of year ended december 31 2013 1st qtr is 95 ; the operating income ( loss ) of year ended december 31 2013 2nd qtr is 116 ; the operating income ( loss ) of year ended december 31 2013 3rd qtr is 127 ; the operating income ( loss ) of year ended december 31 2013 4th qtr is 174 ;",
+            "score": 3.5234375
+          },
+          {
+            "id": "finqa_a_4bfc267d11669bb25e3fda9c",
+            "text": "( $ in millions except per share amounts ) the sales and service revenues of year ended december 31 2013 1st qtr is $ 1562 ; the sales and service revenues of year ended december 31 2013 2nd qtr is $ 1683 ; the sales and service revenues of year ended december 31 2013 3rd qtr is $ 1637 ; the sales and service revenues of year ended december 31 2013 4th qtr is $ 1938 ;",
+            "score": 3.962890625
+          }
+        ],
+        "confusing_unlabelled": {
+          "id": "finqa_a_2c7eedacf30bbe147bc36fbf",
+          "text": "( $ in millions except per share amounts ) the net earnings ( loss ) of year ended december 31 2013 1st qtr is 44 ; the net earnings ( loss ) of year ended december 31 2013 2nd qtr is 57 ; the net earnings ( loss ) of year ended december 31 2013 3rd qtr is 69 ; the net earnings ( loss ) of year ended december 31 2013 4th qtr is 91 ;",
+          "score": 5.1328125
+        },
+        "expert_review_completed": false,
+        "negative_may_be_unlabelled_relevant": true
+      }
+    ]
+  },
+  "keyword_categories_are_heuristics_not_expert_annotations": true,
+  "training_manifest_sha256": "02fc798aa9f7373bbb3cd8ad810eee50ba7dd5734a97eed59b4ed52b22fed1df",
+  "code_sha256": "65fb34901b33d9e3cbb233ff8e81e9e928e8a60959a936503b6d613a722a8920"
+}

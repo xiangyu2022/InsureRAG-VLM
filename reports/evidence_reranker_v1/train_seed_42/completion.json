@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "seconds": 2066.4080050999764,
+  "optimizer_steps": 3190,
+  "pair_presentations": 612216,
+  "query_presentations": 102036,
+  "peak_cuda_allocated_bytes": 3194028032,
+  "epochs": [
+    {
+      "fine_tuned_in_this_project": true,
+      "seed": 42,
+      "epoch": 1,
+      "weights_sha256": "b9af26c295d50081dc746a59408646322bfededbfafb8271ef21d6c9c7985866",
+      "initial_weights_sha256": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+      "training_protocol_sha256": "05b8afc9aa4a804bde36fc49529f3c1a02d166f941ed147bbf4fe83c7876991d",
+      "optimizer_steps": 1595,
+      "pair_presentations": 306108,
+      "query_presentations": 51018,
+      "recipe": "head-weighted pairwise plus listwise ranking, refreshed negatives and frozen-teacher KL"
+    },
+    {
+      "fine_tuned_in_this_project": true,
+      "seed": 42,
+      "epoch": 2,
+      "weights_sha256": "af2c88e7a3958a37d4cfa77d68b4d45573770413e6404d3cf893363380364418",
+      "initial_weights_sha256": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+      "training_protocol_sha256": "05b8afc9aa4a804bde36fc49529f3c1a02d166f941ed147bbf4fe83c7876991d",
+      "optimizer_steps": 3190,
+      "pair_presentations": 612216,
+      "query_presentations": 102036,
+      "recipe": "head-weighted pairwise plus listwise ranking, refreshed negatives and frozen-teacher KL"
+    }
+  ],
+  "training_log_sha256": "11f25bbfd0c532bb54a37d6d666a7a001a72be4e306f82935bf7618c344e87c8"
+}

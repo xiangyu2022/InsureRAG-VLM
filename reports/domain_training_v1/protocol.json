@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-01T19:46:41.053435+00:00",
+  "seed": 42,
+  "training_questions": 11739,
+  "epochs": 3,
+  "optimizer": "AdamW",
+  "learning_rate": 2e-05,
+  "weight_decay": 0.01,
+  "warmup_steps": 220,
+  "optimizer_steps_planned": 2202,
+  "micro_batch_groups": 4,
+  "gradient_accumulation": 4,
+  "group_size": 6,
+  "loss": "listwise cross entropy, one author positive + 2 BGE hard + 2 BM25 hard + 1 random negative",
+  "label_smoothing": 0.05,
+  "positive_policy": "Cycle original positive answer IDs by epoch; no generated positive labels",
+  "max_length": 512,
+  "precision": "float32 parameters; bfloat16 autocast",
+  "trainable_parameters": 22713601,
+  "base_model_files_sha256": {
+    "config.json": "380e02c93f431831be65d99a4e7e5f67c133985bf2e77d9d4eba46847190bacc",
+    "download_provenance.json": "6f3f6cb2330ee56c4676228ca529b9f31a9704df3a28c92955feb51d758d9196",
+    "model.safetensors": "821d1aa69520101d6e0737f78a042ae25b19e5cb9160701909d10434f4aeb0ae",
+    "special_tokens_map.json": "3c3507f36dff57bce437223db3b3081d1e2b52ec3e56ee55438193ecb2c94dd6",
+    "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+    "tokenizer_config.json": "a5c2e5a7b1a29a0702cd28c08a399b5ecc110c263009d17f7e3b415f25905fd8",
+    "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+  },
+  "training_manifest_sha256": "7303e4bb4f143c813af9baf05789455db65100e688d54d8746e0b0ea44a036e3",
+  "code_sha256": "6dfa79747867c062fa73fd6361920486f27d774c2bf12b939acf402eb5889000",
+  "test_used_for_training_or_selection": false,
+  "selection": "Score each epoch on all 2000 validation questions with fixed candidate lists. Select epoch and cross weight on validation only."
+}

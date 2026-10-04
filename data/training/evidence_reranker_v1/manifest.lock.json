@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-10-03T04:14:43.332283+00:00",
+  "training_questions": 33426,
+  "source_domains": {
+    "insuranceqa": 11629,
+    "government": 259,
+    "general": 13999,
+    "finance": 5464,
+    "financial_report": 2075
+  },
+  "positive_pairs": 50653,
+  "negative_pairs": 367338,
+  "anchor_model": {
+    "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\insurerag-condition-listwise-v1-seed-123\\epoch-1",
+    "files_sha256": {
+      "config.json": "bde16d9648b01e19b9d4c5f3deca28cd2851fbbc660f8a90cecd87efde5c5429",
+      "model.safetensors": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+      "tokenizer.json": "91f1def9b9391fdabe028cd3f3fcc4efd34e5d1f08c3bf2de513ebb5911a1854",
+      "tokenizer_config.json": "88eb33800f51cc08e19ebe4dffbde5afbc9e517a993ede2861a22ed9c7e0be7f",
+      "training_provenance.json": "97987c9165c45f7178e42eeb9a5dcc032a00197bd2da096cece26cf8246528c0"
+    },
+    "checkpoint_sha256": "36f2ab73a0a6da26f10df0b031422651d4e26c79db6be5fd6bc37be6f603dc3c",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "max_length": 512,
+    "batch_size": 64,
+    "truncation": "longest_first",
+    "score": "raw single relevance logit",
+    "remote_code": false,
+    "fine_tuned_in_this_project": true,
+    "training_provenance": {
+      "fine_tuned_in_this_project": true,
+      "weights_sha256": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+      "initial_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+      "training_manifest_sha256": "7ec5f1d6b86775214c759ef816ff043e18a3ba19f3d37809b2c0f2e8c8a4fba6",
+      "training_protocol_sha256": "31b9dc43986a584dcc1b3fb16f792b90bedda5ef3406cd72f6b83b44b83828c5",
+      "training_code_sha256": "e85c73bd5c03f0d78ac14ad094686249cd7120c7877249d92dbcce3a526dee5d",
+      "seed": 123,
+      "epoch": 1,
+      "optimizer_steps": 2471,
+      "unique_training_questions": 25987,
+      "pair_exposures": 237174,
+      "recipe": "confidence-adjusted listwise ranking + previous specialist retention"
+    }
+  },
+  "anchor_pairs_scored": 1041233,
+  "candidate_retriever": "fixed prior 50/50 query adaptation + original BGE docs + BM25; training queries only",
+  "data_manifest_sha256": "e0c82f8294b3f7b2c80308fa83ccaf73ef30fad3b9d031936ce7717165097785",
+  "index_manifest_sha256": "a5eed81ed8e2f4940ffaea81c310284572bfb58b9e40eb164f2698743fd56baa",
+  "seconds": 665.6591713000089,
+  "code_sha256": "ac98254db8035ac06805988ff9d37ba3784e17ea0d474c25f7097cd8eb858f7c",
+  "files": {
+    "answers.jsonl": "b7a2129398e131ed7844bffd9f97a0ebf64893f67c7cea6cd40a902820db2961",
+    "query_groups.jsonl": "fe472a73c1e401da4c25a89a31166092f334aadf5fef2f2f56b15b38445b4a67",
+    "train_groups.jsonl": "a64c8f22e9599d3ef505289c6207757c42e57e2f26306b908f45e6f39ce5a1ab",
+    "isolation.json": "769e4174368a18b1e625ffb82e03ab3d39dfb41d6259026ca75173ca857de493",
+    "mining_audit.json": "62b1e8309dc8b74286d3fe38a30f24902ffcf8ed5e9618c447c3737e41409023"
+  }
+}

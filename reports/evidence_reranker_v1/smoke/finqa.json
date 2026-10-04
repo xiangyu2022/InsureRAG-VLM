@@ -1,0 +1,68 @@
+{
+  "question": "What is the interest expense sensitivity to a 100 basis point change in LIBOR?",
+  "corpus": "finqa",
+  "annual_report_scope": "ADI/2009",
+  "corpus_candidates": 144,
+  "reranked_candidates": 110,
+  "selected_config": {
+    "name": "seed_123_epoch_2_cw50",
+    "model": "seed_123_epoch_2",
+    "cross_weight": 0.5
+  },
+  "new_training_promoted": true,
+  "selection_lock_sha256": "a40b41968aa39fc4f4967e5bc8f58ff96251558203ee33edf97ed16c8f070525",
+  "selected_weights_sha256": "697d3a725ad9d684c1b978365bda314114e8dbec2a27c2841a07f028ed2e81b8",
+  "fixed_encoders_match_inherited_inventories": true,
+  "query_encoder_passes": 2,
+  "generation_calls": 0,
+  "numerical_program_execution": false,
+  "expert_answer_adjudication": false,
+  "seconds_including_loading": 6.875865700189024,
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "finqa_a_02873614d04133e24578e9d2",
+      "text": "if libor changes by 100 basis points , our annual interest expense would change by $ 3.8 million .",
+      "source_group": "ADI/2009",
+      "source_page": "ADI/2009/page_49.pdf",
+      "evidence_type": "text",
+      "upstream_evidence_key": "text_1"
+    },
+    {
+      "rank": 2,
+      "answer_id": "finqa_a_4c90f1c565a9d1931b39e215",
+      "text": "interest rate to a variable interest rate based on the three-month libor plus 2.05% ( 2.05 % ) ( 2.34% ( 2.34 % ) as of october 31 , 2009 ) .",
+      "source_group": "ADI/2009",
+      "source_page": "ADI/2009/page_49.pdf",
+      "evidence_type": "text",
+      "upstream_evidence_key": "text_0"
+    },
+    {
+      "rank": 3,
+      "answer_id": "finqa_a_997abfff2dc54e4551645e84",
+      "text": "balance november 3 2007 the balance november 3 2007 of $ 9889 is $ 9889 ;",
+      "source_group": "ADI/2009",
+      "source_page": "ADI/2009/page_90.pdf",
+      "evidence_type": "table",
+      "upstream_evidence_key": "table_0"
+    },
+    {
+      "rank": 4,
+      "answer_id": "finqa_a_3c6193219096c5bcabbbb114",
+      "text": "balance november 3 2007 the balance november 1 2008 of $ 9889 is 13750 ;",
+      "source_group": "ADI/2009",
+      "source_page": "ADI/2009/page_90.pdf",
+      "evidence_type": "table",
+      "upstream_evidence_key": "table_2"
+    },
+    {
+      "rank": 5,
+      "answer_id": "finqa_a_f67341211ef6a4cb84625926",
+      "text": "balance november 3 2007 the balance october 31 2009 of $ 9889 is $ 18161 ;",
+      "source_group": "ADI/2009",
+      "source_page": "ADI/2009/page_90.pdf",
+      "evidence_type": "table",
+      "upstream_evidence_key": "table_4"
+    }
+  ]
+}

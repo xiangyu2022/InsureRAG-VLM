@@ -1,0 +1,48 @@
+{
+  "reason": "Literal Unicode line separators in FiQA text conflict with legacy str.splitlines JSONL readers. Escape Unicode without altering any question, answer, split, or label.",
+  "before_training_or_evaluation": true,
+  "files": [
+    {
+      "file": "data\\benchmarks\\fiqa_v1\\answers.jsonl",
+      "before": "6f455de1654f42adaba0b774da723e5df0af008ac05f9bccc603e73ea5c6be77",
+      "after": "4bf6f13f4faddb692a2624b0353affb439e73b51ab4bbd94d6665d14c0e38371",
+      "rows": 57638,
+      "semantic_change": false
+    },
+    {
+      "file": "data\\benchmarks\\fiqa_v1\\test.jsonl",
+      "before": "859a163d72b17556134a4edac3e0343769824561c89d515d1c023e4e53f3d280",
+      "after": "4ee5dcc4fa0e853238406cfb0b9c3c66c420b8fa983515b267f5916a30d13660",
+      "rows": 648,
+      "semantic_change": false
+    },
+    {
+      "file": "data\\benchmarks\\fiqa_v1\\train.jsonl",
+      "before": "77745791ca45567c98f018b14cd4562071bdbc1b82f64cb9b70e10d20459a013",
+      "after": "582c7d786068f40a6a74cd3d73185d275a3b2f6528c1cd00dfbd25136731f756",
+      "rows": 5500,
+      "semantic_change": false
+    },
+    {
+      "file": "data\\benchmarks\\fiqa_v1\\valid.jsonl",
+      "before": "da779869b69cefda9fa74bc9f362f2fdf93bac162ffa07d54f1c9c4ff546572b",
+      "after": "08a54cd2a704040d8465b1c8c28ab084e62de7bdde5e4f573799127d639f7d47",
+      "rows": 500,
+      "semantic_change": false
+    },
+    {
+      "file": "data\\training\\query_adaptation_v1\\answers.jsonl",
+      "before": "8f923f2c81e2d512c875b377be5b118f86b21c377ae91b84bb6d52c4b852eabb",
+      "after": "8c3f8106b94d57989b90b29ed1186ee9e61eaafdc157e430df6bfac2c7ab10f7",
+      "rows": 105810,
+      "semantic_change": false
+    },
+    {
+      "file": "data\\training\\query_adaptation_v1\\train_groups.jsonl",
+      "before": "4f94cf9d1d7c3401626738072f31867d6fefa6ace660de1e237658ee3e514ba0",
+      "after": "24b1608a161d95db719be1621c08ad2d2c6bae471783457bb7483c425f1e12c7",
+      "rows": 31351,
+      "semantic_change": false
+    }
+  ]
+}

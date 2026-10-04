@@ -1,0 +1,1 @@
+{"counts": {"test": 1147, "valid": 496, "train": 2351}, "train_domains": {"insuranceqa": 11629, "government": 259, "general": 13999, "finance": 5464, "financial_report": 2103}, "additional_exclusions": {"heldout_answer_text_or_report": 169, "near_heldout_question": 51, "duplicate_or_empty_question": 28}, "answer_rows": 86421, "prior_question_exposure_flags": []}

@@ -1,0 +1,10 @@
+# Install the appropriate PyTorch wheel separately. Tested on Windows:
+# pip install torch==2.14.0 --index-url https://download.pytorch.org/whl/cu130
+# Use an isolated environment; the normal Ollama demo does not require this stack.
+transformers==5.17.0
+peft==0.21.0
+accelerate==1.15.0
+safetensors==0.8.0
+huggingface-hub==1.32.0
+tokenizers==0.23.2
+pillow==12.3.0

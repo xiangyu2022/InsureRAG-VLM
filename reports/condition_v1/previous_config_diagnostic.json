@@ -1,0 +1,80 @@
+[
+  {
+    "config": {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.35
+    },
+    "hit10": {
+      "insuranceqa": 0.722,
+      "government": 0.952755905511811,
+      "general": 0.955
+    },
+    "weighted_hit10": 0.8147511811023622
+  },
+  {
+    "config": {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    "hit10": {
+      "insuranceqa": 0.7395,
+      "government": 0.952755905511811,
+      "general": 0.975
+    },
+    "weighted_hit10": 0.8292511811023623
+  },
+  {
+    "config": {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.65
+    },
+    "hit10": {
+      "insuranceqa": 0.7375,
+      "government": 0.9448818897637795,
+      "general": 0.9725
+    },
+    "weighted_hit10": 0.8259763779527559
+  },
+  {
+    "config": {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.35
+    },
+    "hit10": {
+      "insuranceqa": 0.7375,
+      "government": 0.952755905511811,
+      "general": 0.9725
+    },
+    "weighted_hit10": 0.8275511811023623
+  },
+  {
+    "config": {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    "hit10": {
+      "insuranceqa": 0.746,
+      "government": 0.9448818897637795,
+      "general": 0.975
+    },
+    "weighted_hit10": 0.8315763779527559
+  },
+  {
+    "config": {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.65
+    },
+    "hit10": {
+      "insuranceqa": 0.7385,
+      "government": 0.9448818897637795,
+      "general": 0.975
+    },
+    "weighted_hit10": 0.8270763779527559
+  }
+]

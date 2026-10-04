@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-10-01T18:41:56.440507+00:00",
+  "selection_split": "valid",
+  "selection_rule": "Maximize valid Hit@10, then MRR@100, then Hit@1; original test is historical, not blind.",
+  "candidate_depth_per_channel": 100,
+  "rrf_k": [
+    5,
+    20,
+    60
+  ],
+  "rrf_bm25_weight": [
+    0,
+    0.05,
+    0.1,
+    0.2,
+    0.35,
+    0.5,
+    1
+  ],
+  "linear_bm25_weight": [
+    0,
+    0.025,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "linear_normalization": "Per-query per-channel min-max over the union of top-100 candidates.",
+  "fixture_sha256": "4c46a374c2f5eebd4a2609f030c5fdc0aa660fb5e7a1a653cc198f6cc177fcc6",
+  "script_sha256": "fda0b7383dea0868fdbc6a4d32f2c75c6c23af677c55a588a556fbe5747ef996"
+}

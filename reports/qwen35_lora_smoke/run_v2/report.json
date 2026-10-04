@@ -1,0 +1,421 @@
+{
+  "role": "qwen35_text_only_lora_compatibility_smoke_not_quality_evaluation",
+  "smoke_version": "v2_portable_adapter_and_tokenizer_reload",
+  "model_id": "Qwen/Qwen3.5-0.8B",
+  "model_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "model_snapshot": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\InsureRAG-VLM\\..\\runtime\\hf-cache\\models--Qwen--Qwen3.5-0.8B\\snapshots\\2fc06364715b967f1860aea9cf38778875588b17",
+  "snapshot_revision_check": "pinned Hugging Face snapshot path; actual file hashes recorded",
+  "model_files": {
+    "chat_template.jinja": {
+      "sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+      "bytes": 7755
+    },
+    "config.json": {
+      "sha256": "b90b86f35c8e6925ef74ee04d0e758f0a845c83a42089ad82bbaa948de9b4204",
+      "bytes": 2907
+    },
+    "merges.txt": {
+      "sha256": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+      "bytes": 3353259
+    },
+    "model.safetensors-00001-of-00001.safetensors": {
+      "sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696",
+      "bytes": 1746942600
+    },
+    "model.safetensors.index.json": {
+      "sha256": "d8a08838a613b025eb7952ed9db11696213e57e76a375661ef5c12f9dd5dcf4e",
+      "bytes": 50900
+    },
+    "preprocessor_config.json": {
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "bytes": 390
+    },
+    "tokenizer.json": {
+      "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "bytes": 12807982
+    },
+    "tokenizer_config.json": {
+      "sha256": "49e2b6e395f959f077f1e992b338919c0d4a9732fc6e613995e06557f843500c",
+      "bytes": 16709
+    },
+    "video_preprocessor_config.json": {
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "bytes": 385
+    },
+    "vocab.json": {
+      "sha256": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+      "bytes": 6722759
+    }
+  },
+  "model_type": "qwen3_5",
+  "loader_class": "Qwen3_5ForConditionalGeneration",
+  "auto_loader": "AutoModelForImageTextToText",
+  "library_versions": {
+    "torch": "2.14.0+cu130",
+    "transformers": "5.17.0",
+    "peft": "0.21.0",
+    "accelerate": "1.15.0",
+    "safetensors": "0.8.0",
+    "tokenizers": "0.23.2",
+    "huggingface-hub": "1.32.0"
+  },
+  "synthetic_dataset_sha256": "5ebb9790fade481f9bd06f62e19f2513d8a085b424139e19f103380ad03ac4d4",
+  "training_record_ids": [
+    "synthetic_lora_smoke_01",
+    "synthetic_lora_smoke_02"
+  ],
+  "tokenization_audit": [
+    {
+      "record_id": "synthetic_lora_smoke_01",
+      "prompt_tokens": 80,
+      "full_tokens": 101,
+      "assistant_target_tokens": 21,
+      "prompt_is_exact_token_prefix": true,
+      "truncated": false,
+      "input_modality": "text-only"
+    },
+    {
+      "record_id": "synthetic_lora_smoke_02",
+      "prompt_tokens": 88,
+      "full_tokens": 105,
+      "assistant_target_tokens": 17,
+      "prompt_is_exact_token_prefix": true,
+      "truncated": false,
+      "input_modality": "text-only"
+    }
+  ],
+  "input_modality": "text-only",
+  "vision_training": false,
+  "lora": {
+    "r": 4,
+    "alpha": 8,
+    "dropout": 0.0,
+    "language_only": true,
+    "expected_target_modules": 186,
+    "target_modules": [
+      "model.language_model.layers.0.linear_attn.in_proj_a",
+      "model.language_model.layers.0.linear_attn.in_proj_b",
+      "model.language_model.layers.0.linear_attn.in_proj_qkv",
+      "model.language_model.layers.0.linear_attn.in_proj_z",
+      "model.language_model.layers.0.linear_attn.out_proj",
+      "model.language_model.layers.0.mlp.down_proj",
+      "model.language_model.layers.0.mlp.gate_proj",
+      "model.language_model.layers.0.mlp.up_proj",
+      "model.language_model.layers.1.linear_attn.in_proj_a",
+      "model.language_model.layers.1.linear_attn.in_proj_b",
+      "model.language_model.layers.1.linear_attn.in_proj_qkv",
+      "model.language_model.layers.1.linear_attn.in_proj_z",
+      "model.language_model.layers.1.linear_attn.out_proj",
+      "model.language_model.layers.1.mlp.down_proj",
+      "model.language_model.layers.1.mlp.gate_proj",
+      "model.language_model.layers.1.mlp.up_proj",
+      "model.language_model.layers.10.linear_attn.in_proj_a",
+      "model.language_model.layers.10.linear_attn.in_proj_b",
+      "model.language_model.layers.10.linear_attn.in_proj_qkv",
+      "model.language_model.layers.10.linear_attn.in_proj_z",
+      "model.language_model.layers.10.linear_attn.out_proj",
+      "model.language_model.layers.10.mlp.down_proj",
+      "model.language_model.layers.10.mlp.gate_proj",
+      "model.language_model.layers.10.mlp.up_proj",
+      "model.language_model.layers.11.mlp.down_proj",
+      "model.language_model.layers.11.mlp.gate_proj",
+      "model.language_model.layers.11.mlp.up_proj",
+      "model.language_model.layers.11.self_attn.k_proj",
+      "model.language_model.layers.11.self_attn.o_proj",
+      "model.language_model.layers.11.self_attn.q_proj",
+      "model.language_model.layers.11.self_attn.v_proj",
+      "model.language_model.layers.12.linear_attn.in_proj_a",
+      "model.language_model.layers.12.linear_attn.in_proj_b",
+      "model.language_model.layers.12.linear_attn.in_proj_qkv",
+      "model.language_model.layers.12.linear_attn.in_proj_z",
+      "model.language_model.layers.12.linear_attn.out_proj",
+      "model.language_model.layers.12.mlp.down_proj",
+      "model.language_model.layers.12.mlp.gate_proj",
+      "model.language_model.layers.12.mlp.up_proj",
+      "model.language_model.layers.13.linear_attn.in_proj_a",
+      "model.language_model.layers.13.linear_attn.in_proj_b",
+      "model.language_model.layers.13.linear_attn.in_proj_qkv",
+      "model.language_model.layers.13.linear_attn.in_proj_z",
+      "model.language_model.layers.13.linear_attn.out_proj",
+      "model.language_model.layers.13.mlp.down_proj",
+      "model.language_model.layers.13.mlp.gate_proj",
+      "model.language_model.layers.13.mlp.up_proj",
+      "model.language_model.layers.14.linear_attn.in_proj_a",
+      "model.language_model.layers.14.linear_attn.in_proj_b",
+      "model.language_model.layers.14.linear_attn.in_proj_qkv",
+      "model.language_model.layers.14.linear_attn.in_proj_z",
+      "model.language_model.layers.14.linear_attn.out_proj",
+      "model.language_model.layers.14.mlp.down_proj",
+      "model.language_model.layers.14.mlp.gate_proj",
+      "model.language_model.layers.14.mlp.up_proj",
+      "model.language_model.layers.15.mlp.down_proj",
+      "model.language_model.layers.15.mlp.gate_proj",
+      "model.language_model.layers.15.mlp.up_proj",
+      "model.language_model.layers.15.self_attn.k_proj",
+      "model.language_model.layers.15.self_attn.o_proj",
+      "model.language_model.layers.15.self_attn.q_proj",
+      "model.language_model.layers.15.self_attn.v_proj",
+      "model.language_model.layers.16.linear_attn.in_proj_a",
+      "model.language_model.layers.16.linear_attn.in_proj_b",
+      "model.language_model.layers.16.linear_attn.in_proj_qkv",
+      "model.language_model.layers.16.linear_attn.in_proj_z",
+      "model.language_model.layers.16.linear_attn.out_proj",
+      "model.language_model.layers.16.mlp.down_proj",
+      "model.language_model.layers.16.mlp.gate_proj",
+      "model.language_model.layers.16.mlp.up_proj",
+      "model.language_model.layers.17.linear_attn.in_proj_a",
+      "model.language_model.layers.17.linear_attn.in_proj_b",
+      "model.language_model.layers.17.linear_attn.in_proj_qkv",
+      "model.language_model.layers.17.linear_attn.in_proj_z",
+      "model.language_model.layers.17.linear_attn.out_proj",
+      "model.language_model.layers.17.mlp.down_proj",
+      "model.language_model.layers.17.mlp.gate_proj",
+      "model.language_model.layers.17.mlp.up_proj",
+      "model.language_model.layers.18.linear_attn.in_proj_a",
+      "model.language_model.layers.18.linear_attn.in_proj_b",
+      "model.language_model.layers.18.linear_attn.in_proj_qkv",
+      "model.language_model.layers.18.linear_attn.in_proj_z",
+      "model.language_model.layers.18.linear_attn.out_proj",
+      "model.language_model.layers.18.mlp.down_proj",
+      "model.language_model.layers.18.mlp.gate_proj",
+      "model.language_model.layers.18.mlp.up_proj",
+      "model.language_model.layers.19.mlp.down_proj",
+      "model.language_model.layers.19.mlp.gate_proj",
+      "model.language_model.layers.19.mlp.up_proj",
+      "model.language_model.layers.19.self_attn.k_proj",
+      "model.language_model.layers.19.self_attn.o_proj",
+      "model.language_model.layers.19.self_attn.q_proj",
+      "model.language_model.layers.19.self_attn.v_proj",
+      "model.language_model.layers.2.linear_attn.in_proj_a",
+      "model.language_model.layers.2.linear_attn.in_proj_b",
+      "model.language_model.layers.2.linear_attn.in_proj_qkv",
+      "model.language_model.layers.2.linear_attn.in_proj_z",
+      "model.language_model.layers.2.linear_attn.out_proj",
+      "model.language_model.layers.2.mlp.down_proj",
+      "model.language_model.layers.2.mlp.gate_proj",
+      "model.language_model.layers.2.mlp.up_proj",
+      "model.language_model.layers.20.linear_attn.in_proj_a",
+      "model.language_model.layers.20.linear_attn.in_proj_b",
+      "model.language_model.layers.20.linear_attn.in_proj_qkv",
+      "model.language_model.layers.20.linear_attn.in_proj_z",
+      "model.language_model.layers.20.linear_attn.out_proj",
+      "model.language_model.layers.20.mlp.down_proj",
+      "model.language_model.layers.20.mlp.gate_proj",
+      "model.language_model.layers.20.mlp.up_proj",
+      "model.language_model.layers.21.linear_attn.in_proj_a",
+      "model.language_model.layers.21.linear_attn.in_proj_b",
+      "model.language_model.layers.21.linear_attn.in_proj_qkv",
+      "model.language_model.layers.21.linear_attn.in_proj_z",
+      "model.language_model.layers.21.linear_attn.out_proj",
+      "model.language_model.layers.21.mlp.down_proj",
+      "model.language_model.layers.21.mlp.gate_proj",
+      "model.language_model.layers.21.mlp.up_proj",
+      "model.language_model.layers.22.linear_attn.in_proj_a",
+      "model.language_model.layers.22.linear_attn.in_proj_b",
+      "model.language_model.layers.22.linear_attn.in_proj_qkv",
+      "model.language_model.layers.22.linear_attn.in_proj_z",
+      "model.language_model.layers.22.linear_attn.out_proj",
+      "model.language_model.layers.22.mlp.down_proj",
+      "model.language_model.layers.22.mlp.gate_proj",
+      "model.language_model.layers.22.mlp.up_proj",
+      "model.language_model.layers.23.mlp.down_proj",
+      "model.language_model.layers.23.mlp.gate_proj",
+      "model.language_model.layers.23.mlp.up_proj",
+      "model.language_model.layers.23.self_attn.k_proj",
+      "model.language_model.layers.23.self_attn.o_proj",
+      "model.language_model.layers.23.self_attn.q_proj",
+      "model.language_model.layers.23.self_attn.v_proj",
+      "model.language_model.layers.3.mlp.down_proj",
+      "model.language_model.layers.3.mlp.gate_proj",
+      "model.language_model.layers.3.mlp.up_proj",
+      "model.language_model.layers.3.self_attn.k_proj",
+      "model.language_model.layers.3.self_attn.o_proj",
+      "model.language_model.layers.3.self_attn.q_proj",
+      "model.language_model.layers.3.self_attn.v_proj",
+      "model.language_model.layers.4.linear_attn.in_proj_a",
+      "model.language_model.layers.4.linear_attn.in_proj_b",
+      "model.language_model.layers.4.linear_attn.in_proj_qkv",
+      "model.language_model.layers.4.linear_attn.in_proj_z",
+      "model.language_model.layers.4.linear_attn.out_proj",
+      "model.language_model.layers.4.mlp.down_proj",
+      "model.language_model.layers.4.mlp.gate_proj",
+      "model.language_model.layers.4.mlp.up_proj",
+      "model.language_model.layers.5.linear_attn.in_proj_a",
+      "model.language_model.layers.5.linear_attn.in_proj_b",
+      "model.language_model.layers.5.linear_attn.in_proj_qkv",
+      "model.language_model.layers.5.linear_attn.in_proj_z",
+      "model.language_model.layers.5.linear_attn.out_proj",
+      "model.language_model.layers.5.mlp.down_proj",
+      "model.language_model.layers.5.mlp.gate_proj",
+      "model.language_model.layers.5.mlp.up_proj",
+      "model.language_model.layers.6.linear_attn.in_proj_a",
+      "model.language_model.layers.6.linear_attn.in_proj_b",
+      "model.language_model.layers.6.linear_attn.in_proj_qkv",
+      "model.language_model.layers.6.linear_attn.in_proj_z",
+      "model.language_model.layers.6.linear_attn.out_proj",
+      "model.language_model.layers.6.mlp.down_proj",
+      "model.language_model.layers.6.mlp.gate_proj",
+      "model.language_model.layers.6.mlp.up_proj",
+      "model.language_model.layers.7.mlp.down_proj",
+      "model.language_model.layers.7.mlp.gate_proj",
+      "model.language_model.layers.7.mlp.up_proj",
+      "model.language_model.layers.7.self_attn.k_proj",
+      "model.language_model.layers.7.self_attn.o_proj",
+      "model.language_model.layers.7.self_attn.q_proj",
+      "model.language_model.layers.7.self_attn.v_proj",
+      "model.language_model.layers.8.linear_attn.in_proj_a",
+      "model.language_model.layers.8.linear_attn.in_proj_b",
+      "model.language_model.layers.8.linear_attn.in_proj_qkv",
+      "model.language_model.layers.8.linear_attn.in_proj_z",
+      "model.language_model.layers.8.linear_attn.out_proj",
+      "model.language_model.layers.8.mlp.down_proj",
+      "model.language_model.layers.8.mlp.gate_proj",
+      "model.language_model.layers.8.mlp.up_proj",
+      "model.language_model.layers.9.linear_attn.in_proj_a",
+      "model.language_model.layers.9.linear_attn.in_proj_b",
+      "model.language_model.layers.9.linear_attn.in_proj_qkv",
+      "model.language_model.layers.9.linear_attn.in_proj_z",
+      "model.language_model.layers.9.linear_attn.out_proj",
+      "model.language_model.layers.9.mlp.down_proj",
+      "model.language_model.layers.9.mlp.gate_proj",
+      "model.language_model.layers.9.mlp.up_proj"
+    ],
+    "trainable_parameters": 2705664,
+    "trainable_tensors": 372,
+    "trainable_dtypes": [
+      "torch.float32"
+    ]
+  },
+  "steps_requested": 2,
+  "max_sequence_length": 256,
+  "seed": 42,
+  "source_code_sha256": "c9e9b9b620a24d1f175fa50e076a628a2258f6c77ef8c0768da89169aafdb97c",
+  "limitations": [
+    "Exactly two synthetic records and two optimizer updates; no held-out evaluation.",
+    "Finite losses, changed adapter weights, and reload parity establish compatibility only.",
+    "No accuracy, loss-improvement, generalization, visual-training, or Qwen3.5-4B-training claim."
+  ],
+  "started_utc": "2026-09-20T22:49:12.883287+00:00",
+  "status": "compatibility_smoke_passed",
+  "cuda_device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "cuda_total_memory_bytes": 8585216000,
+  "torch_cuda_version": "13.0",
+  "optional_kernels": {
+    "fla": false,
+    "causal_conv1d": false,
+    "triton": false
+  },
+  "delta_rule_backend": "reference PyTorch",
+  "precision": "BF16 base weights; PEFT adapter dtype recorded below",
+  "quantization": null,
+  "current_stage": "complete",
+  "base_parameters_including_adapter": 855691584,
+  "load_and_adapter_seconds": 1.535388900025282,
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0,
+    "gradient_clip_norm": 1.0
+  },
+  "training_steps": [
+    {
+      "step": 1,
+      "record_id": "synthetic_lora_smoke_01",
+      "loss": 0.9027490019798279,
+      "all_adapter_gradients_finite": true,
+      "gradient_norm_before_clipping": 8.703814506530762,
+      "wall_seconds": 1.3710689999861643,
+      "tokens": 101
+    },
+    {
+      "step": 2,
+      "record_id": "synthetic_lora_smoke_02",
+      "loss": 2.758849620819092,
+      "all_adapter_gradients_finite": true,
+      "gradient_norm_before_clipping": 12.566546440124512,
+      "wall_seconds": 0.5760827999911271,
+      "tokens": 105
+    }
+  ],
+  "changed_adapter_tensors": 372,
+  "portable_adapter_base": {
+    "model_id": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "reload_route": "explicit AutoModelForImageTextToText base plus PeftModel.from_pretrained"
+  },
+  "tokenizer_reload_parity": {
+    "passed": true,
+    "records_compared": 2,
+    "input_ids_labels_and_attention_masks_equal": true,
+    "tokenization_audit": [
+      {
+        "record_id": "synthetic_lora_smoke_01",
+        "prompt_tokens": 80,
+        "full_tokens": 101,
+        "assistant_target_tokens": 21,
+        "prompt_is_exact_token_prefix": true,
+        "truncated": false,
+        "input_modality": "text-only"
+      },
+      {
+        "record_id": "synthetic_lora_smoke_02",
+        "prompt_tokens": 88,
+        "full_tokens": 105,
+        "assistant_target_tokens": 17,
+        "prompt_is_exact_token_prefix": true,
+        "truncated": false,
+        "input_modality": "text-only"
+      }
+    ]
+  },
+  "training_peak_cuda_allocated_bytes": 2075731968,
+  "training_peak_cuda_reserved_bytes": 2468347904,
+  "reload_parity": {
+    "passed": true,
+    "bitwise_equal_float32_logits": true,
+    "maximum_absolute_difference": 0.0,
+    "atol": 0.02,
+    "rtol": 0.002,
+    "compared_shape": [
+      1,
+      101,
+      248320
+    ],
+    "scope": "full forward logits for synthetic training row 1, eval mode",
+    "wall_seconds": 1.5475076000439003
+  },
+  "artifact_files": {
+    "adapter\\adapter_config.json": {
+      "sha256": "3b94dccfb64a0d8201cf4a542e0c7d42580e88cf9e16f5c71e4bb40d24aa51f2",
+      "bytes": 1349
+    },
+    "adapter\\adapter_model.safetensors": {
+      "sha256": "3558398a8d4bea42052e9e717613e72f78f490f5afc2da604befafa2b5c4db66",
+      "bytes": 10877512
+    },
+    "adapter\\chat_template.jinja": {
+      "sha256": "306abaf09cf3a6c0d14128373a72925bda3d7de2616a5642804d9768c7d2f78c",
+      "bytes": 7908
+    },
+    "adapter\\README.md": {
+      "sha256": "5778e7b090a6bb8c563113aa4a6c2fe29a1291859fc6890e74b280bc6bd9c976",
+      "bytes": 5474
+    },
+    "adapter\\smoke_provenance.json": {
+      "sha256": "99292bcd234d4ca71b049d5a8b981ee5b267f08e9f866d774630079827acf5fe",
+      "bytes": 13402
+    },
+    "adapter\\tokenizer.json": {
+      "sha256": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+      "bytes": 19989325
+    },
+    "adapter\\tokenizer_config.json": {
+      "sha256": "a6076025ef20ea49439d2a4d97fdb20949c90a20d29aea83e678f71d4baedf66",
+      "bytes": 1155
+    }
+  },
+  "peak_cuda_allocated_bytes": 2075731968,
+  "peak_cuda_reserved_bytes": 2468347904,
+  "finished_utc": "2026-09-20T22:49:19.822639+00:00",
+  "total_wall_seconds_after_preflight": 6.939376799971797
+}

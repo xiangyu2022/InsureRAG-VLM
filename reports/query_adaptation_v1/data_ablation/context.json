@@ -1,0 +1,10 @@
+{
+  "kind": "validation-only matched-budget labelled-data ablation",
+  "primary_selection_unchanged": true,
+  "can_score_tests": false,
+  "evaluation_code_sha256": "dde5b2d7386f0206b4a6ba5156958f8b67179d94fc0a3942ca2a68441b1f26d2",
+  "parent_evaluation_code_sha256": "8d0819155f0dd546910b8692f2d0115062d2922d688d207a3c033a64cbbec747",
+  "ablation_protocol_sha256": "d01c8fdb648bec530e95aa182269f7ef358afde7eb3482a04cf2b52b9722e27c",
+  "fork_generator_sha256": "5c751b150a6ee339e229baaa9723ecc05683f7b3b883820a4a8159e05dad9a91",
+  "diff_sha256": "d4bf002265d54a24bbd0a15e948b951312285089b6c51cc97cd456467ec76ff4"
+}

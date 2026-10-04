@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-01T21:46:51.886484+00:00",
+  "train_additions": {
+    "government": 47,
+    "general": 6000
+  },
+  "fresh_test_questions": 179,
+  "fresh_test_sources": 29,
+  "answer_candidates": 48195,
+  "source_group_policy": "Fresh test uses only previously unused government URLs; all of their answer texts excluded from future training pairs.",
+  "frozen_before_model_inference": true,
+  "previous_training_manifest_sha256": "8a714663f31c688447371cf2bba28fa0228f21d926f188574d9d8eeb647ccf20",
+  "previous_fixture_sha256": "912f40bc9a696f7492ec02c61202e719dac362b460d57ae7f12cc46b050a667d",
+  "dol_source_manifest_sha256": "1efc0f6e572975338bf87c9177a98ce9c0ad93df2b2d183751e9224106969074",
+  "code_sha256": {
+    "prepare_condition_data.py": "c33c21d637a37c1a2eecab3694234fd8116b9ea76f2fb384c8d9f78c65bdb980",
+    "extract_additional_government.py": "19ad4d2229125033593b7bcac5805d0b029ff40b15325c29651b39f846ebba1f"
+  },
+  "files": {
+    "train_additions.jsonl": "ec90b8a5c02d4d28329374188b7a67a8c2a11ae8df7771f480357e4cf88c27ef",
+    "test.jsonl": "5fa536d65c9e4e7ec53f8e01e6881b6d4b81844e545942bf85d6b333c3f16ba4",
+    "answers.jsonl": "b5d2323da27dce864211786513221898423eb18dd9b2ccda4dad2e58c293c0dc",
+    "audit.json": "4aa933b51870dd59f081ce54cf02462b746c53b60b845e69749bacb7effb822e"
+  },
+  "limitations": [
+    "Mechanical Q/A extraction, not expert adjudication.",
+    "Government texts retain source dates; not present-day legal advice.",
+    "Existing tests are historical regressions this iteration.",
+    "No new independent general-language test; previous general test is historical."
+  ]
+}

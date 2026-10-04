@@ -1351,6 +1351,36 @@ def merge_qa_files(paths: List[Path], output_path: Path) -> int:
     return len(records)
 
 
+def _retrieval_gold(item: Dict[str, Any]) -> tuple[set[str], set[str]]:
+    """Accept both QA manifests and retrieval-training manifests.
+
+    Missing labels are a malformed benchmark, not a retrieval failure.
+    """
+    sources = item.get("evidence_sources") or item.get("citations") or item.get("gold_sources") or []
+    if isinstance(sources, str):
+        sources = [sources]
+    normalized_sources = {_normalize_source(source) for source in sources if source}
+    page_keys = {str(key) for key in (item.get("gold_page_keys") or []) if key}
+    page_keys.update(_source_to_page_key(source) for source in sources if source)
+    if not normalized_sources and not page_keys:
+        identity = item.get("qa_id") or item.get("record_id") or item.get("question")
+        raise ValueError(f"Answerable retrieval example has no gold sources or page keys: {identity}")
+    return normalized_sources, page_keys
+
+
+def _retrieval_hit_positions(item: Dict[str, Any], ranked: List[Dict[str, Any]]) -> List[int]:
+    gold_sources, gold_page_keys = _retrieval_gold(item)
+    return [
+        rank
+        for rank, candidate in enumerate(ranked, start=1)
+        if (
+            _normalize_source(candidate.get("source") or "") in gold_sources
+            or str(candidate.get("page_key") or "") in gold_page_keys
+            or _source_to_page_key(candidate.get("source") or "") in gold_page_keys
+        )
+    ]
+
+
 def compute_retrieval_metrics(
     pipeline: Any,
     data_folder: Path,
@@ -1367,36 +1397,11 @@ def compute_retrieval_metrics(
     ndcg_10 = 0.0
 
     for item in examples:
-        gold_sources = set(item.get("evidence_sources") or item.get("citations") or [])
-        gold_page_keys = {
-            str(page_key)
-            for page_key in (
-                item.get("gold_page_keys")
-                or [_source_to_page_key(source) for source in gold_sources]
-            )
-            if str(page_key)
-        }
-        normalized_gold_sources = {_normalize_source(source) for source in gold_sources if str(source)}
+        _retrieval_gold(item)
         ranked = pipeline.rank_pages(item["question"], Path(data_folder), top_k=top_k)
-        ranked_sources = [str(candidate.get("source") or "") for candidate in ranked]
-        ranked_page_keys = [
-            str(candidate.get("page_key") or _source_to_page_key(candidate.get("source") or ""))
-            for candidate in ranked
-        ]
-        hit_positions = [
-            idx + 1
-            for idx, (source, page_key) in enumerate(zip(ranked_sources[:10], ranked_page_keys[:10]))
-            if page_key in gold_page_keys or _normalize_source(source) in normalized_gold_sources
-        ]
-        if ranked_sources[:1] and (
-            ranked_page_keys[0] in gold_page_keys or _normalize_source(ranked_sources[0]) in normalized_gold_sources
-        ):
-            recall_1 += 1
-        if any(
-            page_key in gold_page_keys or _normalize_source(source) in normalized_gold_sources
-            for source, page_key in zip(ranked_sources[:5], ranked_page_keys[:5])
-        ):
-            recall_5 += 1
+        hit_positions = _retrieval_hit_positions(item, ranked[:10])
+        recall_1 += int(1 in hit_positions)
+        recall_5 += int(any(position <= 5 for position in hit_positions))
         if hit_positions:
             first_hit = hit_positions[0]
             mrr_10 += 1.0 / first_hit

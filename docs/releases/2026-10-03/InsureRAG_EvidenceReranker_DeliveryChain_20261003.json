@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-10-03T06:00:37.983526+00:00",
+  "status": "verified",
+  "archive_layers_in_application_order": [
+    {
+      "filename": "InsureRAG_Domain_Trained_20261001_Source.zip",
+      "sha256": "f5e67bf047e12f55db4de2cd692e13ef19e74f3959bd70dd9af50dfe1faaa2cc",
+      "bytes": 237882085
+    },
+    {
+      "filename": "InsureRAG_Domain_Trained_20261001_Model.zip",
+      "sha256": "2fe1816d59123f5ca3e2de4c1ae553b9a8003dded4f9b7d0071662b38124da42",
+      "bytes": 83441315
+    },
+    {
+      "filename": "InsureRAG_Domain_Trained_20261001_Data_Index.zip",
+      "sha256": "eb007eafde77abda89e6671ad53fe257f1e01523872f382b68ccb856a4424388",
+      "bytes": 213997138
+    },
+    {
+      "filename": "InsureRAG_Retention_20261001_Update.zip",
+      "sha256": "159d2c8379410f8cdeacc251fbf06f50d4092e8e8a424279f97e71ab76a2cc58",
+      "bytes": 276644860
+    },
+    {
+      "filename": "InsureRAG_Condition_20261001_Update.zip",
+      "sha256": "7435e680f13922c06e385402ef3cc3992f5675c41db3d93870bb4ce864ef3b23",
+      "bytes": 565973177
+    },
+    {
+      "filename": "InsureRAG_QueryAdaptation_20261002_Update.zip",
+      "sha256": "afc6d2c0a9f3b9d39cf3a4a8fe920fb5d0852c6d38246063ba94fb90acb9f078",
+      "bytes": 1486712771
+    },
+    {
+      "filename": "InsureRAG_EvidenceReranker_20261003_Update.zip",
+      "sha256": "ce3e138facbb71e26c1f0dbc74a05cff6c805b805fa40f22b486b89ee3ac7593",
+      "bytes": 869546705
+    }
+  ],
+  "merged_unique_files": 1491,
+  "merged_file_hashes_match_current_workspace": true,
+  "uncovered_current_nonignored_repository_files": [],
+  "missing_or_changed_inherited_files": [],
+  "all_four_new_checkpoints_training_indexes_and_query_vectors_present": true,
+  "inherited_selected_query_and_previous_reranker_present": true,
+  "public_model_requirement": "The original BGE and inherited public model dependencies are separate pinned downloads, not bundled Python/CUDA runtimes.",
+  "verification_code_sha256": "59e06386683398afe371c6eafc8be5245b98febb77fce4de86fb82b36cb096c5"
+}

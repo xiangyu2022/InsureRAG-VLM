@@ -1,0 +1,35 @@
+{
+  "question": "What is the difference between term and whole life insurance?",
+  "corpus": "insuranceqa",
+  "answer_candidates": 27413,
+  "retrieval_only": true,
+  "generation_calls": 0,
+  "fine_tuned_in_this_project": true,
+  "profile": "trained",
+  "selected_epoch": 1,
+  "config": {
+    "pool": "hybrid100",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "candidates_scored": 177,
+  "seconds_including_loading": 11.246984799858183,
+  "scope": "Archived public research evidence; snippet search is not evaluated policy reasoning",
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "14590",
+      "text": "The primary difference between whole life insurance and term insurance is the length of time that the company will be obliged to pay a death claim. If you search for a mortality curve you will see that most people die when they are older. This means that if the company promises a death claim for a short period of time, they are unlikely to pay a death claim. This is term insurance. A whole life policy pays the death claim whenever it occurs and spreads the cost over the lifetime of the insured."
+    },
+    {
+      "rank": 2,
+      "answer_id": "2146",
+      "text": "There are several difference between Whole Life and Term Life Insurance. Put very simply, here are some: 1) Term life insurance lasts for a \"term\"; Whole life lasts for one's \"whole life\". These both depend on payments to last that long. 2) Term life insurance does not have cash value; Whole life insurance has cash value. Again, how the policy and payments are set up will determine the amount of cash value. 3) Term life insurance only protects against death; Whole life has options to use the policy while alive. There are some Term policies that now offer \"living options\", as well; however, Whole Life offers even more options than those."
+    },
+    {
+      "rank": 3,
+      "answer_id": "19048",
+      "text": "Term Life Insurance is a temporary policy with very few moving parts. It has no cash value; pays no dividends; cannot be paid off early; and when the term is up, it goes way up in price, or else the policy simply ends. As such, it also usually costs less per thousand dollars of coverage than Whole Life costs. Whole Life accumulates cash value that can be borrowed from, used to pay the policy premium in later years, or collected if the policy is surrendered. It may pay periodic dividends. Whole Life policy premiums can be paid over one's lifetime, or in one single premium, or over a set number of years. The biggest difference between Term and Whole Life is that Whole Life is permanent insurance that will last your \"whole\" lifetime. With these features, Whole Life usually has a higher premium than Term Life, although it is possible that if you keep buying new Term policies throughout your life, the cumulative premium of Whole Life may be lower than the sum total of all the Term policies, especially if your health declined over the years."
+    }
+  ]
+}

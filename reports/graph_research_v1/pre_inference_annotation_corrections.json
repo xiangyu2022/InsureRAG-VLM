@@ -1,0 +1,274 @@
+[
+  {
+    "id": "test_ny_dfs_how_much_insurance_contents_depreciation",
+    "before": [
+      [
+        "replacement cost"
+      ],
+      [
+        "subtract",
+        "minus",
+        "less"
+      ],
+      [
+        "depreciation",
+        "wear and tear"
+      ]
+    ],
+    "after": [
+      [
+        "replacement cost"
+      ],
+      [
+        "subtract",
+        "minus",
+        "less",
+        "subtracted"
+      ],
+      [
+        "depreciation",
+        "wear and tear"
+      ]
+    ],
+    "reason": "Explicit inflection aliases; frozen before any v2 inference."
+  },
+  {
+    "id": "dev_ca_doi_auto_terms_deductible_recovery",
+    "before": [
+      [
+        "deductible"
+      ]
+    ],
+    "after": [
+      [
+        "deductible",
+        "deductibles"
+      ]
+    ],
+    "reason": "Explicit inflection aliases; frozen before any v2 inference."
+  },
+  {
+    "id": "test_fl_doi_home_endorsements_07",
+    "before": [
+      [
+        "condominium",
+        "condo"
+      ],
+      [
+        "renter",
+        "tenant"
+      ]
+    ],
+    "after": [
+      [
+        "condominium",
+        "condo"
+      ],
+      [
+        "renter",
+        "tenant",
+        "renters",
+        "tenants"
+      ]
+    ],
+    "reason": "Explicit inflection aliases; frozen before any v2 inference."
+  },
+  {
+    "id": "test_v2_wi_ltc_pi047_inflation_option",
+    "before": [
+      [
+        "5%",
+        "5 percent",
+        "five percent"
+      ],
+      [
+        "compound"
+      ]
+    ],
+    "after": [
+      [
+        "5%",
+        "5 percent",
+        "five percent"
+      ],
+      [
+        "compound",
+        "compounded"
+      ]
+    ],
+    "reason": "Explicit inflection aliases; frozen before any v2 inference."
+  },
+  {
+    "id": "test_v2_wi_property_claims_pi084_permanent_repairs_wait",
+    "before": [
+      [
+        "adjuster"
+      ],
+      [
+        "assess"
+      ]
+    ],
+    "after": [
+      [
+        "adjuster"
+      ],
+      [
+        "assess",
+        "assessed"
+      ]
+    ],
+    "reason": "Explicit inflection aliases; frozen before any v2 inference."
+  },
+  {
+    "id": "test_v2_wi_property_claims_pi084_contents_replacement_reimbursement",
+    "before": [
+      [
+        "replace"
+      ],
+      [
+        "receipt"
+      ]
+    ],
+    "after": [
+      [
+        "replace",
+        "replaced"
+      ],
+      [
+        "receipt",
+        "receipts"
+      ]
+    ],
+    "reason": "Explicit inflection aliases; frozen before any v2 inference."
+  },
+  {
+    "id": "test_v2_wi_property_claims_pi084_flood_two_deductibles",
+    "before": [
+      [
+        "yes",
+        "both"
+      ],
+      [
+        "deductible"
+      ]
+    ],
+    "after": [
+      [
+        "yes",
+        "both"
+      ],
+      [
+        "deductible",
+        "deductibles"
+      ]
+    ],
+    "reason": "Explicit inflection aliases; frozen before any v2 inference."
+  },
+  {
+    "id": "test_v2_fema_nfip_coverage_2023_contract_components",
+    "before": [
+      [
+        "sfip form"
+      ],
+      [
+        "declaration"
+      ],
+      [
+        "endorsement"
+      ]
+    ],
+    "after": [
+      [
+        "sfip form"
+      ],
+      [
+        "declaration"
+      ],
+      [
+        "endorsement",
+        "endorsements"
+      ]
+    ],
+    "reason": "Explicit inflection aliases; frozen before any v2 inference."
+  },
+  {
+    "id": "test_v2_fema_nfip_coverage_2023_acv_depreciation",
+    "before": [
+      [
+        "depreciation"
+      ],
+      [
+        "less",
+        "minus",
+        "subtract",
+        "deduct"
+      ]
+    ],
+    "after": [
+      [
+        "depreciation"
+      ],
+      [
+        "less",
+        "minus",
+        "subtract",
+        "deduct",
+        "subtracted",
+        "deducted"
+      ]
+    ],
+    "reason": "Explicit inflection aliases; frozen before any v2 inference."
+  },
+  {
+    "id": "test_v2_md_life_guide_unpaid_loan_death_benefit",
+    "before": [
+      [
+        "subtract",
+        "deduct",
+        "reduce"
+      ],
+      [
+        "death benefit"
+      ]
+    ],
+    "after": [
+      [
+        "subtract",
+        "deduct",
+        "reduce",
+        "subtracted",
+        "deducted",
+        "reduced"
+      ],
+      [
+        "death benefit"
+      ]
+    ],
+    "reason": "Explicit inflection aliases; frozen before any v2 inference."
+  },
+  {
+    "id": "test_v2_md_life_guide_fully_paid_up_definition",
+    "before": [
+      [
+        "premium"
+      ],
+      [
+        "rest of",
+        "lifetime",
+        "remaining life"
+      ]
+    ],
+    "after": [
+      [
+        "premium",
+        "premiums"
+      ],
+      [
+        "rest of",
+        "lifetime",
+        "remaining life"
+      ]
+    ],
+    "reason": "Explicit inflection aliases; frozen before any v2 inference."
+  }
+]

@@ -1,0 +1,626 @@
+[
+  {
+    "question": "What is a \"gag clause\"?",
+    "text": "In general, for the purposes of Code section 9824, ERISA section 724, and PHS Act section 2799A-9, a \"gag clause\" is a contractual term that directly or indirectly restricts specific data and information that a plan or issuer can make available to another party. Gag clauses in this context might be found in agreements between a plan or issuer and any of the following parties: a health care provider; a network or association of providers; a TPA; or another service provider offering access to a network of providers.",
+    "question_span": [
+      5550,
+      5573
+    ],
+    "answer_span": [
+      5574,
+      6100
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-57",
+    "source_group": "dol-aca:aca-part-57",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-57"
+  },
+  {
+    "question": "How do Code section 9824, ERISA section 724, and PHS Act section 2799A-9 prohibit group health plans and issuers offering group health insurance from entering into agreements that include gag clauses?",
+    "text": "The Code, ERISA and PHS Act generally prohibit group health plans and issuers offering group health insurance from entering into agreements with providers, TPAs, or other service providers that include language that would constitute a \"gag clause,\" specifically: restrictions on the disclosure of provider-specific cost or quality of care information or data to referring providers, the plan sponsor, participants, beneficiaries, or enrollees, or individuals eligible to become participants, beneficiaries, or enrollees of the plan or coverage; restrictions on electronic access to de-identified claims and encounter information or data for each participant, beneficiary, or enrollee upon request and consistent with the privacy regulations promulgated pursuant to section 246(c) of HIPAA, GINA, and the ADA; and restrictions on sharing information or data described in (1) and (2), or directing that such information or data be shared, with a business associate, as defined in 45 CFR 160.103, consistent with applicable privacy regulations. For example, if a contract between a TPA and a group health plan states that the plan will pay providers at rates designated as \"Point of Service Rates,\" but the TPA considers those rates to be proprietary and therefore includes language in the contract stating that the plan may not disclose the rates to participants or beneficiaries, that language prohibiting disclosure would be considered a prohibited gag clause. As another example, if a contract between a TPA and a plan provides that the plan sponsor's access to provider-specific cost and quality of care information is only at the discretion of the TPA, that contractual provision would be considered a prohibited gag clause. Plans and issuers must ensure that their agreements with health care providers, networks or associations of providers, or other service providers offering access to a network of providers do not contain these or other provisions that violate the prohibition on gag clauses under Code section 9824, ERISA section 724, and PHS Act section 2799A-9. However, a health care provider, network or association of providers, or other service provider may place reasonable restrictions on the public disclosure of this information.",
+    "question_span": [
+      6104,
+      6304
+    ],
+    "answer_span": [
+      6305,
+      8563
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-57",
+    "source_group": "dol-aca:aca-part-57",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-57"
+  },
+  {
+    "question": "Is a term in a contract a prohibited gag clause if that term functions to restrict (but does not explicitly restrict) a plan or issuer from providing, accessing, or sharing the information described in Code section 9824, ERISA section 724, and PHS Act section 2799A-9?",
+    "text": "Yes. To the extent a term in a contract, either directly or indirectly, prevents a plan or issuer from providing, accessing, or sharing the information or data, as provided for under the statute, that term in the contract violates the gag clause prohibitions and is prohibited under Code section 9824, ERISA section 724, and PHS Act section 2799A-9.",
+    "question_span": [
+      9657,
+      9925
+    ],
+    "answer_span": [
+      9926,
+      10278
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-57",
+    "source_group": "dol-aca:aca-part-57",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-57"
+  },
+  {
+    "question": "What is the Gag Clause Prohibition Compliance Attestation?",
+    "text": "Under the Transparency provisions of the CAA, plans and issuers must annually submit to the Departments an attestation that the plan or issuer is in compliance with Code section 9824, ERISA section 724, and PHS Act section 2799A-9, as applicable (Gag Clause Prohibition Compliance Attestation).",
+    "question_span": [
+      10282,
+      10340
+    ],
+    "answer_span": [
+      10341,
+      10638
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-57",
+    "source_group": "dol-aca:aca-part-57",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-57"
+  },
+  {
+    "question": "What is the due date for the Gag Clause Prohibition Compliance Attestation?",
+    "text": "The first Gag Clause Prohibition Compliance Attestation is due no later than December 31, 2023, covering the period beginning December 27, 2020, or the effective date of the applicable group health plan or health insurance coverage (if later), through the date of attestation. Subsequent attestations, covering the period since the last preceding attestation, are due by December 31 of each year thereafter.",
+    "question_span": [
+      10642,
+      10717
+    ],
+    "answer_span": [
+      10718,
+      11129
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-57",
+    "source_group": "dol-aca:aca-part-57",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-57"
+  },
+  {
+    "question": "How should plans and issuers submit an attestation?",
+    "text": "Plans and issuers should visit https//hios.cms.gov/HIOS-GCPCA-UI to submit the Gag Clause Prohibition Compliance Attestation. The annual attestation will satisfy the parallel requirements under the Code, ERISA, and the PHS Act, as applicable. Plans and issuers can also visit https://www.cms.gov/cciio/programs-and-initiatives/other-insurance-protections/gag-clause-prohibition-compliance to review instructions and a system user manual for submitting attestations, as well as an Excel template for providing information required as part of the attestation. Plans and issuers that do not submit their attestation, as required under Code section 9824, ERISA section 724, and PHS Act section 2799A-9, by the deadlines above may be subject to enforcement action.",
+    "question_span": [
+      11133,
+      11184
+    ],
+    "answer_span": [
+      11185,
+      11948
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-57",
+    "source_group": "dol-aca:aca-part-57",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-57"
+  },
+  {
+    "question": "Can another entity, such as a pharmacy benefit manager (PBM), managed behavioral health organization, TPA, or other service provider attest on behalf of a self-insured group health plan or a health insurance issuer?",
+    "text": "Yes. Self-insured and partially self-insured plans may satisfy the requirement to provide a Gag Clause Prohibition Compliance Attestation by entering into a written agreement under which the plan's service provider(s) (such as a TPA, including an issuer acting as a TPA) will attest on the plan's behalf. However, if a self-insured plan (including a partially self-insured plan) chooses to enter into such an agreement with the plan's service provider(s), the legal requirement to provide a timely attestation remains with the plan. An issuer may satisfy the requirement to provide an attestation on behalf of other issuers in the same controlled group within the meaning of Code section 414.(8) Additionally, an issuer that contracts with a third party to enter into provider agreements on the issuer's behalf may enter into a written agreement under which that third party will attest on the issuer's behalf. If an issuer chooses to enter into such an agreement, the legal requirement to provide an attestation remains with the issuer.",
+    "question_span": [
+      15172,
+      15387
+    ],
+    "answer_span": [
+      15388,
+      16429
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-57",
+    "source_group": "dol-aca:aca-part-57",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-57"
+  },
+  {
+    "question": "Can an issuer that both offers group health insurance and acts as a TPA for self-insured group health plans submit a single Gag Clause Prohibition Compliance Attestation on behalf of itself, its fully-insured group health plan policyholders, and its self-insured group health plan clients? Will the submission requirement be satisfied for the issuer and its group health plan policyholders and clients?",
+    "text": "Yes. An issuer that both offers group health insurance and acts as a TPA for self-insured group health plans may submit a single Gag Clause Prohibition Compliance Attestation on behalf of itself, its fully-insured group health plan policyholders, and its self-insured group health plan clients. However, to avoid duplication, the Departments recommend that issuers acting as TPAs (or other service providers) and attesting on behalf of self-insured group health plans first coordinate with each plan to ensure that the group health plan does not intend to attest on its own behalf for some or all of its provider agreements. With respect to fully-insured group health plans, the group health plan and the issuer are each required to annually submit a Gag Clause Prohibition Compliance Attestation. However, when the issuer of a fully-insured group health plan submits a Gag Clause Prohibition Compliance Attestation on behalf of the plan, the Departments will consider the plan and issuer to have satisfied the attestation submission requirement.",
+    "question_span": [
+      16434,
+      16836
+    ],
+    "answer_span": [
+      16837,
+      17887
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-57",
+    "source_group": "dol-aca:aca-part-57",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-57"
+  },
+  {
+    "question": "Who may attest to compliance on behalf of a plan or issuer?",
+    "text": "A plan or issuer may authorize any appropriate individual within the organization, such as the plan administrator of a group health plan, to attest on behalf of the plan or issuer. A service provider that has been provided the authority to make the attestation on behalf of a plan or issuer, such as a TPA attesting on behalf of its clients, may authorize any appropriate personnel within the organization to make the attestation.",
+    "question_span": [
+      17892,
+      17951
+    ],
+    "answer_span": [
+      17952,
+      18385
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-57",
+    "source_group": "dol-aca:aca-part-57",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-57"
+  },
+  {
+    "question": "Are there any technical requirements for using the Gag Clause Prohibition Compliance Attestation user interface?",
+    "text": "Yes. To access the user interface, a user must first obtain an authentication code by going to the Gag Clause Prohibition Compliance Attestation website at https://hios.cms.gov/HIOS-GCPCA-UI and selecting \"Don't have a code or forgot yours?\" The user will be asked to provide the user's e-mail address. The system will generate an authentication code and send it to the e-mail address provided. The user can then return to the Gag Clause Prohibition Compliance Attestation website, enter the e-mail address and code where indicated, and select \"Login to the system\" to proceed with submitting the attestation.",
+    "question_span": [
+      18390,
+      18502
+    ],
+    "answer_span": [
+      18503,
+      19115
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-57",
+    "source_group": "dol-aca:aca-part-57",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-57"
+  },
+  {
+    "question": "Do the COVID-19 testing coverage requirements under section 6001 of the FFCRA apply to items and services furnished after the end of the PHE?",
+    "text": "No. Section 6001 of the FFCRA requires plans and issuers to cover COVID-19 diagnostic tests that meet statutory requirements and certain associated items and services without imposing any cost-sharing requirements, prior authorization, or other medical management requirements. However, that requirement is applicable only to diagnostic tests and associated items and services furnished during any portion of the PHE beginning on or after March 18, 2020. Therefore, a plan or issuer is not required under section 6001 of the FFCRA to cover COVID-19 diagnostic tests and associated items or services furnished after the PHE ends. Any plan or issuer that provides coverage for COVID-19 diagnostic testing furnished after the PHE ends, including over-the-counter (OTC) COVID-19 diagnostic tests purchased after the PHE ends, is not prohibited from imposing cost-sharing requirements, prior authorization, or other medical management requirements for those items and services under section 6001 of the FFCRA. However, plans and issuers are encouraged to continue to provide this coverage, without imposing cost sharing or medical management requirements, after the PHE ends.(10) In general, an item or service is furnished on the date the item or service was rendered to the individual (or for an OTC COVID-19 diagnostic test, the date the test was purchased) and not the date the claim is submitted. Plans and issuers should look to the earliest date on which an item or service is furnished within an episode of care to determine the date that a COVID-19 diagnostic test is rendered, when the test involves multiple items or services. For example, if a health care provider collects a specimen to perform a COVID-19 diagnostic test on the last day of the PHE but the laboratory analysis occurs on a later date, the plan or issuer should treat both the specimen collection and laboratory analysis as if they were furnished during the PHE and are therefore subject to the FFCRA and CARES Act requirements.",
+    "question_span": [
+      5785,
+      5926
+    ],
+    "answer_span": [
+      5927,
+      7933
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-58",
+    "source_group": "dol-aca:aca-part-58",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-58"
+  },
+  {
+    "question": "Must plans and issuers notify participants and enrollees if they change the terms of their coverage for the diagnosis or treatment of COVID-19 after the end of the PHE?",
+    "text": "The Departments encourage plans and issuers to notify participants, beneficiaries, and enrollees of key information regarding coverage of COVID-19 diagnosis and treatment, including testing. This includes the date when the plan or issuer will stop coverage if the plan or issuer chooses to no longer cover COVID-19 diagnostic tests or when the plan or issuer will begin to impose cost-sharing requirements, prior authorization, or other medical management requirements on COVID-19 tests, to the extent applicable under the plan or coverage. The Departments also encourage plans and issuers to continue covering benefits for COVID-19 diagnosis and treatment and for telehealth and remote care services after the end of the PHE. In addition, if a plan or issuer makes a material modification to any of the plan or coverage terms that would affect the content of the summary of benefits and coverage (SBC), that is not reflected in the most recently provided SBC, and that occurs other than in connection with a renewal or reissuance of coverage, the plan or issuer must provide notice of the modification to participants and enrollees not later than 60 days prior to the date on which the modification will become effective.(11) Notwithstanding the above, if a plan or issuer made changes to increase benefits or reduce or eliminate cost sharing for the diagnosis or treatment of COVID-19 or for telehealth or other remote care services and revokes these changes upon the expiration of the PHE, as previously explained in guidance, the Departments will consider the plan or issuer to have satisfied its obligation to provide advance notice of the material modification if the plan or issuer: previously notified the participant, beneficiary, or enrollee of the general duration of the additional benefits coverage or reduced cost sharing (such as, that the increased coverage applies only during the PHE), or notifies the participant, beneficiary, or enrollee of the general duration of the additional benefits coverage or reduced cost sharing within a reasonable timeframe in advance of the reversal of the changes.(12) However, with respect to notices that were issued pursuant to the previous guidance, the Departments clarify that a notification provided with respect to a prior plan year will not be considered to satisfy the obligation to provide advance notice for coverage in the current plan year.",
+    "question_span": [
+      7937,
+      8105
+    ],
+    "answer_span": [
+      8106,
+      10518
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-58",
+    "source_group": "dol-aca:aca-part-58",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-58"
+  },
+  {
+    "question": "What else can employers, particularly those that employ workers who are likely benefiting from Medicaid or CHIP coverage, do to assist their employees in maintaining health coverage?",
+    "text": "Employers can play an important role in helping their employees maintain health coverage. As noted above, they can work with their plan or issuer to extend the special enrollment period beyond the minimum 60 days required by statute. In addition to the special enrollment opportunities required by statute, the Departments encourage plans and issuers to offer a special enrollment opportunity that matches the Unwinding SEP discussed above. Additionally, employers are encouraged to ensure that their benefits staff are aware of the upcoming resumption of Medicaid and CHIP eligibility determinations. Employers can also encourage their employees who are enrolled in Medicaid or CHIP coverage to update their contact information with the state Medicaid or CHIP agency. They may also encourage employees to respond promptly to any communication from the state. Benefits for COVID-19 Testing and Treatment and Health Savings Accounts (HSAs)/High Deductible Health Plans (HDHPs) In March 2020, the Treasury Department and the IRS issued Notice 2020-15,(44) which provides that a health plan that otherwise satisfies the requirements to be an HDHP under section 223(c)(2)(A) of the Code will not fail to be an HDHP merely because the health plan provides medical care services and items purchased related to testing for and treatment of COVID-19 prior to the satisfaction of the applicable minimum deductible. As a result, the individuals covered by such a plan will not fail to be eligible individuals under section 223(c)(1) of the Code who may contribute to an HSA merely because of the provision of those health benefits for testing and treatment of COVID-19. Notice 2020-15 was issued due to the PHE. The notice states that the relief provided would continue until further guidance is issued. The notice further states that it does not modify previous guidance with respect to any of the HDHP requirements, other than with respect to the relief for testing for and treatment of COVID-19. The notice also reiterates that vaccinations continue to be considered preventive care under section 223(c)(2)(C) of the Code for purposes of determining whether a health plan is an HDHP. No further guidance regarding the treatment of an HDHP providing testing for and treatment of COVID-19 prior to the satisfaction of the applicable minimum deductible has been issued.",
+    "question_span": [
+      33301,
+      33483
+    ],
+    "answer_span": [
+      33484,
+      35862
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-58",
+    "source_group": "dol-aca:aca-part-58",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-58"
+  },
+  {
+    "question": "What is the deadline for Individual A to elect COBRA?",
+    "text": "Conclusion: Because the qualifying event occurred on July 12, 2023, after the end of both the COVID-19 National Emergency and the Outbreak Period, the extensions under the emergency relief notices do not apply. The last day of Individual A's COBRA election period is 60 days after July 15, 2023, which is September 13, 2023. Example 4 (Paying COBRA Premiums) Facts: Individual B participates in Employer Y's group health plan. Individual B has a qualifying event and receives a COBRA election notice on October 1, 2022. Individual B elects COBRA continuation coverage on October 15, 2022, retroactive to October 1, 2022.",
+    "question_span": [
+      23372,
+      23425
+    ],
+    "answer_span": [
+      23425,
+      24051
+    ],
+    "extraction_method": "publisher_faq_paragraphs",
+    "source_record_id": "dol_html_aca-part-58",
+    "source_group": "dol-aca:aca-part-58",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-58"
+  },
+  {
+    "question": "When must Individual B make the initial COBRA premium payment and subsequent monthly COBRA premium payments?",
+    "text": "Conclusion: Individual B has until 45 days after July 10, 2023 (the end of the Outbreak Period), which is August 24, 2023, to make the initial COBRA premium payment. The initial COBRA premium payment would include the monthly premium payments for October 2022 through July 2023. The premium payment for August 2023 must be paid by August 30, 2023 (the last day of the 30-day grace period for the August 2023 premium payment). Subsequent monthly COBRA premium payments would be due the first of each month, subject to a 30-day grace period. Example 5 (Special Enrollment Period) Facts: Individual C works for Employer Z. Individual C is eligible for Employer Z's group health plan, but previously declined participation. On April 1, 2023, Individual C gave birth and would like to enroll herself and the child in Employer Z's plan. However, open enrollment does not begin until November 15, 2023.",
+    "question_span": [
+      24051,
+      24159
+    ],
+    "answer_span": [
+      24159,
+      25060
+    ],
+    "extraction_method": "publisher_faq_paragraphs",
+    "source_record_id": "dol_html_aca-part-58",
+    "source_group": "dol-aca:aca-part-58",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-58"
+  },
+  {
+    "question": "When may Individual C exercise her special enrollment rights?",
+    "text": "Conclusion: Individual C and her child qualify for special enrollment in Employer Z's plan as of the date of the child's birth, May 12, 2023. Because Individual C became eligible for special enrollment on May 12, 2023, after the end of the COVID-19 National Emergency but during the Outbreak Period, the extensions under the emergency relief notices still apply. Individual C may exercise her special enrollment rights for herself and her child until 30 days after July 10, 2023 (the end of the Outbreak Period), which is August 9, 2023, as long as she pays the premiums for the period of coverage after the birth. Example 7 (Special Enrollment Period) Facts: Same facts as Example 5, except that Individual C gave birth on July 12, 2023.",
+    "question_span": [
+      25650,
+      25711
+    ],
+    "answer_span": [
+      25711,
+      26455
+    ],
+    "extraction_method": "publisher_faq_paragraphs",
+    "source_record_id": "dol_html_aca-part-58",
+    "source_group": "dol-aca:aca-part-58",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-58"
+  },
+  {
+    "question": "Which USPSTF-recommended items and services are affected by the Braidwood decision?",
+    "text": "The Braidwood decision applies to items and services required to be covered by plans and issuers without cost sharing \"in response to an ‘A' or ‘B' recommendation by the [US]PSTF on or after March 23, 2010.\"(9) This means that plans and issuers must continue to cover, without cost sharing, items and services recommended with an \"A\" or \"B\" rating by the USPSTF before March 23, 2010. The Departments recognize that the USPSTF has updated a significant number of the recommendations since March 23, 2010, such as by changing their rating from an \"A\" or \"B,\" changing the recommendation so that it applies to different populations, changing the recommendation to refer to a different subset of items or services, or rescinding the recommendation. The Departments anticipate providing additional guidance with respect to the pre-March 23, 2010 recommendations.",
+    "question_span": [
+      5267,
+      5350
+    ],
+    "answer_span": [
+      5351,
+      6213
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-59",
+    "source_group": "dol-aca:aca-part-59",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-59"
+  },
+  {
+    "question": "Following the Braidwood decision, are plans and issuers required under PHS Act section 2713 to continue to provide coverage, without cost sharing, for items and services recommended with an \"A\" or \"B\" rating by the USPSTF on or after March 23, 2010?",
+    "text": "The Braidwood decision prevents the Departments from implementing and enforcing PHS Act section 2713(a)(1)'s coverage requirements for items and services recommended with an \"A\" or \"B\" rating by the USPSTF on or after March 23, 2010. However, the Departments strongly encourage plans and issuers to continue to cover such items and services without cost sharing.(10) Preventive services help people avoid acute illness, identify and treat chronic conditions, reduce the risk of cancer or facilitate early detection, and improve health. Coverage for USPSTF-recommended preventive services has reduced disparities in, and improved, disease and condition screening rates.(11) Analysis suggests that 60% of participants, beneficiaries, and enrollees use a preventive service each year(12) and have come to rely on receiving coverage without cost sharing for preventive items and services. The Braidwood decision does not preclude plans and issuers from continuing to provide the full extent of such coverage.",
+    "question_span": [
+      6217,
+      6466
+    ],
+    "answer_span": [
+      6467,
+      7474
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-59",
+    "source_group": "dol-aca:aca-part-59",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-59"
+  },
+  {
+    "question": "Does the Braidwood decision affect the requirements under PHS Act section 2713(a)(2)-(4) to provide coverage without cost sharing for immunizations recommended by ACIP or preventive care and screenings for infants, children, and adolescents, as well as for women as provided for in comprehensive guidelines supported by HRSA?",
+    "text": "No. The Braidwood court did not enjoin enforcement of PHS Act section 2713 or vacate its implementing regulations and guidance related to immunizations recommended by ACIP and preventive care and screenings provided for in comprehensive guidance supported by HRSA (including, but not limited to, contraceptive coverage), so those requirements are not impacted by the Braidwood decision. Plans and issuers must continue to cover such items and services—which include, but are not limited to, immunizations recommended by ACIP, as well as contraceptive services, breastfeeding services and supplies, cervical cancer screening, and pediatric preventive care recommended by HRSA—without cost sharing, consistent with all applicable regulations and guidance. Some of these recommendations and guidelines overlap with items and services recommended with an \"A\" or \"B\" rating by the USPSTF on or after March 23, 2010. To the extent a recommendation is made by ACIP or provided for in comprehensive guidelines supported by HRSA, plans and issuers are required to provide coverage, without cost sharing, for these items and services, even if they also are items and services recommended with an \"A\" or \"B\" rating by the USPSTF on or after March 23, 2010.(13)",
+    "question_span": [
+      7478,
+      7803
+    ],
+    "answer_span": [
+      7804,
+      9057
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-59",
+    "source_group": "dol-aca:aca-part-59",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-59"
+  },
+  {
+    "question": "Does the Braidwood decision prevent states from enacting or enforcing state laws that require health insurance issuers offering group or individual health insurance coverage to provide coverage, without cost sharing, for items and services recommended with an \"A\" or \"B\" rating by the USPSTF on or after March 23, 2010?",
+    "text": "No. The Braidwood decision generally does not affect the application of state laws that require health insurance issuers offering group or individual health insurance coverage to provide coverage without cost sharing of items and services recommended with an \"A\" or \"B\" rating by the USPSTF on or after March 23, 2010, and issuers generally must continue to comply with any such applicable state laws.(14)",
+    "question_span": [
+      9061,
+      9380
+    ],
+    "answer_span": [
+      9381,
+      9789
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-59",
+    "source_group": "dol-aca:aca-part-59",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-59"
+  },
+  {
+    "question": "To the extent a plan or issuer is permitted and elects to make changes to its coverage, may it make those changes in the middle of the plan or policy year?",
+    "text": "As stated in Q2, although the Braidwood decision prevents the Departments from implementing and enforcing PHS Act section 2713(a)(1)'s coverage requirements for items and services recommended with an \"A\" or \"B\" rating by the USPSTF on or after March 23, 2010, plans and issuers are not required to make any changes to coverage or cost sharing as a result of the Braidwood decision, and the Departments strongly encourage plans and issuers to continue to cover, without cost sharing, items and services affected by the court's decision. Plans and issuers should consider other provisions of applicable federal and state law when determining whether changes to the terms of the plan or coverage may be made during a plan or policy year. Further, plans and issuers, including self-insured plans, may still be required to cover the full scope of recommended preventive services under other legal and contractual requirements. This includes any applicable state law requirements, as well as the terms of any contracts, including collective bargaining agreements or other requirements, that may prevent changes during a plan or policy year.",
+    "question_span": [
+      9793,
+      9948
+    ],
+    "answer_span": [
+      9949,
+      11087
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-59",
+    "source_group": "dol-aca:aca-part-59",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-59"
+  },
+  {
+    "question": "Following the Braidwood decision, may an HDHP continue to provide benefits for items and services recommended with an \"A\" or \"B\" rating by the USPSTF on or after March 23, 2010 before the minimum annual deductible under Code section 223 has been met?",
+    "text": "Yes. Until further guidance is issued, items and services recommended with an \"A\" or \"B\" rating by the USPSTF on or after March 23, 2010, will be treated as preventive care for purposes of Code section 223(c)(2)(C), regardless of whether these items and services must be covered, without cost sharing, under PHS Act section 2713. Rapid Coverage of Preventive Services and Vaccines for Coronavirus Section 3203 of the CARES Act(21) requires non-grandfathered group health plans and health insurance issuers offering non-grandfathered group or individual health insurance coverage to cover, without cost-sharing requirements, any qualifying coronavirus preventive service pursuant to section 2713(a) of the PHS Act and its implementing regulations (or any successor regulations). Under the statute, the term \"qualifying coronavirus preventive service\" means an item, service, or immunization that is intended to prevent or mitigate COVID-19 and that is: An evidence-based item or service that has in effect a rating of \"A\" or \"B\" in the current recommendations of the USPSTF; or An immunization that has in effect a recommendation from ACIP with respect to the individual involved. Coverage of a qualifying coronavirus preventive service must begin 15 business days after the date on which an applicable recommendation is made by USPSTF or ACIP.",
+    "question_span": [
+      14277,
+      14527
+    ],
+    "answer_span": [
+      14528,
+      15891
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-59",
+    "source_group": "dol-aca:aca-part-59",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-59"
+  },
+  {
+    "question": "How does the Braidwood decision affect the requirement under CARES Act section 3203 to cover qualifying coronavirus preventive services?",
+    "text": "As stated in Q3, the Braidwood decision does not change the requirement to cover without cost sharing immunizations recommended by ACIP. Therefore, plans and issuers must continue to provide coverage, without cost sharing, for any qualifying coronavirus preventive service that is an immunization that has in effect a recommendation from ACIP with respect to the individual involved, including COVID-19 vaccines and their administration.(22) As of the date of these FAQs, the USPSTF has not recommended any qualifying coronavirus preventive services with an \"A\" or \"B\" rating, so there is no impact to plans' and issuers' coverage of these services. Federal Employees Health Benefits Program The Federal Employees Health Benefits statute, at 5 U.S.C § 8902, provides the Office of Personnel Management (OPM) with broad authority to negotiate for benefit plans for Federal employees. In particular, the statute provides that OPM \"may contract with qualified carriers\" and that \"each contract … shall contain a detailed statement of benefits offered … as [OPM] considers necessary or desirable.\" 5 U.S.C § 8902(a), (d) (emphasis added). OPM has required inclusion of preventive services based on quality industry standards prior to the Affordable Care Act, as described in FEHB Carrier Letters pre-dating the Affordable Care Act.",
+    "question_span": [
+      15895,
+      16031
+    ],
+    "answer_span": [
+      16032,
+      17376
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-59",
+    "source_group": "dol-aca:aca-part-59",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-59"
+  },
+  {
+    "question": "Is cost sharing for services furnished by a nonparticipating provider, facility, or provider of air ambulance services (as defined for purposes of the No Surprises Act) considered cost sharing for benefits provided outside of a plan's network for purposes of the MOOP limit?",
+    "text": "Yes. Cost sharing for services furnished by a provider, facility, or provider of air ambulance services that is \"nonparticipating\" for purposes of the No Surprises Act is considered \"cost sharing paid by, or on behalf of, an [individual] for benefits provided outside of such network\" for purposes of the MOOP limit under PHS Act section 2707 and ACA section 1302(c), as implemented at 45 CFR 156.130. Additionally, cost sharing for services furnished by a provider, facility, or provider of air ambulance services that is \"participating\" for purposes of the No Surprises Act is considered cost sharing for benefits provided within a plan's network for purposes of the MOOP limit. That is, cost sharing for services provided by participating providers is considered to be in-network cost sharing for purposes of the MOOP limit, and cost sharing for services provided by nonparticipating providers is considered to be out-of-network cost sharing for purposes of the MOOP limit.(11)",
+    "question_span": [
+      6774,
+      7048
+    ],
+    "answer_span": [
+      7049,
+      8032
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-60",
+    "source_group": "dol-aca:aca-part-60",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-60"
+  },
+  {
+    "question": "In light of the interim final rules issued in November 2021 implementing the prescription drug reporting requirements of the CAA and the collection of the required information from plans and issuers, do the Departments still intend to consider through separate notice and comment rulemaking whether the prescription drug machine-readable file requirements remain appropriate?",
+    "text": "Not at this time. The Departments have implemented the reporting requirements in section 204 of division BB of the CAA, and have collected the required information from plans and issuers for the 2020, 2021 and 2022 reference years.(10) Based on the Departments' implementing regulations and subsequent data collections, it is now clear that there is no meaningful conflict between the reporting requirements in section 204 of division BB of the CAA and the TiC Final Rules, because the CAA requires disclosure of different and additional information than required in the TiC Final Rules. Therefore, the Departments have determined that a general or categorical exercise of enforcement discretion is no longer warranted. Rather, the Departments are of the view that a case-by-case enforcement approach is more appropriate. Accordingly, the Departments are now rescinding Q1 of FAQs Part 49, which had expressed the Departments' general policy of deferring enforcement of the TiC Final Rules' prescription drug machine-readable file requirement pending further consideration in a future rulemaking by the Departments. The Departments do not intend to engage in any such rulemaking in the near term. Instead, the Departments will address enforcement decisions under the relevant requirements of the TiC Final Rules on a case-by-case basis, as the facts and circumstances warrant. The Departments note that FAQs Part 49 made clear that the enforcement relief was intended to be temporary and that it did not change the requirements imposed by the TiC Final Rules. The Departments intend to develop technical requirements and an implementation timeline in future guidance that sufficiently account for any reliance interests that plans and issuers may have developed with regard to FAQs Part 49.",
+    "question_span": [
+      4846,
+      5221
+    ],
+    "answer_span": [
+      5222,
+      7017
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-61",
+    "source_group": "dol-aca:aca-part-61",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-61"
+  },
+  {
+    "question": "What is the Departments' and OPM's general approach to implementation of the No Surprises Act with respect to the methodology for calculating a QPA following the decision in TMA III?",
+    "text": "The Departments and OPM recognize that changes to No Surprises Act requirements resulting from TMA III and other No Surprises Act-related court decisions have added uncertainty, complexity, and unanticipated burdens for entities that must comply with the No Surprises Act, including those involved in the Federal IDR process.(16) The Departments' and OPM's approach to implementation of the No Surprises Act with respect to provisions of the QPA methodology that were affected by TMA III will be marked by an emphasis on assisting (rather than imposing penalties on) regulated entities that are working diligently and in good faith to recalculate QPAs and comply with the applicable statutes and regulations that remain in effect after the TMA III decision.",
+    "question_span": [
+      14069,
+      14251
+    ],
+    "answer_span": [
+      14252,
+      15012
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-62",
+    "source_group": "dol-aca:aca-part-62",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-62"
+  },
+  {
+    "question": "Must plans and issuers continue to make disclosures about the QPA to nonparticipating providers, facilities, and providers or air ambulance services with an initial payment or notice of denial of payment, and in a timely manner upon request of the provider or facility?",
+    "text": "Yes. Plans and issuers must continue to comply with the requirements related to disclosure of information about the QPA.(17) These disclosure provisions were not vacated by TMA III. This includes the requirement to include a statement certifying that the QPA applies for purposes of the recognized amount (or, in the case of air ambulance services, for calculating the participant's, beneficiary's, or enrollee's cost sharing) and that each QPA was determined in compliance with 26 CFR 54.9816-6T, 29 CFR 2590.716-6, and 45 CFR 149.140, as applicable. For purposes of the statement that each QPA was determined in compliance with applicable regulatory requirements, a plan or issuer may certify that a QPA was determined in compliance with applicable rules where the QPA was calculated using a good faith, reasonable interpretation of the applicable statutes and regulations that remain in effect after the TMA III decision, as described in Q1. Further, the Departments and OPM will exercise enforcement discretion for disclosures regarding a QPA provided with an initial payment or notice of denial of payment, consistent with the exercise of enforcement discretion outlined in Q1. Specifically, for items and services furnished before May 1, 2024, the Departments and OPM will exercise enforcement discretion with respect to these disclosures where a plan or issuer certifies that a QPA was determined in compliance with applicable rules using the methodology under the July 2021 interim final rules and guidance in effect immediately before the decision in TMA III, provided that the plan or issuer, in a timely manner upon request of the provider, facility, or provider of air ambulance services, discloses that it is using a QPA calculated in such a manner. HHS encourages States that are the primary enforcers of the relevant No Surprises Act provisions with respect to issuers to adopt a similar approach to enforcement. HHS will not consider a State to be failing to substantially enforce these provisions because the State adopts such an approach.",
+    "question_span": [
+      15016,
+      15285
+    ],
+    "answer_span": [
+      15286,
+      17348
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-62",
+    "source_group": "dol-aca:aca-part-62",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-62"
+  },
+  {
+    "question": "Does the No Surprises Act continue to prohibit balance billing for air ambulance services provided by a nonparticipating provider of air ambulance services?",
+    "text": "Yes. The No Surprises Act prohibits nonparticipating providers of air ambulance services from balance billing a participant, beneficiary, or enrollee with benefits under a group health plan or group or individual health insurance coverage offered by a health insurance issuer for air ambulance services for which benefits are available under such plan or coverage. Specifically, a nonparticipating provider of air ambulance services is prohibited from billing or holding liable such individual for a payment amount for the service that is more than the cost-sharing amount as determined in accordance with Code section 9817(a)(1) and (2), ERISA section 717(a)(1) and (2), or PHS Act section 2799A–2(a)(1) and (2), as applicable.(22) The district court's decision in TMA III does not change this statutory requirement.",
+    "question_span": [
+      21748,
+      21904
+    ],
+    "answer_span": [
+      21905,
+      22725
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-62",
+    "source_group": "dol-aca:aca-part-62",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-62"
+  },
+  {
+    "question": "In light of the TMA IV and TMA III opinions and orders, how do the batching requirements of the No Surprises Act apply to qualified IDR items and services for disputes eligible for initiation of the Federal IDR process on or after August 3, 2023?",
+    "text": "As a result of the TMA IV and TMA III opinions and orders, Code section 9816(c)(3)(A)(iii), ERISA section 716(c)(3)(A)(iii), and PHS Act section 2799A–1(c)(3)(A)(iii), in conjunction with the remaining non-vacated regulations, provide the effective standard for determining whether qualified IDR items and services may appropriately be batched together. That statutory text provides that items and services may be considered jointly as part of a single determination only if they are \"related to the treatment of a similar condition.\" Therefore, until the Departments and OPM engage in notice and comment rulemaking on the circumstances under which items and services will be considered \"related to the treatment of a similar condition,\" disputes eligible for initiation of the Federal IDR process on or after August 3, 2023, should be submitted in a manner that is consistent with the statutes and regulations that remain in effect after the TMA IV and TMA III vacaturs. The District Court's order in TMA IV does not impact the batching provisions set forth at 26 CFR 54.9816-8T(c)(3)(i)(A), (B), or (D), 29 CFR 2590.716-8(c)(3)(i)(A), (B), or (D), and 45 CFR 149.510(c)(3)(i)(A), (B), or (D) and those provisions remain in effect. Certified IDR entities have the sole responsibility for determining whether the items and services submitted as part of a batched dispute meet the statutory and remaining regulatory standards for a batched dispute.",
+    "question_span": [
+      10351,
+      10597
+    ],
+    "answer_span": [
+      10598,
+      12048
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-63",
+    "source_group": "dol-aca:aca-part-63",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-63"
+  },
+  {
+    "question": "Other than what has been described in previous guidance, how can plans and issuers ensure compliance with the requirement to cover the full-range of FDA-approved contraceptive drugs and drug-led devices(24) without cost sharing under PHS Act section 2713 and its implementing regulations?",
+    "text": "As described earlier in these FAQs, the Departments have previously issued guidance interpreting the regulations implementing PHS Act section 2713 in regard to the coverage of contraception. Plans and issuers may continue to meet the requirements of section 2713 and its implementing regulations by implementing the standards described in prior guidance. Alternatively, to comply with the requirements in PHS Act section 2713 and its implementing regulations with respect to FDA-approved contraceptive drugs and drug-led devices, a plan or issuer may provide coverage consistent with the therapeutic equivalence approach outlined in these FAQs. Specifically, with respect to FDA-approved contraceptive drugs and drug-led devices, if a plan or issuer utilizes medical management techniques within a specified category described in the HRSA-supported Guidelines (or group of substantially similar products that are not included in a specified category), the Departments will generally consider such medical management techniques to be reasonable if the plan or issuer covers all FDA-approved contraceptive drugs and drug-led devices in that category (or group of substantially similar products) without cost sharing, other than those for which there is at least one therapeutic equivalent drug or drug-led device that the plan or issuer covers without cost sharing. Even then, a plan's or issuer's medical management techniques would generally be considered reasonable only if the plan or issuer provides an exceptions process that allows an individual to access without cost sharing the specific contraceptive drug or drug-led device (that is a therapeutic equivalent to the product that is covered without cost sharing) that is determined to be medically necessary with respect to the individual, as determined by the individual's attending provider.(25)",
+    "question_span": [
+      12992,
+      13280
+    ],
+    "answer_span": [
+      13281,
+      15139
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-64",
+    "source_group": "dol-aca:aca-part-64",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-64"
+  },
+  {
+    "question": "If a plan or issuer covers without cost sharing all FDA-approved contraceptive drugs or contraceptive drug-led devices other than those for which there is a covered therapeutic equivalent, is the plan or issuer still expected to maintain an exceptions process as previously described in guidance?",
+    "text": "Yes. The Departments generally do not consider medical management techniques to be reasonable absent the availability of an exceptions process. Therefore, all plans and issuers are expected to have an exceptions process available to ensure that individuals can access coverage without cost sharing for a contraceptive service or FDA-approved, -cleared, or -granted contraceptive product (including another contraceptive drug or drug-led device for which there is a covered therapeutic equivalent) that is medically necessary for the individual, as determined by the individual's attending provider, and that is otherwise not covered without cost sharing.(27) The availability of an exceptions process as described in prior guidance remains a critical resource for individuals to have access to the full range of contraceptives and contraceptive care, as recommended by the HRSA-supported Guidelines and as individuals are entitled to, without cost sharing, under PHS Act section 2713 and its implementing regulations. Nonetheless, the Departments expect that plans and issuers that opt to provide coverage consistent with the therapeutic equivalence approach described in Q1 and Q2 will experience a significant reduction in the frequency with which the exceptions process would be utilized by (or necessary for) individuals to access contraceptive drugs and drug-led devices that are medically necessary, as determined by the individual's attending provider.",
+    "question_span": [
+      18669,
+      18965
+    ],
+    "answer_span": [
+      18966,
+      20430
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-64",
+    "source_group": "dol-aca:aca-part-64",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-64"
+  },
+  {
+    "question": "If a plan or issuer receives a claim from an in-network provider that identifies an item or service as a recommended preventive item or service using industry-standard coding practices, should the plan or issuer cover the item or service without cost sharing, consistent with PHS Act section 2713 and its implementing regulations?",
+    "text": "Generally, yes. When an in-network provider(30) submits claims for items or services following industry-standard coding practices to denote the furnished items or services as recommended preventive items or services, plans and issuers should cover those items and services consistent with the requirements under PHS Act section 2713, unless the plan or issuer has individualized information to establish that the items or services are not recommended preventive items and services with respect to the participant, beneficiary, or enrollee, consistent with Q3 and Q4 below. This is also true where the industry-standard coding description identifies the item or service as one that generally meets the definition of a recommended preventive item or service, even where no modifier is appended to the code. For example, CPT® code 77067 [Screening mammography, bilateral (2-view study of each breast), including computer-aided detection (CAD) when performed] is generally considered a recommended preventive service even without a modifier and should be covered without cost sharing as long as the service was furnished with respect to an individual for whom the screening recommendation applied.",
+    "question_span": [
+      14325,
+      14655
+    ],
+    "answer_span": [
+      14656,
+      15853
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-68",
+    "source_group": "dol-aca:aca-part-68",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-68"
+  },
+  {
+    "question": "If a plan or issuer receives a claim from an in-network provider that identifies an item or service as a recommended preventive item or service using industry-standard coding practices, but has individualized information that allows the plan or issuer to establish that the item or service is not a recommended preventive item or service with respect to the participant, beneficiary, or enrollee, is the plan or issuer expected to cover the item or service without cost sharing (consistent with PHS Act section 2713 and its implementing regulations)?",
+    "text": "No. In some instances, a plan or issuer will be able to establish, based on other individualized information received with the claim or maintained by the plan or issuer, that an item or service was not furnished as a recommended preventive item or service (or was not integral to the furnishing of a recommended preventive item or service) for the participant, beneficiary, or enrollee who received the item or service, even when the provider identified it as such using industry-standard coding practices. In such cases, the plan or issuer is not required to cover the item or service without cost sharing under PHS Act section 2713, even if the claim identifies the item or service as a recommended preventive item or service. In the event of an adverse benefit determination, participants, beneficiaries, or enrollees (or their authorized representatives) have the right to appeal under the internal appeals and external review provisions of ERISA section 503 and PHS Act section 2719, as applicable.(31)",
+    "question_span": [
+      15857,
+      16407
+    ],
+    "answer_span": [
+      16408,
+      17419
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-68",
+    "source_group": "dol-aca:aca-part-68",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-68"
+  },
+  {
+    "question": "A plan or issuer may contract with a TPA or other service provider that offers access to a network of providers. In turn, the TPA or other service provider may have separate agreements with entities other than the plan or issuer (downstream agreements) to provide or administer the plan's or issuer's network. If such a downstream agreement restricts the plan or issuer from providing, electronically accessing, or sharing the information or data specified in Code section 9824, ERISA section 724, and PHS Act section 2799A-9, is this restriction prohibited under the Gag Clause Prohibition?",
+    "text": "Yes. Where a plan or issuer has entered into an agreement with a TPA or other service provider to provide network access, and the plan or issuer is restricted from providing, electronically accessing, or sharing the relevant information or data available to the TPA or service provider with participants, beneficiaries, and enrollees, plan sponsors, referring providers, or a business associate (as applicable) due to the TPA or service provider having entered into a downstream agreement that restricts the use of such relevant information or data, the plan's or issuer's agreement with the TPA or other service provider indirectly restricts the plan or issuer in a manner that violates the Gag Clause Prohibition. For example, terms of an agreement between a TPA and the owner of a network that restrict the TPA from sharing the relevant information with a plan, except under certain conditions, which have the effect of restricting a plan from providing cost information to a business associate would indirectly restrict the plan, even if the plan is not a party to the agreement with the owner of the network. As a result, the plan would be in violation of the Gag Clause Prohibition. To ensure compliance with the Gag Clause Prohibition, the Departments expect that, in their direct contracts with TPAs or other service providers, plans and issuers will include provisions that prohibit the TPA or other service provider from entering into a downstream agreement that restricts the plan or issuer from sharing information or data specified by statute. See Q9 regarding how plans and issuers that violate the Gag Clause Prohibition should complete their attestation. Plans and issuers are encouraged to work with their TPAs and service providers to provide, electronically access, or share the relevant information or data, as appropriate.",
+    "question_span": [
+      32248,
+      32839
+    ],
+    "answer_span": [
+      32840,
+      34686
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-69",
+    "source_group": "dol-aca:aca-part-69",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-69"
+  },
+  {
+    "question": "Does the Gag Clause Prohibition prohibit a plan or issuer from entering into an agreement with a health care provider, network or association of providers, TPA, or other service provider offering access to a network of providers that restricts the plan or issuer from providing de-identified claims data(49) to a business associate, except at the discretion of the health care provider, network or association of providers, TPA, or other service provider offering access to a network of providers?",
+    "text": "Yes. To the extent the terms of an agreement between a plan or issuer and a health care provider, network or association of providers, TPA, or other service provider offering access to a network of providers prevent or limit a plan or issuer from sharing, or directing such information be shared, with a business associate, consistent with applicable privacy regulations, the agreement would violate the Gag Clause Prohibition. For example, if an agreement permits the plan or issuer to share de-identified claims data with a business associate only at the discretion of a health care provider, network or association of providers, TPA, or other service provider offering access to a network, the agreement contains an impermissible gag clause. The Gag Clause Prohibition prohibits a plan or issuer from entering into such agreement because the agreement could have the effect of restricting the plan or issuer from providing de-identified claims data to a business associate.",
+    "question_span": [
+      34690,
+      35187
+    ],
+    "answer_span": [
+      35188,
+      36167
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-69",
+    "source_group": "dol-aca:aca-part-69",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-69"
+  },
+  {
+    "question": "What is considered a restriction on access to de-identified claims and encounter information or data that is prohibited by the Gag Clause Prohibition?",
+    "text": "A limitation on the scope, scale, or frequency of electronic access to de-identified claims and encounter information or data is considered to be a restriction on de-identified claims and encounter information or data that is prohibited by the Gag Clause Prohibition, to the extent the provision places unreasonable limits on the ability of plans and issuers to access such information or data \"upon request\" as required by the statute. Unless the information or data specified by statute is otherwise electronically accessible to the plan or issuer, the following examples of restrictions on an audit or claims review would be considered impermissible gag clauses: Limiting access to a statistically significant or the \"minimum necessary\" number of de-identified claims; Limiting the scope of access to the data to specific, narrow purposes (such as limiting access to the context of an audit); Unreasonably limiting the frequency of claims reviews (e.g., no more than once per year); Limiting the number and types of de-identified claims that a plan or issuer may access; Restricting the data elements of a de-identified claim that a plan or issuer may access; and Providing access to de-identified claims data only on the TPA's or service provider's physical premises. Note that this is not an exhaustive list of potentially prohibited gag clauses. The Departments will continue to engage with interested parties and may provide additional examples of prohibited gag clauses in further guidance.",
+    "question_span": [
+      36171,
+      36321
+    ],
+    "answer_span": [
+      36322,
+      37831
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-69",
+    "source_group": "dol-aca:aca-part-69",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-69"
+  },
+  {
+    "question": "What will the process be for updating the schema version 2.0 specifications?",
+    "text": "The Departments will follow the same process for developing schema version 2.0 as took place for schema version 1.0, engaging industry in collaboration on GitHub beginning with the release of this guidance. The Departments will introduce new schema elements and reporting requirements, request feedback on the discussion board, and diagram examples of files in the new format. When decisions are finalized on GitHub, the Departments will provide the policy context and explanation of the changes in plain language on the Transparency in Coverage website(8) on the Transparency in Coverage Technical Clarifications webpage.(9) The Departments will also host a series of webinars(10) throughout the iteration process to explain the changes, take questions, and provide technical assistance to file developers.",
+    "question_span": [
+      5410,
+      5486
+    ],
+    "answer_span": [
+      5487,
+      6297
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-70",
+    "source_group": "dol-aca:aca-part-70",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-70"
+  },
+  {
+    "question": "When will the Departments finalize the technical guidance for schema version 2.0?",
+    "text": "The Departments intend to finalize schema version 2.0 on October 1, 2025. On this date, plans and issuers will be able to access the finalized updated schema version 2.0 technical requirements for the in-network rate and out-of-network allowed amount and billed charges MRFs on GitHub. Links to the implementation guidance on GitHub are available on the Transparency in Coverage Resources webpage.(11)",
+    "question_span": [
+      6301,
+      6382
+    ],
+    "answer_span": [
+      6383,
+      6787
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-70",
+    "source_group": "dol-aca:aca-part-70",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-70"
+  },
+  {
+    "question": "When will schema version 2.0 be applicable?",
+    "text": "The Departments intend to finalize schema version 2.0 on October 1, 2025, and to give plans and issuers approximately four months to complete the necessary updates to build files compliant with schema version 2.0. Starting February 2, 2026, compliance with the requirement that plans and issuers publicly disclose information related to in-network rates and out-of-network allowed amounts and billed charges will be assessed using schema version 2.0. Until that date, plans and issuers are expected to continue complying with the requirements of the TiC Final Rules using schema version 1.0. Footnotes 85 FR 72158 (Nov. 12, 2020). OMB Control Number 0938-1429. ↩ The Departments deferred enforcement of the TiC Final Rules' requirement that plans and issuers publish machine-readable files relating to prescription drug pricing pending further rulemaking in FAQs Part 49. See FAQs About Affordable Care Act and Consolidated Appropriations Act, 2021 Implementation Part 49 (FAQs Part 49) (Aug. 20, 2021), Q1, available at: https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-49.pdf and https://www.cms.gov/CCIIO/Resources/Fact-Sheets-and-FAQs/Downloads/FAQs-Part-49.pdf. In FAQs Part 61, the Departments rescinded Q1 of FAQs Part 49, which had expressed the Departments' general policy of deferring enforcement of the TiC Final Rules' prescription drug machine-readable file requirement pending further consideration in a future rulemaking. The Departments indicated they intend to develop technical requirements and an implementation timeline for the prescription drug file in future guidance. See FAQs About Affordable Care Act Implementation Part 61 (FAQs Part 61) (Sept. 27, 2023), Q1, available at: https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-61 and https://www.cms.gov/files/document/faqs-about-affordable-care-act-implementation-part-61.pdf. ↩ The Departments deferred enforcement of the TiC Final Rules' requirement to publish the In-network Rate and Allowed Amounts Files from January 1, 2022, until July 1, 2022. See Affordable Care Act Implementation FAQs Part 49, (Aug. 20, 2021), Q2, available at: https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-49.pdf and https://www.cms.gov/CCIIO/Resources/Fact-Sheets-and-FAQs/Downloads/FAQs-Part-49.pdf. ↩ 85 FR 72158, 72221. ↩ See https://github.com/CMSgov/price-transparency-guide/. ↩ Exec. Order No. 14221, 90 Fed. Reg. 11005 (Feb. 25, 2025). ↩ Exec. Order No. 13877, 84 Fed. Reg. 30849 (June 24, 2019). ↩ See https://www.cms.gov/priorities/key-initiatives/healthplan-price-transparency. ↩ See https://www.cms.gov/healthplan-price-transparency/resources/technical-clarification. ↩ See https://www.cms.gov/healthplan-price-transparency/resources/webinars. ↩ See https://www.cms.gov/healthplan-price-transparency/resources. ↩",
+    "question_span": [
+      6791,
+      6834
+    ],
+    "answer_span": [
+      6835,
+      9782
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "dol_html_aca-part-70",
+    "source_group": "dol-aca:aca-part-70",
+    "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-70"
+  }
+]

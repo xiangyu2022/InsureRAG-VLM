@@ -1,0 +1,173 @@
+{
+  "created_utc": "2026-10-01T23:18:14.667635+00:00",
+  "status": "Post-test descriptive uncertainty, not used for selection or training",
+  "comparison": "Selected versus previous weights at their validation-best configuration; same as matched configuration in this run",
+  "bootstrap_repetitions": 5000,
+  "multiple_comparisons_adjusted": false,
+  "interpretation": "Nominal marginal intervals, not simultaneous intervals. Historical tests have been inspected repeatedly. Fresh government has 28 URLs, not 157 independent sources.",
+  "results": {
+    "historical_insuranceqa/all": {
+      "n": 2000,
+      "clusters": 1995,
+      "seed": 42,
+      "cluster_unit": "shared-gold-answer connected component",
+      "metrics": {
+        "hit_at_1": {
+          "previous_validation_best": 0.4415,
+          "selected": 0.448,
+          "difference": 0.0065,
+          "cluster_bootstrap_95ci": [
+            0.0,
+            0.01300666599566049
+          ],
+          "improved_questions": 28,
+          "worsened_questions": 15,
+          "unchanged_questions": 1957
+        },
+        "mrr_at_100": {
+          "previous_validation_best": 0.5467342295225482,
+          "selected": 0.5508457252724637,
+          "difference": 0.004111495749915496,
+          "cluster_bootstrap_95ci": [
+            0.0005872407761893736,
+            0.007739528377887772
+          ],
+          "improved_questions": 283,
+          "worsened_questions": 193,
+          "unchanged_questions": 1524
+        }
+      }
+    },
+    "historical_multidomain/government": {
+      "n": 81,
+      "clusters": 14,
+      "seed": 20261001,
+      "cluster_unit": "source URL/title",
+      "metrics": {
+        "hit_at_1": {
+          "previous_validation_best": 0.8148148148148148,
+          "selected": 0.8271604938271605,
+          "difference": 0.012345679012345678,
+          "cluster_bootstrap_95ci": [
+            0.0,
+            0.03296703296703297
+          ],
+          "improved_questions": 1,
+          "worsened_questions": 0,
+          "unchanged_questions": 80
+        },
+        "mrr_at_100": {
+          "previous_validation_best": 0.876066194292315,
+          "selected": 0.8825026465676625,
+          "difference": 0.006436452275347522,
+          "cluster_bootstrap_95ci": [
+            2.9701166180758047e-05,
+            0.016651974224589517
+          ],
+          "improved_questions": 4,
+          "worsened_questions": 0,
+          "unchanged_questions": 77
+        }
+      }
+    },
+    "historical_multidomain/general": {
+      "n": 600,
+      "clusters": 24,
+      "seed": 20261001,
+      "cluster_unit": "source URL/title",
+      "metrics": {
+        "hit_at_1": {
+          "previous_validation_best": 0.885,
+          "selected": 0.8833333333333333,
+          "difference": -0.0016666666666666668,
+          "cluster_bootstrap_95ci": [
+            -0.00738041483926854,
+            0.0037737632414309636
+          ],
+          "improved_questions": 1,
+          "worsened_questions": 2,
+          "unchanged_questions": 597
+        },
+        "mrr_at_100": {
+          "previous_validation_best": 0.925459939531368,
+          "selected": 0.9248738350518803,
+          "difference": -0.0005861044794880008,
+          "cluster_bootstrap_95ci": [
+            -0.003612939123701891,
+            0.0024205429367113638
+          ],
+          "improved_questions": 6,
+          "worsened_questions": 7,
+          "unchanged_questions": 587
+        }
+      }
+    },
+    "historical_government/all": {
+      "n": 416,
+      "clusters": 37,
+      "seed": 20261001,
+      "cluster_unit": "source URL/title",
+      "metrics": {
+        "hit_at_1": {
+          "previous_validation_best": 0.71875,
+          "selected": 0.7139423076923077,
+          "difference": -0.004807692307692308,
+          "cluster_bootstrap_95ci": [
+            -0.017391304347826087,
+            0.009433962264150943
+          ],
+          "improved_questions": 3,
+          "worsened_questions": 5,
+          "unchanged_questions": 408
+        },
+        "mrr_at_100": {
+          "previous_validation_best": 0.8139207610420427,
+          "selected": 0.8122405232471118,
+          "difference": -0.001680237794930947,
+          "cluster_bootstrap_95ci": [
+            -0.007986263274793123,
+            0.00539751431217263
+          ],
+          "improved_questions": 15,
+          "worsened_questions": 11,
+          "unchanged_questions": 390
+        }
+      }
+    },
+    "fresh_government/all": {
+      "n": 157,
+      "clusters": 28,
+      "seed": 20261001,
+      "cluster_unit": "source URL/title",
+      "metrics": {
+        "hit_at_1": {
+          "previous_validation_best": 0.7898089171974523,
+          "selected": 0.8089171974522293,
+          "difference": 0.01910828025477707,
+          "cluster_bootstrap_95ci": [
+            0.0,
+            0.03763440860215054
+          ],
+          "improved_questions": 3,
+          "worsened_questions": 0,
+          "unchanged_questions": 154
+        },
+        "mrr_at_100": {
+          "previous_validation_best": 0.8718335741940086,
+          "selected": 0.8812000808816095,
+          "difference": 0.00936650668760073,
+          "cluster_bootstrap_95ci": [
+            0.001497046836142581,
+            0.019283710822576367
+          ],
+          "improved_questions": 5,
+          "worsened_questions": 2,
+          "unchanged_questions": 150
+        }
+      }
+    }
+  },
+  "prediction_sha256": "a7acb249faed716a941d4563342a845383c7299bce2fa97cd1bf527e57207e96",
+  "selection_lock_sha256": "f4eebfdb45836d31edc9152732dcf9f4e4c4622eeb9d34b3e310682e3a8b3dc0",
+  "analysis_code_sha256": "360f0fe3eeca08bed59123762eb782a5647137380b7fd393afe4caf2b6479b48"
+}

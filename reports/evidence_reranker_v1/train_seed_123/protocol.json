@@ -1,0 +1,64 @@
+{
+  "created_utc": "2026-10-03T04:57:49.631347+00:00",
+  "seed": 123,
+  "training": {
+    "epochs": 2,
+    "learning_rate": 3e-06,
+    "micro_groups": 8,
+    "accumulation": 4,
+    "repeat_factors": {
+      "insuranceqa": 2,
+      "government": 8,
+      "general": 1,
+      "finance": 1,
+      "financial_report": 3
+    },
+    "retention_weights": {
+      "insuranceqa": 0.2,
+      "government": 0.3,
+      "general": 0.3,
+      "finance": 0.1,
+      "financial_report": 0.1
+    },
+    "pair_weight": 0.5,
+    "sampled_pairs_per_query": 6,
+    "head_rank_weight": "absolute reciprocal-rank swap difference, floor .05; detached",
+    "loss": "listwise CE(label smoothing .02) + .5 head-weighted softplus margin + frozen previous-teacher KL(T=2)",
+    "ambiguous_negative_weight": 0.5,
+    "ambiguity_rule": "non-FinQA negative teacher logit >= sampled positive minus 1; never becomes a positive",
+    "precision": "FP32 parameters, BF16 encoder autocast, FP32 loss",
+    "max_pair_tokens": 512
+  },
+  "unique_training_questions": 33426,
+  "domain_counts": {
+    "insuranceqa": 11629,
+    "government": 259,
+    "general": 13999,
+    "finance": 5464,
+    "financial_report": 2075
+  },
+  "query_presentations_per_epoch": 51018,
+  "optimizer_steps_planned": 3190,
+  "trainable_parameters": 22713601,
+  "selection_protocol_sha256": "610d77f635853385c52e0bfcf0e3c216bb61b0a3fa5aa46b4e74a27fbc4aeeac",
+  "training_manifest_sha256": "02fc798aa9f7373bbb3cd8ad810eee50ba7dd5734a97eed59b4ed52b22fed1df",
+  "initial_weights_sha256": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+  "code_sha256": {
+    "scripts/train_evidence_reranker.py": "6855b666f83051b3b561ef950448980f61c908ef6081cbd355dc3ef4d73808a7",
+    "scripts/eval_evidence_reranker.py": "c043284cdf8ff4cf7e7d802d8acd0d29950437086fa92c1f6d508d018c70ee12",
+    "src/insurerag_vlm/evidence_ranking.py": "bcba5c8c5a46975b5a150e10da95c766d3e7feeda4d72c6d99473c305369ab5a",
+    "src/insurerag_vlm/finqa_evidence.py": "558751133d7b46cbb125d59b9a038e2a5cde6eff3e51ca34403a04520472a72b",
+    "scripts/eval_query_adaptation.py": "8d0819155f0dd546910b8692f2d0115062d2922d688d207a3c033a64cbbec747",
+    "scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872",
+    "scripts/analyze_condition_secondary_metrics.py": "360f0fe3eeca08bed59123762eb782a5647137380b7fd393afe4caf2b6479b48",
+    "scripts/prepare_insuranceqa.py": "4fb3ccb6028ef911ea1e7a4bdd5e17ee084c619b2f06fd0a931b8a8386f15636",
+    "scripts/prepare_query_adaptation_data.py": "14a37e62ebadf4132f5792e813fc75a19263f8314284cf141c168dcb1414d5cb",
+    "src/insurerag_vlm/query_adaptation.py": "dcc7d325050dbf871808900b239119c01b24e4d92766c239cdd25ac888402180",
+    "src/insurerag_vlm/reranker.py": "bb90e6c134b44d7cb0c0cd6ca3165e098827bd908a3a86e73101040cf65734a3",
+    "src/insurerag_vlm/domain_reranker.py": "7f1904228435358bfeb14483f5f599e961e5759f9d2c94f8faaa8368a049aeb5",
+    "scripts/run_evidence_reranker_experiment.py": "6c7ec6b2fd57790b4661b9b484a6ad160e40387f636fef68ff314cad1f7f4dbe"
+  },
+  "validation_or_test_used_in_gradients": false,
+  "known_positive_ids_never_sampled_as_negatives": true
+}

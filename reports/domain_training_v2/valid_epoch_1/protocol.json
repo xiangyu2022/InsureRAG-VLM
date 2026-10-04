@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-10-01T20:12:57.017203+00:00",
+  "split": "valid",
+  "candidate_source_sha256": "cac8f8e8119a9328843139a065a7981e8d175df26753db4877dfcdd0a4d0a470",
+  "candidate_source_protocol_sha256": "353077e4c475a76820594c9f864854ba2e0c9b82ba84ad73c1998e3e15ffc18a",
+  "selection_lock_sha256": null,
+  "model": {
+    "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\insurerag-domain-reranker-v2\\epoch-1",
+    "files_sha256": {
+      "config.json": "bde16d9648b01e19b9d4c5f3deca28cd2851fbbc660f8a90cecd87efde5c5429",
+      "model.safetensors": "88207632c798e8a5a7eb2799447dc1f1f08aec03daaa142b31fb29572a2071fe",
+      "tokenizer.json": "91f1def9b9391fdabe028cd3f3fcc4efd34e5d1f08c3bf2de513ebb5911a1854",
+      "tokenizer_config.json": "65687cd448ac234da7b4db3f535aa0e88a4d8c2c8f5a0fe84a01593f936be44d",
+      "training_provenance.json": "1dcd647fabc47c863e1b9f3fe140a4ca8276d449209640570095389d8941b452"
+    },
+    "checkpoint_sha256": "a1b1e667c6bbc941a5b6854faadc6c800b8b89c70a1b53ee6bd118734aa8e344",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "max_length": 512,
+    "batch_size": 64,
+    "truncation": "longest_first",
+    "score": "raw single relevance logit",
+    "remote_code": false,
+    "fine_tuned_in_this_project": true,
+    "training_provenance": {
+      "epoch": 1,
+      "optimizer_steps": 734,
+      "training_groups_seen": 11729,
+      "mean_loss": 1.5521022580003117,
+      "weights_sha256": "88207632c798e8a5a7eb2799447dc1f1f08aec03daaa142b31fb29572a2071fe",
+      "fine_tuned_in_this_project": true,
+      "base_model": "..\\models\\ms-marco-MiniLM-L6-v2",
+      "training_manifest_sha256": "7bae2f9990831396c8f347ae23952e640c6f9a3a07937a8bf5436c998ed36c01",
+      "training_protocol_sha256": "497db8286ac41be5948ef27ce754939d76c4559febceb31bbde98a670af28d9d",
+      "training_code_sha256": "6dfa79747867c062fa73fd6361920486f27d774c2bf12b939acf402eb5889000"
+    }
+  },
+  "code_sha256": {
+    "scripts/score_domain_checkpoint.py": "c53e4b3138021ad1b0b2826b3f5dda5cdf17c3e9d61d9a0f681fd4497c6c1d41",
+    "src/insurerag_vlm/domain_reranker.py": "7f1904228435358bfeb14483f5f599e961e5759f9d2c94f8faaa8368a049aeb5",
+    "src/insurerag_vlm/reranker.py": "bb90e6c134b44d7cb0c0cd6ca3165e098827bd908a3a86e73101040cf65734a3"
+  },
+  "questions": 2000,
+  "inference_inputs": "Question and candidate answer text only; exact preexisting candidate IDs",
+  "gold_label_injection": false
+}

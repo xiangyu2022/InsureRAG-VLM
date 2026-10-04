@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-01T22:51:35.354538+00:00",
+  "purpose": "Report the prior model at its own validation-optimal config in addition to identical-config and original-config controls.",
+  "config": {
+    "pool": "union200",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "previous_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+  "source_validation_selection_sha256": "560a7f66a1a92e1900fcf3226c79089f2ad243cc4a2e3e40e1aa910166e59434",
+  "used_for_new_model_selection": false,
+  "test_has_not_been_scored": true,
+  "code_sha256": "2a2d31191c7ffc783a6ac19bc95ab8de08b4148726e71b1eb05562eb6341d6bd"
+}

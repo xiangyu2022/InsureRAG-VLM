@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-10-01T23:08:35.671157+00:00",
+  "issue": "The old-government candidate cache has no completion.json. Frozen scorer requires an absolute candidate path before relative_to(ROOT); orchestrator supplied a relative path. Failure occurred before model loading or scoring for that cohort.",
+  "repair": "Canonicalize orchestrator path arguments. Resume only complete artifacts whose score/protocol/model/question/answer/selection hashes match. Empty failed output folder and original stdout preserved.",
+  "frozen_scorer_changed": false,
+  "model_weights_changed": false,
+  "selection_or_data_changed": false,
+  "completed_legacy_questions_reused": 2000,
+  "completed_mixed_questions_reused": 681,
+  "scorer_sha256": "f6c57011feb0f585343e9f215bc1594743075e64ed10400098ed78b8615792e0",
+  "selection_lock_sha256": "f4eebfdb45836d31edc9152732dcf9f4e4c4622eeb9d34b3e310682e3a8b3dc0",
+  "original_stdout_sha256": "37478796f529a5011e3c90bf384252d940e1c190ddf2cf199d610790968d0d9c"
+}

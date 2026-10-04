@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-10-01T21:06:28.775126+00:00",
+  "selected_on": "valid",
+  "epochs": [
+    1,
+    2
+  ],
+  "domain_weights": [
+    0.5,
+    0.75,
+    1.0
+  ],
+  "fusion": {
+    "pool": "hybrid100",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "training_recipe": "rehearsal_from_v2, two epochs, learning rate 5e-6",
+  "guards": {
+    "insuranceqa_min_previous_minus": 0.005,
+    "government_min_public_minus": 0.01,
+    "general_min_public_minus": 0.01
+  },
+  "objective": "Equal-domain macro Hit@10 over insuranceqa/government/general; tie macro MRR, then Hit@1; stable order",
+  "promotion": "Eligible new checkpoint must strictly exceed unanchored previous-v2 macro Hit@10. Otherwise retain previous v2; do not tune on test.",
+  "controls": "Public teacher, previous v2, previous v2 with same three anchor weights, BGE only. All controls reported.",
+  "new_validation_counts": {
+    "insuranceqa_historical": 2000,
+    "government": 127,
+    "general": 400
+  },
+  "test_plan": {
+    "historical_insuranceqa": 2000,
+    "fresh_government": 81,
+    "fresh_general": 600,
+    "historical_government_regression": 416,
+    "fresh_test_candidate_corpus": 47969
+  },
+  "test_use": "Only frozen selected model plus public and previous controls; no post-test selection or example removal.",
+  "training_manifest_sha256": "8a714663f31c688447371cf2bba28fa0228f21d926f188574d9d8eeb647ccf20",
+  "fresh_fixture_sha256": "912f40bc9a696f7492ec02c61202e719dac362b460d57ae7f12cc46b050a667d",
+  "code_sha256": {
+    "scripts/eval_retention_v2.py": "a2915e60a53184c9f90dae334b8dae438c1bfdd355ff997ee72e9ad3d0d866da",
+    "src/insurerag_vlm/retention.py": "628ef9e54d276a9154f7c361d20e69024ff9e85c0ce0b66e1ec1c08909725f7f",
+    "scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872"
+  }
+}

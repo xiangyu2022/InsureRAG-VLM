@@ -1,0 +1,312 @@
+{
+  "started_utc": "2026-09-20T22:49:47.292730+00:00",
+  "benchmark_lock_sha256": "e97695307070c6d1974c56644c31cc3b6df8227aa989f370231e628b9f635f82",
+  "benchmark": {
+    "benchmark_version": "research_v1",
+    "frozen_before_model_inference": true,
+    "annotation_author": "AI-assisted/manual-agent-verified; no human-expert adjudication",
+    "counts": {
+      "dev": 12,
+      "test": 24,
+      "answerable": 24,
+      "unsupported": 12
+    },
+    "question_split_policy": "Document-disjoint dev/test questions across six named archived public guides.",
+    "training_exposure_note": "These public documents exist in the legacy SFT corpus; this is NOT a document holdout from previous fine-tuning. Compare unadapted Ollama base instruct models only and report possible public pretraining exposure.",
+    "files": {
+      "dev.jsonl": "8e666859f29bc2ad8ad05ef9b1e2cd71a4d08e5b3337605fa5b5941d7f21809f",
+      "test.jsonl": "f4615efc16a3f1d66d8afac27f1d234aa20199812c23b050cf6d5f84b122eeea",
+      "documents.json": "7611db67b9122bdd3619e616cfc23d007402f6316274b391279836357f526824"
+    },
+    "corpus_files": {
+      "data/04_curated/rag_pages.jsonl": "cd89222cbe79add5ac72a8f695ba15d42011f94206dc934b76c6436ce19c2b33",
+      "data/04_curated/rag_snippets.jsonl": "5d844f3ddc63aefb954ded0ca073027e22942c39fa1ab48cf9d707cabd365cbd"
+    }
+  },
+  "split": "test",
+  "case_count": 24,
+  "partial_dev_smoke": false,
+  "model": {
+    "provider": "ollama",
+    "requested_model": "qwen2.5:3b",
+    "resolved_model": "qwen2.5:3b",
+    "model_digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "model_details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen2",
+      "families": [
+        "qwen2"
+      ],
+      "parameter_size": "3.1B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 32768,
+      "embedding_length": 2048
+    },
+    "ollama_version": {
+      "version": "0.34.2"
+    },
+    "endpoint": "http://127.0.0.1:11435",
+    "generation_options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 192,
+      "top_k": 40,
+      "top_p": 1.0,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0
+    },
+    "thinking": false,
+    "last_generation": {}
+  },
+  "run_config": {
+    "benchmark": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\InsureRAG-VLM\\data\\benchmarks\\research_v1",
+    "corpus": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\InsureRAG-VLM\\data\\04_curated",
+    "endpoint": "http://127.0.0.1:11435",
+    "model": "qwen2.5:3b",
+    "output": "reports\\research_v1\\qwen25_test_frozen",
+    "split": "test",
+    "mode": "both",
+    "retrieval_model": "local-hashing",
+    "retrieval_mode": "hybrid_text",
+    "top_k": 3,
+    "max_context_chars": 8000,
+    "num_ctx": 8192,
+    "num_predict": 192,
+    "timeout": 600,
+    "limit": null,
+    "validate_only": false
+  },
+  "prompt_contract_sha256": "acd6269f20c52cd11627aaf5a6643903fdc364b6ae73ef92bc5c481a6f4b5519",
+  "code_sha256": {
+    "scripts\\eval_research_benchmark.py": "1eac538ca4328b47c42c21627c402643c473fdfdaaa7ba6cfc63daa558e1e1e5",
+    "src\\insurerag_vlm\\hybrid_pipeline.py": "bfd30be26825f8028df3c3ff0fe10f09f4b79696b091987a501b9091d492919b",
+    "src\\insurerag_vlm\\retriever.py": "f9d17a456d84bda779bdf78a9c2135bae0c0a955e1ac15ba9bb6c4e44123f85e",
+    "src\\insurerag_vlm\\config.py": "8f4f798e0d449376bf60424432f566b45b90c83ca09e59ecad4a9bfd4e55818f"
+  },
+  "adapter_status": "No project SFT adapter is loaded; exact local Ollama tag and digest only.",
+  "evaluation_path": "hybrid_pipeline.query_with_ranking plus benchmark JSON generation contract; no app repair or query_structured postprocessing.",
+  "score_version": "v2_context_audit",
+  "primary_answer_metric": "context_grounded_key_pass",
+  "metric_warning": "Deterministic answer-key/evidence contract checks are not semantic accuracy or a production insurance error rate. Historical grounded_key_pass checks full corpus pages; context_grounded_key_pass additionally checks the exact supplied source section and completed generation. Wilson intervals treat questions as independent and do not account for document clustering.",
+  "runtime_environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "logical_cpu_count": 24,
+    "package_versions": {
+      "numpy": "2.5.3",
+      "requests": "2.34.2",
+      "torch": "2.14.0+cpu",
+      "transformers": "5.17.0",
+      "scikit-learn": "1.9.1"
+    },
+    "memory_note": "Per-request Ollama api/ps reports model size and size_vram; physical RAM is not inferred."
+  },
+  "request_schedule": [
+    {
+      "id": "test_md_auto_insurance_guide_01",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_md_auto_insurance_guide_01",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_md_auto_insurance_guide_02",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_md_auto_insurance_guide_02",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_md_auto_insurance_guide_03",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_md_auto_insurance_guide_03",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_md_auto_insurance_guide_04",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_md_auto_insurance_guide_04",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_md_auto_insurance_guide_05",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_md_auto_insurance_guide_05",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_md_auto_insurance_guide_06",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_md_auto_insurance_guide_06",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_01",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_01",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_02",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_02",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_03",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_03",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_04",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_04",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_05",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_05",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_06",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_06",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_01",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_01",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_02",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_02",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_03",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_03",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_04",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_04",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_05",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_05",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_06",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_06",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_01",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_01",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_02",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_02",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_03",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_03",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_04",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_04",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_05",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_05",
+      "mode": "oracle"
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_06",
+      "mode": "retrieved"
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_06",
+      "mode": "oracle"
+    }
+  ],
+  "index_build_seconds": {
+    "md_auto_insurance_guide": 0.16750510002020746,
+    "md_homeowners_insurance_guide": 0.08370140002807602,
+    "nc_disability_insurance_guide": 0.02849429997149855,
+    "nc_travel_insurance_guide": 0.02540499996393919
+  },
+  "finished_utc": "2026-09-20T22:50:46.326611+00:00",
+  "completed_requests": 48,
+  "request_errors": 0,
+  "predictions_sha256": "5bd48c22eaf8362b8a1390c639406b0a2f33294a116a3d4f9ba7891ba45d7d72"
+}

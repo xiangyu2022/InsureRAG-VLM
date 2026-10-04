@@ -1,0 +1,362 @@
+{
+  "valid": {
+    "transition_counts": {
+      "bge_1_rrf_1": 1106,
+      "bge_1_bm25_0": 485,
+      "bge_0_rrf_0": 569,
+      "bge_0_bm25_0": 591,
+      "bge_1_bm25_1": 835,
+      "bge_1_rrf_0": 214,
+      "bge_0_rrf_1": 111,
+      "bge_0_bm25_1": 89
+    },
+    "first_lost_examples": [
+      {
+        "id": "iqa_v2_valid_00007",
+        "question": "How Much Does Medicare Pay For A Ct Scan?",
+        "gold_ids": [
+          "1274",
+          "20195"
+        ],
+        "positions": {
+          "bge": {
+            "1274": 13,
+            "20195": 6
+          },
+          "bm25": {
+            "1274": 23,
+            "20195": null
+          },
+          "rrf": {
+            "1274": 11,
+            "20195": 25
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_valid_00010",
+        "question": "Is Universal Life Insurance A Good Idea?",
+        "gold_ids": [
+          "10035",
+          "1829"
+        ],
+        "positions": {
+          "bge": {
+            "10035": 16,
+            "1829": 9
+          },
+          "bm25": {
+            "10035": null,
+            "1829": null
+          },
+          "rrf": {
+            "10035": 36,
+            "1829": 25
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_valid_00032",
+        "question": "What Do Life Insurance Agents Get Paid?",
+        "gold_ids": [
+          "14565",
+          "20150",
+          "7893"
+        ],
+        "positions": {
+          "bge": {
+            "14565": 26,
+            "20150": null,
+            "7893": 5
+          },
+          "bm25": {
+            "14565": null,
+            "20150": null,
+            "7893": null
+          },
+          "rrf": {
+            "14565": 54,
+            "20150": null,
+            "7893": 20
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_valid_00047",
+        "question": "Should I Get Insurance When I Rent A Car?",
+        "gold_ids": [
+          "8406"
+        ],
+        "positions": {
+          "bge": {
+            "8406": 3
+          },
+          "bm25": {
+            "8406": null
+          },
+          "rrf": {
+            "8406": 27
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_valid_00062",
+        "question": "How To Compare Health Insurance Plans?",
+        "gold_ids": [
+          "7050"
+        ],
+        "positions": {
+          "bge": {
+            "7050": 10
+          },
+          "bm25": {
+            "7050": null
+          },
+          "rrf": {
+            "7050": 27
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_valid_00070",
+        "question": "Why Would Someone Need Life Insurance?",
+        "gold_ids": [
+          "21662",
+          "24714",
+          "3776",
+          "8086"
+        ],
+        "positions": {
+          "bge": {
+            "21662": null,
+            "24714": null,
+            "3776": null,
+            "8086": 8
+          },
+          "bm25": {
+            "21662": null,
+            "24714": null,
+            "3776": null,
+            "8086": null
+          },
+          "rrf": {
+            "21662": null,
+            "24714": null,
+            "3776": null,
+            "8086": 25
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_valid_00081",
+        "question": "Why Is It Good To Invest In Retirement Annuities?",
+        "gold_ids": [
+          "9611"
+        ],
+        "positions": {
+          "bge": {
+            "9611": 6
+          },
+          "bm25": {
+            "9611": 84
+          },
+          "rrf": {
+            "9611": 16
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_valid_00096",
+        "question": "What's Long Term Disability Insurance?",
+        "gold_ids": [
+          "19878"
+        ],
+        "positions": {
+          "bge": {
+            "19878": 2
+          },
+          "bm25": {
+            "19878": null
+          },
+          "rrf": {
+            "19878": 33
+          }
+        }
+      }
+    ]
+  },
+  "test": {
+    "transition_counts": {
+      "bge_1_rrf_1": 1161,
+      "bge_1_bm25_0": 463,
+      "bge_0_rrf_0": 552,
+      "bge_0_bm25_0": 572,
+      "bge_1_bm25_1": 887,
+      "bge_1_rrf_0": 189,
+      "bge_0_rrf_1": 98,
+      "bge_0_bm25_1": 78
+    },
+    "first_lost_examples": [
+      {
+        "id": "iqa_v2_test_00008",
+        "question": "Why Is Health Insurance So Expensive In New York?",
+        "gold_ids": [
+          "3183"
+        ],
+        "positions": {
+          "bge": {
+            "3183": 1
+          },
+          "bm25": {
+            "3183": null
+          },
+          "rrf": {
+            "3183": 16
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_test_00020",
+        "question": "How Much Optional Life Insurance Do I Need?",
+        "gold_ids": [
+          "12810",
+          "13338",
+          "3011"
+        ],
+        "positions": {
+          "bge": {
+            "12810": null,
+            "13338": 6,
+            "3011": null
+          },
+          "bm25": {
+            "12810": null,
+            "13338": null,
+            "3011": 16
+          },
+          "rrf": {
+            "12810": null,
+            "13338": 20,
+            "3011": 37
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_test_00028",
+        "question": "How To File A Renters Insurance Claim?",
+        "gold_ids": [
+          "16207"
+        ],
+        "positions": {
+          "bge": {
+            "16207": 2
+          },
+          "bm25": {
+            "16207": null
+          },
+          "rrf": {
+            "16207": 17
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_test_00029",
+        "question": "What Do I Need To Know About Buying Life Insurance?",
+        "gold_ids": [
+          "2894"
+        ],
+        "positions": {
+          "bge": {
+            "2894": 5
+          },
+          "bm25": {
+            "2894": null
+          },
+          "rrf": {
+            "2894": 16
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_test_00040",
+        "question": "How Can I Reduce My Auto Insurance?",
+        "gold_ids": [
+          "11193",
+          "8661"
+        ],
+        "positions": {
+          "bge": {
+            "11193": 5,
+            "8661": 30
+          },
+          "bm25": {
+            "11193": null,
+            "8661": null
+          },
+          "rrf": {
+            "11193": 17,
+            "8661": 61
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_test_00054",
+        "question": "What Does Car Insurance Group 5 Mean?",
+        "gold_ids": [
+          "10146"
+        ],
+        "positions": {
+          "bge": {
+            "10146": 5
+          },
+          "bm25": {
+            "10146": null
+          },
+          "rrf": {
+            "10146": 11
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_test_00072",
+        "question": "What Is The Right Age To Buy Long Term Care Insurance?",
+        "gold_ids": [
+          "24646",
+          "894"
+        ],
+        "positions": {
+          "bge": {
+            "24646": 60,
+            "894": 1
+          },
+          "bm25": {
+            "24646": null,
+            "894": 88
+          },
+          "rrf": {
+            "24646": 97,
+            "894": 16
+          }
+        }
+      },
+      {
+        "id": "iqa_v2_test_00078",
+        "question": "When To Sign Up For Medicare Part A?",
+        "gold_ids": [
+          "18487"
+        ],
+        "positions": {
+          "bge": {
+            "18487": 9
+          },
+          "bm25": {
+            "18487": 78
+          },
+          "rrf": {
+            "18487": 23
+          }
+        }
+      }
+    ]
+  }
+}

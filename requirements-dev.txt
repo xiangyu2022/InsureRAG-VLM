@@ -1,0 +1,5 @@
+-r requirements.txt
+pytest>=9,<10
+# Frozen synthetic PDF/PNG fixtures require a fixed rendering implementation.
+PyMuPDF==1.28.2
+Pillow==12.3.0

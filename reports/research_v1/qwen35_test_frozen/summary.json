@@ -1,0 +1,203 @@
+{
+  "oracle": {
+    "score_version": "v2_context_audit",
+    "primary_answer_metric": "context_grounded_key_pass",
+    "cases": 24,
+    "answerable_cases": 16,
+    "unsupported_cases": 8,
+    "transport_errors": 0,
+    "answer_key_match": {
+      "successes": 15,
+      "total": 16,
+      "rate": 0.9375,
+      "ci95_low": 0.7167126242970107,
+      "ci95_high": 0.9888806552353576
+    },
+    "citation_match": {
+      "successes": 13,
+      "total": 16,
+      "rate": 0.8125,
+      "ci95_low": 0.5699111903802586,
+      "ci95_high": 0.9340840092857187
+    },
+    "verbatim_evidence": {
+      "successes": 12,
+      "total": 16,
+      "rate": 0.75,
+      "ci95_low": 0.5050168346449122,
+      "ci95_high": 0.8981793250878696
+    },
+    "gold_span_covered": {
+      "successes": 15,
+      "total": 16,
+      "rate": 0.9375,
+      "ci95_low": 0.7167126242970107,
+      "ci95_high": 0.9888806552353576
+    },
+    "grounded_key_pass": {
+      "successes": 11,
+      "total": 16,
+      "rate": 0.6875,
+      "ci95_low": 0.44404355834740666,
+      "ci95_high": 0.8583535614521796
+    },
+    "source_in_context": {
+      "successes": 13,
+      "total": 16,
+      "rate": 0.8125,
+      "ci95_low": 0.5699111903802586,
+      "ci95_high": 0.9340840092857187
+    },
+    "evidence_in_context": {
+      "successes": 12,
+      "total": 16,
+      "rate": 0.75,
+      "ci95_low": 0.5050168346449122,
+      "ci95_high": 0.8981793250878696
+    },
+    "context_grounded_key_pass": {
+      "successes": 11,
+      "total": 16,
+      "rate": 0.6875,
+      "ci95_low": 0.44404355834740666,
+      "ci95_high": 0.8583535614521796
+    },
+    "strict_unsupported_abstention": {
+      "successes": 8,
+      "total": 8,
+      "rate": 1.0,
+      "ci95_low": 0.6755924351161198,
+      "ci95_high": 1.0
+    },
+    "completed_strict_unsupported_abstention": {
+      "successes": 8,
+      "total": 8,
+      "rate": 1.0,
+      "ci95_low": 0.6755924351161198,
+      "ci95_high": 1.0
+    },
+    "generation_complete": {
+      "successes": 24,
+      "total": 24,
+      "rate": 1.0,
+      "ci95_low": 0.8620237953250198,
+      "ci95_high": 1.0
+    },
+    "json_contract_success": {
+      "successes": 24,
+      "total": 24,
+      "rate": 1.0,
+      "ci95_low": 0.8620237953250198,
+      "ci95_high": 1.0
+    },
+    "wall_seconds": {
+      "p50": 1.0209959500061814,
+      "p95": 1.750312949958606,
+      "total": 24.70200559985824
+    }
+  },
+  "retrieved": {
+    "score_version": "v2_context_audit",
+    "primary_answer_metric": "context_grounded_key_pass",
+    "cases": 24,
+    "answerable_cases": 16,
+    "unsupported_cases": 8,
+    "transport_errors": 0,
+    "answer_key_match": {
+      "successes": 12,
+      "total": 16,
+      "rate": 0.75,
+      "ci95_low": 0.5050168346449122,
+      "ci95_high": 0.8981793250878696
+    },
+    "citation_match": {
+      "successes": 11,
+      "total": 16,
+      "rate": 0.6875,
+      "ci95_low": 0.44404355834740666,
+      "ci95_high": 0.8583535614521796
+    },
+    "verbatim_evidence": {
+      "successes": 13,
+      "total": 16,
+      "rate": 0.8125,
+      "ci95_low": 0.5699111903802586,
+      "ci95_high": 0.9340840092857187
+    },
+    "gold_span_covered": {
+      "successes": 10,
+      "total": 16,
+      "rate": 0.625,
+      "ci95_low": 0.38641040545502714,
+      "ci95_high": 0.8151876744113636
+    },
+    "grounded_key_pass": {
+      "successes": 9,
+      "total": 16,
+      "rate": 0.5625,
+      "ci95_low": 0.331785563988119,
+      "ci95_high": 0.7690134759450765
+    },
+    "source_in_context": {
+      "successes": 13,
+      "total": 16,
+      "rate": 0.8125,
+      "ci95_low": 0.5699111903802586,
+      "ci95_high": 0.9340840092857187
+    },
+    "evidence_in_context": {
+      "successes": 13,
+      "total": 16,
+      "rate": 0.8125,
+      "ci95_low": 0.5699111903802586,
+      "ci95_high": 0.9340840092857187
+    },
+    "context_grounded_key_pass": {
+      "successes": 9,
+      "total": 16,
+      "rate": 0.5625,
+      "ci95_low": 0.331785563988119,
+      "ci95_high": 0.7690134759450765
+    },
+    "retrieval_hit_at_k": {
+      "successes": 14,
+      "total": 16,
+      "rate": 0.875,
+      "ci95_low": 0.639771727342413,
+      "ci95_high": 0.9650225122567595
+    },
+    "strict_unsupported_abstention": {
+      "successes": 8,
+      "total": 8,
+      "rate": 1.0,
+      "ci95_low": 0.6755924351161198,
+      "ci95_high": 1.0
+    },
+    "completed_strict_unsupported_abstention": {
+      "successes": 8,
+      "total": 8,
+      "rate": 1.0,
+      "ci95_low": 0.6755924351161198,
+      "ci95_high": 1.0
+    },
+    "generation_complete": {
+      "successes": 24,
+      "total": 24,
+      "rate": 1.0,
+      "ci95_low": 0.8620237953250198,
+      "ci95_high": 1.0
+    },
+    "json_contract_success": {
+      "successes": 24,
+      "total": 24,
+      "rate": 1.0,
+      "ci95_low": 0.8620237953250198,
+      "ci95_high": 1.0
+    },
+    "wall_seconds": {
+      "p50": 1.0594471000076737,
+      "p95": 2.0233865049725854,
+      "total": 29.70514549984364
+    }
+  }
+}

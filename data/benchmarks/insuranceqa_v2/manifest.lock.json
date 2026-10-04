@@ -1,0 +1,29 @@
+{
+  "version": "insuranceqa_v2_retrieval_v1",
+  "created_utc": "2026-10-01T16:51:22.342749+00:00",
+  "upstream_revision": "5c380dd086067adacc2fec3bfa920a78e57bdcf6",
+  "upstream_repository": "https://github.com/shuzi/insuranceQA",
+  "use_terms": "Upstream: provided as is and for research purpose only. Cite Feng et al., ASRU 2015. Not relicensed by this repository.",
+  "corpus_type": "Historical professional FAQ answers, not policy pages or legal authority",
+  "files": {
+    "answers.jsonl": "50cffb3351cae585e21af23454e9946354eb88ce36028e59e1d1c286e994eda2",
+    "audit.json": "77776f73075644bc3291f6457204c4b2080d708e2434ca529060f63eea79f2a4",
+    "provenance.json": "8c501a5eaca3aa9afa9d9666d60c39285875afabc6ca1c3fe768d25913483998",
+    "test.jsonl": "85129e408c92e63784453a10e1a6afe1ffef4714170646860859f76488c2ea44",
+    "train.jsonl": "71cbbf10579a30e070ad22ee44b2c52519e987d1da24ca15f23dccd3202a9671",
+    "upstream/README.md": "7a158e058a68a70837373fe54998fcc53e6bd7e197ac5f5c8c52807ea0cabaf9",
+    "upstream/V2/InsuranceQA.label2answer.raw.encoded.gz": "25f63201c51e3e2e5c73ca30da114bf8c77c8f40194550148e469a430cceabd2",
+    "upstream/V2/InsuranceQA.question.anslabel.raw.100.pool.solr.train.encoded.gz": "7da9e607180ad5c47cb4069c7480cb4eb198ef88f59a2be62383a67ccb2a6981",
+    "upstream/V2/InsuranceQA.question.anslabel.raw.1000.pool.solr.test.encoded.gz": "519e59478f7afb6ba2c47093af347fb939c97ccdd948d948a0459b7f88f63db4",
+    "upstream/V2/InsuranceQA.question.anslabel.raw.1000.pool.solr.valid.encoded.gz": "ffef57c3d551d75979455e08e6788fc07f776044c8e78f1c7d997fca886c0bb5",
+    "upstream/V2/README.md": "c11889c2c2539a56650453a9962bbba95b5d812f20770d41dba8703dd0c3735a",
+    "upstream/V2/vocabulary": "087ad8bd0254b57711082856b24d3526178b407d6f849798af1e34f599b2557d",
+    "valid.jsonl": "acf03a69edc7e11f9c3d114a7fa676dd395b464cacc75aef0d24c131e974c502"
+  },
+  "counts": {
+    "train": 12889,
+    "valid": 2000,
+    "test": 2000
+  },
+  "answers": 27413
+}

@@ -1,0 +1,359 @@
+{
+  "created_utc": "2026-10-03T02:07:21.157105+00:00",
+  "historical_control_parity": {
+    "insuranceqa": {
+      "n": 2000,
+      "hit_at_1_changed_rows": 0,
+      "hit_at_5_changed_rows": 0,
+      "hit_at_10_changed_rows": 0,
+      "hit_at_100_changed_rows": 0,
+      "mrr_at_100_changed_rows": 0,
+      "label_recall_at_10_changed_rows": 0,
+      "top100_order_changed_rows": 61
+    },
+    "multidomain": {
+      "n": 681,
+      "hit_at_1_changed_rows": 0,
+      "hit_at_5_changed_rows": 0,
+      "hit_at_10_changed_rows": 0,
+      "hit_at_100_changed_rows": 0,
+      "mrr_at_100_changed_rows": 0,
+      "label_recall_at_10_changed_rows": 0,
+      "top100_order_changed_rows": 5
+    },
+    "historical_government": {
+      "n": 416,
+      "hit_at_1_changed_rows": 0,
+      "hit_at_5_changed_rows": 0,
+      "hit_at_10_changed_rows": 0,
+      "hit_at_100_changed_rows": 0,
+      "mrr_at_100_changed_rows": 0,
+      "label_recall_at_10_changed_rows": 0,
+      "top100_order_changed_rows": 15
+    },
+    "condition_government": {
+      "n": 157,
+      "hit_at_1_changed_rows": 0,
+      "hit_at_5_changed_rows": 0,
+      "hit_at_10_changed_rows": 0,
+      "hit_at_100_changed_rows": 0,
+      "mrr_at_100_changed_rows": 0,
+      "label_recall_at_10_changed_rows": 0,
+      "top100_order_changed_rows": 3
+    }
+  },
+  "failure_stages": {
+    "insuranceqa/all/original": {
+      "n": 2000,
+      "hit10": 1485,
+      "candidate_missing": 194,
+      "reranking_miss": 321
+    },
+    "insuranceqa/all/seed_42_epoch_2_a50": {
+      "n": 2000,
+      "hit10": 1513,
+      "reranking_miss": 311,
+      "candidate_missing": 176
+    },
+    "multidomain/government/original": {
+      "n": 81,
+      "hit10": 78,
+      "reranking_miss": 3
+    },
+    "multidomain/government/seed_42_epoch_2_a50": {
+      "n": 81,
+      "hit10": 80,
+      "reranking_miss": 1
+    },
+    "multidomain/general/original": {
+      "n": 600,
+      "hit10": 590,
+      "reranking_miss": 4,
+      "candidate_missing": 6
+    },
+    "multidomain/general/seed_42_epoch_2_a50": {
+      "n": 600,
+      "hit10": 592,
+      "reranking_miss": 3,
+      "candidate_missing": 5
+    },
+    "fiqa/all/original": {
+      "n": 648,
+      "hit10": 437,
+      "candidate_missing": 72,
+      "reranking_miss": 139
+    },
+    "fiqa/all/seed_42_epoch_2_a50": {
+      "n": 648,
+      "hit10": 442,
+      "candidate_missing": 73,
+      "reranking_miss": 133
+    },
+    "historical_government/all/original": {
+      "n": 416,
+      "hit10": 404,
+      "reranking_miss": 9,
+      "candidate_missing": 3
+    },
+    "historical_government/all/seed_42_epoch_2_a50": {
+      "n": 416,
+      "hit10": 403,
+      "reranking_miss": 10,
+      "candidate_missing": 3
+    },
+    "condition_government/all/original": {
+      "n": 157,
+      "hit10": 156,
+      "reranking_miss": 1
+    },
+    "condition_government/all/seed_42_epoch_2_a50": {
+      "n": 157,
+      "hit10": 156,
+      "reranking_miss": 1
+    }
+  },
+  "historical_faq_recall_transition": {
+    "old_missing_n": 194,
+    "entered_candidates": 28,
+    "recovered_hit10": 6,
+    "new_candidate_losses": 10
+  },
+  "fiqa_sensitivity": {
+    "exclude_one_prior_reranker_near_question": {
+      "n": 647,
+      "summaries": {
+        "bge": {
+          "n": 647,
+          "hit_at_1": 0.40030911901081917,
+          "hit_at_5": 0.5873261205564142,
+          "hit_at_10": 0.6738794435857806,
+          "hit_at_100": 0.8578052550231839,
+          "mrr_at_100": 0.4942593299685572,
+          "label_recall_at_10": 0.46397737158942726,
+          "hit_at_1_wilson_95": [
+            0.3632509896417933,
+            0.4385440585197909
+          ],
+          "hit_at_10_wilson_95": [
+            0.6368229343276491,
+            0.7088833770184252
+          ],
+          "ndcg_at_10": 0.4032430960658065,
+          "candidate_hit": 0.8578052550231839
+        },
+        "original": {
+          "n": 647,
+          "hit_at_1": 0.40030911901081917,
+          "hit_at_5": 0.6012364760432767,
+          "hit_at_10": 0.6738794435857806,
+          "hit_at_100": 0.8794435857805255,
+          "mrr_at_100": 0.49529421637813903,
+          "label_recall_at_10": 0.4768053301669994,
+          "hit_at_1_wilson_95": [
+            0.3632509896417933,
+            0.4385440585197909
+          ],
+          "hit_at_10_wilson_95": [
+            0.6368229343276491,
+            0.7088833770184252
+          ],
+          "ndcg_at_10": 0.41055115169589035,
+          "candidate_hit": 0.8887171561051005
+        },
+        "seed_42_epoch_2_a50": {
+          "n": 647,
+          "hit_at_1": 0.4080370942812983,
+          "hit_at_5": 0.6027820710973725,
+          "hit_at_10": 0.6816074188562596,
+          "hit_at_100": 0.8778979907264297,
+          "mrr_at_100": 0.49892237242352133,
+          "label_recall_at_10": 0.48531950189600886,
+          "hit_at_1_wilson_95": [
+            0.370818109275842,
+            0.4463416638344565
+          ],
+          "hit_at_10_wilson_95": [
+            0.6447296833621685,
+            0.7163413529326201
+          ],
+          "ndcg_at_10": 0.414265111596209,
+          "candidate_hit": 0.8871715610510046
+        }
+      },
+      "paired_selected_minus_original": {
+        "n": 647,
+        "clusters": 647,
+        "bootstrap_repetitions": 5000,
+        "cluster_unit": "shared-gold connected components",
+        "multiple_comparisons_adjusted": false,
+        "metrics": {
+          "hit_at_1": {
+            "difference": 0.0077279752704791345,
+            "cluster_bootstrap_95ci": [
+              -0.00463678516228748,
+              0.02009273570324575
+            ],
+            "wins": 12,
+            "losses": 7
+          },
+          "hit_at_10": {
+            "difference": 0.0077279752704791345,
+            "cluster_bootstrap_95ci": [
+              -0.0061823802163833074,
+              0.021638330757341576
+            ],
+            "wins": 13,
+            "losses": 8
+          },
+          "mrr_at_100": {
+            "difference": 0.0036281560453823394,
+            "cluster_bootstrap_95ci": [
+              -0.004357073832365418,
+              0.01143894849098761
+            ],
+            "wins": 124,
+            "losses": 95
+          },
+          "ndcg_at_10": {
+            "difference": 0.003713959900318572,
+            "cluster_bootstrap_95ci": [
+              -0.0016218005196027368,
+              0.008953472864594731
+            ],
+            "wins": 91,
+            "losses": 91
+          },
+          "candidate_hit": {
+            "difference": -0.0015455950540958269,
+            "cluster_bootstrap_95ci": [
+              -0.012364760432766615,
+              0.0077279752704791345
+            ],
+            "wins": 5,
+            "losses": 6
+          }
+        }
+      }
+    },
+    "insurance_keywords_only_descriptive": {
+      "n": 15,
+      "summaries": {
+        "bge": {
+          "n": 15,
+          "hit_at_1": 0.6,
+          "hit_at_5": 0.6666666666666666,
+          "hit_at_10": 0.7333333333333333,
+          "hit_at_100": 0.9333333333333333,
+          "mrr_at_100": 0.6518836850871303,
+          "label_recall_at_10": 0.5933333333333334,
+          "hit_at_1_wilson_95": [
+            0.357468301206246,
+            0.8017550385865841
+          ],
+          "hit_at_10_wilson_95": [
+            0.4804956594401943,
+            0.8910254667430761
+          ],
+          "ndcg_at_10": 0.5702123720808732,
+          "candidate_hit": 0.9333333333333333
+        },
+        "original": {
+          "n": 15,
+          "hit_at_1": 0.6666666666666666,
+          "hit_at_5": 0.7333333333333333,
+          "hit_at_10": 0.8,
+          "hit_at_100": 0.9333333333333333,
+          "mrr_at_100": 0.701418439716312,
+          "label_recall_at_10": 0.6433333333333333,
+          "hit_at_1_wilson_95": [
+            0.41713547738519774,
+            0.8482367556028526
+          ],
+          "hit_at_10_wilson_95": [
+            0.5481455128483065,
+            0.9295245065301844
+          ],
+          "ndcg_at_10": 0.6231919889860185,
+          "candidate_hit": 0.9333333333333333
+        },
+        "seed_42_epoch_2_a50": {
+          "n": 15,
+          "hit_at_1": 0.6,
+          "hit_at_5": 0.7333333333333333,
+          "hit_at_10": 0.8,
+          "hit_at_100": 0.9333333333333333,
+          "mrr_at_100": 0.668344671201814,
+          "label_recall_at_10": 0.6433333333333333,
+          "hit_at_1_wilson_95": [
+            0.357468301206246,
+            0.8017550385865841
+          ],
+          "hit_at_10_wilson_95": [
+            0.5481455128483065,
+            0.9295245065301844
+          ],
+          "ndcg_at_10": 0.6062635187154262,
+          "candidate_hit": 0.9333333333333333
+        }
+      },
+      "paired_selected_minus_original": {
+        "n": 15,
+        "clusters": 15,
+        "bootstrap_repetitions": 5000,
+        "cluster_unit": "shared-gold connected components",
+        "multiple_comparisons_adjusted": false,
+        "metrics": {
+          "hit_at_1": {
+            "difference": -0.06666666666666667,
+            "cluster_bootstrap_95ci": [
+              -0.2,
+              0.0
+            ],
+            "wins": 0,
+            "losses": 1
+          },
+          "hit_at_10": {
+            "difference": 0.0,
+            "cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "wins": 0,
+            "losses": 0
+          },
+          "mrr_at_100": {
+            "difference": -0.033073768514497996,
+            "cluster_bootstrap_95ci": [
+              -0.10005789549862497,
+              0.0008380373425965913
+            ],
+            "wins": 1,
+            "losses": 2
+          },
+          "ndcg_at_10": {
+            "difference": -0.016928470270592202,
+            "cluster_bootstrap_95ci": [
+              -0.05190364371642683,
+              0.00592082161302927
+            ],
+            "wins": 1,
+            "losses": 2
+          },
+          "candidate_hit": {
+            "difference": 0.0,
+            "cluster_bootstrap_95ci": [
+              0.0,
+              0.0
+            ],
+            "wins": 0,
+            "losses": 0
+          }
+        }
+      }
+    }
+  },
+  "test_predictions_sha256": "046a3401d19b8f80eba187071853adeba0446500a16581c8dfce7415ea8aecd9",
+  "selection_unchanged_sha256": "431317429ff2eaabe0891902628aa71b78f703395e5efc031963b5cdd05227dd",
+  "post_test_diagnostic_only": true,
+  "code_sha256": "458aa5da64d638a43b678fdf15cc4bf1fe27ecc3f478156fc4536c9f8ca0425c"
+}

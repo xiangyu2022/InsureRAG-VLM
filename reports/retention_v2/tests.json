@@ -1,0 +1,20 @@
+{
+  "full_environment": {
+    "command": "../.venv/Scripts/python.exe -m pytest -q",
+    "passed": 272,
+    "subtests_passed": 58
+  },
+  "minimal_environment": {
+    "command": "../.venv-minimal/Scripts/python.exe -m pytest -q",
+    "passed": 258,
+    "skipped": 8,
+    "subtests_passed": 58
+  },
+  "new_retention_tests": {
+    "passed": 7
+  },
+  "notes": [
+    "One optional data-preparation test module is skipped when scikit-learn is absent.",
+    "Windows CRLF-aware git diff --check passed."
+  ]
+}

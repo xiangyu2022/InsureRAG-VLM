@@ -1,0 +1,5615 @@
+{
+  "quality_excluded_records": {
+    "hicric_c6f1b7e8feddbf7e": "Observed severe repeated-glyph OCR in question and answer text before model inference"
+  },
+  "government_extraction": [
+    {
+      "record_id": "hicric_0cc329dc6d185f41",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7eba787aeeb394a8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_455ef8774d193923",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3868153fbcd59e1e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_eb926f91908b21b8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4c68afcdaa5e4f89",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7fb3e4f3b0eeb663",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c3b83d56ff81c410",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f7dd8af9c410708e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b0a65141da5994b9",
+      "accepted": 0,
+      "rejections": {
+        "no_answer_marker_or_faq_title": 1
+      }
+    },
+    {
+      "record_id": "hicric_2cf53f920ac3fe8b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e87cff8d9bcfceea",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_75217374b13e1ecd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a42d10daa7563927",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6fcab2066b4105e8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_cb52f1faa3c2443d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bec95aa5542f741b",
+      "accepted": 0,
+      "rejections": {
+        "no_answer_marker_or_faq_title": 1
+      }
+    },
+    {
+      "record_id": "hicric_460fe3b4bac3eecd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_81388d76fac17fc3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3f012757bc362606",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6495a1218ba541fc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1197ab85dae36655",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ca613d0e4433a801",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d0c8f91224999e58",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_962157598eaeb03e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_09f1ef86e6ca4884",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2b5dcab1a9ccc423",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_7b899a1f8623a479",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5e6801f490ed53c3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fdb2f96dd1845849",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b05963c3d0c20fc9",
+      "accepted": 0,
+      "rejections": {
+        "no_answer_marker_or_faq_title": 4,
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_99eb1a03739cfa00",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f33389240a4d7862",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_32cc9bc01430bb42",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_211a7fd8e7abb15c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b124bb0f56847ea9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2a443530f8a4c2b6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d5a78dd7646d8003",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_947547a0b6eba172",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0d5bc4255e29bc22",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0c71927fc6bb535b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_674deac7095547ee",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c04bb9cfab8bf326",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ff917b9347bbbae9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5068b92ab4abb33b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_197a008f75fbf4c8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_debb6126a6e68e14",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_93d9aaf6a2237768",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e448686fb1c374aa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5babba60f1529334",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6b0bb02db833c1df",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7aef8505094b5067",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fef5ab8702498fb3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_376ef620d349ed9c",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_ed97b569233399d9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1ee3353d1d3528e9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_06afca9b65a94cff",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d89fe6e111ff0623",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fea13be8e5f0b251",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f04c62656ae2157c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_546c62148918c4e8",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_4b78b3bfb18a3b2a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d19a615e3f6eeca0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a629b250eb622983",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2c009c99f7062fab",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9d4db2da8f2bde09",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3b49da04a2d801ed",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_97217e0565b9395d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1f02ce95fab4023c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0dee61b8ab59ada5",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_5b6b8d85a96ab3aa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_26772799ccb91451",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_057f9364065adc76",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_139e86f9453498b9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2fe3ed0740291ac2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0c83d935b566fbd3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bdd7e2025aa74905",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_27c85cee565b3886",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_02db58819ac3d5ac",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f73bf0c3d62d5824",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_293d81c4b452d206",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a8c2d93bacdfe1c9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d76ce363eef7aa9b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_cdfc9542784071d4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_19b032bf3c573146",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1ec89758564c080a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_cc8e12b43d4a179a",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 10,
+        "no_answer_marker_or_faq_title": 1
+      }
+    },
+    {
+      "record_id": "hicric_7f3ed11dbf89c16c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dd721692dd8d5078",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9ab8d18814b49a24",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bf1ad4cdd8b89be1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dc5df02025122c1d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_848c394ca5b2bd89",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_19d2c5d4884dbde7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_609cd44bbc4c31c6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1d4e1b1af581692b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1f77eb89da645683",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_828563a70310c5d9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7e6f088d020e3ba5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4fa49e2818b389c6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a34919682874ea20",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_43bfa01b91c3e71a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1bddb45d83ef9efc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_92bd3547f4bf125c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5202b75208c4b93c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d91788338c962d35",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_a128e9aed288e58b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_549904066aae90ac",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a823201a92ab4106",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a59e96391db01724",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_339fe4b2ea920645",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d5cbc281c5d6496b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_581f58e0bef65b7e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_38fcb7c855b4fde3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_db8cf0cac0ecb600",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2cd1d36df14cdfff",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_41a4ffe398d324d7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5d8ecaf7656b7373",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_94b8987eafafdca3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_231d546b7fa84b3a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_cae5e19ebab31e5d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5d7298ed661f27c8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3499ac3b2033af79",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f782e9453b7a0a79",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_169c4fe6f238c345",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1f37c0605716e27d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9efbd938cc320dbb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_988b1270aab21623",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_00831540492b7c1f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e1df8a07fb5d23cc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_93dbf1afe0c78aa1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_80b92b721d8689c2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3be746d6046cf067",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b65afbe380a92b32",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ed15034284f3fffc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2c24b81bc643934a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e94b8f768c0b78de",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_758f013136779e37",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c458c611bc6a9968",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ef4a7e9ec4c4db2e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_845ad230f9111531",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1e563e0e354e5fb3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6741c2b45079a469",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b328c63d11125ebc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c10e52edebafa2bb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7c5c951814dcddbf",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3984569dddf8a6aa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a28d4f2c6f1b027f",
+      "accepted": 0,
+      "rejections": {
+        "no_answer_marker_or_faq_title": 1
+      }
+    },
+    {
+      "record_id": "hicric_9c29c726ab6ec75d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1fb871c3ec67e00d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_62d4849eed0e0f8d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2cbbda758341b777",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_de98167494a2f609",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e40dc7f2dbb723b9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c67a8b1e52ce556c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9f916e3980bf20ea",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_565415252635718b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d544f13b0f9039ee",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9718ccbe490023f8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7fcf5b270a461a43",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5d0374a23fbac245",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a984739479ae5281",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1bd16cb84885b58f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a94d99425f2ac999",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_002bbb86ba739b59",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dcb5133884dbff26",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7e9e131e037b217e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5006bb9ef2dd3d3b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_428199b8d3759338",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1a68c918d5f69aff",
+      "accepted": 8,
+      "rejections": {
+        "question_shape": 3,
+        "answer_length": 2
+      }
+    },
+    {
+      "record_id": "hicric_3b0c5e09421eddca",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a61285ad77986525",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5a9c0f70e7b236b6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_87623ed0a66597e2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_48d313dbdacc1386",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_662d5657b60ac48a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_af506f30105fae7f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ed75abf347d80acb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3080dfe8f805bf4c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2488d4ac44be3c1b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_42e8de7629aea2a8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_77eeee9a69532e38",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6e62af76d6dc28ce",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_997f7d156063364a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9cc2e98be4c96330",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d02fb5111933dca5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d15537a763c88bec",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_07fef344f937ca07",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5e929116fc6575a6",
+      "accepted": 0,
+      "rejections": {
+        "no_question_paragraph_boundary": 16,
+        "question_shape": 2
+      }
+    },
+    {
+      "record_id": "hicric_b529a86424cd13ca",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_21915697dd018c64",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ab46176428a558f4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_599f7fe90f52d3bb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f7cb8771129f4c4a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2491891dd17b1803",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_72be98a7862785fa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ea087d4569ab3a0a",
+      "accepted": 0,
+      "rejections": {
+        "no_answer_marker_or_faq_title": 4
+      }
+    },
+    {
+      "record_id": "hicric_6e502b31f20d8909",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_116c9e19bfaa16b3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7c118f224605a213",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ca7042283dfdc1fe",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f20e85d4ed4853c8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1ad3efe7dd332b16",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2551394f2e047ac8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_56073f3557776f30",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b364680c44334284",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6eb6d331a1d306b8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b471fa576759f561",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_17f46463e1f697be",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4ddbf91f6851d074",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_131f6c6658327c35",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0e227ca558e6ff27",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e3a3195db0c2aea5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_da68cb5e5be3b3c8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b1159786b55fee29",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e077e90d39adc8e7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d71c2b84b761572b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8d356d6f39e7d7b7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_92dc897e19d60050",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_236ecbc098219028",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_cd5b40f936c343c4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_eef2b350013701d5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_77ba1c949cf38119",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d6746b52dcaf0d28",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_621c47efb7f90629",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b00ebbbacda0b4e9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_09e280654949bb79",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b783b11ce6314ca5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_11f02a61b8f576a8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4ef25b7e62cc1186",
+      "accepted": 18,
+      "rejections": {
+        "question_shape": 1,
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_c3d7e459e49dec91",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6a8d8ae125221c36",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_26731da7fb2cd8d8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_adcccefd11a1a409",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f81f15fd918555c2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_320416557751bc0e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ed4fe8ff00fd1abf",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_26065976525877ef",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8e9c8e0dd653a1bb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_840dbad9265d8ae2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_27cc4cec314dc142",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_480c42b474d903e6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a1f52a036731e2f7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_aa717e27caaec716",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_34aa890f20c6ffc3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_118f5c942abd6ae1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_60916ed23a54f9fb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0ec4b4d08ee4333b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9f37c62e30c6e27d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1effb30a29d98824",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5a4e1830c4cc89ca",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4d823350a6772aeb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e127abc19dc4040b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d2fc7bf3dfdb4cac",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a04e0bcd7dac591b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_872681ab62e8b529",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ee8e0862c9dc6a3c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dab78a7abf6de3a9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fdd2b86f09654c7b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9f80189e935009a4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5b58f5bf195484b0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5bff4088d8753ca1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_587ca7c57c52a96b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ce10822d5ffeae3e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fcb32b8935c336f4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_06242bb75a4d8315",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1014daf012dfad71",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_83f8356fa9a4e69c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e75e26d0862effce",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_19ee670810be2ba5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_16e8ebe735e66f80",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4830f9d183ed5b7b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_81631065ad74d6fd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b2a565c28a7852fa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_02d52fdb4480b998",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_26cfdad032f8dac4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f4a4557787ef9be3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f31a69cae95ef5db",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d6d71363b65ec8af",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fbea1f53a0bb6e76",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_999c1296491938e8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_00b4af14a86136bb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_66c5a660ce15297e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_63e203cda669a567",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f3eca9a84ed0cdcc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bf980a019ea5e040",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0376a78a4f256b46",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9a11c7015624fd61",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_81aca6152717345b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9034ce630b44b32d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6346a6664dd4c43f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e8068a37cf45d626",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f649f389b996128c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0bedcccd4ae53dde",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1f74fc1ee7cfc590",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_88a814ef5ae5fde8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_08790ee1b1336145",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d9ce20db5b877ffa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_98888068fcd001f0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_26011c691f051a98",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_323ea89f6b66851e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dabb606ced2e4e40",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3be5ddc5f630bedc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fc4b8745353c6e1f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_124ed590604194a8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7c06dcc0d59513aa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bdf67809ce37c12d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2ddce1eef81307b3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5042ebec0a762535",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_28732eec60003ad5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c812d7264870a158",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_845aec47ef44fa48",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_883f5039feb28caf",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2854bcd5f572eddd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_817a180ad9a0dbe8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f5696513ee2bd403",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c038d47e800025fa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ffcb4e3c4418e505",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2dc53a410ddb77cf",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_10094d398819d938",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bde42e8894021a88",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_92601e68dc0fa5e3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_217d3f2f14b60984",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_286ea7c77b0be7dc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_478680d58725e3f8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ac194c84f59edf58",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_52394aa61dcc891e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_95c212cd7c0d88c1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8055280ed11b76bc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_50ffb26213989586",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_acfe26fdf16f6137",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e1f9276f933cbc4b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1f1a47c750b0e7ff",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5e8cc1ad0491c7c9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e5572e3e4d58fee0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_190ccdbc2a27482f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_94ed0d4baa9c8de3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fa571074e2a4dbc9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a7db166a4a2a7fe0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c28e1a22d1c09bd1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a0204e7469f38856",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_586b6abb16ee8f15",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b9169a444a99d263",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_44892bab049b4fa3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d5abc7fb08dd59c2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7ed1d9402fd47af4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_81da7c1301e7f40f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_58ab3dfa67414cf0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_44cdb246c23d2e33",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f4d8ececec515bef",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bd68b615ed45faac",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_08db451680f70b8e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_374e59f4837ae9bc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_58c48820ce1425b6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_eddb03247b3c3643",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_813c82f0e8e1c3a8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_887593cb675928a2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_595589223fde0b90",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e6eeedf7118d4ae1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ec22e5b90d982548",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_42c70dfebef7716e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d39c5299f11ed37a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8b5ae56e01aa9f06",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e695006acbb53b80",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_44c13ef45f96d6b8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e11ebe76052b10db",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c330cd1d9f4eb60e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1344cd04ff46f69b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_869662ad84e2d657",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_df1c13e0aa1e2ade",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1bbd99a0475075ac",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bf6e28fc7487f992",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4561100f462dac20",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9c82ea241b77a039",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e6b6791e9f4b4a4e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_cf1d0c99204474f2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0682d278201d08f5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a405c9fb31f53a71",
+      "accepted": 4,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4737360b50ef1a88",
+      "accepted": 5,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_3ec3eb23a66e1fe0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_148f396ffb1dc5fb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_69c8a8e5e28fc9dd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a79a34d222d3f6e8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f11418752bcaecf8",
+      "accepted": 0,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_8d3b7b4d93147b36",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8b42655b9c60cf23",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fabb4b7a4e147285",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ba610510f0192bf4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c4f784758c05d259",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_39afca67c4a4a94c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c7e0a8ceaca89c4e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_968d498fe34bfbb4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ed3d33805cac1a76",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_436ead43be0d5ee9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3cf12f81271308fb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a68e67fe2bd893a1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_01722f504493fc75",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b71d1d77032d30e7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9319681c1262806c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_aa99d9e6765ebcbd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_58ecea5bf6e0e1e3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8743b3f164c17bc0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_62c9ab352e2fe1ff",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3845e425bf105ccb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b99c732c3ff5a5bf",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_43958b0a10790709",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_372991ab1fde051b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b4722256b8d50329",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0bd0f254a2f192db",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_18ec5caffcafbcee",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_053428b6dc097abd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e29c7e7e32fcdb96",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a9776c1bf25584d4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ea8349fefadc52ff",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_21adee16bb00f846",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_220895fe13b1ecb6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_752a51050cbc77db",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_52529b13f419e302",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_830e2a9f5df8254a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e9b5943c9f903d5a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0c2846ae8f0177bc",
+      "accepted": 0,
+      "rejections": {
+        "no_answer_marker_or_faq_title": 15
+      }
+    },
+    {
+      "record_id": "hicric_5ad2689343ae37e3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8186749e7591c9c6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9220d03418b0c2a9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fdf5f0a1211f4795",
+      "accepted": 3,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_0057b723de92a6b8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_10554455172e271e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b2cc4cd290a8f772",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0a618e3ee909e76b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2d1ab366d4f1dd9a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b96b89c5e699e2ae",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1449b71e82737002",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3aab82a81872d5c1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9f1558a27814845d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_62e85f1477e7a79c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d24f4986df9676b2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c2398aebcf93be07",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_53965f3944c83e47",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_441f42a999da7c9e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e5de8e3fc5b74e79",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f908229f67205c46",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e027e83f5209248e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2f8a30abb6be5fbb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1c6f2e59f6dbb036",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_58d3c0a8b5ffeddb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d7912d8eaa8a2f20",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_194226f41baebe8f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7522cb0bcaf4bf38",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a48d7d3c3741f8f0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_91a3992871c991e6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9b47eea989730dae",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e90987c5a3e7780d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_22fdae7622df3fda",
+      "accepted": 0,
+      "rejections": {
+        "no_answer_marker_or_faq_title": 1
+      }
+    },
+    {
+      "record_id": "hicric_983ce74911a2adbb",
+      "accepted": 11,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_08b0c23481cab20b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5ce5bd1be610db85",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f821bf8531d321f7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1a524917ac4dfa1a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7e09a6c8bb198282",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bc5ab3be5fff1493",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2bfcd54729f7eb4c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_17ef4dd8fbea5e99",
+      "accepted": 0,
+      "rejections": {
+        "no_answer_marker_or_faq_title": 1
+      }
+    },
+    {
+      "record_id": "hicric_a57ca80a4c45f91f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3728d9cea319f41e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7a5bf1cd23e471d4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7c7143a9f16caef4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_66573ff41b289cda",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4fccf9a4d18d8844",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dd7552165e649f8d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3a2e0ba0d79f74c9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e9dc9073bf0fc7d7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dab98b1794a8cfd7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0a5fe462492aad04",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dedf42db823b37b4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c761852fbe8601f9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8020500abe6ccd33",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1aef58687412b7e2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f84700d25a036909",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_13c63160db02cbcd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_95a1c0366271306a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_27c3ede7aa4adde5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1b9078827bc34ab4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_811d0d36de9ed912",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9870c0b7f6eeff2e",
+      "accepted": 0,
+      "rejections": {
+        "no_answer_marker_or_faq_title": 62
+      }
+    },
+    {
+      "record_id": "hicric_0fa855aeaf21795f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_00a8bbf1b2c798cd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8a3e04cd0ee14af3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_aab7166b7eee5169",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dd0b7cd561851bdb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dc2acd93d260ad10",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_61195754f784ddb2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d061b462979df7a1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5018d30375f8f985",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f992c1733342fdcd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fa88bb1f12ca532a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_315d2a2025b1d4b4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9467695d23a721a8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e91a17e3d0fd00c4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6b6cf4207b7fe216",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1365ed30b972ef60",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_672b18cd7f1882ef",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a2fce8171a113cae",
+      "accepted": 5,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_13176a53daff2e97",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_943a182b6fd3d649",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a3e58f4ef2c1047d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2eee49c97667f10e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c84381970e2d9bb6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6340475e0c42dffc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_41407d92538b982e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4c11190efdeb8d4c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7f355e6981ad154e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d95ada954f91680b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_064cf2c41bc34a42",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a82cc46ec5ba1c65",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_93892ccae2d681c2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4d3e1c90442e0079",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7a97ba21ba3beb60",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_881f444a3df10992",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_68152c1c4c20e012",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e6840a3f78652d53",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5dc4c9f4c92d0695",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2d4eadfc16ebe176",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5d3386e58fe7b25f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_65501a83f83f43f7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1084ab07558bf5f2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_baf47bd81259b7ef",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7b506047c10cf6ae",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b29373baeebebda4",
+      "accepted": 9,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d22c39885e8f464e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0b0212cac1335e20",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_248112d98a1feffa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c06d40ed171fdb7d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f48d58902603ae22",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e035aa8dec013182",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_47e3540e1b3fa38b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1f1b28224b7a54d0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_68eb87d40b3cbd46",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_45da0c094f63ed5f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dbe092ff6981aaae",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d7ac1e6c3173b1c1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4c813700100c9f6a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_703c640807cbd098",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_78f2927a5369e928",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e136ff15c7ccca7c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6b1df35db5e934c8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1fcdaff103a58021",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_678aaa177dd0f372",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f2aae5aebabbe1ae",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_40b170d6d56c9c31",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_25e54cb6d9acc6c8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d4e4e5ae3ea60989",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_18ff3a556fef4f70",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d93f372c2e0e302c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_29cf8aa4cb7c1027",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4436cd7536d2717f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_14a2251cd87d2071",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ca14b87ea2ed8853",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2e955fea1b4b8c15",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_da495149bfab744f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_820386aec66fda9c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f3426f7e3e67da8d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ed9313a5c6487fd4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d86be3feb1847a65",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b636fcf1527365f5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_378226a7817a5ba1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2e96b66becc50802",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2c1fe20e996f86ae",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_92234f7d3d4400ae",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_76c14a674f5fc2d5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e4ba31ea57829c60",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ca5ba6417b060b83",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_cd6572198e94a50f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_db6bf8033828a772",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_457950b86d1f8f67",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3911e338e4c77e93",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_527292794da1f35e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_63f91e5f1e4006f7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_cc4f7626a5a963b0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_328840a8bf9bd976",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b85d13812c6a42a2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_449144706ff5d17e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9e4ac52c46a898da",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_768acd04b01965c9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b80e88afacd6743e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_364f04b9a01f0ea4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3dca9bede5b517e3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_09f436ffb4f6bfc2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3e333b677e394eda",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2831e9546b504d11",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_65c59a6199311621",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d3910ed114689ddc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ff7855b7aa1dbea9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9a43620394277000",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4c8da36d3383308d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8eb766ff9539930a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_338e0e057dcc598e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_759dc494d259a693",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ae3145d656b556f8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bc9e1d9320a6432c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0557588d289e15f1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1edb6b59550add33",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_faa83226b12e0325",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ccb4b99af69b37c9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_030c079cbe3132c7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_aa372ed51f5d066c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_04ae0af46ad253d8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_865a6105e1b8ac67",
+      "accepted": 0,
+      "rejections": {
+        "answer_length": 4
+      }
+    },
+    {
+      "record_id": "hicric_384341cfe3284519",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3a1ed3e5a347c5b5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7b2aaeff7ebe19aa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_da5116228a2cd516",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6e51461c961ff9a8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9fb823695673bb70",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_020e5c4420cead56",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a426220c8d51088c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ce2a48d0c3a4ac7d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_22670ec96079a684",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_109cd94b3cc77f0d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f25771e75fab5773",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5af03534970a4f6c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_30d463b203b7d085",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c3601b3f874810ee",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_477e4bc445f299d1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_cb00ebf7d6d62c69",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_246e008c3990b6bb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8d752e0c6536255a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5e64ea633439cb1f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7522b968529590f6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_eef67713d80f6d00",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0efab1c299b93235",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4bc40e055fbb8b29",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ea30a69972cdac58",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_76e365852b405fb9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1bb34aef8ecca9fa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b19e4ab79aee3232",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8b7787da4bec9c7e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dab4f5465a95b09b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_eadd2566c88a2f48",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_44b5bc602ba1f79e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b22e4bda6a74bb1a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d18559fc0cf8cc53",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bd3ff94e6f546df8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ebbb7eacf6e89a22",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_15d6f388eabab273",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5b29bf77dc4b3550",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_469a7462f020e48b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a837bc101b17ce77",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b438c6ed842bed11",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_16862f2ef8e97788",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d65b6409e76c3ecf",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_38753565965876e4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e184230f893452c2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2e6ce23dab452c2f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a03520df502c09a3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_95d0d51a10eb5ed8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_41fd19556c7b53f9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_880b495d2b68a2ba",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0a0c5d52d7b1f2d3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4d248ddbab6150cf",
+      "accepted": 2,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_394f802c21e5e58d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_62a18acf8a092840",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b2f32c44f4fb3eb4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8cd37d3ea53cbfec",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_67fc92a82581aa72",
+      "accepted": 10,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f688be219b4adf86",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ec7767c05605de85",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fbc80dc7318ec4a4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_50589a17059d042a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1f40658d01c8525d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8ca91a3e1a0afe49",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d8005e84e38c8a77",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_42d0daecb32759b0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_cbb7ca4adcd1358b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d4decd47a5db3a73",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_40f20c9a7033e9f3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_605eb56583435c81",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2cb9d2125998615f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0fef3c24b74600a2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5b8c4368b2e61236",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1e14f65bcf1c53e5",
+      "accepted": 16,
+      "rejections": {
+        "no_question_paragraph_boundary": 1
+      }
+    },
+    {
+      "record_id": "hicric_38c0c48be6def778",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ad4c7dbf9f21b671",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e3ca725f32e9e5a9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_87d9617e9bf452a2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8ed82aee5d266c1c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f922acd5b2dceb03",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4e5aafb459057da4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_385376ec1f178b66",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2cdc0f281ecb606c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_41e2183c4efaa098",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_22b0bc77c24781ff",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d9b9bfc2ae39952c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0700bd518c592b24",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_741787532afa86f2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5691ecfaa8b9e58d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_57bad665359a4681",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d7aa85a1fc741e25",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_25241c2cac1205ed",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dca245ce4698616d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_de2fceba6616a3c1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4699b56f92014788",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_da5cc294b37c199d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_32f113ff53569595",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_69163f998644994e",
+      "accepted": 2,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_810865e42f78244b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3d342a745c96fee5",
+      "accepted": 5,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_42b778ed381b448d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_08d70191ffea8dc2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_53ff84dbe04019f6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a0cfb66baea97556",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_70d523e16cf0560d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e57dab30eae23ffa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_087a3f360d7711f5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9390f00a60d438fe",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_36d2501e26953f31",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_62c498aea1018390",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d468fc83e5691796",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b88588fc9e23c578",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2c03530bc243b23e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_675043a0fe0d6077",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1fe35d9a54b4cd55",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0d29967ac26f1220",
+      "accepted": 20,
+      "rejections": {
+        "answer_length": 2
+      }
+    },
+    {
+      "record_id": "hicric_fc7abf6f4959d4d4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d0b3b5ae637f4cd8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6b3acab821efb8cc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3e83d52131c0d375",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3f36433947aaa124",
+      "accepted": 9,
+      "rejections": {
+        "answer_length": 1,
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_78d2172414185b60",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_62ee2494a28b2b09",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_60980cd4b33053fb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_52d99465ab01fd79",
+      "accepted": 3,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9e3898fc7bff2a33",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7e7850a7e8208bfc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ceb8813fc71fbb87",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_07c6eeb3ba6f098c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_05d72d761e0a7530",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0e35ab4ed3199686",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d70587afa0943766",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9bbc798a5dc86b59",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_63f3d726c87e190b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5ecd64815d9f8b20",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d9c17d611f22ec11",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7df489a03ac4056e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2f7c3ae0bc2e7faf",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_225415917e07a979",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8331ee4c5f2acec1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6c31900c9d12964a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1ac16fe3ca76b9db",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_194dbf8cbeaa4320",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ccb80e0c3dfc7df3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0edb6959ace6892c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_91cec1768c676e74",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a35e56c18d847e7f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_55e1172d62466cb5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_905b35f6fcd1e953",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_544900b12b9535ee",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0ce56e4f2345a503",
+      "accepted": 1,
+      "rejections": {
+        "question_shape": 2,
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_7d1d13a85fb2d6ef",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ff372d7501142028",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7e0e961f7a855861",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_030ecc6ca010ce18",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5c284c49bafac738",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_957000e10d8f7a37",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b92a481b8e0a258a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8b1ddcd553130b47",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a9fffa98c0143c04",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c5b05687e79e2144",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1e6bfb3598aa3c2d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_de84a69479962c5e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4db069ecc43f1e88",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6b01f42796b9c86b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_89ced0874cf04ea0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0ddf11941c9698a7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dda2229333a21fc1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_48b743932ecd43e7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_15a9d375e41992f2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f092c09bc89ffe56",
+      "accepted": 0,
+      "rejections": {
+        "no_answer_marker_or_faq_title": 1
+      }
+    },
+    {
+      "record_id": "hicric_028ed776f96ac12a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2e9a86d3b0b23b67",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4120ff9a4c76b08a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0ba49931a9b9dfa5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_673d1d67f19bbcdd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ce46f282ea96bc5e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d7ef2d30a0820ffc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_707608728f4176be",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3acc51cc4752c040",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_33eed195a709d3ca",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ed8ef713983f0cbf",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_905a82b927e28604",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_375a60ec6b61d948",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_180b8fcfa84e979c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_96cba0023262cc71",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_082b65023478bb3e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8a037a5139b74c1b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_42d4e5dc8f8b0c70",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e029234475a83832",
+      "accepted": 0,
+      "rejections": {
+        "no_answer_marker_or_faq_title": 1
+      }
+    },
+    {
+      "record_id": "hicric_4949215c628f671e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b6ccab398c66c2df",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ee7faa463e6de17b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3bd5442dd5b51b2f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c0ed2595eb6dc277",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bcf83c5a523b3bab",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0f641fa5235c8ef8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_85d1855af16097fa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9d8f5ae47b1e4344",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9efeaacecebb705e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c2b76a58577139da",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2e744c05be36b559",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_298809cbbedbbe69",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_baa15651f5cc7127",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_317b3d9876dfe4f3",
+      "accepted": 0,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_e096a734f29d87e8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_83902c73f0123895",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e4344bc5774cbcd5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_94b74cf09050a17d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b18176e8d2dee47b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_887b0ea6ae5715c3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9af54103046a8b8f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_14347faa4cee8729",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0f02a1b425b9ecfb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_43e796738ac6ab66",
+      "accepted": 13,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_0b3544a088e9428a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bcaf7cbbbe3b7529",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1503a446d0cab645",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_aed1fe2ee6fa571e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bb42ee0135769bd1",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_73da8b8ee313ebca",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bb7b1785e1bf7058",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ab2e141ff69fce88",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d06ee9adccf79885",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_cf9a9bd064564aca",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_19d6b7d0609e4dbb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8ecdff3822f75a3d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6c779ba4e0ff4056",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_01f846f64a5d4108",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c6b69090593ff275",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_00bca9fe809a4aa0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_66f483b5fea36c97",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2603b5e8b0d2d116",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4c04f60eaa04be3e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5431f383b99715a0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7f0b60a030b33a6d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_75896e9de015f009",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_514bcf92efa2f592",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7f1cde330993de9c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_57b88097224d2398",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bac01f8a49af73f0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_eb05d45be01335e4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7c00ee5195a16ee7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2d14a1d31150fc2f",
+      "accepted": 34,
+      "rejections": {
+        "answer_length": 8,
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_2d73f3e1f81e8789",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_76c5985a061e25c9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_33b24532a79521ac",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_4f6ba0ca784b3513",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_04b8bba5fdf343a5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b0d0f80597b7d1de",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_09ba28637baa6f6f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_619c1c543123855b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0ab4371da85865eb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1ec4c51420330c2f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c596d22486437985",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0e055e123af0683e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ed5854c3e334228c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c8ab7dac9ac136e9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_21cf48fc7602b4c2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2c5d196be14fa860",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_93477c0d8571aa53",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e3d2b93c1232e9df",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_81e1cb3337d276e6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6633500f4a93b9b2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2e8a2b44e9ffb9c4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e838ec389c74bd90",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0e3ce85176def4a4",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_211a63f60b0273a0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a914fd3f181e9082",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_18bbccca3aed3e96",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a7691c318d4c26d4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_31dae81a2f29b6af",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_435ab9843ccc8ab3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d38a0a3696d8b8a3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5252ba4030594fcb",
+      "accepted": 7,
+      "rejections": {
+        "answer_length": 2
+      }
+    },
+    {
+      "record_id": "hicric_1ad7333d6d4f383d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5d2eed604d987e42",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0a44b4f8950b4b6c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_15da832f61993312",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2f158f3a6e25358c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e75fb9171166b5dd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_300a28ebb22bacdc",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_70e89a54a69b8217",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0d802e6825764500",
+      "accepted": 11,
+      "rejections": {
+        "answer_length": 3
+      }
+    },
+    {
+      "record_id": "hicric_b6dfbc8ef363d1be",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c8b7179f96819468",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_878bce308b140ab9",
+      "accepted": 9,
+      "rejections": {
+        "question_shape": 1,
+        "context_dependent_question": 1
+      }
+    },
+    {
+      "record_id": "hicric_9afa0dcc5809426b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9843d9acb9ee87ce",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8046cfbca85d9e1d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_57a6c6844c3106ab",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9503606c9db58356",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fce4871b2a977013",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_180e1a76f1efa787",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_62e3a728500d080d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_98e3abfca46ae1b0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_41f17247c3ae4281",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fce8dcba53570b31",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7c84db3d3629384d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_155f9e15cd2c66d0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c4e95be1992bfeaa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_495333ac12526142",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_68875da9bcb8b9ec",
+      "accepted": 37,
+      "rejections": {
+        "answer_length": 2
+      }
+    },
+    {
+      "record_id": "hicric_62fa49aa89ef0549",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_132a5cbb4931921b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0dce55dc643fa26b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_db80ec9afd9b9c25",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bbf4871f1f60d1e9",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_95157184b7db7fe8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e7b4a73998c284ef",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e95614d1e1700188",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_012433d2e344926e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_24aec7e5ca86f179",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a55be78c397e7379",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_07fea506fcb43989",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f81ec9e9d3d751f5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_5a279cb639cbca86",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ca0c3242ebeb76f5",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f79f922c24c2adaf",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2b9ea281cd65a963",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3b291e3b859eefae",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ddd014535ed79775",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_93f43393b261e906",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f81fa25649b8f66b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_0a2c8b6a0281e00d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a20306a66d28dc1a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_712849d178a6d081",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d58dad18a35dd82c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_219621ce8ab3640b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7e501cc5267c9a71",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c4e785de776b52e3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ba64d0199a53f304",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bf4d072cc9c5bf99",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f065f67b2f4751ac",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_08775ce7105e5f2e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a29a6826cc18e9f8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b72d1009f5ff0e28",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ba24303c4c567e0b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ee91d43aa6e7e3ae",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7bab8e647f08e57b",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3d7bd1d8025d1227",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_afc14a30e69b2694",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6bd57a08af35c2e3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7c34efea9552c652",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b4ad33981f53c249",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ad9bc873caec2655",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_33612ca570dba33c",
+      "accepted": 25,
+      "rejections": {
+        "answer_length": 2
+      }
+    },
+    {
+      "record_id": "hicric_19520efdd0b3d484",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f1fce2fb2ba071bf",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_75959425577dae53",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a777990010142af8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dc74abbd796dbd35",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2315219074e71a97",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c4d1bdaf7f796ad7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d3ed56f652c298d3",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c7b91e9425ce7270",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a14b67b753e15ce2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_57411269f189992d",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6779fa8c6bcc30aa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_be28bd15f9e35f96",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_812b713f11b23fc6",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_90d5c44d4c01b8fe",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e86be9b205f750ac",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_82de288d96061ac2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9b8179e3c1b5d335",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1b79c6dd788989f4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_755a6aff4fab6080",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_30d6d4ed7435eaea",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_7f9e639c6cd82fbd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e37705ba16220886",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_316008442aa83d6a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e3c0802cb40e4e7f",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_384707d994eb4637",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9198360698e81863",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_58721b5f55490532",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_49f8d134ef3c5fcd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_3b63117b128497f8",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_ef284c1f61703f50",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_73942e04eb3bd16c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_dabcebce28d2442a",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b284823b93f46a0e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_2672262ca9540720",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_02cc6deb4494c4b4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_34aa81641f0ac1dd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_feb7b5d7cf0ab9bb",
+      "accepted": 10,
+      "rejections": {
+        "answer_length": 5
+      }
+    },
+    {
+      "record_id": "hicric_773d57f9b090fd83",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_36a098eae1ccb829",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_02b4751f6b084fab",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b0765fa021d472f0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d9c1c3e4685e3fef",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_57d0ecce141f5182",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b08a63a4374336a7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_65b5dbe5551d126c",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f18bbb01ae3672a0",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_35e4c76633e61697",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_fc622c35bd2570be",
+      "accepted": 2,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_8e66aa298c17cf68",
+      "accepted": 2,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_0e7278e92ee2b1c3",
+      "accepted": 14,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_56d3e4169d7a66e9",
+      "accepted": 5,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_8c24aed3615bb312",
+      "accepted": 5,
+      "rejections": {
+        "question_shape": 2
+      }
+    },
+    {
+      "record_id": "hicric_c023448d63d901e1",
+      "accepted": 12,
+      "rejections": {
+        "question_shape": 1,
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_290b87a3d36499d0",
+      "accepted": 1,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_00ba6cc58a1c772e",
+      "accepted": 5,
+      "rejections": {
+        "answer_length": 3
+      }
+    },
+    {
+      "record_id": "hicric_bd6b4e29fd259c33",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_300af6343559d085",
+      "accepted": 15,
+      "rejections": {
+        "answer_length": 5
+      }
+    },
+    {
+      "record_id": "hicric_ebaebae1b936398b",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_60a0698137afc707",
+      "accepted": 6,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_e5e7fb3526b5d39f",
+      "accepted": 1,
+      "rejections": {
+        "answer_length": 3
+      }
+    },
+    {
+      "record_id": "hicric_2cc66354828ae42e",
+      "accepted": 1,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_2c26a9f6c66a639b",
+      "accepted": 8,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_55b41bf3087920bd",
+      "accepted": 6,
+      "rejections": {
+        "answer_length": 4,
+        "question_shape": 2
+      }
+    },
+    {
+      "record_id": "hicric_7969f9941477805d",
+      "accepted": 4,
+      "rejections": {
+        "answer_length": 3,
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_3398d3da20179a84",
+      "accepted": 1,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_9d39b67dcba81051",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_addd00222e736058",
+      "accepted": 2,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_8e69bbecf0fa2a56",
+      "accepted": 0,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_87ca2572bd03ec4c",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_6df2560f88196a7d",
+      "accepted": 1,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_654a0c4315d71278",
+      "accepted": 4,
+      "rejections": {
+        "question_shape": 3
+      }
+    },
+    {
+      "record_id": "hicric_48917c4343803785",
+      "accepted": 2,
+      "rejections": {
+        "question_shape": 1,
+        "answer_length": 1,
+        "context_dependent_question": 1
+      }
+    },
+    {
+      "record_id": "hicric_ea08b098ff88177d",
+      "accepted": 1,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e9a97a95605e1324",
+      "accepted": 8,
+      "rejections": {
+        "answer_length": 3,
+        "question_shape": 2
+      }
+    },
+    {
+      "record_id": "hicric_d38f4d4fe8fcfce2",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_1e549b1353ef1c5d",
+      "accepted": 4,
+      "rejections": {
+        "answer_length": 6,
+        "question_shape": 2
+      }
+    },
+    {
+      "record_id": "hicric_386c545bda753bbd",
+      "accepted": 0,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_3642deb027f0597d",
+      "accepted": 1,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_bda0f24ae4d034a6",
+      "accepted": 4,
+      "rejections": {
+        "question_shape": 2,
+        "answer_length": 3
+      }
+    },
+    {
+      "record_id": "hicric_a3e56a65d499ff7b",
+      "accepted": 0,
+      "rejections": {
+        "answer_length": 3
+      }
+    },
+    {
+      "record_id": "hicric_bbe17cdfc3125326",
+      "accepted": 0,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_e0c0aacb9470adc7",
+      "accepted": 3,
+      "rejections": {
+        "answer_length": 1
+      }
+    },
+    {
+      "record_id": "hicric_55f2a4f42f803cd3",
+      "accepted": 1,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_481a71c6ffba487f",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 6,
+        "answer_length": 2,
+        "no_question_paragraph_boundary": 4
+      }
+    },
+    {
+      "record_id": "hicric_f8ea32641ccee7dd",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 6,
+        "no_question_paragraph_boundary": 5
+      }
+    },
+    {
+      "record_id": "hicric_b66bd6ba6b941bcc",
+      "accepted": 0,
+      "rejections": {
+        "no_question_paragraph_boundary": 2
+      }
+    },
+    {
+      "record_id": "hicric_a79822cf4e774b28",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 9,
+        "no_question_paragraph_boundary": 4
+      }
+    },
+    {
+      "record_id": "hicric_ce2cd48e1e9e5b6b",
+      "accepted": 7,
+      "rejections": {
+        "question_shape": 2,
+        "answer_length": 7
+      }
+    },
+    {
+      "record_id": "hicric_bfd113ee5e921ce1",
+      "accepted": 9,
+      "rejections": {
+        "answer_length": 4
+      }
+    },
+    {
+      "record_id": "hicric_c9c239fcdeef1757",
+      "accepted": 0,
+      "rejections": {
+        "no_question_paragraph_boundary": 6,
+        "question_shape": 2
+      }
+    },
+    {
+      "record_id": "hicric_c60cc9debad80b89",
+      "accepted": 0,
+      "rejections": {
+        "no_question_paragraph_boundary": 2
+      }
+    },
+    {
+      "record_id": "hicric_7361703a5568ce48",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 2,
+        "no_question_paragraph_boundary": 1
+      }
+    },
+    {
+      "record_id": "hicric_cde3455a6c1de06c",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_4391dba2bad448e9",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 5,
+        "no_question_paragraph_boundary": 7
+      }
+    },
+    {
+      "record_id": "hicric_46a613758cbd29a3",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 4
+      }
+    },
+    {
+      "record_id": "hicric_5b1346ab06a6350c",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 7,
+        "no_question_paragraph_boundary": 2
+      }
+    },
+    {
+      "record_id": "hicric_e396b74e95bccbc5",
+      "accepted": 8,
+      "rejections": {
+        "question_shape": 1,
+        "answer_length": 5
+      }
+    },
+    {
+      "record_id": "hicric_cd50813a6e241c53",
+      "accepted": 5,
+      "rejections": {
+        "answer_length": 18
+      }
+    },
+    {
+      "record_id": "hicric_962ce0b5f6ea77fd",
+      "accepted": 0,
+      "rejections": {
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_e0ee4c70ab2abab8",
+      "accepted": 0,
+      "rejections": {
+        "no_question_paragraph_boundary": 2
+      }
+    },
+    {
+      "record_id": "hicric_3da0f30ea195a286",
+      "accepted": 0,
+      "rejections": {
+        "no_question_paragraph_boundary": 13,
+        "question_shape": 1
+      }
+    },
+    {
+      "record_id": "hicric_e4c7f0ae56a49c1e",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_f47754bb6be8b490",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_b373bfcbbe04b5eb",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_c5d379ad4abfeab7",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_aafdab728a6bcf62",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a4678896dbafeb01",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a289de4f5635f8aa",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_66354fee7d253cad",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_e8953cb03c6ade51",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_a14bc12332b029d4",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_6fb073f58e2291fd",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_38c7106fa0a1d147",
+      "accepted": 0,
+      "rejections": {}
+    },
+    {
+      "record_id": "hicric_d6d21fbca5c5e62e",
+      "accepted": 0,
+      "rejections": {}
+    }
+  ],
+  "ambiguous": [
+    {
+      "question": "What is the definition of qualified employer-sponsored coverage?",
+      "reason": "ambiguous_or_legacy_question"
+    }
+  ],
+  "cross_split_answer_ids_excluded": [],
+  "new_training_exclusions": [
+    {
+      "id": "gov2_q_11e862f646ab0c98",
+      "reason": "near_heldout_question",
+      "nearest_heldout": "gov_question_8e1969ffbb719466",
+      "cosine": 0.9522675409273634
+    },
+    {
+      "id": "gov2_q_76bbfe0c03e26f5a",
+      "reason": "near_heldout_question",
+      "nearest_heldout": "gov2_q_5d9030f6e83a936a",
+      "cosine": 0.9577068827929218
+    },
+    {
+      "id": "squad_q_57267331708984140094c68c",
+      "reason": "duplicate_new_train_question",
+      "nearest_heldout": "iqa_v2_valid_01868",
+      "cosine": 0.29521263236547135
+    }
+  ],
+  "legacy_government_source_urls_excluded": [
+    "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-i.pdf",
+    "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-ii.pdf",
+    "medicaid.gov/media/116131",
+    "medicaid.gov/media/130441",
+    "medicaid.gov/media/131936",
+    "medicaid.gov/media/156571",
+    "medicaid.gov/media/166466",
+    "medicaid.gov/media/36996",
+    "medicaid.gov/media/37846",
+    "medicaid.gov/media/39391",
+    "medicaid.gov/media/39566",
+    "medicaid.gov/media/39611",
+    "medicaid.gov/media/39631",
+    "medicaid.gov/media/39736",
+    "medicaid.gov/media/39746",
+    "medicaid.gov/media/39781",
+    "medicaid.gov/media/39876",
+    "medicaid.gov/media/39891",
+    "medicaid.gov/media/39896",
+    "medicaid.gov/media/39931",
+    "medicaid.gov/media/39966",
+    "medicaid.gov/media/40081",
+    "medicaid.gov/media/40096",
+    "medicaid.gov/media/40116",
+    "medicaid.gov/media/40126",
+    "medicaid.gov/media/40161",
+    "medicaid.gov/media/40221",
+    "medicaid.gov/media/40226",
+    "medicaid.gov/media/40241",
+    "medicaid.gov/media/40306",
+    "medicaid.gov/media/40316",
+    "medicaid.gov/media/40481",
+    "medicaid.gov/media/40711",
+    "medicaid.gov/media/40716",
+    "medicaid.gov/media/40731",
+    "medicaid.gov/media/40746",
+    "medicaid.gov/media/40826"
+  ]
+}

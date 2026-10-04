@@ -1,0 +1,21 @@
+{
+  "label": "Hand-authored synthetic false-candidate guard diagnostic; no model evaluation",
+  "created_utc": "2026-09-20T23:27:26.876554+00:00",
+  "cases": 10,
+  "helper_false_acceptances": 6,
+  "served_false_acceptances": 6,
+  "source_sha256": {
+    "src/insurerag_vlm/hybrid_pipeline.py": "cd311f69d6a4b7d951d117d68c6493742d18603594c65fb865657fd15c289488",
+    "src/insurerag_vlm/answer_safety.py": "9ebe7c835714443fbef208410acf1f0c91e838c945181eb7c1437599b0a9d103",
+    "src/insurerag_vlm/config.py": "8f4f798e0d449376bf60424432f566b45b90c83ca09e59ecad4a9bfd4e55818f"
+  },
+  "script_sha256": "d195eaffa8f86bcca507ee6a1352c5a98e051d25f9775f2c051e9cad52d0d6c4",
+  "model_inference_performed": false,
+  "retrieval_inference_performed": false,
+  "construction": "Ten deliberately false candidates and a manually supplied one-page ranking at score0.95 isolate guard behavior. No PDF ingestion or live retrieval is exercised.",
+  "interpretation": "Hand-selected adversarial examples are not a population error-rate estimate. Acceptance here demonstrates a guard gap; rejection only checks this wording. No guard code or public/synthetic benchmark fixture was changed as part of this diagnostic.",
+  "thresholds": {
+    "citation_min_overlap": 0.2,
+    "abstain_threshold": 0.2
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "snippets": 78830,
+  "dimension": 384,
+  "seconds": 221.9996407001745,
+  "truncated_at_512_tokens": 543,
+  "answer_embeddings_sha256": "87ff137a4300520c9da633fef05e169fc626e6baa0b3ce153e4349057316ae49",
+  "protocol_sha256": "105fa7fd9bf41e6d6c40617dc03cd0ce81f5ab4e075361809cd4bd61bc8b595f"
+}

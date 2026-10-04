@@ -1,0 +1,994 @@
+{
+  "created_utc": "2026-10-03T03:52:09.717465+00:00",
+  "historical_diagnostic_only": true,
+  "prior_test_reused_not_blind": true,
+  "first_rank_regressions": 38,
+  "categories": {
+    "fixed_reranker_alone_has_gold_first": 24,
+    "fixed_reranker_also_misranks": 14
+  },
+  "cases": [
+    {
+      "id": "iqa_v2_test_00006",
+      "question": "What Is Eoi For Life Insurance?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "14495",
+        "text": "EOI in life insurance stands for \"evidence of insurability\". When you are taking an exam to get a life insurance, you are providing evidence of insurability. It is whatever is required to show that you are qualified to obtain that policy. When life insurance does not require EOI, that can make the policy very expensive, as in guaranteed issue life insurance, which has no evidence of insurability requirements. However, sometimes no EOI can be a perk. E.g Many term policies offer the opportunity to convert them to permanent policies without evidence of insurability. That is a perk, especially if your health deteriorates and you cannot qualify for a new term policy. It is a double perk in that the converted permanent policy will be rated the same as your term policy was."
+      },
+      "adapted_top1": {
+        "id": "2922",
+        "text": "EOI stands for \"Evidence of Insurability\". EOI shows the insurer that the insured person meets the health and risk criteria required by that company in order to get a certain policy. Group life insurance plans might not require EOI for a certain amount of life insurance, but then require EOI for additional coverage, or coverage for family members. Most privately purchased policies do have EOI requirements of some kind, although they can vary widely from simply answering a few questions to having a full medical exam done."
+      },
+      "gold_answers": [
+        {
+          "id": "14495",
+          "text": "EOI in life insurance stands for \"evidence of insurability\". When you are taking an exam to get a life insurance, you are providing evidence of insurability. It is whatever is required to show that you are qualified to obtain that policy. When life insurance does not require EOI, that can make the policy very expensive, as in guaranteed issue life insurance, which has no evidence of insurability requirements. However, sometimes no EOI can be a perk. E.g Many term policies offer the opportunity to convert them to permanent policies without evidence of insurability. That is a perk, especially if your health deteriorates and you cannot qualify for a new term policy. It is a double perk in that the converted permanent policy will be rated the same as your term policy was."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00035",
+      "question": "What Basics Do I Need To Know About Disability Insurance?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "26351",
+        "text": "The #1 thing you need to know about disability insurance is that it is paycheck protection in times of prolonged sickness and injury. You need to select an elimination period. Most Americans have 90 days in cash reserves, so a 90 day elimination period is a consideration. When claims are filled and the elimination period satisfied, the benefits are paid tax free."
+      },
+      "adapted_top1": {
+        "id": "13948",
+        "text": "The basics to qualify for disability insurance are to have good health, free from illness or injury and to be gainfully employed and working at least 30 hours per week. There are a few details certainly like income level, years of employment and life style questions, but basically these are the qualifying questions."
+      },
+      "gold_answers": [
+        {
+          "id": "26351",
+          "text": "The #1 thing you need to know about disability insurance is that it is paycheck protection in times of prolonged sickness and injury. You need to select an elimination period. Most Americans have 90 days in cash reserves, so a 90 day elimination period is a consideration. When claims are filled and the elimination period satisfied, the benefits are paid tax free."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00072",
+      "question": "What Is The Right Age To Buy Long Term Care Insurance?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "894",
+        "text": "There is no \"right age\" to buy long-term care insurance. That is factual. However, there are specific times when it may make a financially sound decision to consider purchasing a policy. For example, in your younger ages, the rates, as you may expect, is lower. Depending on your personal financial situation, this may be an ideal time to buy a policy. Each contract is different with many optional provisions. A full-time adviser is your best resource for information to this question. They not only are your primary source of information, they can shop the top carriers and plans so you get the best pricing. The number of companies that offer plans has reduced, so using a broker is more critical than ever."
+      },
+      "adapted_top1": {
+        "id": "23135",
+        "text": "The Right Time to Purchase Long Term Care Insurance is when youre young and healthy. But most consumers really dont consider long term care insurance until age 50. Most retirement planner recommend no later than age 60. One word of caution: if your family has a predisposition to critical illnesses, you may want to secure coverage now."
+      },
+      "gold_answers": [
+        {
+          "id": "24646",
+          "text": "There are schools of thought that purchasing long term care insurance (LTCi) early on when youre healthy is the ideal time to buy LTCi. But other tributaries of thought say you should start seriously considering LTCi no later than age 50. The LTCi market of insurance companies has decreased considerably. There are about six real players left in the brokerage community. The price tag generally drives the LTCi sales, but policy definitions should be the deciding factor when premiums are relatively equal."
+        },
+        {
+          "id": "894",
+          "text": "There is no \"right age\" to buy long-term care insurance. That is factual. However, there are specific times when it may make a financially sound decision to consider purchasing a policy. For example, in your younger ages, the rates, as you may expect, is lower. Depending on your personal financial situation, this may be an ideal time to buy a policy. Each contract is different with many optional provisions. A full-time adviser is your best resource for information to this question. They not only are your primary source of information, they can shop the top carriers and plans so you get the best pricing. The number of companies that offer plans has reduced, so using a broker is more critical than ever."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00076",
+      "question": "Where To Apply For Medicare Part B Benefits?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "12034",
+        "text": "You can apply online with the Social Security Administration for Medicare Part B benefits. The website for Social Security is www.SSA.gov. You can also visit your local Social Security office in person. When you activate your Medicare Part B it triggers an open enrollment period where you can apply for any Medicare Supplement Plan and not have to pass any medical underwriting. An Independent Medicare Insurance agent will be able to show you what's available and help match a plan that fits your needs. There is a lot more information about Medicare Part B and Medicare Supplement Insurance on our website."
+      },
+      "adapted_top1": {
+        "id": "12188",
+        "text": "The best way to apply for Medicare Part B is to go to www.SSA.gov or visit your local Social Security office. The best time is a few months before you turn 65 or a few months before you need Medicare Part B to be effective. It is also a good idea to look at Medicare Supplement Plans to cover what original Medicare Part A & B doesn't cover. You can do this through an independent agent that can show you all the major plans available to you. For more information about Medicare Part B and to run a Medicare Supplement Quote visit our website at SummitMedigap.com. You can also call us at 1-888-407-8664."
+      },
+      "gold_answers": [
+        {
+          "id": "12034",
+          "text": "You can apply online with the Social Security Administration for Medicare Part B benefits. The website for Social Security is www.SSA.gov. You can also visit your local Social Security office in person. When you activate your Medicare Part B it triggers an open enrollment period where you can apply for any Medicare Supplement Plan and not have to pass any medical underwriting. An Independent Medicare Insurance agent will be able to show you what's available and help match a plan that fits your needs. There is a lot more information about Medicare Part B and Medicare Supplement Insurance on our website."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00154",
+      "question": "Who Qualifies For Disability Insurance?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 2,
+      "old_top1": {
+        "id": "383",
+        "text": "To qualify for disability insurance, a person must be working (likely more than 30 hours per week), earn an gross income before taxes in excess of $18,000 per year (this number varies by the insurance companies in the market), be in an occupation that is insurable, not have serious pre-existing medical conditions, and have a \"lifestyle\" that is not considered dangerous or hazardous (such as dangerous avocations, a bad driving record, etc). These are not the only issues, but the most obvious ones. Consult a trusted insurance advisor to review your particular situation."
+      },
+      "adapted_top1": {
+        "id": "15699",
+        "text": "To qualify for Disability Insurance, one must fill out an application and take a free insurance exam. The applicant's health must be fairly good, and the occupation cannot be extremely risky (although there are stipulations on policies to deal with most occupations). The person applying for Disability Insurance must have an income. These factors all together qualify the applicant for Disability Insurance."
+      },
+      "gold_answers": [
+        {
+          "id": "19116",
+          "text": "You first must establish verifiable income, generally for two years. Tax returns or W2s should serve as evidence of compensation. Self-employed persons may have additional requirements. The second item of qualification is your medical health condition and prior history. Then what amount do you want to cover from your varied income? Compensation based on the average no frills disability insurance policy that can pay 60% of your pay tax free, up to 80% of your pay if you deduct the disability premium as a business expense."
+        },
+        {
+          "id": "27351",
+          "text": "In order to qualify for disability insurance you must be a favorable risk in a few different categories. First is your occupation. The underwriter will want to know your employment history, job duties, earnings, net worth, education to that job and skill levels. Next is your health history. The underwriter will want to know your age, build, health history and will want you to take a paramed exam for fluid samples. Last is your lifestyle. The underwriter will want to know if you use tobacco products, drugs both illegal and prescription, your extracurricular activities, if you exercise regularly and any above normal risks. As you can see underwriting a disability insurance plan is very extensive. I would recommend using an experienced independent broker to help you navigate these plans and requirements."
+        },
+        {
+          "id": "383",
+          "text": "To qualify for disability insurance, a person must be working (likely more than 30 hours per week), earn an gross income before taxes in excess of $18,000 per year (this number varies by the insurance companies in the market), be in an occupation that is insurable, not have serious pre-existing medical conditions, and have a \"lifestyle\" that is not considered dangerous or hazardous (such as dangerous avocations, a bad driving record, etc). These are not the only issues, but the most obvious ones. Consult a trusted insurance advisor to review your particular situation."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00194",
+      "question": "Does Medicare Cover CPAP Machines?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 4,
+      "old_top1": {
+        "id": "25751",
+        "text": "Medicare will cover a three month trial for a Cpap machine for those on Medicare who are diagnosed with sleep apnea. It is covered under Medicare Part B. If the machine works to alleviate signs and symptoms of sleep apnea, Medicare may cover the Cpap machine rental for a longer period of time. Once you have rented the machine for 13 months, you own it."
+      },
+      "adapted_top1": {
+        "id": "8629",
+        "text": "CPAP machines are used to treat some forms of sleep apnea. Before Medicare will authorize a CPAP your doctor must submit a CMN (certificate of medical need). You must have had a sleep study conducted by a Medicare approved facility and you must have had training on the use and care of the CPAP."
+      },
+      "gold_answers": [
+        {
+          "id": "25751",
+          "text": "Medicare will cover a three month trial for a Cpap machine for those on Medicare who are diagnosed with sleep apnea. It is covered under Medicare Part B. If the machine works to alleviate signs and symptoms of sleep apnea, Medicare may cover the Cpap machine rental for a longer period of time. Once you have rented the machine for 13 months, you own it."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00203",
+      "question": "What Is Medicare Plan J?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "12209",
+        "text": "Medicare Plan J is a plan that is no longer offered. The people who have Plan J can keep that plan the rest of their life if they want to. The current Plan F would be today's equivalent. For those people who have Plan J it is important to get a Medicare Supplement review to determine if they can get similar benefits for less money. The premiums on Plan J could increase over time because that plan is no longer taking on new customers. The only way for it to generate revenue is to increase the premium to cover increasing medical expenses on a aging block of business."
+      },
+      "adapted_top1": {
+        "id": "22188",
+        "text": "Plan J is a Medicare supplement plan that used to be available in the Medigap marketplace - in short, it was a plan F that included prescription drug coverage. In June 2010, rules regarding Medicare supplement plans were restructured and supplement plans could no longer include prescription drug coverage. Therefore, plans E, H, I, and J were no longer available for purchase. To get a similar plan structure today, you need to purchase a plan F and a stand-alone Part D prescription drug plan. If you have an existing one that was already in force before the changes, you can keep it as Medicare supplement plans are guaranteed renewable."
+      },
+      "gold_answers": [
+        {
+          "id": "12209",
+          "text": "Medicare Plan J is a plan that is no longer offered. The people who have Plan J can keep that plan the rest of their life if they want to. The current Plan F would be today's equivalent. For those people who have Plan J it is important to get a Medicare Supplement review to determine if they can get similar benefits for less money. The premiums on Plan J could increase over time because that plan is no longer taking on new customers. The only way for it to generate revenue is to increase the premium to cover increasing medical expenses on a aging block of business."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00212",
+      "question": "When Can You Borrow From Whole Life Insurance?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "22728",
+        "text": "In Canada, you can borrow from your whole life policy as soon as there is a cash value in the policy. If you pay the annual premium that could be day 2 of the policy. Important to remember that if the amount borrowed exceed the adjusted cost base of the policy it with trigger a taxable policy gain. If you have further questions, or feel that I could be of assistance, please do not hesitate to contact me. If you would like to work with a local life insurance broker, you could start with a Google search. For example, if you search for: life insurance broker Halifax or life insurance agent Halifax, my name, along with several others, will come up. You can use the same method to find a life insurance broker in your community."
+      },
+      "adapted_top1": {
+        "id": "22906",
+        "text": "You can borrow from your whole life policy as long as it has cash value. This is often called surrender value. The amount is listed in your policy. If you have taken previous loans, you might need to contact the company or the agent to determine the amount that you can borrow. There is no waiting period or any other requirement except your desire to borrow the funds. Contact the company for specific instructions."
+      },
+      "gold_answers": [
+        {
+          "id": "2117",
+          "text": "As you build up equity, you can borrow against it in your permanent life insurance policy. This is one of the great benefits of permanent life insurance! Generally, it takes about two years to reach this point, as the initial year's premiums help defray the cost of setting up the policy. You can decide never to pay back the loan, and it is yours tax free to keep, but it will lower the death benefit, so do so only if necessary or pay it back if you can. Thank you. GARY LANE."
+        },
+        {
+          "id": "22728",
+          "text": "In Canada, you can borrow from your whole life policy as soon as there is a cash value in the policy. If you pay the annual premium that could be day 2 of the policy. Important to remember that if the amount borrowed exceed the adjusted cost base of the policy it with trigger a taxable policy gain. If you have further questions, or feel that I could be of assistance, please do not hesitate to contact me. If you would like to work with a local life insurance broker, you could start with a Google search. For example, if you search for: life insurance broker Halifax or life insurance agent Halifax, my name, along with several others, will come up. You can use the same method to find a life insurance broker in your community."
+        },
+        {
+          "id": "3430",
+          "text": "You can borrow money from a life insurance policy if it's a policy that builds cash value - a permanent life insurance program. Permanent life insurance includes both Universal and Whole life insurance programs. Term life insurance does not build cash value and therefore there's nothing to borrow from. The maximum amount you can borrow is up to the current surrender or loan value cited in the policy at the time you want to borrow from the cash value. Keep in mind, when you borrow money from the cash value, you are creating a loan against the policy (the funds are expected to be paid back and, much like you do when borrowing from a bank, an interest rate is being charged on the borrowed monies). If the insured dies with an outstanding loan, the carrier will deduct the outstanding amount and any interest charges from the death benefit and give the difference to the beneficiary. Consult with your agent before borrowing from the cash value to find out what will happen when you create a loan against the policy and what you're responsible for. I hope the information is helpful - please feel free to contact me for help and if you have nay other questions. Thanks very much."
+        },
+        {
+          "id": "4507",
+          "text": "You can borrow against a whole life policy when the cash value is in the positive range. You should look at your illustration pages to see the year the excess cash begins to show value. Most whole life insurance policies reach this threshold between years 5 and 7 depending on how the agent set up at or near target price. I would consult with your agent or customer service on not borrowing too much cash value and lapse your policy."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00378",
+      "question": "Does Renters Insurance Cover Basement Flooding?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 12,
+      "old_top1": {
+        "id": "25312",
+        "text": "Renters insurance will not cover flood damage. Some renters policies may offer sump pump and sewer back up coverage at an additional cost. Flood insurance is sold separately and requires an agent be licensed to sell it. If you feel you need flood insurance coverage I would suggest contacting your local agent and discussing it with them."
+      },
+      "adapted_top1": {
+        "id": "22494",
+        "text": "It can, yes. Some companies offer coverage for \"failure of sewer or drain\". In the event your company does, then should your sump pump fail to do it's job and any acccumulating water in your basement damages either your presonal property or structure, then yes, you would have coverage."
+      },
+      "gold_answers": [
+        {
+          "id": "25312",
+          "text": "Renters insurance will not cover flood damage. Some renters policies may offer sump pump and sewer back up coverage at an additional cost. Flood insurance is sold separately and requires an agent be licensed to sell it. If you feel you need flood insurance coverage I would suggest contacting your local agent and discussing it with them."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00407",
+      "question": "Will My Homeowners Insurance Increase After A Claim?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 6,
+      "old_top1": {
+        "id": "8934",
+        "text": "It is entirely possible that your Homeowners Insurance may increase upon renewal as a result of claim activity. However, that having been said, it also depends upon the company and cirsumstances of the claim, the type of claim and amount paid for the loss and your long term history with the company. Always check with your insurance porofessional to understand your particular coverage, terms and conditions of the policy."
+      },
+      "adapted_top1": {
+        "id": "14383",
+        "text": "Home insurance premiums can increase after a claim, especially if it involves negligent behavior. You may also simply lose discounts, which is essentially the same concept. If you have multiple claims over a short period of time, you would risk termination of the policy. Sometimes it is the quantity of claims and not necessarily the amount of money that is paid out."
+      },
+      "gold_answers": [
+        {
+          "id": "7156",
+          "text": "Several factors are considered when calculating a rate for homeowners insurance. Claim history is a factor along with credit, length of time you've been insured with the same company, type of home, type of claim, claim severity ect...Just because you file a claim does not guarantee a rate increase however there's a pretty good chance this will happen if you've only been with your insurance company for a short period of time."
+        },
+        {
+          "id": "8934",
+          "text": "It is entirely possible that your Homeowners Insurance may increase upon renewal as a result of claim activity. However, that having been said, it also depends upon the company and cirsumstances of the claim, the type of claim and amount paid for the loss and your long term history with the company. Always check with your insurance porofessional to understand your particular coverage, terms and conditions of the policy."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00425",
+      "question": "Does Aetna Cover Flu Shots?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 2,
+      "old_top1": {
+        "id": "26862",
+        "text": "It depends on what specific policy you have. While many carriers' policies cover flu shots, not every policy under a carrier does. You will need to verify with the carrier or your policy's agent to see if it covers the flu shot at 100%, partial coverage, or not at all. I hope the information is helpful - please feel free to contact me for assistance with any other questions. Thanks very much."
+      },
+      "adapted_top1": {
+        "id": "3267",
+        "text": "The flu vaccine is covered and is treated as preventive care. Preventive care should be covered at 100% since the passage of the health care reform. Please be sure to inform the pharmacy about this benefit as there is currently a lot of confusion and people are paying out of pocket."
+      },
+      "gold_answers": [
+        {
+          "id": "26862",
+          "text": "It depends on what specific policy you have. While many carriers' policies cover flu shots, not every policy under a carrier does. You will need to verify with the carrier or your policy's agent to see if it covers the flu shot at 100%, partial coverage, or not at all. I hope the information is helpful - please feel free to contact me for assistance with any other questions. Thanks very much."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00434",
+      "question": "What Is A Life Insurance Wrapper?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "14206",
+        "text": "A life insurance wrapper is a terrible metaphor for the tax advantaged features of a life insurance policy that allows crediting methods like interest rates, indices and separate subaccounts using equities and bond investments. Life insurance accumulated tax deferred and a TAMRA compliant non modified endowment policy can generate tax free income provided that the life insurance policy is kept in force the life of the insured. The life insurance wrapped around the crediting method is the marketing approach here."
+      },
+      "adapted_top1": {
+        "id": "10293",
+        "text": "A life insurance wrapper for all intent and purposes is a structured investment tool which combines investments in funds and life insurance. The insurance wrapper allows the policy holder a choice of which funds they wish to invest in. In lieu of paying premiums the policyholder would pay the assets or funds that he chooses. Since the assets or funds are already paid to the insurance company they would not be attachable by creditors since they would not be considered the policy holders assets and therefor the policy holder would be 100% protected."
+      },
+      "gold_answers": [
+        {
+          "id": "14206",
+          "text": "A life insurance wrapper is a terrible metaphor for the tax advantaged features of a life insurance policy that allows crediting methods like interest rates, indices and separate subaccounts using equities and bond investments. Life insurance accumulated tax deferred and a TAMRA compliant non modified endowment policy can generate tax free income provided that the life insurance policy is kept in force the life of the insured. The life insurance wrapped around the crediting method is the marketing approach here."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00602",
+      "question": "Where Can I Find Renters Insurance?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "13867",
+        "text": "To find renters insurance look no further than your trusted insurance agent. If you dont have an agent, get recommendations from friends, colleagues and neighbors. An agent should listen to you, offer sound financial advice, and communicate clearly with you and the insurance company. The most important thing that the agent will do is advise you on appropriate limits. If your policy doesnt meet your expectations when there is a claim, nothing else matters."
+      },
+      "adapted_top1": {
+        "id": "19041",
+        "text": "The best option to find renters insurance is to contact a local independent agent who can shop many insurance providers for you. This why the agent can help you determine your specific needs and find you the right policy and the right premium. Also many insurance providers offer discounts on your auto insurance if you package polices together."
+      },
+      "gold_answers": [
+        {
+          "id": "13867",
+          "text": "To find renters insurance look no further than your trusted insurance agent. If you dont have an agent, get recommendations from friends, colleagues and neighbors. An agent should listen to you, offer sound financial advice, and communicate clearly with you and the insurance company. The most important thing that the agent will do is advise you on appropriate limits. If your policy doesnt meet your expectations when there is a claim, nothing else matters."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00760",
+      "question": "When Not To File A Car Insurance Claim?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "21735",
+        "text": "Generally speaking, if it is a minor physical damage loss to your car, namely somethingwhere the repair amount falls under your Comprehensive or Collision Deductible, you may want to think about not filing a claim. In all cases, however, discuss your options with your Insurance Professional. Keep in mind that if you have \"Full Glass\" coverage and/or Roadside assistance (Towing), these are not subject to your deductible so they are worth filing. Again, your Insurance Professional is your best resource. Insurance companies review policies for both the size of claims paidand the frequency that claims are reported. Both can affect your rates down the line."
+      },
+      "adapted_top1": {
+        "id": "17153",
+        "text": "You can file a car insurance claim without a police report. However, if the accident was not your fault, you definitely would want to file a report. Calling the police will often protect yourself in case the story of the other party changes. It is also possible the insurer will request that you file a report."
+      },
+      "gold_answers": [
+        {
+          "id": "18742",
+          "text": "Filing a car insurance claim for minor issues could result in an increase in what you pay, so you do want to consider a few things before you file a claim. 1) Is this claim something I can pay for on my own? If the answer to this is yes, you may be better off paying it and not filing a claim. 2) How much is my deductible? If your deductible is $500, and the damage to your car is $700 to repair, you are still going to pay the majority of the cost yourself. You should try to pay the entire amount, and not get your insurance involved. 3) Was someone else responsible for the damage? If someone else caused the damage, it is very possible that THEIR insurance will need to pay for the damage. In this case, you have two options: contact their insurance and file your claim against their insurance, or file a claim with your insurance, and explain that the other driver was at fault. Your insurance will then pay your claim, but will seek repayment from the other driver."
+        },
+        {
+          "id": "21619",
+          "text": "This is a question you should always consult with your agent when a situation arises. Your agent should be able to properly advise you on the pros and cons of filing a claim for any given situation which will provide you with enough information to make an informed decision on whether or not to file a claim."
+        },
+        {
+          "id": "21735",
+          "text": "Generally speaking, if it is a minor physical damage loss to your car, namely somethingwhere the repair amount falls under your Comprehensive or Collision Deductible, you may want to think about not filing a claim. In all cases, however, discuss your options with your Insurance Professional. Keep in mind that if you have \"Full Glass\" coverage and/or Roadside assistance (Towing), these are not subject to your deductible so they are worth filing. Again, your Insurance Professional is your best resource. Insurance companies review policies for both the size of claims paidand the frequency that claims are reported. Both can affect your rates down the line."
+        },
+        {
+          "id": "24689",
+          "text": "If there is no one else involved in the accident and the cost to repair the damage is within your means to pay, PAY IT out of pocket! Don't put marks on your insurance history unless you have to. Save your insurance for the large losses (lets hope you never have a large loss). Too often the loss of discounts, rewards, and surcharges exceed the cost of the cost of the repair. Customers get upset out it later and wished they had asked before. Good question and my advice be sure you have insurance with a company that has an agent that you can trust to ask questions, just like this!"
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00869",
+      "question": "How Do You Verify Health Insurance?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 10,
+      "old_top1": {
+        "id": "21607",
+        "text": "You will need to contact your insurance company and confirm the policy is in force (active). There should be a customer service number on your insurance card that you can call to verify the policy is active and you are covered. They'll likely ask you for your name and other identifying information (e.g. policy number, social security number, date of birth, etc.) - they can only release the information to the policyowner (in health insurance this is generally also the insured - if not the insured, it's the spouse or another family member - seen more commonly in group plans). Your agent can also verify this information for you as well."
+      },
+      "adapted_top1": {
+        "id": "14343",
+        "text": "First you trust but verify. Check to make certain the terms and conditions that he is explaining to you match up with the terms and conditions in writing on your policy. Just like with any type of insurance, speak to more than one agent and go with the one that communicates well with you."
+      },
+      "gold_answers": [
+        {
+          "id": "18245",
+          "text": "Health insurance can only be verified by contacting a policy holders insurance company to confirm a policy remains active. The simple fact of someone carrying an insurance card can not be taken as verification they are covered, let alone how their benefits may work, or what portion of a bill the patient should be responsible for paying."
+        },
+        {
+          "id": "21607",
+          "text": "You will need to contact your insurance company and confirm the policy is in force (active). There should be a customer service number on your insurance card that you can call to verify the policy is active and you are covered. They'll likely ask you for your name and other identifying information (e.g. policy number, social security number, date of birth, etc.) - they can only release the information to the policyowner (in health insurance this is generally also the insured - if not the insured, it's the spouse or another family member - seen more commonly in group plans). Your agent can also verify this information for you as well."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00894",
+      "question": "When Am I Medicare Eligible?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "15869",
+        "text": "You're eligible for Medicare when you're turning 65 years old. You can apply for Medicare benefits up to 3 months before, the month of, and up to 3 months after your birth month. I recommend applying during the 3 months before the month you turn 65 so your coverage starts on time (the first day of your birth month) - you can be subject to a delayed effective date if you apply during the 3 months after your birth month. People are eligible for premium-free Medicare Part A when they turn 65 and have met the 40 quarters (10 years) of working life/paying FICA taxes. Anyone who is eligible for premium-free Part A, can qualify for Part B - Part B requires premiums. Younger individuals with certain disabilities who have been receiving social security disability benefits for 24 continuous months and those with end-stage renal disease, may also be eligible to receive Medicare benefits. Original Medicare (Parts A & B) only 80% of covered healthcare expenses. Medigap plans (also known as Medicare supplement plans) can help cover all or a portion of the other 20%. When you first enroll in Part B, you have a 6-month initial open enrollment period to buy a Medigap plan with NO medical underwriting. The advantage of having a Medigap plan to go with your Original Medicare coverage is that it creates a very predictable expense structure (a major advantage for seniors living on a fixed income). I hope the information is helpful - please feel free to contact me for help and if you have any other questions. Thanks very much."
+      },
+      "adapted_top1": {
+        "id": "12800",
+        "text": "You are eligible for Medicare by one of two ways. The most common entry into Medicare is when you turn 65. Most folks take advantage of Medicare eligibility at 65, but if you have good group insurance through your employer you can opt-out of Medicare until retirement without penalty. The other entry into Medicare is via qualifying for Social Security Disability prior to the age of 65."
+      },
+      "gold_answers": [
+        {
+          "id": "15869",
+          "text": "You're eligible for Medicare when you're turning 65 years old. You can apply for Medicare benefits up to 3 months before, the month of, and up to 3 months after your birth month. I recommend applying during the 3 months before the month you turn 65 so your coverage starts on time (the first day of your birth month) - you can be subject to a delayed effective date if you apply during the 3 months after your birth month. People are eligible for premium-free Medicare Part A when they turn 65 and have met the 40 quarters (10 years) of working life/paying FICA taxes. Anyone who is eligible for premium-free Part A, can qualify for Part B - Part B requires premiums. Younger individuals with certain disabilities who have been receiving social security disability benefits for 24 continuous months and those with end-stage renal disease, may also be eligible to receive Medicare benefits. Original Medicare (Parts A & B) only 80% of covered healthcare expenses. Medigap plans (also known as Medicare supplement plans) can help cover all or a portion of the other 20%. When you first enroll in Part B, you have a 6-month initial open enrollment period to buy a Medigap plan with NO medical underwriting. The advantage of having a Medigap plan to go with your Original Medicare coverage is that it creates a very predictable expense structure (a major advantage for seniors living on a fixed income). I hope the information is helpful - please feel free to contact me for help and if you have any other questions. Thanks very much."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00912",
+      "question": "How Long Does It Take To Get Money From A Life Insurance Policy?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 4,
+      "old_top1": {
+        "id": "19532",
+        "text": "You can anticipate a wait of one to two months to get money from a life insurance policy, although it could be shorter, and (rarely) longer. To expedite it, order enough certified death certificates at the time of death to cover all policies you may find. Call your agent or the insurance company to have them email you the death claim. The sooner they receive these items, the sooner the life insurance proceeds will be paid."
+      },
+      "adapted_top1": {
+        "id": "9912",
+        "text": "Video Transcript: Today's question is, How long does it take to get life insurance money? Well I'm assuming this question is how long does it take to get death benefit proceeds if somebody died that I am the beneficiary of? If I'm looking at that, usually it's around 30 to 60 days. You're going to get a form from the company. You're going to have to fill that form out. Generally they're going to get a newspaper clipping from the obituary and the certificate of death. Once that's processed, you should be getting a check, sometimes even wired to your account depending on how you set it up, you should be getting a check between 30 and 60 days generally, unless the death occurs in the first to years. If it's during the first two years of a contestability it'll take longer because the company has the right to investigate the claim."
+      },
+      "gold_answers": [
+        {
+          "id": "18938",
+          "text": "Normally, it can take as little as a week or two to receive death proceeds of a life insurance policy from the time the insurer receives a claim form and the death certificate. In the event of death in the first two policy years, the insurer will need more time to investigate the claim as death occurred within the two year contestability period of the policy."
+        },
+        {
+          "id": "19532",
+          "text": "You can anticipate a wait of one to two months to get money from a life insurance policy, although it could be shorter, and (rarely) longer. To expedite it, order enough certified death certificates at the time of death to cover all policies you may find. Call your agent or the insurance company to have them email you the death claim. The sooner they receive these items, the sooner the life insurance proceeds will be paid."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_00940",
+      "question": "What Life Insurance Builds Cash Value?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "26332",
+        "text": "To clarify the question: what life insurance can build cash value? Generally, there are four types of cash value products that could generate accumulating cash values: Current Assumption Universal Life, Indexed Universal Life, Variable Universal life and Participating Whole Life Insurance. The performance of interest rates, indices and market equities may or may not credit any earnings and life insurance has policy expenses. Each policy owner must assess their risk tolerance for each type of life insurance contract. Participating whole life insurance base policies have guaranteed cash values. Lastly, a few guaranteed universal life insurance policies have some cash values in the later years, but should not be considered as a cash accumulation vehicle."
+      },
+      "adapted_top1": {
+        "id": "16087",
+        "text": "Whole life insurance builds cash value. Cash value in life insurance helps make lifetime death benefit protection affordable and premiums level. It represents an asset to the policy owner which may be used as a source of collateral or for policy loans should that become a necessity. At death, the policy will pay tax free proceeds to the beneficiary at an amount far in excess of the cash value. If the policy cash values are removed during lifetime, it will impact the future performance of the policy and such actions should be carefully managed and monitored to ensure there are no unintended consequences."
+      },
+      "gold_answers": [
+        {
+          "id": "24267",
+          "text": "The actual cost for providing insurance for one year increases as an individual ages. In order to provide a level death benefit in exchange for a level premium, insurance companies must charge more at the younger ages to offset the cost at the older ages. This extra money becomes the cash value of a permanent life insurance policy. Permanent life insurance policies come in several stripes depending on guarantees included in the policy. The company will surrender the cash value at any time in exchange for a release from the companys promise to pay the death benefit. They will also allow the owner to borrow against the cash value of the policy."
+        },
+        {
+          "id": "26332",
+          "text": "To clarify the question: what life insurance can build cash value? Generally, there are four types of cash value products that could generate accumulating cash values: Current Assumption Universal Life, Indexed Universal Life, Variable Universal life and Participating Whole Life Insurance. The performance of interest rates, indices and market equities may or may not credit any earnings and life insurance has policy expenses. Each policy owner must assess their risk tolerance for each type of life insurance contract. Participating whole life insurance base policies have guaranteed cash values. Lastly, a few guaranteed universal life insurance policies have some cash values in the later years, but should not be considered as a cash accumulation vehicle."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01089",
+      "question": "How Does Supplemental Life Insurance Work?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "15632",
+        "text": "Yes, supplemental life insurance works. Where it is different is in cost, underwriting and portability. First the easiest thing to comprehend about premium pricing is the more questions the cheaper the cost. Fewer questions asked? the higher the premium. Cost usually on supplemental life is more expensive because they ask fewer questions (underwriting) of the insured. IF you are of reasonable good health, it usually better cost wise and policy wise to seek an individual policy where your good health is rewarded by a lower cost to you."
+      },
+      "adapted_top1": {
+        "id": "10676",
+        "text": "Video Transcript: What is supplemental life insurance? Supplemental life insurance can be extra insurance that you have above and beyond either your group plan at work or individually-purchased life insurance. If you purchased this and you need more, some people look at supplemental life insurance to augment what they already have. You may want to look at this in 2 ways\" 'Would I like to have more coverage or would I like to have a supplemental retirement income plan, an extra cash value contract, that can generate withdrawals to basis and policy loans to gain tax-free, as long as I keep the policy in force for the life of the policy insured?' If I'm looking at it as a supplemental income play or I'm looking at it as a supplemental death benefit, supplemental life insurance can be a great adjunct to what I already have, either by group or by my individual purchase."
+      },
+      "gold_answers": [
+        {
+          "id": "15632",
+          "text": "Yes, supplemental life insurance works. Where it is different is in cost, underwriting and portability. First the easiest thing to comprehend about premium pricing is the more questions the cheaper the cost. Fewer questions asked? the higher the premium. Cost usually on supplemental life is more expensive because they ask fewer questions (underwriting) of the insured. IF you are of reasonable good health, it usually better cost wise and policy wise to seek an individual policy where your good health is rewarded by a lower cost to you."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01166",
+      "question": "Is Globe Life Insurance Legitimate?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "18732",
+        "text": "Hah! Interesting question and it makes me wonder what you've heard... Globe Life Insurance Company is indeed a registered insurance company so it conforms to the standards of practice mandated by the law. Therefore it is a legitimate company. I have heard some things about their products and service that make me wonder if they are a good choice, but I have had no personal experience with them. I always recommend that you consult with an insurance adviser/ broker that can explain the different products and their benefits and drawbacks to you before you decide which way to go."
+      },
+      "adapted_top1": {
+        "id": "13739",
+        "text": "Do you mean Globe Life? Globe Life is a life insurance company that offers final expense, accident, and mortgage protection insurance. They are certainly a legitimate insurer that focuses more on middle and working class families to offer them smaller insurance policies to meet financial obligations these people generally do not have the money on hand to meet."
+      },
+      "gold_answers": [
+        {
+          "id": "18732",
+          "text": "Hah! Interesting question and it makes me wonder what you've heard... Globe Life Insurance Company is indeed a registered insurance company so it conforms to the standards of practice mandated by the law. Therefore it is a legitimate company. I have heard some things about their products and service that make me wonder if they are a good choice, but I have had no personal experience with them. I always recommend that you consult with an insurance adviser/ broker that can explain the different products and their benefits and drawbacks to you before you decide which way to go."
+        },
+        {
+          "id": "7436",
+          "text": "Globe Life Insurance is a small 3 billion asset life insurance company with ratings from the following rating services. A.M. Best (Best's Rating, 15 ratings) A+ (2), Standard & Poor's (Financial Strength, 20 ratings) AA- (4), Moody's (Financial Strength, 21 ratings), Fitch Ratings (Financial Strength, 21 ratings) A+ (5), Comdex Ranking (Percentile in Rated Companies) 92 Asset Analysis as of July 3, 2013."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01179",
+      "question": "Is Long Term Care Insurance The Same As Life Insurance?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "22091",
+        "text": "No, Long Term Care insurance is not Life insurance. And Life insurance is not Long Term Care insurance. Both are insurances but neither one is car insurance either. Each are insuring different events. Long Term Care insurance provides for money to help pay for care provisions in the event that the insured requires medical and or personal care for an extended period of time due to illness or injury resulting in their inability to perform certain tasks for themselves. Most life insurance companies now make available a provision or \"rider\" to Life Insurance Policies that will pay up to a large percentage of the death benefit for long term care. And generally speaking a LTC rider is a lot less costly that a stand-alone LTC policy."
+      },
+      "adapted_top1": {
+        "id": "17604",
+        "text": "The difference between Life Insurance and Long Term Care Insurance is that Life Insurance pays the benefit to living beneficiaries upon the death of the insured persons, while Long Term Care Insurance pays the benefit to the insured persons (or to the facilities providing their care) if they can no longer take care of themselves."
+      },
+      "gold_answers": [
+        {
+          "id": "22091",
+          "text": "No, Long Term Care insurance is not Life insurance. And Life insurance is not Long Term Care insurance. Both are insurances but neither one is car insurance either. Each are insuring different events. Long Term Care insurance provides for money to help pay for care provisions in the event that the insured requires medical and or personal care for an extended period of time due to illness or injury resulting in their inability to perform certain tasks for themselves. Most life insurance companies now make available a provision or \"rider\" to Life Insurance Policies that will pay up to a large percentage of the death benefit for long term care. And generally speaking a LTC rider is a lot less costly that a stand-alone LTC policy."
+        },
+        {
+          "id": "5029",
+          "text": "Long Term Care Insurance pays for bills incurred by the extended need for health care and/or assistance when people become unable to take care of themselves due to chronic illness or advanced age. Long Term Care benefit payments are made to them while they are still alive, so that they can pay their medical/housing bills. Or the payments go directly to the providers of such care (usually, a nursing home). When the insured person passes, the need for the coverage and the policy payments end. Life Insurance pays the death benefit when the insured person passes away The face amount of the Life Insurance policy is paid to the beneficiary rather than the Insured person. However, some life insurance policies do have riders or living benefits that allow part of the face amount to be used while the Insured is alive but terminally ill, unable to care for themselves, or a few other reasons. These hybrid policies can cover both purposes."
+        },
+        {
+          "id": "6205",
+          "text": "No, they serve two different functions. That being said, some life insurance policies have available a long term care rider that will pay the premium or allow access to a percentage of the death benefit if a person is unable to perform certain activities of daily living and need some type care. These plans are relatively new and are becoming increasingly popular. While most are not quite as good as a true long term care policy, they do present a good option if traditional Long Term Care Insurance is not affordable."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01207",
+      "question": "Does Term Life Insurance Expire?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "24158",
+        "text": "Term life insurance policies do eventually expire. Some expire at the end of the term. Some become annually renewable term policies at the end of the term, then expire some years after that. Whether or not your term policy expires, the price usually becomes unaffordable at the end of the term you originally took out. It is better to convert your policy to permanent insurance before your term ends, if you have that option. With many term policies, converting them to permanent will allow you to lock in a premium for the rest of your life."
+      },
+      "adapted_top1": {
+        "id": "18375",
+        "text": "Term life insurance policies expire when the number of years in the term are up. However, Term life insurance usually has the option to be renewed annually beyond the term. If you choose to pay that new, higher premium, the policy will stay in effect. Or you may be able to convert your Term policy to permanent insurance, in which case it would not expire. Term life insurance also expires when you quit paying the premium. Permanent life insurance, such as Whole Life and Universal Life, will expire if you stop paying the premium and there is not enough cash value left in the policy to pay the premium. If you have paid the premium so that policy is \"paid up\", however, and you have followed the rules for paying back policy loans, permanent life insurance will never expire."
+      },
+      "gold_answers": [
+        {
+          "id": "10806",
+          "text": "It ends once the term is up. If it is a 15 year term, you are no longer covered after that time frame is up. The best thing to do is to purchase a permanent life policy at a young age although most people don't always understand that. Most will see that permanent is more expensive than term initially, but never consider the fact that they will either have to convert that policy to a permanent policy or buy one later on both of which will cost substantially more than if the purchased a permanent policy in the first place. They often don't consider that they may no longer be insurable and can't purchase a life policy due to some medical condition."
+        },
+        {
+          "id": "10882",
+          "text": "Most of the competitive individual term life policies these days provide for a guaranteed level premium period of between 10-30 years. At the end of the level period, if the coverage doesn't terminate automatically, the premium usually increases so significantly, most policyholders don't renew it. The coverage should be converted to a permanent policy before that time (while in the conversion period) or, if you are still insurable, work with a life insurance professional to find a new policy. Keep in mind that term eventually is not available due to age or insurability reasons. Buy permanent coverage as soon as possible to prevent your coverage terminating before you do."
+        },
+        {
+          "id": "15010",
+          "text": "When you first purchased your term life insurance policy, one of the options you designated was the term length (10, 15, 20, 25, or 30 years) in which the premium would remain locked in place for and could not increase. At the end of the designated term length premium guarantee period, the policy will do one of two things: 1) the premiums will begin to increase each year by a substantial margin (based on age) 2) the premiums will remain the same, but the death benefit will rapidly decrease (this method is only used on some term policies that are issued on a universal life chassis) What you will commonly see is the first method. For example, if you purchased a 20 year term policy and outlive the 20 year period, the premiums will start increasing in year 21. Since the premiums will keep going up and up, most people replace the term policy with a new life insurance policy (term or permanent - depending on need and age) to create a new premium guarantee period. Note - the new policy will feature a higher rate structure (for the same coverage structure) as your older and due to any changes in health history - to accommodate this, you can adjust the face amount or length of coverage to reduce the premium of the policy. I hope the information is helpful - please feel free to contact me for assistance with your coverage and if you have any other questions. Thanks very much."
+        },
+        {
+          "id": "18455",
+          "text": "That is a great question! Term life insurance is defined exactly by the name. The policy is active for the defined length of the term, at which point it expires, and your coverage ends. Most policies will state specifically the end date - 5,10, 15, or 20 years most commonly. The policies advertised so heavily by companies like AAA, AARP, and others will end the day you turn 80. Sometimes that point is obscured by marketing or fine print, and many elders find out too late what they'd purchased. The only other way your term policy will end is if you miss payments. Please check with a trustworthy agent before you purchase anything. I hope that helps, thanks for asking!"
+        },
+        {
+          "id": "24158",
+          "text": "Term life insurance policies do eventually expire. Some expire at the end of the term. Some become annually renewable term policies at the end of the term, then expire some years after that. Whether or not your term policy expires, the price usually becomes unaffordable at the end of the term you originally took out. It is better to convert your policy to permanent insurance before your term ends, if you have that option. With many term policies, converting them to permanent will allow you to lock in a premium for the rest of your life."
+        },
+        {
+          "id": "26835",
+          "text": "Term insurance will expire at some point in time as term policies are closed contracts which have a beginning and an end. With newer term policies the end comes between the ages of 90 to 95. Many of the older term policies written end between the ages of 70 and 80. If you have an older term policy, check to see when the policy ends and if there is a conversion option if you need coverage longer than you previously thought you would. As Jerry mentioned most term policies written currently have level premium periods of 5-30 years, but still have a life after in most cases. The cost after the level period expires will be much higher and increase every year after until the policy ends."
+        },
+        {
+          "id": "2695",
+          "text": "As long as you pay the required premium, the term life policy will not expire until the end of the term. Even at the end of the term, most term policies are renewable on annual basis. Term life policies are guaranteed level with many companies so be sure you look at the policy premiums for the term you are looking for."
+        },
+        {
+          "id": "785",
+          "text": "I know of some folks who bought 5 year term and still are paying after 9 years to keep it. That is just silly because the rates go up to be ridiculous. The smart thing to do is to get another term policy if you can, at least for 5 years more, and hopefully convert it during that time to whole life where the rates never go up. You need to talk with a professional. Call please. Gary Lane, Registered Representative, New York Life, 949 797 2424. Thank you."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01238",
+      "question": "What Is The Most Affordable Health Insurance In Indiana?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 2,
+      "old_top1": {
+        "id": "12608",
+        "text": "There are many affordable health insurance plans in Indiana, thanks to the Affordable Care Act, also known as Obamacare. What reduces rates (often dramatically), is the federal subsidy that is based on your household income. Often, this can generate financial help of $5,000-$10,000 per year. And this money is automatically deducted from the premium. Anthem typically offers the the lowest rates, although Humana is competitive in many areas. Both individual and family plans are available along with coverage for small businesses. If household income is too high to qualify for a subsidy, off-Exchange plans can be purchased from the participating major carriers. Where do you get the best rates? Typically, an experienced broker website will offer the lowest prices along with expert advice. There are never fees or charges for utilizing this type of assistance. I should know since I'm an Indiana health insurance broker and have been in the business for 33 years. But it doesn't seem that long!"
+      },
+      "adapted_top1": {
+        "id": "21121",
+        "text": "Low cost health insurance in Indiana is available and can be purchased from an experienced broker (with the help of their website). Anthem and UnitedHealthcare are two of the biggest carriers in the state. They offer a wide variety of single, family and business healthcare plans. As a broker for more than 32 years, our job is to determine which plan best matches the needs you have and the budget you have to work with. The Indian Health Insurance Exchange has an Open Enrollment that offers four types of plans with financial subsidies. Do you qualify for subsidies? Which plan is the most economical? Will your pre-existing conditions be covered? These are some of the topics that our websites offer along with free online quoting and comparison of plans. Indiana has many affordable options."
+      },
+      "gold_answers": [
+        {
+          "id": "12608",
+          "text": "There are many affordable health insurance plans in Indiana, thanks to the Affordable Care Act, also known as Obamacare. What reduces rates (often dramatically), is the federal subsidy that is based on your household income. Often, this can generate financial help of $5,000-$10,000 per year. And this money is automatically deducted from the premium. Anthem typically offers the the lowest rates, although Humana is competitive in many areas. Both individual and family plans are available along with coverage for small businesses. If household income is too high to qualify for a subsidy, off-Exchange plans can be purchased from the participating major carriers. Where do you get the best rates? Typically, an experienced broker website will offer the lowest prices along with expert advice. There are never fees or charges for utilizing this type of assistance. I should know since I'm an Indiana health insurance broker and have been in the business for 33 years. But it doesn't seem that long!"
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01252",
+      "question": "Do I Need Part C Of Medicare?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 2,
+      "old_top1": {
+        "id": "7848",
+        "text": "You don't \"need\" Medicare Part C, but you may choose to have it as your Medicare coverage. Medicare Part C is really known as the Medicare Advantage Plan. It acts like an HMO or PPO. Part C combines your Original Medicare Part A (hospital) and Part B (medical), and usually Part D (drugs). It's important to note that if you have Medicare Part C (Medicare Advantage Plan), you don't need a Medigap Policy and can't be sold one to help supplement your health care. You can only purchase a Medigap Policy (Medicare Supplement insurance), if you are still on Original Medicare Part A and Part B. There are a lot of moving parts to Medicare. Please let me know if I can be of further assistance."
+      },
+      "adapted_top1": {
+        "id": "5666",
+        "text": "You may not need Medicare Part C. Medicare Part C has evolved into what is now referred to as Medicare Advantage plans. With an Advantage plan you are in a privatized Medicare system run by insurance carriers. Most Advantage plans have networks with strict penalties if you use a non-par provider and considerably more out of pocket than with original Medicare and a supplement plan."
+      },
+      "gold_answers": [
+        {
+          "id": "17249",
+          "text": "Part C is not a requirement of Medicare. It is often referred to as Medicare Advantage .A Medicare Advantage plan can have Part D (prescription drugs) included in the coverage, a Medigap Policy cannot. You must have Medicare part A (hospital) and Medicare part B (medical) to enroll in a Medicare Advantage plan or a Medigap Policy (Medicare Supplement)."
+        },
+        {
+          "id": "25022",
+          "text": "Medicare Part C is a catch-all for Medicare Advantage plans. When you enroll in an MA plan you are no longer in original Medicare but rather are in a \"privatized\" Medicare system. So you either have original Medicare (Part A and/or Part B) or you have an MA plan, but you do not have both."
+        },
+        {
+          "id": "7848",
+          "text": "You don't \"need\" Medicare Part C, but you may choose to have it as your Medicare coverage. Medicare Part C is really known as the Medicare Advantage Plan. It acts like an HMO or PPO. Part C combines your Original Medicare Part A (hospital) and Part B (medical), and usually Part D (drugs). It's important to note that if you have Medicare Part C (Medicare Advantage Plan), you don't need a Medigap Policy and can't be sold one to help supplement your health care. You can only purchase a Medigap Policy (Medicare Supplement insurance), if you are still on Original Medicare Part A and Part B. There are a lot of moving parts to Medicare. Please let me know if I can be of further assistance."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01265",
+      "question": "Does Your Child Need Life Insurance?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "22530",
+        "text": "Does your child need life insurance? Well there will be an answer for everybody and they may not be the same. I purchased life insurance on my children. Here are a few reasons why.... if one of my children were to die, I don't think I would be able to go straight back to work on Monday as if nothing happened. I wouldn't want to have the price of the headstone and service costs get into the pain my wife and I would be experiencing. Imagine telling your wife \"that costs too much\" for the headstone she wants for your child. I also bought for positive reasons too. I purchased whole life so they have permanent insurance working hard at a low cost for them. They have solid cash values and life insurance to take into adulthood."
+      },
+      "adapted_top1": {
+        "id": "25405",
+        "text": "I am not sure I would say that a child needs life insurance. There are two main reasons to insure a child, one is financial savings and the other is protecting insurability. Writing a whole life or universal life policy, or cash value plan,on a child has advantages to be able to save extra money for college, a first home or even retirement. The premiums are very affordable and with the right plan can have a good guaranteed rate of return on investment. The second reason is protect the child's insurability. If you purchase life insurance on a child most all companies have a conversion clause which means the child can convert to higher face amounts, five, ten or greater times the original death benefit without proof of insurability. If the child had a diagnosis in later life and became uninsurable then they would have this policy at a very reasonable rate for the rest of their life."
+      },
+      "gold_answers": [
+        {
+          "id": "16775",
+          "text": "Life Insurance for children is a good idea for a family. The first benefit would be for the event of a death of a child then the family could use the benefit to pay for funeral and burial expenses. This benefit would take away additional stress in a very difficult time. The second reason would be providing a good start for the child's future family as many of these policies offer great conversion rates in the future. Every family needs protection and that would include the child's future family. This policy would be beneficial if the child was unable to obtain a policy later in life if they developed a illness or disease that prevented them from getting insurance."
+        },
+        {
+          "id": "19624",
+          "text": "Getting life insurance for your child, in my opinion, is more important than ever before. With the advancement of medicine, there are many health conditions being diagnosed, and even tendencies toward health conditions are noted in medical records. While this is wonderful for saving lives, it can have a negative impact on insurability and life insurance rates. Getting life insurance for your child ensures that they will have a good life insurance rate for the rest of their lives. Even if you just put them on a child rider, they can convert the amount of the rider to 5 times that amount of life insurance when they become an adult."
+        },
+        {
+          "id": "22530",
+          "text": "Does your child need life insurance? Well there will be an answer for everybody and they may not be the same. I purchased life insurance on my children. Here are a few reasons why.... if one of my children were to die, I don't think I would be able to go straight back to work on Monday as if nothing happened. I wouldn't want to have the price of the headstone and service costs get into the pain my wife and I would be experiencing. Imagine telling your wife \"that costs too much\" for the headstone she wants for your child. I also bought for positive reasons too. I purchased whole life so they have permanent insurance working hard at a low cost for them. They have solid cash values and life insurance to take into adulthood."
+        },
+        {
+          "id": "27283",
+          "text": "Yes, indeed. Think about when he or she gets older. Buy a home and take out a mortgage? No problem - has a policy already so the family can pay it off. Start a business and need a policy to qualify for a bank loan? Got one. An emergency requires lots of cash in a pinch? The cash in the policy is available within days. Unfortunately comes down with diabetes or another illness, and may have to pay a lot for a new policy? Now worries- already covered. See what I mean?"
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01300",
+      "question": "What Does A Million Dollar Life Insurance Cost?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "9022",
+        "text": "The cost for a million dollar life policy is really not the factor or question in most cases well there would be many questions to ask first one would be are you insurable for that face value and for what purpose or needs you have for this amount. Second would you need a single premium because you have acquired a million dollars and you are looking to invest in a safe tax free invest we can look further in to this see my profile and contact me button for a free consultation."
+      },
+      "adapted_top1": {
+        "id": "17546",
+        "text": "A 2 million dollar life insurance policy will cost much different rates for men and women, young adults and seniors, smokers and nonsmokers, those with perfect health and those who have multiple health conditions. The price also varies greatly according to how long the premium is locked in. Here are some examples of the cost of a 2 million dollar life insurance policy for a 40 year old male who has perfect health. 10 year term - approx $50/mo 20 year term - approx $100/mo 30 year term - approx $200/mo Permanent - approx $800/mo You can go to a website that offers instant quotes to see what a $2,000,000 policy costs at other ages, genders, etc."
+      },
+      "gold_answers": [
+        {
+          "id": "22037",
+          "text": "I wouldn't be able to provide a figure for your without knowing more about what coverage structure you're looking for and your medical history. The cost (premium) for a $1,000,000 life insurance policy depends on a number of factors so it will be different for everyone. These factors include their age, gender, how long they want the coverage for (10, 15, 20, 25, or 30 year term insurance vs. permanent insurance), and their risk classification (determined by the medical history). The risk classification is the MOST critical factor in determining the cost (premium) of a life insurance policy. The risk class depends on a number of factors including whether you're male or female, your medical history, height/weight profile, any tobacco usage, and other factors. Please keep in mind - every carrier has their own set of underwriting guidelines, and each may offer a different risk class for a given medical profile - e.g. company A may offer preferred (featuring lower rates) and company B may only offer standard (featuring higher rates). I would suggest consulting with an independent life insurance broker who can work with you on a personal level and help determine which carrier will be able to offer you the desired coverage at the lowest possible cost. I hope the information is helpful - please feel free to contact me for assistance with your coverage and if you have any other questions. Thanks very much."
+        },
+        {
+          "id": "6343",
+          "text": "There are a lot of factors to calculate a premium on any life insurance amount. An agent needs to know the type of life insurance either term or permanent. From there we need age, build, life style, health status, occupation, state of residence and insurable interest. The first question is why do you need a million dollars in life insurance?"
+        },
+        {
+          "id": "9022",
+          "text": "The cost for a million dollar life policy is really not the factor or question in most cases well there would be many questions to ask first one would be are you insurable for that face value and for what purpose or needs you have for this amount. Second would you need a single premium because you have acquired a million dollars and you are looking to invest in a safe tax free invest we can look further in to this see my profile and contact me button for a free consultation."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01332",
+      "question": "Where To Buy Secondary Market Annuities?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "20287",
+        "text": "Not sure if you are still on this forum but we sell Secondary Market Annuities. However, we only sell to licensed agents. That said, I have plenty of preferred agents who work with us that can offer our product. If you would like to learn more or if you still have questions please let me know. 971-245-3425 Tyson Wright"
+      },
+      "adapted_top1": {
+        "id": "12685",
+        "text": "Secondary Market Annuities are lifetime or annuitized annuities that are sold generally for a lump sum payout for the annuity owner who needs cash in bulk and not in payments because of an economic challenge they may be facing. The secondary market makes claim of higher yields for income replacement, but is no guarantee to do so."
+      },
+      "gold_answers": [
+        {
+          "id": "20287",
+          "text": "Not sure if you are still on this forum but we sell Secondary Market Annuities. However, we only sell to licensed agents. That said, I have plenty of preferred agents who work with us that can offer our product. If you would like to learn more or if you still have questions please let me know. 971-245-3425 Tyson Wright"
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01334",
+      "question": "Does Homeowners Insurance Cover Chimney Repair?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 3,
+      "old_top1": {
+        "id": "6085",
+        "text": "It may depending on the circumstances that caused the chimney to need repair in the first place. If homeonwers policy does provide coverage for the claim it may be subject to the policy deductible. Remember every policy is different. Please read your policy completely to understand the coverage provided and any exclusions that there may be or contact your local agent to have them go over the policy with you."
+      },
+      "adapted_top1": {
+        "id": "2195",
+        "text": "Depending on what the damage is, the chimney may be covered. Most homeowners policies will cover the damage if caused by fire, wind, hail, smoke, explosion, vandalism, falling objects and collision. However if the damage is just caused by normal wear and tear then this would not be a covered peril of your policy."
+      },
+      "gold_answers": [
+        {
+          "id": "15696",
+          "text": "Talk to your Insurance Professional about the specific terms and conditions of your policy. A homeowners policy will provide coverage to repair or replace your home and it's parts so long as they are damaged by what is refered to as a \"Covered Peril\". In other words, if the damage is a direct result of causes that are listed in your policy, then the policy coverage would apply. Naturally, any coverage settlement would be subject to your policy deductible."
+        },
+        {
+          "id": "6085",
+          "text": "It may depending on the circumstances that caused the chimney to need repair in the first place. If homeonwers policy does provide coverage for the claim it may be subject to the policy deductible. Remember every policy is different. Please read your policy completely to understand the coverage provided and any exclusions that there may be or contact your local agent to have them go over the policy with you."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01434",
+      "question": "What Do Life Insurance Companies Test Your Blood For?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "13202",
+        "text": "Life insurance companies can test your blood for many items contained in a screening. They may include nicotine, drug use, cholesterol levels, lipid levels and many other items that help the insurer determine the best rate to offer. A broker can help you determine the best insurer to use based on your results."
+      },
+      "adapted_top1": {
+        "id": "5751",
+        "text": "Life insurance companies blood test to determine the risk factors present, and thus, whether the policy should be approved or declined. The blood test results also help them know how to rate the policy, and thus, the price you must pay. Some things they look at/for are blood sugar, cholesterol, liver function, nicotine, and illegal drugs."
+      },
+      "gold_answers": [
+        {
+          "id": "13202",
+          "text": "Life insurance companies can test your blood for many items contained in a screening. They may include nicotine, drug use, cholesterol levels, lipid levels and many other items that help the insurer determine the best rate to offer. A broker can help you determine the best insurer to use based on your results."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01478",
+      "question": "Is Health Insurance Before Taxes?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "6216",
+        "text": "If you purchase your coverage through an employer, you may have the option to utilize a 125 plan to have pre-tax dollars withheld from your pay check to pay your premiums. However, for the vast majority of individuals purchasing their own coverage, insurance premiums are paid for with taxable dollars. One exception to this rule is anyone that is self employed, who is allowed to write off the cost of their health insurance on their tax return. However, even in such a case, the self employed individual must still FICA/self-employment taxes on these funds."
+      },
+      "adapted_top1": {
+        "id": "15151",
+        "text": "No, not exempt as such. Whether you get your health insurance through an employer based plan or whether you are self-employed and purchase your own individual health insurance can have tax implications for you though. Generally, in today's employer based insurance environment the employee is paying some portion of their individual and/or dependent health insurance premiums. And, in most such cases the employer is taking your share of the premium out of your paycheck on a pre-tax basis under a Section 125 Plan. The employee is receiving a tax advantage in this context as their share of their premium is taken out of paycheck on a pre-tax basis thus reducing their taxable net income and reducing the amount they pay in taxes. For the self-employed this issue gets more complex and you should seek the advice of a CPA or tax attorney. Health insurance premiums a self-employed person can be deducted or expensed depending upon how your business is structured and what your individual situation is. As is always the case when we're talking about taxes it's more complicated than the very simplistic answer that I have given and that is why you should seek professional advice on this matter."
+      },
+      "gold_answers": [
+        {
+          "id": "6216",
+          "text": "If you purchase your coverage through an employer, you may have the option to utilize a 125 plan to have pre-tax dollars withheld from your pay check to pay your premiums. However, for the vast majority of individuals purchasing their own coverage, insurance premiums are paid for with taxable dollars. One exception to this rule is anyone that is self employed, who is allowed to write off the cost of their health insurance on their tax return. However, even in such a case, the self employed individual must still FICA/self-employment taxes on these funds."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01606",
+      "question": "Can A Person With HIV Get Life Insurance?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "26550",
+        "text": "A person with HIV can get life insurance by converting a present term policy into a permanent plan. There also may be group conversions available through an employer. Also, there are some guarantee-issue plans that possibly may be able to offer coverage. An experienced broker will find any available plans for you."
+      },
+      "adapted_top1": {
+        "id": "22620",
+        "text": "People with HIV can get life insurance although you will fall into a guaranteed issue situation. Insurance companies are all about how long you are expected to live. Unfortunately HIV reduces the mortality. Most insurance companies will not underwrite these people. Companies that offer a guaranteed issue or perhaps a graded benefit will look at giving you some life insurance however the death benefit available is limited."
+      },
+      "gold_answers": [
+        {
+          "id": "25850",
+          "text": "Being HIV positive makes it very difficult for people to get life insurance. If over age 40, there are some guaranteed issue life insurance policies available, but these provide only a limited amount of coverage. Some of our clients have obtained small policies through credit unions, mailers from small guaranteed issue policies, or other random places. Of course, getting life insurance through one's job is a great option if you can get it. It is very unfortunate that there are not more options. Hopefully this will change in the future."
+        },
+        {
+          "id": "26550",
+          "text": "A person with HIV can get life insurance by converting a present term policy into a permanent plan. There also may be group conversions available through an employer. Also, there are some guarantee-issue plans that possibly may be able to offer coverage. An experienced broker will find any available plans for you."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01692",
+      "question": "Is Medicare Supplemental Insurance Worth It?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 8,
+      "old_top1": {
+        "id": "21125",
+        "text": "Medicare supplemental insurance can be a financial lifeline for most people. Medicare Part A and Part B only cover about 80% of approved charges. This can leave you owing many thousands of dollars and there is no cap on your out of pocket. Medicare supplemental insurance plans allow you to decide how much risk you are willing to accept. The most popular plans will reduce your financial obligation to less than $500 per year."
+      },
+      "adapted_top1": {
+        "id": "22177",
+        "text": "Medicare Supplemental Insurance helps pay for the things that Medicare Part A and B do not ocver, such as co-pays and prescription drugs. It allows you to choose doctors outside a specific network. It can cover you throughout the US and some plans even provide coverage while traveling overseas."
+      },
+      "gold_answers": [
+        {
+          "id": "21125",
+          "text": "Medicare supplemental insurance can be a financial lifeline for most people. Medicare Part A and Part B only cover about 80% of approved charges. This can leave you owing many thousands of dollars and there is no cap on your out of pocket. Medicare supplemental insurance plans allow you to decide how much risk you are willing to accept. The most popular plans will reduce your financial obligation to less than $500 per year."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01737",
+      "question": "Can Health Insurance Premiums Be A Tax Deduction?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "2415",
+        "text": "Health insurance premiums can sometimes be a tax deduction. Depending on the type of policy you have, and how you file your return, you could benefit from tax deductions. More often, healthcare expenses (instead of premiums) receive the best tax treatment. For example, a Health Savings Account (HSA) will allow you to deduct qualified deposits into the side-account. The money you deposit must be used for health, dental or vision expenses that are approved by the IRS. If you itemize, under certain circumstances, you can deduct some medical expenses if you meet certain restrictions."
+      },
+      "adapted_top1": {
+        "id": "24819",
+        "text": "Health insurance premiums can be a tax deductible item if you are self employed or paying for your own insurance and filing a long form. Your tax adviser can tell you if your health insurance premiums are a tax deductible item in your individual circumstance but in most cases they are deductible."
+      },
+      "gold_answers": [
+        {
+          "id": "2415",
+          "text": "Health insurance premiums can sometimes be a tax deduction. Depending on the type of policy you have, and how you file your return, you could benefit from tax deductions. More often, healthcare expenses (instead of premiums) receive the best tax treatment. For example, a Health Savings Account (HSA) will allow you to deduct qualified deposits into the side-account. The money you deposit must be used for health, dental or vision expenses that are approved by the IRS. If you itemize, under certain circumstances, you can deduct some medical expenses if you meet certain restrictions."
+        },
+        {
+          "id": "3370",
+          "text": "Premiums are tax decuctible for any self employed person or business owner if they utilize an IRS sanctioned health reimbursement program called a HRA105. To take advantage of the HRA105 you must have a written document prepared by a professional at an average cost of $300. USHeath Advisors business association will prepare the documentation free for clients or association members.For individuals;an HSA (Health Savings Account) would be the way to go. Although it does not give tax breaks on premiums; it does on deductibles, dental, chiropractic etc."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01786",
+      "question": "How Much Should I Be Paying For Home Insurance?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "2614",
+        "text": "The amount of premium you should be paying for your homeowner's insurance depends on how much coverage you have on your dwelling ( and personal property etc...), deductibles, type of policy, claims history and where you live. Many discounts (such as 55 and retired) may reduce your rate and that must be considered. You could pay as little as $250 per year or thousands of dollars per year. There are many variables that must be considered."
+      },
+      "adapted_top1": {
+        "id": "8321",
+        "text": "How much should you pay for homeowner's insurance? It depends on many variables including the coverage on the dwelling, personal property, liability and other items. Naturally, where you live and what the home is insured for will play major roles in determining the premium. I know...You want a price. How about between $200 and $1500 per year. It's a huge range but by contacting a broker, within minutes, we can provide an exact rate."
+      },
+      "gold_answers": [
+        {
+          "id": "2614",
+          "text": "The amount of premium you should be paying for your homeowner's insurance depends on how much coverage you have on your dwelling ( and personal property etc...), deductibles, type of policy, claims history and where you live. Many discounts (such as 55 and retired) may reduce your rate and that must be considered. You could pay as little as $250 per year or thousands of dollars per year. There are many variables that must be considered."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01834",
+      "question": "How Does Cash Value Of Life Insurance Work?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 8,
+      "old_top1": {
+        "id": "3668",
+        "text": "In simple terms, permanent life insurance requires premiums higher than what it takes to cover the cost of the death benefit. The surplus premium creates a \"cash value\" that grows over time. The cash value can be comprised of a guaranteed value plus a non-guaranteed component such as excess interest or dividends. The best way to see how cash value might work for you is to ask an agent for an \"illustration\" showing how the policy might work on a year by year schedule."
+      },
+      "adapted_top1": {
+        "id": "734",
+        "text": "The cash value of a life insurance policy is the savings amount in a Whole or Universal Life policy. If you were to use your policy as collateral, or borrow from it, or surrender it, the cash value would show you how many funds you have available, minus surrender charges."
+      },
+      "gold_answers": [
+        {
+          "id": "3668",
+          "text": "In simple terms, permanent life insurance requires premiums higher than what it takes to cover the cost of the death benefit. The surplus premium creates a \"cash value\" that grows over time. The cash value can be comprised of a guaranteed value plus a non-guaranteed component such as excess interest or dividends. The best way to see how cash value might work for you is to ask an agent for an \"illustration\" showing how the policy might work on a year by year schedule."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01853",
+      "question": "Why Does Life Insurance Have Cash Value?",
+      "category": "fixed_reranker_alone_has_gold_first",
+      "pure_reranker_gold_rank": 1,
+      "old_top1": {
+        "id": "15502",
+        "text": "David has given you a fine explanation of the mechanics of cash accumulation inside life insurance. I will address an additional point. One big reason for why life insurance has cash value is because that cash makes more people want to buy the product. When you think about it, life insurance really is not for the insured - it is for the beneficiaries of the insured. These include their families, their businesses, and their favorite charities. For many people, it is considered a necessary evil. They certainly want to do right by all these folks they support, but really - who wants to buy something that pays off when you die? I think that from a marketing point of view, cash value sweetens the pot. It makes the product much more appealing. Now people can have their cake and eat it too. They can purchase a policy with a survivor benefit for their heirs. That policy can also have a cash account that is available to them while they are alive. They can use the money to supplement retirement; buy a house; fund a business; and for emergencies Not only that: the cash receives very favorable tax treatment. You might ask, why does the government give such favorable tax treatment to life insurance? One big reason is that there is no way on earth that federal and state governments could take care of all the people that benefit from life insurance. It simply could not collect enough money to pay all the windows, widowers, children, businesses, and charities for whom people buy policies. It is entirely in the governments interest for people to buy tons and tons of life insurance. And over time, people have. The life insurance industry has poured trillions of dollars into the economy so that people can remain self-reliant - and off of government subsidies. The side benefit of a cash account helps make that happen."
+      },
+      "adapted_top1": {
+        "id": "4789",
+        "text": "Life insurance has cash value under the circumstances below. The thing is that depending on how you manage that cash, it can be a blessing or a curse. Whole life has cash value when the company pays dividends. These are not guaranteed, but are typically paid. Over time, they can add up. But once you use that tempting loan provision, that cash value not only goes down but so does the death benefit. Better make sure you can deal with that. Universal life has cash value when the company applies a high enough interest rate to the policy account. That can be higher than a lot of conservative instruments out there. But you can take cash out of the policy. And, you can stop paying premiums, or under pay, if you want. What do you think will happen if the interest rate goes down and you deplete the policy of cash? It will die an ugly death. So be careful."
+      },
+      "gold_answers": [
+        {
+          "id": "15502",
+          "text": "David has given you a fine explanation of the mechanics of cash accumulation inside life insurance. I will address an additional point. One big reason for why life insurance has cash value is because that cash makes more people want to buy the product. When you think about it, life insurance really is not for the insured - it is for the beneficiaries of the insured. These include their families, their businesses, and their favorite charities. For many people, it is considered a necessary evil. They certainly want to do right by all these folks they support, but really - who wants to buy something that pays off when you die? I think that from a marketing point of view, cash value sweetens the pot. It makes the product much more appealing. Now people can have their cake and eat it too. They can purchase a policy with a survivor benefit for their heirs. That policy can also have a cash account that is available to them while they are alive. They can use the money to supplement retirement; buy a house; fund a business; and for emergencies Not only that: the cash receives very favorable tax treatment. You might ask, why does the government give such favorable tax treatment to life insurance? One big reason is that there is no way on earth that federal and state governments could take care of all the people that benefit from life insurance. It simply could not collect enough money to pay all the windows, widowers, children, businesses, and charities for whom people buy policies. It is entirely in the governments interest for people to buy tons and tons of life insurance. And over time, people have. The life insurance industry has poured trillions of dollars into the economy so that people can remain self-reliant - and off of government subsidies. The side benefit of a cash account helps make that happen."
+        },
+        {
+          "id": "16468",
+          "text": "Permanent life insurance has the potential to accumulate cash values based on the performance of the crediting method and policy expenses. With few exceptions, most permanent guaranteed universal life insurance can be used as a supplemental retirement income plan; if the policy is designed to minimize the cost of insurance ad comply with TAMRA. Generally, the policy expenses are deducted from the premium. Whatever is left of the premium is invested in the crediting method: interest rates or indices. Separate sub account performance may credit earnings or debit losses."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01889",
+      "question": "Is Life Insurance Necessary For A Mortgage?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 4,
+      "old_top1": {
+        "id": "25976",
+        "text": "It depends on your definition of \"necessary\". It used to be common practice for mortgage companies to sell credit life insurance that would pay the mortgage in the case of the borrower's death. These policies aren't sold much anymore because they weren't really a good value for the borrower. The rates were high and the death benefits fell over time with the balance of the mortgage. It's usually a good practice to have life insurance in place to pay off any debts you have including a mortgage. To do this the right way you really need to consider the bigger picture of your life. A mortgage is just one piece of the puzzle that is your financial life. When considering how much life insurance you need, you have to determine what will happen if you die and where that will leave the survivors. Find an agent you can trust and go through the process of this planning. Nobody likes thinking about their death, but the situation exists whether you plan for it or not."
+      },
+      "adapted_top1": {
+        "id": "23934",
+        "text": "No, life insurance is not usually mandatory for a mortgage. When PMI (private mortgage insurance) is required due to a low down payment, that is not the same as Life Insurance. PMI exists to protect the lender, and only pays the lender the amount that is owed them. It has a high cost compared to regular Life Insurance. While having regular Life Insurance is a great way to cover a mortgage (it goes to your beneficiary so they can pay off the house, put it away and live off the interest, or whatever works best), lenders do not usually require it. If you have put enough down, they are in OK shape just taking your house if you die. All the more reason to get life insurance."
+      },
+      "gold_answers": [
+        {
+          "id": "25976",
+          "text": "It depends on your definition of \"necessary\". It used to be common practice for mortgage companies to sell credit life insurance that would pay the mortgage in the case of the borrower's death. These policies aren't sold much anymore because they weren't really a good value for the borrower. The rates were high and the death benefits fell over time with the balance of the mortgage. It's usually a good practice to have life insurance in place to pay off any debts you have including a mortgage. To do this the right way you really need to consider the bigger picture of your life. A mortgage is just one piece of the puzzle that is your financial life. When considering how much life insurance you need, you have to determine what will happen if you die and where that will leave the survivors. Find an agent you can trust and go through the process of this planning. Nobody likes thinking about their death, but the situation exists whether you plan for it or not."
+        },
+        {
+          "id": "6409",
+          "text": "Life insurance is not necessary to get most mortgages. If you put down under 20% for the down payment, you may be required to get PMI (Private Mortgage Insurance) in order to obtain the mortgage. That is not regular life insurance, but a policy created just for the purpose of paying off what you owe the lender, in the event of your death. Many people do choose to buy term life insurance to pay off their mortgage, so that their loved ones can stay in the home if they were to pass while the mortgage is not yet paid off."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    },
+    {
+      "id": "iqa_v2_test_01968",
+      "question": "Does My Husband Have To Be On My Auto Insurance If He Doesn't Drive The Car?",
+      "category": "fixed_reranker_also_misranks",
+      "pure_reranker_gold_rank": 5,
+      "old_top1": {
+        "id": "18085",
+        "text": "I understand it's hard when you have a driver with, shall we say, a less than stellar driving record. Most companies, however, will want your husband to be named on your auto insurance policy. Over the years they've realized that people drive the cars that they own whether they're insured on a policy or not. It's just the reality of the situation. However, that doesn't mean that your rates have to be sky-high, as you put it. There are some pointers I can give you to help minimize the impact. Your husband can get his own insurance separate from yours. If his record is bad enough that he has be placed with a non standard(high risk) company, you can still have a policy through a standard company. As long as he has insurance, he doesn't have to be listed as a driver on your policy. Whether you choose to have him get his own policy or list him on yours, list him on a car that doesn't have physical damage coverage(comp and collision). Physical damage coverage on a non standard policy can cost big dollars, as much as 75% of the total cost of the insurance. Track his driving record. Any violation will eventually drop off for rating purposes. Most minor violations will drop off after two years, at fault accidents will usually drop off after three years, and major violations(DUI etc.) will drop off after five years. As soon as he's eligible to be insured through a standard carrier, list him. Many people don't realize this and continue to pay non standard rates even after they're eligible. I'll preface this last point by saying I don't recommend it. Some companies can exclude a driver. In so doing they're not rated on the policy and they're record doesn't matter. But realize that there is no coverage if they get into an accident,even if they're driving a car on the policy. Once again, I do not recommend this. From time to time I see a driver that has a problem driving safely. They routinely get tickets and have accidents. Some will even just stop carrying insurance because it's so expensive but don't seem to see the correlation between their driving and their insurance rates. If he will, get him into a safe driving program. If he won't, you'll probably be dealing with this for a long time. Good luck."
+      },
+      "adapted_top1": {
+        "id": "26527",
+        "text": "Your spouse unless specifically excluded will be covered under your auto insurance policy. However you are required to report your spouse as an operator. The insurance provider would ask you this question when filling out an application. Especially if you state you are married. If you claim your spouse has no licenses and does not drive and then turns out she is driving you may have a problem. There is no allowance for hiding household operators."
+      },
+      "gold_answers": [
+        {
+          "id": "1482",
+          "text": "Here in CT, a licensed driver needs to be either rated or excluded on an auto policy. The tough part is that although this can work in many situations, a spousal situation is not one of them. It may be possible if each of you have a car registered in your own name and insured on separate policies, this you really neeed to check with your Insurance Professional"
+        },
+        {
+          "id": "18085",
+          "text": "I understand it's hard when you have a driver with, shall we say, a less than stellar driving record. Most companies, however, will want your husband to be named on your auto insurance policy. Over the years they've realized that people drive the cars that they own whether they're insured on a policy or not. It's just the reality of the situation. However, that doesn't mean that your rates have to be sky-high, as you put it. There are some pointers I can give you to help minimize the impact. Your husband can get his own insurance separate from yours. If his record is bad enough that he has be placed with a non standard(high risk) company, you can still have a policy through a standard company. As long as he has insurance, he doesn't have to be listed as a driver on your policy. Whether you choose to have him get his own policy or list him on yours, list him on a car that doesn't have physical damage coverage(comp and collision). Physical damage coverage on a non standard policy can cost big dollars, as much as 75% of the total cost of the insurance. Track his driving record. Any violation will eventually drop off for rating purposes. Most minor violations will drop off after two years, at fault accidents will usually drop off after three years, and major violations(DUI etc.) will drop off after five years. As soon as he's eligible to be insured through a standard carrier, list him. Many people don't realize this and continue to pay non standard rates even after they're eligible. I'll preface this last point by saying I don't recommend it. Some companies can exclude a driver. In so doing they're not rated on the policy and they're record doesn't matter. But realize that there is no coverage if they get into an accident,even if they're driving a car on the policy. Once again, I do not recommend this. From time to time I see a driver that has a problem driving safely. They routinely get tickets and have accidents. Some will even just stop carrying insurance because it's so expensive but don't seem to see the correlation between their driving and their insurance rates. If he will, get him into a safe driving program. If he won't, you'll probably be dealing with this for a long time. Good luck."
+        }
+      ],
+      "gold_still_in_top10": true,
+      "used_for_training": false
+    }
+  ],
+  "prior_predictions_sha256": "046a3401d19b8f80eba187071853adeba0446500a16581c8dfce7415ea8aecd9",
+  "code_sha256": "9493d5cdefbdbeee6f2226d1fcf982a48c599849e526baafd1d8cc0d03fbf756"
+}

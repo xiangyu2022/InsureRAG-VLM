@@ -1,0 +1,23 @@
+{
+  "questions": 50,
+  "domain_counts": {
+    "insuranceqa": 20,
+    "government": 20,
+    "general": 10
+  },
+  "expert_labels_completed": 0,
+  "training_manifest_sha256": "e8a3b024e12fe9e77b1e3f5b24e548479fbfec9fab356ca06b97a6fc1e960c26",
+  "code_sha256": "9ada0519074d3fe74e6b3f5409cd6023c16645ba5e081be9f4ace4c681d329ee",
+  "files": {
+    "blind_queue.jsonl": "2a5acd69ab2fea04e411dcda70c406114d6b9f39672c5947ece30f39635572db",
+    "mapping_do_not_show_reviewer.jsonl": "66dfbb772c2840f90e11f132af302f695ed04c4941256a8660cb2fbe7cfa417e"
+  },
+  "label_schema": [
+    "directly_answers",
+    "partially_answers",
+    "wrong_scope_or_condition",
+    "insufficient_context",
+    "uncertain"
+  ],
+  "guard": "No held-out queries included. Blank annotations are not training labels; adjudication and a new frozen dataset version are required before any use."
+}

@@ -1,0 +1,50 @@
+{
+  "question": "What are the requirements for Medicaid to pay after a third-party insurer?",
+  "corpus": "hicric",
+  "answer_candidates": 78830,
+  "retrieval_only": true,
+  "generation_calls": 0,
+  "fine_tuned_in_this_project": false,
+  "profile": "general",
+  "selected_epoch": null,
+  "config": {
+    "pool": "hybrid100",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "candidates_scored": 145,
+  "seconds_including_loading": 11.101257900008932,
+  "scope": "Archived public research evidence; snippet search is not evaluated policy reasoning",
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "rag_snippet::hicric_d6746b52dcaf0d28::p0001::s0001",
+      "text": "the payer of last resort. Except for certain statutory exclusions, you are required to cost avoid claims, rejecting those that may be payable by a third party. If probable third party liability is not established or benefits are not available from a third party, you must pay the claim if the services are covered by Medicaid. If the Medicaid agency learns of the existence of a liable third party after a claim is paid, or benefits become available from a third party after the claim is paid, you must seek recovery from that third party. When that third party is Medicare, neither the Medicare nor Medicaid statute, nor HHS's regulations or policies prohibit any state from recouping its Medicaid payment from providers in the situations where: (1) Medicare has determined that it is liable for the service at issue; or (2) a beneficiary, beneficiary representative, or state (as the beneficiarys subrogee) timely requests the provider to file a claim with Medicare and the provider fails to submit timely a complete claim to Medicare for the service at issue, and/or fails",
+      "source_url": "https://www.medicaid.gov/media/38961",
+      "doc_id": "hicric_d6746b52dcaf0d28",
+      "start_word": 120,
+      "end_word": 300,
+      "page_unit": "Logical source record; not a physical PDF page"
+    },
+    {
+      "rank": 2,
+      "answer_id": "rag_snippet::hicric_0376a78a4f256b46::p0001::s0067",
+      "text": "allocated via the cost report. 9. Third-Party Liability for Medicaid SBS Generally, the Medicaid statute requires Medicaid to be the payer of last resort, which means state Medicaid agencies are required to take reasonable measures to identify and recover payments from third parties that are liable to pay for services furnished under the state plan. Section 1903(c) of the Act, however, permits an exception to the Third-Party Liability (TPL) requirements in that, for Medicaid covered services listed on a Medicaid eligible childs IEP/IFSP, Medicaid is primary for IDEA-related services. This means that Medicaid will pay primary to the ED for Medicaid-covered services listed in a childs IEP/IFSP even if a liable third party is likely liable. After the state Medicaid agency makes the primary payment on a claim for an IEP/IFSP service, it will then seek to recoup that payment from any liable third party (this is known as pay and chase). This removes the burden of seeking TPL for services from the school provider and places it on the state Medicaid agency. With respect to services that are not",
+      "source_url": "https://www.medicaid.gov/media/142261",
+      "doc_id": "hicric_0376a78a4f256b46",
+      "start_word": 8040,
+      "end_word": 8220,
+      "page_unit": "Logical source record; not a physical PDF page"
+    },
+    {
+      "rank": 3,
+      "answer_id": "rag_snippet::hicric_7df489a03ac4056e::p0001::s0003",
+      "text": "Page 2 There are certain circumstances under which a State Medicaid Agency (SMA) may pay a claim even if a third party is likely liable and then seek to recoup payment from the liable third party. This is referred to as pay and chase. Pay and chase is required for particular circumstances where there is a risk that if the SMA were to cost avoid claims, providers might choose not to participate in the Medicaid program in order to avoid dealing with the administrative burden associated with Medicaid cost-avoidance claims processing requirements. Pre-Bipartisan Budget Act of 2018 the law required that states make payments for prenatal or preventive pediatric care, including screening and diagnosis, within 30 days without regard to third party liability, and if a third party is found to be liable, seek reimbursement after payment is made. Effective February 9, 2018 section 53102(a)(1) of the Bipartisan Budget Act of 2018 amended section 1902(a)(25)(E) of the Act to require a state to use standard coordination of benefits cost avoidance when processing claims for prenatal services which now included labor",
+      "source_url": "https://www.medicaid.gov/media/40576",
+      "doc_id": "hicric_7df489a03ac4056e",
+      "start_word": 360,
+      "end_word": 540,
+      "page_unit": "Logical source record; not a physical PDF page"
+    }
+  ]
+}

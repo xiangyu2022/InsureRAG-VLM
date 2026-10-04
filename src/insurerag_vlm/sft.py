@@ -1,10 +1,11 @@
 import json
 import os
 import signal
-from hashlib import sha256
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
+
+from .sft_integrity import build_training_provenance, file_sha256, write_provenance
 
 
 DEFAULT_QWEN_7B_MODEL = os.environ.get("INSURERAG_QWEN_7B_MODEL", "Qwen/Qwen2.5-7B-Instruct")
@@ -73,6 +74,8 @@ class SFTSmokeResult:
 
 def read_sft_records(path: Path, max_samples: Optional[int] = None) -> List[Dict[str, Any]]:
     path = Path(path)
+    if max_samples is not None and max_samples <= 0:
+        raise ValueError("max_samples must be positive when specified")
     records: List[Dict[str, Any]] = []
     if path.suffix.lower() == ".jsonl":
         with path.open("r", encoding="utf-8") as fh:
@@ -135,11 +138,13 @@ def _render_prompt_and_full_text(tokenizer: Any, messages: List[Dict[str, str]])
             prompt_messages,
             tokenize=False,
             add_generation_prompt=True,
+            enable_thinking=False,
         )
         full_text = tokenizer.apply_chat_template(
             messages,
             tokenize=False,
             add_generation_prompt=False,
+            enable_thinking=False,
         )
     else:
         prompt_text = (
@@ -153,6 +158,8 @@ def _render_prompt_and_full_text(tokenizer: Any, messages: List[Dict[str, str]])
 
 
 def tokenize_sft_record(tokenizer: Any, record: Dict[str, Any], max_length: int) -> Dict[str, List[int]]:
+    if max_length < 2:
+        raise ValueError("max_length must allow prompt and assistant tokens")
     messages = format_sft_messages(record)
     prompt_text, full_text = _render_prompt_and_full_text(tokenizer, messages)
     prompt_ids = tokenizer(prompt_text, add_special_tokens=False)["input_ids"]
@@ -163,11 +170,17 @@ def tokenize_sft_record(tokenizer: Any, record: Dict[str, Any], max_length: int)
         max_length=max_length,
     )
     input_ids = full["input_ids"]
+    if not input_ids:
+        raise ValueError("Tokenizer returned an empty training example")
     labels = list(input_ids)
     prompt_len = min(len(prompt_ids), len(labels))
     labels[:prompt_len] = [-100] * prompt_len
     if all(label == -100 for label in labels):
-        labels[-1] = input_ids[-1]
+        identity = record.get("record_id", "<unknown>")
+        raise ValueError(
+            f"SFT example {identity} has no assistant tokens after truncation at max_length={max_length}; "
+            "increase the context limit or shorten the evidence. A prompt token must not become a training target."
+        )
     return {
         "input_ids": input_ids,
         "attention_mask": [1] * len(input_ids),
@@ -241,14 +254,6 @@ def _require_cuda() -> Any:
     return torch
 
 
-def _file_sha256(path: Path) -> str:
-    digest = sha256()
-    with Path(path).open("rb") as fh:
-        for block in iter(lambda: fh.read(1024 * 1024), b""):
-            digest.update(block)
-    return digest.hexdigest()
-
-
 def _load_tokenizer(model_name: str) -> Any:
     try:
         from transformers import AutoTokenizer
@@ -314,9 +319,10 @@ class _SignalSaveCallback(_TrainerCallbackCompat):
 
 
 class _SFTProgressCallback(_TrainerCallbackCompat):
-    def __init__(self, output_dir: Path):
+    def __init__(self, output_dir: Path, provenance: Optional[Dict[str, Any]] = None):
         self.output_dir = Path(output_dir)
         self.progress_path = self.output_dir / "sft_progress.json"
+        self.provenance = provenance
 
     def _write_progress(self, payload: Dict[str, Any]) -> None:
         self.output_dir.mkdir(parents=True, exist_ok=True)
@@ -352,6 +358,8 @@ class _SFTProgressCallback(_TrainerCallbackCompat):
     def on_save(self, args: Any, state: Any, control: Any, **kwargs: Any) -> Any:
         del args, control, kwargs
         checkpoint_dir = self.output_dir / f"checkpoint-{int(state.global_step)}"
+        if self.provenance is not None:
+            write_provenance(checkpoint_dir, self.provenance)
         payload = {
             "status": "running",
             "global_step": int(state.global_step),
@@ -376,6 +384,23 @@ class _SFTProgressCallback(_TrainerCallbackCompat):
 
 
 def run_lora_sft(config: QwenLoraSFTConfig) -> Dict[str, Any]:
+    records = read_sft_records(config.dataset_path, max_samples=config.max_samples)
+    invalid_splits = sorted({
+        str(record["split"]) for record in records
+        if record.get("split") and str(record["split"]).lower() != "train"
+    })
+    if invalid_splits:
+        raise ValueError(f"SFT input contains non-training splits: {invalid_splits}; pass only the training dataset.")
+    resume_checkpoint = None
+    if config.resume_from_checkpoint is not None:
+        resume_checkpoint = str(config.resume_from_checkpoint)
+    elif config.auto_resume:
+        latest_checkpoint = _find_latest_checkpoint(config.output_dir)
+        if latest_checkpoint is not None:
+            resume_checkpoint = str(latest_checkpoint)
+            print(f"Auto-resuming from checkpoint: {resume_checkpoint}", flush=True)
+    parents = [path for path in (config.adapter_path, resume_checkpoint) if path is not None]
+    provenance = build_training_provenance(records, config.dataset_path, config.model_name, parents)
     torch = _require_cuda()
     try:
         from peft import LoraConfig, PeftModel, get_peft_model, prepare_model_for_kbit_training
@@ -386,7 +411,6 @@ def run_lora_sft(config: QwenLoraSFTConfig) -> Dict[str, Any]:
         raise RuntimeError("The current CUDA device does not support bf16. Re-run with --fp16.")
 
     tokenizer = _load_tokenizer(config.model_name)
-    records = read_sft_records(config.dataset_path, max_samples=config.max_samples)
     train_dataset = SFTDataset(records, tokenizer, config.max_length)
 
     compute_dtype = torch.bfloat16 if config.bf16 else torch.float16
@@ -445,7 +469,7 @@ def run_lora_sft(config: QwenLoraSFTConfig) -> Dict[str, Any]:
         seed=config.seed,
     )
     signal_callback = _SignalSaveCallback()
-    progress_callback = _SFTProgressCallback(config.output_dir)
+    progress_callback = _SFTProgressCallback(config.output_dir, provenance)
     trainer = Trainer(
         model=model,
         args=training_args,
@@ -453,15 +477,9 @@ def run_lora_sft(config: QwenLoraSFTConfig) -> Dict[str, Any]:
         data_collator=CausalLMDataCollator(tokenizer),
         callbacks=[signal_callback, progress_callback],
     )
-    resume_checkpoint = None
-    if config.resume_from_checkpoint is not None:
-        resume_checkpoint = str(config.resume_from_checkpoint)
-    elif config.auto_resume:
-        latest_checkpoint = _find_latest_checkpoint(config.output_dir)
-        if latest_checkpoint is not None:
-            resume_checkpoint = str(latest_checkpoint)
-            print(f"Auto-resuming from checkpoint: {resume_checkpoint}", flush=True)
-
+    # Persist before training and into each checkpoint, including interrupted runs.
+    # The manifest conservatively records all rows supplied to this run.
+    write_provenance(config.output_dir, provenance)
     signal_callback.register()
     try:
         train_result = trainer.train(resume_from_checkpoint=resume_checkpoint)
@@ -480,7 +498,8 @@ def run_lora_sft(config: QwenLoraSFTConfig) -> Dict[str, Any]:
         "trainable_params": trainable_params,
         "total_params": total_params,
         "train_loss": getattr(train_result, "training_loss", None),
-        "dataset_sha256": _file_sha256(config.dataset_path),
+        "dataset_sha256": file_sha256(config.dataset_path),
+        "training_provenance": provenance,
         "torch_version": torch.__version__,
         "torch_cuda_version": torch.version.cuda,
         "peak_cuda_memory_mb": peak_memory_mb,

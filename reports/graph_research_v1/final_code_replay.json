@@ -1,0 +1,9 @@
+{
+  "verified_utc": "2026-10-01T16:39:52.825806+00:00",
+  "requests_checked": 240,
+  "all_prompt_and_annotation_hashes_identical": true,
+  "generation_calls_in_replay": 0,
+  "original_preparation_protocol_sha256": "006660e582837669e678f05c491dfe5f15411776f32c2684bf2adc5e22444ad1",
+  "final_code_preparation_protocol_sha256": "2deaf0b26cbd5a7659c2f6ee7893f5671f7e596485169950e1f506d6db04c548",
+  "meaning": "The source-reference annotation extension leaves all 240 primary public test prompts identical. Original inference/code metadata remain unchanged."
+}

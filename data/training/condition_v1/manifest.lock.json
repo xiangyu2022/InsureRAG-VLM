@@ -1,0 +1,76 @@
+{
+  "created_utc": "2026-10-01T22:10:40.777675+00:00",
+  "training_questions": 25987,
+  "source_domains": {
+    "insuranceqa": 11729,
+    "government": 259,
+    "general": 13999
+  },
+  "available_positive_pairs": 33451,
+  "mined_negative_pairs": 285857,
+  "teacher": {
+    "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\ms-marco-MiniLM-L6-v2",
+    "files_sha256": {
+      "config.json": "380e02c93f431831be65d99a4e7e5f67c133985bf2e77d9d4eba46847190bacc",
+      "download_provenance.json": "6f3f6cb2330ee56c4676228ca529b9f31a9704df3a28c92955feb51d758d9196",
+      "model.safetensors": "821d1aa69520101d6e0737f78a042ae25b19e5cb9160701909d10434f4aeb0ae",
+      "special_tokens_map.json": "3c3507f36dff57bce437223db3b3081d1e2b52ec3e56ee55438193ecb2c94dd6",
+      "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "tokenizer_config.json": "a5c2e5a7b1a29a0702cd28c08a399b5ecc110c263009d17f7e3b415f25905fd8",
+      "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    },
+    "checkpoint_sha256": "d889a9b6d961d5fbda537d7eae8dec7ba0aa440497fc0c92bf8871eeae44cf02",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "max_length": 512,
+    "batch_size": 64,
+    "truncation": "longest_first",
+    "score": "raw single relevance logit",
+    "remote_code": false,
+    "fine_tuned_in_this_project": false
+  },
+  "student_miner": {
+    "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\insurerag-retention-v2\\epoch-2",
+    "files_sha256": {
+      "config.json": "bde16d9648b01e19b9d4c5f3deca28cd2851fbbc660f8a90cecd87efde5c5429",
+      "model.safetensors": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+      "tokenizer.json": "91f1def9b9391fdabe028cd3f3fcc4efd34e5d1f08c3bf2de513ebb5911a1854",
+      "tokenizer_config.json": "88eb33800f51cc08e19ebe4dffbde5afbc9e517a993ede2861a22ed9c7e0be7f",
+      "training_provenance.json": "ca35807a9352830c04c94eac5df7ef12089b0b1f67f16926bcfb41265416d7ea"
+    },
+    "checkpoint_sha256": "2bb66fe5c2dbbd62db0fb0884f98f16341767fba791681af6e5dd700ceee761b",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "max_length": 512,
+    "batch_size": 64,
+    "truncation": "longest_first",
+    "score": "raw single relevance logit",
+    "remote_code": false,
+    "fine_tuned_in_this_project": true,
+    "training_provenance": {
+      "epoch": 2,
+      "optimizer_steps": 2574,
+      "fine_tuned_in_this_project": true,
+      "weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+      "initial_weights_sha256": "88207632c798e8a5a7eb2799447dc1f1f08aec03daaa142b31fb29572a2071fe",
+      "training_manifest_sha256": "8a714663f31c688447371cf2bba28fa0228f21d926f188574d9d8eeb647ccf20",
+      "training_protocol_sha256": "f6a6ef633c85d0120901abb47fed29e8ef341b42dc0ce7db436d1194f17ef3d4",
+      "training_code_sha256": "3ab4c4e170abccb2e34ee0b423d9a943c115a6a036b0c1d2cf780e65cecc658f",
+      "recipe": "rehearsal_from_v2",
+      "unique_training_questions": 19941,
+      "pair_exposures": 246960
+    }
+  },
+  "student_pairs_scored": 574252,
+  "additional_teacher_pairs": 169578,
+  "parent_training_manifest_sha256": "8a714663f31c688447371cf2bba28fa0228f21d926f188574d9d8eeb647ccf20",
+  "fixture_sha256": "90fa68ccfa46dd94c8a64be774d4d4c87e6f268be9af0f80f251a598e383c9c9",
+  "seconds": 544.8762040000875,
+  "code_sha256": "b81b0533fd9d558dcbf499716bee7fb713dc71c89225250c9e57aaa3bdc06bad",
+  "retrieval_implementation": "Batched dense products; CSC query-column BM25 with 1e-12 parity checks on 21 training queries. Training-only candidate mining.",
+  "files": {
+    "answers.jsonl": "ed1475b822ef2b1032b90430c2b21acb7e6259c35afc1f90dd5e07cf05666d35",
+    "train_groups.jsonl": "f8653634ad125ab1d6c948a303985ab7e782b0cb9c29445e944b8d789c394f4f",
+    "source_isolation.json": "88b239e480080c5d7bde1e621f26bfbf1770def52bad469a94e10545cc930562"
+  }
+}

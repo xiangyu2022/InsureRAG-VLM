@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "unique_training_questions": 19941,
+  "government_source_spans_verified": 421,
+  "squad_original_spans_verified": 8999,
+  "government_sources": 56,
+  "source_group_overlap": 0,
+  "old_government_test_source_overlap": 0,
+  "exact_duplicate_training_questions": 0,
+  "training_positive_vs_heldout_positive_text_overlap": 0,
+  "positive_negative_text_overlap": 0,
+  "teacher_scores_finite_and_complete": true,
+  "canonical_paragraph_offset_variants": [
+    {
+      "id": "squad_q_5731edafe17f3d1400422559",
+      "split": "train",
+      "reason": "Paragraph ID deduplicates normalized text; original offsets refer to original source paragraph, not the canonical whitespace variant."
+    },
+    {
+      "id": "squad_q_57324644e17f3d14004227b3",
+      "split": "train",
+      "reason": "Paragraph ID deduplicates normalized text; original offsets refer to original source paragraph, not the canonical whitespace variant."
+    }
+  ],
+  "code_sha256": "60edf820f3c878a6090a6175840456702ceab60f7f857e18dff174019af79502",
+  "training_manifest_sha256": "2c30c88c796b0d066804ccd5d6bfa27e474c88a3ccf0de785a5bbaf10201eebf",
+  "fixture_manifest_sha256": "912f40bc9a696f7492ec02c61202e719dac362b460d57ae7f12cc46b050a667d",
+  "caveat": "Mechanical source alignment; not expert annotation or verification of present-day policy correctness."
+}

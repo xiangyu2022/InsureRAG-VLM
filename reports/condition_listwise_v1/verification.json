@@ -1,0 +1,120 @@
+{
+  "status": "verified",
+  "created_utc": "2026-10-01T23:09:58.515173+00:00",
+  "unique_training_questions": 25987,
+  "domain_counts": {
+    "insuranceqa": 11729,
+    "government": 259,
+    "general": 13999
+  },
+  "heldout_source_positive_or_negative_overlap": 0,
+  "government_source_span_audit_sha256": "f997f15b6c4d6ba5926b4f88df98daf1ba8dac5f70adefe5ebd84aa87cf86724",
+  "fixture_manifest_sha256": "90fa68ccfa46dd94c8a64be774d4d4c87e6f268be9af0f80f251a598e383c9c9",
+  "government_raw_source_hashes_verified": true,
+  "training_manifest_sha256": "7ec5f1d6b86775214c759ef816ff043e18a3ba19f3d37809b2c0f2e8c8a4fba6",
+  "selected_model": "seed_123",
+  "promoted_weights": true,
+  "training_runs": [
+    {
+      "seed": 42,
+      "steps": 2471,
+      "pair_exposures": 237174,
+      "seconds": 585.8070912000258,
+      "weights_sha256": "0087a1cbc8d2e4b6785bb7768ab08affcca9c7c361026602f622fab91a6768af",
+      "changed_values": 21372574,
+      "changed_tensors": 105,
+      "peak_cuda_allocated_bytes": 1812696064
+    },
+    {
+      "seed": 123,
+      "steps": 2471,
+      "pair_exposures": 237174,
+      "seconds": 579.4761358001269,
+      "weights_sha256": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+      "changed_values": 21376774,
+      "changed_tensors": 105,
+      "peak_cuda_allocated_bytes": 1807201792
+    }
+  ],
+  "total_optimizer_steps": 4942,
+  "total_pair_exposures": 474348,
+  "rejected_parent_training_runs": [
+    {
+      "seed": 42,
+      "steps": 2471,
+      "pair_exposures": 237174,
+      "seconds": 574.3293994998094,
+      "weights_sha256": "fa9ed6cac31f94a119d1b7829b48d2d04789593d5896f6647b1be7c78e59ec1d"
+    },
+    {
+      "seed": 123,
+      "steps": 2471,
+      "pair_exposures": 237174,
+      "seconds": 573.3144642999396,
+      "weights_sha256": "f9639c3415257ba9507f5b8e6059d58294e03579531b414dc57da26a5c2ecf6b"
+    }
+  ],
+  "parent_selection_sha256": "560a7f66a1a92e1900fcf3226c79089f2ad243cc4a2e3e40e1aa910166e59434",
+  "all_recipes_optimizer_steps": 9884,
+  "all_recipes_pair_exposures": 948696,
+  "score_artifacts": [
+    {
+      "artifact": "valid_legacy_seed_123",
+      "questions": 2000,
+      "scores_sha256": "5041fce03446b1b421565302d8ab63658774815dd755a9743ce9b2ba6c18cc93"
+    },
+    {
+      "artifact": "valid_legacy_seed_42",
+      "questions": 2000,
+      "scores_sha256": "ceb2597044edb534dfef914cbf808f8a8bcec43f57ae20e01057e4f7e2ef033a"
+    },
+    {
+      "artifact": "valid_mixed_seed_123",
+      "questions": 527,
+      "scores_sha256": "4bed2170d2959280e5cd03c880ff272b94192c40195f8fd5669cbca95e0dbb9b"
+    },
+    {
+      "artifact": "valid_mixed_seed_42",
+      "questions": 527,
+      "scores_sha256": "6c5e0815d08f9c4ca07534d8c7f3f4b367a651ad360dbb3462534c9e0a9211ab"
+    },
+    {
+      "artifact": "test_fresh_candidates",
+      "questions": 157,
+      "scores_sha256": "c34f168708e6b06addee0106580b8e98c760989dcca5ad7ed1083bd514dc661b"
+    },
+    {
+      "artifact": "test_fresh_previous",
+      "questions": 157,
+      "scores_sha256": "c45ee2d68760bfe83381a914600109657f087a106ea3aa7c37658c873c29064a"
+    },
+    {
+      "artifact": "test_fresh_public",
+      "questions": 157,
+      "scores_sha256": "88e189ea8469abac61e019d7b1faf51e98228472fbb6f713a98bd028d0e3cdb3"
+    },
+    {
+      "artifact": "test_fresh_selected",
+      "questions": 157,
+      "scores_sha256": "59fd620e6e3b91f22f9d6773e07a893cc0ca7b73b9c299d17f69031112328b33"
+    },
+    {
+      "artifact": "test_legacy_selected",
+      "questions": 2000,
+      "scores_sha256": "10fabb83a952a329976d9f792b1caa04393d923211178d11dce682f71643bf2f"
+    },
+    {
+      "artifact": "test_mixed_selected",
+      "questions": 681,
+      "scores_sha256": "b13ec739dacbba595069bb57594f218f64ea8b5bbe573a3ca77cdecdf0db9c5a"
+    },
+    {
+      "artifact": "test_oldgov_selected",
+      "questions": 416,
+      "scores_sha256": "178db7e593a1c71b24b7f81b8c3192e05091a1145182d2cfa6aa50d4059d9282"
+    }
+  ],
+  "selection_lock_sha256": "f4eebfdb45836d31edc9152732dcf9f4e4c4622eeb9d34b3e310682e3a8b3dc0",
+  "test_evaluation_sha256": "4df7a06ad2f3d38b43cf52b49c4e75b4bcc10e3e2cfb34667aa0f0e3e482566c",
+  "verification_code_sha256": "1909f1602b7e32575ce361a473578a7e7a43270fee8fc840b27fe88c9c9da9a4"
+}

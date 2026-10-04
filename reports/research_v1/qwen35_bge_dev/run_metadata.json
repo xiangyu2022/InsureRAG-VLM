@@ -1,0 +1,164 @@
+{
+  "started_utc": "2026-09-20T22:24:41.155060+00:00",
+  "benchmark_lock_sha256": "e97695307070c6d1974c56644c31cc3b6df8227aa989f370231e628b9f635f82",
+  "benchmark": {
+    "benchmark_version": "research_v1",
+    "frozen_before_model_inference": true,
+    "annotation_author": "AI-assisted/manual-agent-verified; no human-expert adjudication",
+    "counts": {
+      "dev": 12,
+      "test": 24,
+      "answerable": 24,
+      "unsupported": 12
+    },
+    "question_split_policy": "Document-disjoint dev/test questions across six named archived public guides.",
+    "training_exposure_note": "These public documents exist in the legacy SFT corpus; this is NOT a document holdout from previous fine-tuning. Compare unadapted Ollama base instruct models only and report possible public pretraining exposure.",
+    "files": {
+      "dev.jsonl": "8e666859f29bc2ad8ad05ef9b1e2cd71a4d08e5b3337605fa5b5941d7f21809f",
+      "test.jsonl": "f4615efc16a3f1d66d8afac27f1d234aa20199812c23b050cf6d5f84b122eeea",
+      "documents.json": "7611db67b9122bdd3619e616cfc23d007402f6316274b391279836357f526824"
+    },
+    "corpus_files": {
+      "data/04_curated/rag_pages.jsonl": "cd89222cbe79add5ac72a8f695ba15d42011f94206dc934b76c6436ce19c2b33",
+      "data/04_curated/rag_snippets.jsonl": "5d844f3ddc63aefb954ded0ca073027e22942c39fa1ab48cf9d707cabd365cbd"
+    }
+  },
+  "split": "dev",
+  "case_count": 12,
+  "partial_dev_smoke": false,
+  "model": {
+    "provider": "ollama",
+    "requested_model": "qwen3.5:4b",
+    "resolved_model": "qwen3.5:4b",
+    "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+    "model_details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen35",
+      "families": [
+        "qwen35"
+      ],
+      "parameter_size": "4.7B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560
+    },
+    "ollama_version": {
+      "version": "0.34.2"
+    },
+    "endpoint": "http://127.0.0.1:11435",
+    "generation_options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_ctx": 8192,
+      "num_predict": 192,
+      "top_k": 40,
+      "top_p": 1.0,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0
+    },
+    "thinking": false,
+    "last_generation": {}
+  },
+  "run_config": {
+    "benchmark": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\InsureRAG-VLM\\data\\benchmarks\\research_v1",
+    "corpus": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\InsureRAG-VLM\\data\\04_curated",
+    "endpoint": "http://127.0.0.1:11435",
+    "model": "qwen3.5:4b",
+    "output": "reports\\research_v1\\qwen35_bge_dev",
+    "split": "dev",
+    "mode": "retrieved",
+    "retrieval_model": "../models/bge-small-en-v1.5",
+    "retrieval_mode": "hybrid_text",
+    "top_k": 3,
+    "max_context_chars": 8000,
+    "num_ctx": 8192,
+    "num_predict": 192,
+    "timeout": 600,
+    "limit": null,
+    "validate_only": false
+  },
+  "prompt_contract_sha256": "acd6269f20c52cd11627aaf5a6643903fdc364b6ae73ef92bc5c481a6f4b5519",
+  "code_sha256": {
+    "scripts\\eval_research_benchmark.py": "f76d923f3f8f2bf68ff35d43c033875657a6e85de190eb4c138d23b90d1dff22",
+    "src\\insurerag_vlm\\hybrid_pipeline.py": "d8c665dcd75b09efb477d2c4604a2614912b5d379840f55e389ea1a44294c4e2",
+    "src\\insurerag_vlm\\retriever.py": "f9d17a456d84bda779bdf78a9c2135bae0c0a955e1ac15ba9bb6c4e44123f85e",
+    "src\\insurerag_vlm\\config.py": "9f482261ceac45e4785ebff4cf636e7ad073678facf6e47c5a454b45ed60670f"
+  },
+  "adapter_status": "No project SFT adapter is loaded; exact local Ollama tag and digest only.",
+  "evaluation_path": "hybrid_pipeline.query_with_ranking plus benchmark JSON generation contract; no app repair or query_structured postprocessing.",
+  "metric_warning": "Deterministic answer-key/evidence contract checks are not semantic accuracy or a production insurance error rate. Wilson intervals treat questions as independent and do not account for document clustering.",
+  "runtime_environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "logical_cpu_count": 24,
+    "package_versions": {
+      "numpy": "2.5.3",
+      "requests": "2.34.2",
+      "torch": "2.14.0+cpu",
+      "transformers": "5.17.0",
+      "scikit-learn": "1.9.1"
+    },
+    "memory_note": "Per-request Ollama api/ps reports model size and size_vram; physical RAM is not inferred."
+  },
+  "request_schedule": [
+    {
+      "id": "dev_de_auto_insurance_guide_01",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_de_auto_insurance_guide_02",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_de_auto_insurance_guide_03",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_de_auto_insurance_guide_04",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_de_auto_insurance_guide_05",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_de_auto_insurance_guide_06",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_de_homeowners_guide_01",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_de_homeowners_guide_02",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_de_homeowners_guide_03",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_de_homeowners_guide_04",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_de_homeowners_guide_05",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_de_homeowners_guide_06",
+      "mode": "retrieved"
+    }
+  ],
+  "index_build_seconds": {
+    "de_auto_insurance_guide": 6.643776100012474,
+    "de_homeowners_guide": 1.2351033999584615
+  },
+  "finished_utc": "2026-09-20T22:25:00.527186+00:00",
+  "completed_requests": 12,
+  "request_errors": 0,
+  "predictions_sha256": "6604ae7c9d1cdd721605cc3aa809b1979716a023dcfcb1da547fc88e43a8b9c1"
+}

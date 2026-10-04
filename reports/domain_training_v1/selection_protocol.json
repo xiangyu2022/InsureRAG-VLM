@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-10-01T19:56:57.637538+00:00",
+  "selected_on": "valid",
+  "epochs": [
+    1,
+    2,
+    3
+  ],
+  "configurations": [
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.25
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.75
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 1.0
+    }
+  ],
+  "rule": "Maximum validation Hit@10, then MRR@100, then Hit@1; stable epoch/config order",
+  "fallback": "Keep previous checkpoint if the best trained model fails to exceed previous validation Hit@10",
+  "primary_endpoint": "Hit@10 over the complete 27,413-answer corpus",
+  "test_use": "No test metrics used for checkpoint or fusion selection",
+  "code_sha256": {
+    "scripts/eval_domain_training.py": "a966308dd025e246ad39a66b3aa8ddbe4ee61f7d5b0df653e7f275bf0e146899",
+    "scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872",
+    "src/insurerag_vlm/reranker.py": "bb90e6c134b44d7cb0c0cd6ca3165e098827bd908a3a86e73101040cf65734a3"
+  }
+}

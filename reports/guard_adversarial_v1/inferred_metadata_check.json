@@ -1,0 +1,110 @@
+{
+  "label": "Secondary check with current metadata inference on the same10 synthetic evidence strings; no model or retrieval inference",
+  "source_sha256": {
+    "src\\insurerag_vlm\\hybrid_pipeline.py": "cd311f69d6a4b7d951d117d68c6493742d18603594c65fb865657fd15c289488",
+    "src\\insurerag_vlm\\insurance_structure.py": "dff514f1fc71cf02b7ebbd43df7ae8b7db1910bd02fe73275c9ee69ccdc2053f"
+  },
+  "cases": [
+    {
+      "id": "G01",
+      "document_type": "base_policy",
+      "primary_clause_type": "deductible",
+      "coverage_tags": [
+        "collision",
+        "comprehensive"
+      ],
+      "served_accepts": true,
+      "reason": "supported",
+      "conflicts": []
+    },
+    {
+      "id": "G02",
+      "document_type": "base_policy",
+      "primary_clause_type": "limit",
+      "coverage_tags": [],
+      "served_accepts": true,
+      "reason": "supported",
+      "conflicts": []
+    },
+    {
+      "id": "G03",
+      "document_type": "base_policy",
+      "primary_clause_type": "limit",
+      "coverage_tags": [],
+      "served_accepts": true,
+      "reason": "supported",
+      "conflicts": []
+    },
+    {
+      "id": "G04",
+      "document_type": "base_policy",
+      "primary_clause_type": "deductible",
+      "coverage_tags": [],
+      "served_accepts": false,
+      "reason": "answer_amount_not_in_citation",
+      "conflicts": []
+    },
+    {
+      "id": "G05",
+      "document_type": "base_policy",
+      "primary_clause_type": "limit",
+      "coverage_tags": [],
+      "served_accepts": true,
+      "reason": "supported",
+      "conflicts": []
+    },
+    {
+      "id": "G06",
+      "document_type": "base_policy",
+      "primary_clause_type": "limit",
+      "coverage_tags": [],
+      "served_accepts": false,
+      "reason": "specific_question_terms_not_in_citation",
+      "conflicts": []
+    },
+    {
+      "id": "G07",
+      "document_type": "base_policy",
+      "primary_clause_type": "general",
+      "coverage_tags": [
+        "water_backup"
+      ],
+      "served_accepts": true,
+      "reason": "supported",
+      "conflicts": []
+    },
+    {
+      "id": "G08",
+      "document_type": "base_policy",
+      "primary_clause_type": "general",
+      "coverage_tags": [],
+      "served_accepts": true,
+      "reason": "supported",
+      "conflicts": []
+    },
+    {
+      "id": "G09",
+      "document_type": "base_policy",
+      "primary_clause_type": "limit",
+      "coverage_tags": [
+        "property"
+      ],
+      "served_accepts": false,
+      "reason": "identifier_not_in_citation",
+      "conflicts": []
+    },
+    {
+      "id": "G10",
+      "document_type": "base_policy",
+      "primary_clause_type": "coverage",
+      "coverage_tags": [
+        "property"
+      ],
+      "served_accepts": false,
+      "reason": "approved_payment_not_established",
+      "conflicts": []
+    }
+  ],
+  "served_false_acceptances": 6,
+  "accept_reject_outcomes_unchanged": true
+}

@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-10-01T21:30:18.742953+00:00",
+  "selection_lock_sha256": "111a12d841ff50fe1006c4c76d464f905394a14e1c5e172690f1f8255b255261",
+  "source_scores_sha256": "e1859e67b4b269fb6a84970712963072ac4289d15b2e9194eef1e45a59d5b6d1",
+  "model": {
+    "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\insurerag-retention-v2\\epoch-2",
+    "files_sha256": {
+      "config.json": "bde16d9648b01e19b9d4c5f3deca28cd2851fbbc660f8a90cecd87efde5c5429",
+      "model.safetensors": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+      "tokenizer.json": "91f1def9b9391fdabe028cd3f3fcc4efd34e5d1f08c3bf2de513ebb5911a1854",
+      "tokenizer_config.json": "88eb33800f51cc08e19ebe4dffbde5afbc9e517a993ede2861a22ed9c7e0be7f",
+      "training_provenance.json": "ca35807a9352830c04c94eac5df7ef12089b0b1f67f16926bcfb41265416d7ea"
+    },
+    "checkpoint_sha256": "2bb66fe5c2dbbd62db0fb0884f98f16341767fba791681af6e5dd700ceee761b",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "max_length": 512,
+    "batch_size": 64,
+    "truncation": "longest_first",
+    "score": "raw single relevance logit",
+    "remote_code": false,
+    "fine_tuned_in_this_project": true,
+    "training_provenance": {
+      "epoch": 2,
+      "optimizer_steps": 2574,
+      "fine_tuned_in_this_project": true,
+      "weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+      "initial_weights_sha256": "88207632c798e8a5a7eb2799447dc1f1f08aec03daaa142b31fb29572a2071fe",
+      "training_manifest_sha256": "8a714663f31c688447371cf2bba28fa0228f21d926f188574d9d8eeb647ccf20",
+      "training_protocol_sha256": "f6a6ef633c85d0120901abb47fed29e8ef341b42dc0ce7db436d1194f17ef3d4",
+      "training_code_sha256": "3ab4c4e170abccb2e34ee0b423d9a943c115a6a036b0c1d2cf780e65cecc658f",
+      "recipe": "rehearsal_from_v2",
+      "unique_training_questions": 19941,
+      "pair_exposures": 246960
+    }
+  },
+  "code_sha256": "96fa03d0a3bbb07534aab0c4c8b3c622d2ec543eae6c237133916ff66e3fefc2",
+  "status": "Historical regression; not a new independent test",
+  "answer_candidates": 27829
+}

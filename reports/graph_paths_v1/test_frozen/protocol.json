@@ -1,0 +1,74 @@
+{
+  "created_utc": "2026-10-01T16:22:35.746369+00:00",
+  "fixture_sha256": "4c4cef3e1b90f6fc12ba17c7a7adec88e5b003e87d9ae730648aa605dbd7779d",
+  "split": "test",
+  "arms": {
+    "bm25": [
+      "sparse_only",
+      "off"
+    ],
+    "dense": [
+      "dense_only",
+      "off"
+    ],
+    "hybrid": [
+      "hybrid_text",
+      "off"
+    ],
+    "hybrid_explicit_graph": [
+      "hybrid_text",
+      "explicit"
+    ],
+    "hybrid_candidate_graph": [
+      "hybrid_text",
+      "all"
+    ]
+  },
+  "top_k": 3,
+  "context_chars": 3600,
+  "max_page_chars": 2400,
+  "code_sha256": {
+    "src/insurerag_vlm/__init__.py": "de655f7f00531d8e4ffb8a1edf0c38f689dd4915e8d2622e803bc6dd1eee85e3",
+    "src/insurerag_vlm/ablation.py": "3d5b4b2dba63653752fecd19a80912a65e40ae4580caa48130051c82edcb33d7",
+    "src/insurerag_vlm/answer_safety.py": "9ebe7c835714443fbef208410acf1f0c91e838c945181eb7c1437599b0a9d103",
+    "src/insurerag_vlm/app.py": "f351d798f20302d48a46d70afe15b015c93337c2147da56310a8babd249f45e0",
+    "src/insurerag_vlm/benchmark.py": "a709fd94d11d2e36834d08bfdeb03e76930854d215c7c8d7591b4bf35c7a5125",
+    "src/insurerag_vlm/calibration.py": "8c6753afb726450311b05d53b8a78e8b2867f42e36ff8456844a0534f5724970",
+    "src/insurerag_vlm/cli.py": "ca02883e8a2549ff0c9161461b2b3a346ea8f078a0179d1ba748e67ea3629bd0",
+    "src/insurerag_vlm/config.py": "87fda93c37bfdceba41bca82a9cbf5ee992298db457118260d1980de70a2e82f",
+    "src/insurerag_vlm/data.py": "b9706f4e9025a3092efa2192015f5703423f233bc5afe328f9a763216049ef0e",
+    "src/insurerag_vlm/dense_training.py": "72c0591779ac587405c43d3bd95bedcd7d8194221cf77caae717422ccb82dcd4",
+    "src/insurerag_vlm/diff.py": "ca4b9b537ce988e3f735de00e5666cad39b6ddc8493c6d121b380c8c509b8f9c",
+    "src/insurerag_vlm/evaluation.py": "899b63a19eb449328b7ea4f0bc15156fce9aca96037bcc6cf167fe1b5e511376",
+    "src/insurerag_vlm/graph.py": "b70a4eaa61b9c6d4b1c1a5c40bb7ae94b0ecbadf2167ef01a374a17b0939cdcc",
+    "src/insurerag_vlm/hybrid_pipeline.py": "687083e1373854acdac08efa96d5cd76d91583e624f1202c16c5e6ffbe8d5265",
+    "src/insurerag_vlm/insurance_structure.py": "dff514f1fc71cf02b7ebbd43df7ae8b7db1910bd02fe73275c9ee69ccdc2053f",
+    "src/insurerag_vlm/knowledge.py": "6fbeb5f362fc6540866b72e0dae4c9cec7b7ae273ab5e67ac5ecae75cf871eb8",
+    "src/insurerag_vlm/ocr.py": "37ffe74a77fef66e70415a5cb3548fc26602bbf209d02f6a47f8440642369645",
+    "src/insurerag_vlm/pdf.py": "05fc9659dd7b1a57ce56ad854307c48eb98c0c386947def008af66c69c8a7613",
+    "src/insurerag_vlm/pipeline.py": "63a8322376bb5bb683a99173ac158ab82ab2c0d7675ce2bd128b84b98f4be78f",
+    "src/insurerag_vlm/preprocess.py": "bbd281ecb9f11579cff05fc53def89408f3cf33b6ecbeab73b49ee9d046a52ff",
+    "src/insurerag_vlm/qa.py": "937d73f19e7b4ba9228e5e37a518d69de2d28572d772a019a75b56eee7e99b21",
+    "src/insurerag_vlm/query_understanding.py": "8f605ceac2cb836991f3acb8fb17cd0757155c7af10c2f6b25a222e43f0502ae",
+    "src/insurerag_vlm/retriever.py": "f9d17a456d84bda779bdf78a9c2135bae0c0a955e1ac15ba9bb6c4e44123f85e",
+    "src/insurerag_vlm/sft.py": "a6d49fada09ccb3272ece42e48ec8e318cc6c5f48da77e7b947002dc9aa5f856",
+    "src/insurerag_vlm/sft_integrity.py": "d5c81e8c8fafeaa158f8b4010eb1df9db8cb1c99a3237a36f40ab78d63cd97e7",
+    "src/insurerag_vlm/state_doi_sources.py": "056129b68636d8d5196842d0715bc2b4461881fe852049f04441e4c374ba35ab",
+    "src/insurerag_vlm/tables.py": "f572d141c82c40d73d49c6b583ef9f94541666c72e8adaafc6cfcdf9109cb564",
+    "src/insurerag_vlm/training_data.py": "58ee89219dc7ff6a68e37ea6b7d311ca2dd3fd6a686c24c3a2df346814a46d42",
+    "src/insurerag_vlm/validation.py": "02d17f0d2ca972dfd0d523d4f9ebca0838648350eaff964362f01b710cc19e45",
+    "src/insurerag_vlm/visual.py": "1ebe89199bf75afcc73cee7d9e6b305f64fd5d16e7cf4af5808d66093056ad86",
+    "src/insurerag_vlm/vlm.py": "109f2555cc767d4ef8119296d3edb54433abe1306157974c740a5b6637cada75",
+    "scripts/eval_research_benchmark.py": "1eac538ca4328b47c42c21627c402643c473fdfdaaa7ba6cfc63daa558e1e1e5",
+    "scripts/research_v2.py": "670bcd86be2c61ce5b3cec05e1c90b26390784faf1b0f5e8f4106b6ef9dc3e2c",
+    "scripts/prepare_research_benchmark_v2.py": "e7004f47914368b696cd7a3a428ec79a2346ed5d5806457d750162b6624f4d5b",
+    "scripts/eval_research_benchmark_v2.py": "99e02b8dbef01eff62f7da766cf04a523c50987900d48235588b694a2c2dd3a3",
+    "scripts/compare_research_runs_v2.py": "37bd62282edebfc0d5892c68fffd7ce5bfac9753a0930a1b3397ed9030cffe7f",
+    "scripts/graph_retrieval_study.py": "a00353379683241861ce375198081c0e566cfbe6e5de904b4b3ccb149919e294"
+  },
+  "generation_calls": 0,
+  "retrieval_model": "../models/bge-small-en-v1.5",
+  "graph_seed_pages": 4,
+  "graph_max_hops": 2,
+  "graph_max_expansions": 8
+}

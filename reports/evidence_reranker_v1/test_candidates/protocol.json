@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-10-03T05:43:39.572412+00:00",
+  "split": "test",
+  "selection_protocol_sha256": "610d77f635853385c52e0bfcf0e3c216bb61b0a3fa5aa46b4e74a27fbc4aeeac",
+  "selection_lock_sha256": "a40b41968aa39fc4f4967e5bc8f58ff96251558203ee33edf97ed16c8f070525",
+  "query_configuration": "fixed prior alpha .5",
+  "document_encoder": "unchanged original BGE",
+  "candidate_policy": "dense100 union positive BM25 top100 within declared corpus/scope",
+  "gold_injected": false,
+  "reused_prior_reranker_scores_verified": true
+}

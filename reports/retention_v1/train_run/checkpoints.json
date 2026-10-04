@@ -1,0 +1,17 @@
+{
+  "checkpoints": [
+    {
+      "epoch": 1,
+      "optimizer_steps": 1287,
+      "fine_tuned_in_this_project": true,
+      "weights_sha256": "5822d6ed48ce393e80d3b8a89231674925ea40ecbdf7f4358a356b543571539d",
+      "initial_weights_sha256": "88207632c798e8a5a7eb2799447dc1f1f08aec03daaa142b31fb29572a2071fe",
+      "training_manifest_sha256": "2c30c88c796b0d066804ccd5d6bfa27e474c88a3ccf0de785a5bbaf10201eebf",
+      "training_protocol_sha256": "4f72cf31e49ae08e1912e07c8af1fa6d89403e27baf8c6c4940adc72e8723b6f",
+      "training_code_sha256": "3ab4c4e170abccb2e34ee0b423d9a943c115a6a036b0c1d2cf780e65cecc658f",
+      "recipe": "rehearsal_from_v2",
+      "unique_training_questions": 19941,
+      "pair_exposures": 123480
+    }
+  ]
+}

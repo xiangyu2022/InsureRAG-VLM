@@ -1,0 +1,22 @@
+{
+  "version": "graph_paths_v1",
+  "created_utc": "2026-10-01T16:16:09.833084+00:00",
+  "seed": 20261001,
+  "frozen_before_retrieval": true,
+  "packets": 30,
+  "page_records": 300,
+  "cases": 120,
+  "dev_cases": 24,
+  "test_cases": 96,
+  "author": "AI-authored synthetic diagnostic",
+  "files": {
+    "pages.jsonl": "af1131a3049ad4613e52e46c2b1e00b2c9736a28d9bbfce388b522dba45102fd",
+    "cases.jsonl": "350b1cb21ea0161bed58654e508c2e473870a1ce50ccdb65d8d21e477934e767"
+  },
+  "limitations": [
+    "Six known structural templates shared across dev/test; changed values are not independent scenario diversity.",
+    "Text records are not PDF pages. No customer data or legal authority.",
+    "The explicit-reference rule is intentionally exercised; this is mechanism evidence, not prevalence or real-policy performance.",
+    "Unsupported cases test absence handling only if a generation experiment is separately run; retrieval alone cannot score abstention."
+  ]
+}

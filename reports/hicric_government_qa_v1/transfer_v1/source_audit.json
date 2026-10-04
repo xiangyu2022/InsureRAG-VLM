@@ -1,0 +1,9 @@
+{
+  "verified_source_spans": 416,
+  "exact_training_question_overlaps": [],
+  "near_training_question_overlaps": [],
+  "near_rule": "char_wb TF-IDF 3-5 grams, cosine >= 0.92",
+  "maximum_train_question_similarity": 0.6799527540742832,
+  "expert_relevance_adjudication": false,
+  "post_evaluation_case_removal": false
+}

@@ -231,6 +231,11 @@ class TrainingCorpusBuilderTests(unittest.TestCase):
                 ["md_doi_auto_declarations_page::p0001"],
             )
             self.assertTrue(retrieval_train[0]["positive_page_texts"])
+            # URL and URL#page=1 identify the same page, so it cannot also be
+            # a hard negative and should count as gold present in the context.
+            self.assertEqual(retrieval_train[0]["hard_negative_sources"], [])
+            rag_sft_train = [json.loads(line) for line in Path(result["rag_sft_train_path"]).read_text(encoding="utf-8").splitlines()]
+            self.assertTrue(rag_sft_train[0]["gold_in_context"])
 
 
 if __name__ == "__main__":

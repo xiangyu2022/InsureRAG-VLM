@@ -1,0 +1,26 @@
+{
+  "created_utc": "2026-10-03T01:38:26.039768+00:00",
+  "selection_protocol_sha256": "86232ef122b0bcd1e19d34e9470311c8bb56643238919b5240eae2573a7cfa1f",
+  "code_sha256": {
+    "scripts/eval_query_adaptation.py": "8d0819155f0dd546910b8692f2d0115062d2922d688d207a3c033a64cbbec747",
+    "scripts/analyze_condition_secondary_metrics.py": "360f0fe3eeca08bed59123762eb782a5647137380b7fd393afe4caf2b6479b48",
+    "scripts/prepare_insuranceqa.py": "4fb3ccb6028ef911ea1e7a4bdd5e17ee084c619b2f06fd0a931b8a8386f15636",
+    "src/insurerag_vlm/retriever.py": "f9d17a456d84bda779bdf78a9c2135bae0c0a955e1ac15ba9bb6c4e44123f85e"
+  },
+  "fixture_files_sha256": {
+    "data/benchmarks/condition_v1/answers.jsonl": "ed1475b822ef2b1032b90430c2b21acb7e6259c35afc1f90dd5e07cf05666d35",
+    "data/benchmarks/condition_v1/test.jsonl": "aaba50a5fa7165bc0a199b34d4ddccd10e5fcb83076038e6db5c9fea277d7c5c",
+    "data/benchmarks/fiqa_v1/answers.jsonl": "4bf6f13f4faddb692a2624b0353affb439e73b51ab4bbd94d6665d14c0e38371",
+    "data/benchmarks/fiqa_v1/test.jsonl": "4ee5dcc4fa0e853238406cfb0b9c3c66c420b8fa983515b267f5916a30d13660",
+    "data/benchmarks/fiqa_v1/valid.jsonl": "08a54cd2a704040d8465b1c8c28ab084e62de7bdde5e4f573799127d639f7d47",
+    "data/benchmarks/hicric_government_qa_v1/questions.jsonl": "c8d8e1a2fab8f494ee469bb3883d9fef2bd109046b2756032769990e9552772d",
+    "data/benchmarks/insuranceqa_v2/answers.jsonl": "50cffb3351cae585e21af23454e9946354eb88ce36028e59e1d1c286e994eda2",
+    "data/benchmarks/insuranceqa_v2/test.jsonl": "85129e408c92e63784453a10e1a6afe1ffef4714170646860859f76488c2ea44",
+    "data/benchmarks/insuranceqa_v2/valid.jsonl": "acf03a69edc7e11f9c3d114a7fa676dd395b464cacc75aef0d24c131e974c502",
+    "data/benchmarks/multidomain_v1/test.jsonl": "66e781bb4554c0aae6a7e7c414d8857abd5041f7b6a7b43dc8e17c7b5373ec07",
+    "data/benchmarks/multidomain_v1/valid.jsonl": "96ff4137d801114086ceda75e16683e5b94036eaf40cba76a9d09c513dc86a71",
+    "data/training/retention_v2/answers.jsonl": "c0afa04bc29fe46104994b5eeac921ccd27be03b52043deb9cf8ff31fff8adcb",
+    "reports/condition_listwise_v1/historical_government_answers.jsonl": "eac76ac707122189436a3a6bfe727bdb6439b1287c7c92095cbe0a84fee04c69"
+  },
+  "before_first_validation_or_new_test_scoring": true
+}

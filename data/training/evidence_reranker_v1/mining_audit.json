@@ -1,0 +1,117 @@
+{
+  "exclusions": [
+    {
+      "id": "finqa_q_4fc73148037e6d78ee830eac",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_dba2f48e8cfd33883108d7d4",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_d3caf801185c182aec3ab91f",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_5b03c2a3b1152657841701ed",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_2c3971c7ac7a0db1103c326d",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_5a657eddd26c6937c9d1571f",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_fda6d8e4de20e6b4c0d031a0",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_ebcd224b9e33eb8f095799f0",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_d128af04f2aecef2230d8f57",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_2fed75159a661de7a4843087",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_6757b0c5c7ce73f176a64188",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_19b3d7fa2b9c7806cf1a9761",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_ae17eed60e72ae712d11290c",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_94f4d6988e1552a42d35dc83",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_d683e41ea369bf155a4f77fd",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_5e46865de18ec0a110ab3dec",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_9b7eed61d59af805b03457b5",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_7aa076c361c9e0f22712e843",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_ed0fa83c94ebbb59d655dd1c",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_450a68b2b18d8a766fd6bbf5",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_a9b6dcf0018a2478f9cf53b4",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_ebbaae099be948ca5cd26cc4",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_580eea9fc86d9df5166d7634",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_2dc8a8aeec2ab658d58e8b92",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_500dd8fc544d591e1009f9da",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_e079fd8a6151678ec4add0ae",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_71b88c87e53b7a43cec11af3",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    },
+    {
+      "id": "finqa_q_0759351f12b9871e105125f1",
+      "reason": "fewer_than_five_distinct_unlabelled_negatives"
+    }
+  ],
+  "remaining_forbidden_pairs": 0
+}

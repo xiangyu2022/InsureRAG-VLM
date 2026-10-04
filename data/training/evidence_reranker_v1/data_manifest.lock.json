@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-10-03T03:48:15.210031+00:00",
+  "training_questions": 33454,
+  "source_domains": {
+    "insuranceqa": 11629,
+    "government": 259,
+    "general": 13999,
+    "finance": 5464,
+    "financial_report": 2103
+  },
+  "additional_financial_report_questions": 2103,
+  "removed_previous_queries": 0,
+  "raw_imported_questions": {
+    "test": 1147,
+    "valid": 496,
+    "train": 2351
+  },
+  "answer_candidates": 192231,
+  "eligible_training_answers": 118685,
+  "exclusion_counts": {
+    "heldout_answer_text_or_report": 169,
+    "near_heldout_question": 51,
+    "duplicate_or_empty_question": 28
+  },
+  "prior_query_encoder_near_question_flags": [],
+  "parent_manifest_sha256": "a155b935bbf3daae5e2c96f68e00109ca831ca2dc6c279c368df3998c8f860b3",
+  "fixture_sha256": "4ca876934c8af7a00ba0804ad9eeacb864896bdb84a14e3e7645b33860bdd62d",
+  "code_sha256": "e97ae1ec6e0a43ad5c12270f2dfc5b321eb88f26f95274ba44383cb18384c7c9",
+  "files": {
+    "answers.jsonl": "b7a2129398e131ed7844bffd9f97a0ebf64893f67c7cea6cd40a902820db2961",
+    "query_groups.jsonl": "fe472a73c1e401da4c25a89a31166092f334aadf5fef2f2f56b15b38445b4a67",
+    "isolation.json": "769e4174368a18b1e625ffb82e03ab3d39dfb41d6259026ca75173ca857de493"
+  }
+}

@@ -1,0 +1,1 @@
+{"status": "verified", "training_questions": 33454, "negative_pairs": 0, "new_test_questions": 1147, "valid_test_exact_question_text_overlap": 0, "long_gold_pairs": {"train": 0, "valid": 0, "test": 0}}

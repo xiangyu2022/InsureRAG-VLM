@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "file": "interactive_faq_smoke_v2.json",
+      "sha256": "9f142267a63b20b631b3201a9dadb639c06d667312619bd5301853da4f75f146",
+      "corpus": "insuranceqa",
+      "profile": "trained",
+      "candidate_count": 27413,
+      "seconds_with_loading": 11.246984799858183
+    },
+    {
+      "file": "interactive_hicric_general_smoke.json",
+      "sha256": "9631e24029c911ef0801e852fe16b3361fa0d091cac189c4c7361e00396c2612",
+      "corpus": "hicric",
+      "profile": "general",
+      "candidate_count": 78830,
+      "seconds_with_loading": 11.101257900008932
+    },
+    {
+      "file": "interactive_hicric_trained_smoke.json",
+      "sha256": "75a6cd844e461316b8bf7c6cc071912f2f280883bd08f68c4e318f8ede68c664",
+      "corpus": "hicric",
+      "profile": "trained",
+      "candidate_count": 78830,
+      "seconds_with_loading": 10.99926620000042
+    }
+  ],
+  "query_code_sha256": "b2fbec59e22038027e4acad7c1796791b22f79eea6c6529fd3bfd5f0d589b43a",
+  "scope": "Query execution, source links and correct model profile provenance; not answer accuracy."
+}

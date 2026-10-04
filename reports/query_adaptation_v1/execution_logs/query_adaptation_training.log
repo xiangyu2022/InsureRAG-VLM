@@ -1,0 +1,84 @@
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3944.44it/s]
+{"seed": 42, "epoch": 1, "step": 100, "mean_ce": 6.169495041370392, "mean_kl": 0.050564154107123616, "query_presentations": 3200, "seconds": 8.3}
+{"seed": 42, "epoch": 1, "step": 200, "mean_ce": 5.9144790077209475, "mean_kl": 0.0869143385719508, "query_presentations": 6400, "seconds": 16.0}
+{"seed": 42, "epoch": 1, "step": 300, "mean_ce": 5.68833211739858, "mean_kl": 0.12652956308797003, "query_presentations": 9600, "seconds": 23.7}
+{"seed": 42, "epoch": 1, "step": 400, "mean_ce": 5.54724871635437, "mean_kl": 0.15808428603690117, "query_presentations": 12800, "seconds": 31.3}
+{"seed": 42, "epoch": 1, "step": 500, "mean_ce": 5.447527023792267, "mean_kl": 0.18322640992328523, "query_presentations": 16000, "seconds": 38.9}
+{"seed": 42, "epoch": 1, "step": 600, "mean_ce": 5.367703320980072, "mean_kl": 0.20269783171204228, "query_presentations": 19200, "seconds": 46.5}
+{"seed": 42, "epoch": 1, "step": 700, "mean_ce": 5.306539800507681, "mean_kl": 0.21724637415526168, "query_presentations": 22400, "seconds": 54.2}
+{"seed": 42, "epoch": 1, "step": 800, "mean_ce": 5.254845575988293, "mean_kl": 0.22937416880158706, "query_presentations": 25600, "seconds": 61.9}
+{"seed": 42, "epoch": 1, "step": 900, "mean_ce": 5.212504906256994, "mean_kl": 0.23888323919433688, "query_presentations": 28800, "seconds": 69.6}
+{"seed": 42, "epoch": 1, "step": 1000, "mean_ce": 5.1772192027568815, "mean_kl": 0.24750790110044182, "query_presentations": 32000, "seconds": 77.2}
+{"seed": 42, "epoch": 1, "step": 1100, "mean_ce": 5.149252931963313, "mean_kl": 0.25428534342314707, "query_presentations": 35200, "seconds": 84.9}
+{"seed": 42, "epoch": 1, "step": 1200, "mean_ce": 5.1195368373394015, "mean_kl": 0.26031947931740435, "query_presentations": 38400, "seconds": 92.8}
+{"seed": 42, "epoch": 1, "step": 1300, "mean_ce": 5.096944815103824, "mean_kl": 0.2659846040821419, "query_presentations": 41600, "seconds": 100.6}
+{"seed": 42, "epoch": 1, "step": 1400, "mean_ce": 5.075804274337632, "mean_kl": 0.2705752068744706, "query_presentations": 44800, "seconds": 108.5}
+{"seed": 42, "epoch": 1, "step": 1500, "mean_ce": 5.061866745154063, "mean_kl": 0.2745014224735399, "query_presentations": 48000, "seconds": 116.5}
+{"seed": 42, "epoch": 1, "step": 1571, "mean_ce": 5.051253198460122, "mean_kl": 0.2771458793659454, "query_presentations": 50257, "seconds": 122.1}
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]
+Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 10.31it/s]
+{"seed": 42, "epoch": 2, "step": 1600, "mean_ce": 4.73359831448259, "mean_kl": 0.3389538213096816, "query_presentations": 51185, "seconds": 124.7}
+{"seed": 42, "epoch": 2, "step": 1700, "mean_ce": 4.790613410084746, "mean_kl": 0.33871722302233526, "query_presentations": 54385, "seconds": 132.5}
+{"seed": 42, "epoch": 2, "step": 1800, "mean_ce": 4.752819685956797, "mean_kl": 0.33928564639851516, "query_presentations": 57585, "seconds": 140.2}
+{"seed": 42, "epoch": 2, "step": 1900, "mean_ce": 4.734052653370657, "mean_kl": 0.3394858974363304, "query_presentations": 60785, "seconds": 148.0}
+{"seed": 42, "epoch": 2, "step": 2000, "mean_ce": 4.732215757414456, "mean_kl": 0.34151142446589083, "query_presentations": 63985, "seconds": 155.8}
+{"seed": 42, "epoch": 2, "step": 2100, "mean_ce": 4.727899511955636, "mean_kl": 0.34174106254582143, "query_presentations": 67185, "seconds": 163.6}
+{"seed": 42, "epoch": 2, "step": 2200, "mean_ce": 4.734726150388369, "mean_kl": 0.34256536256527864, "query_presentations": 70385, "seconds": 171.5}
+{"seed": 42, "epoch": 2, "step": 2300, "mean_ce": 4.740220200541252, "mean_kl": 0.3427485203669395, "query_presentations": 73585, "seconds": 179.6}
+{"seed": 42, "epoch": 2, "step": 2400, "mean_ce": 4.743772284832162, "mean_kl": 0.3428209273569259, "query_presentations": 76785, "seconds": 187.8}
+{"seed": 42, "epoch": 2, "step": 2500, "mean_ce": 4.742493869029025, "mean_kl": 0.3429589930629063, "query_presentations": 79985, "seconds": 196.0}
+{"seed": 42, "epoch": 2, "step": 2600, "mean_ce": 4.74215852519166, "mean_kl": 0.3431205719970058, "query_presentations": 83185, "seconds": 203.9}
+{"seed": 42, "epoch": 2, "step": 2700, "mean_ce": 4.7413639438374044, "mean_kl": 0.34334052972449364, "query_presentations": 86385, "seconds": 211.9}
+{"seed": 42, "epoch": 2, "step": 2800, "mean_ce": 4.736544404697185, "mean_kl": 0.3438325789980621, "query_presentations": 89585, "seconds": 219.7}
+{"seed": 42, "epoch": 2, "step": 2900, "mean_ce": 4.729772266362106, "mean_kl": 0.3442129858617409, "query_presentations": 92785, "seconds": 227.5}
+{"seed": 42, "epoch": 2, "step": 3000, "mean_ce": 4.7303186152013055, "mean_kl": 0.3443082274049208, "query_presentations": 95985, "seconds": 235.2}
+{"seed": 42, "epoch": 2, "step": 3100, "mean_ce": 4.730265853138357, "mean_kl": 0.3446082167858544, "query_presentations": 99185, "seconds": 243.1}
+{"seed": 42, "epoch": 2, "step": 3142, "mean_ce": 4.731301841927118, "mean_kl": 0.3446182054494833, "query_presentations": 100514, "seconds": 246.4}
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]
+Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 12.12it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4193.29it/s]
+{"seed": 123, "epoch": 1, "step": 100, "mean_ce": 6.237989380359649, "mean_kl": 0.04991799985989928, "query_presentations": 3200, "seconds": 8.1}
+{"seed": 123, "epoch": 1, "step": 200, "mean_ce": 5.968408033847809, "mean_kl": 0.08645639083348215, "query_presentations": 6400, "seconds": 15.8}
+{"seed": 123, "epoch": 1, "step": 300, "mean_ce": 5.723742221196493, "mean_kl": 0.12700693241630992, "query_presentations": 9600, "seconds": 23.5}
+{"seed": 123, "epoch": 1, "step": 400, "mean_ce": 5.559494462907314, "mean_kl": 0.1587019588937983, "query_presentations": 12800, "seconds": 31.3}
+{"seed": 123, "epoch": 1, "step": 500, "mean_ce": 5.4543638980388645, "mean_kl": 0.18331719867512583, "query_presentations": 16000, "seconds": 38.8}
+{"seed": 123, "epoch": 1, "step": 600, "mean_ce": 5.365707555214564, "mean_kl": 0.20244757720269263, "query_presentations": 19200, "seconds": 46.4}
+{"seed": 123, "epoch": 1, "step": 700, "mean_ce": 5.3068625206606725, "mean_kl": 0.21742025545399105, "query_presentations": 22400, "seconds": 54.2}
+{"seed": 123, "epoch": 1, "step": 800, "mean_ce": 5.2580353005230425, "mean_kl": 0.228772614474874, "query_presentations": 25600, "seconds": 61.8}
+{"seed": 123, "epoch": 1, "step": 900, "mean_ce": 5.21347946272956, "mean_kl": 0.238564188701825, "query_presentations": 28800, "seconds": 69.4}
+{"seed": 123, "epoch": 1, "step": 1000, "mean_ce": 5.176889245033264, "mean_kl": 0.24637520163320004, "query_presentations": 32000, "seconds": 77.0}
+{"seed": 123, "epoch": 1, "step": 1100, "mean_ce": 5.149991869492965, "mean_kl": 0.2534201649153097, "query_presentations": 35200, "seconds": 84.6}
+{"seed": 123, "epoch": 1, "step": 1200, "mean_ce": 5.124351431528727, "mean_kl": 0.2595558134885505, "query_presentations": 38400, "seconds": 92.2}
+{"seed": 123, "epoch": 1, "step": 1300, "mean_ce": 5.1007877569015205, "mean_kl": 0.26525142322795897, "query_presentations": 41600, "seconds": 99.7}
+{"seed": 123, "epoch": 1, "step": 1400, "mean_ce": 5.080679354241916, "mean_kl": 0.27014204854810875, "query_presentations": 44800, "seconds": 107.3}
+{"seed": 123, "epoch": 1, "step": 1500, "mean_ce": 5.062206436475118, "mean_kl": 0.27418153566494585, "query_presentations": 48000, "seconds": 114.9}
+{"seed": 123, "epoch": 1, "step": 1571, "mean_ce": 5.049143811654805, "mean_kl": 0.2771516459329804, "query_presentations": 50257, "seconds": 120.4}
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]
+Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 11.98it/s]
+{"seed": 123, "epoch": 2, "step": 1600, "mean_ce": 4.707825167425748, "mean_kl": 0.328987586087194, "query_presentations": 51185, "seconds": 122.8}
+{"seed": 123, "epoch": 2, "step": 1700, "mean_ce": 4.682064779969149, "mean_kl": 0.3384899862052858, "query_presentations": 54385, "seconds": 130.5}
+{"seed": 123, "epoch": 2, "step": 1800, "mean_ce": 4.711711944450978, "mean_kl": 0.3406731158364808, "query_presentations": 57585, "seconds": 138.1}
+{"seed": 123, "epoch": 2, "step": 1900, "mean_ce": 4.699322472589719, "mean_kl": 0.34019067724968527, "query_presentations": 60785, "seconds": 145.8}
+{"seed": 123, "epoch": 2, "step": 2000, "mean_ce": 4.715161304373841, "mean_kl": 0.3409451357065103, "query_presentations": 63985, "seconds": 154.1}
+{"seed": 123, "epoch": 2, "step": 2100, "mean_ce": 4.723525767966344, "mean_kl": 0.341851587951296, "query_presentations": 67185, "seconds": 161.9}
+{"seed": 123, "epoch": 2, "step": 2200, "mean_ce": 4.726254312525872, "mean_kl": 0.3419227950950116, "query_presentations": 70385, "seconds": 169.6}
+{"seed": 123, "epoch": 2, "step": 2300, "mean_ce": 4.72815490701071, "mean_kl": 0.3420980557983304, "query_presentations": 73585, "seconds": 177.2}
+{"seed": 123, "epoch": 2, "step": 2400, "mean_ce": 4.734027181948626, "mean_kl": 0.3424603385790122, "query_presentations": 76785, "seconds": 184.8}
+{"seed": 123, "epoch": 2, "step": 2500, "mean_ce": 4.733937576076315, "mean_kl": 0.3427885886766939, "query_presentations": 79985, "seconds": 192.5}
+{"seed": 123, "epoch": 2, "step": 2600, "mean_ce": 4.735458566218006, "mean_kl": 0.34279716744714855, "query_presentations": 83185, "seconds": 200.1}
+{"seed": 123, "epoch": 2, "step": 2700, "mean_ce": 4.733636671616188, "mean_kl": 0.34303043954292156, "query_presentations": 86385, "seconds": 207.7}
+{"seed": 123, "epoch": 2, "step": 2800, "mean_ce": 4.727959489124009, "mean_kl": 0.3435681245863389, "query_presentations": 89585, "seconds": 215.2}
+{"seed": 123, "epoch": 2, "step": 2900, "mean_ce": 4.729116767129116, "mean_kl": 0.3438487018047194, "query_presentations": 92785, "seconds": 222.7}
+{"seed": 123, "epoch": 2, "step": 3000, "mean_ce": 4.731320045810216, "mean_kl": 0.3440979784543569, "query_presentations": 95985, "seconds": 230.3}
+{"seed": 123, "epoch": 2, "step": 3100, "mean_ce": 4.731462721422344, "mean_kl": 0.3442212005625214, "query_presentations": 99185, "seconds": 237.9}
+{"seed": 123, "epoch": 2, "step": 3142, "mean_ce": 4.73151001862967, "mean_kl": 0.3442780159190402, "query_presentations": 100514, "seconds": 241.1}
+
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]
+Writing model shards: 100%|██████████| 1/1 [00:00<00:00, 12.92it/s]

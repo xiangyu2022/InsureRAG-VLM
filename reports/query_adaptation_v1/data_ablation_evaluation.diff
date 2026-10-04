@@ -1,0 +1,128 @@
+--- eval_query_adaptation.py
++++ eval_query_data_ablation.py
+@@ -16,7 +16,7 @@
+ from src.insurerag_vlm.query_adaptation import QueryEncoder, blend_queries
+ from src.insurerag_vlm.domain_reranker import DomainCrossEncoder
+ 
+-RUN = ROOT / 'reports/query_adaptation_v1'
++RUN = ROOT / 'reports/query_adaptation_v1/data_ablation'
+ FIXED_RERANKER = ROOT / '../models/insurerag-condition-listwise-v1-seed-123/epoch-1'
+ CFG = {'pool': 'union200', 'lexical_weight': .2, 'cross_weight': .5}
+ 
+@@ -49,7 +49,7 @@
+ 
+ def modelpath(config):
+     if config['model'] == 'original': return ROOT / '../models/bge-small-en-v1.5'
+-    return ROOT / f'../models/insurerag-query-adaptation-v1-seed-{config["seed"]}/epoch-{config["epoch"]}'
++    return ROOT / f'../models/insurerag-query-ablation-v1-seed-{config["seed"]}/epoch-{config["epoch"]}'
+ 
+ 
+ def specs(split):
+@@ -70,7 +70,7 @@
+ 
+ 
+ def evaluation_hashes():
+-    names = ['scripts/eval_query_adaptation.py', 'scripts/analyze_condition_secondary_metrics.py',
++    names = ['scripts/eval_query_data_ablation.py', 'scripts/analyze_condition_secondary_metrics.py',
+              'scripts/prepare_insuranceqa.py', 'src/insurerag_vlm/retriever.py']
+     return {name: sha(ROOT / name) for name in names}
+ 
+@@ -96,16 +96,19 @@
+                 'before_first_validation_or_new_test_scoring': True}, path)
+ 
+ 
+-def prior_scores(folder, questions_path, answers_path, plan):
+-    if folder is None: return {}
+-    directory = ROOT / 'reports/condition_listwise_v1' / folder
+-    protocol, done = load(directory / 'protocol.json'), load(directory / 'completion.json')
+-    assert protocol['question_file_sha256'] == sha(questions_path)
+-    assert protocol['answer_file_sha256'] == sha(answers_path)
+-    assert protocol['model']['files_sha256']['model.safetensors'] == plan['fixed_reranker_weights_sha256']
+-    assert done['status'] == 'completed' and sha(directory / 'scores.jsonl') == done['scores_sha256']
+-    assert sha(directory / 'protocol.json') == done['protocol_sha256']
+-    return {r['id']: dict(zip(r['candidate_ids'], r['cross'])) for r in read_jsonl(directory / 'scores.jsonl')}
++def prior_scores(folder, questions_path, answers_path, plan, cohort):
++    primary = ROOT / 'reports/query_adaptation_v1'
++    scores = primary / 'valid' / f'{cohort}_scores.jsonl'
++    summary = load(primary / 'valid/summary.json')
++    assert sha(scores) == summary['score_files_sha256'][scores.name]
++    protocol = load(primary / 'valid/protocol.json')
++    assert protocol['fixed_reranker_weights_sha256'] == plan['fixed_reranker_weights_sha256']
++    fixtures = load(primary / 'evaluation_implementation.lock.json')['fixture_files_sha256']
++    assert fixtures[questions_path.relative_to(ROOT).as_posix()] == sha(questions_path)
++    assert fixtures[answers_path.relative_to(ROOT).as_posix()] == sha(answers_path)
++    rows = read_jsonl(scores)
++    assert [r['id'] for r in rows] == [c['id'] for c in read_jsonl(questions_path)]
++    return {r['id']: dict(zip(r['candidate_ids'], r['cross'])) for r in rows}
+ 
+ 
+ def partitions(cohort, cases):
+@@ -152,7 +155,7 @@
+     data = ROOT / 'data/training/query_adaptation_v1'
+     allanswers = read_jsonl(data / 'answers.jsonl')
+     globalmap = {a['id']: i for i, a in enumerate(allanswers)}
+-    cache = RUN / 'index_cache'
++    cache = ROOT / 'reports/query_adaptation_v1/index_cache'
+     index_manifest = load(cache / 'manifest.json')
+     assert sha(cache / 'answer_embeddings.npy') == index_manifest['answer_embeddings_sha256']
+     alldense = np.load(cache / 'answer_embeddings.npy')
+@@ -211,7 +214,7 @@
+                    else blend_queries(vectors['original'], vectors[c['model']], c['alpha']) for c in configs}
+         sparse = SparseBM25([a['text'] for a in answers])
+         csc = sparse.matrix.tocsc()
+-        old = prior_scores(previous_folder, ROOT / question_file, ROOT / answer_file, plan)
++        old = prior_scores(previous_folder, ROOT / question_file, ROOT / answer_file, plan, cohort)
+         reranker = DomainCrossEncoder(FIXED_RERANKER, 'cuda', 64, 512)
+         with (out / f'{cohort}_scores.jsonl').open('w', encoding='utf8') as handle:
+             for offset in range(0, len(cases), 8):
+@@ -300,46 +303,16 @@
+               'score_files_sha256': {p.name: sha(p) for p in out.glob('*_scores.jsonl')},
+               'query_vector_files_sha256': {p.name: sha(p) for p in out.glob('*_queries.npy')}}
+     write_json(report, out / 'summary.json')
+-    if split == 'valid': select(report, plan)
++    assert split == 'valid', 'Data ablation must not score tests or select a model'
+     print(json.dumps({'completed': split, 'seconds': round(report['seconds'], 1), 'new_cross_pairs': new_cross}), flush=True)
+ 
+ 
+-def select(report, plan):
+-    path = RUN / 'selection.lock.json'
+-    if path.exists(): raise ValueError('Selection already frozen')
+-    weights = plan['selection']['domain_weights']
+-    source = {'insuranceqa': ('insuranceqa', 'all'), 'government': ('multidomain', 'government'),
+-              'general': ('multidomain', 'general'), 'finance': ('fiqa', 'all')}
+-    rows = []
+-    for config in configurations(plan):
+-        domains = {domain: report['summaries'][cohort][part][config['name']] for domain, (cohort, part) in source.items()}
+-        row = {'config': config, 'domains': domains,
+-               **{'weighted_'+key: sum(weights[d]*domains[d][key] for d in weights)
+-                  for key in ['hit_at_10', 'mrr_at_100', 'hit_at_1']}}
+-        rows.append(row)
+-    baseline = rows[0]
+-    for row in rows:
+-        row['eligible'] = all(row['domains'][domain]['hit_at_10']+1e-12 >= baseline['domains'][domain]['hit_at_10']-drop
+-                               for domain, drop in plan['selection']['guards_max_drop_from_original_pipeline'].items())
+-    eligible = [r for r in rows[1:] if r['eligible'] and r['weighted_hit_at_10'] > baseline['weighted_hit_at_10']+1e-12]
+-    chosen = max(eligible, key=lambda r: (r['weighted_hit_at_10'], r['weighted_mrr_at_100'], r['weighted_hit_at_1'])) if eligible else baseline
+-    write_json(rows, RUN / 'validation_sweep.json')
+-    write_json({'created_utc': datetime.now(timezone.utc).isoformat(), 'selected_on': 'valid', 'promoted': bool(eligible),
+-                'config': chosen['config'], 'validation_metrics': chosen,
+-                'query_weights_sha256': sha(modelpath(chosen['config']) / 'model.safetensors'),
+-                'document_weights_sha256': plan['initial_query_weights_sha256'],
+-                'fixed_reranker_weights_sha256': plan['fixed_reranker_weights_sha256'],
+-                'selection_protocol_sha256': sha(RUN / 'selection_protocol.json'),
+-                'evaluation_implementation_sha256': sha(RUN / 'evaluation_implementation.lock.json'),
+-                'validation_summary_sha256': sha(RUN / 'valid/summary.json'),
+-                'validation_sweep_sha256': sha(RUN / 'validation_sweep.json'),
+-                'new_test_status': 'No query-adapted new-test scoring before selection'}, path)
+-    print(json.dumps({'selected': chosen['config'], 'weighted_hit_at_10': chosen['weighted_hit_at_10'],
+-                      'baseline_weighted_hit_at_10': baseline['weighted_hit_at_10']}), flush=True)
++def select(*args):
++    raise ValueError('Data ablation cannot select or promote a model')
+ 
+ 
+ if __name__ == '__main__':
+     p = argparse.ArgumentParser(description=__doc__)
+-    p.add_argument('phase', choices=['freeze', 'valid', 'test'])
++    p.add_argument('phase', choices=['freeze', 'valid'])
+     args = p.parse_args()
+     freeze() if args.phase == 'freeze' else score(args.phase)

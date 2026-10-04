@@ -1,0 +1,31 @@
+{
+  "question": "What does an insurance deductible mean?",
+  "corpus": "insuranceqa",
+  "answer_candidates": 27413,
+  "candidates_scored_per_model": 194,
+  "reranker_passes": 1,
+  "selected_epoch": 2,
+  "domain_weight": 1.0,
+  "generation_calls": 0,
+  "research_retrieval_only": true,
+  "seconds_including_loading": 15.87006270000711,
+  "selection_lock_sha256": "111a12d841ff50fe1006c4c76d464f905394a14e1c5e172690f1f8255b255261",
+  "model_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "11785",
+      "text": "What does it mean to have a health insurance deductible? A deductible reflects the amount that you are willing to self insure on your health plan. The deductible is the first part of a health insurance bill when it comes. That portion is on the insured to pay. The next phase is co-insurance where you and the insurance company split the bill."
+    },
+    {
+      "rank": 2,
+      "answer_id": "16648",
+      "text": "A deductible simply means that you have to pay for some of the losses before your insurance company will pay anything. Unfortunately in health insurance deductibles are more complex than in auto or homeowners insurance. The deductible is the amount of money you'll have to pay out of pocket during a calendar year before the policy will start paying. If you have a $1,000 deductible your insurance company won't cover the first $1,000 of health expenditures you have in a calendar year. Once you meet your deductible for the year, they will pay a large percentage of the losses over the deductible."
+    },
+    {
+      "rank": 3,
+      "answer_id": "24872",
+      "text": "A deductible is the amount you the insured will pay if you have a claim. The higher deductible you take when you purchase a policy the lower your premium will be since you assume a little more risk yourself. For example, If you have a $500.00 deductible and you have a $2,000.00 loss then you pay the first $500.00 (your deductible) and the insurance company pays the $1,500.00"
+    }
+  ]
+}

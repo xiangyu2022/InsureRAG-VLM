@@ -1,0 +1,12 @@
+{
+  "answer_key_match": 127,
+  "citation_match": 136,
+  "verbatim_evidence": 125,
+  "gold_span_covered": 93,
+  "context_grounded_key_pass": 72,
+  "supported_denominator": 180,
+  "answered_supported": 146,
+  "strict_declines_supported": 34,
+  "answer_keys_pass_but_joint_contract_fail": 55,
+  "answered_but_answer_keys_fail": 19
+}

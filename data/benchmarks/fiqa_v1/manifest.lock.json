@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-03T01:18:23.164983+00:00",
+  "counts": {
+    "train": 5500,
+    "valid": 500,
+    "test": 648
+  },
+  "answers": 57638,
+  "code_sha256": "14a37e62ebadf4132f5792e813fc75a19263f8314284cf141c168dcb1414d5cb",
+  "files": {
+    "answers.jsonl": "4bf6f13f4faddb692a2624b0353affb439e73b51ab4bbd94d6665d14c0e38371",
+    "provenance.json": "2061010ed278154a6f24a9881ffe606c562100954af57439838b2b8470efbc63",
+    "test.jsonl": "4ee5dcc4fa0e853238406cfb0b9c3c66c420b8fa983515b267f5916a30d13660",
+    "train.jsonl": "582c7d786068f40a6a74cd3d73185d275a3b2f6528c1cd00dfbd25136731f756",
+    "UPSTREAM_README.md": "aa8389d527feaffdf7ac73b708914155df2781ad9d2a8d146287f1abc7fc762f",
+    "valid.jsonl": "08a54cd2a704040d8465b1c8c28ab084e62de7bdde5e4f573799127d639f7d47"
+  }
+}

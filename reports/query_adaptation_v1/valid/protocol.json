@@ -1,0 +1,87 @@
+{
+  "created_utc": "2026-10-03T01:40:08.400728+00:00",
+  "split": "valid",
+  "configs": [
+    {
+      "name": "original",
+      "model": "original",
+      "alpha": 0.0
+    },
+    {
+      "name": "seed_42_epoch_1_a50",
+      "model": "seed_42_epoch_1",
+      "seed": 42,
+      "epoch": 1,
+      "alpha": 0.5
+    },
+    {
+      "name": "seed_42_epoch_1_a100",
+      "model": "seed_42_epoch_1",
+      "seed": 42,
+      "epoch": 1,
+      "alpha": 1.0
+    },
+    {
+      "name": "seed_42_epoch_2_a50",
+      "model": "seed_42_epoch_2",
+      "seed": 42,
+      "epoch": 2,
+      "alpha": 0.5
+    },
+    {
+      "name": "seed_42_epoch_2_a100",
+      "model": "seed_42_epoch_2",
+      "seed": 42,
+      "epoch": 2,
+      "alpha": 1.0
+    },
+    {
+      "name": "seed_123_epoch_1_a50",
+      "model": "seed_123_epoch_1",
+      "seed": 123,
+      "epoch": 1,
+      "alpha": 0.5
+    },
+    {
+      "name": "seed_123_epoch_1_a100",
+      "model": "seed_123_epoch_1",
+      "seed": 123,
+      "epoch": 1,
+      "alpha": 1.0
+    },
+    {
+      "name": "seed_123_epoch_2_a50",
+      "model": "seed_123_epoch_2",
+      "seed": 123,
+      "epoch": 2,
+      "alpha": 0.5
+    },
+    {
+      "name": "seed_123_epoch_2_a100",
+      "model": "seed_123_epoch_2",
+      "seed": 123,
+      "epoch": 2,
+      "alpha": 1.0
+    }
+  ],
+  "selection_protocol_sha256": "86232ef122b0bcd1e19d34e9470311c8bb56643238919b5240eae2573a7cfa1f",
+  "evaluation_implementation_sha256": "094ef1da8957eb02e742adf5d06a9c4e835ed45a106438e461b2c413666e5d38",
+  "selection_lock_sha256": null,
+  "fixed_reranker_weights_sha256": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+  "query_models_sha256": {
+    "original": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+    "seed_42_epoch_1": "1e8accf999651729bd5122d608a41f974f0d0fa99b9fa665b92750ae84de0dd5",
+    "seed_42_epoch_2": "e067a9a14428aabb32dbd2f0e84a7af31bcb8290ffc6fe422faed906d4d5b857",
+    "seed_123_epoch_1": "226722ec2070363a426c944ec298704e852c114808c9e630b2388bdd48303ef0",
+    "seed_123_epoch_2": "83c810415c6db64dde15622ffc69abf2bc78ed3aa6573a9bddfdf4367f3afa76"
+  },
+  "code_sha256": {
+    "scripts/eval_query_adaptation.py": "8d0819155f0dd546910b8692f2d0115062d2922d688d207a3c033a64cbbec747",
+    "scripts/analyze_condition_secondary_metrics.py": "360f0fe3eeca08bed59123762eb782a5647137380b7fd393afe4caf2b6479b48",
+    "scripts/prepare_insuranceqa.py": "4fb3ccb6028ef911ea1e7a4bdd5e17ee084c619b2f06fd0a931b8a8386f15636",
+    "src/insurerag_vlm/retriever.py": "f9d17a456d84bda779bdf78a9c2135bae0c0a955e1ac15ba9bb6c4e44123f85e"
+  },
+  "candidate_budget": "dense top100 union positive-BM25 top100",
+  "gold_injection": false,
+  "answer_encoder_changed": false
+}

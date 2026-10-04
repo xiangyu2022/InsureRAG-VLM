@@ -1,0 +1,291 @@
+{
+  "created_utc": "2026-09-20T22:17:35.697282+00:00",
+  "role": "ad_hoc_visual_transport_smoke_not_heldout_accuracy",
+  "structured_output": true,
+  "source_url": "https://insurance.delaware.gov/wp-content/uploads/sites/15/2022/09/Auto-Insurance-Guide.pdf",
+  "pdf_sha256": "8804b729cc419cb81df83d7aab8feeed537e1b2f66dd117f7e16247ba28951f2",
+  "model": {
+    "provider": "ollama",
+    "requested_model": "ollama:qwen3.5:4b",
+    "resolved_model": "qwen3.5:4b",
+    "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+    "model_details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen35",
+      "families": [
+        "qwen35"
+      ],
+      "parameter_size": "4.7B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560
+    },
+    "ollama_version": "0.34.2",
+    "base_url": "http://127.0.0.1:11435",
+    "generation_options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 192,
+      "num_ctx": 8192,
+      "top_k": 40,
+      "top_p": 1.0,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0
+    },
+    "thinking": false,
+    "last_generation": {
+      "wall_seconds": 0.5971250999718904,
+      "done_reason": "stop",
+      "truncated": false,
+      "thinking_returned": false,
+      "input_modality": "text+image",
+      "image_count": 1,
+      "images": [
+        {
+          "name": "page_5.png",
+          "sha256": "f671edb6363e327f2e16684f2442049b58c753e20d1422c754e2964092369e96",
+          "width": 594,
+          "height": 918,
+          "format": "PNG"
+        }
+      ],
+      "response_format": {
+        "type": "object",
+        "properties": {
+          "answer": {
+            "type": "string"
+          },
+          "abstain": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "answer",
+          "abstain"
+        ],
+        "additionalProperties": false
+      },
+      "total_duration": 583991900,
+      "load_duration": 4260300,
+      "prompt_eval_count": 679,
+      "prompt_eval_duration": 315718000,
+      "eval_count": 18,
+      "eval_duration": 245307000
+    }
+  },
+  "results": [
+    {
+      "case": {
+        "id": "visual_bodily_individual",
+        "page": 5,
+        "question": "On this page, what is the maximum bodily-injury amount paid to one person in a single accident under minimum coverage?",
+        "expected_number": "25000"
+      },
+      "prompt": "Read only the attached archived public-guide page. A public guide does not establish my personal policy. Return a JSON object with answer (short string) and abstain (boolean). When the page cannot establish the answer, set abstain=true and answer=\"\". No explanation or markdown. Question: On this page, what is the maximum bodily-injury amount paid to one person in a single accident under minimum coverage?",
+      "raw_response": "{\"answer\": \"$25,000\", \"abstain\": false}",
+      "expected_key_pass": true,
+      "wall_seconds": 1.0780528000323102,
+      "generation": {
+        "wall_seconds": 1.0350092999869958,
+        "done_reason": "stop",
+        "truncated": false,
+        "thinking_returned": false,
+        "input_modality": "text+image",
+        "image_count": 1,
+        "images": [
+          {
+            "name": "page_5.png",
+            "sha256": "f671edb6363e327f2e16684f2442049b58c753e20d1422c754e2964092369e96",
+            "width": 594,
+            "height": 918,
+            "format": "PNG"
+          }
+        ],
+        "response_format": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "type": "string"
+            },
+            "abstain": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "answer",
+            "abstain"
+          ],
+          "additionalProperties": false
+        },
+        "total_duration": 1021464800,
+        "load_duration": 3133700,
+        "prompt_eval_count": 690,
+        "prompt_eval_duration": 701133000,
+        "eval_count": 19,
+        "eval_duration": 295224000
+      }
+    },
+    {
+      "case": {
+        "id": "visual_bodily_aggregate",
+        "page": 5,
+        "question": "On this page, what is the maximum bodily-injury amount paid to all people in one accident under minimum coverage?",
+        "expected_number": "50000"
+      },
+      "prompt": "Read only the attached archived public-guide page. A public guide does not establish my personal policy. Return a JSON object with answer (short string) and abstain (boolean). When the page cannot establish the answer, set abstain=true and answer=\"\". No explanation or markdown. Question: On this page, what is the maximum bodily-injury amount paid to all people in one accident under minimum coverage?",
+      "raw_response": "{\"answer\": \"$50,000\", \"abstain\": false}",
+      "expected_key_pass": true,
+      "wall_seconds": 0.6802214999916032,
+      "generation": {
+        "wall_seconds": 0.6565377999795601,
+        "done_reason": "stop",
+        "truncated": false,
+        "thinking_returned": false,
+        "input_modality": "text+image",
+        "image_count": 1,
+        "images": [
+          {
+            "name": "page_5.png",
+            "sha256": "f671edb6363e327f2e16684f2442049b58c753e20d1422c754e2964092369e96",
+            "width": 594,
+            "height": 918,
+            "format": "PNG"
+          }
+        ],
+        "response_format": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "type": "string"
+            },
+            "abstain": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "answer",
+            "abstain"
+          ],
+          "additionalProperties": false
+        },
+        "total_duration": 643791100,
+        "load_duration": 3944400,
+        "prompt_eval_count": 689,
+        "prompt_eval_duration": 355425000,
+        "eval_count": 19,
+        "eval_duration": 265168999
+      }
+    },
+    {
+      "case": {
+        "id": "visual_pip_funeral",
+        "page": 5,
+        "question": "What maximum funeral-expense amount does this page include in PIP coverage?",
+        "expected_number": "5000"
+      },
+      "prompt": "Read only the attached archived public-guide page. A public guide does not establish my personal policy. Return a JSON object with answer (short string) and abstain (boolean). When the page cannot establish the answer, set abstain=true and answer=\"\". No explanation or markdown. Question: What maximum funeral-expense amount does this page include in PIP coverage?",
+      "raw_response": "{\"answer\": \"$5,000\", \"abstain\": false}",
+      "expected_key_pass": true,
+      "wall_seconds": 0.6409423999721184,
+      "generation": {
+        "wall_seconds": 0.6358299000421539,
+        "done_reason": "stop",
+        "truncated": false,
+        "thinking_returned": false,
+        "input_modality": "text+image",
+        "image_count": 1,
+        "images": [
+          {
+            "name": "page_5.png",
+            "sha256": "f671edb6363e327f2e16684f2442049b58c753e20d1422c754e2964092369e96",
+            "width": 594,
+            "height": 918,
+            "format": "PNG"
+          }
+        ],
+        "response_format": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "type": "string"
+            },
+            "abstain": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "answer",
+            "abstain"
+          ],
+          "additionalProperties": false
+        },
+        "total_duration": 616360000,
+        "load_duration": 3708400,
+        "prompt_eval_count": 681,
+        "prompt_eval_duration": 346152000,
+        "eval_count": 18,
+        "eval_duration": 247448000
+      }
+    },
+    {
+      "case": {
+        "id": "visual_missing_personal_premium",
+        "page": 5,
+        "question": "What is the exact annual premium on my personal auto insurance policy?",
+        "expected_abstain": true
+      },
+      "prompt": "Read only the attached archived public-guide page. A public guide does not establish my personal policy. Return a JSON object with answer (short string) and abstain (boolean). When the page cannot establish the answer, set abstain=true and answer=\"\". No explanation or markdown. Question: What is the exact annual premium on my personal auto insurance policy?",
+      "raw_response": "{\n  \"answer\": \"\",\n  \"abstain\": true\n}",
+      "expected_key_pass": true,
+      "wall_seconds": 0.620398800005205,
+      "generation": {
+        "wall_seconds": 0.5971250999718904,
+        "done_reason": "stop",
+        "truncated": false,
+        "thinking_returned": false,
+        "input_modality": "text+image",
+        "image_count": 1,
+        "images": [
+          {
+            "name": "page_5.png",
+            "sha256": "f671edb6363e327f2e16684f2442049b58c753e20d1422c754e2964092369e96",
+            "width": 594,
+            "height": 918,
+            "format": "PNG"
+          }
+        ],
+        "response_format": {
+          "type": "object",
+          "properties": {
+            "answer": {
+              "type": "string"
+            },
+            "abstain": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "answer",
+            "abstain"
+          ],
+          "additionalProperties": false
+        },
+        "total_duration": 583991900,
+        "load_duration": 4260300,
+        "prompt_eval_count": 679,
+        "prompt_eval_duration": 315718000,
+        "eval_count": 18,
+        "eval_duration": 245307000
+      }
+    }
+  ],
+  "passed": 4,
+  "total": 4,
+  "limitations": [
+    "Four author-selected questions on one digitally generated public page.",
+    "No OCR/scanning robustness, diverse tables, human expert rating, or image-retrieval performance is established.",
+    "The normal RAG pipeline still sends text; this is an explicit opt-in image-generation API check.",
+    "Expected numeric keys are not semantic validation. Inspect the image and raw answers."
+  ]
+}

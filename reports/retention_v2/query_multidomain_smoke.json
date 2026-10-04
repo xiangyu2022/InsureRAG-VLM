@@ -1,0 +1,33 @@
+{
+  "question": "What rules apply to Medicaid eligibility?",
+  "corpus": "multidomain",
+  "answer_candidates": 47969,
+  "candidates_scored_per_model": 145,
+  "reranker_passes": 1,
+  "selected_epoch": 2,
+  "domain_weight": 1.0,
+  "generation_calls": 0,
+  "research_retrieval_only": true,
+  "seconds_including_loading": 7.194043399998918,
+  "selection_lock_sha256": "111a12d841ff50fe1006c4c76d464f905394a14e1c5e172690f1f8255b255261",
+  "model_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "gov2_a_7912ec98e56737fa",
+      "text": "The Medicaid eligibility final rule at 435.110, 435.116 and 435.118 set forth the mechanism for consolidating certain federal eligibility categories into four main groupings: adults, children, pregnant women and parents/caretaker relatives. The table provided below lays out the consolidation of mandatory and optional eligibility groups (a version of this table was also included as part of the preamble to the proposed rule). Realignment of Medicaid Eligibility Groups BEFORE AFTER Affordable Care Act Final Rule Mandatory Medicaid Parents/Caretaker Pregnant Children <19 Eligibility Groups Relatives Women (435.118) (Pre-Affordable Care Act) (435.110) (435.116) Low-Income Families - 1902(a)(10)(A)(i)(I) and 1931 Former AFDC - 435.110 X X X Qualified Pregnant Women & Children <19 - X X 1902(a)(10)(A)(i)(III) 435.116 Poverty-Level Related Pregnant Women & Infants - X X 1902(a)(10)(A)(i)(IV) No rule Poverty-Level Related Children Ages 1-5 - X 1902(a)(10)(A)(i)(VI) No rule Page 2 Poverty-Level Related Children Ages 6-18 - X 1902(a)(10)(A)(i)(VII) No rule Optional Medicaid Parents/Caretaker Pregnant Children <19 Eligibility Groups Relatives (435.110) Women (435.118) (Pre-Affordable Care Act) (435.116) Families & Children Financially Eligible for AFDC - X 1902(a)(10)(A)(ii)(I) 435.210 Families & children Who Would be Eligible for AFDC if X X Not Institutionalized - 1902(a)(10)(A)(ii)(IV) 435.211 Poverty-Level Related Pregnant Women & Infants - X X 1902(a)(10)(A)(ii)(IX) No rule",
+      "source_url": "https://www.medicaid.gov/media/39591",
+      "source_group": "medicaid.gov/media/39591"
+    },
+    {
+      "rank": 2,
+      "answer_id": "15557",
+      "text": "Yes. Eligibility rules for Medicaid is going to vary by state. Medicaid can help pay for services and costs that Medicare doesn't cover. When you have both programs, Medicare pays first and Medicaid will pay second.If you qualify for Medicaid in your state, you automatically qualify for extra help paying for your Medicare Part D prescription drug coverage."
+    },
+    {
+      "rank": 3,
+      "answer_id": "20168",
+      "text": "Yes. Eligibility rules for Medicaid is going to vary by state. Medicaid can help pay for services and costs that Medicare doesn't cover. When you have both programs, Medicare pays first and Medicaid will pay second. If you qualify for Medicaid in your state, you automatically qualify for extra help paying for your Medicare Part D prescription drug coverage."
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "created_utc": "2026-09-20T23:10:15.916956+00:00",
+  "question": "Using the uploaded Delaware auto guide, what maximum funeral expense benefit is included in PIP coverage?",
+  "public_pdf_sha256": "8804b729cc419cb81df83d7aab8feeed537e1b2f66dd117f7e16247ba28951f2",
+  "runtime_source_sha256": "92f02827534df4332ce7ca39bddb37240f27328aadb2d5dbed43f1118796f663",
+  "result": {
+    "answer": "",
+    "raw_answer": "Based on the provided guide, the maximum funeral expense benefit included in Personal Injury Protection (PIP) coverage is **$5,000**.\n\n**Source:** de_auto_insurance_guide.pdf#page=5",
+    "answer_repaired": false,
+    "explicit_abstention": false,
+    "generation_truncated": false,
+    "generation_used": true,
+    "answer_backend": "Ollama · qwen3.5:4b",
+    "backend_metadata": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:4b",
+      "resolved_model": "qwen3.5:4b",
+      "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "4.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2560
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11435",
+      "generation_options": {
+        "temperature": 0.0,
+        "seed": 42,
+        "num_predict": 384,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {
+        "wall_seconds": 0.9353754000039771,
+        "done_reason": "stop",
+        "truncated": false,
+        "thinking_returned": false,
+        "input_modality": "text",
+        "image_count": 0,
+        "images": [],
+        "response_format": null,
+        "total_duration": 922403400,
+        "load_duration": 2163800,
+        "prompt_eval_count": 920,
+        "prompt_eval_duration": 295336000,
+        "eval_count": 44,
+        "eval_duration": 617771000
+      }
+    },
+    "citations": [],
+    "citation_origin": null,
+    "confidence": 0.19,
+    "abstain": true,
+    "abstain_reason": "insufficient_retrieved_evidence",
+    "citation_support": false,
+    "citation_support_reason": "specific_question_terms_not_in_citation",
+    "source_ranking": [
+      {
+        "source": "de_auto_insurance_guide.pdf#page=5",
+        "score": 0.976588,
+        "retrieval_score": 12.430968,
+        "rerank_score": -3.420952,
+        "page_number": 5,
+        "text_snippet": "Personal Injury Protection (PIP) - $15,000/$30,000 Whether you are responsible for the accident or not, your insurance company will pay for the medical expenses and loss of wages for you and your passengers. • Up to $15,000 to any one person involved in a single accident • Up to $30,000 to all people involved in a single accident, with no more than $15,000 to any one person Also included in PIP coverage is up to $5,000 for funeral expenses. • Up to $15,000 to any one person involved in a single accident • Up to $30,000 to all people involved in a single accident, with no more than $15,000 to any one person Also included in PIP coverage is up to $5,000 for funeral expenses.",
+        "snippet_support": [
+          "5\nMinimum Required Coverage\nIn Delaware, all drivers are required to carry three types of auto \ninsurance:\n1. Bodily Injury Protection - $25,000/$50,000\nIf you are responsible for the injury or death of another person and \nhave minimum coverage, your insurance company will pay:\n• Up to $25,000 to one person involved in a single accident\n• Up to $50,000 to all people involved in a single accident, with no \nmore than $25,000 to any one person\n2. Property Damage - $10,000\nIf you are responsible for damages to another person’s property and \nhave minimum coverage, your insurance company will pay:\n• Up to $10,000 due to destruction of property of others as a result \nof any one accident \n3. Personal Injury Protection (PIP) - $15,000/$30,000\nWhether you are responsible for the accident or not, your insurance \ncompany will pay for the medical expenses and loss of wages for you \nand your passengers. If you have minimum coverage, your company \nwill pay:\n• Up to $15,000 to any one person involved in a single accident\n• Up to $30,000 to all people involved in a single accident, with no \nmore than $15,000 to any one person\nAlso included in PIP coverage is up to $5,000 for funeral expenses.\nThe minimum amounts in these three categories are relatively low and \nyou may wish to purchase additional coverage to protect yourself from \npossible claims in higher amounts. Keep in mind, however, that as you \nraise your coverage, your premiums will increase.\nDon’t Drive Uninsured: Driving an uninsured vehicle is against the law \nand cost other drivers money in higher insurance premiums. Registered \nvehicles are randomly checked for coverage and insurance companies \nwill notify the state if coverage is dropped. Driving without insurance \ncan cost you a fine, your license plate or your drivers license.",
+          "• Up to $15,000 to any one person involved in a single accident • Up to $30,000 to all people involved in a single accident, with no more than $15,000 to any one person Also included in PIP coverage is up to $5,000 for funeral expenses. The minimum amounts in these three categories are relatively low and you may wish to purchase additional coverage to protect yourself from possible claims in higher amounts.",
+          "5 Minimum Required Coverage In Delaware, all drivers are required to carry three types of auto insurance: Bodily Injury Protection - $25,000/$50,000 If you are responsible for the injury or death of another person and have minimum coverage, your insurance company will pay:"
+        ],
+        "image_score": 0.0,
+        "dense_rank": 8,
+        "sparse_rank": 1,
+        "document_type": "base_policy",
+        "document_role": "base_policy",
+        "packet_id": "de_auto_insurance_guide.pdf",
+        "document_priority": 3,
+        "primary_clause_type": "exception",
+        "coverage_tags": [
+          "property"
+        ],
+        "section_titles": [
+          "Minimum Required Coverage",
+          "In Delaware, all drivers are required to carry three types of auto",
+          "Insurance"
+        ],
+        "section_path": [
+          "Minimum Required Coverage",
+          "In Delaware, all drivers are required to carry three types of auto",
+          "Insurance"
+        ],
+        "section_anchor": "Have Minimum Coverage, Your Insurance Company Will Pay",
+        "form_codes": [],
+        "source_origin": null,
+        "source_name": null,
+        "source_url": null,
+        "source_authority": null,
+        "table_fields": [],
+        "graph_relations": [],
+        "graph_details": []
+      },
+      {
+        "source": "de_auto_insurance_guide.pdf#page=4",
+        "score": 0.962018,
+        "retrieval_score": 8.204007,
+        "rerank_score": -0.157802,
+        "page_number": 4,
+        "text_snippet": "4 Auto Insurance What is auto insurance and why is it necessary? A minimum level of insurance coverage is required by the state in order to register your car in Delaware. What is the penalty for driving without insurance in Delaware? If you are driving a vehicle while not having the proper insurance, upon conviction you will be fined not less than $1500 for the first offense and $3000 for each subsequent offense occurring within 3 years of a former offense. A policy with a $1,000 deductible has a lower premium than the same policy with a $500 deductible. A minimum level of insurance coverage is required by the state in order to register your car in Delaware. What is the penalty for driving without insurance in Delaware?",
+        "snippet_support": [
+          "4\nAuto Insurance\nWhat is auto insurance and why is it necessary?\nAutomobile insurance is a contract between you and an insurance \ncompany that protects you financially if you are involved in an accident. \nIf you cause an accident your insurance will help pay for losses you \ncaused. Your losses could be substantial if you are required to pay not \nonly for the damage to property but also for pain and suffering of any \ninjured person. If you don’t have any, or enough insurance coverage, \nanything of value that you own could be taken to help pay those costs, \nincluding: your home, any savings, and even future earnings.\nAuto insurance policies are offered with a variety of coverages \navailable depending upon your needs and wants. You agree to \npay the premium, and in return, the insurance company agrees to \npay for certain expenses as defined in your policy. Having the right \ninsurance coverage may prevent you from suffering a large financial \nloss in the event of an accident. A minimum level of insurance \ncoverage is required by the state in order to register your car \nin Delaware.\nWhat is the penalty for driving without insurance in Delaware?\nWhen a law enforcement officer stops you for any reason, you will \nbe required to show valid proof of insurance on the vehicle. If you \nare driving a vehicle while not having the proper insurance, upon \nconviction you will be fined not less than $1500 for the first offense and \n$3000 for each subsequent offense occurring within 3 years of a former \noffense. Driving license and/or privileges will also be suspended for 6 \nmonths.\nWhat’s a deductible? What’s a premium?\nDeductible: A deductible is the amount you have to pay out-of-pocket \non a claim before the policy pays the loss. Higher policy deductibles \nmean lower policy premiums. A policy with a $1,000 deductible has a \nlower premium than the same policy with a $500 deductible. But be \nsure you can afford the deductible in case you have a loss.\nPremium: The amount that you must pay for an insurance policy. Your \npremium is usually paid monthly, semi-annually or yearly.",
+          "A minimum level of insurance coverage is required by the state in order to register your car in Delaware. What is the penalty for driving without insurance in Delaware? When a law enforcement officer stops you for any reason, you will be required to show valid proof of insurance on the vehicle.",
+          "Auto insurance policies are offered with a variety of coverages available depending upon your needs and wants. You agree to pay the premium, and in return, the insurance company agrees to pay for certain expenses as defined in your policy. Having the right insurance coverage may prevent you from suffering a large financial loss in the event of an accident."
+        ],
+        "image_score": 0.0,
+        "dense_rank": 1,
+        "sparse_rank": 2,
+        "document_type": "base_policy",
+        "document_role": "base_policy",
+        "packet_id": "de_auto_insurance_guide.pdf",
+        "document_priority": 3,
+        "primary_clause_type": "deductible",
+        "coverage_tags": [],
+        "section_titles": [
+          "Auto Insurance",
+          "Automobile insurance is a contract between you and an insurance",
+          "If you cause an accident your insurance will help pay for losses you"
+        ],
+        "section_path": [
+          "Auto Insurance",
+          "Automobile insurance is a contract between you and an insurance",
+          "If you cause an accident your insurance will help pay for losses you"
+        ],
+        "section_anchor": "Auto insurance policies are offered with a variety of coverages",
+        "form_codes": [],
+        "source_origin": null,
+        "source_name": null,
+        "source_url": null,
+        "source_authority": null,
+        "table_fields": [],
+        "graph_relations": [],
+        "graph_details": []
+      },
+      {
+        "source": "de_auto_insurance_guide.pdf#page=12",
+        "score": 0.745335,
+        "retrieval_score": 7.010447,
+        "rerank_score": -4.339557,
+        "page_number": 12,
+        "text_snippet": "That means, unless you deliberately choose otherwise and pay an additional premium, you will essentially have no PIP coverage, as the coverage limit of $15,000 will be reduced to zero by the deductible. • Complete an approved motorcycle safety training course • Multi-line discount for auto or home insurance with the same company • Motorcycle rider organization member (like Harley Owners Group) • Good driver or mature driver • Theft recovery discount for bikes with a GPS theft-recovery system That means, unless you deliberately choose otherwise and pay an additional premium, you will essentially have no PIP coverage, as the coverage limit of $15,000 will be reduced to zero by the deductible.",
+        "snippet_support": [
+          "12\nMotorcycles\nA motorcycle owner and driver is required to carry the same minimum \namounts of bodily injury protection, property damage and personal \ninjury protection as any other vehicle (see pages 5, 6 and 7 of this \nguide). Many motorcycle owners choose to purchase additional types \nof non-required coverage, just as they do for their automobile. Your \nbest bet is to have a thorough discussion with your insurance agent to \ndiscuss your needs, your wants and what’s possible with your budget.\n• When inquiring about a policy, an agent may give you a quote \nbased on the minimum personal injury protection (PIP) limit of \n$15,000, but with a $15,000 deductible. That means, unless you \ndeliberately choose otherwise and pay an additional premium, you \nwill essentially have no PIP coverage, as the coverage limit of $15,000 \nwill be reduced to zero by the deductible. Consider other options \nwhich come at a higher premium but with lower deductibles. Ask \nyour agent about the difference between “restricted” PIP coverage \nand “unrestricted” PIP coverage. \n• A motorcycle insurance policy may provide only limited benefits. \nFor example, a lower premium policy may provide medical and lost \nwage benefits for only those accidents which occur (a) on a highway \nand (b) when there is actual physical contact with another vehicle. \nTo receive coverage for a greater range of potential accidents, you \nwill likely have to pay higher premiums. \nPossible Discounts: Just as with traditional auto insurance, ask your \ninsurance company about any possible discounts they offer for \nmotorcycle insurance. Discounts are sometimes provided for the \nfollowing situations:\n• Complete an approved motorcycle safety training course\n• Multi-line discount for auto or home insurance with the same \ncompany\n• Motorcycle rider organization member (like Harley Owners Group)\n• Good driver or mature driver \n• Theft recovery discount for bikes with a GPS theft-recovery system",
+          "That means, unless you deliberately choose otherwise and pay an additional premium, you will essentially have no PIP coverage, as the coverage limit of $15,000 will be reduced to zero by the deductible. Consider other options which come at a higher premium but with lower deductibles. Ask your agent about the difference between “restricted” PIP coverage and “unrestricted” PIP coverage.",
+          "12 Motorcycles A motorcycle owner and driver is required to carry the same minimum amounts of bodily injury protection, property damage and personal injury protection as any other vehicle (see pages 5, 6 and 7 of this guide). Many motorcycle owners choose to purchase additional types of non-required coverage, just as they do for their automobile."
+        ],
+        "image_score": 0.0,
+        "dense_rank": 2,
+        "sparse_rank": 2,
+        "document_type": "endorsement",
+        "document_role": "endorsement",
+        "packet_id": "de_auto_insurance_guide.pdf",
+        "document_priority": 2,
+        "primary_clause_type": "definition",
+        "coverage_tags": [
+          "medical_payments",
+          "property"
+        ],
+        "section_titles": [
+          "Motorcycles",
+          "A motorcycle owner and driver is required to carry the same minimum",
+          "Amounts Of Bodily Injury Protection, Property Damage And Personal"
+        ],
+        "section_path": [
+          "Motorcycles",
+          "A motorcycle owner and driver is required to carry the same minimum",
+          "Amounts Of Bodily Injury Protection, Property Damage And Personal"
+        ],
+        "section_anchor": "Best Bet Is To Have A Thorough Discussion With Your Insurance Agent To",
+        "form_codes": [],
+        "source_origin": null,
+        "source_name": null,
+        "source_url": null,
+        "source_authority": null,
+        "table_fields": [],
+        "graph_relations": [],
+        "graph_details": []
+      }
+    ],
+    "tool_router": {
+      "tool_decision": "none",
+      "tool_name": null,
+      "reason": "tool_use_stub_v1",
+      "question": "Using the uploaded Delaware auto guide, what maximum funeral expense benefit is included in PIP coverage?",
+      "candidate_count": 3
+    },
+    "query_understanding": {
+      "intent": "coverage_check",
+      "target_coverages": [],
+      "needs_limit": false,
+      "needs_endorsement_check": false,
+      "needs_table_lookup": false,
+      "needs_definition": false,
+      "needs_exclusion_review": false,
+      "needs_declarations": false,
+      "needs_graph_expansion": false,
+      "preferred_document_types": [],
+      "preferred_clause_types": [
+        "coverage"
+      ],
+      "preferred_field_types": [],
+      "preferred_sections": []
+    },
+    "caveats": [
+      "Numeric answer was not cited from a declarations-style page."
+    ],
+    "coverage": null,
+    "limit": null,
+    "evidence_role": null,
+    "policy_logic_status": "clear",
+    "conflict_notes": [],
+    "conflicts": [],
+    "override_summary": null
+  }
+}

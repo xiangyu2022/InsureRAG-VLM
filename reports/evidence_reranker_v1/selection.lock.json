@@ -1,0 +1,272 @@
+{
+  "created_utc": "2026-10-03T05:43:35.212017+00:00",
+  "selected_on": "valid",
+  "new_training_promoted": true,
+  "config": {
+    "name": "seed_123_epoch_2_cw50",
+    "model": "seed_123_epoch_2",
+    "cross_weight": 0.5
+  },
+  "best_previous_config": {
+    "name": "previous_cw50",
+    "model": "previous",
+    "cross_weight": 0.5
+  },
+  "chosen_validation": {
+    "config": {
+      "name": "seed_123_epoch_2_cw50",
+      "model": "seed_123_epoch_2",
+      "cross_weight": 0.5
+    },
+    "domains": {
+      "insuranceqa": {
+        "n": 2000,
+        "hit_at_1": 0.4355,
+        "hit_at_5": 0.669,
+        "hit_at_10": 0.764,
+        "hit_at_100": 0.906,
+        "mrr_at_100": 0.5401789385748925,
+        "label_recall_at_10": 0.6485842352092352,
+        "hit_at_1_wilson_95": [
+          0.4139141651344704,
+          0.4573331339648112
+        ],
+        "hit_at_10_wilson_95": [
+          0.7448953127247383,
+          0.7820924863107602
+        ],
+        "ndcg_at_10": 0.5156549873248831,
+        "candidate_hit": 0.9075,
+        "all_evidence_at_5": 0.4395,
+        "all_evidence_at_10": 0.5355,
+        "evidence_recall_at_5": 0.5456603535353535,
+        "candidate_all_evidence": 0.7605
+      },
+      "government": {
+        "n": 127,
+        "hit_at_1": 0.7559055118110236,
+        "hit_at_5": 0.905511811023622,
+        "hit_at_10": 0.9291338582677166,
+        "hit_at_100": 1.0,
+        "mrr_at_100": 0.8239244890425993,
+        "label_recall_at_10": 0.9291338582677166,
+        "hit_at_1_wilson_95": [
+          0.6744079798569265,
+          0.8223764536541396
+        ],
+        "hit_at_10_wilson_95": [
+          0.8707973400720659,
+          0.9622719407387987
+        ],
+        "ndcg_at_10": 0.8464800174352869,
+        "candidate_hit": 1.0,
+        "all_evidence_at_5": 0.905511811023622,
+        "all_evidence_at_10": 0.9291338582677166,
+        "evidence_recall_at_5": 0.905511811023622,
+        "candidate_all_evidence": 1.0
+      },
+      "general": {
+        "n": 400,
+        "hit_at_1": 0.8825,
+        "hit_at_5": 0.965,
+        "hit_at_10": 0.9825,
+        "hit_at_100": 0.995,
+        "mrr_at_100": 0.923203798185941,
+        "label_recall_at_10": 0.9825,
+        "hit_at_1_wilson_95": [
+          0.8472450357843669,
+          0.9104780590498961
+        ],
+        "hit_at_10_wilson_95": [
+          0.964322927074442,
+          0.991497708892962
+        ],
+        "ndcg_at_10": 0.9375011010265365,
+        "candidate_hit": 0.995,
+        "all_evidence_at_5": 0.965,
+        "all_evidence_at_10": 0.9825,
+        "evidence_recall_at_5": 0.965,
+        "candidate_all_evidence": 0.995
+      },
+      "finance": {
+        "n": 500,
+        "hit_at_1": 0.414,
+        "hit_at_5": 0.604,
+        "hit_at_10": 0.682,
+        "hit_at_100": 0.868,
+        "mrr_at_100": 0.5018029188586928,
+        "label_recall_at_10": 0.49193529803529806,
+        "hit_at_1_wilson_95": [
+          0.37164260890980144,
+          0.45766877764958563
+        ],
+        "hit_at_10_wilson_95": [
+          0.6399250012484168,
+          0.7212997388235782
+        ],
+        "ndcg_at_10": 0.4190544005497147,
+        "candidate_hit": 0.87,
+        "all_evidence_at_5": 0.268,
+        "all_evidence_at_10": 0.326,
+        "evidence_recall_at_5": 0.41283205128205136,
+        "candidate_all_evidence": 0.588
+      },
+      "financial_report": {
+        "n": 496,
+        "hit_at_1": 0.7338709677419355,
+        "hit_at_5": 0.9415322580645161,
+        "hit_at_10": 0.969758064516129,
+        "hit_at_100": 0.9959677419354839,
+        "mrr_at_100": 0.824044254571348,
+        "label_recall_at_10": 0.9241071428571428,
+        "hit_at_1_wilson_95": [
+          0.69328938981281,
+          0.77085778306751
+        ],
+        "hit_at_10_wilson_95": [
+          0.9507067864589199,
+          0.9815888280334465
+        ],
+        "ndcg_at_10": 0.8161053479564311,
+        "candidate_hit": 0.9959677419354839,
+        "all_evidence_at_5": 0.7661290322580645,
+        "all_evidence_at_10": 0.8709677419354839,
+        "evidence_recall_at_5": 0.8563628072196621,
+        "candidate_all_evidence": 0.9858870967741935
+      }
+    },
+    "utility": 0.6349920906778139,
+    "eligible": true
+  },
+  "best_previous_validation": {
+    "config": {
+      "name": "previous_cw50",
+      "model": "previous",
+      "cross_weight": 0.5
+    },
+    "domains": {
+      "insuranceqa": {
+        "n": 2000,
+        "hit_at_1": 0.431,
+        "hit_at_5": 0.675,
+        "hit_at_10": 0.7605,
+        "hit_at_100": 0.907,
+        "mrr_at_100": 0.5384378514260418,
+        "label_recall_at_10": 0.6459636002886003,
+        "hit_at_1_wilson_95": [
+          0.40944928165334044,
+          0.4528152708714724
+        ],
+        "hit_at_10_wilson_95": [
+          0.7413078324035932,
+          0.7786933859628739
+        ],
+        "ndcg_at_10": 0.5135986841072292,
+        "candidate_hit": 0.9075,
+        "all_evidence_at_5": 0.441,
+        "all_evidence_at_10": 0.534,
+        "evidence_recall_at_5": 0.54957702020202,
+        "candidate_all_evidence": 0.7605
+      },
+      "government": {
+        "n": 127,
+        "hit_at_1": 0.7716535433070866,
+        "hit_at_5": 0.9133858267716536,
+        "hit_at_10": 0.9448818897637795,
+        "hit_at_100": 1.0,
+        "mrr_at_100": 0.8353239239702881,
+        "label_recall_at_10": 0.9448818897637795,
+        "hit_at_1_wilson_95": [
+          0.6913114055666176,
+          0.8360443776989754
+        ],
+        "hit_at_10_wilson_95": [
+          0.8905934052246904,
+          0.9730472253407012
+        ],
+        "ndcg_at_10": 0.8596290982977137,
+        "candidate_hit": 1.0,
+        "all_evidence_at_5": 0.9133858267716536,
+        "all_evidence_at_10": 0.9448818897637795,
+        "evidence_recall_at_5": 0.9133858267716536,
+        "candidate_all_evidence": 1.0
+      },
+      "general": {
+        "n": 400,
+        "hit_at_1": 0.8775,
+        "hit_at_5": 0.9625,
+        "hit_at_10": 0.9825,
+        "hit_at_100": 0.995,
+        "mrr_at_100": 0.9199383312943096,
+        "label_recall_at_10": 0.9825,
+        "hit_at_1_wilson_95": [
+          0.8417313729822828,
+          0.9060868447953232
+        ],
+        "hit_at_10_wilson_95": [
+          0.964322927074442,
+          0.991497708892962
+        ],
+        "ndcg_at_10": 0.9350054418389362,
+        "candidate_hit": 0.995,
+        "all_evidence_at_5": 0.9625,
+        "all_evidence_at_10": 0.9825,
+        "evidence_recall_at_5": 0.9625,
+        "candidate_all_evidence": 0.995
+      },
+      "finance": {
+        "n": 500,
+        "hit_at_1": 0.424,
+        "hit_at_5": 0.598,
+        "hit_at_10": 0.686,
+        "hit_at_100": 0.866,
+        "mrr_at_100": 0.5125804526160446,
+        "label_recall_at_10": 0.4979519647019647,
+        "hit_at_1_wilson_95": [
+          0.381424117793864,
+          0.46773478195629203
+        ],
+        "hit_at_10_wilson_95": [
+          0.6440316011844003,
+          0.7251321441639025
+        ],
+        "ndcg_at_10": 0.42561182537671255,
+        "candidate_hit": 0.87,
+        "all_evidence_at_5": 0.262,
+        "all_evidence_at_10": 0.328,
+        "evidence_recall_at_5": 0.4056424408924409,
+        "candidate_all_evidence": 0.588
+      },
+      "financial_report": {
+        "n": 496,
+        "hit_at_1": 0.6330645161290323,
+        "hit_at_5": 0.8971774193548387,
+        "hit_at_10": 0.9395161290322581,
+        "hit_at_100": 0.9959677419354839,
+        "mrr_at_100": 0.7461446958177704,
+        "label_recall_at_10": 0.866803475422427,
+        "hit_at_1_wilson_95": [
+          0.5897771513855261,
+          0.6743065849084489
+        ],
+        "hit_at_10_wilson_95": [
+          0.9149691053213064,
+          0.9573074781951568
+        ],
+        "ndcg_at_10": 0.7341254047624796,
+        "candidate_hit": 0.9959677419354839,
+        "all_evidence_at_5": 0.6512096774193549,
+        "all_evidence_at_10": 0.7903225806451613,
+        "evidence_recall_at_5": 0.7677251344086022,
+        "candidate_all_evidence": 0.9858870967741935
+      }
+    },
+    "utility": 0.6193136707447906,
+    "eligible": true
+  },
+  "weights_sha256": "697d3a725ad9d684c1b978365bda314114e8dbec2a27c2841a07f028ed2e81b8",
+  "selection_protocol_sha256": "610d77f635853385c52e0bfcf0e3c216bb61b0a3fa5aa46b4e74a27fbc4aeeac",
+  "validation_summary_sha256": "a8911a8746538cc8c891390773fbf5891c26154da9867c4c1b8bf5f9462a0101",
+  "validation_sweep_sha256": "bcf1faf291e22e3d6f6fa5959dcd2f40c6f4027504b52796c2eac1a519e73c94",
+  "new_test_scored_before_selection": false
+}

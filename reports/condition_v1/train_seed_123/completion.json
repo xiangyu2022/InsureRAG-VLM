@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "seconds": 573.3144642999396,
+  "optimizer_steps": 2471,
+  "pair_exposures": 237174,
+  "peak_cuda_allocated_bytes": 1807201792,
+  "checkpoint": {
+    "fine_tuned_in_this_project": true,
+    "weights_sha256": "f9639c3415257ba9507f5b8e6059d58294e03579531b414dc57da26a5c2ecf6b",
+    "initial_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+    "training_manifest_sha256": "e8a3b024e12fe9e77b1e3f5b24e548479fbfec9fab356ca06b97a6fc1e960c26",
+    "training_protocol_sha256": "b75ad6cfbe9f87c14f3988465cf325dd2a43a6a3b6702f533fda3899d87f6702",
+    "training_code_sha256": "d3370035b3641c30ac23b5900a9f7b8f1f2ae6ff4ca419a27402975bf9d86607",
+    "seed": 123,
+    "epoch": 1,
+    "optimizer_steps": 2471,
+    "unique_training_questions": 25987,
+    "pair_exposures": 237174,
+    "recipe": "student-mined conservative pairwise ranking + public teacher retention"
+  },
+  "log_sha256": "40d8157e01f58f616612d1440d5d8bef539db2463d7cdcabc93972f873656bd1"
+}

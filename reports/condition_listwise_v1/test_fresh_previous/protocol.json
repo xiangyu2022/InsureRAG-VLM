@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-10-01T23:09:02.506679+00:00",
+  "split": "test",
+  "questions": 157,
+  "question_file_sha256": "aaba50a5fa7165bc0a199b34d4ddccd10e5fcb83076038e6db5c9fea277d7c5c",
+  "answer_file_sha256": "ed1475b822ef2b1032b90430c2b21acb7e6259c35afc1f90dd5e07cf05666d35",
+  "answer_count": 48172,
+  "gold_injection": false,
+  "code_sha256": "f6c57011feb0f585343e9f215bc1594743075e64ed10400098ed78b8615792e0",
+  "selection_lock_sha256": "f4eebfdb45836d31edc9152732dcf9f4e4c4622eeb9d34b3e310682e3a8b3dc0",
+  "selection_protocol_sha256": "d8d956f2f66e159e494e0e09dccb937d85e6bc8771c75287834140b568d5eed2",
+  "model": {
+    "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\insurerag-retention-v2\\epoch-2",
+    "files_sha256": {
+      "config.json": "bde16d9648b01e19b9d4c5f3deca28cd2851fbbc660f8a90cecd87efde5c5429",
+      "model.safetensors": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+      "tokenizer.json": "91f1def9b9391fdabe028cd3f3fcc4efd34e5d1f08c3bf2de513ebb5911a1854",
+      "tokenizer_config.json": "88eb33800f51cc08e19ebe4dffbde5afbc9e517a993ede2861a22ed9c7e0be7f",
+      "training_provenance.json": "ca35807a9352830c04c94eac5df7ef12089b0b1f67f16926bcfb41265416d7ea"
+    },
+    "checkpoint_sha256": "2bb66fe5c2dbbd62db0fb0884f98f16341767fba791681af6e5dd700ceee761b",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "max_length": 512,
+    "batch_size": 64,
+    "truncation": "longest_first",
+    "score": "raw single relevance logit",
+    "remote_code": false,
+    "fine_tuned_in_this_project": true,
+    "training_provenance": {
+      "epoch": 2,
+      "optimizer_steps": 2574,
+      "fine_tuned_in_this_project": true,
+      "weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+      "initial_weights_sha256": "88207632c798e8a5a7eb2799447dc1f1f08aec03daaa142b31fb29572a2071fe",
+      "training_manifest_sha256": "8a714663f31c688447371cf2bba28fa0228f21d926f188574d9d8eeb647ccf20",
+      "training_protocol_sha256": "f6a6ef633c85d0120901abb47fed29e8ef341b42dc0ce7db436d1194f17ef3d4",
+      "training_code_sha256": "3ab4c4e170abccb2e34ee0b423d9a943c115a6a036b0c1d2cf780e65cecc658f",
+      "recipe": "rehearsal_from_v2",
+      "unique_training_questions": 19941,
+      "pair_exposures": 246960
+    }
+  },
+  "candidate_source_sha256": "c34f168708e6b06addee0106580b8e98c760989dcca5ad7ed1083bd514dc661b"
+}

@@ -1,0 +1,67 @@
+{
+  "status": "verified",
+  "scoring": {
+    "valid": {
+      "questions": 2000,
+      "pairs": 348855
+    },
+    "test": {
+      "questions": 2000,
+      "pairs": 348026
+    }
+  },
+  "independent_test_hit10_recount": {
+    "bge": {
+      "n": 2000,
+      "hits_at_10": 1350,
+      "hit_at_10": 0.675,
+      "hit_at_1": 0.3445,
+      "mrr_at_100": 0.4541058051728594
+    },
+    "bm25": {
+      "n": 2000,
+      "hits_at_10": 965,
+      "hit_at_10": 0.4825,
+      "hit_at_1": 0.23,
+      "mrr_at_100": 0.3143632992945487
+    },
+    "rrf": {
+      "n": 2000,
+      "hits_at_10": 1259,
+      "hit_at_10": 0.6295,
+      "hit_at_1": 0.314,
+      "mrr_at_100": 0.41839989586278714
+    },
+    "selected": {
+      "n": 2000,
+      "hits_at_10": 1391,
+      "hit_at_10": 0.6955,
+      "hit_at_1": 0.3735,
+      "mrr_at_100": 0.4838551055613349
+    },
+    "bge_plus_cross_same_budget": {
+      "n": 2000,
+      "hits_at_10": 1390,
+      "hit_at_10": 0.695,
+      "hit_at_1": 0.3605,
+      "mrr_at_100": 0.472923660084938
+    },
+    "pure_cross_union": {
+      "n": 2000,
+      "hits_at_10": 1357,
+      "hit_at_10": 0.6785,
+      "hit_at_1": 0.37,
+      "mrr_at_100": 0.47558199954603747
+    },
+    "linear_no_cross": {
+      "n": 2000,
+      "hits_at_10": 1365,
+      "hit_at_10": 0.6825,
+      "hit_at_1": 0.3545,
+      "mrr_at_100": 0.4653951159262804
+    }
+  },
+  "fixture_sha256": "4c46a374c2f5eebd4a2609f030c5fdc0aa660fb5e7a1a653cc198f6cc177fcc6",
+  "selection_sha256": "87908cb680e9f1929fee4eb3ab58bfa7704b6ab7acdc5da9c10592c2f37fa46f",
+  "test_summary_sha256": "7c0567fc04d9581c046c8fca19734f1efffa82fcdabebfc04216ef394b00abc7"
+}

@@ -1,0 +1,99 @@
+{
+  "created_at_utc": "2026-09-20T21:32:20.540088+00:00",
+  "purpose": "CPU local-hashing retrieval and label-integrity diagnostic; no trained BGE or Qwen inference",
+  "seed": 42,
+  "data_sha256": {
+    "rag_corpus.jsonl": "1379e4ec4fbee038ac7e4946114a7420bb5ccb05af489b7a1e993d4a2557373e",
+    "rag_pages.jsonl": "cd89222cbe79add5ac72a8f695ba15d42011f94206dc934b76c6436ce19c2b33",
+    "rag_snippets.jsonl": "5d844f3ddc63aefb954ded0ca073027e22942c39fa1ab48cf9d707cabd365cbd",
+    "sft_dataset.jsonl": "db1efee513b1f67084d89beb14567ad6652f80c7fd42db05ce71d69c25605f5a"
+  },
+  "corpus_audit": {
+    "answerable_sft_records": 3400,
+    "unique_answerable_questions": 39,
+    "questions_with_multiple_gold_pages": 39,
+    "records_with_ambiguous_question": 3400,
+    "most_common_questions": [
+      [
+        "Summarize the insurance-specific point supported by this evidence.",
+        908
+      ],
+      [
+        "What coverage information is explained by the evidence?",
+        587
+      ],
+      [
+        "How would you summarize the coverage point on this page?",
+        587
+      ],
+      [
+        "What does this evidence say about the deductible?",
+        107
+      ],
+      [
+        "How should the deductible be explained from this page?",
+        107
+      ]
+    ],
+    "source_document_splits": {
+      "train": 37,
+      "valid": 4,
+      "test": 6
+    },
+    "test_questions": 115,
+    "test_unique_questions": 23,
+    "indexed_pages": 201,
+    "indexed_snippets": 1180,
+    "test_gold_sources_present": 115
+  },
+  "results": {
+    "current_sft_document_test_split": {
+      "dense_only": {
+        "count": 115,
+        "hit_at_1": 0.05217391304347826,
+        "hit_at_5": 0.05217391304347826,
+        "mrr_at_10": 0.0727536231884058
+      },
+      "sparse_only": {
+        "count": 115,
+        "hit_at_1": 0.043478260869565216,
+        "hit_at_5": 0.06086956521739131,
+        "mrr_at_10": 0.051014492753623186
+      },
+      "hybrid_text": {
+        "count": 115,
+        "hit_at_1": 0.043478260869565216,
+        "hit_at_5": 0.05217391304347826,
+        "mrr_at_10": 0.05210144927536232
+      }
+    },
+    "legacy_59_development_examples": {
+      "dense_only": {
+        "count": 59,
+        "hit_at_1": 0.01694915254237288,
+        "hit_at_5": 0.1016949152542373,
+        "mrr_at_10": 0.05353107344632768
+      },
+      "sparse_only": {
+        "count": 59,
+        "hit_at_1": 0.03389830508474576,
+        "hit_at_5": 0.1016949152542373,
+        "mrr_at_10": 0.0693906376109766
+      },
+      "hybrid_text": {
+        "count": 59,
+        "hit_at_1": 0.03389830508474576,
+        "hit_at_5": 0.06779661016949153,
+        "mrr_at_10": 0.06416464891041163
+      }
+    }
+  },
+  "limitations": [
+    "Question templates are reused across many source pages, making exact-source retrieval underdetermined without document context.",
+    "The document split is regenerated from the current 3,850-record dataset; original historical train/test manifests and BGE weights are absent.",
+    "No retriever training, LLM generation, adapter evaluation, image model, or GPU execution occurs in this diagnostic.",
+    "The 59-example suite is selected from SFT data and is a development diagnostic, not a held-out generalization benchmark.",
+    "dense_only and sparse_only modes retain the repository's metadata reranking, table signals, and graph expansion; these are pipeline ablations.",
+    "Hit@k is the fraction of queries with any labeled page in the first k results, not answer correctness or hallucination rate."
+  ]
+}

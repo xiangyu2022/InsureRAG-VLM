@@ -1,5 +1,6 @@
 import json
 import re
+from hashlib import sha256
 from collections import defaultdict
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Set
@@ -7,7 +8,11 @@ from typing import Any, Dict, List, Optional, Set
 import numpy as np
 
 from .config import ModelConfig
-from .data import PageDocument, load_documents
+from .answer_safety import is_explicit_abstention
+from .data import (
+    PACKET_MANIFEST_FILENAMES, SUPPORTED_IMAGE_EXTENSIONS,
+    SUPPORTED_PDF_EXTENSIONS, SUPPORTED_TEXT_EXTENSIONS, PageDocument, load_documents,
+)
 from .evaluation import evaluate_predictions, load_evaluation_examples
 from .graph import build_document_graph, build_graph_adjacency, expand_candidate_page_keys
 from .insurance_structure import (
@@ -18,7 +23,7 @@ from .insurance_structure import (
     normalize_coverage_labels,
     primary_clause_type,
 )
-from .ocr import extract_text_from_image
+from .ocr import OCRUnavailableError, extract_text_from_image, is_blank_image
 from .query_understanding import QueryUnderstanding, understand_query
 from .retriever import EmbeddingRetriever, SparseRetriever, load_index, load_sparse_index
 from .tables import build_table_records, serialize_table_record
@@ -26,7 +31,11 @@ from .visual import build_lightweight_page_image_embeddings, score_lightweight_p
 from .vlm import VLMClient, format_prompt
 
 
-_AMOUNT_RE = re.compile(r"\$[\d,]+(?:\.\d+)?|\b\d+(?:\.\d+)?%|\b\d+/\d+/\d+\b")
+_AMOUNT_RE = re.compile(r"\$\d+(?:,\d{3})*(?:\.\d+)?|\b\d+(?:\.\d+)?%|\b\d+/\d+/\d+\b")
+
+
+class DocumentTextUnavailableError(ValueError):
+    """The text-RAG corpus contains no readable text."""
 
 
 class DocumentRetrievalPipeline:
@@ -35,11 +44,16 @@ class DocumentRetrievalPipeline:
         self._documents_cache: Dict[tuple[str, bool, str], List[PageDocument]] = {}
         self._hybrid_corpus_cache: Dict[str, Dict[str, List[Dict[str, Any]]]] = {}
         self._index_cache: Dict[str, Dict[str, Any]] = {}
+        self._source_hash_cache: Dict[str, tuple[tuple[int, int], str]] = {}
+        self.ingestion_report: Dict[str, Any] = {}
         self.retriever = EmbeddingRetriever(
             config.retrieval_model,
             use_hf_api=config.use_hf_api,
             hf_api_token=config.hf_api_token,
             openai_api_key=config.openai_api_key,
+            pooling=config.retrieval_pooling,
+            query_instruction=config.retrieval_query_instruction,
+            max_length=config.retrieval_max_length,
         )
         self.sparse_retriever = SparseRetriever()
         self.vlm_client = VLMClient(
@@ -48,6 +62,12 @@ class DocumentRetrievalPipeline:
             openai_api_key=config.openai_api_key,
             anthropic_api_key=getattr(config, "anthropic_api_key", None),
             use_hf_api=config.use_hf_api,
+            provider=config.vlm_provider,
+            ollama_base_url=config.ollama_base_url,
+            generation_options=config.ollama_generation_options,
+            thinking=config.vlm_thinking,
+            request_timeout=config.vlm_request_timeout,
+            expected_model_digest=config.vlm_expected_digest,
         )
 
     def _index_paths(self) -> Dict[str, Path]:
@@ -64,6 +84,7 @@ class DocumentRetrievalPipeline:
             "graph_meta": base / "hybrid_graph.jsonl",
             "page_image": base / "hybrid_page_image.npy",
             "page_image_meta": base / "hybrid_page_image_pages.jsonl",
+            "embedding_manifest": base / "hybrid_embedding_manifest.json",
         }
 
     @staticmethod
@@ -192,8 +213,8 @@ class DocumentRetrievalPipeline:
             updated["coverage_tags"] = list(page_record.get("coverage_tags", []) or [])
         return updated
 
-    def _curated_paths(self) -> Dict[str, Path]:
-        base = Path(self.config.curated_dataset_dir)
+    def _curated_paths(self, folder: Optional[Path] = None) -> Dict[str, Path]:
+        base = Path(folder if folder is not None else self.config.curated_dataset_dir)
         return {
             "pages": base / "rag_pages.jsonl",
             "snippets": base / "rag_snippets.jsonl",
@@ -202,6 +223,43 @@ class DocumentRetrievalPipeline:
     def _has_curated_corpus(self) -> bool:
         paths = self._curated_paths()
         return paths["pages"].exists() and paths["snippets"].exists()
+
+    def _resolve_corpus_source(self, data_folder: Path) -> tuple[str, Path]:
+        mode = self.config.corpus_source
+        if mode not in {"auto", "curated", "documents"}:
+            raise ValueError(f"Unknown corpus_source {mode!r}; choose auto, curated, or documents.")
+        root = Path(self.config.curated_dataset_dir if mode == "curated" else data_folder).resolve()
+        if not root.is_dir():
+            raise FileNotFoundError(f"Requested corpus folder does not exist: {root}")
+        paths = self._curated_paths(root)
+        present = [path.is_file() for path in paths.values()]
+        if mode == "curated" or (mode == "auto" and any(present)):
+            if not all(present):
+                raise ValueError(f"Curated corpus requires both rag_pages.jsonl and rag_snippets.jsonl in {root}")
+            return "curated", root
+        return "documents", root
+
+    def _corpus_source_identity(self, data_folder: Path) -> Dict[str, Any]:
+        mode, root = self._resolve_corpus_source(data_folder)
+        if mode == "curated":
+            files = sorted(self._curated_paths(root).values())
+        else:
+            extensions = SUPPORTED_TEXT_EXTENSIONS | SUPPORTED_IMAGE_EXTENSIONS | SUPPORTED_PDF_EXTENSIONS
+            files = sorted(path for path in root.rglob("*") if path.is_file() and (
+                path.suffix.lower() in extensions or path.relative_to(root).as_posix() in PACKET_MANIFEST_FILENAMES
+            ))
+        hashes = {}
+        for path in files:
+            stat = path.stat()
+            signature = (stat.st_size, stat.st_mtime_ns)
+            cached = self._source_hash_cache.get(str(path))
+            if cached is None or cached[0] != signature:
+                digest = sha256(path.read_bytes()).hexdigest()
+                self._source_hash_cache[str(path)] = (signature, digest)
+            else:
+                digest = cached[1]
+            hashes[path.relative_to(root).as_posix()] = digest
+        return {"mode": mode, "root": str(root), "files_sha256": hashes}
 
     def _load_documents(self, data_folder: Path, render_pdf_pages: Optional[bool] = None) -> List[PageDocument]:
         render_pdf_pages = self.config.render_pdf_pages if render_pdf_pages is None else render_pdf_pages
@@ -218,8 +276,21 @@ class DocumentRetrievalPipeline:
             pdf_render_dir=self.config.pdf_render_dir,
         )
         for doc in documents:
-            if doc.image_path and not doc.text:
-                doc.text = extract_text_from_image(doc.image_path)
+            if doc.text.strip():
+                doc.metadata["text_extraction_status"] = "readable_text"
+            elif doc.image_path:
+                if is_blank_image(doc.image_path):
+                    doc.metadata["text_extraction_status"] = "blank_page"
+                else:
+                    try:
+                        doc.text = extract_text_from_image(doc.image_path)
+                        doc.metadata["text_extraction_status"] = "ocr_text" if doc.text.strip() else "ocr_no_text"
+                    except OCRUnavailableError as exc:
+                        doc.metadata["text_extraction_status"] = "ocr_unavailable"
+                        doc.metadata["text_extraction_warning"] = str(exc)
+            else:
+                doc.metadata["text_extraction_status"] = "no_selectable_text"
+                doc.metadata["text_extraction_warning"] = "No selectable text was found and page rendering/OCR is disabled. Upload a searchable PDF or enable local OCR."
         self._documents_cache[cache_key] = documents
         return documents
 
@@ -248,12 +319,8 @@ class DocumentRetrievalPipeline:
             chunks.append(current)
         return chunks
 
-    def _load_curated_corpus(self) -> Dict[str, List[Dict[str, Any]]]:
-        cache_key = str(Path(self.config.curated_dataset_dir).resolve())
-        cached = self._hybrid_corpus_cache.get(cache_key)
-        if cached:
-            return cached
-        paths = self._curated_paths()
+    def _load_curated_corpus(self, folder: Optional[Path] = None) -> Dict[str, List[Dict[str, Any]]]:
+        paths = self._curated_paths(folder)
         pages: List[Dict[str, Any]] = []
         snippets: List[Dict[str, Any]] = []
         for record in self._read_jsonl(paths["pages"]):
@@ -282,6 +349,9 @@ class DocumentRetrievalPipeline:
                         "authority": record.get("authority"),
                         "content_type": record.get("content_type"),
                         "source_file": record.get("source_file"),
+                        "policy_number": record.get("policy_number"),
+                        "source_references": record.get("source_references", []),
+                        "printed_page_label": record.get("printed_page_label"),
                     }
                 )
             )
@@ -290,7 +360,8 @@ class DocumentRetrievalPipeline:
             page_number = int(record.get("page") or 0)
             doc_id = str(record.get("doc_id") or "")
             source = str(record.get("citation") or record.get("source_file") or record.get("record_id"))
-            page_key = str(record.get("parent_page_id") or self._page_key(doc_id, page_number))
+            # External parent IDs are dataset IDs, not necessarily index page keys.
+            page_key = self._page_key(doc_id, page_number)
             snippet_record = self._augment_record_metadata(
                 {
                     "record_id": record.get("record_id") or f"{page_key}::snippet",
@@ -315,15 +386,33 @@ class DocumentRetrievalPipeline:
             )
             snippets.append(self._inherit_page_structure(snippet_record, page_by_key.get(page_key, {})))
         corpus = {"pages": pages, "snippets": snippets}
-        self._hybrid_corpus_cache[cache_key] = corpus
         return corpus
 
     def _load_document_corpus(self, data_folder: Path, include_images: bool = False) -> Dict[str, List[Dict[str, Any]]]:
         render_pdf_pages = include_images and self.config.enable_image_signal
         documents = self._load_documents(data_folder, render_pdf_pages=render_pdf_pages)
+        statuses = [
+            {"source": str(doc.metadata.get("source", doc.doc_id)),
+             "status": doc.metadata.get("text_extraction_status", "readable_text"),
+             "text_characters": len(doc.text.strip()),
+             "warning": doc.metadata.get("text_extraction_warning")}
+            for doc in documents
+        ]
+        self.ingestion_report = {
+            "answer_input": "text", "total_pages": len(documents),
+            "readable_pages": sum(bool(doc.text.strip()) for doc in documents),
+            "blank_pages": sum(row["status"] == "blank_page" for row in statuses),
+            "unreadable_pages": sum(not row["text_characters"] and row["status"] != "blank_page" for row in statuses),
+            "pages": statuses,
+        }
+        if not self.ingestion_report["readable_pages"]:
+            details = next((row["warning"] for row in statuses if row["warning"]), "The document contains no readable text.")
+            raise DocumentTextUnavailableError(f"No readable text was found in {len(documents)} document page(s). {details} This upload was not activated.")
         pages: List[Dict[str, Any]] = []
         snippets: List[Dict[str, Any]] = []
         for doc in documents:
+            if not doc.text.strip():
+                continue
             source = str(doc.metadata.get("source", doc.doc_id))
             doc_id = str(doc.metadata.get("path") or doc.doc_id.split("#page=", 1)[0])
             page_key = self._page_key(doc_id, doc.page_number)
@@ -388,28 +477,37 @@ class DocumentRetrievalPipeline:
         data_folder: Path,
         include_images: bool = False,
     ) -> Dict[str, List[Dict[str, Any]]]:
-        cache_key = f"{Path(data_folder).resolve()}::{self.config.corpus_source}::{include_images}"
+        source_identity = self._corpus_source_identity(data_folder)
+        cache_key = json.dumps(source_identity, sort_keys=True) + f"::{include_images}"
         cached = self._hybrid_corpus_cache.get(cache_key)
         if cached:
             return cached
 
-        source_mode = self.config.corpus_source
-        if source_mode == "curated" or (source_mode == "auto" and self._has_curated_corpus()):
-            corpus = self._load_curated_corpus()
+        source_mode, source_root = source_identity["mode"], Path(source_identity["root"])
+        if source_mode == "curated":
+            corpus = self._load_curated_corpus(source_root)
             pages = [dict(record) for record in corpus["pages"]]
             snippets = [dict(record) for record in corpus["snippets"]]
             if include_images and self.config.enable_image_signal:
                 pages = self._attach_image_paths_from_documents(data_folder, pages)
             corpus = {"pages": pages, "snippets": snippets}
         else:
-            corpus = self._load_document_corpus(data_folder, include_images=include_images)
+            # Source edits invalidate document extraction as well as this cache.
+            self._documents_cache.clear()
+            corpus = self._load_document_corpus(source_root, include_images=include_images)
         self._hybrid_corpus_cache[cache_key] = corpus
         return corpus
 
     def build_index(self, data_folder: Path) -> None:
+        # An explicit rebuild must see source edits rather than an earlier cache.
+        self._hybrid_corpus_cache.clear()
+        self._documents_cache.clear()
+        source_identity = self._corpus_source_identity(data_folder)
         corpus = self._load_hybrid_corpus(data_folder, include_images=self.config.enable_image_signal)
         paths = self._index_paths()
         paths["snippet_dense"].parent.mkdir(parents=True, exist_ok=True)
+        # Invalidate a previous successful build before replacing any artifacts.
+        paths["embedding_manifest"].unlink(missing_ok=True)
         table_records = build_table_records(corpus["pages"])
         graph_edges = build_document_graph(corpus["pages"], table_records)
 
@@ -447,7 +545,38 @@ class DocumentRetrievalPipeline:
             image_embeddings, image_pages = build_lightweight_page_image_embeddings(corpus["pages"])
             np.save(paths["page_image"], image_embeddings)
             self._write_jsonl(image_pages, paths["page_image_meta"])
+        manifest = {
+            "schema_version": 4,
+            "embedding_fingerprint": self.retriever.index_fingerprint(),
+            "corpus_root": str(Path(data_folder).resolve()),
+            "corpus_source_identity": source_identity,
+            "corpus_sha256": sha256(json.dumps(corpus, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest(),
+            "snippet_dense_shape": list(snippet_dense.shape),
+            "page_dense_shape": list(page_dense.shape),
+            "ingestion_report": self.ingestion_report,
+        }
+        # Write last, so a partially failed rebuild cannot be treated as valid.
+        paths["embedding_manifest"].write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+        self.config.index_path.with_suffix(".manifest.json").write_text(
+            json.dumps({"embedding_fingerprint": manifest["embedding_fingerprint"]}, indent=2), encoding="utf-8"
+        )
         self._index_cache.clear()
+
+    def _validate_embedding_manifest(self, data_folder: Path) -> Dict[str, Any]:
+        path = self._index_paths()["embedding_manifest"]
+        try:
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as exc:
+            raise ValueError(f"Dense index identity is missing or invalid at {path}; rebuild this index with the configured retriever.") from exc
+        if not isinstance(manifest, dict) or manifest.get("schema_version") != 4:
+            raise ValueError("Unsupported dense index manifest; rebuild this index with the configured retriever.")
+        if manifest.get("embedding_fingerprint") != self.retriever.index_fingerprint():
+            raise ValueError("Dense index embedding model, checkpoint, pooling, or query settings changed; rebuild this index before searching.")
+        if manifest.get("corpus_root") != str(Path(data_folder).resolve()):
+            raise ValueError("Dense index belongs to a different corpus folder; select the correct index or rebuild it.")
+        if manifest.get("corpus_source_identity") != self._corpus_source_identity(data_folder):
+            raise ValueError("Dense index corpus source, files, or contents changed; rebuild this index before searching.")
+        return manifest
 
     def _ensure_indices(self, data_folder: Path) -> Dict[str, Any]:
         paths = self._index_paths()
@@ -465,7 +594,9 @@ class DocumentRetrievalPipeline:
         if not all(path.exists() for path in required):
             self.build_index(data_folder)
 
-        cache_key = str(Path(self.config.index_dir).resolve())
+        manifest = self._validate_embedding_manifest(data_folder)
+        manifest_key = sha256(json.dumps(manifest, sort_keys=True).encode("utf-8")).hexdigest()
+        cache_key = str(Path(self.config.index_dir).resolve()) + ":" + manifest_key
         cached = self._index_cache.get(cache_key)
         if cached:
             return cached
@@ -481,6 +612,11 @@ class DocumentRetrievalPipeline:
             "table_meta": self._read_jsonl(paths["table_meta"]),
             "graph_edges": self._read_jsonl(paths["graph_meta"]),
         }
+        for name, metadata_name in (("snippet_dense", "snippet_meta"), ("page_dense", "page_meta")):
+            if list(indices[name].shape) != manifest.get(name + "_shape") or len(indices[name]) != len(indices[metadata_name]):
+                raise ValueError("Dense index array shape does not match its manifest/metadata; rebuild the index.")
+        indices["embedding_manifest"] = manifest
+        self.ingestion_report = manifest.get("ingestion_report", {})
         indices["graph_adjacency"] = build_graph_adjacency(indices["graph_edges"])
         if paths["page_image"].exists() and paths["page_image_meta"].exists():
             indices["page_image"] = np.load(paths["page_image"])
@@ -682,11 +818,13 @@ class DocumentRetrievalPipeline:
         indices: Dict[str, Any],
         understanding: QueryUnderstanding,
     ) -> List[Dict[str, Any]]:
-        if not understanding.needs_graph_expansion:
+        if self.config.graph_mode == "off":
             return merged_candidates
 
         page_by_key = {str(record.get("page_key")): record for record in indices["page_meta"]}
-        seed_page_keys = {str(candidate.get("page_key") or candidate.get("parent_page_id")) for candidate in merged_candidates}
+        seed_order = list(dict.fromkeys(str(candidate.get("page_key") or candidate.get("parent_page_id"))
+                                       for candidate in merged_candidates))
+        seed_page_keys = set(seed_order[:self.config.graph_seed_pages])
         expansions = expand_candidate_page_keys(
             seed_page_keys=seed_page_keys,
             adjacency=indices.get("graph_adjacency", {}),
@@ -694,6 +832,9 @@ class DocumentRetrievalPipeline:
             needs_declarations=understanding.needs_declarations,
             needs_definition=understanding.needs_definition,
             needs_exclusion_review=understanding.needs_exclusion_review,
+            max_hops=self.config.graph_max_hops,
+            max_expansions=self.config.graph_max_expansions,
+            explicit_only=self.config.graph_mode == "explicit" or not understanding.needs_graph_expansion,
         )
         if not expansions:
             return merged_candidates
@@ -728,6 +869,11 @@ class DocumentRetrievalPipeline:
                     "graph_source_section_title": expansion.get("source_section_title"),
                     "graph_target_section_title": expansion.get("target_section_title"),
                     "graph_source_form_codes": expansion.get("source_form_codes", []),
+                    "graph_relation_status": expansion.get("relation_status", "candidate"),
+                    "graph_evidence_span": expansion.get("evidence_span"),
+                    "graph_path": expansion.get("path", []),
+                    "graph_hop": expansion.get("hop"),
+                    "graph_supports_precedence": False,
                 }
             )
         return merged_candidates
@@ -913,6 +1059,11 @@ class DocumentRetrievalPipeline:
                         "source_section_title": candidate.get("graph_source_section_title"),
                         "target_section_title": candidate.get("graph_target_section_title"),
                         "source_form_codes": candidate.get("graph_source_form_codes", []),
+                        "relation_status": candidate.get("graph_relation_status", "candidate"),
+                        "evidence_span": candidate.get("graph_evidence_span"),
+                        "path": candidate.get("graph_path", []),
+                        "hop": candidate.get("graph_hop"),
+                        "supports_precedence": False,
                     }
                 )
 
@@ -965,6 +1116,43 @@ class DocumentRetrievalPipeline:
         ranked_pages.sort(key=lambda page: float(page.get("score", 0.0)), reverse=True)
         return ranked_pages[:top_k]
 
+    def select_graph_evidence_bundle(
+        self, ranked_pages: List[Dict[str, Any]], indices: Dict[str, Any], top_k: int,
+    ) -> List[Dict[str, Any]]:
+        """Reserve context for explicit dependencies of a highly ranked page.
+
+        Merely adding graph candidates can leave all dependencies below the final
+        cutoff. Complete the bounded neighborhood of the first connected page in
+        the initial top-k; heuristic overlap edges never reserve context slots.
+        This is a retrieval policy, not a conclusion that one clause overrides another.
+        """
+        if self.config.graph_mode == "off" or top_k < 2:
+            return ranked_pages[:top_k]
+        by_source = {str(p["source"]): p for p in ranked_pages}
+        key_to_source = {str(p["page_key"]): str(p["source"]) for p in indices["page_meta"]}
+        source_to_key = {v: k for k, v in key_to_source.items()}
+        for anchor in ranked_pages[:top_k]:
+            key = source_to_key.get(str(anchor["source"]))
+            if not key:
+                continue
+            expansion = expand_candidate_page_keys({key}, indices.get("graph_adjacency", {}),
+                True, True, True, True, max_hops=self.config.graph_max_hops,
+                max_expansions=self.config.graph_max_expansions, explicit_only=True)
+            connected = [(row, key_to_source.get(row["page_key"])) for row in expansion]
+            connected = [(row, source) for row, source in connected if source in by_source]
+            if not connected:
+                continue
+            selected = [{**anchor, "context_selection": "explicit_reference_anchor"}]
+            for row, source in connected:
+                selected.append({**by_source[source], "context_selection": "explicit_reference_dependency",
+                                 "context_graph_path": row["path"]})
+                if len(selected) == top_k:
+                    return selected
+            selected_sources = {p["source"] for p in selected}
+            selected.extend(p for p in ranked_pages if p["source"] not in selected_sources)
+            return selected[:top_k]
+        return ranked_pages[:top_k]
+
     def _page_order_bucket(self, page: Dict[str, object], understanding: QueryUnderstanding) -> int:
         document_type = str(page.get("document_type", ""))
         primary_clause_type = str(page.get("primary_clause_type", ""))
@@ -984,51 +1172,110 @@ class DocumentRetrievalPipeline:
             return 6
         return 7
 
+    @staticmethod
+    def _deduplicate_context_snippets(snippets: List[str]) -> List[str]:
+        """Keep earlier, query-focused evidence when later snippets overlap it."""
+        kept: List[str] = []
+        normalized: List[str] = []
+        for value in snippets:
+            text = " ".join(str(value or "").split())
+            if not text:
+                continue
+            key = text.casefold()
+            if any(key in existing or existing in key for existing in normalized):
+                continue
+            kept.append(text)
+            normalized.append(key)
+        return kept
+
+    @staticmethod
+    def _clip_context_evidence(text: str, limit: int) -> str:
+        if limit <= 0:
+            return ""
+        if len(text) <= limit:
+            return text
+        if limit == 1:
+            return "…"
+        prefix = text[:limit - 1].rstrip()
+        # Avoid leaving half of a word when a useful word boundary is available.
+        if " " in prefix and not text[limit - 1].isspace():
+            prefix = prefix.rsplit(" ", 1)[0].rstrip()
+        return prefix + "…"
+
     def pack_long_context(
         self,
         ranked_pages: List[Dict[str, object]],
         answer_top_k: int,
         understanding: Optional[QueryUnderstanding] = None,
     ) -> str:
-        understanding = understanding or QueryUnderstanding(
-            intent="document_qa",
-            target_coverages=[],
-            needs_limit=False,
-            needs_endorsement_check=False,
-            needs_table_lookup=False,
-            needs_definition=False,
-            needs_exclusion_review=False,
-            needs_declarations=False,
-            needs_graph_expansion=False,
-            preferred_document_types=[],
-            preferred_clause_types=[],
-            preferred_field_types=[],
-            preferred_sections=[],
-        )
-        context_parts = []
-        ordered_pages = sorted(
-            ranked_pages,
-            key=lambda page: (self._page_order_bucket(page, understanding), -float(page.get("score", 0.0))),
-        )
-        for page in ordered_pages[:answer_top_k]:
-            snippets = page.get("snippet_support") or [page.get("text_snippet", "")]
+        """Preserve retrieval order and reserve complete headers for each page.
+
+        Role/section metadata remains visible to the answer model, but does not
+        override relevance ranking. Fair per-page budgets prevent one long page
+        from evicting another selected page's evidence.
+        """
+        budget = max(0, int(self.config.max_context_chars))
+        if not ranked_pages or answer_top_k <= 0 or budget == 0:
+            return ""
+        separator = "\n---\n"
+        prepared = []
+        seen_sources = set()
+        for page in ranked_pages:
+            source = str(page.get("source") or "").strip()
+            if not source or source in seen_sources:
+                continue
+            seen_sources.add(source)
+            # The query-focused excerpt comes first, followed by distinct
+            # retrieval snippets. Larger snippets containing it add no duplicate.
+            snippets = self._deduplicate_context_snippets([
+                str(page.get("text_snippet") or ""),
+                *(page.get("snippet_support") or []),
+            ])[:3]
             table_lines = []
             for field in page.get("table_fields", []) or []:
                 field_name = str(field.get("normalized_field_name") or field.get("field_name") or "").strip()
                 field_value = str(field.get("normalized_field_value") or field.get("field_value") or "").strip()
                 if field_name or field_value:
                     table_lines.append(f"- TABLE: {field_name}: {field_value}".strip(": "))
-            bullet_text = "\n".join(f"- {snippet}" for snippet in snippets[:3] if snippet)
-            role_header = f"ROLE: {page.get('document_type', 'page')} / {page.get('primary_clause_type', 'general')}"
-            block_parts = [f"SOURCE: {page['source']}", role_header]
+            body = "\n".join([*(f"- {snippet}" for snippet in snippets), *table_lines[:2]])
+            if not body:
+                continue
+            body = self._clip_context_evidence(body, max(1, int(self.config.max_page_chars)))
+            header_lines = [
+                f"SOURCE: {source}",
+                f"ROLE: {page.get('document_type', 'page')} / {page.get('primary_clause_type', 'general')}",
+            ]
             if page.get("section_anchor"):
-                block_parts.append(f"SECTION: {page.get('section_anchor')}")
-            if table_lines:
-                block_parts.extend(table_lines[:2])
-            if bullet_text:
-                block_parts.append(bullet_text)
-            context_parts.append("\n".join(block_parts) + "\n")
-        return self._trim_context("\n---\n".join(context_parts), max_chars=self.config.max_context_chars)
+                header_lines.append("SECTION: " + self._clip_context_evidence(str(page["section_anchor"]), 160))
+            header = "\n".join(header_lines) + "\n"
+            prepared.append((header, body))
+            if len(prepared) >= answer_top_k:
+                break
+
+        # If the budget cannot fit all headers plus a little evidence, retain
+        # higher-ranked pages only. Never produce a partial SOURCE header.
+        while prepared:
+            overhead = sum(len(header) for header, _ in prepared) + len(separator) * (len(prepared) - 1)
+            minimum_evidence = sum(min(32, len(body)) for _, body in prepared)
+            if overhead + minimum_evidence <= budget:
+                break
+            prepared.pop()
+        if not prepared:
+            return ""
+        available = budget - overhead
+        allowances = [0] * len(prepared)
+        active = list(range(len(prepared)))
+        while available > 0 and active:
+            share = max(1, available // len(active))
+            for index in active:
+                add = min(share, len(prepared[index][1]) - allowances[index], available)
+                allowances[index] += add
+                available -= add
+            active = [index for index in active if allowances[index] < len(prepared[index][1])]
+        return separator.join(
+            header + self._clip_context_evidence(body, allowances[index])
+            for index, (header, body) in enumerate(prepared)
+        )
 
     def _tool_router_stub(self, question: str, ranked_pages: List[Dict[str, object]]) -> Dict[str, object]:
         return {
@@ -1059,19 +1306,23 @@ class DocumentRetrievalPipeline:
                 "source_ranking": [],
                 "tool_router": self._tool_router_stub(question, []),
                 "query_understanding": understanding.to_dict(),
+                **self.vlm_client.answer_trace(invoked=False),
             }
         page_sources = {str(candidate.get("source", "")) for candidate in merged_candidates}
         image_scores = self.retrieve_image_candidates(question, data_folder, page_sources=page_sources)
         reranked = self.rerank_multimodal_candidates(question, merged_candidates, understanding=understanding, image_scores=image_scores)
-        ranked_pages = self.rollup_candidates_to_pages(question, reranked, top_k=top_k)
+        ranked_pages = self.rollup_candidates_to_pages(question, reranked, top_k=max(top_k, self.config.candidate_pool_size))
+        ranked_pages = self.select_graph_evidence_bundle(ranked_pages, self._ensure_indices(data_folder), top_k)
         combined_context = self.pack_long_context(ranked_pages, answer_top_k, understanding=understanding)
         prompt = format_prompt(combined_context, question, self.config.prompt_template)
         answer = self.vlm_client.generate_extractive(prompt) if force_extractive else self.vlm_client.generate(prompt)
         return {
             "answer": answer,
+            "retrieval_context": combined_context,
             "source_ranking": ranked_pages,
             "tool_router": self._tool_router_stub(question, ranked_pages),
             "query_understanding": understanding.to_dict(),
+            **self.vlm_client.answer_trace(invoked=True, force_extractive=force_extractive),
         }
 
     @staticmethod
@@ -1094,29 +1345,27 @@ class DocumentRetrievalPipeline:
             preferred_field_type = "premium"
         elif any(term in lowered for term in ["limit", "limits", "sublimit", "retention", "coinsurance"]):
             preferred_field_type = "limit"
+        if preferred_field_type is None:
+            return None
 
         target_coverages = set(understand_query(question).target_coverages or [])
         candidate_fields = list(cited_page.get("table_fields", []) or [])
         if target_coverages:
-            targeted_fields = [
+            candidate_fields = [
                 field for field in candidate_fields
-                if target_coverages & set(field.get("coverage_tags", []) or [])
+                if not field.get("coverage_tags") or target_coverages & set(field.get("coverage_tags", []) or [])
             ]
-            if targeted_fields:
-                candidate_fields = targeted_fields
 
         for field in candidate_fields:
             field_type = str(field.get("field_type", ""))
-            if preferred_field_type and field_type != preferred_field_type:
+            if field_type != preferred_field_type:
                 continue
             field_value = str(field.get("normalized_field_value") or field.get("field_value") or "").strip()
             if field_value:
                 return field_value
-        for field in candidate_fields:
-            field_value = str(field.get("normalized_field_value") or field.get("field_value") or "").strip()
-            if field_value:
-                return field_value
-        return self._first_amount(str(cited_page.get("text_snippet", "")))
+        # An unrelated table value or illustrative amount is not the requested
+        # policy field. Absence stays null instead of guessing from the page.
+        return None
 
     def _extract_structured_coverage(
         self,
@@ -1260,9 +1509,9 @@ class DocumentRetrievalPipeline:
                     conflicts.append(
                         {
                             "type": "graph_override_relation",
-                            "status": "graph_supported_override",
-                            "severity": "info",
-                            "message": "Graph expansion identified endorsement override relationships in the retrieved evidence.",
+                            "status": "candidate_relation_requires_review",
+                            "severity": "review",
+                            "message": "Metadata overlap suggests a related endorsement. This does not establish an override or which version controls.",
                             "sources": [detail.get("source_page_key"), page.get("source")],
                             "coverages": normalize_coverage_labels(detail.get("shared_coverages", []) or []),
                             "sections": detail.get("shared_sections", []) or [],
@@ -1273,9 +1522,9 @@ class DocumentRetrievalPipeline:
                     conflicts.append(
                         {
                             "type": "graph_exception_relation",
-                            "status": "graph_supported_exception",
-                            "severity": "info",
-                            "message": "Graph expansion identified exception-to-exclusion relationships in the retrieved evidence.",
+                            "status": "candidate_relation_requires_review",
+                            "severity": "review",
+                            "message": "Metadata overlap suggests a related exception. Its applicability requires the underlying clause text.",
                             "sources": [detail.get("source_page_key"), page.get("source")],
                             "coverages": normalize_coverage_labels(detail.get("shared_coverages", []) or []),
                             "sections": detail.get("shared_sections", []) or [],
@@ -1338,26 +1587,47 @@ class DocumentRetrievalPipeline:
         understanding = understand_query(question)
         result = self.query_with_ranking(question, data_folder, top_k=top_k, force_extractive=force_extractive)
         answer = str(result["answer"]).strip()
+        answer_repaired = False
+        explicit_abstention = is_explicit_abstention(answer)
+        generation_truncated = bool(((result.get("backend_metadata") or {}).get("last_generation") or {}).get("truncated"))
         ranked_pages = result["source_ranking"]
         citations = []
         cited_source = self._extract_answer_source(answer, ranked_pages)
-        clean_answer = re.sub(r"\n+\s*SOURCE:\s*.*$", "", answer, flags=re.IGNORECASE | re.DOTALL).strip()
+        clean_answer = re.sub(
+            r"(?im)^\s*(?:[-*]\s*)?[*_`]*sources?[*_`]*\s*:[*_`]*[^\n]*(?:\n|$)", "", answer,
+        ).strip()
         cited_page = None
+        citation_origin = None
         if cited_source:
             cited_page = next((page for page in ranked_pages if page["source"] == cited_source), None)
-        if cited_page is None:
-            cited_page = self._choose_cited_page(question, clean_answer, ranked_pages)
-        if cited_page:
+            if cited_page:
+                citation_origin = "model_source"
+        # An explicit unknown citation is a validation failure, not permission
+        # to silently replace it with a different retrieved source.
+        if cited_page is None and cited_source is None and not explicit_abstention and not generation_truncated:
+            cited_page = self._choose_cited_page(
+                question, clean_answer, ranked_pages,
+                retrieval_context=str(result["retrieval_context"]) if "retrieval_context" in result else None,
+                min_overlap=getattr(self.config, "citation_min_overlap", 0.20),
+            )
+            if cited_page:
+                citation_origin = "evidence_selection"
+        if cited_page and not explicit_abstention and not generation_truncated:
             repaired_answer = self._repair_answer_from_evidence(question, clean_answer, cited_page)
             if not repaired_answer and ("insufficient_evidence" in answer.lower() or not clean_answer):
                 repaired_answer = self._best_sentence_from_evidence(question, str(cited_page.get("text_snippet", "")))
             if repaired_answer:
                 clean_answer = repaired_answer
+                answer_repaired = True
+            evidence_text = str(cited_page.get("text_snippet", ""))
+            if "retrieval_context" in result:
+                evidence_text = self._packed_source_evidence(str(result["retrieval_context"]), str(cited_page["source"]))
             citations.append(
                 {
                     "source": cited_page["source"],
+                    "origin": citation_origin,
                     "page_id": self._source_to_page_id(str(cited_page["source"])),
-                    "evidence_text": cited_page.get("text_snippet", ""),
+                    "evidence_text": evidence_text,
                     "document_type": cited_page.get("document_type"),
                     "document_role": cited_page.get("document_role"),
                     "packet_id": cited_page.get("packet_id"),
@@ -1368,16 +1638,32 @@ class DocumentRetrievalPipeline:
                     "source_name": cited_page.get("source_name"),
                     "source_url": cited_page.get("source_url"),
                     "source_authority": cited_page.get("source_authority"),
+                    "source_scope_text": self._source_scope_text(cited_page),
                 }
             )
 
-        confidence = self._estimate_confidence(question, clean_answer, ranked_pages)
         supported, support_reason = self._citation_support_details(
             question,
             clean_answer,
             citations,
             min_overlap=getattr(self.config, "citation_min_overlap", 0.20),
         )
+        # A multi-paragraph answer can give a supported primary fact followed
+        # by an uncited comparison amount. Serve the complete first paragraph
+        # only when it independently passes the same evidence checks. Preserve
+        # the raw answer and mark this deterministic reduction as a repair.
+        if not supported and (support_reason == "answer_amount_not_in_citation" or citation_origin == "evidence_selection") and not explicit_abstention and not generation_truncated and self._allows_primary_paragraph_reduction(question):
+            primary_claim = re.split(r"\n\s*\n", clean_answer, maxsplit=1)[0].strip()
+            if primary_claim and primary_claim != clean_answer:
+                primary_supported, primary_reason = self._citation_support_details(
+                    question, primary_claim, citations,
+                    min_overlap=getattr(self.config, "citation_min_overlap", 0.20),
+                )
+                if primary_supported:
+                    clean_answer = primary_claim
+                    answer_repaired = True
+                    supported, support_reason = primary_supported, primary_reason
+        confidence = self._estimate_confidence(question, clean_answer, ranked_pages)
         structured_fields = self._structured_answer_fields(question, understanding, cited_page, ranked_pages)
         if not supported:
             confidence = min(confidence, 0.19)
@@ -1385,22 +1671,30 @@ class DocumentRetrievalPipeline:
         if blocking_conflicts:
             confidence = min(confidence, 0.15)
         threshold = getattr(self.config, "abstain_threshold", 0.20)
-        abstain = confidence < threshold or "insufficient_evidence" in answer.lower() or not supported or bool(blocking_conflicts)
+        abstain = confidence < threshold or explicit_abstention or generation_truncated or not supported or bool(blocking_conflicts)
         caveats: List[str] = []
         if citations and citations[0].get("document_type") != "declarations" and self._question_requires_numeric_evidence(question):
             caveats.append("Numeric answer was not cited from a declarations-style page.")
         if ranked_pages and any("overridden_by" in relation for relation in ranked_pages[0].get("graph_relations", []) or []):
-            caveats.append("Retrieved evidence includes endorsement override relationships that should be reviewed.")
+            caveats.append("Graph metadata suggests an endorsement relationship; it does not establish precedence.")
         if ranked_pages and any("qualified_by" in relation for relation in ranked_pages[0].get("graph_relations", []) or []):
-            caveats.append("Retrieved evidence includes exception relationships that should be reviewed with the underlying exclusion.")
+            caveats.append("Graph metadata suggests an exception relationship; verify applicability in the clause text.")
         if blocking_conflicts:
             caveats.extend(str(conflict.get("message")) for conflict in blocking_conflicts)
         return {
             "answer": "" if abstain else clean_answer,
+            "raw_answer": answer,
+            "answer_repaired": answer_repaired,
+            "explicit_abstention": explicit_abstention,
+            "generation_truncated": generation_truncated,
+            "generation_used": result.get("generation_used", False),
+            "answer_backend": "deterministic-evidence-repair" if answer_repaired and not abstain else result.get("answer_backend"),
+            "backend_metadata": result.get("backend_metadata"),
             "citations": [] if abstain else citations,
+            "citation_origin": None if abstain else citation_origin,
             "confidence": confidence,
             "abstain": abstain,
-            "abstain_reason": "missing_policy_packet_counterevidence" if blocking_conflicts else "insufficient_retrieved_evidence" if abstain else None,
+            "abstain_reason": "generation_truncated" if generation_truncated else "missing_policy_packet_counterevidence" if blocking_conflicts else "insufficient_retrieved_evidence" if abstain else None,
             "citation_support": supported,
             "citation_support_reason": support_reason,
             "source_ranking": ranked_pages,
@@ -1528,6 +1822,8 @@ class DocumentRetrievalPipeline:
         answer: str,
         cited_page: Dict[str, object],
     ) -> Optional[str]:
+        if is_explicit_abstention(answer):
+            return None
         if not cls._question_requires_numeric_evidence(question):
             return None
         if set(_AMOUNT_RE.findall(answer or "")):
@@ -1575,6 +1871,46 @@ class DocumentRetrievalPipeline:
         return best_sentence if best_score >= 2.0 else None
 
     @classmethod
+    def _allows_primary_paragraph_reduction(cls, question: str) -> bool:
+        # A partial answer must never replace a requested comparison or list of
+        # facts. Ambiguous multi-part wording retains the original abstention.
+        if question.count("?") > 1 or re.search(r"\b(?:and|or|both|each|respectively|versus|vs)\b|;|\b[A-Za-z]+\s*,\s*[A-Za-z]+\b", question, re.I):
+            return False
+        return len(understand_query(question).target_coverages) <= 1
+
+    @classmethod
+    def _support_terms(cls, text: str) -> Set[str]:
+        terms = set()
+        for term in cls._terms(text, min_len=3):
+            term = {"included": "include", "includes": "include", "provided": "provide", "provides": "provide"}.get(term, term)
+            if len(term) > 5 and term.endswith("ies"):
+                term = term[:-3] + "y"
+            elif len(term) > 5 and term.endswith(("sses", "xes", "ches", "shes")):
+                term = term[:-2]
+            elif len(term) > 4 and term.endswith("s") and not term.endswith(("ss", "us", "is")):
+                term = term[:-1]
+            terms.add(term)
+        if re.search(r"\b(?:up to|at most|no more than|not more than)\b", text, re.I):
+            terms.add("maximum")
+        if re.search(r"\b(?:at least|no less than|not less than)\b", text, re.I):
+            terms.add("minimum")
+        return terms
+
+    @staticmethod
+    def _document_lookup_scope(question: str) -> tuple[str, str]:
+        match = re.match(
+            r"^\s*(?:using|according to|based on|from|in)\s+(.+?\b(?:guides?|documents?|pdf|polic(?:y|ies)|files?))\s*[,;:]\s*", question, re.I,
+        )
+        return (question[match.end():], match.group(1)) if match else (question, "")
+
+    @staticmethod
+    def _source_scope_text(page: Dict[str, object]) -> str:
+        # Full-page metadata may establish document identity, while factual
+        # amounts still have to appear in the actual packed citation evidence.
+        return " ".join([str(page.get("source", "")), str(page.get("source_name", "")),
+                         str(page.get("text_snippet", "")), *(str(x) for x in page.get("snippet_support", []) or [])])
+
+    @classmethod
     def _citation_support_details(
         cls,
         question: str,
@@ -1582,13 +1918,63 @@ class DocumentRetrievalPipeline:
         citations: List[Dict[str, object]],
         min_overlap: float = 0.20,
     ) -> tuple[bool, str]:
-        if "insufficient_evidence" in (answer or "").lower():
+        if is_explicit_abstention(answer):
             return False, "model_reported_insufficient_evidence"
         if not citations:
             return False, "missing_citation"
         evidence = " ".join(str(citation.get("evidence_text", "")) for citation in citations)
         if not evidence.strip():
             return False, "missing_citation_evidence"
+        factual_input, document_scope = cls._document_lookup_scope(question)
+        if document_scope:
+            scope_ignored = cls._generic_terms() | {"using", "uploaded", "attached", "provided", "supplied", "available", "following", "our", "own", "the"}
+            required_scope = cls._support_terms(document_scope) - scope_ignored
+            scope_evidence = " ".join(str(c.get("source_scope_text", c.get("evidence_text", ""))) for c in citations)
+            if not required_scope <= cls._support_terms(scope_evidence):
+                return False, "document_scope_not_in_citation"
+
+        # Exact identity constraints must survive removal of conversational
+        # lookup words. Token overlap alone drops short ID components and can
+        # confuse policies or versions that differ by one character.
+        def identifiers(text: str) -> Set[str]:
+            tokens = {match.lower() for match in re.findall(r"\b[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+\b", text)
+                      if any(char.isdigit() for char in match) or match.isupper()}
+            tokens.update(match.lower() for match in re.findall(
+                r"\b(?:policy|claim|endorsement|report|identifier)\s*(?:(?:number|identifier|report)\s*)?[:#]?\s+([A-Za-z0-9]+(?:-[A-Za-z0-9]+)+)\b", text, re.I
+            ))
+            return tokens
+        evidence_identifiers = {match.lower() for match in re.findall(r"\b[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+\b", evidence)}
+        if not identifiers(question) <= evidence_identifiers or not identifiers(answer) <= evidence_identifiers:
+            return False, "identifier_not_in_citation"
+        factual_question = re.sub(r"\bwithout\s+(?:deciding|determining)\b[^,;?]*[,;]", "", factual_input, flags=re.I)
+        requested_version = re.search(r"\bversion\s+(?:label\s+)?([A-Za-z0-9]+)\b", factual_question, re.I)
+        evidence_version = re.search(r"\bversion\s+(?:label\s+)?([A-Za-z0-9]+)\b", evidence, re.I)
+        if requested_version and len(requested_version.group(1)) <= 3 and (
+            not evidence_version or requested_version.group(1).lower() != evidence_version.group(1).lower()
+        ):
+            return False, "requested_version_not_in_citation"
+
+        contrast = re.search(r"\b(?:rather than|instead of)\s+([^,;?]+)", factual_question, re.I)
+        if contrast:
+            # A requested contrast is not a requirement that the rejected
+            # alternative also appear in the primary citation.
+            factual_question = factual_question[:contrast.start()] + factual_question[contrast.end():]
+            if "example" in contrast.group(1).lower() and all(c.get("document_type") != "declarations" for c in citations) and re.search(
+                r"\b(?:educational|illustrative|worked)\b.{0,30}\bexample\b|\bin this example only\b", evidence, re.I
+            ):
+                return False, "requested_policy_value_is_only_example"
+        if "example" not in factual_question.lower() and (identifiers(question) or re.search(r"\b(?:my|our|own|actual|actually|declared)\b", question, re.I)) and re.search(
+            r"\b(?:educational|illustrative|worked)\b.{0,30}\bexample\b|\bin this example only\b", evidence, re.I
+        ) and all(c.get("document_type") != "declarations" for c in citations):
+            return False, "requested_policy_value_is_only_example"
+        if re.search(r"\b(?:controls?|controlling|currently|latest|issued later|precedence)\b", factual_question, re.I) and re.search(
+            r"\b(?:which\s+version\s+controls|controlling\s+version)\b.{0,35}\bnot\s+(?:established|stated|specified|known)\b", evidence, re.I
+        ):
+            return False, "controlling_version_not_established"
+        if re.search(r"\b(?:approved|settlement)\b", question, re.I) and re.search(
+            r"\bno\b[^.;]{0,70}\bapproved\b[^.;]{0,45}\b(?:payment|amount)\b|\bdoes not\s+(?:list|state|establish)\s+an?\s+approved\b", evidence, re.I
+        ):
+            return False, "approved_payment_not_established"
 
         answer_amounts = set(_AMOUNT_RE.findall(answer or ""))
         evidence_amounts = set(_AMOUNT_RE.findall(evidence))
@@ -1596,9 +1982,13 @@ class DocumentRetrievalPipeline:
             return False, "answer_amount_not_in_citation"
         if cls._question_requires_numeric_evidence(question) and not answer_amounts:
             return False, "numeric_question_without_answer_amount"
+        date_pattern = r"\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}\b|\b\d{4}-\d{2}-\d{2}\b"
+        date_keys = lambda text: {re.sub(r"[,\s]+", " ", value.lower()).strip() for value in re.findall(date_pattern, text, re.I)}
+        if not date_keys(answer) <= date_keys(evidence):
+            return False, "answer_date_not_in_citation"
 
-        key_terms = cls._key_terms(question)
-        evidence_terms = cls._terms(evidence, min_len=3)
+        key_terms = cls._support_terms(factual_question) - cls._generic_terms()
+        evidence_terms = cls._support_terms(evidence)
         if key_terms and not (key_terms & evidence_terms):
             return False, "question_terms_not_in_citation"
         broad_value_terms = {
@@ -1606,12 +1996,14 @@ class DocumentRetrievalPipeline:
             "sublimit", "deductible", "endorsement", "reimbursement", "provision",
             "amount", "liability", "property", "loss", "use", "auto", "automobile",
             "guide", "document", "pdf", "apply", "applies",
+            "actual", "actually", "declared", "printed", "stated", "shown", "date",
+            "benefit", "benefits",
         }
         specific_terms = {term for term in key_terms if len(term) >= 4 and term not in broad_value_terms}
         if specific_terms and not specific_terms <= evidence_terms:
             return False, "specific_question_terms_not_in_citation"
 
-        answer_terms = cls._key_terms(answer)
+        answer_terms = cls._support_terms(answer) - cls._generic_terms()
         answer_specific_terms = {
             term for term in answer_terms
             if len(term) >= 4 and term not in broad_value_terms
@@ -1624,55 +2016,82 @@ class DocumentRetrievalPipeline:
 
     @staticmethod
     def _extract_answer_source(answer: str, ranked_pages: Optional[List[Dict[str, object]]] = None) -> Optional[str]:
-        match = re.search(r"SOURCE:\s*(.+)", answer, flags=re.IGNORECASE)
-        if match:
-            return match.group(1).strip()
+        explicit = re.search(r"sources?[*_`]*\s*:[*_`]*\s*(.+)", answer, flags=re.IGNORECASE)
+        cited_text = explicit.group(1) if explicit else answer
+        matches = []
         for page in ranked_pages or []:
             source = str(page.get("source", ""))
-            if source and source in answer:
-                return source
+            # Require a delimiter after the complete source, so p1 cannot match
+            # p10. Markdown wrapping and explanatory text remain outside it.
+            if source:
+                match = re.search(r"(?<![\w./\\-])" + re.escape(source) + r"(?=$|[\s),.;:*_`\]])", cited_text, re.I)
+                if match:
+                    matches.append((match.start(), source))
+        if matches:
+            return min(matches)[1]
+        if explicit:
+            return cited_text.strip()
         return None
 
     @staticmethod
+    def _packed_source_evidence(context: str, source: str) -> str:
+        sections = re.split(r"(?m)^SOURCE:\s*([^\n]+)\n", context)
+        for index in range(1, len(sections), 2):
+            if sections[index].strip() == source:
+                return sections[index + 1].strip()
+        return ""
+
+    @classmethod
     def _choose_cited_page(
+        cls,
         question: str,
         answer: str,
         ranked_pages: List[Dict[str, object]],
+        retrieval_context: Optional[str] = None,
+        min_overlap: float = 0.20,
     ) -> Optional[Dict[str, object]]:
-        if not ranked_pages:
+        """Select only a page that validates a complete served claim.
+
+        Retrieval rank breaks ties only after evidence support. This is an
+        explicit postprocessing citation, not a citation emitted by the model.
+        """
+        if is_explicit_abstention(answer):
             return None
-        answer_terms = {term for term in re.findall(r"[a-zA-Z0-9$%]+", answer.lower()) if len(term) > 2}
-        question_terms = {term for term in re.findall(r"[a-zA-Z0-9$%]+", question.lower()) if len(term) > 2}
-        answer_amounts = set(_AMOUNT_RE.findall(answer))
-        best_page = ranked_pages[0]
-        best_score = -1.0
+        primary_claim = re.split(r"\n\s*\n", answer, maxsplit=1)[0].strip()
+        can_reduce = primary_claim != answer and cls._allows_primary_paragraph_reduction(question)
+        primary_candidates = []
         for page in ranked_pages:
-            text = str(page.get("text_snippet", ""))
-            text_terms = set(re.findall(r"[a-zA-Z0-9$%]+", text.lower()))
-            text_amounts = set(_AMOUNT_RE.findall(text))
-            score = float(len(answer_terms & text_terms))
-            score += 0.5 * len(question_terms & text_terms)
-            score += 4.0 * len(answer_amounts & text_amounts)
-            score += 0.1 * float(page.get("score", 0.0))
-            if score > best_score:
-                best_score = score
-                best_page = page
-        return best_page
+            evidence = (cls._packed_source_evidence(retrieval_context, str(page.get("source", "")))
+                        if retrieval_context is not None else str(page.get("text_snippet", "")))
+            citation = [{"evidence_text": evidence, "document_type": page.get("document_type"),
+                         "source_scope_text": cls._source_scope_text(page)}]
+            if cls._citation_support_details(question, answer, citation, min_overlap)[0]:
+                return page
+            if can_reduce and cls._citation_support_details(question, primary_claim, citation, min_overlap)[0]:
+                primary_candidates.append(page)
+        return primary_candidates[0] if primary_candidates else None
 
     @staticmethod
     def _estimate_confidence(question: str, answer: str, ranked_pages: List[Dict[str, object]]) -> float:
         if not ranked_pages:
             return 0.0
+        # Use the same factual scope as citation validation; lookup scaffolding
+        # must not independently cap a well-supported answer below threshold.
+        question = DocumentRetrievalPipeline._document_lookup_scope(question)[0]
+        question = re.sub(r"\bwithout\s+(?:deciding|determining)\b[^,;?]*[,;]", "", question, flags=re.I)
+        question = re.sub(r"\b(?:rather than|instead of)\s+[^,;?]+", "", question, flags=re.I)
         top_score = max(0.0, min(1.0, float(ranked_pages[0].get("score", 0.0))))
-        question_terms = {term for term in re.findall(r"[a-zA-Z0-9$%]+", question.lower()) if len(term) > 2}
+        question_terms = DocumentRetrievalPipeline._support_terms(question)
         answer_terms = {term for term in re.findall(r"[a-zA-Z0-9$%]+", answer.lower()) if len(term) > 2}
-        generic_terms = DocumentRetrievalPipeline._generic_terms()
+        generic_terms = DocumentRetrievalPipeline._generic_terms() | {
+            "actual", "actually", "declared", "printed", "stated", "shown", "date",
+            "benefit", "benefits",
+        }
         key_terms = question_terms - generic_terms
         evidence_terms = {
             term
             for page in ranked_pages[:3]
-            for term in re.findall(r"[a-zA-Z0-9$%]+", str(page.get("text_snippet", "")).lower())
-            if len(term) > 2
+            for term in DocumentRetrievalPipeline._support_terms(str(page.get("text_snippet", "")))
         }
         overlap = len(question_terms & answer_terms) / max(1, len(question_terms))
         evidence_overlap = len(key_terms & evidence_terms) / max(1, len(key_terms))

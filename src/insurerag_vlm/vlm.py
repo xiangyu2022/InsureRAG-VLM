@@ -1,13 +1,21 @@
 import json
 import os
 import re
-from typing import Optional
+import time
+import base64
+import hashlib
+from io import BytesIO
+from copy import deepcopy
+from pathlib import Path
+from threading import local
+from typing import Any, Optional
+from urllib.parse import urlparse
 
 import requests
 
 
 OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434")
-OLLAMA_DEFAULT_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:3b")
+OLLAMA_DEFAULT_MODEL = "qwen3.5:4b"
 
 _SYSTEM_PROMPT = """You are InsureRAG, an expert insurance industry assistant serving internal company employees.
 
@@ -15,6 +23,7 @@ Your role:
 - Explain insurance terminology, acronyms, and concepts clearly for employees at any level.
 - Answer questions about uploaded policy documents with precise citations.
 - When answering about a specific policy document, quote the relevant text and cite the source.
+- A person's own policy amount requires evidence from the relevant policy, declarations, or endorsement. Public guides and illustrative examples do not establish that person's coverage, even if the guide was uploaded.
 - If you are not confident, say so rather than guessing.
 - Be concise but complete. Use plain language; avoid unnecessary jargon unless explaining it.
 - When relevant, mention related terms the employee might want to know about.
@@ -26,45 +35,52 @@ Format rules:
 - For policy-document answers, end with: Source: [document name], Page [N]
 - Do NOT include <think>...</think> reasoning blocks in your final answer."""
 
-_OLLAMA_SYSTEM_PROMPT = """You are InsureRAG. Answer insurance questions concisely using only the supplied evidence when evidence is present. Cite sources exactly as given. If evidence is insufficient, say so."""
+_OLLAMA_SYSTEM_PROMPT = """You are InsureRAG. Answer insurance questions concisely using only the supplied evidence when evidence is present. Cite sources exactly as given. A person's own policy amount requires evidence from the relevant policy, declarations, or endorsement. Public guides and illustrative examples do not establish that person's coverage, even if the guide was uploaded. If evidence is insufficient, say so."""
 
 # Public alias used by app.py
 _ANTHROPIC_SYSTEM = _SYSTEM_PROMPT
 
 
-def _detect_ollama() -> Optional[str]:
-    """Return the first available Ollama model name, or None if Ollama is not running."""
-    try:
-        resp = requests.get(f"{OLLAMA_BASE_URL}/api/tags", timeout=2)
-        if resp.status_code == 200:
-            models = resp.json().get("models", [])
-            if not models:
-                return None
-            names = [m["name"] for m in models]
-            requested = os.environ.get("OLLAMA_MODEL")
-            if requested:
-                for name in names:
-                    if name == requested or name.startswith(f"{requested}:"):
-                        return name
-            preferred = [
-                "qwen2.5:3b",
-                "llama3.2:3b",
-                "llama3.2",
-                "gemma3:4b",
-                "phi4-mini",
-                "mistral",
-            ]
-            for target in preferred:
-                for name in names:
-                    if name == target or name.startswith(f"{target}:"):
-                        return name
-            non_reasoning = [name for name in names if "r1" not in name.lower() and "reason" not in name.lower()]
-            if non_reasoning:
-                return non_reasoning[0]
-            return names[0]
-    except Exception:
-        pass
-    return None
+class BackendConfigurationError(ValueError):
+    """The requested provider/model cannot be selected unambiguously."""
+
+
+class BackendUnavailableError(RuntimeError):
+    """The explicitly requested backend is unavailable; no substitute was used."""
+
+
+def _resolve_provider(model_name: str, provider: Optional[str] = None) -> tuple[str, str]:
+    requested = model_name.strip()
+    if requested == "local-extractive":
+        if provider not in (None, "local", "local-extractive"):
+            raise BackendConfigurationError("local-extractive conflicts with the requested provider")
+        return "local-extractive", requested
+    aliases = {"ollama": "ollama", "openai": "openai", "anthropic": "anthropic", "hf": "huggingface", "huggingface": "huggingface"}
+    prefix, separator, remainder = requested.partition(":")
+    if separator and prefix in aliases:
+        selected = aliases[prefix]
+        if provider and aliases.get(provider, provider) != selected:
+            raise BackendConfigurationError("Model prefix conflicts with the requested provider")
+        provider, requested = selected, remainder
+    elif provider:
+        provider = aliases.get(provider, provider)
+    elif requested.startswith("claude-"):
+        provider = "anthropic"
+    elif requested.startswith(("gpt-", "chatgpt-", "o1", "o3", "o4")):
+        provider = "openai"
+    elif ":" in requested:
+        # Bare Ollama name:tag remains supported by the existing CLI.
+        provider = "ollama"
+    else:
+        raise BackendConfigurationError(
+            "Choose local-extractive or an explicit provider:model, for example "
+            "ollama:qwen3.5:4b, openai:gpt-4o-mini, or hf:organization/model."
+        )
+    if provider not in set(aliases.values()) or not requested or requested.startswith("local-"):
+        raise BackendConfigurationError(f"Invalid provider/model selection: {provider!r} / {requested!r}")
+    if provider == "ollama" and ":" not in requested.rsplit("/", 1)[-1]:
+        requested += ":latest"
+    return provider, requested
 
 
 class VLMClient:
@@ -75,88 +91,275 @@ class VLMClient:
         openai_api_key: Optional[str] = None,
         anthropic_api_key: Optional[str] = None,
         use_hf_api: bool = True,
+        *,
+        provider: Optional[str] = None,
+        ollama_base_url: Optional[str] = None,
+        generation_options: Optional[dict[str, Any]] = None,
+        thinking: bool = False,
+        request_timeout: float = 300,
+        expected_model_digest: Optional[str] = None,
     ):
-        self.model_name = model_name
+        self.requested_model = model_name
+        self.provider, self.model_name = _resolve_provider(model_name, provider)
         self.hf_api_token = hf_api_token or os.environ.get("HF_API_TOKEN")
         self.openai_api_key = openai_api_key or os.environ.get("OPENAI_API_KEY")
         self.anthropic_api_key = anthropic_api_key or os.environ.get("ANTHROPIC_API_KEY")
         self.use_hf_api = use_hf_api
-        use_ollama = os.environ.get("INSURERAG_USE_OLLAMA", "1").lower() not in {"0", "false", "no"}
-        # Detect Ollama once at init.
-        self._ollama_model: Optional[str] = _detect_ollama() if use_ollama else None
+        self.ollama_base_url = (ollama_base_url or os.environ.get("OLLAMA_BASE_URL", OLLAMA_BASE_URL)).rstrip("/")
+        parsed_url = urlparse(self.ollama_base_url)
+        if self.provider == "ollama" and (parsed_url.scheme not in {"http", "https"} or not parsed_url.hostname or parsed_url.username or parsed_url.password):
+            raise BackendConfigurationError("Ollama base URL must be an HTTP(S) URL without embedded credentials")
+        self.thinking = thinking
+        if not isinstance(thinking, bool):
+            raise BackendConfigurationError("thinking must be a boolean")
+        self.request_timeout = request_timeout
+        self.generation_options = {
+            "temperature": float(os.environ.get("OLLAMA_TEMPERATURE", "0.0")),
+            "seed": int(os.environ.get("OLLAMA_SEED", "42")),
+            "num_predict": int(os.environ.get("OLLAMA_NUM_PREDICT", "384")),
+            "num_ctx": int(os.environ.get("OLLAMA_NUM_CTX", "4096")),
+            "top_k": 40,
+            "top_p": 1.0,
+            "repeat_penalty": 1.0,
+            "presence_penalty": 0.0,
+        } if self.provider == "ollama" else {}
+        self.generation_options.update(generation_options or {})
+        if self.request_timeout <= 0 or (self.is_ollama() and (self.generation_options["num_predict"] <= 0 or self.generation_options["num_ctx"] <= 0)):
+            raise BackendConfigurationError("Timeout, num_predict, and num_ctx must be positive")
+        self._ollama_model: Optional[str] = None
+        self._model_info: dict[str, Any] = {}
+        self._ollama_version: Optional[str] = None
+        self._generation_state = local()
+        self.last_generation_metadata: dict[str, Any] = {}
+        if self.provider == "ollama":
+            if os.environ.get("INSURERAG_USE_OLLAMA", "1").lower() in {"0", "false", "no"}:
+                raise BackendConfigurationError("Ollama was explicitly selected but INSURERAG_USE_OLLAMA disables it")
+            self._model_info = self._lookup_ollama_model()
+            self._ollama_model = self.model_name
+            if expected_model_digest and self._model_info.get("digest") != expected_model_digest:
+                raise BackendConfigurationError("Requested Ollama model digest does not match the installed model")
+            try:
+                response = requests.get(f"{self.ollama_base_url}/api/version", timeout=5)
+                response.raise_for_status()
+                self._ollama_version = response.json().get("version")
+            except (requests.RequestException, ValueError):
+                # Version metadata is optional; tag + digest are required.
+                self._ollama_version = None
+        else:
+            required = {"openai": self.openai_api_key, "anthropic": self.anthropic_api_key, "huggingface": self.hf_api_token}
+            if self.provider in required and not required[self.provider]:
+                raise BackendConfigurationError(f"An API credential is required for explicitly selected {self.provider}")
+            if self.provider == "huggingface" and not self.use_hf_api:
+                raise BackendConfigurationError("Hugging Face was selected but use_hf_api is false")
+
+    @property
+    def last_generation_metadata(self) -> dict[str, Any]:
+        return getattr(self._generation_state, "metadata", {})
+
+    @last_generation_metadata.setter
+    def last_generation_metadata(self, value: dict[str, Any]) -> None:
+        self._generation_state.metadata = value
+
+    def answer_trace(self, *, invoked: bool, force_extractive: bool = False) -> dict[str, Any]:
+        used = invoked and not force_extractive and self.is_real_llm()
+        metadata = self.backend_metadata()
+        if not used:
+            metadata["last_generation"] = {}
+        return {
+            "generation_used": used,
+            "answer_backend": self.backend_label() if used else "local-extractive" if invoked else "retrieval-abstention",
+            "backend_metadata": metadata,
+        }
+
+    def _lookup_ollama_model(self) -> dict[str, Any]:
+        try:
+            response = requests.get(f"{self.ollama_base_url}/api/tags", timeout=5)
+            response.raise_for_status()
+            payload = response.json()
+        except (requests.RequestException, ValueError) as exc:
+            raise BackendUnavailableError(f"Cannot reach requested Ollama backend at {self.ollama_base_url}") from exc
+        if not isinstance(payload, dict) or not isinstance(payload.get("models"), list):
+            raise BackendUnavailableError("Ollama returned an invalid model inventory")
+        models = payload["models"]
+        if any(not isinstance(entry, dict) for entry in models):
+            raise BackendUnavailableError("Ollama returned an invalid model inventory")
+        match = next((entry for entry in models if entry.get("name") == self.model_name or entry.get("model") == self.model_name), None)
+        if match is None:
+            raise BackendUnavailableError(
+                f"Requested Ollama model {self.model_name!r} is not installed. "
+                f"Install that exact tag with `ollama pull {self.model_name}`. No fallback was used."
+            )
+        if not match.get("digest"):
+            raise BackendUnavailableError("Ollama did not return a model digest; reproducible model identity is unavailable")
+        return dict(match)
 
     def is_real_llm(self) -> bool:
-        if self._ollama_model:
-            return True
-        if self.anthropic_api_key:
-            return True
-        if self.openai_api_key:
-            return True
-        if self.hf_api_token and not self.model_name.startswith("local-"):
-            return True
-        return False
+        return self.provider != "local-extractive"
 
     def backend_label(self) -> str:
-        if self._ollama_model:
-            return f"Ollama · {self._ollama_model}"
-        if self.anthropic_api_key:
-            return f"Claude · {self.model_name}"
-        if self.openai_api_key:
-            return f"OpenAI · {self.model_name}"
-        if self.hf_api_token:
-            return f"HuggingFace · {self.model_name}"
-        return "local-extractive (no LLM)"
+        labels = {"ollama": "Ollama", "anthropic": "Claude", "openai": "OpenAI", "huggingface": "HuggingFace"}
+        if self.provider == "local-extractive":
+            return "local-extractive (no LLM)"
+        return f"{labels[self.provider]} · {self.model_name}"
+
+    def backend_metadata(self) -> dict[str, Any]:
+        return deepcopy({
+            "provider": self.provider,
+            "requested_model": self.requested_model,
+            "resolved_model": self.model_name,
+            "model_digest": self._model_info.get("digest"),
+            "model_details": self._model_info.get("details", {}),
+            "ollama_version": self._ollama_version,
+            "base_url": self.ollama_base_url if self.is_ollama() else None,
+            "generation_options": self.generation_options if self.is_ollama() else None,
+            "thinking": self.thinking if self.is_ollama() else None,
+            "last_generation": self.last_generation_metadata,
+        })
 
     def is_ollama(self) -> bool:
-        return self._ollama_model is not None
+        return self.provider == "ollama"
 
     def generate(self, prompt: str) -> str:
-        if self._ollama_model:
+        if self.is_ollama():
             return self._call_ollama_chat(_OLLAMA_SYSTEM_PROMPT, prompt)
-        if self.anthropic_api_key:
+        if self.provider == "anthropic":
             return self._call_anthropic_chat(_SYSTEM_PROMPT, prompt)
-        if self.openai_api_key:
+        if self.provider == "openai":
             return self._call_openai_chat(_SYSTEM_PROMPT, prompt)
-        if self.hf_api_token and not self.model_name.startswith("local-"):
+        if self.provider == "huggingface":
             return self._call_huggingface(prompt)
         return self._local_extractive_answer(prompt)
 
-    def generate_chat(self, system: str, user: str) -> str:
-        if self._ollama_model:
-            return self._call_ollama_chat(system, user)
-        if self.anthropic_api_key:
+    @staticmethod
+    def _validate_response_format(response_format: Optional[str | dict[str, Any]]) -> None:
+        if response_format is None:
+            return
+        if response_format != "json" and not isinstance(response_format, dict):
+            raise BackendConfigurationError("response_format must be 'json' or a JSON schema object")
+        try:
+            json.dumps(response_format, allow_nan=False)
+        except (TypeError, ValueError) as exc:
+            raise BackendConfigurationError("response_format must contain valid JSON values") from exc
+
+    def generate_chat(self, system: str, user: str, *, response_format: Optional[str | dict[str, Any]] = None) -> str:
+        self._validate_response_format(response_format)
+        if self.is_ollama():
+            return self._call_ollama_chat(system, user, response_format=response_format)
+        if response_format is not None:
+            raise BackendConfigurationError("response_format is currently supported only for explicitly selected Ollama models")
+        if self.provider == "anthropic":
             return self._call_anthropic_chat(system, user)
-        if self.openai_api_key:
+        if self.provider == "openai":
             return self._call_openai_chat(system, user)
         combined = f"{system}\n\nUser: {user}\nAssistant:"
         return self.generate(combined)
 
+    def generate_with_images(self, prompt: str, image_paths: list[Path], *, system: str = _OLLAMA_SYSTEM_PROMPT,
+                             response_format: Optional[str | dict[str, Any]] = None) -> str:
+        """Explicit image-QA path; normal document RAG remains text-only.
+
+        Images are loaded only from caller-supplied local paths. No remote media
+        are fetched, and an unsupported backend never discards the images.
+        """
+        if not self.is_ollama():
+            raise BackendConfigurationError("Image QA currently requires an explicitly selected Ollama vision model")
+        self._validate_response_format(response_format)
+        if not 1 <= len(image_paths) <= 4:
+            raise BackendConfigurationError("Image QA requires between one and four local images")
+        capabilities = self._model_info.get("capabilities")
+        if capabilities is None:
+            try:
+                response = requests.post(f"{self.ollama_base_url}/api/show", json={"model": self.model_name}, timeout=5)
+                response.raise_for_status()
+                capabilities = response.json().get("capabilities", [])
+            except (requests.RequestException, ValueError, AttributeError) as exc:
+                raise BackendUnavailableError("Cannot verify the selected model's vision capability") from exc
+        if "vision" not in capabilities:
+            raise BackendConfigurationError(f"Selected model {self.model_name!r} does not advertise vision support")
+        from PIL import Image
+
+        encoded, provenance = [], []
+        for value in image_paths:
+            path = Path(value)
+            try:
+                if path.stat().st_size > 20 * 1024 * 1024:
+                    raise ValueError("image exceeds 20 MiB")
+                content = path.read_bytes()
+                with Image.open(BytesIO(content)) as image:
+                    width, height = image.size
+                    image_format = image.format
+                    if image_format not in {"PNG", "JPEG", "WEBP"}:
+                        raise ValueError("image must be PNG, JPEG, or WEBP")
+                    if width * height > 20_000_000:
+                        raise ValueError("image exceeds 20 million pixels")
+                    image.verify()
+            except (OSError, ValueError) as exc:
+                raise BackendConfigurationError(f"Cannot use image {path.name!r}: {exc}") from exc
+            encoded.append(base64.b64encode(content).decode("ascii"))
+            provenance.append({"name": path.name, "sha256": hashlib.sha256(content).hexdigest(),
+                               "width": width, "height": height, "format": image_format})
+        return self._call_ollama_chat(system, prompt, images=encoded, image_provenance=provenance,
+                                      response_format=response_format)
+
     # ── Ollama ────────────────────────────────────────────────────────────────
 
-    def _call_ollama_chat(self, system: str, user: str) -> str:
-        model = self._ollama_model or OLLAMA_DEFAULT_MODEL
+    def _call_ollama_chat(self, system: str, user: str, *, images: Optional[list[str]] = None,
+                          image_provenance: Optional[list[dict[str, Any]]] = None,
+                          response_format: Optional[str | dict[str, Any]] = None) -> str:
+        self.last_generation_metadata = {}
+        current_model = self._lookup_ollama_model()
+        if current_model["digest"] != self._model_info["digest"]:
+            raise BackendUnavailableError("Ollama model digest changed during this run; initialize a new client for the new model")
         payload = {
-            "model": model,
+            "model": self.model_name,
             "messages": [
                 {"role": "system", "content": system},
                 {"role": "user", "content": user},
             ],
             "stream": False,
-            "options": {
-                "temperature": float(os.environ.get("OLLAMA_TEMPERATURE", "0.0")),
-                "num_predict": int(os.environ.get("OLLAMA_NUM_PREDICT", "384")),
-                "num_ctx": int(os.environ.get("OLLAMA_NUM_CTX", "4096")),
-            },
+            # Qwen3.5 does not support the old /nothink prompt switch.
+            # Ollama's API uses this top-level flag, not an options field.
+            "think": self.thinking,
+            "options": dict(self.generation_options),
         }
-        resp = requests.post(
-            f"{OLLAMA_BASE_URL}/api/chat",
-            json=payload,
-            timeout=300,
-        )
-        resp.raise_for_status()
-        raw = resp.json()["message"]["content"].strip()
-        # Strip <think>...</think> blocks that DeepSeek-R1 emits
+        if images:
+            payload["messages"][1]["images"] = images
+        if response_format is not None:
+            payload["format"] = deepcopy(response_format)
+        started = time.perf_counter()
+        try:
+            resp = requests.post(f"{self.ollama_base_url}/api/chat", json=payload, timeout=self.request_timeout)
+            resp.raise_for_status()
+            result = resp.json()
+        except (requests.RequestException, ValueError) as exc:
+            raise BackendUnavailableError(f"Ollama generation failed for {self.model_name!r}; no fallback was used") from exc
+        if not isinstance(result, dict) or result.get("done") is not True:
+            raise BackendUnavailableError("Ollama returned an invalid or incomplete non-streaming response")
+        if result.get("model") != self.model_name:
+            raise BackendUnavailableError(f"Ollama answered using an unexpected model: {result.get('model')!r}")
+        message = result.get("message") or {}
+        if not isinstance(message, dict):
+            raise BackendUnavailableError("Ollama returned an invalid assistant message")
+        raw = message.get("content")
+        if not isinstance(raw, str):
+            raise BackendUnavailableError("Ollama returned no assistant text")
+        self.last_generation_metadata = {
+            "wall_seconds": time.perf_counter() - started,
+            "done_reason": result.get("done_reason"),
+            "truncated": result.get("done_reason") == "length",
+            "thinking_returned": bool(message.get("thinking")),
+            "input_modality": "text+image" if images else "text",
+            "image_count": len(images or []),
+            "images": image_provenance or [],
+            "response_format": deepcopy(response_format),
+            **{key: result.get(key) for key in (
+                "total_duration", "load_duration", "prompt_eval_count", "prompt_eval_duration", "eval_count", "eval_duration"
+            )},
+        }
+        # Handle older servers that embed reasoning tags; do not return hidden reasoning.
         raw = re.sub(r"<think>.*?</think>", "", raw, flags=re.DOTALL).strip()
+        if "<think>" in raw or not raw:
+            raise BackendUnavailableError("Ollama returned no usable final answer (possibly exhausted the generation budget)")
         return raw
 
     def generate_extractive(self, prompt: str) -> str:
@@ -170,10 +373,9 @@ class VLMClient:
         except ImportError as exc:
             raise ImportError("pip install anthropic") from exc
 
-        model = self.model_name if not self.model_name.startswith("local-") else "claude-haiku-4-5"
         client = anthropic.Anthropic(api_key=self.anthropic_api_key)
         msg = client.messages.create(
-            model=model,
+            model=self.model_name,
             max_tokens=1024,
             system=system,
             messages=[{"role": "user", "content": user}],
@@ -188,10 +390,9 @@ class VLMClient:
         except ImportError as exc:
             raise ImportError("pip install openai") from exc
 
-        model = self.model_name if not self.model_name.startswith("local-") else "gpt-4o-mini"
         client = OpenAI(api_key=self.openai_api_key)
         resp = client.chat.completions.create(
-            model=model,
+            model=self.model_name,
             messages=[
                 {"role": "system", "content": system},
                 {"role": "user", "content": user},

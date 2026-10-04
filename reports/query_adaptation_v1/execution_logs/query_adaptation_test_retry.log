@@ -1,0 +1,73 @@
+{"status": "verified", "training_runs": 4, "evaluations": ["valid"]}
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3878.22it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4126.88it/s]
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 2984.54it/s]
+{"split": "test", "cohort": "insuranceqa", "questions": 200, "total": 2000, "new_cross_pairs": 3289, "seconds": 11.6}
+{"split": "test", "cohort": "insuranceqa", "questions": 400, "total": 2000, "new_cross_pairs": 6558, "seconds": 14.7}
+{"split": "test", "cohort": "insuranceqa", "questions": 600, "total": 2000, "new_cross_pairs": 9782, "seconds": 17.8}
+{"split": "test", "cohort": "insuranceqa", "questions": 800, "total": 2000, "new_cross_pairs": 13014, "seconds": 20.8}
+{"split": "test", "cohort": "insuranceqa", "questions": 1000, "total": 2000, "new_cross_pairs": 16215, "seconds": 23.7}
+{"split": "test", "cohort": "insuranceqa", "questions": 1200, "total": 2000, "new_cross_pairs": 19377, "seconds": 26.7}
+{"split": "test", "cohort": "insuranceqa", "questions": 1400, "total": 2000, "new_cross_pairs": 22515, "seconds": 29.8}
+{"split": "test", "cohort": "insuranceqa", "questions": 1600, "total": 2000, "new_cross_pairs": 25697, "seconds": 32.8}
+{"split": "test", "cohort": "insuranceqa", "questions": 1800, "total": 2000, "new_cross_pairs": 28972, "seconds": 36.0}
+{"split": "test", "cohort": "insuranceqa", "questions": 2000, "total": 2000, "new_cross_pairs": 32178, "seconds": 39.1}
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3981.90it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4470.75it/s]
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 2776.88it/s]
+{"split": "test", "cohort": "multidomain", "questions": 200, "total": 681, "new_cross_pairs": 35621, "seconds": 48.8}
+{"split": "test", "cohort": "multidomain", "questions": 400, "total": 681, "new_cross_pairs": 38272, "seconds": 53.7}
+{"split": "test", "cohort": "multidomain", "questions": 600, "total": 681, "new_cross_pairs": 41717, "seconds": 58.6}
+{"split": "test", "cohort": "multidomain", "questions": 681, "total": 681, "new_cross_pairs": 42867, "seconds": 60.5}
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3437.94it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4062.05it/s]
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 2859.96it/s]
+{"split": "test", "cohort": "fiqa", "questions": 200, "total": 648, "new_cross_pairs": 83012, "seconds": 92.0}
+{"split": "test", "cohort": "fiqa", "questions": 400, "total": 648, "new_cross_pairs": 122767, "seconds": 119.0}
+{"split": "test", "cohort": "fiqa", "questions": 600, "total": 648, "new_cross_pairs": 162520, "seconds": 145.8}
+{"split": "test", "cohort": "fiqa", "questions": 648, "total": 648, "new_cross_pairs": 171855, "seconds": 152.7}
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2932.30it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3448.84it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3177.81it/s]
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 2873.15it/s]
+{"split": "test", "cohort": "historical_government", "questions": 200, "total": 416, "new_cross_pairs": 175868, "seconds": 161.9}
+{"split": "test", "cohort": "historical_government", "questions": 400, "total": 416, "new_cross_pairs": 180029, "seconds": 166.2}
+{"split": "test", "cohort": "historical_government", "questions": 416, "total": 416, "new_cross_pairs": 180474, "seconds": 166.7}
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3293.12it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2931.01it/s]
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 3167.29it/s]
+{"split": "test", "cohort": "condition_government", "questions": 157, "total": 157, "new_cross_pairs": 183675, "seconds": 175.0}
+{"completed": "test", "seconds": 175.5, "new_cross_pairs": 183675}
+{"status": "verified", "training_runs": 4, "evaluations": ["valid", "test"]}

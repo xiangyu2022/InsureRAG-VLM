@@ -1,0 +1,85 @@
+{
+  "flags": [
+    {
+      "id": "gov2_q_10d08c8d818dadaa",
+      "split": "train",
+      "question": "Does this provision require application of all Medicaid FQHC and RHC policies to CHIP programs?",
+      "flags": [
+        "possible_context_dependency"
+      ],
+      "action": "Retained; source-aligned retrieval label, not expert-adjudicated standalone QA"
+    },
+    {
+      "id": "gov2_q_9e10ec2df9343770",
+      "split": "train",
+      "question": "Does this provision apply to all federally qualified health centers (FQHCs), and rural health clinics (RHCs) as well as FQHC look-alikes providing CHIP benefits?",
+      "flags": [
+        "possible_context_dependency"
+      ],
+      "action": "Retained; source-aligned retrieval label, not expert-adjudicated standalone QA"
+    },
+    {
+      "id": "gov2_q_d9a41420ea5cd54f",
+      "split": "train",
+      "question": "The $10 billion fund under the new title VI of the Social Security Act is being administered by the Treasury Department; what has the Treasury Department released with respect to this provision?",
+      "flags": [
+        "possible_context_dependency"
+      ],
+      "action": "Retained; source-aligned retrieval label, not expert-adjudicated standalone QA"
+    },
+    {
+      "id": "gov2_q_266a05911c619dad",
+      "split": "valid",
+      "question": "Im reviewing my individual market health insurance coverage options. I requested a copy of the medical necessity criteria for coverage of mental health conditions from an issuer, but was told that because I was not enrolled in its coverage, the issuer did not have to provide the criteria to me. Is this correct?",
+      "flags": [
+        "answer_starts_with_possible_footnote"
+      ],
+      "action": "Retained; source-aligned retrieval label, not expert-adjudicated standalone QA"
+    },
+    {
+      "id": "gov2_q_4f410791ca39b542",
+      "split": "valid",
+      "question": "Can States cover pregnant women under the new CHIP State plan option, regardless of whether the State has a separate child health program, a Medicaid expansion program, or a combination program? If so, what is the process for implementing this option?",
+      "flags": [
+        "possible_context_dependency"
+      ],
+      "action": "Retained; source-aligned retrieval label, not expert-adjudicated standalone QA"
+    },
+    {
+      "id": "gov2_q_2c1934e2ce5917e8",
+      "split": "test",
+      "question": "A previous FAQ stated that the Departments intended to add additional coverage examples for 2014.7 Have the Departments made any changes related to this requirement?",
+      "flags": [
+        "answer_starts_with_possible_footnote",
+        "possible_context_dependency"
+      ],
+      "action": "Retained; source-aligned retrieval label, not expert-adjudicated standalone QA"
+    },
+    {
+      "id": "gov2_q_79c7bc47863414a2",
+      "split": "test",
+      "question": "A previous FAQ stated that the Departments intended to make changes to the SBC template for 2014 to be consistent with the Affordable Care Acts requirement to eliminate all annual limits on essential health benefits.4 Have the Departments made any changes related to this requirement?",
+      "flags": [
+        "possible_context_dependency"
+      ],
+      "action": "Retained; source-aligned retrieval label, not expert-adjudicated standalone QA"
+    },
+    {
+      "id": "gov2_q_a1c86041a97b4254",
+      "split": "test",
+      "question": "Does this requirement to explore all categories of coverage apply to Transitional Medical Assistance? When the TMA period is over, can the State terminate coverage and advise the family to reapply for Medicaid?",
+      "flags": [
+        "possible_context_dependency"
+      ],
+      "action": "Retained; source-aligned retrieval label, not expert-adjudicated standalone QA"
+    }
+  ],
+  "counts": {
+    "train": 3,
+    "valid": 2,
+    "test": 3
+  },
+  "rule_only_flags": true,
+  "model_metrics_used": false,
+  "dataset_modified": false
+}

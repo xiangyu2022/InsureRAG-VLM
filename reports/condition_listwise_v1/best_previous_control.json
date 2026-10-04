@@ -1,0 +1,179 @@
+{
+  "results": {
+    "historical_insuranceqa": {
+      "all": {
+        "previous_validation_best": {
+          "n": 2000,
+          "hit_at_1": 0.4415,
+          "hit_at_5": 0.6705,
+          "hit_at_10": 0.7425,
+          "hit_at_100": 0.9005,
+          "mrr_at_100": 0.5467342295225482,
+          "label_recall_at_10": 0.637449007936508,
+          "hit_at_1_wilson_95": [
+            0.41987016524351045,
+            0.4633541292883961
+          ],
+          "hit_at_10_wilson_95": [
+            0.7228845657620032,
+            0.7611856663065891
+          ]
+        },
+        "selected_minus_previous_validation_best": {
+          "n": 2000,
+          "wins": 12,
+          "losses": 12,
+          "ties": 1976,
+          "hit10_difference": 0.0,
+          "label_cluster_bootstrap_95": [
+            -0.004997501249375313,
+            0.004506760140210316
+          ],
+          "clusters": 1995,
+          "draws": 5000,
+          "seed": 42,
+          "paired_exact_binomial_p": 1.0,
+          "interpretation": "Historical test was inspected previously. Cluster intervals do not establish independent insurance-domain generalization."
+        }
+      }
+    },
+    "historical_multidomain": {
+      "government": {
+        "previous_validation_best": {
+          "n": 81,
+          "hit_at_1": 0.8148148148148148,
+          "hit_at_5": 0.9506172839506173,
+          "hit_at_10": 0.9629629629629629,
+          "hit_at_100": 1.0,
+          "mrr_at_100": 0.876066194292315,
+          "label_recall_at_10": 0.9629629629629629,
+          "hit_at_1_wilson_95": [
+            0.7166841055275461,
+            0.884437099940933
+          ],
+          "hit_at_10_wilson_95": [
+            0.8966768869310617,
+            0.9873248858167019
+          ]
+        },
+        "selected_minus_previous_validation_best": {
+          "n": 81,
+          "source_groups": 14,
+          "hit_at_10_difference": 0.0,
+          "source_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        }
+      },
+      "general": {
+        "previous_validation_best": {
+          "n": 600,
+          "hit_at_1": 0.885,
+          "hit_at_5": 0.9733333333333334,
+          "hit_at_10": 0.9833333333333333,
+          "hit_at_100": 0.99,
+          "mrr_at_100": 0.925459939531368,
+          "label_recall_at_10": 0.9833333333333333,
+          "hit_at_1_wilson_95": [
+            0.8569878624438966,
+            0.908113627775554
+          ],
+          "hit_at_10_wilson_95": [
+            0.9695947528170743,
+            0.9909222695363482
+          ]
+        },
+        "selected_minus_previous_validation_best": {
+          "n": 600,
+          "source_groups": 24,
+          "hit_at_10_difference": 0.0,
+          "source_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        }
+      }
+    },
+    "historical_government": {
+      "all": {
+        "previous_validation_best": {
+          "n": 416,
+          "hit_at_1": 0.71875,
+          "hit_at_5": 0.9471153846153846,
+          "hit_at_10": 0.9711538461538461,
+          "hit_at_100": 0.9903846153846154,
+          "mrr_at_100": 0.8139207610420427,
+          "label_recall_at_10": 0.9711538461538461,
+          "hit_at_1_wilson_95": [
+            0.6736947893687855,
+            0.759802179966319
+          ],
+          "hit_at_10_wilson_95": [
+            0.9502625737322323,
+            0.9834232063741466
+          ]
+        },
+        "selected_minus_previous_validation_best": {
+          "n": 416,
+          "source_groups": 37,
+          "hit_at_10_difference": 0.0,
+          "source_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        }
+      }
+    },
+    "fresh_government": {
+      "all": {
+        "previous_validation_best": {
+          "n": 157,
+          "hit_at_1": 0.7898089171974523,
+          "hit_at_5": 0.9745222929936306,
+          "hit_at_10": 0.9936305732484076,
+          "hit_at_100": 1.0,
+          "mrr_at_100": 0.8718335741940086,
+          "label_recall_at_10": 0.9936305732484076,
+          "hit_at_1_wilson_95": [
+            0.7195403610333274,
+            0.8462341641868566
+          ],
+          "hit_at_10_wilson_95": [
+            0.964807130088783,
+            0.9988747535280136
+          ]
+        },
+        "selected_minus_previous_validation_best": {
+          "n": 157,
+          "source_groups": 28,
+          "hit_at_10_difference": 0.0,
+          "source_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        }
+      }
+    }
+  },
+  "config": {
+    "pool": "union200",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "protocol_sha256": "73b0004f3a2cf91cf9b57619d6e56cbfefc0d73b7ce5f61b8f63603c143b81ea",
+  "selection_lock_sha256": "f4eebfdb45836d31edc9152732dcf9f4e4c4622eeb9d34b3e310682e3a8b3dc0",
+  "status": "supplementary validation-fixed comparison; no test-based choice"
+}

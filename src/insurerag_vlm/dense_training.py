@@ -187,9 +187,23 @@ def run_dense_retriever_training(config: DenseRetrieverTrainConfig) -> Dict[str,
     config.output_dir.mkdir(parents=True, exist_ok=True)
     model.encoder.save_pretrained(config.output_dir)
     tokenizer.save_pretrained(config.output_dir)
+    # This trainer uses attention-mask mean pooling and L2 normalization.
+    # Do not infer CLS from the original BGE family after this fine-tuning run.
+    embedding_contract = {
+        "schema_version": 1,
+        "pooling": "mean",
+        "max_length": config.max_length,
+        "normalize": True,
+        "query_instruction": "",
+        "provenance": "insurerag_vlm.dense_training.DenseTripletModel._encode",
+    }
+    (config.output_dir / "insurerag_embedding_config.json").write_text(
+        json.dumps(embedding_contract, indent=2), encoding="utf-8"
+    )
     metadata = {
         "config": {key: str(value) if isinstance(value, Path) else value for key, value in asdict(config).items()},
         "train_samples": len(train_dataset),
+        "embedding_contract": embedding_contract,
         "resume_from_checkpoint": str(resume_from_checkpoint) if resume_from_checkpoint else None,
         "cuda_available": torch.cuda.is_available(),
         "cuda_device_name": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,

@@ -1,0 +1,102 @@
+{
+  "label": "AI-authored synthetic PDF regression; not real-policy or held-out accuracy",
+  "cases": 24,
+  "answerable_cases": 16,
+  "unsupported_cases": 8,
+  "runtime_errors": 0,
+  "answer_repaired_count": 1,
+  "raw": {
+    "answer_key_match": {
+      "successes": 16,
+      "total": 16,
+      "rate": 1.0,
+      "ci95_low": 0.8063923194655637,
+      "ci95_high": 1.0
+    },
+    "citation_match": {
+      "successes": 16,
+      "total": 16,
+      "rate": 1.0,
+      "ci95_low": 0.8063923194655637,
+      "ci95_high": 1.0
+    },
+    "supported_key_source_pass": {
+      "successes": 16,
+      "total": 16,
+      "rate": 1.0,
+      "ci95_low": 0.8063923194655637,
+      "ci95_high": 1.0
+    },
+    "context_key_source_pass": {
+      "successes": 16,
+      "total": 16,
+      "rate": 1.0,
+      "ci95_low": 0.8063923194655637,
+      "ci95_high": 1.0
+    },
+    "retrieved_evidence_key_source_pass": {
+      "successes": 16,
+      "total": 16,
+      "rate": 1.0,
+      "ci95_low": 0.8063923194655637,
+      "ci95_high": 1.0
+    },
+    "unsupported_abstention": {
+      "successes": 5,
+      "total": 8,
+      "rate": 0.625,
+      "ci95_low": 0.30574239460262737,
+      "ci95_high": 0.8631557141764026
+    }
+  },
+  "served": {
+    "answer_key_match": {
+      "successes": 8,
+      "total": 16,
+      "rate": 0.5,
+      "ci95_low": 0.27999563610326017,
+      "ci95_high": 0.7200043638967398
+    },
+    "citation_match": {
+      "successes": 8,
+      "total": 16,
+      "rate": 0.5,
+      "ci95_low": 0.27999563610326017,
+      "ci95_high": 0.7200043638967398
+    },
+    "supported_key_source_pass": {
+      "successes": 8,
+      "total": 16,
+      "rate": 0.5,
+      "ci95_low": 0.27999563610326017,
+      "ci95_high": 0.7200043638967398
+    },
+    "context_key_source_pass": {
+      "successes": 8,
+      "total": 16,
+      "rate": 0.5,
+      "ci95_low": 0.27999563610326017,
+      "ci95_high": 0.7200043638967398
+    },
+    "retrieved_evidence_key_source_pass": {
+      "successes": 8,
+      "total": 16,
+      "rate": 0.5,
+      "ci95_low": 0.27999563610326017,
+      "ci95_high": 0.7200043638967398
+    },
+    "unsupported_abstention": {
+      "successes": 8,
+      "total": 8,
+      "rate": 1.0,
+      "ci95_low": 0.6755924351161198,
+      "ci95_high": 1.0
+    }
+  },
+  "wall_seconds": {
+    "p50": 1.0913288000156172,
+    "p95": 2.256294880012865,
+    "total": 30.305617400212213
+  },
+  "interval_note": "Wilson intervals are descriptive only; synthetic cases share six authored packets and are not a random population sample."
+}

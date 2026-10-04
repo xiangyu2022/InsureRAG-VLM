@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-01T21:26:03.169156+00:00",
+  "mode": "score",
+  "split": "test",
+  "questions": 681,
+  "fixture_lock_sha256": "912f40bc9a696f7492ec02c61202e719dac362b460d57ae7f12cc46b050a667d",
+  "candidate_source_sha256": "f98e1e4f60b49199b337a3c6e141cad0a83e6d27c2edeb62257c038970f1a9f1",
+  "selection_lock_sha256": "111a12d841ff50fe1006c4c76d464f905394a14e1c5e172690f1f8255b255261",
+  "model": {
+    "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\insurerag-domain-reranker-v2\\epoch-1",
+    "files_sha256": {
+      "config.json": "bde16d9648b01e19b9d4c5f3deca28cd2851fbbc660f8a90cecd87efde5c5429",
+      "model.safetensors": "88207632c798e8a5a7eb2799447dc1f1f08aec03daaa142b31fb29572a2071fe",
+      "tokenizer.json": "91f1def9b9391fdabe028cd3f3fcc4efd34e5d1f08c3bf2de513ebb5911a1854",
+      "tokenizer_config.json": "65687cd448ac234da7b4db3f535aa0e88a4d8c2c8f5a0fe84a01593f936be44d",
+      "training_provenance.json": "1dcd647fabc47c863e1b9f3fe140a4ca8276d449209640570095389d8941b452"
+    },
+    "checkpoint_sha256": "a1b1e667c6bbc941a5b6854faadc6c800b8b89c70a1b53ee6bd118734aa8e344",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "max_length": 512,
+    "batch_size": 64,
+    "truncation": "longest_first",
+    "score": "raw single relevance logit",
+    "remote_code": false,
+    "fine_tuned_in_this_project": true,
+    "training_provenance": {
+      "epoch": 1,
+      "optimizer_steps": 734,
+      "training_groups_seen": 11729,
+      "mean_loss": 1.5521022580003117,
+      "weights_sha256": "88207632c798e8a5a7eb2799447dc1f1f08aec03daaa142b31fb29572a2071fe",
+      "fine_tuned_in_this_project": true,
+      "base_model": "..\\models\\ms-marco-MiniLM-L6-v2",
+      "training_manifest_sha256": "7bae2f9990831396c8f347ae23952e640c6f9a3a07937a8bf5436c998ed36c01",
+      "training_protocol_sha256": "497db8286ac41be5948ef27ce754939d76c4559febceb31bbde98a670af28d9d",
+      "training_code_sha256": "6dfa79747867c062fa73fd6361920486f27d774c2bf12b939acf402eb5889000"
+    }
+  },
+  "code_sha256": {
+    "scripts/score_multidomain.py": "25494c8d44dc9f2fdbd3b2669fa1095f0f4dd6638c02a64fabdf5ad04629aa7a",
+    "src/insurerag_vlm/domain_reranker.py": "7f1904228435358bfeb14483f5f599e961e5759f9d2c94f8faaa8368a049aeb5",
+    "src/insurerag_vlm/reranker.py": "bb90e6c134b44d7cb0c0cd6ca3165e098827bd908a3a86e73101040cf65734a3",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872"
+  },
+  "gold_injection": false
+}

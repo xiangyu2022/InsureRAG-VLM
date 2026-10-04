@@ -1,0 +1,841 @@
+{
+  "release_tag": "research-prototype-2026-10-03",
+  "archives": [
+    {
+      "filename": "InsureRAG_Domain_Trained_20261001_Source.zip",
+      "sha256": "f5e67bf047e12f55db4de2cd692e13ef19e74f3959bd70dd9af50dfe1faaa2cc",
+      "bytes": 237882085,
+      "url": "https://github.com/xiangyu2022/InsureRAG-VLM/releases/download/research-prototype-2026-10-03/InsureRAG_Domain_Trained_20261001_Source.zip"
+    },
+    {
+      "filename": "InsureRAG_Domain_Trained_20261001_Model.zip",
+      "sha256": "2fe1816d59123f5ca3e2de4c1ae553b9a8003dded4f9b7d0071662b38124da42",
+      "bytes": 83441315,
+      "url": "https://github.com/xiangyu2022/InsureRAG-VLM/releases/download/research-prototype-2026-10-03/InsureRAG_Domain_Trained_20261001_Model.zip"
+    },
+    {
+      "filename": "InsureRAG_Domain_Trained_20261001_Data_Index.zip",
+      "sha256": "eb007eafde77abda89e6671ad53fe257f1e01523872f382b68ccb856a4424388",
+      "bytes": 213997138,
+      "url": "https://github.com/xiangyu2022/InsureRAG-VLM/releases/download/research-prototype-2026-10-03/InsureRAG_Domain_Trained_20261001_Data_Index.zip"
+    },
+    {
+      "filename": "InsureRAG_Retention_20261001_Update.zip",
+      "sha256": "159d2c8379410f8cdeacc251fbf06f50d4092e8e8a424279f97e71ab76a2cc58",
+      "bytes": 276644860,
+      "url": "https://github.com/xiangyu2022/InsureRAG-VLM/releases/download/research-prototype-2026-10-03/InsureRAG_Retention_20261001_Update.zip"
+    },
+    {
+      "filename": "InsureRAG_Condition_20261001_Update.zip",
+      "sha256": "7435e680f13922c06e385402ef3cc3992f5675c41db3d93870bb4ce864ef3b23",
+      "bytes": 565973177,
+      "url": "https://github.com/xiangyu2022/InsureRAG-VLM/releases/download/research-prototype-2026-10-03/InsureRAG_Condition_20261001_Update.zip"
+    },
+    {
+      "filename": "InsureRAG_QueryAdaptation_20261002_Update.zip",
+      "sha256": "afc6d2c0a9f3b9d39cf3a4a8fe920fb5d0852c6d38246063ba94fb90acb9f078",
+      "bytes": 1486712771,
+      "url": "https://github.com/xiangyu2022/InsureRAG-VLM/releases/download/research-prototype-2026-10-03/InsureRAG_QueryAdaptation_20261002_Update.zip"
+    },
+    {
+      "filename": "InsureRAG_EvidenceReranker_20261003_Update.zip",
+      "sha256": "ce3e138facbb71e26c1f0dbc74a05cff6c805b805fa40f22b486b89ee3ac7593",
+      "bytes": 869546705,
+      "url": "https://github.com/xiangyu2022/InsureRAG-VLM/releases/download/research-prototype-2026-10-03/InsureRAG_EvidenceReranker_20261003_Update.zip"
+    }
+  ],
+  "total_download_bytes": 3734198051,
+  "git_excluded_large_files": [
+    {
+      "path": "data/benchmarks/condition_v1/answers.jsonl",
+      "bytes": 36026247,
+      "sha256": "ed1475b822ef2b1032b90430c2b21acb7e6259c35afc1f90dd5e07cf05666d35"
+    },
+    {
+      "path": "data/benchmarks/condition_v1/train_additions.jsonl",
+      "bytes": 3150894,
+      "sha256": "8497c24d6e2e942ddaa03fc6b71de6eb1254cc2ff902fd7df918e7a95590382c"
+    },
+    {
+      "path": "data/benchmarks/condition_v1_preflight/answers.jsonl",
+      "bytes": 36066457,
+      "sha256": "b5d2323da27dce864211786513221898423eb18dd9b2ccda4dad2e58c293c0dc"
+    },
+    {
+      "path": "data/benchmarks/condition_v1_preflight/train_additions.jsonl",
+      "bytes": 3151549,
+      "sha256": "ec90b8a5c02d4d28329374188b7a67a8c2a11ae8df7771f480357e4cf88c27ef"
+    },
+    {
+      "path": "data/benchmarks/finqa_evidence_v1/answers.jsonl",
+      "bytes": 31850659,
+      "sha256": "9a77566e60a14e4bccaf99add197a6af5241bca82829884e44ebfe826f854d6d"
+    },
+    {
+      "path": "data/benchmarks/fiqa_v1/answers.jsonl",
+      "bytes": 52135567,
+      "sha256": "4bf6f13f4faddb692a2624b0353affb439e73b51ab4bbd94d6665d14c0e38371"
+    },
+    {
+      "path": "data/benchmarks/insuranceqa_v2/answers.jsonl",
+      "bytes": 16684416,
+      "sha256": "50cffb3351cae585e21af23454e9946354eb88ce36028e59e1d1c286e994eda2"
+    },
+    {
+      "path": "data/benchmarks/insuranceqa_v2/test.jsonl",
+      "bytes": 17859628,
+      "sha256": "85129e408c92e63784453a10e1a6afe1ffef4714170646860859f76488c2ea44"
+    },
+    {
+      "path": "data/benchmarks/insuranceqa_v2/train.jsonl",
+      "bytes": 15451583,
+      "sha256": "71cbbf10579a30e070ad22ee44b2c52519e987d1da24ca15f23dccd3202a9671"
+    },
+    {
+      "path": "data/benchmarks/insuranceqa_v2/valid.jsonl",
+      "bytes": 17863123,
+      "sha256": "acf03a69edc7e11f9c3d114a7fa676dd395b464cacc75aef0d24c131e974c502"
+    },
+    {
+      "path": "data/benchmarks/multidomain_v1/answers.jsonl",
+      "bytes": 19081511,
+      "sha256": "a668460f5b7616ffbd7a82513820f1df63d598e07ad10306a545803dd84f5dbf"
+    },
+    {
+      "path": "data/benchmarks/multidomain_v1/train.jsonl",
+      "bytes": 4196545,
+      "sha256": "d754968a0544e32c480f67909e760219ea29d2c6049c96ba7cf4aec7a3ac507d"
+    },
+    {
+      "path": "data/research_corpus/expanded_public_v1/rag_snippets.jsonl",
+      "bytes": 2241436,
+      "sha256": "66919dd1264edaaed4024eb228c95c61b2da67b928fe8070c71f1ee368259644"
+    },
+    {
+      "path": "data/research_corpus/policy_wordings_v1/rag_pages.jsonl",
+      "bytes": 4635173,
+      "sha256": "478856e828a170bf119b093e9a5170de9e1d1cca5dd9487299e2734215afa6eb"
+    },
+    {
+      "path": "data/research_corpus/policy_wordings_v1/rag_snippets.jsonl",
+      "bytes": 8520915,
+      "sha256": "1352807048e9466e732ddd3ad6848331390b8cb01e2d61a0330a33127f1608eb"
+    },
+    {
+      "path": "data/research_corpus/scaled_public_v2/rag_pages.jsonl",
+      "bytes": 6384857,
+      "sha256": "22814aab59fd8ec8ab4073c3f8b06587387415e0537b3112f6bb906f178b44c6"
+    },
+    {
+      "path": "data/research_corpus/scaled_public_v2/rag_snippets.jsonl",
+      "bytes": 10762351,
+      "sha256": "ad5a23bd189d0b717fe5c9c37bfeac275a05bef313e8785af424fe4c67d88a10"
+    },
+    {
+      "path": "data/research_corpus/source_linked_public_v1/rag_snippets.jsonl",
+      "bytes": 2241436,
+      "sha256": "66919dd1264edaaed4024eb228c95c61b2da67b928fe8070c71f1ee368259644"
+    },
+    {
+      "path": "data/training/condition_listwise_v1/answers.jsonl",
+      "bytes": 36026247,
+      "sha256": "ed1475b822ef2b1032b90430c2b21acb7e6259c35afc1f90dd5e07cf05666d35"
+    },
+    {
+      "path": "data/training/condition_listwise_v1/train_groups.jsonl",
+      "bytes": 50824701,
+      "sha256": "f449325c4fa3c9b92f9a90c9cde5a1405ff18578524f1a22613d70ca47bef5c1"
+    },
+    {
+      "path": "data/training/condition_v1/answers.jsonl",
+      "bytes": 36026247,
+      "sha256": "ed1475b822ef2b1032b90430c2b21acb7e6259c35afc1f90dd5e07cf05666d35"
+    },
+    {
+      "path": "data/training/condition_v1/train_groups.jsonl",
+      "bytes": 40650085,
+      "sha256": "f8653634ad125ab1d6c948a303985ab7e782b0cb9c29445e944b8d789c394f4f"
+    },
+    {
+      "path": "data/training/condition_v1/train_groups_mined.jsonl",
+      "bytes": 36669866,
+      "sha256": "e10549ae39ab8252d1f60e67371b6e8a9aca5884e492442a09117421c1d7c361"
+    },
+    {
+      "path": "data/training/evidence_reranker_v1/answers.jsonl",
+      "bytes": 120091254,
+      "sha256": "b7a2129398e131ed7844bffd9f97a0ebf64893f67c7cea6cd40a902820db2961"
+    },
+    {
+      "path": "data/training/evidence_reranker_v1/query_groups.jsonl",
+      "bytes": 8132484,
+      "sha256": "fe472a73c1e401da4c25a89a31166092f334aadf5fef2f2f56b15b38445b4a67"
+    },
+    {
+      "path": "data/training/evidence_reranker_v1/train_groups.jsonl",
+      "bytes": 42713605,
+      "sha256": "a64c8f22e9599d3ef505289c6207757c42e57e2f26306b908f45e6f39ce5a1ab"
+    },
+    {
+      "path": "data/training/insuranceqa_hardneg_v1/train_groups.jsonl",
+      "bytes": 5583635,
+      "sha256": "4e15cb1e054dbf787e817f9fbde5041146e3ae5ca416bf4b941c06d13d7bfdbc"
+    },
+    {
+      "path": "data/training/insuranceqa_hardneg_v2/train_groups.jsonl",
+      "bytes": 5578889,
+      "sha256": "b9247169f7503cdcdc1b68bdc539551ec8477a3feb469d9519f689c49f481b78"
+    },
+    {
+      "path": "data/training/query_adaptation_v1/answers.jsonl",
+      "bytes": 88240595,
+      "sha256": "8c3f8106b94d57989b90b29ed1186ee9e61eaafdc157e430df6bfac2c7ab10f7"
+    },
+    {
+      "path": "data/training/query_adaptation_v1/train_groups.jsonl",
+      "bytes": 7368760,
+      "sha256": "24b1608a161d95db719be1621c08ad2d2c6bae471783457bb7483c425f1e12c7"
+    },
+    {
+      "path": "data/training/retention_v1/answers.jsonl",
+      "bytes": 35765927,
+      "sha256": "c0afa04bc29fe46104994b5eeac921ccd27be03b52043deb9cf8ff31fff8adcb"
+    },
+    {
+      "path": "data/training/retention_v1/train_groups.jsonl",
+      "bytes": 19340754,
+      "sha256": "17ff1295a45d35e91e48e849550aa980ec427da011e2395787c0b0b9d7fdca0b"
+    },
+    {
+      "path": "data/training/retention_v1/train_groups_unscored.jsonl",
+      "bytes": 13278341,
+      "sha256": "e872a1c0e4438bea0a0d246b16c66630d8b0899973572b853552b0da915c7a7d"
+    },
+    {
+      "path": "data/training/retention_v2/answers.jsonl",
+      "bytes": 35765927,
+      "sha256": "c0afa04bc29fe46104994b5eeac921ccd27be03b52043deb9cf8ff31fff8adcb"
+    },
+    {
+      "path": "data/training/retention_v2/train_groups.jsonl",
+      "bytes": 19305917,
+      "sha256": "4af8fa883e7c3ce16b7da8902decc78c0101b2d3e0edc7d28c8a939eeff01c9e"
+    },
+    {
+      "path": "reports/condition_listwise_v1/historical_government_answers.jsonl",
+      "bytes": 17111531,
+      "sha256": "eac76ac707122189436a3a6bfe727bdb6439b1287c7c92095cbe0a84fee04c69"
+    },
+    {
+      "path": "reports/condition_listwise_v1/test_evaluation/predictions.jsonl",
+      "bytes": 32340650,
+      "sha256": "a7acb249faed716a941d4563342a845383c7299bce2fa97cd1bf527e57207e96"
+    },
+    {
+      "path": "reports/condition_listwise_v1/test_fresh_candidates/scores.jsonl",
+      "bytes": 2196338,
+      "sha256": "c34f168708e6b06addee0106580b8e98c760989dcca5ad7ed1083bd514dc661b"
+    },
+    {
+      "path": "reports/condition_listwise_v1/test_fresh_previous/scores.jsonl",
+      "bytes": 2554237,
+      "sha256": "c45ee2d68760bfe83381a914600109657f087a106ea3aa7c37658c873c29064a"
+    },
+    {
+      "path": "reports/condition_listwise_v1/test_fresh_public/scores.jsonl",
+      "bytes": 2527311,
+      "sha256": "88e189ea8469abac61e019d7b1faf51e98228472fbb6f713a98bd028d0e3cdb3"
+    },
+    {
+      "path": "reports/condition_listwise_v1/test_fresh_selected/scores.jsonl",
+      "bytes": 2556732,
+      "sha256": "59fd620e6e3b91f22f9d6773e07a893cc0ca7b73b9c299d17f69031112328b33"
+    },
+    {
+      "path": "reports/condition_listwise_v1/test_legacy_selected/scores.jsonl",
+      "bytes": 24573010,
+      "sha256": "10fabb83a952a329976d9f792b1caa04393d923211178d11dce682f71643bf2f"
+    },
+    {
+      "path": "reports/condition_listwise_v1/test_mixed_selected/scores.jsonl",
+      "bytes": 12253380,
+      "sha256": "b13ec739dacbba595069bb57594f218f64ea8b5bbe573a3ca77cdecdf0db9c5a"
+    },
+    {
+      "path": "reports/condition_listwise_v1/test_oldgov_selected/scores.jsonl",
+      "bytes": 8294611,
+      "sha256": "178db7e593a1c71b24b7f81b8c3192e05091a1145182d2cfa6aa50d4059d9282"
+    },
+    {
+      "path": "reports/condition_listwise_v1/valid_legacy_seed_123/scores.jsonl",
+      "bytes": 24607362,
+      "sha256": "5041fce03446b1b421565302d8ab63658774815dd755a9743ce9b2ba6c18cc93"
+    },
+    {
+      "path": "reports/condition_listwise_v1/valid_legacy_seed_42/scores.jsonl",
+      "bytes": 24598438,
+      "sha256": "ceb2597044edb534dfef914cbf808f8a8bcec43f57ae20e01057e4f7e2ef033a"
+    },
+    {
+      "path": "reports/condition_listwise_v1/valid_mixed_seed_123/scores.jsonl",
+      "bytes": 9364415,
+      "sha256": "4bed2170d2959280e5cd03c880ff272b94192c40195f8fd5669cbca95e0dbb9b"
+    },
+    {
+      "path": "reports/condition_listwise_v1/valid_mixed_seed_42/scores.jsonl",
+      "bytes": 9364627,
+      "sha256": "6c5e0815d08f9c4ca07534d8c7f3f4b367a651ad360dbb3462534c9e0a9211ab"
+    },
+    {
+      "path": "reports/condition_v1/valid_legacy_seed_123/scores.jsonl",
+      "bytes": 24686197,
+      "sha256": "75ade5df705f32682f8a5be8b50b2089efc466d51f3ec86d47a30580e7592cfe"
+    },
+    {
+      "path": "reports/condition_v1/valid_legacy_seed_42/scores.jsonl",
+      "bytes": 24681332,
+      "sha256": "5f21b41d35d44a986fa9b1f26a94e9fd6e29474e823f5f234c322d406c40b23f"
+    },
+    {
+      "path": "reports/condition_v1/valid_mixed_seed_123/scores.jsonl",
+      "bytes": 9300289,
+      "sha256": "c0ee131a5c49924639f1dbcdd4b7310c60b4b1612ff366cc6c318a7ee3050fdd"
+    },
+    {
+      "path": "reports/condition_v1/valid_mixed_seed_42/scores.jsonl",
+      "bytes": 9300377,
+      "sha256": "7448a32ce8194cec80f119c75ed3bfc9d30060dae8447a0022ae70d25f7b7bb7"
+    },
+    {
+      "path": "reports/data_scale_v1/graph_before_address_fix.jsonl",
+      "bytes": 3842028,
+      "sha256": "b9c8b085506aecb1517e079a8704b1040165ccfb0796630581024e4a01f89c8c"
+    },
+    {
+      "path": "reports/domain_training_v1/test_selected/scores.jsonl",
+      "bytes": 10664495,
+      "sha256": "6f2a5e15c0bcf5acbfbd819b8a1f92a0bedb962944cf782e5a6e6dc693969fb2"
+    },
+    {
+      "path": "reports/domain_training_v1/valid_epoch_1/scores.jsonl",
+      "bytes": 24229275,
+      "sha256": "27e1979d7e678c93b71d7ffb862748f4a524968f0af8ae3bc96cb59c36827227"
+    },
+    {
+      "path": "reports/domain_training_v1/valid_epoch_2/scores.jsonl",
+      "bytes": 24316634,
+      "sha256": "8f735e19590e14776a133a2eaa29bf22a7d68d885021d6c60c103f3fb64df3a8"
+    },
+    {
+      "path": "reports/domain_training_v1/valid_epoch_3/scores.jsonl",
+      "bytes": 24346339,
+      "sha256": "c7d0e2bfb7d7696dea50a1f0fa5ba1778041d41a048ce98e353d4127d269bdc4"
+    },
+    {
+      "path": "reports/domain_training_v2/test_evaluation/predictions.jsonl",
+      "bytes": 15653588,
+      "sha256": "bdc6cabc93f29ab89e11ef26d78c08c63ce6a6eacc1d19129560869421b749a8"
+    },
+    {
+      "path": "reports/domain_training_v2/test_selected/scores.jsonl",
+      "bytes": 24177336,
+      "sha256": "b21b3a5654d33b27c7a36b98602e2dca3f75529e737761f26b417c6c949b5f73"
+    },
+    {
+      "path": "reports/domain_training_v2/valid_epoch_1/scores.jsonl",
+      "bytes": 24221091,
+      "sha256": "cd03bc325747ac8f9b29237ef43e8c0b8928186c3c17718aa8aaf0ef287a420c"
+    },
+    {
+      "path": "reports/domain_training_v2/valid_epoch_2/scores.jsonl",
+      "bytes": 24304425,
+      "sha256": "4e138acf4faa601fdfc0c5fe9b93bbf9635d7b37cc75fe750c0e90cd30a6e74f"
+    },
+    {
+      "path": "reports/domain_training_v2/valid_epoch_3/scores.jsonl",
+      "bytes": 24358414,
+      "sha256": "3405ce9692349b436f78041ef92aae8f581032189a06b3676a702f6611691465"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/failure_cases.json",
+      "bytes": 19573301,
+      "sha256": "c49aa6099e876910b1bb698c6f2f8b99e3694877966150250ef72d94c1f12855"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_candidates/condition_government.jsonl",
+      "bytes": 2943270,
+      "sha256": "b2dc744cf53fb5f78f1df12c00ac6fded52f1a254fb8a87aed489edb28cd1e37"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_candidates/finqa.jsonl",
+      "bytes": 20502858,
+      "sha256": "a22d63d23af7718e5cdc1e5245c83cef6be55118e06dd64b5cbc61db3db9661b"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_candidates/fiqa.jsonl",
+      "bytes": 11326034,
+      "sha256": "f0b38b1193f1206e8885aeb99590e2ea7e91d414b8ff29bd5a23a1434f3c2c80"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_candidates/historical_government.jsonl",
+      "bytes": 7635585,
+      "sha256": "fdfb39ae0bb8b08c9e9bbad98ebdacd68511266ce9cf85a465bc586aca89fa92"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_candidates/insuranceqa.jsonl",
+      "bytes": 26277684,
+      "sha256": "fe8054acbb18b82fee83d7d1ffb790980f05f55bd7b172bde74be8f5c901b7b3"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_candidates/multidomain.jsonl",
+      "bytes": 14060214,
+      "sha256": "11b0e4c50cab776b57ddca300806bbcb838ad467e3e55ccc32b647ed62e7e151"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_evaluation/predictions.jsonl",
+      "bytes": 90564632,
+      "sha256": "11638958befa3802ea6eca13c50a061155af1f851f78283f5c0bb1aa75e77518"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_scores/previous/finqa.jsonl",
+      "bytes": 6298396,
+      "sha256": "cb6ba3f83a794295552c3fce55df146d7ebb771c2e9685dc638ba065c68656a0"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_scores/previous/fiqa.jsonl",
+      "bytes": 3500474,
+      "sha256": "9e255db5a64d3487984737291bd1534a6fcf9b321411a86dec82b41d438c25fb"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_scores/previous/historical_government.jsonl",
+      "bytes": 2304661,
+      "sha256": "7bce1b2ac54721b92f01dbd09e9d6397b5cdebdd30ada82e3c579058c8aa8ec2"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_scores/previous/insuranceqa.jsonl",
+      "bytes": 7365438,
+      "sha256": "50424906e73781b3f45d7e068c3f00dff56c53526a60759ded331335d1f4c463"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_scores/previous/multidomain.jsonl",
+      "bytes": 4315920,
+      "sha256": "fb89bb434eb20de9376db7832e1d05c971b8a46b53f7c0afcbc42e6d924b1131"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_scores/seed_123_epoch_2/finqa.jsonl",
+      "bytes": 6417305,
+      "sha256": "1c030cc392975b47d72831493143633fe54fc428dc0dedff92c115d0978f7db2"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_scores/seed_123_epoch_2/fiqa.jsonl",
+      "bytes": 3462034,
+      "sha256": "686141ad217a259e8075b7e9a0e022176869c28d1f8be78f7571485aeb98fd8f"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_scores/seed_123_epoch_2/historical_government.jsonl",
+      "bytes": 2348746,
+      "sha256": "2930410169e6ff65c024bc2330b1beb994703588ed80c98d46799505a445ea24"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_scores/seed_123_epoch_2/insuranceqa.jsonl",
+      "bytes": 7451455,
+      "sha256": "92e217c0ecdcf0a256185600da681fb61aceb1e1cc523e5d833839bd4f584f6a"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/test_scores/seed_123_epoch_2/multidomain.jsonl",
+      "bytes": 4352123,
+      "sha256": "f759583655991e4ac02444b049eaafcc748d295787f8d97ca9295b3129d245d0"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_candidates/finqa.jsonl",
+      "bytes": 8209879,
+      "sha256": "a43189880f5c605047ec66e6e28bf96cf74da5a49800ec78e6930902c206f3e3"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_candidates/fiqa.jsonl",
+      "bytes": 8789236,
+      "sha256": "aecc19eedd51a8903ea446337bc4893e5c4f93ffbbf2d1b1e24bed492ce6ae6b"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_candidates/insuranceqa.jsonl",
+      "bytes": 26320257,
+      "sha256": "91a80b8c83f69299f48444bd9edf453d1a1d9fcb68988e6f31f3afa3d168bf9c"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_candidates/multidomain.jsonl",
+      "bytes": 10736776,
+      "sha256": "50425aeb5203be07c4626f353dce2857904bb0bd2795e0c6f1d265084cec68b0"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_evaluation/predictions.jsonl",
+      "bytes": 127590743,
+      "sha256": "fb5c096b56a9ad8f811ce02f41ee2a9406c941de0bf3366a1a3620744f4dadea"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/previous/finqa.jsonl",
+      "bytes": 2472319,
+      "sha256": "b62086046363f963434fa4264c6d97c4bcce7c91808e476174490b888209cf31"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/previous/fiqa.jsonl",
+      "bytes": 2724439,
+      "sha256": "307837dc0b610b368c9e74c8b1a15817ee8abf68f973135a0a1e9549500b23a7"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/previous/insuranceqa.jsonl",
+      "bytes": 7370983,
+      "sha256": "4559726522793269433e1c041493469c53c7549ce469d66074e287b2bac25205"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/previous/multidomain.jsonl",
+      "bytes": 3292674,
+      "sha256": "7f37fe8354c3f69d665cbdfd5e0856481ee5ea87cf120558af10878c792597ac"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_123_epoch_1/finqa.jsonl",
+      "bytes": 2521880,
+      "sha256": "907982ac491b99c5833b0655ecb9097c1ebead8578252f1ae710e494fa3497e5"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_123_epoch_1/fiqa.jsonl",
+      "bytes": 2696083,
+      "sha256": "ee0b3094fac9d35300699130bd9987d470b68791e972435a2a74a85951525256"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_123_epoch_1/insuranceqa.jsonl",
+      "bytes": 7413464,
+      "sha256": "45127cd858fec74fe9dbe24b17b67d4d84f8352d9536058a029883be7c5b409b"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_123_epoch_1/multidomain.jsonl",
+      "bytes": 3318629,
+      "sha256": "31359940cab90599e011fbc00d33d4c80fc26e2b50177a953596fb8422e2717d"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_123_epoch_2/finqa.jsonl",
+      "bytes": 2523189,
+      "sha256": "481c9894bb1f82f0072b4f5294ca5d21f70a7e9a0a8a9dc393b929c225059290"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_123_epoch_2/fiqa.jsonl",
+      "bytes": 2697407,
+      "sha256": "4d6702f055958b15a75d524aaa476a410e85437a4e89f7d05d654033405b4b36"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_123_epoch_2/insuranceqa.jsonl",
+      "bytes": 7453035,
+      "sha256": "7a2d1d0f016e25c75f1a9db292f41dd48efc8635dcc2c11cab7fde84b122ee35"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_123_epoch_2/multidomain.jsonl",
+      "bytes": 3315173,
+      "sha256": "e7ceae57bb6baad1f4d7f34b6f21dbed17eae5065a49b032366940d15a669c54"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_42_epoch_1/finqa.jsonl",
+      "bytes": 2518113,
+      "sha256": "ae486c2e16f4325305e0d4a7d2759d5b62c50d5dba07f0787410079be7f83751"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_42_epoch_1/fiqa.jsonl",
+      "bytes": 2702759,
+      "sha256": "3a4836edd3f7ba0060c04938e6a3b0a89e58e9910b589d84a452937082af58ef"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_42_epoch_1/insuranceqa.jsonl",
+      "bytes": 7444965,
+      "sha256": "d778e8401c7f7e53b6ab75dbed9afd700cb705673638d574a2bebac08eeb53ec"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_42_epoch_1/multidomain.jsonl",
+      "bytes": 3313324,
+      "sha256": "47b99d2c1b4ed68d056849c306e8c486e9c6d7fea7059cdebbdba56914ae9908"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_42_epoch_2/finqa.jsonl",
+      "bytes": 2522234,
+      "sha256": "a39549bdc734feb901f09d8904dcaba969884f7fb8afdc5c430e159d3b20b462"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_42_epoch_2/fiqa.jsonl",
+      "bytes": 2704368,
+      "sha256": "629bdafeaba5bd4f53fc98936fc285cbccd724cf249cc847023e7c622779947d"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_42_epoch_2/insuranceqa.jsonl",
+      "bytes": 7473598,
+      "sha256": "bf5febcb1e127ef3a158409e2ff6945bf3ee7433556cee2f258d251c019e0407"
+    },
+    {
+      "path": "reports/evidence_reranker_v1/valid_scores/seed_42_epoch_2/multidomain.jsonl",
+      "bytes": 3312742,
+      "sha256": "e53697ea28c3c72288c4324bbd1d51b896220bffb655dae069c2a7850156c1c8"
+    },
+    {
+      "path": "reports/expanded_retrieval_v1/scaled_public_regression_gpu/predictions.jsonl",
+      "bytes": 5866011,
+      "sha256": "d82a2d29b6ed13e82984a2b5d58149b91c06e2e83d98e46cbd50612d2cb71e2b"
+    },
+    {
+      "path": "reports/expanded_retrieval_v1/source_links_exploratory/predictions.jsonl",
+      "bytes": 5884293,
+      "sha256": "96b82d7464c059ecd6082f6e3bf33cfbb124b56a21d01930c94f0b9e8a25e9ad"
+    },
+    {
+      "path": "reports/expanded_retrieval_v1/test_frozen/predictions.jsonl",
+      "bytes": 5893264,
+      "sha256": "657e514f49b8783cf1a17075cae52601186d6d8c8dda2fa94c8d18f5a4b05eaa"
+    },
+    {
+      "path": "reports/graph_paths_v1/test_frozen/predictions.jsonl",
+      "bytes": 2520925,
+      "sha256": "a86a659dccb472170a141edeb7f1b2f6feca437b58daca449381bf485690ed81"
+    },
+    {
+      "path": "reports/hicric_government_qa_v1/transfer_v1/predictions.jsonl",
+      "bytes": 5565995,
+      "sha256": "81285ba9e1cb839176500e4f6c6fc9202f2c2dc1e0d3aa377f2d0a75f9555bdd"
+    },
+    {
+      "path": "reports/hicric_government_qa_v1/transfer_v1/scores.jsonl",
+      "bytes": 7339333,
+      "sha256": "e1859e67b4b269fb6a84970712963072ac4289d15b2e9194eef1e45a59d5b6d1"
+    },
+    {
+      "path": "reports/insuranceqa_v2/rerank_selection_v2/predictions.jsonl",
+      "bytes": 16036952,
+      "sha256": "a21c57189c891cdfdb89b897b8d655f5c461a23e8a4dbd490a75f1911d6ec936"
+    },
+    {
+      "path": "reports/insuranceqa_v2/rerank_test_evaluation_v1/predictions.jsonl",
+      "bytes": 16009051,
+      "sha256": "027a30b43decd26d5affcda7ea2b6fee5f12e05884be7ec49f66c4acc45b3810"
+    },
+    {
+      "path": "reports/insuranceqa_v2/rerank_test_v1/scores.jsonl",
+      "bytes": 24652225,
+      "sha256": "7de652ed405da9d30ae3838638590eb98144f1ae1f33272eae83b007e643cc88"
+    },
+    {
+      "path": "reports/insuranceqa_v2/rerank_valid_v1/scores.jsonl",
+      "bytes": 24708690,
+      "sha256": "06f0d3e54f6340960c183477d0e7148ab264a32de15c40920938711563d609ec"
+    },
+    {
+      "path": "reports/insuranceqa_v2/rerank_valid_v2/scores.jsonl",
+      "bytes": 24708858,
+      "sha256": "cac8f8e8119a9328843139a065a7981e8d175df26753db4877dfcdd0a4d0a470"
+    },
+    {
+      "path": "reports/insuranceqa_v2/retrieval_frozen/predictions.jsonl",
+      "bytes": 28746918,
+      "sha256": "d0140537109dbe164fd127e56898a65c43578d6273bd6e94a6d9b2049dfe0307"
+    },
+    {
+      "path": "reports/multidomain_v1/test_candidates/scores.jsonl",
+      "bytes": 10752455,
+      "sha256": "f98e1e4f60b49199b337a3c6e141cad0a83e6d27c2edeb62257c038970f1a9f1"
+    },
+    {
+      "path": "reports/multidomain_v1/valid_candidates/scores.jsonl",
+      "bytes": 8204236,
+      "sha256": "4aec908843ae2cb932cb245b3e027901e329d95080becab2d6fb173cd8603052"
+    },
+    {
+      "path": "reports/opm_reference_navigation_v1/corrected_frozen/predictions.jsonl",
+      "bytes": 2485137,
+      "sha256": "e972faa227974f5afdd81018509263a8c712dc2f3b8c82abc1a51b033b24f129"
+    },
+    {
+      "path": "reports/opm_reference_navigation_v1/final_verification/predictions.jsonl",
+      "bytes": 2485137,
+      "sha256": "e972faa227974f5afdd81018509263a8c712dc2f3b8c82abc1a51b033b24f129"
+    },
+    {
+      "path": "reports/opm_reference_navigation_v1/frozen/predictions.jsonl",
+      "bytes": 2480683,
+      "sha256": "ddfabc0458b16cbd843718b1447fb7934763e45ea8c68d836df4c54d5683b631"
+    },
+    {
+      "path": "reports/query_adaptation_v1/data_ablation/valid/fiqa_scores.jsonl",
+      "bytes": 56371354,
+      "sha256": "6d04888b860da5a40aa16f38cfc942c485ebb913e107065a88a602b8e9f1a978"
+    },
+    {
+      "path": "reports/query_adaptation_v1/data_ablation/valid/insuranceqa_scores.jsonl",
+      "bytes": 175804639,
+      "sha256": "f18ee7786031915c734183b5b6586ce5819c048039caf2413b130fc9e8f677fc"
+    },
+    {
+      "path": "reports/query_adaptation_v1/data_ablation/valid/multidomain_scores.jsonl",
+      "bytes": 67904567,
+      "sha256": "79aecbb578e8ff582b70ae0a7b0ba00961386db8e6eb27af13d8e152b1d166bc"
+    },
+    {
+      "path": "reports/query_adaptation_v1/data_ablation/valid/predictions.jsonl",
+      "bytes": 56428776,
+      "sha256": "506f09ec9e9f6e687c3fc12ff28d57fbfa62cab058ccc44475b1106ce83aeb73"
+    },
+    {
+      "path": "reports/query_adaptation_v1/test/condition_government_scores.jsonl",
+      "bytes": 4851393,
+      "sha256": "735337f73dd09cedb1e42490dd2d7f5c90fbf83db7293cdebd42d6d9be763b82"
+    },
+    {
+      "path": "reports/query_adaptation_v1/test/fiqa_scores.jsonl",
+      "bytes": 19116442,
+      "sha256": "a1f78ca70fa41fe8ec6a3d370d0224123a9fd9a3fb08d5c00a56868e9cc575dd"
+    },
+    {
+      "path": "reports/query_adaptation_v1/test/historical_government_scores.jsonl",
+      "bytes": 12549022,
+      "sha256": "c46da8ee8147de99a5de95a82e96a5d2b7f01a09c2b866e7644bd98ed23c4862"
+    },
+    {
+      "path": "reports/query_adaptation_v1/test/insuranceqa_scores.jsonl",
+      "bytes": 45024400,
+      "sha256": "3e2e9315d0bca6aa744ccb68f40cd0ad654e02d61ea06275c7b510c9dc2df6df"
+    },
+    {
+      "path": "reports/query_adaptation_v1/test/multidomain_scores.jsonl",
+      "bytes": 23271033,
+      "sha256": "f66e495f146f08b7f378dc47f08534aa43f979eb5d002f47e55fbdbc5a9cf039"
+    },
+    {
+      "path": "reports/query_adaptation_v1/test/predictions.jsonl",
+      "bytes": 47015945,
+      "sha256": "046a3401d19b8f80eba187071853adeba0446500a16581c8dfce7415ea8aecd9"
+    },
+    {
+      "path": "reports/query_adaptation_v1/valid/fiqa_scores.jsonl",
+      "bytes": 56500739,
+      "sha256": "42c34b87ba22e24b06bda93d92846b8a43434e9a0d8d223be9ec0787966f1f16"
+    },
+    {
+      "path": "reports/query_adaptation_v1/valid/insuranceqa_scores.jsonl",
+      "bytes": 175843424,
+      "sha256": "09163b689718dcc05275c45f046ddcd040062a615b8b295a1c23931c88032962"
+    },
+    {
+      "path": "reports/query_adaptation_v1/valid/multidomain_scores.jsonl",
+      "bytes": 67836050,
+      "sha256": "1f2dd40e6565f9a486387ccfc8365f3c91beed683e5368c9149ac851745ae70b"
+    },
+    {
+      "path": "reports/query_adaptation_v1/valid/predictions.jsonl",
+      "bytes": 56409342,
+      "sha256": "abdfc6b3ba37fa5d1df48393cbea9c4becb55dc135685348a8a9a3a9785b1c89"
+    },
+    {
+      "path": "reports/research_v2/final_code_replay/inputs.jsonl",
+      "bytes": 9495719,
+      "sha256": "b714258c4a97b03d89aaff839fc9f73728d648362fbe677ffefa23f687e3abfa"
+    },
+    {
+      "path": "reports/research_v2/final_prepared_dev/inputs.jsonl",
+      "bytes": 2368772,
+      "sha256": "37ceb6306a45c94191a3d0430a4059350236af4fa0b12df2547fc01d26c3335c"
+    },
+    {
+      "path": "reports/research_v2/final_prepared_test/inputs.jsonl",
+      "bytes": 9495685,
+      "sha256": "15a840b326ff189fd88f8daab9ca494e8d0b2b8881fe3b24e100f825a49c68c0"
+    },
+    {
+      "path": "reports/research_v2/graph_revision2_prepared_dev/inputs.jsonl",
+      "bytes": 2368760,
+      "sha256": "fb340dc9cd89ef89eaab26dfe53147b20500253531b2cb86c34b05b6b0cec48e"
+    },
+    {
+      "path": "reports/research_v2/graph_revision_prepared_dev/inputs.jsonl",
+      "bytes": 2204138,
+      "sha256": "a61fd492f4457bc2fc93ab4b5d8375c0608dc0f84ee908c518cc3d98c4494ff4"
+    },
+    {
+      "path": "reports/research_v2/graph_revision_prepared_test/inputs.jsonl",
+      "bytes": 8363851,
+      "sha256": "b2011bae40406b226bc87691be96b2cbfeb8bbc940f7ecef6b615acb1bd6f14e"
+    },
+    {
+      "path": "reports/research_v2/qwen35_final_dev/predictions.jsonl",
+      "bytes": 2472485,
+      "sha256": "88120d9a86369b6155de5d83c7984c9f048e310953f05b0c10724fbc689bb538"
+    },
+    {
+      "path": "reports/research_v2/qwen35_final_test/predictions.jsonl",
+      "bytes": 9923394,
+      "sha256": "d9a9fc4adfecd2433c84dc8cade35446ee47848e756cd2a94e85c4826e85e8a6"
+    },
+    {
+      "path": "reports/research_v2/qwen35_graph_revision_dev/predictions.jsonl",
+      "bytes": 2307677,
+      "sha256": "ae22a6436da2f14ec3f2552eb213e5304feedf2477fbe390e1c3feac707bd9b9"
+    },
+    {
+      "path": "reports/retention_v2/historical_government/predictions.jsonl",
+      "bytes": 5544944,
+      "sha256": "f7f961d1f86003292742127638129a783c247b12b1188ef6da8516b0633dbdc0"
+    },
+    {
+      "path": "reports/retention_v2/historical_government/scores.jsonl",
+      "bytes": 8290183,
+      "sha256": "1b76075cb7446b3ed269e2d2508d3edf48db35a402e554a04f6bab750e35e5d4"
+    },
+    {
+      "path": "reports/retention_v2/test_evaluation/predictions.jsonl",
+      "bytes": 24470861,
+      "sha256": "03796f89aaf02a183a7f2fc6d26d88ddb639807a6eabb814755df6f08178b5b6"
+    },
+    {
+      "path": "reports/retention_v2/test_legacy_selected/scores.jsonl",
+      "bytes": 24485846,
+      "sha256": "15ace06eb8b7341a5791bf72bdbc5159f730b500abcb787269085088da8d429a"
+    },
+    {
+      "path": "reports/retention_v2/test_new_previous/scores.jsonl",
+      "bytes": 12208171,
+      "sha256": "7359d867684c9e2e80955bf434c8cb0d464b76a961e344d823c27d44eb072331"
+    },
+    {
+      "path": "reports/retention_v2/test_new_public/scores.jsonl",
+      "bytes": 12180891,
+      "sha256": "3942a172301edf337825ecc4dcb63a258de79a7e92f242386f44460602f388dc"
+    },
+    {
+      "path": "reports/retention_v2/test_new_selected/scores.jsonl",
+      "bytes": 12248264,
+      "sha256": "7b3b58de006b371a63703dbdccd5c8f538eac8da0fa2983ca2630c68a468aa4f"
+    },
+    {
+      "path": "reports/retention_v2/valid_legacy_epoch_1/scores.jsonl",
+      "bytes": 24472701,
+      "sha256": "c1280afd1ce4573beadfa54cbb612fc2d098c7efd9cb9e965c4c1e34ce2798f2"
+    },
+    {
+      "path": "reports/retention_v2/valid_legacy_epoch_2/scores.jsonl",
+      "bytes": 24521634,
+      "sha256": "e6963b2eb88bb4027ceb001f404e18816a7d46b34beb43a86c73f73797e93611"
+    },
+    {
+      "path": "reports/retention_v2/valid_new_epoch_1/scores.jsonl",
+      "bytes": 9355914,
+      "sha256": "49962c34b15bb804e4aeacb9d4dd8fc4d985542297976fb8c74a747d29f5a72d"
+    },
+    {
+      "path": "reports/retention_v2/valid_new_epoch_2/scores.jsonl",
+      "bytes": 9357986,
+      "sha256": "843ef5b14c643efac8a9a8bb428b09718a589ed25b55f488935849dd7daccd87"
+    },
+    {
+      "path": "reports/retention_v2/valid_new_previous/scores.jsonl",
+      "bytes": 9318031,
+      "sha256": "bcafb905a8720450f17a1dc780730500a490f4deda55d6f84e91bcc680bbd6c0"
+    },
+    {
+      "path": "reports/retention_v2/valid_new_public/scores.jsonl",
+      "bytes": 9303361,
+      "sha256": "f7cbf63f37d30c5e0f722bec1c7070d3f12a6a99c056738ff00749b227a2747a"
+    }
+  ],
+  "restore_policy": "Preserve every Git-tracked file; apply checksum-verified research archive layers in order."
+}

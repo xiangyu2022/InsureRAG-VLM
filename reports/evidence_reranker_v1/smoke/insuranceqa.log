@@ -1,0 +1,52 @@
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3709.37it/s]
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3783.81it/s]
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 2859.68it/s]
+{
+  "question": "What happens when a term life insurance policy expires?",
+  "corpus": "insuranceqa",
+  "annual_report_scope": null,
+  "corpus_candidates": 27413,
+  "reranked_candidates": 161,
+  "selected_config": {
+    "name": "seed_123_epoch_2_cw50",
+    "model": "seed_123_epoch_2",
+    "cross_weight": 0.5
+  },
+  "new_training_promoted": true,
+  "selection_lock_sha256": "a40b41968aa39fc4f4967e5bc8f58ff96251558203ee33edf97ed16c8f070525",
+  "selected_weights_sha256": "697d3a725ad9d684c1b978365bda314114e8dbec2a27c2841a07f028ed2e81b8",
+  "fixed_encoders_match_inherited_inventories": true,
+  "query_encoder_passes": 2,
+  "generation_calls": 0,
+  "numerical_program_execution": false,
+  "expert_answer_adjudication": false,
+  "seconds_including_loading": 8.864950899966061,
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "9467",
+      "text": "When a life insurance term expires, a few things can happen, depending on the features of your term policy. Sometimes, the policy will simply end, and you must get new one if you want to have continued coverage. Sometimes, the policy can be extended at a higher price or lower face amount. You will know this when you take the policy out. Another thing that might happen is that the policy is changed from a level term to an annually renewable rate. This rate is much higher than your original premium and goes up every year."
+    },
+    {
+      "rank": 2,
+      "answer_id": "12289",
+      "text": "When your term life insurance policy expires, your policy will end, or the premiums will jump up very high. You do not get any money back. At that point you will need to get a new policy, or else determine if you can get by without any life insurance."
+    },
+    {
+      "rank": 3,
+      "answer_id": "22045",
+      "text": "When term life expires, the coverage ends and premiums stop. Depending on the policy, there may be valuable conversion rights that may be available before the end of the term period or coverage end. Most term policies will expire before the insured does so it is important to plan ahead if coverage needs to be maintained."
+    },
+    {
+      "rank": 4,
+      "answer_id": "18375",
+      "text": "Term life insurance policies expire when the number of years in the term are up. However, Term life insurance usually has the option to be renewed annually beyond the term. If you choose to pay that new, higher premium, the policy will stay in effect. Or you may be able to convert your Term policy to permanent insurance, in which case it would not expire. Term life insurance also expires when you quit paying the premium. Permanent life insurance, such as Whole Life and Universal Life, will expire if you stop paying the premium and there is not enough cash value left in the policy to pay the premium. If you have paid the premium so that policy is \"paid up\", however, and you have followed the rules for paying back policy loans, permanent life insurance will never expire."
+    },
+    {
+      "rank": 5,
+      "answer_id": "13647",
+      "text": "What happens when you Life Insurance policy expires depends on the type of policy and the event. If the policy expires because it is reached the end of contract and there is no option for renewal, the policy end. For example term policies usually expire at a specified age. You usually have an option to convert to a permanent policy sometime before the expiry date. If you mean by expiring going out of force because of non-payment you, if you are healthy you can often reinstate the policy by payment of back premiums. Some policies have a cash value that is paid when the policy expires or matures. The policy wording would specify. If you have any questions, or feel that I could be of asssitance, please do not hesitate to contact me."
+    }
+  ]
+}
+

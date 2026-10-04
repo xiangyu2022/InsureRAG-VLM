@@ -1,0 +1,279 @@
+{
+  "role": "current_official_source_provenance_audit_not_a_new_benchmark",
+  "created_utc": "2026-09-20T22:55:18.995141+00:00",
+  "documents": [
+    {
+      "doc_id": "de_auto_insurance_guide",
+      "requested_url": "https://insurance.delaware.gov/wp-content/uploads/sites/15/2022/09/Auto-Insurance-Guide.pdf",
+      "retrieved_utc": "2026-09-20T22:55:13.784433+00:00",
+      "status": "downloaded",
+      "resolved_url": "https://insurance.delaware.gov/wp-content/uploads/sites/15/2022/09/Auto-Insurance-Guide.pdf",
+      "sha256": "8804b729cc419cb81df83d7aab8feeed537e1b2f66dd117f7e16247ba28951f2",
+      "bytes": 2300786,
+      "physical_pages": 18,
+      "local_file": "..\\source_audit_pdfs\\de_auto_insurance_guide.pdf"
+    },
+    {
+      "doc_id": "de_homeowners_guide",
+      "requested_url": "https://insurance.delaware.gov/wp-content/uploads/sites/15/2022/09/Homeowners-Guide.pdf",
+      "retrieved_utc": "2026-09-20T22:55:13.784433+00:00",
+      "status": "downloaded",
+      "resolved_url": "https://insurance.delaware.gov/wp-content/uploads/sites/15/2022/09/Homeowners-Guide.pdf",
+      "sha256": "0006b3f79975544f3ef5934c716c102b5f83caad86ebdc4a3a4852018250cc76",
+      "bytes": 11185180,
+      "physical_pages": 16,
+      "local_file": "..\\source_audit_pdfs\\de_homeowners_guide.pdf"
+    },
+    {
+      "doc_id": "md_auto_insurance_guide",
+      "requested_url": "https://insurance.maryland.gov/Consumer/Documents/publications/autoinsuranceguide.pdf",
+      "retrieved_utc": "2026-09-20T22:55:17.617600+00:00",
+      "status": "downloaded",
+      "resolved_url": "https://insurance.maryland.gov/Consumer/Documents/publications/autoinsuranceguide.pdf",
+      "sha256": "18dae338ff5d6f46ce23491e393ea15d79d7ffe355554364d85ff0e06ba78065",
+      "bytes": 1400775,
+      "physical_pages": 50,
+      "local_file": "..\\source_audit_pdfs\\md_auto_insurance_guide.pdf"
+    },
+    {
+      "doc_id": "md_homeowners_insurance_guide",
+      "requested_url": "https://insurance.maryland.gov/Consumer/Documents/publications/homeownersinsguide.pdf",
+      "retrieved_utc": "2026-09-20T22:55:17.620603+00:00",
+      "status": "downloaded",
+      "resolved_url": "https://insurance.maryland.gov/Consumer/Documents/publications/homeownersinsguide.pdf",
+      "sha256": "5678b1af4d818dfd0df57c731dd603f3f046602085ed363e818577cac5358f39",
+      "bytes": 1236722,
+      "physical_pages": 44,
+      "local_file": "..\\source_audit_pdfs\\md_homeowners_insurance_guide.pdf"
+    },
+    {
+      "doc_id": "nc_disability_insurance_guide",
+      "requested_url": "https://www.ncdoi.gov/consumers-guide-disability-insurance/open",
+      "retrieved_utc": "2026-09-20T22:55:18.334777+00:00",
+      "status": "downloaded",
+      "resolved_url": "https://www.ncdoi.gov/consumers-guide-disability-insurance/open",
+      "sha256": "ba672ca1bba130b52b5d3b8c16a17f053817947b3c83709b902b70b7059d7d76",
+      "bytes": 135685,
+      "physical_pages": 6,
+      "local_file": "..\\source_audit_pdfs\\nc_disability_insurance_guide.pdf"
+    },
+    {
+      "doc_id": "nc_travel_insurance_guide",
+      "requested_url": "https://www.ncdoi.gov/consumers-guide-travel-insurance/open",
+      "retrieved_utc": "2026-09-20T22:55:18.412780+00:00",
+      "status": "downloaded",
+      "resolved_url": "https://www.ncdoi.gov/consumers-guide-travel-insurance/open",
+      "sha256": "944c3a5612f08340a730c33451e5f50f94006d2ab8e53c2376b929e9970d7e89",
+      "bytes": 1370554,
+      "physical_pages": 4,
+      "local_file": "..\\source_audit_pdfs\\nc_travel_insurance_guide.pdf"
+    }
+  ],
+  "frozen_evidence_checks": [
+    {
+      "id": "dev_de_auto_insurance_guide_01",
+      "source": "de_auto_insurance_guide.pdf#page=4",
+      "physical_page": 4,
+      "evidence_span": "not less than $1500 for the first offense",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "dev_de_auto_insurance_guide_02",
+      "source": "de_auto_insurance_guide.pdf#page=5",
+      "physical_page": 5,
+      "evidence_span": "Also included in PIP coverage is up to $5,000 for funeral expenses.",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "dev_de_auto_insurance_guide_03",
+      "source": "de_auto_insurance_guide.pdf#page=6",
+      "physical_page": 6,
+      "evidence_span": "The coverage comes at an automatic $250 deductible for property damage",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "dev_de_auto_insurance_guide_04",
+      "source": "de_auto_insurance_guide.pdf#page=9",
+      "physical_page": 9,
+      "evidence_span": "you can receive 10 percent off a portion of your auto insurance for three years.",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "dev_de_homeowners_guide_01",
+      "source": "de_homeowners_guide.pdf#page=6",
+      "physical_page": 6,
+      "evidence_span": "policies designed for renters (HO-4, see page 13)",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "dev_de_homeowners_guide_02",
+      "source": "de_homeowners_guide.pdf#page=8",
+      "physical_page": 8,
+      "evidence_span": "$5,000 for computer equipment",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "dev_de_homeowners_guide_03",
+      "source": "de_homeowners_guide.pdf#page=9",
+      "physical_page": 9,
+      "evidence_span": "A replacement cost policy would give you $500.",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "dev_de_homeowners_guide_04",
+      "source": "de_homeowners_guide.pdf#page=10",
+      "physical_page": 10,
+      "evidence_span": "deductible (typically 2% of the property's value)",
+      "page_available": true,
+      "normalized_span_present": false
+    },
+    {
+      "id": "test_md_auto_insurance_guide_01",
+      "source": "md_auto_insurance_guide.pdf#page=10",
+      "physical_page": 10,
+      "evidence_span": "apply a surcharge or discount of more than 40% based on credit history",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_md_auto_insurance_guide_02",
+      "source": "md_auto_insurance_guide.pdf#page=13",
+      "physical_page": 13,
+      "evidence_span": "$15,000 property damage",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_md_auto_insurance_guide_03",
+      "source": "md_auto_insurance_guide.pdf#page=16",
+      "physical_page": 16,
+      "evidence_span": "at least $2,500 in Personal Injury Protection (PIP) coverage.",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_md_auto_insurance_guide_04",
+      "source": "md_auto_insurance_guide.pdf#page=17",
+      "physical_page": 17,
+      "evidence_span": "then the insurer will pay $700",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_01",
+      "source": "md_homeowners_insurance_guide.pdf#page=7",
+      "physical_page": 7,
+      "evidence_span": "It provides named-peril coverage for the contents of your home.",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_02",
+      "source": "md_homeowners_insurance_guide.pdf#page=10",
+      "physical_page": 10,
+      "evidence_span": "This deductible does not apply to claims under the liability or medical payments coverages.",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_03",
+      "source": "md_homeowners_insurance_guide.pdf#page=11",
+      "physical_page": 11,
+      "evidence_span": "the insurer would pay $1,000 towards the damage.",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_md_homeowners_insurance_guide_04",
+      "source": "md_homeowners_insurance_guide.pdf#page=12",
+      "physical_page": 12,
+      "evidence_span": "You need to purchase this coverage separately and in addition to the coverage for your home.",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_01",
+      "source": "nc_disability_insurance_guide.pdf#page=2",
+      "physical_page": 2,
+      "evidence_span": "The elimination period is a specified period of time, stated in the policy contract, following the beginning of disability during which benefits are not payable.",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_02",
+      "source": "nc_disability_insurance_guide.pdf#page=3",
+      "physical_page": 3,
+      "evidence_span": "The percentage varies from policy to policy and may range from 50 to 75 percent.",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_03",
+      "source": "nc_disability_insurance_guide.pdf#page=3",
+      "physical_page": 3,
+      "evidence_span": "Short term policies generally provide benefits from six months to two years",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_nc_disability_insurance_guide_04",
+      "source": "nc_disability_insurance_guide.pdf#page=4",
+      "physical_page": 4,
+      "evidence_span": "RESIDUAL DISABILITY RIDER This rider provides a benefit if the insured can return to work full-time but income is not fully restored.",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_01",
+      "source": "nc_travel_insurance_guide.pdf#page=2",
+      "physical_page": 2,
+      "evidence_span": "You must first seek reimbursement from the trip provider before the insurance company will consider the claim.",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_02",
+      "source": "nc_travel_insurance_guide.pdf#page=2",
+      "physical_page": 2,
+      "evidence_span": "Baggage Insurance Provides coverage if your belongings (luggage and personal possessions) are lost, stolen or damaged during a trip.",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_03",
+      "source": "nc_travel_insurance_guide.pdf#page=3",
+      "physical_page": 3,
+      "evidence_span": "cancellation waivers, which are not insurance",
+      "page_available": true,
+      "normalized_span_present": true
+    },
+    {
+      "id": "test_nc_travel_insurance_guide_04",
+      "source": "nc_travel_insurance_guide.pdf#page=3",
+      "physical_page": 3,
+      "evidence_span": "Claims paid due to weather conditions are contingent upon mandatory evacuation orders.",
+      "page_available": true,
+      "normalized_span_present": true
+    }
+  ],
+  "summary": {
+    "documents_downloaded": 6,
+    "documents_attempted": 6,
+    "spans_checked": 24,
+    "spans_present_on_declared_physical_page": 23
+  },
+  "limitations": [
+    "A fresh PDF hash does not prove the bytes originally used to curate the historical corpus.",
+    "Only six benchmark guides are audited, not all56 sources.",
+    "Whitespace/NFKC substring matching can fail because of extraction order or typography.",
+    "The original benchmark corpus and labels are immutable; current downloads do not replace them.",
+    "These guides are evidence documents for a research test, not a check of current insurance law."
+  ]
+}

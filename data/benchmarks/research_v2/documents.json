@@ -1,0 +1,639 @@
+[
+  {
+    "doc_id": "ca_doi_auto_guide",
+    "document_family_id": "ca_auto",
+    "split": "dev",
+    "title": "California Automobile Insurance Guide",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-auto/auto101.cfm",
+    "public_origin_reference": "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-auto/auto101.cfm",
+    "insurance_domains": [
+      "auto"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 119,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "ca_doi_auto_terms",
+    "document_family_id": "ca_auto",
+    "split": "dev",
+    "title": "California Automobile Insurance Terms (July 2011)",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-auto/autoterms.cfm",
+    "public_origin_reference": "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-auto/autoterms.cfm",
+    "insurance_domains": [
+      "auto"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 72,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "ca_doi_glossary",
+    "document_family_id": "ca_doi_glossary",
+    "split": "dev",
+    "title": "California Glossary of Insurance Terms",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/20-Glossary/",
+    "public_origin_reference": "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/20-Glossary/",
+    "insurance_domains": [
+      "insurance"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 99,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "fema_nfip_claims_2024",
+    "document_family_id": "fema_nfip_personal",
+    "split": "test",
+    "title": "FEMA NFIP Claims Handbook",
+    "source_kind": "official_pdf",
+    "page_semantics": "One-based physical PDF page; native extracted text; no OCR",
+    "source_url": "https://agents.floodsmart.gov/sites/default/files/media/document/2025-07/fema-nfip-claims-handbook-08-2024.pdf",
+    "public_origin_reference": "https://agents.floodsmart.gov/sites/default/files/media/document/2025-07/fema-nfip-claims-handbook-08-2024.pdf",
+    "insurance_domains": [
+      "flood",
+      "claims"
+    ],
+    "retrieved_at_utc": "2026-09-20T23:59:58.819887+00:00",
+    "pdf_sha256": "13ff0d9ce9e5f71cffb211ea889a8da4f346b355c0e5317ea24a77b4b7695859",
+    "physical_pages": 32,
+    "pages_with_nonempty_text": 32,
+    "legacy_sft_exposure": 0,
+    "available_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+    ]
+  },
+  {
+    "doc_id": "fema_nfip_coverage_2023",
+    "document_family_id": "fema_nfip_personal",
+    "split": "test",
+    "title": "FEMA NFIP Summary of Coverage",
+    "source_kind": "official_pdf",
+    "page_semantics": "One-based physical PDF page; native extracted text; no OCR",
+    "source_url": "https://agents.floodsmart.gov/sites/default/files/media/document/2025-07/fema-nfip-summary-coverage-brochure-12-2023.pdf",
+    "public_origin_reference": "https://agents.floodsmart.gov/sites/default/files/media/document/2025-07/fema-nfip-summary-coverage-brochure-12-2023.pdf",
+    "insurance_domains": [
+      "flood",
+      "homeowners",
+      "renters"
+    ],
+    "retrieved_at_utc": "2026-09-20T23:59:59.242987+00:00",
+    "pdf_sha256": "32590b3b46b7f8fa8aae89c81656b4ac4c5537db141a8b9b08f80aca1052f51d",
+    "physical_pages": 8,
+    "pages_with_nonempty_text": 8,
+    "legacy_sft_exposure": 0,
+    "available_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ]
+  },
+  {
+    "doc_id": "fl_doi_home_endorsements",
+    "document_family_id": "fl_home",
+    "split": "test",
+    "title": "Florida CFO Homeowners Policy Endorsements",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.myfloridacfo.com/division/ica/fullcoverage/homeowners/policyendorsements",
+    "public_origin_reference": "https://www.myfloridacfo.com/division/ica/fullcoverage/homeowners/policyendorsements",
+    "insurance_domains": [
+      "homeowners"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 103,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "fl_doi_homeowners_overview",
+    "document_family_id": "fl_home",
+    "split": "test",
+    "title": "Florida DFS Homeowners Insurance Overview",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview",
+    "public_origin_reference": "https://www.myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview",
+    "insurance_domains": [
+      "homeowners"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 190,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "md_life_guide",
+    "document_family_id": "md_life_guide",
+    "split": "test",
+    "title": "Maryland Consumer Guide to Life Insurance",
+    "source_kind": "official_pdf",
+    "page_semantics": "One-based physical PDF page; native extracted text; no OCR",
+    "source_url": "https://insurance.maryland.gov/consumer/documents/publications/lifeinsurance.pdf",
+    "public_origin_reference": "https://insurance.maryland.gov/consumer/documents/publications/lifeinsurance.pdf",
+    "insurance_domains": [
+      "life"
+    ],
+    "retrieved_at_utc": "2026-09-20T23:59:59.315232+00:00",
+    "pdf_sha256": "654936be4928bd7350432bc45893417f021cb76858585e871548624911f7271e",
+    "physical_pages": 24,
+    "pages_with_nonempty_text": 21,
+    "legacy_sft_exposure": 0,
+    "available_pages": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      24
+    ]
+  },
+  {
+    "doc_id": "ne_doi_auto_coverages",
+    "document_family_id": "ne_doi_auto_coverages",
+    "split": "dev",
+    "title": "Nebraska Auto Insurance and Types of Coverage",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://doi.nebraska.gov/important-auto-insurance-and-types-coverage",
+    "public_origin_reference": "https://doi.nebraska.gov/important-auto-insurance-and-types-coverage",
+    "insurance_domains": [
+      "auto"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 6,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "ne_doi_home_policy_forms",
+    "document_family_id": "ne_doi_home_policy_forms",
+    "split": "dev",
+    "title": "Nebraska Policy Forms: What You Need to Know",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://doi.nebraska.gov/policy-forms-what-you-need-know",
+    "public_origin_reference": "https://doi.nebraska.gov/policy-forms-what-you-need-know",
+    "insurance_domains": [
+      "homeowners"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 13,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "nj_auto_guide_2026",
+    "document_family_id": "nj_auto_guide_2026",
+    "split": "test",
+    "title": "New Jersey Auto Insurance Buyer's Guide",
+    "source_kind": "official_pdf",
+    "page_semantics": "One-based physical PDF page; native extracted text; no OCR",
+    "source_url": "https://www.nj.gov/dobi/division_consumers/pdf/autoguide2026.pdf",
+    "public_origin_reference": "https://www.nj.gov/dobi/division_consumers/pdf/autoguide2026.pdf",
+    "insurance_domains": [
+      "auto"
+    ],
+    "retrieved_at_utc": "2026-09-21T00:01:08.305015+00:00",
+    "pdf_sha256": "80f3c4d7c9b77b86c2e230582577a33c003f82f9eae5c0fb7f235268a9878424",
+    "physical_pages": 16,
+    "pages_with_nonempty_text": 15,
+    "legacy_sft_exposure": 0,
+    "available_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  {
+    "doc_id": "ny_dfs_choosing_policy",
+    "document_family_id": "ny_home",
+    "split": "test",
+    "title": "New York DFS Choosing a Policy",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/choosing_a_policy",
+    "public_origin_reference": "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/choosing_a_policy",
+    "insurance_domains": [
+      "homeowners"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 31,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "ny_dfs_home_basic_coverage",
+    "document_family_id": "ny_home",
+    "split": "test",
+    "title": "New York Homeowners Insurance: Basic and Additional Coverage",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/basic_coverage",
+    "public_origin_reference": "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/basic_coverage",
+    "insurance_domains": [
+      "homeowners"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 76,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "ny_dfs_how_much_insurance",
+    "document_family_id": "ny_home",
+    "split": "test",
+    "title": "New York Homeowners Insurance: How Much Insurance You Need",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/determining_how_much_insurance_you_need",
+    "public_origin_reference": "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/determining_how_much_insurance_you_need",
+    "insurance_domains": [
+      "homeowners"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 22,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "ny_dfs_problems_obtaining",
+    "document_family_id": "ny_home",
+    "split": "test",
+    "title": "New York Homeowners Insurance: Problems Obtaining Insurance",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/problems_obtaining_insurance",
+    "public_origin_reference": "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/problems_obtaining_insurance",
+    "insurance_domains": [
+      "homeowners"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 34,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "tx_doi_auto_guide",
+    "document_family_id": "tx_doi_auto_guide",
+    "split": "test",
+    "title": "Texas Auto Insurance Guide",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.tdi.texas.gov/pubs/consumer/cb020.html",
+    "public_origin_reference": "https://www.tdi.texas.gov/pubs/consumer/cb020.html",
+    "insurance_domains": [
+      "auto"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 136,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "tx_doi_home_guide",
+    "document_family_id": "tx_doi_home_guide",
+    "split": "test",
+    "title": "Texas Homeowners Insurance Guide",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.tdi.texas.gov/pubs/consumer/cb025.html",
+    "public_origin_reference": "https://www.tdi.texas.gov/pubs/consumer/cb025.html",
+    "insurance_domains": [
+      "homeowners"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 151,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "wa_oic_home_claims",
+    "document_family_id": "wa_home",
+    "split": "test",
+    "title": "Washington OIC Filing a homeowner insurance claim",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.insurance.wa.gov/insurance-resources/home-insurance/home-insurance-claims/filing-homeowner-insurance-claim",
+    "public_origin_reference": "https://www.insurance.wa.gov/insurance-resources/home-insurance/home-insurance-claims/filing-homeowner-insurance-claim",
+    "insurance_domains": [
+      "homeowners"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 29,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "wa_oic_homeowner_insurance",
+    "document_family_id": "wa_home",
+    "split": "test",
+    "title": "Washington OIC What is homeowner insurance?",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.insurance.wa.gov/what-homeowner-insurance",
+    "public_origin_reference": "https://www.insurance.wa.gov/what-homeowner-insurance",
+    "insurance_domains": [
+      "homeowners"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 38,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "wa_oic_renter_insurance",
+    "document_family_id": "wa_home",
+    "split": "test",
+    "title": "Washington OIC How renter insurance works",
+    "source_kind": "archived_html",
+    "page_semantics": "One complete HTML text record; page=1 is NOT a physical PDF page",
+    "source_url": "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/how-renter-insurance-works",
+    "public_origin_reference": "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/how-renter-insurance-works",
+    "insurance_domains": [
+      "homeowners",
+      "renters"
+    ],
+    "archive_provenance": "Inherited repository data/04_curated; original web acquisition timestamp unavailable",
+    "legacy_sft_exposure": 27,
+    "available_pages": [
+      1
+    ]
+  },
+  {
+    "doc_id": "wi_auto_pi057",
+    "document_family_id": "wi_auto_pi057",
+    "split": "test",
+    "title": "Wisconsin Consumer's Guide to Auto Insurance",
+    "source_kind": "official_pdf",
+    "page_semantics": "One-based physical PDF page; native extracted text; no OCR",
+    "source_url": "https://oci.wi.gov/Documents/Consumers/pi-057.pdf",
+    "public_origin_reference": "https://oci.wi.gov/Documents/Consumers/pi-057.pdf",
+    "insurance_domains": [
+      "auto"
+    ],
+    "retrieved_at_utc": "2026-09-20T23:59:57.639167+00:00",
+    "pdf_sha256": "2bb9e72bc5483210bc353982118f9988dfee3f7724f61ff5a531596d26610a59",
+    "physical_pages": 18,
+    "pages_with_nonempty_text": 18,
+    "legacy_sft_exposure": 0,
+    "available_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  {
+    "doc_id": "wi_health_pi225",
+    "document_family_id": "wi_health_pi225",
+    "split": "test",
+    "title": "Wisconsin Consumer's Guide to Health Care Insurance",
+    "source_kind": "official_pdf",
+    "page_semantics": "One-based physical PDF page; native extracted text; no OCR",
+    "source_url": "https://oci.wi.gov/Documents/Consumers/pi-225.pdf",
+    "public_origin_reference": "https://oci.wi.gov/Documents/Consumers/pi-225.pdf",
+    "insurance_domains": [
+      "health"
+    ],
+    "retrieved_at_utc": "2026-09-20T23:59:57.638160+00:00",
+    "pdf_sha256": "aae64417ece7459783d72b28a42bedede54afdbf1b93956921d442c31cb7c03b",
+    "physical_pages": 16,
+    "pages_with_nonempty_text": 16,
+    "legacy_sft_exposure": 0,
+    "available_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ]
+  },
+  {
+    "doc_id": "wi_ltc_pi047",
+    "document_family_id": "wi_ltc_pi047",
+    "split": "test",
+    "title": "Wisconsin Guide to Long-Term Care",
+    "source_kind": "official_pdf",
+    "page_semantics": "One-based physical PDF page; native extracted text; no OCR",
+    "source_url": "https://oci.wi.gov/Documents/Consumers/PI-047.pdf",
+    "public_origin_reference": "https://oci.wi.gov/Documents/Consumers/PI-047.pdf",
+    "insurance_domains": [
+      "health",
+      "long_term_care"
+    ],
+    "retrieved_at_utc": "2026-09-20T23:59:58.078094+00:00",
+    "pdf_sha256": "f3fca20d4e56fd8a763c765aa8c491c2ac88f8e5eda3806c90006e546543d531",
+    "physical_pages": 35,
+    "pages_with_nonempty_text": 35,
+    "legacy_sft_exposure": 0,
+    "available_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  {
+    "doc_id": "wi_property_claims_pi084",
+    "document_family_id": "wi_property_claims_pi084",
+    "split": "test",
+    "title": "Wisconsin Settling Property Insurance Claims",
+    "source_kind": "official_pdf",
+    "page_semantics": "One-based physical PDF page; native extracted text; no OCR",
+    "source_url": "https://oci.wi.gov/Documents/Consumers/PI-084.pdf",
+    "public_origin_reference": "https://oci.wi.gov/Documents/Consumers/PI-084.pdf",
+    "insurance_domains": [
+      "homeowners",
+      "claims"
+    ],
+    "retrieved_at_utc": "2026-09-20T23:59:58.423866+00:00",
+    "pdf_sha256": "ce46b7c9e9c39bc4f453e198ad214119b68fa97547661cb3e096909db24bbfc1",
+    "physical_pages": 16,
+    "pages_with_nonempty_text": 16,
+    "legacy_sft_exposure": 0,
+    "available_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ]
+  },
+  {
+    "doc_id": "wi_renters_pi017",
+    "document_family_id": "wi_renters_pi017",
+    "split": "test",
+    "title": "Wisconsin A Brief Guide to Renters Insurance",
+    "source_kind": "official_pdf",
+    "page_semantics": "One-based physical PDF page; native extracted text; no OCR",
+    "source_url": "https://oci.wi.gov/Documents/Consumers/PI-017.pdf",
+    "public_origin_reference": "https://oci.wi.gov/Documents/Consumers/PI-017.pdf",
+    "insurance_domains": [
+      "renters"
+    ],
+    "retrieved_at_utc": "2026-09-20T23:59:57.584191+00:00",
+    "pdf_sha256": "6e134771e51f2714bab95f3920747896cbb6c8f3b6213d746a1ce65bc655e5d2",
+    "physical_pages": 2,
+    "pages_with_nonempty_text": 2,
+    "legacy_sft_exposure": 0,
+    "available_pages": [
+      1,
+      2
+    ]
+  }
+]

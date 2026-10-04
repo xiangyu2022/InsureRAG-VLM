@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "seconds": 229.77090499992482,
+  "protocol_sha256": "ba7202632890e8abdd35bb7ab6066f64ad770c42e785f6a7e28711de7063723b",
+  "new_pairs": 576679,
+  "reused_pairs": 0,
+  "score_files_sha256": {
+    "finqa.jsonl": "907982ac491b99c5833b0655ecb9097c1ebead8578252f1ae710e494fa3497e5",
+    "fiqa.jsonl": "ee0b3094fac9d35300699130bd9987d470b68791e972435a2a74a85951525256",
+    "insuranceqa.jsonl": "45127cd858fec74fe9dbe24b17b67d4d84f8352d9536058a029883be7c5b409b",
+    "multidomain.jsonl": "31359940cab90599e011fbc00d33d4c80fc26e2b50177a953596fb8422e2717d"
+  }
+}

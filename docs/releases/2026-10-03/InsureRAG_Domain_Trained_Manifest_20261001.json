@@ -1,0 +1,2601 @@
+{
+  "created_utc": "2026-10-01T20:33:25.529128+00:00",
+  "base_commit": "2923b32e728387bfa788788eb731ef83c6e7e60d",
+  "branch": "codex/evaluation-integrity",
+  "github_pushed": false,
+  "deliveries": [
+    {
+      "filename": "InsureRAG_Domain_Trained_20261001_Source.zip",
+      "bytes": 237882085,
+      "sha256": "f5e67bf047e12f55db4de2cd692e13ef19e74f3959bd70dd9af50dfe1faaa2cc",
+      "files": 697,
+      "original_bytes": 658596452,
+      "crc_and_all_file_hashes_verified": true,
+      "files_sha256": {
+        "InsureRAG-VLM/.gitattributes": "e2a89e8a17df78cfea2d367998651e20ecc78e1c16cf7750269656036c896d26",
+        "InsureRAG-VLM/.github/workflows/ci.yml": "b3832cf82310804beee9ff402163566531fe9f7b4cba159102cda22da49dff1d",
+        "InsureRAG-VLM/.gitignore": "7193a8a854fa37ce533e9de4a93b86fdff6928cf45443637cfb1bb1fb3eb251f",
+        "InsureRAG-VLM/LICENSE": "328d7460eb17e6934f2bfa9455bded19332488d62c4f7a7c6b678d1a9edd02e9",
+        "InsureRAG-VLM/LOCAL_REPAIR_NOTES.md": "f0dd8d47b108885990db4a5194484e2c9de99c54e5d92aa854f5ef7b73e40137",
+        "InsureRAG-VLM/LOCAL_SETUP.md": "af9a5ae6bbd2f0d7151b05d73b478083d80495ee6d4897dff4dc8d48353a85ee",
+        "InsureRAG-VLM/Makefile": "51bb259d0040eb2bf281ef937b72d12f60ce212eb2498f47879f644090631677",
+        "InsureRAG-VLM/README.md": "5dfd1e24691a70ffc8ffffaeb57ef23d2ededcec9f3de1e5d6adb0d45d6d3c29",
+        "InsureRAG-VLM/assets/demo/insurerag_vlm_demo.gif": "aeb4dd8cc990210a7b4ea0b1405b64ca2c0dcd321863e33db990cea83b41122c",
+        "InsureRAG-VLM/data/04_curated/dataset_summary.json": "a6814cdf7f295f2cd6c34ff3a0b8f144fb045f1a65cd75afe34ef7cf0bf40111",
+        "InsureRAG-VLM/data/04_curated/rag_corpus.jsonl": "1379e4ec4fbee038ac7e4946114a7420bb5ccb05af489b7a1e993d4a2557373e",
+        "InsureRAG-VLM/data/04_curated/rag_pages.jsonl": "cd89222cbe79add5ac72a8f695ba15d42011f94206dc934b76c6436ce19c2b33",
+        "InsureRAG-VLM/data/04_curated/rag_snippets.jsonl": "5d844f3ddc63aefb954ded0ca073027e22942c39fa1ab48cf9d707cabd365cbd",
+        "InsureRAG-VLM/data/04_curated/sft_dataset.jsonl": "db1efee513b1f67084d89beb14567ad6652f80c7fd42db05ce71d69c25605f5a",
+        "InsureRAG-VLM/data/benchmarks/graph_paths_v1/README.md": "a03ec26325be59011635f40a7dd0aed158044b7885b0eada404a313d910cd0b2",
+        "InsureRAG-VLM/data/benchmarks/graph_paths_v1/cases.jsonl": "350b1cb21ea0161bed58654e508c2e473870a1ce50ccdb65d8d21e477934e767",
+        "InsureRAG-VLM/data/benchmarks/graph_paths_v1/manifest.lock.json": "4c4cef3e1b90f6fc12ba17c7a7adec88e5b003e87d9ae730648aa605dbd7779d",
+        "InsureRAG-VLM/data/benchmarks/graph_paths_v1/pages.jsonl": "af1131a3049ad4613e52e46c2b1e00b2c9736a28d9bbfce388b522dba45102fd",
+        "InsureRAG-VLM/data/benchmarks/hicric_government_qa_v1/README.md": "d3d3ce5b0d5eb63c121f02601397d8a69b54d0275d4a20dbe0b29e68f5fe63ad",
+        "InsureRAG-VLM/data/benchmarks/hicric_government_qa_v1/answers.jsonl": "082bc9d446ae9318fd5d7800c3ceb1cc1cd2fc169a80988667ab887545f2d355",
+        "InsureRAG-VLM/data/benchmarks/hicric_government_qa_v1/extraction_audit.json": "95ffb8dd02325ce390f991ff818281d85d76657c9efaad85eadb0edf99c73d8c",
+        "InsureRAG-VLM/data/benchmarks/hicric_government_qa_v1/manifest.lock.json": "f41791e48e6a18a88caa95ae28073e54371873baa75ae0a16484b4207826f6bd",
+        "InsureRAG-VLM/data/benchmarks/hicric_government_qa_v1/questions.jsonl": "c8d8e1a2fab8f494ee469bb3883d9fef2bd109046b2756032769990e9552772d",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/README.md": "5a8f476f97062f950df3611534ba421bf48e7b3eb91894a67f74009bd9fbbd47",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/answers.jsonl": "50cffb3351cae585e21af23454e9946354eb88ce36028e59e1d1c286e994eda2",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/audit.json": "77776f73075644bc3291f6457204c4b2080d708e2434ca529060f63eea79f2a4",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/manifest.lock.json": "4c46a374c2f5eebd4a2609f030c5fdc0aa660fb5e7a1a653cc198f6cc177fcc6",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/provenance.json": "8c501a5eaca3aa9afa9d9666d60c39285875afabc6ca1c3fe768d25913483998",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/test.jsonl": "85129e408c92e63784453a10e1a6afe1ffef4714170646860859f76488c2ea44",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/train.jsonl": "71cbbf10579a30e070ad22ee44b2c52519e987d1da24ca15f23dccd3202a9671",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/upstream/README.md": "7a158e058a68a70837373fe54998fcc53e6bd7e197ac5f5c8c52807ea0cabaf9",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/upstream/V2/InsuranceQA.label2answer.raw.encoded.gz": "25f63201c51e3e2e5c73ca30da114bf8c77c8f40194550148e469a430cceabd2",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/upstream/V2/InsuranceQA.question.anslabel.raw.100.pool.solr.train.encoded.gz": "7da9e607180ad5c47cb4069c7480cb4eb198ef88f59a2be62383a67ccb2a6981",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/upstream/V2/InsuranceQA.question.anslabel.raw.1000.pool.solr.test.encoded.gz": "519e59478f7afb6ba2c47093af347fb939c97ccdd948d948a0459b7f88f63db4",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/upstream/V2/InsuranceQA.question.anslabel.raw.1000.pool.solr.valid.encoded.gz": "ffef57c3d551d75979455e08e6788fc07f776044c8e78f1c7d997fca886c0bb5",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/upstream/V2/README.md": "c11889c2c2539a56650453a9962bbba95b5d812f20770d41dba8703dd0c3735a",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/upstream/V2/vocabulary": "087ad8bd0254b57711082856b24d3526178b407d6f849798af1e34f599b2557d",
+        "InsureRAG-VLM/data/benchmarks/insuranceqa_v2/valid.jsonl": "acf03a69edc7e11f9c3d114a7fa676dd395b464cacc75aef0d24c131e974c502",
+        "InsureRAG-VLM/data/benchmarks/opm_reference_navigation_v1/README.md": "ff28cb2046903b465abe072c19c94c75b1173d72b501e7d7c2e3e6a7f23bb815",
+        "InsureRAG-VLM/data/benchmarks/opm_reference_navigation_v1/cases.jsonl": "dae56fbc642f751ab6e03c658a847023219a138b1c4d459aa090866270ce76c6",
+        "InsureRAG-VLM/data/benchmarks/opm_reference_navigation_v1/manifest.lock.json": "506c6691a4b99fb5f5936eb3afd654b3d8fe59d911d3db638f51d537add25ec0",
+        "InsureRAG-VLM/data/benchmarks/packet_stress_v1/README.md": "8d269cf6e0b17d9490538b256b42a169795057a2d188be1dcb9f7a17c71ed426",
+        "InsureRAG-VLM/data/benchmarks/packet_stress_v1/cases.jsonl": "bd5edd5c242e134e52b7178af3e6a09f5019fb4c3b297f5d3e9a52761e694dad",
+        "InsureRAG-VLM/data/benchmarks/packet_stress_v1/manifest.lock.json": "2d619fc8582e5890f3b5865d9085d1abf3440fe43ef5a9898f44ea55ec9a3bd8",
+        "InsureRAG-VLM/data/benchmarks/packet_stress_v1/packets.json": "a06ade7fb2f2cd0a5bf5c6aa470059a790164d9a10d81abad8334234e787db93",
+        "InsureRAG-VLM/data/benchmarks/research_v1/README.md": "381269203401c1f40680a28ca782da62bff80dc8e5877d0b415e5a591ade6583",
+        "InsureRAG-VLM/data/benchmarks/research_v1/dev.jsonl": "8e666859f29bc2ad8ad05ef9b1e2cd71a4d08e5b3337605fa5b5941d7f21809f",
+        "InsureRAG-VLM/data/benchmarks/research_v1/documents.json": "7611db67b9122bdd3619e616cfc23d007402f6316274b391279836357f526824",
+        "InsureRAG-VLM/data/benchmarks/research_v1/manifest.lock.json": "e97695307070c6d1974c56644c31cc3b6df8227aa989f370231e628b9f635f82",
+        "InsureRAG-VLM/data/benchmarks/research_v1/test.jsonl": "f4615efc16a3f1d66d8afac27f1d234aa20199812c23b050cf6d5f84b122eeea",
+        "InsureRAG-VLM/data/benchmarks/research_v2/README.md": "cbcbdba9453660011de0fe5bccabeee8ad1486428644987924205ec48830a822",
+        "InsureRAG-VLM/data/benchmarks/research_v2/corpus/rag_pages.jsonl": "3db67d475625c5887f38b1be950fa8fece6f57ad77a84039d845a17c6d17e22f",
+        "InsureRAG-VLM/data/benchmarks/research_v2/corpus/rag_snippets.jsonl": "c928efd760fdcc8091ead249c7122a9a45d3085b17bede2b0adeb20a4a75e8aa",
+        "InsureRAG-VLM/data/benchmarks/research_v2/dev.jsonl": "2f2e29227a555277827fce8f705b1f7d25b914aa1c944ec6d923a33cfa769bf9",
+        "InsureRAG-VLM/data/benchmarks/research_v2/documents.json": "2fd0a3bee6b68fa92869bf8c177c6a78e229e08c6e7116d8cdd115d53a9b80cc",
+        "InsureRAG-VLM/data/benchmarks/research_v2/manifest.draft.json": "e12aefa712753cb25c8d1afe8e058b6e259c46033fb99e4568a25d5bf8663c9d",
+        "InsureRAG-VLM/data/benchmarks/research_v2/manifest.lock.json": "0c849f3bdd2ab17c41b0254822a66f73e2f24707d741fb954d4ecd1f9c36fd4d",
+        "InsureRAG-VLM/data/benchmarks/research_v2/sources/fema_nfip_claims_2024.pdf": "13ff0d9ce9e5f71cffb211ea889a8da4f346b355c0e5317ea24a77b4b7695859",
+        "InsureRAG-VLM/data/benchmarks/research_v2/sources/fema_nfip_coverage_2023.pdf": "32590b3b46b7f8fa8aae89c81656b4ac4c5537db141a8b9b08f80aca1052f51d",
+        "InsureRAG-VLM/data/benchmarks/research_v2/sources/md_life_guide.pdf": "654936be4928bd7350432bc45893417f021cb76858585e871548624911f7271e",
+        "InsureRAG-VLM/data/benchmarks/research_v2/sources/nj_auto_guide_2026.pdf": "80f3c4d7c9b77b86c2e230582577a33c003f82f9eae5c0fb7f235268a9878424",
+        "InsureRAG-VLM/data/benchmarks/research_v2/sources/wi_auto_pi057.pdf": "2bb9e72bc5483210bc353982118f9988dfee3f7724f61ff5a531596d26610a59",
+        "InsureRAG-VLM/data/benchmarks/research_v2/sources/wi_health_pi225.pdf": "aae64417ece7459783d72b28a42bedede54afdbf1b93956921d442c31cb7c03b",
+        "InsureRAG-VLM/data/benchmarks/research_v2/sources/wi_ltc_pi047.pdf": "f3fca20d4e56fd8a763c765aa8c491c2ac88f8e5eda3806c90006e546543d531",
+        "InsureRAG-VLM/data/benchmarks/research_v2/sources/wi_property_claims_pi084.pdf": "ce46b7c9e9c39bc4f453e198ad214119b68fa97547661cb3e096909db24bbfc1",
+        "InsureRAG-VLM/data/benchmarks/research_v2/sources/wi_renters_pi017.pdf": "6e134771e51f2714bab95f3920747896cbb6c8f3b6213d746a1ce65bc655e5d2",
+        "InsureRAG-VLM/data/benchmarks/research_v2/test.jsonl": "9f6ce13cdd51a9315265cb8b1f442f54c11f3f0efd92a9f06092aaadbfb33a1c",
+        "InsureRAG-VLM/data/benchmarks/visual_counterfactual_v1/README.md": "dfe8d016e9d87374e8cf3a06f446a7e9a136d8e5b11ddd2a775e5b57590c2dca",
+        "InsureRAG-VLM/data/benchmarks/visual_counterfactual_v1/assets/visual_A.pdf": "40b53b0b9b17995b224ec7ca45a7347590ddb6848a54fb791b2d009508ef3923",
+        "InsureRAG-VLM/data/benchmarks/visual_counterfactual_v1/assets/visual_A.png": "0ab8b099037c8011e27d842cfbbbaf4018cf65df025cbe728f706817e872e92a",
+        "InsureRAG-VLM/data/benchmarks/visual_counterfactual_v1/assets/visual_B.pdf": "d6bc02d957d802ab12f6ae9915ba1babed09eac2fa1ca86558fa7b27fc8c0027",
+        "InsureRAG-VLM/data/benchmarks/visual_counterfactual_v1/assets/visual_B.png": "4819c6eb824c812f389ee5bbe554c6ce496ba9bb78da100b9703828f264cb301",
+        "InsureRAG-VLM/data/benchmarks/visual_counterfactual_v1/assets/visual_C.pdf": "b93a0136f810db6c27a0652a43a94f365ff7f30dc509dde4a44f2842ea95208c",
+        "InsureRAG-VLM/data/benchmarks/visual_counterfactual_v1/assets/visual_C.png": "38381270f7994478445f8f8899a7d5f624f34ccfa91adcb7be34ffece6ed966a",
+        "InsureRAG-VLM/data/benchmarks/visual_counterfactual_v1/cases.jsonl": "9f318679c8e2de9e32da397f36565356e038f850b41088141f56f1aa4d10ca22",
+        "InsureRAG-VLM/data/benchmarks/visual_counterfactual_v1/design.json": "1c0faea17011bb198b9c146c7a0ac5fc20dca9ec277ba6e66d571bb6d32eed1b",
+        "InsureRAG-VLM/data/benchmarks/visual_counterfactual_v1/manifest.lock.json": "2a2a1d194b45a9b28200ced8963345c745e8ccfccb460d147c9687aea40405fc",
+        "InsureRAG-VLM/data/research_corpus/expanded_public_v1/manifest.json": "0044fd5bfb031c021f7c02ecd2e407046f87ed081e9238e17647b11c2e48ccb3",
+        "InsureRAG-VLM/data/research_corpus/expanded_public_v1/rag_pages.jsonl": "8635244ba52fa8a8db3b59be0bbc0f49aff3eb9c3492bfbb1e5d8bca7cb35ce9",
+        "InsureRAG-VLM/data/research_corpus/expanded_public_v1/rag_snippets.jsonl": "66919dd1264edaaed4024eb228c95c61b2da67b928fe8070c71f1ee368259644",
+        "InsureRAG-VLM/data/research_corpus/hicric_public_v1/README.md": "d5fc7cbb2f0a9e15518d93a22e0d295520b8c47fb03c94d1bd8475c0eff1453c",
+        "InsureRAG-VLM/data/research_corpus/hicric_public_v1/UPSTREAM_README.md": "8690473304b9834add30d74892057e3b33c929a5901899651f460cda4e43816e",
+        "InsureRAG-VLM/data/research_corpus/hicric_public_v1/manifest.json": "7770250b6a456ba9cfee852e19f0d2776a1331a6f02b5f2db4cb005f3fd9228a",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/acquisition.json": "c231858eb6cd639921f7cf8fb61624bb1b9d77edb9161ba0978a3d61d2c4ab53",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/extracted/opm_2026_71-004.jsonl": "8a0a5e5e39d3ad9fbbc71425c99a0c1d93c5e473b6b80e03eda53cb356cec749",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/extracted/opm_2026_71-006.jsonl": "7831b9e0599294c7001aa694590c12846c68be54614e2050583e64fd832bb1fe",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/extracted/opm_2026_71-014.jsonl": "375f7213f14b320836078a3517164d0123576f6a797c9db52ef77fb86306bca5",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/extracted/opm_2026_71-015.jsonl": "55b526668fe201a0fefbc0a114db15d25e1de10a99a564c886dbcbad071fcf81",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/extracted/opm_2026_71-024.jsonl": "de1d19b2090d9f5afda09f1a9d45de2547f44c100efbfda05734d05413ef5117",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/extracted/opm_2026_71-027.jsonl": "4aa8d733e9b401d35783b8bb173c1bfa20622c6a45ab25b34b00e5433f4ce466",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/extracted/opm_2026_71-028.jsonl": "d1e812e9e383c82c741be02112a3f24ebb79a6529f9ad2656c32ec8a282e81a8",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/extracted/opm_2026_72-001.jsonl": "45ae8c1d59d604cfa78d98d51863258bb63f70094372ecc07eda7a1d3b7d3188",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/manifest.json": "1eafa206d8d16b36e49b040fda46f9880d4ba41e032ba4953799cf193a61c54c",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/printed_page_maps.json": "79f044a8ee4384b47d62c957b34a4fa0103c12abf9e0f2c2d1486592089374c9",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/rag_pages.jsonl": "478856e828a170bf119b093e9a5170de9e1d1cca5dd9487299e2734215afa6eb",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/rag_snippets.jsonl": "1352807048e9466e732ddd3ad6848331390b8cb01e2d61a0330a33127f1608eb",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/reference_annotations.json": "ad291b55d497b2b3f4982fef05a8831c1b41df17426982b887b91e5371126a64",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/rejected_references.json": "16c7152592c179129ecebcfcb59821c241007334eaaa2745ed3f01c0e02946cc",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/sources/opm_2026_71-004.pdf": "87c2e63e0005c0f806df50007ac3f323e71aff3780448dbe124e9ba021dad9f3",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/sources/opm_2026_71-006.pdf": "84ae6e29cb2f65c1f56a7f7e1191a813cdd1aec0bf8978a5de57a98660b5a21a",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/sources/opm_2026_71-014.pdf": "c93430bcc42e9ada4799d964e4bb95817827d069c96fd031f637bd1deeab222f",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/sources/opm_2026_71-015.pdf": "91541648b9ad4eb2743fa4612b97802bed475efd9b0fa4176d6fe74e2fe69b77",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/sources/opm_2026_71-024.pdf": "93cb62cb8b41ea354f62928423e3b7f5c4dcbaa30e12122604a0bba5cdaad6e1",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/sources/opm_2026_71-027.pdf": "e5966e3e882b15758192d9af8e78e177958e7b2e0dc2eaa6b9d861de6d8ec702",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/sources/opm_2026_71-028.pdf": "05e71a2e92d83681ce4eaef0f39234d7ef8bf28de1779c9f136948ea83b60b56",
+        "InsureRAG-VLM/data/research_corpus/policy_wordings_v1/sources/opm_2026_72-001.pdf": "a4405dd58ea865fc4991a564cbef031316248134aaa603a6b6bdefeeb170a7f7",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/manifest.json": "257bb2bbf3eb1f6b1292221c3f186637eed0b4cc8e7d6310bce6f167ad36610d",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/rag_pages.jsonl": "22814aab59fd8ec8ab4073c3f8b06587387415e0537b3112f6bb906f178b44c6",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/rag_snippets.jsonl": "ad5a23bd189d0b717fe5c9c37bfeac275a05bef313e8785af424fe4c67d88a10",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/fema_nfip_claims_2024.pdf": "13ff0d9ce9e5f71cffb211ea889a8da4f346b355c0e5317ea24a77b4b7695859",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/fema_nfip_coverage_2023.pdf": "32590b3b46b7f8fa8aae89c81656b4ac4c5537db141a8b9b08f80aca1052f51d",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/md_life_guide.pdf": "654936be4928bd7350432bc45893417f021cb76858585e871548624911f7271e",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/nj_auto_guide_2026.pdf": "80f3c4d7c9b77b86c2e230582577a33c003f82f9eae5c0fb7f235268a9878424",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/opm_2026_71-004.pdf": "87c2e63e0005c0f806df50007ac3f323e71aff3780448dbe124e9ba021dad9f3",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/opm_2026_71-006.pdf": "84ae6e29cb2f65c1f56a7f7e1191a813cdd1aec0bf8978a5de57a98660b5a21a",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/opm_2026_71-014.pdf": "c93430bcc42e9ada4799d964e4bb95817827d069c96fd031f637bd1deeab222f",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/opm_2026_71-015.pdf": "91541648b9ad4eb2743fa4612b97802bed475efd9b0fa4176d6fe74e2fe69b77",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/opm_2026_71-024.pdf": "93cb62cb8b41ea354f62928423e3b7f5c4dcbaa30e12122604a0bba5cdaad6e1",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/opm_2026_71-027.pdf": "e5966e3e882b15758192d9af8e78e177958e7b2e0dc2eaa6b9d861de6d8ec702",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/opm_2026_71-028.pdf": "05e71a2e92d83681ce4eaef0f39234d7ef8bf28de1779c9f136948ea83b60b56",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/opm_2026_72-001.pdf": "a4405dd58ea865fc4991a564cbef031316248134aaa603a6b6bdefeeb170a7f7",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/wi_auto_pi057.pdf": "2bb9e72bc5483210bc353982118f9988dfee3f7724f61ff5a531596d26610a59",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/wi_health_pi225.pdf": "aae64417ece7459783d72b28a42bedede54afdbf1b93956921d442c31cb7c03b",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/wi_ltc_pi047.pdf": "f3fca20d4e56fd8a763c765aa8c491c2ac88f8e5eda3806c90006e546543d531",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/wi_property_claims_pi084.pdf": "ce46b7c9e9c39bc4f453e198ad214119b68fa97547661cb3e096909db24bbfc1",
+        "InsureRAG-VLM/data/research_corpus/scaled_public_v2/sources/wi_renters_pi017.pdf": "6e134771e51f2714bab95f3920747896cbb6c8f3b6213d746a1ce65bc655e5d2",
+        "InsureRAG-VLM/data/research_corpus/source_linked_public_v1/manifest.json": "93422b6913d125edfcea01684a2933a19402194dda258667637122a9a2b7fbd9",
+        "InsureRAG-VLM/data/research_corpus/source_linked_public_v1/rag_pages.jsonl": "cf551844a04c66b2afa58c1b001d5ed185cf22ec8e4be51190dc105fbf74ffd4",
+        "InsureRAG-VLM/data/research_corpus/source_linked_public_v1/rag_snippets.jsonl": "66919dd1264edaaed4024eb228c95c61b2da67b928fe8070c71f1ee368259644",
+        "InsureRAG-VLM/data/research_corpus/source_linked_public_v1/reference_annotations.json": "c73784b4c8e98f2d92cef9f32b191cf048182ab6ec4b3afa0bedcf5ca355b27e",
+        "InsureRAG-VLM/data/training/insuranceqa_hardneg_v1/decontamination.json": "16c5899c383565a8ec49d4056d523f39ac4dbade314399c6d2af75bd14d6e383",
+        "InsureRAG-VLM/data/training/insuranceqa_hardneg_v1/manifest.lock.json": "7303e4bb4f143c813af9baf05789455db65100e688d54d8746e0b0ea44a036e3",
+        "InsureRAG-VLM/data/training/insuranceqa_hardneg_v1/train_groups.jsonl": "4e15cb1e054dbf787e817f9fbde5041146e3ae5ca416bf4b941c06d13d7bfdbc",
+        "InsureRAG-VLM/data/training/insuranceqa_hardneg_v2/decontamination.json": "918d9299117cd0bea6fe7672fd42b3e34ee5bb0803acea8d14d2d73dae64b5e3",
+        "InsureRAG-VLM/data/training/insuranceqa_hardneg_v2/manifest.lock.json": "7bae2f9990831396c8f347ae23952e640c6f9a3a07937a8bf5436c998ed36c01",
+        "InsureRAG-VLM/data/training/insuranceqa_hardneg_v2/train_groups.jsonl": "b9247169f7503cdcdc1b68bdc539551ec8477a3feb469d9519f689c49f481b78",
+        "InsureRAG-VLM/docs/BENCHMARK_SCORING.md": "b540d165e2280bfe74b2a57c7dd43b91386b0f59393639ae0830a28e5d8133ee",
+        "InsureRAG-VLM/docs/BENCHMARK_V2.md": "bdbe8ef57bca9f17b9851415c3c19af901a70d2edc99269e62a30c9236367cdd",
+        "InsureRAG-VLM/docs/DATA_SCALE_RESEARCH.md": "d7fbe8d47011308ca44d3ab8bfd8257dc0715c5d7ee4571782bdaf51df63771a",
+        "InsureRAG-VLM/docs/DATA_SCALE_UPDATE_ZH.md": "f10c92707c9eb31d68278685d2a2f16bf4d550ec0e1068ca68daecad73e3772f",
+        "InsureRAG-VLM/docs/DOMAIN_TRAINING_REPRODUCTION.md": "355d43054009fe63559eb81c9df41c660087feccabefafa1c2ecf8b022e5a133",
+        "InsureRAG-VLM/docs/DOMAIN_TRAINING_UPDATE_ZH.md": "6ff1ab9da9c890c141d8e87c0e210571e3ce361333543b0667a704158c99747b",
+        "InsureRAG-VLM/docs/GRAPH_RESEARCH_PROTOTYPE.md": "4bb6d8abf3271a7559fa48719074740498832e645a042320f466d46540d3045d",
+        "InsureRAG-VLM/docs/KNOWN_LIMITATIONS.md": "8f782fd2fc8a325f7d2a1d4b2554615ea4b76c1ad04013246fc9e902411fab47",
+        "InsureRAG-VLM/docs/NEXT_EXPERIMENTS.md": "70753105c8594705bab2c7fa777421b780484d28e9aecfe523a5e87c3860e3a7",
+        "InsureRAG-VLM/docs/QWEN35_LORA_SMOKE.md": "052338efed25a99a3db5579da3285775076de0cdcbb58bd79945bcbe4763cdd6",
+        "InsureRAG-VLM/docs/REPRODUCIBILITY.md": "15be3ea99b6f262ea73e351dbd41d7d88483a17c6069c7c0ab5c54cdf83cdbda",
+        "InsureRAG-VLM/docs/RESEARCH_UPDATE_ZH.md": "e7b32078c77566b531975d4b41b5514089637bfffb0c6e9a63dbbb3d7cf18640",
+        "InsureRAG-VLM/docs/RETRIEVAL_FUSION_UPDATE_ZH.md": "66f2bd5d7f4411439ef0b7c101f7b417ba8ec1d41d8b4777143dbd1b508f6424",
+        "InsureRAG-VLM/docs/RUNTIME_MODEL_CARD.md": "3e5d8446e3e200762e3041c3bd5516dc5add9fec41e786beda57e5b0f0aeb19f",
+        "InsureRAG-VLM/docs/assets/data_scale_results.png": "676637150669af3067cf6b0ef8170702dcae38a76842a2fd96d2de1952c74932",
+        "InsureRAG-VLM/docs/assets/domain_training_results.png": "82c46f7deaedc451c511ae1b11202a88c0588316f16c90e259ae49ce79160257",
+        "InsureRAG-VLM/docs/assets/graph_research_results.png": "c92a23800725f59f9d85f9530bb2952659529c6fdef0cdf953cc1cadc9aecb38",
+        "InsureRAG-VLM/examples/packet_manifest.example.json": "d072c58ec0388631b5bf916654c6ebe623e47655f3ba1da8a391c82b1dc75bbd",
+        "InsureRAG-VLM/examples/policy_packets/auto_001/base_policy.txt": "e122427b7e942b340733dcf6ed6e11eff27589e4d27961ff2ea509b399d15140",
+        "InsureRAG-VLM/examples/policy_packets/auto_001/declarations.txt": "e4d03d532eabc0cb854f1341ec27ac7f0665da8cb7dceed8e571705db83a4be0",
+        "InsureRAG-VLM/examples/policy_packets/auto_001/rideshare_endorsement.txt": "cd37690fc929b808ead6732bdfcebffade8efb43147fcab03fcc68a44f45dace",
+        "InsureRAG-VLM/examples/policy_packets/auto_001/vehicle_schedule.txt": "befd2dd35a48a8c1a18b1a3b3183d3a732754a351082205412f475ec0dc2e2f6",
+        "InsureRAG-VLM/examples/policy_packets/homeowners_001/base_policy.txt": "f25e89a90d569b17ee05bd826ec5edfe6ee31740ef6b6490be97295009b083d3",
+        "InsureRAG-VLM/examples/policy_packets/homeowners_001/declarations.txt": "ad856f7f674081ccfe57a9800f60084ec34edf04e41c4366d1d8f5c3ebf14ddf",
+        "InsureRAG-VLM/examples/policy_packets/homeowners_001/property_schedule.txt": "8fdfc49cddde9f1d3418f56545ee20b909d4331d5eca1feff255e6ec620ce121",
+        "InsureRAG-VLM/examples/policy_packets/homeowners_001/water_backup_endorsement.txt": "2a7ada89c5506d03716375c60ba5fca17bf808e5d939b52ffb82ed046f0538a8",
+        "InsureRAG-VLM/examples/policy_packets/packet_manifest.json": "c2cb96f04209cd55a16eeae220870cbf954e44692dea6cbfb8c119e4e8903cf9",
+        "InsureRAG-VLM/examples/policy_packets/renters_001/base_policy.txt": "c367456275b5d9cc681105159414f355306a06f9e406548d1c74bc3919347aef",
+        "InsureRAG-VLM/examples/policy_packets/renters_001/declarations.txt": "bb670f22762bc7fb2c3b73695bfd40c29bc1f28d5489573f2e71cedbecd6ba72",
+        "InsureRAG-VLM/examples/policy_packets/renters_001/identity_theft_endorsement.txt": "57ecf89890eab82cd33956d665310293571c4ce8071b934e44517f1655b30c12",
+        "InsureRAG-VLM/examples/policy_packets/renters_001/property_schedule.txt": "faef90e7e401f23d8bd7abf32f426132f7278b0a128f2f35f79bca3c9e89696c",
+        "InsureRAG-VLM/examples/policy_packets_usage.md": "803c4497b2dc1925b372206f625bf89b26ef7cd68d1d27b93a3e0a26fe9d64ef",
+        "InsureRAG-VLM/main.py": "3edd155a20fa9854babf9aa75fca606ce647e34b0e13d69657f3573724b8fe0a",
+        "InsureRAG-VLM/notebooks/colqwen2_gpu_embed.ipynb": "0685bf35ed4b4bca026e110628f7692ae7b5198989224db698e28e55bb07573e",
+        "InsureRAG-VLM/notebooks/insurerag_vlm_end_to_end_demo.ipynb": "f216a90ece47f4545d55ca6056335d30398cf9787a4f8cf8a01df88799edec32",
+        "InsureRAG-VLM/pytest.ini": "c809c969ec7e11b9ff37784e9c6fcc0b7c5148d168e18b05aed797e03fbd6ead",
+        "InsureRAG-VLM/reports/ablation/answer_metrics.csv": "cfcc3caa4f9182fb7b8915487551abcea5771c14971a01d636e0d6ab3e58a4ec",
+        "InsureRAG-VLM/reports/ablation/error_cases.jsonl": "df4134c1144d322a59da3e572c676bc0055c01e72de41f9d6ebe5f8287fa9988",
+        "InsureRAG-VLM/reports/ablation/retrieval_metrics.csv": "190d98bd4d40c8a241f61f080a5c6273ccc9480a2208232204ce6add6b4b8d99",
+        "InsureRAG-VLM/reports/ablation/summary.md": "04fd2017e81fa4cfcff02b1a6265be14d3771bfd46b5382b46543b52d291a568",
+        "InsureRAG-VLM/reports/ablation_real_pdfs/answer_metrics.csv": "d30139e0a0461181e4c8b5d519df2da3ce72bb381b3e5213deda3ed94bf2e79b",
+        "InsureRAG-VLM/reports/ablation_real_pdfs/error_cases.jsonl": "8d9922a6ce2826b738dbbeee587be65e946ce0c0c03e206b99890b2c8507f967",
+        "InsureRAG-VLM/reports/ablation_real_pdfs/retrieval_metrics.csv": "760e5f2448e6acb7b44ca35939d44f76212ccff6060420cec39fe640f8281473",
+        "InsureRAG-VLM/reports/ablation_real_pdfs/summary.md": "d1f2b981bfbb23d0b1b4ae500727cfaca3de36232b37ecfbebac3857bf2196df",
+        "InsureRAG-VLM/reports/application_integration/README.md": "19cf251596cd0f2d96d1b22d75c519c009ee26f53290c2e6fceb1d7397ea134f",
+        "InsureRAG-VLM/reports/application_integration/ingestion_after.json": "f4e3a671fc7049fcb5f176e08de5cd2c0f29820bee8efff6348af9d25156df34",
+        "InsureRAG-VLM/reports/application_integration/ingestion_before.json": "40c541d5a0c8f08f06fda0ad76884ef6c266b06a02a9db5be2b7e1e1afd8299e",
+        "InsureRAG-VLM/reports/application_integration/public_guide_v3.json": "d45e370255a6f049796ac34789ec5b043e3239a1bd08a8b51b9633f3d9bea56f",
+        "InsureRAG-VLM/reports/application_integration/public_guide_v4.json": "0f733ed809d058685c375fe9111df7753dea64a0693ec5f59e54c565f7660dba",
+        "InsureRAG-VLM/reports/calibration/calibration_curve.csv": "ce90ce45027166b491b45fcdd493a61eb88bedca53f72d8b945fe89af07e0c4a",
+        "InsureRAG-VLM/reports/calibration/calibration_scores.jsonl": "cb72f594f702a1435f66eca2874247ff19301f3144475d18ba9fcc7962bdf21f",
+        "InsureRAG-VLM/reports/calibration/summary.md": "c603744b305dd6ef2050fafb73f8ac00ad808cfcacab87d2ef38775719f102c9",
+        "InsureRAG-VLM/reports/calibration_real_pdfs/calibration_curve.csv": "4b8ce273b159935973befc336f2b6079a6edaeeb516f59d05f8adbd05fa4404a",
+        "InsureRAG-VLM/reports/calibration_real_pdfs/calibration_scores.jsonl": "b72f5aeda7186ab346f6513ceb326714054dfc4b3c02e1ea83781c936e6850b1",
+        "InsureRAG-VLM/reports/calibration_real_pdfs/summary.md": "31e80964ff9b36bedeb51e72d8650f0f2e49eb64b7b1813d1807fa3d33f2c46b",
+        "InsureRAG-VLM/reports/citation_preview_v1/README.md": "4ba61e4d11c280668c10e5f483ee106732041e02b3a84b253b0bf1c2876c6cc8",
+        "InsureRAG-VLM/reports/citation_preview_v1/run.py": "9f3c60befeece76b1e655b496c61e1bce03077ebb873a9ce739455c5d304a73d",
+        "InsureRAG-VLM/reports/citation_preview_v1/run_01/attempt.md": "31187bcc53e0ecbc9d4e6569b001fd11364c4d0d3b72659b1df2e1f7bfe21786",
+        "InsureRAG-VLM/reports/citation_preview_v1/run_02/results.json": "d1b31948cc3e3bf2610c595239c303a76b2b04d1d3abf366eee33b7d4b493782",
+        "InsureRAG-VLM/reports/citation_preview_v1/run_03/results.json": "21bd2140c425733bc278366d7c9420debfc084ba7910d94f230b907057be7d17",
+        "InsureRAG-VLM/reports/data_scale_v1/app_smoke.json": "77605edb9adb6c9769c0d8c51e98bbd4c72c14ede20dbb834c0c195037e9585c",
+        "InsureRAG-VLM/reports/data_scale_v1/app_smoke_before_address_fix.json": "3453e36c0be9499a110f5f3524aaa96b2753e511bd0f23f9de2ee230b022a46d",
+        "InsureRAG-VLM/reports/data_scale_v1/cuda_environment.json": "000639d61cf45c1c6b8071a46eb33f81af9dc202a46bc685f49ae3d751a950f7",
+        "InsureRAG-VLM/reports/data_scale_v1/frozen_implementation.zip": "8dd6dd6da9a923e7fd9e8ad4ceab09fda8f6554058e50dd1dcbcc9f516d51fc4",
+        "InsureRAG-VLM/reports/data_scale_v1/graph_address_fix_audit.json": "fc5c509286ddfb3794047ca5d30b747d20d0576eff0a5f891fae1b3423c9c7cd",
+        "InsureRAG-VLM/reports/data_scale_v1/graph_before_address_fix.jsonl": "b9c8b085506aecb1517e079a8704b1040165ccfb0796630581024e4a01f89c8c",
+        "InsureRAG-VLM/reports/data_scale_v1/verification.json": "7fadf60fa324545436fcede0d2edb2513e3c9de5718bab71f7d80002992e7a21",
+        "InsureRAG-VLM/reports/data_scale_v1/verification_prepackage.json": "73758d2134cfb26dde2ca5f7e01596bf42402ebe7a2417850522cefcb065a7d2",
+        "InsureRAG-VLM/reports/data_scale_v1/visual_source_review.json": "d40bdfa9c1fafaa2e32f5fad321eb4d1d658e3ddf0bb9c8b0c501079f08c234a",
+        "InsureRAG-VLM/reports/diff/diff_summary.json": "cfdac165391b8398b95dc28760aea7ad12b2b5c95b021a3c77a14e6e020ffc08",
+        "InsureRAG-VLM/reports/domain_training_v1/NOT_SELECTED.md": "0616fd27ed04636bcc36fe3d34ef02dfd1642bc0e0ca7d83417e3256bfb3616e",
+        "InsureRAG-VLM/reports/domain_training_v1/checkpoints.json": "77175bc42794eae35cdf85c7dfafa609cc2bac4bde70a771a4d77cfaa0ab2d20",
+        "InsureRAG-VLM/reports/domain_training_v1/completion.json": "94d5897c6330c3d1abbac6dba1d682640b7544a7b3a2052879940eeec75bad78",
+        "InsureRAG-VLM/reports/domain_training_v1/protocol.json": "f585dafcf989b7ddb78170924065359220ae15623a1bdead84d97c194790001a",
+        "InsureRAG-VLM/reports/domain_training_v1/selection.lock.json": "b7e8605407b78df93afbf96fef2c1faf19b58d6ff16daf51e6139f2170f240bc",
+        "InsureRAG-VLM/reports/domain_training_v1/selection_protocol.json": "06e91ea1c94d09f2d4118af73be4acdee4e6913f5a276e5a7d090b3524712a33",
+        "InsureRAG-VLM/reports/domain_training_v1/test_selected/protocol.json": "e78783710ffb9457f4499a0413fcac65f0e70e9dcd4ef79811792a7f2cdf63f3",
+        "InsureRAG-VLM/reports/domain_training_v1/test_selected/scores.jsonl": "6f2a5e15c0bcf5acbfbd819b8a1f92a0bedb962944cf782e5a6e6dc693969fb2",
+        "InsureRAG-VLM/reports/domain_training_v1/training_log.jsonl": "f6b93d56d8e7fc1902d07a234a6bb43c2866b63f4a9a698a36f8281604d10cd0",
+        "InsureRAG-VLM/reports/domain_training_v1/valid_epoch_1/completion.json": "26ca0a2bb4aec0c494d218924c5ea092c058924c104e94685541768ce03d8b69",
+        "InsureRAG-VLM/reports/domain_training_v1/valid_epoch_1/protocol.json": "3146152d45dc1eb770e53c88a3fd2a67a10b4aea43f4159768123b4c7614e429",
+        "InsureRAG-VLM/reports/domain_training_v1/valid_epoch_1/scores.jsonl": "27e1979d7e678c93b71d7ffb862748f4a524968f0af8ae3bc96cb59c36827227",
+        "InsureRAG-VLM/reports/domain_training_v1/valid_epoch_2/completion.json": "d5eafa53517a3f58df66010755c4d92a7816b84d4a9c6a219dc3604e26cac334",
+        "InsureRAG-VLM/reports/domain_training_v1/valid_epoch_2/protocol.json": "2039625e584a4d15fb412872ed475390248150189613b1e1dec29c1b550269d0",
+        "InsureRAG-VLM/reports/domain_training_v1/valid_epoch_2/scores.jsonl": "8f735e19590e14776a133a2eaa29bf22a7d68d885021d6c60c103f3fb64df3a8",
+        "InsureRAG-VLM/reports/domain_training_v1/valid_epoch_3/completion.json": "e2eb9cd038c25cb1a112a806c6134fd807d8c9d07ca6ea300dc5b6a8663aaa6d",
+        "InsureRAG-VLM/reports/domain_training_v1/valid_epoch_3/protocol.json": "6c21cb1cf23516ecd1f6404722cc310f2b7ff3bd02c417d73d59d7acc712e4e0",
+        "InsureRAG-VLM/reports/domain_training_v1/valid_epoch_3/scores.jsonl": "c7d0e2bfb7d7696dea50a1f0fa5ba1778041d41a048ce98e353d4127d269bdc4",
+        "InsureRAG-VLM/reports/domain_training_v1/validation_sweep.json": "2bd55d468443143ecb4e0299aaef818ec7c7b0afceb4df5719c1551c7ee9e231",
+        "InsureRAG-VLM/reports/domain_training_v2/checkpoints.json": "568dc70cff8007939616f23fa5d5c43435cedfab6c80ceed3f118b1690a1dec4",
+        "InsureRAG-VLM/reports/domain_training_v2/completion.json": "e33d82d1a92e6e71123e44997fc7dbaefd6fb5a7daa4a965f9aeb65240bf9540",
+        "InsureRAG-VLM/reports/domain_training_v2/error_analysis.json": "caeb476b1dd15b940e874fc712557038a12b86647f2a2b0961cd25e6f4ba89c1",
+        "InsureRAG-VLM/reports/domain_training_v2/government_source_audit_before_inference.json": "04b2da91ac230883c97106fcac4d345b4d6bb0beb89f0dcd8df0a7c4c97afe31",
+        "InsureRAG-VLM/reports/domain_training_v2/government_source_review.json": "1f9d92b2d20c38da0ffee40e059017cfb7c81d2c92d7aef31c47f6322d0bb9bc",
+        "InsureRAG-VLM/reports/domain_training_v2/interactive_faq_smoke.json": "a58a772045919d912b7e2fbebc573e7b5e58ae89399cf5310c370c9682fbba1b",
+        "InsureRAG-VLM/reports/domain_training_v2/interactive_faq_smoke_v2.json": "9f142267a63b20b631b3201a9dadb639c06d667312619bd5301853da4f75f146",
+        "InsureRAG-VLM/reports/domain_training_v2/interactive_hicric_general_smoke.json": "9631e24029c911ef0801e852fe16b3361fa0d091cac189c4c7361e00396c2612",
+        "InsureRAG-VLM/reports/domain_training_v2/interactive_hicric_trained_smoke.json": "75a6cd844e461316b8bf7c6cc071912f2f280883bd08f68c4e318f8ede68c664",
+        "InsureRAG-VLM/reports/domain_training_v2/protocol.json": "497db8286ac41be5948ef27ce754939d76c4559febceb31bbde98a670af28d9d",
+        "InsureRAG-VLM/reports/domain_training_v2/pytest-full.txt": "265e5641bb59912f15c854333aeb51a8cb4d8a45403f694f2df0528f2eaf08df",
+        "InsureRAG-VLM/reports/domain_training_v2/pytest-minimal.txt": "79ffda51d6691e228335ad999e3df01b5e8a7137fb5b318366fa0bceddc22fd1",
+        "InsureRAG-VLM/reports/domain_training_v2/query_smoke_verification.json": "137cf7ff9b06da8d99e4b0898ca330dcd80de5fd0ea8803222c7756dac850431",
+        "InsureRAG-VLM/reports/domain_training_v2/selection.lock.json": "0226eb054a9a61baa62f9f05981a35707268e6a0a92c7dfb8034a0123ef0769a",
+        "InsureRAG-VLM/reports/domain_training_v2/selection_protocol.json": "0fc3ae43236613511d2e339ae537ea1e65f05569bda4cade0c0c71b35e3f5cf4",
+        "InsureRAG-VLM/reports/domain_training_v2/supervision_exposure_audit.json": "63ab3ba16c8cc3adc602f47af80cef87f037f15e6d4838abb07facf7f3be98ad",
+        "InsureRAG-VLM/reports/domain_training_v2/test_evaluation/predictions.jsonl": "bdc6cabc93f29ab89e11ef26d78c08c63ce6a6eacc1d19129560869421b749a8",
+        "InsureRAG-VLM/reports/domain_training_v2/test_evaluation/summary.json": "52da1494e79b442f2c534103dcfece14b4949cfd60d40924e902bf696bc1faa3",
+        "InsureRAG-VLM/reports/domain_training_v2/test_selected/completion.json": "cf8c817af85a7e261d52941d2f0532db922ef26a2204db70b28e941d346e8efe",
+        "InsureRAG-VLM/reports/domain_training_v2/test_selected/protocol.json": "3b04dc045cf4f7f420a403314bfa3ab17886467da07fac2ac6e968f21c62e51b",
+        "InsureRAG-VLM/reports/domain_training_v2/test_selected/scores.jsonl": "b21b3a5654d33b27c7a36b98602e2dca3f75529e737761f26b417c6c949b5f73",
+        "InsureRAG-VLM/reports/domain_training_v2/tests.json": "89245f43af09e33f05d32c6e018a57d960cb59fb668f0f003dd509d145140f4b",
+        "InsureRAG-VLM/reports/domain_training_v2/training_log.jsonl": "7e4c48f8cdea5c94dfd558926f2de059a12b2caa6ebc307190af0b7e02e112b3",
+        "InsureRAG-VLM/reports/domain_training_v2/valid_epoch_1/completion.json": "66b5d6f8649f7ded1c8326df5a1be65b90dd59fddfae9158ceeb51d1894525db",
+        "InsureRAG-VLM/reports/domain_training_v2/valid_epoch_1/protocol.json": "4d4bf8481fb592659295c1d5cd71f6a9b50325610b8811625d1041ad0454971b",
+        "InsureRAG-VLM/reports/domain_training_v2/valid_epoch_1/scores.jsonl": "cd03bc325747ac8f9b29237ef43e8c0b8928186c3c17718aa8aaf0ef287a420c",
+        "InsureRAG-VLM/reports/domain_training_v2/valid_epoch_2/completion.json": "fb8028309a0438868d100ab8522f8ad2c6e42de6df9e6fa8366e690f3ceeb72b",
+        "InsureRAG-VLM/reports/domain_training_v2/valid_epoch_2/protocol.json": "52c54aaca486190aae03d69b00b2e2dcff19611620a25e08f44753fbff380629",
+        "InsureRAG-VLM/reports/domain_training_v2/valid_epoch_2/scores.jsonl": "4e138acf4faa601fdfc0c5fe9b93bbf9635d7b37cc75fe750c0e90cd30a6e74f",
+        "InsureRAG-VLM/reports/domain_training_v2/valid_epoch_3/completion.json": "d673dfe188429d320692a013371a7fad49ec35076a9256a360971864a0c78e0e",
+        "InsureRAG-VLM/reports/domain_training_v2/valid_epoch_3/protocol.json": "2b58a65e1828741d645664bcb8d98ad00026aca364ce5192d13830bf19a463b7",
+        "InsureRAG-VLM/reports/domain_training_v2/valid_epoch_3/scores.jsonl": "3405ce9692349b436f78041ef92aae8f581032189a06b3676a702f6611691465",
+        "InsureRAG-VLM/reports/domain_training_v2/validation_sweep.json": "6e4767617e9c0ad46a6deeb0841a868638c48416fb4d6a714b2948ff58e51564",
+        "InsureRAG-VLM/reports/domain_training_v2/verification.json": "0c28b2840f7acde2cd053ab286706a44bf791a55f872e6412619876afe4be4da",
+        "InsureRAG-VLM/reports/evaluation_audit_2026-09-20.md": "d73dcff6fbd60f907c5b21003b07bcc7c100f4ad777d53aed9bffd2b6f924ccb",
+        "InsureRAG-VLM/reports/expanded_retrieval_v1/scaled_public_regression/INCOMPLETE.md": "04e24b884f3692805dd7fe911406556ee80d0f7e8b0e6a4ef8598067f27787b4",
+        "InsureRAG-VLM/reports/expanded_retrieval_v1/scaled_public_regression_gpu/predictions.jsonl": "d82a2d29b6ed13e82984a2b5d58149b91c06e2e83d98e46cbd50612d2cb71e2b",
+        "InsureRAG-VLM/reports/expanded_retrieval_v1/scaled_public_regression_gpu/protocol.json": "11fde2a1a1d1aa7031a743f890ff1445ab77aaee732394c333d5d47fb0820a32",
+        "InsureRAG-VLM/reports/expanded_retrieval_v1/scaled_public_regression_gpu/summary.json": "6f5856501d92bf05225e676458d7715d5cef72cfd8cf0e5b03e92f9de073a5a6",
+        "InsureRAG-VLM/reports/expanded_retrieval_v1/source_links_exploratory/predictions.jsonl": "96b82d7464c059ecd6082f6e3bf33cfbb124b56a21d01930c94f0b9e8a25e9ad",
+        "InsureRAG-VLM/reports/expanded_retrieval_v1/source_links_exploratory/protocol.json": "542cbcb721774d5077d3458020bb9f54ffb9ba035542a74f9d74039fef1046b1",
+        "InsureRAG-VLM/reports/expanded_retrieval_v1/source_links_exploratory/summary.json": "fb2b1da837a2aedfe9084705d80ea84360473bc6588861394e2bcb3a4e25a9b9",
+        "InsureRAG-VLM/reports/expanded_retrieval_v1/test_frozen/predictions.jsonl": "657e514f49b8783cf1a17075cae52601186d6d8c8dda2fa94c8d18f5a4b05eaa",
+        "InsureRAG-VLM/reports/expanded_retrieval_v1/test_frozen/protocol.json": "787a659511a4b2f33b0beb9b1385adee955bf067570e0b7ba6a94a2356019f26",
+        "InsureRAG-VLM/reports/expanded_retrieval_v1/test_frozen/summary.json": "409475efce8d90b1ae631c4d5b79d41c662214c0739cb5f67708725362f8fdc8",
+        "InsureRAG-VLM/reports/external_sources/hybrid_rag_data_audit.md": "369e719b2f7d77684f1fc884d45546c28db035df5984ecd51d8d9b9ddd5236e8",
+        "InsureRAG-VLM/reports/external_sources/policy_packet_real_sources.md": "5bafa7d9e3cfb69e9af3d02835d323e617f59fea00b77af1543d7b3e016ad8a2",
+        "InsureRAG-VLM/reports/external_sources/state_doi_coverage.md": "bacadff31e674bd39fd3fa6dc301aea55d7fae233a94d5a6889383d593781f56",
+        "InsureRAG-VLM/reports/external_sources/state_doi_policy_curation.md": "34883ab36b1b7d2034fc1b9d162e8467af16694ebeaa121eb19c85ce54f94ed8",
+        "InsureRAG-VLM/reports/graph_paths_v1/dev/graph_edges.jsonl": "a15336b996989f68ef6d997dc2d3c1a50723a9808ac17a8f9986187fbfff2bbb",
+        "InsureRAG-VLM/reports/graph_paths_v1/dev/predictions.jsonl": "c5733c08258f8dff49595126845a13cbeacf4e160e9d0f34edc87e2f9323e0f7",
+        "InsureRAG-VLM/reports/graph_paths_v1/dev/protocol.json": "227f9ee88afb63af1e2159aa5dae8133bce444543788fe258e0cdc6e92571f46",
+        "InsureRAG-VLM/reports/graph_paths_v1/dev/summary.json": "724ffcca9f3d601bfd8422e2616b2f292abb9b402c634983dc63dc307662b17c",
+        "InsureRAG-VLM/reports/graph_paths_v1/dev_path_budget/graph_edges.jsonl": "a15336b996989f68ef6d997dc2d3c1a50723a9808ac17a8f9986187fbfff2bbb",
+        "InsureRAG-VLM/reports/graph_paths_v1/dev_path_budget/predictions.jsonl": "d2b0e5e1ddae660bff674516e4917af22013d685a45f0be2d16a2dedcd3cc56b",
+        "InsureRAG-VLM/reports/graph_paths_v1/dev_path_budget/protocol.json": "c61c87baacf0ddb0bbce168d006c584349c84240cd15a8858a4e480deb0d413d",
+        "InsureRAG-VLM/reports/graph_paths_v1/dev_path_budget/summary.json": "47b829088a7f391502fde45690b565efd07013fb5cb14f205279a8d012b039ca",
+        "InsureRAG-VLM/reports/graph_paths_v1/test_frozen/graph_edges.jsonl": "84f368885214488e94c6fa89f52822acbee9326af6b4e822a086bd67379dd8fc",
+        "InsureRAG-VLM/reports/graph_paths_v1/test_frozen/predictions.jsonl": "a86a659dccb472170a141edeb7f1b2f6feca437b58daca449381bf485690ed81",
+        "InsureRAG-VLM/reports/graph_paths_v1/test_frozen/protocol.json": "7a74acdfbbdf3fcb0bfd3766453ba6b1988d266c33b8f4feb9a20b7be634cf6e",
+        "InsureRAG-VLM/reports/graph_paths_v1/test_frozen/summary.json": "8804d6ef1508a5768f193faca292f5316bf1c2d57d7c22440403cb811d8cf8c8",
+        "InsureRAG-VLM/reports/graph_research_v1/RESULTS.md": "e99ee8031f20e28eedd2451a012db179ef8d4e56f0f6a2454165feee2af7861b",
+        "InsureRAG-VLM/reports/graph_research_v1/app_document_smoke.json": "a8deba871ea2d1f27f76cf9d8f07c0849e2c8f16d1c4cb17ca13ddaeed2568dd",
+        "InsureRAG-VLM/reports/graph_research_v1/app_glossary_smoke.json": "9413269fbac4f73af53724eb17b038d117a85c023be5172ff1a314fcf66b7502",
+        "InsureRAG-VLM/reports/graph_research_v1/final_code_replay.json": "efb6fe152757c42fc9726b5450417a87ffc00b622ba361f86537fd4a96df85d1",
+        "InsureRAG-VLM/reports/graph_research_v1/final_implementation_source.zip": "ac71e0c968f58b421d00b5bf68884b12094c3a238cf16f24506d8a0d7be20188",
+        "InsureRAG-VLM/reports/graph_research_v1/freeze.json": "5ad1c6f78a771f8fb873d8d00eba00a1c3f5d0f848a6bc8354a227c171ea8519",
+        "InsureRAG-VLM/reports/graph_research_v1/frozen_source.zip": "660e7d61935e9647b5e2a21e58da81b15fe776370c9babf6c8dfe15e1f88f481",
+        "InsureRAG-VLM/reports/graph_research_v1/metric_decomposition.json": "3e7b503b30492e4e8e55ec3eb8c5c7873ca44c439d33b8272c663319b7e03334",
+        "InsureRAG-VLM/reports/graph_research_v1/pre_inference_annotation_corrections.json": "b89232c1c0270d72b4ea5c4c8a7623f25d72200ac390c77cd0fac383d4b7ade2",
+        "InsureRAG-VLM/reports/graph_research_v1/selected_failure_review.json": "cb2b6b6bff53d2bb1f2a79b8aa48bf63fb2336d6d8359363d199bb4a28c9a3fb",
+        "InsureRAG-VLM/reports/graph_research_v1/source_audit.json": "f72af81d58181fa5edc6a3a127253a6fd60618dcfe1fe7368cbfd114ac4dff9d",
+        "InsureRAG-VLM/reports/guard_adversarial_v1/README.md": "7e4b24a1ed87a17cc9df8a005588cf62c266542fc676e3783559ac1957b5499e",
+        "InsureRAG-VLM/reports/guard_adversarial_v1/cases.jsonl": "19dc560a6d2dbf00fefe84a5ff96d11807ebcba5e70cf9edd00a6ff7272b793a",
+        "InsureRAG-VLM/reports/guard_adversarial_v1/inferred_metadata_check.json": "b176512502b9f40e3e4189fa3da841c1be904489559a8d95c92f1113beca010f",
+        "InsureRAG-VLM/reports/guard_adversarial_v1/results.jsonl": "4eaad122f1d4a94d41ad8b6d41c9f6c2b9b016fe8e23ed730105f45b36a1621d",
+        "InsureRAG-VLM/reports/guard_adversarial_v1/run.py": "d195eaffa8f86bcca507ee6a1352c5a98e051d25f9775f2c051e9cad52d0d6c4",
+        "InsureRAG-VLM/reports/guard_adversarial_v1/summary.json": "a4d3871e9748495dad04f8315eadd98a9d65d37000d455fe3e0f2e6835cabc5c",
+        "InsureRAG-VLM/reports/hicric_government_qa_v1/transfer_v1/predictions.jsonl": "81285ba9e1cb839176500e4f6c6fc9202f2c2dc1e0d3aa377f2d0a75f9555bdd",
+        "InsureRAG-VLM/reports/hicric_government_qa_v1/transfer_v1/protocol.json": "c0fa0ba4b516df71593d6412518de4f9caeca71c7bad99017e2566b87ea5f8d4",
+        "InsureRAG-VLM/reports/hicric_government_qa_v1/transfer_v1/scores.jsonl": "e1859e67b4b269fb6a84970712963072ac4289d15b2e9194eef1e45a59d5b6d1",
+        "InsureRAG-VLM/reports/hicric_government_qa_v1/transfer_v1/source_audit.json": "04b2da91ac230883c97106fcac4d345b4d6bb0beb89f0dcd8df0a7c4c97afe31",
+        "InsureRAG-VLM/reports/hicric_government_qa_v1/transfer_v1/summary.json": "d04dafe7fe5e1f33dcfcf065082764441aa4eb6f9fd13f88a6ee657edb2af0da",
+        "InsureRAG-VLM/reports/hicric_public_v1/bge_index/completion.json": "ec08933d7b46d3d14291cc96ca2744c78655525e8dc093c4ca92188f5b851f43",
+        "InsureRAG-VLM/reports/hicric_public_v1/bge_index/protocol.json": "105fa7fd9bf41e6d6c40617dc03cd0ce81f5ab4e075361809cd4bd61bc8b595f",
+        "InsureRAG-VLM/reports/hybrid_multimodal/roadmap.md": "314b1e08cd5b02d0d5081096d4ef72c91e6ddbe02a7b10cc54d771b2a859e381",
+        "InsureRAG-VLM/reports/hybrid_multimodal/summary.md": "4957b05593fa40c787c6d1716e1efafb6fac7887bd7a0cc5bcd3cca8fe362844",
+        "InsureRAG-VLM/reports/insuranceqa_v2/fusion_dev_v1/analysis_source.py": "fda0b7383dea0868fdbc6a4d32f2c75c6c23af677c55a588a556fbe5747ef996",
+        "InsureRAG-VLM/reports/insuranceqa_v2/fusion_dev_v1/historical_diagnosis.json": "d440ae53abd56c8b593bc452dcd2445bf73c224a7bae191d228e075dd64f8a6d",
+        "InsureRAG-VLM/reports/insuranceqa_v2/fusion_dev_v1/selection_protocol.json": "f4715f2507a56d9ec1a3ff7c2f5e33b395598d0fb37af3b233e2c9133a5148cb",
+        "InsureRAG-VLM/reports/insuranceqa_v2/fusion_dev_v1/validation_sweep.json": "3430e91861effee1996067ee7ce66e6cdd0e3b7baf5fafc2231f4f20762ec310",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_selection_v1/ABORTED.md": "8d6b99a0fc50f9c2dd43b298e960c497acd010743e6e9a72a7ed974ffe4a2254",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_selection_v2/interactive_smoke.json": "4bdaf71eb77d9adec72068c34fcb2ec832e0772faa039ec2341a38e845c97c52",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_selection_v2/interactive_smoke_cuda.json": "969f9d913d90266beb652cca0a469d5d58d5de11889f57dd94f8ca89a4d9c291",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_selection_v2/predictions.jsonl": "a21c57189c891cdfdb89b897b8d655f5c461a23e8a4dbd490a75f1911d6ec936",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_selection_v2/selection.lock.json": "87908cb680e9f1929fee4eb3ab58bfa7704b6ab7acdc5da9c10592c2f37fa46f",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_selection_v2/selection_protocol.json": "68cfb83cdbd78a89124c9c13e92ae4e01a7cec95706f65eca2425cb7ec424b47",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_selection_v2/summary.json": "f9058e805207a90e2aed63b91fd95e0d99f9ed3b69200b9f9c6009dd3bdd9622",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_selection_v2/validation_sweep.json": "a177a520fed60ff57573e52df621d0b743ba592d20536421a05cfec98de94444",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_test_evaluation_v1/predictions.jsonl": "027a30b43decd26d5affcda7ea2b6fee5f12e05884be7ec49f66c4acc45b3810",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_test_evaluation_v1/summary.json": "7c0567fc04d9581c046c8fca19734f1efffa82fcdabebfc04216ef394b00abc7",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_test_evaluation_v1/tests.json": "cf7be2a1b332202aad0ad3a8b9193fb20ddfc2af06cf90cccf97a2c5d7b59dc3",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_test_evaluation_v1/verification.json": "1ac40896d093e2ba72f1416eec92c316bbe6549daa923ffac21553c6dadbe642",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_test_v1/completion.json": "0f54b99b2c43c530d08838c1bf6dff8b3df84f499d452a5a902b94731fe3ec1e",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_test_v1/protocol.json": "806229497855ba879374747211a8ab04a00595b3de8e9371faf2844436ceaa3c",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_test_v1/scores.jsonl": "7de652ed405da9d30ae3838638590eb98144f1ae1f33272eae83b007e643cc88",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_valid_v1/NOT_SELECTED.md": "fb6b365cfcf2934183edeb2a130104bf5bbd9d2896b4d3fa275e1485c63e7d3d",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_valid_v1/completion.json": "4d2c7f413f392560a823c9137cfaf824c5a9755d83b92ee4a756eaa91bd3ce8c",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_valid_v1/protocol.json": "ddd22d8ed547c055847fdf4d187fb50447505fdc084ba9930e349253ca94f11b",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_valid_v1/scores.jsonl": "06f0d3e54f6340960c183477d0e7148ab264a32de15c40920938711563d609ec",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_valid_v1/scoring_source.py": "3f22b4a7299355aab628267dee9b992b582ba71de29a24dd0a575dfc15d8822c",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_valid_v2/completion.json": "7b5032241c269637ec9bbc0e05b6a132503383483572839a62430c1317167d62",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_valid_v2/protocol.json": "353077e4c475a76820594c9f864854ba2e0c9b82ba84ad73c1998e3e15ffc18a",
+        "InsureRAG-VLM/reports/insuranceqa_v2/rerank_valid_v2/scores.jsonl": "cac8f8e8119a9328843139a065a7981e8d175df26753db4877dfcdd0a4d0a470",
+        "InsureRAG-VLM/reports/insuranceqa_v2/retrieval_frozen/predictions.jsonl": "d0140537109dbe164fd127e56898a65c43578d6273bd6e94a6d9b2049dfe0307",
+        "InsureRAG-VLM/reports/insuranceqa_v2/retrieval_frozen/protocol.json": "81bb548ebe3668b0ad1aa67a4f9576c27d1e68b019d212dbee35a95201221764",
+        "InsureRAG-VLM/reports/insuranceqa_v2/retrieval_frozen/sensitivity_audit.json": "153f152cb57ebf6b6a03564eae0b636a7d344b7669946fbb4afea45209461db9",
+        "InsureRAG-VLM/reports/insuranceqa_v2/retrieval_frozen/summary.json": "4b5ce609986bef344266c4c59e7fb83e0d875af4a7e87bfb02312edfd7206a3c",
+        "InsureRAG-VLM/reports/opm_reference_navigation_v1/corrected_frozen/predictions.jsonl": "e972faa227974f5afdd81018509263a8c712dc2f3b8c82abc1a51b033b24f129",
+        "InsureRAG-VLM/reports/opm_reference_navigation_v1/corrected_frozen/protocol.json": "635e7b9df47f8c3f8387286fd9b5ceb394180b32dcea82d33a7cbcdf512410c8",
+        "InsureRAG-VLM/reports/opm_reference_navigation_v1/corrected_frozen/summary.json": "6a47dccc65087d3665e7a7b16236945ab99970aa3b0347ce0f3bf807f70c87a5",
+        "InsureRAG-VLM/reports/opm_reference_navigation_v1/final_verification/predictions.jsonl": "e972faa227974f5afdd81018509263a8c712dc2f3b8c82abc1a51b033b24f129",
+        "InsureRAG-VLM/reports/opm_reference_navigation_v1/final_verification/protocol.json": "6339fbfca8162f83ed97c48f6cb2928501fa2aa09fafe00994778ab5f56e1d67",
+        "InsureRAG-VLM/reports/opm_reference_navigation_v1/final_verification/summary.json": "6a47dccc65087d3665e7a7b16236945ab99970aa3b0347ce0f3bf807f70c87a5",
+        "InsureRAG-VLM/reports/opm_reference_navigation_v1/frozen/INVALIDATED.md": "c62957b97672727d0053fdfcb274b8dccf14327673a96086fd48eefd46501afa",
+        "InsureRAG-VLM/reports/opm_reference_navigation_v1/frozen/predictions.jsonl": "ddfabc0458b16cbd843718b1447fb7934763e45ea8c68d836df4c54d5683b631",
+        "InsureRAG-VLM/reports/opm_reference_navigation_v1/frozen/protocol.json": "581ac1dff6fde36d02e0cb1180f2fda8711c12fd1614c81bcd6dc552ea29b9f2",
+        "InsureRAG-VLM/reports/opm_reference_navigation_v1/frozen/summary.json": "5e64b4c36badde805dcaedd390f5ee304992cfd6fc797bce0bea12114516a969",
+        "InsureRAG-VLM/reports/packet_stress_v1/app_v4_judgments.json": "2f183f9453ffffc10c439010cca33d85135d223cb38edfe79cc4f925e111e37a",
+        "InsureRAG-VLM/reports/packet_stress_v1/app_v4_review.md": "557067d0d9c029adf8985f60d427041976ff6a307106648c585e444181c0ce90",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_app_v4/generated_packets/SCENARIO-A/packet_manifest.json": "60d48aa9b3f80908193e5b5279ad850ad0d79687871144142acd17a1366b47a9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_app_v4/generated_packets/SCENARIO-B/packet_manifest.json": "daf0e21af80b12bda7b08189b754ef418f767493de8aa1e37679f44076f8ff56",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_app_v4/generated_packets/SCENARIO-C/packet_manifest.json": "e83f67e9ea2b90092777b39342ec50dc055ace44e249f251386fa75e340329cb",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_app_v4/generated_packets/SCENARIO-D/packet_manifest.json": "a293f26a87366248eb60b36aad7bdaec5c03c514d140d12cb18b415c48a51ef9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_app_v4/generated_packets/SCENARIO-E/packet_manifest.json": "b60300b49d9b726b82c767646a1626f874310097a02afdcbc3c5616f715ce756",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_app_v4/generated_packets/SCENARIO-F/packet_manifest.json": "7568b5cf5b6d6c9581217dca690c966cf39e39f18d0af49f7426895dba0c68ec",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_app_v4/predictions.jsonl": "1d04ef55263ae7034135cf17bb83cdc5a15dd4e9a0c26d65f0b2e098fa72a057",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_app_v4/run_metadata.json": "1239f7646a2cd5f0866e7125b96d2530bd1bb4f3c336425e112008f0134c180d",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_app_v4/summary.json": "bd2f4c02a203ebdf6ab547de54bdef760d39761c03277aa75e64c168e4b06af3",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v2/ABORTED.md": "74e091af7cba6414ca8ea88ea561a898369d742c19a28027fb1f2e1253b43087",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v2/generated_packets/SCENARIO-A/packet_manifest.json": "60d48aa9b3f80908193e5b5279ad850ad0d79687871144142acd17a1366b47a9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v2/generated_packets/SCENARIO-B/packet_manifest.json": "daf0e21af80b12bda7b08189b754ef418f767493de8aa1e37679f44076f8ff56",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v2/generated_packets/SCENARIO-C/packet_manifest.json": "e83f67e9ea2b90092777b39342ec50dc055ace44e249f251386fa75e340329cb",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v2/generated_packets/SCENARIO-D/packet_manifest.json": "a293f26a87366248eb60b36aad7bdaec5c03c514d140d12cb18b415c48a51ef9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v2/generated_packets/SCENARIO-E/packet_manifest.json": "b60300b49d9b726b82c767646a1626f874310097a02afdcbc3c5616f715ce756",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v2/generated_packets/SCENARIO-F/packet_manifest.json": "7568b5cf5b6d6c9581217dca690c966cf39e39f18d0af49f7426895dba0c68ec",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v2/run_metadata.json": "d4110b798bef94b3625607f122eb98152015eaf28cbf6eadb518422e480dd7c9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v3/generated_packets/SCENARIO-A/packet_manifest.json": "60d48aa9b3f80908193e5b5279ad850ad0d79687871144142acd17a1366b47a9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v3/generated_packets/SCENARIO-B/packet_manifest.json": "daf0e21af80b12bda7b08189b754ef418f767493de8aa1e37679f44076f8ff56",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v3/generated_packets/SCENARIO-C/packet_manifest.json": "e83f67e9ea2b90092777b39342ec50dc055ace44e249f251386fa75e340329cb",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v3/generated_packets/SCENARIO-D/packet_manifest.json": "a293f26a87366248eb60b36aad7bdaec5c03c514d140d12cb18b415c48a51ef9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v3/generated_packets/SCENARIO-E/packet_manifest.json": "b60300b49d9b726b82c767646a1626f874310097a02afdcbc3c5616f715ce756",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v3/generated_packets/SCENARIO-F/packet_manifest.json": "7568b5cf5b6d6c9581217dca690c966cf39e39f18d0af49f7426895dba0c68ec",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v3/predictions.jsonl": "8d87771c784e2aa5cf3119db6a5ba2de7f30668b0e052ab25d9099179911dad4",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v3/run_metadata.json": "db7bc4cf5cc7f33ad788ed637cbb477dbc0d90ca658c46071b12a012722ead0c",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen25_v3/summary.json": "d054beaa865bcf6b348f5244c940b0ff06b6a1032456423039feeca1339003f5",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_app_v4/generated_packets/SCENARIO-A/packet_manifest.json": "60d48aa9b3f80908193e5b5279ad850ad0d79687871144142acd17a1366b47a9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_app_v4/generated_packets/SCENARIO-B/packet_manifest.json": "daf0e21af80b12bda7b08189b754ef418f767493de8aa1e37679f44076f8ff56",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_app_v4/generated_packets/SCENARIO-C/packet_manifest.json": "e83f67e9ea2b90092777b39342ec50dc055ace44e249f251386fa75e340329cb",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_app_v4/generated_packets/SCENARIO-D/packet_manifest.json": "a293f26a87366248eb60b36aad7bdaec5c03c514d140d12cb18b415c48a51ef9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_app_v4/generated_packets/SCENARIO-E/packet_manifest.json": "b60300b49d9b726b82c767646a1626f874310097a02afdcbc3c5616f715ce756",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_app_v4/generated_packets/SCENARIO-F/packet_manifest.json": "7568b5cf5b6d6c9581217dca690c966cf39e39f18d0af49f7426895dba0c68ec",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_app_v4/predictions.jsonl": "7e3959abe86cb3c8325c8eaa2cd9452c230904459cf4bbbf817afa634fdccbe9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_app_v4/run_metadata.json": "1772c83d5fe11ed7215d0213868ff29f07f344e94876f0ad553f82d3fde1e21c",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_app_v4/summary.json": "aba5d1c548bbc03f914286156d746d7e43af5bee89d95c88892d9bf000a0f386",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v1/generated_packets/SCENARIO-A/packet_manifest.json": "60d48aa9b3f80908193e5b5279ad850ad0d79687871144142acd17a1366b47a9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v1/generated_packets/SCENARIO-B/packet_manifest.json": "daf0e21af80b12bda7b08189b754ef418f767493de8aa1e37679f44076f8ff56",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v1/generated_packets/SCENARIO-C/packet_manifest.json": "e83f67e9ea2b90092777b39342ec50dc055ace44e249f251386fa75e340329cb",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v1/generated_packets/SCENARIO-D/packet_manifest.json": "a293f26a87366248eb60b36aad7bdaec5c03c514d140d12cb18b415c48a51ef9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v1/generated_packets/SCENARIO-E/packet_manifest.json": "b60300b49d9b726b82c767646a1626f874310097a02afdcbc3c5616f715ce756",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v1/generated_packets/SCENARIO-F/packet_manifest.json": "7568b5cf5b6d6c9581217dca690c966cf39e39f18d0af49f7426895dba0c68ec",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v1/manual_error_review.md": "6024ee4cba69bcc22e27ff9ce3f94656aa4444e25e273adab89b32338b740ca2",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v1/predictions.jsonl": "8f98a415a41247ad7c53f5423df65e3778cb5f11fef99a254cd54fec2f7434d5",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v1/run_metadata.json": "f72321aaf0da602ea8192494bf26713fe4ac5793a60a053a4491f2b561ad3eb9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v1/summary.json": "ad163a2e6395952a491e980617200851dcfba9ffead7d05cc0648a4209f1c450",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v3/generated_packets/SCENARIO-A/packet_manifest.json": "60d48aa9b3f80908193e5b5279ad850ad0d79687871144142acd17a1366b47a9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v3/generated_packets/SCENARIO-B/packet_manifest.json": "daf0e21af80b12bda7b08189b754ef418f767493de8aa1e37679f44076f8ff56",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v3/generated_packets/SCENARIO-C/packet_manifest.json": "e83f67e9ea2b90092777b39342ec50dc055ace44e249f251386fa75e340329cb",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v3/generated_packets/SCENARIO-D/packet_manifest.json": "a293f26a87366248eb60b36aad7bdaec5c03c514d140d12cb18b415c48a51ef9",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v3/generated_packets/SCENARIO-E/packet_manifest.json": "b60300b49d9b726b82c767646a1626f874310097a02afdcbc3c5616f715ce756",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v3/generated_packets/SCENARIO-F/packet_manifest.json": "7568b5cf5b6d6c9581217dca690c966cf39e39f18d0af49f7426895dba0c68ec",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v3/predictions.jsonl": "ca791210c3aee2dffd665cd28fd1fd6933355ddb21335acb6766962b10ed91f2",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v3/run_metadata.json": "82efbd5768bf5b34514f56448553bc7e16b33896aedb4903b9d9b85e48c56651",
+        "InsureRAG-VLM/reports/packet_stress_v1/qwen35_v3/summary.json": "2b1071f82000cbca75c76dc7d2fa2f944d06cbd3edd07bdc277c2f4089a5296b",
+        "InsureRAG-VLM/reports/packet_stress_v1/runtime_guard_followup.md": "870a113a81716703b9f720484f9168069586d21c76c50b78c531129c63087f31",
+        "InsureRAG-VLM/reports/packet_stress_v1/v3_provenance_review.md": "cb49ba7e5497c2b70061c24541ed99be55a4a6e661eb1e2ce82aefe25422c282",
+        "InsureRAG-VLM/reports/packet_stress_v1/validation/generated_packets/SCENARIO-A/packet_manifest.json": "60d48aa9b3f80908193e5b5279ad850ad0d79687871144142acd17a1366b47a9",
+        "InsureRAG-VLM/reports/packet_stress_v1/validation/generated_packets/SCENARIO-B/packet_manifest.json": "daf0e21af80b12bda7b08189b754ef418f767493de8aa1e37679f44076f8ff56",
+        "InsureRAG-VLM/reports/packet_stress_v1/validation/generated_packets/SCENARIO-C/packet_manifest.json": "e83f67e9ea2b90092777b39342ec50dc055ace44e249f251386fa75e340329cb",
+        "InsureRAG-VLM/reports/packet_stress_v1/validation/generated_packets/SCENARIO-D/packet_manifest.json": "a293f26a87366248eb60b36aad7bdaec5c03c514d140d12cb18b415c48a51ef9",
+        "InsureRAG-VLM/reports/packet_stress_v1/validation/generated_packets/SCENARIO-E/packet_manifest.json": "b60300b49d9b726b82c767646a1626f874310097a02afdcbc3c5616f715ce756",
+        "InsureRAG-VLM/reports/packet_stress_v1/validation/generated_packets/SCENARIO-F/packet_manifest.json": "7568b5cf5b6d6c9581217dca690c966cf39e39f18d0af49f7426895dba0c68ec",
+        "InsureRAG-VLM/reports/packet_stress_v1/validation/validation.json": "56d7f8671e02ee2475a79427f877b06ef6e780e8aca03906fe83570bc2437fd9",
+        "InsureRAG-VLM/reports/qwen35_lora_smoke/run_v1/report.json": "94a354c1bfeaeb2c7c63f0d719617131b026b6c930b632a44fb681018792e638",
+        "InsureRAG-VLM/reports/qwen35_lora_smoke/run_v1/synthetic_train.jsonl": "182ca00ddb2df0d29ad41de1ebf90bb753b453be3c87792ba7fc6bc50ce25f20",
+        "InsureRAG-VLM/reports/qwen35_lora_smoke/run_v2/report.json": "daa678fb16992b0c34bf920972cbe7afc5fa77fbfa641b7f2987e8e1babf35c6",
+        "InsureRAG-VLM/reports/qwen35_lora_smoke/run_v2/synthetic_train.jsonl": "182ca00ddb2df0d29ad41de1ebf90bb753b453be3c87792ba7fc6bc50ce25f20",
+        "InsureRAG-VLM/reports/qwen35_lora_smoke/run_v2_cpu_audit/audit_report.json": "da882fce2e5b39da59d9499dbb08c4156fdeb4390c45ad2f9e1f0be0ad218257",
+        "InsureRAG-VLM/reports/qwen35_lora_smoke/run_v2_cpu_audit/official_hf_metadata.json": "8cb0bf137f1b1910475d5011469e04a0822483f3f035af114092bfb182aefdde",
+        "InsureRAG-VLM/reports/qwen35_lora_smoke/run_v2_cpu_audit/tensor_comparison.json": "43a6f4065fb74db81f1460068ec2cdf0a6daa7bfdb1aff0968f3e2f38fc5ed9e",
+        "InsureRAG-VLM/reports/qwen35_lora_smoke/run_v2_cpu_audit_explicit_device/audit_report.json": "44ada7dd50c12eb0c564ec56b2a2084056197ff653be1c639999bc9192309b1e",
+        "InsureRAG-VLM/reports/qwen35_lora_smoke/run_v2_cpu_audit_explicit_device/official_hf_metadata.json": "eda7fdcd801b71faa7e2ce90155c7bdc2e35cab81c9fe60b929de3b3171da6b7",
+        "InsureRAG-VLM/reports/qwen35_lora_smoke/run_v2_cpu_audit_explicit_device/tensor_comparison.json": "43a6f4065fb74db81f1460068ec2cdf0a6daa7bfdb1aff0968f3e2f38fc5ed9e",
+        "InsureRAG-VLM/reports/research_iteration_log.md": "25672b1a65f45c75016a56f52dc7bbf97d888738b53e0847a7b8d7ee6bb2666d",
+        "InsureRAG-VLM/reports/research_proof/dataset_validation.json": "5ce886cfcc6cbf797df87ed8535a60e22a50c95180f7d528333e4c228afa9aab",
+        "InsureRAG-VLM/reports/research_proof/dataset_validation.md": "3025d9231541c209fe393426a4705041b834bebc3731a0de569dc021f9b0062e",
+        "InsureRAG-VLM/reports/research_proof_local/answer_metrics.json": "0b0296875637cffae294c38702b281f45cb36a7d53f00a96b494cc4c9bd55ffb",
+        "InsureRAG-VLM/reports/research_proof_local/calibration/calibration_curve.csv": "463da4873a6654ab9f1bfe809751c5cca6289de32268132f039c175826163405",
+        "InsureRAG-VLM/reports/research_proof_local/calibration/calibration_scores.jsonl": "72865e437eeaf922bdbbca8631d70ce1d6fc79027910a15fabc7a8059796a6a7",
+        "InsureRAG-VLM/reports/research_proof_local/calibration/summary.md": "58ab5d5b347824a245504fa1d2c35b399dbc82f3bc56b835402eb194654a5b5e",
+        "InsureRAG-VLM/reports/research_proof_local/error_cases_by_type.jsonl": "a37482e40c5e07780bac21800d3098fd530dccf5377c18f85451b0d35d4a0787",
+        "InsureRAG-VLM/reports/research_proof_local/experiment_manifest.json": "8cd58fe4a95883b585da47784174cf2a3c803a0acca22333ede22e77ab0e82b4",
+        "InsureRAG-VLM/reports/research_proof_local/retrieval_metrics.csv": "90142859e40a725288acb38fa58dcffcd217b18fdbbe4e0f466619ee7aac9d5b",
+        "InsureRAG-VLM/reports/research_proof_local/summary.md": "9f6cf9691edf6559daa2c1181c3cb733d3f51911960c60e619146fd8b1438551",
+        "InsureRAG-VLM/reports/research_v1/bge_dev_retrieval/predictions.jsonl": "96c5d9347e8450fa008e36af76ff4f815bc45287627e20bfae2f5458296cf1bd",
+        "InsureRAG-VLM/reports/research_v1/bge_dev_retrieval/run_metadata.json": "08ccca494e66c14e898982f9b6df4100efb3efeb637ef8047e63d89f00a1c735",
+        "InsureRAG-VLM/reports/research_v1/bge_dev_retrieval/summary.json": "8d1ef1a612a2579b5dfb1f16420909e3441ad365bac0d307cf9907e9d23590e8",
+        "InsureRAG-VLM/reports/research_v1/dev_v1_error_review.md": "573dd4871da074ade16a2901c12034d239b29296c847e3fdac613497fe618699",
+        "InsureRAG-VLM/reports/research_v1/fixture_review_v1.md": "15fb5caa8f0edde76ceace38dcf85e8c5a1957a30725879e3504e2d48502aff9",
+        "InsureRAG-VLM/reports/research_v1/frozen_comparison/comparison.json": "8c655281cd740d05e3fbbc3583884fc8847bad35d4fef500b9b823c1c2585ad1",
+        "InsureRAG-VLM/reports/research_v1/frozen_comparison/comparison.md": "09eb03e50a6a62b3a8d67f9d1d74980135078a87c6da99e79ff08ca697a6c3ef",
+        "InsureRAG-VLM/reports/research_v1/frozen_source_v1.zip": "ecf433289c2295589718ebe987101f26f59bd6ac6b9c9978aaa100b2b49fbaa6",
+        "InsureRAG-VLM/reports/research_v1/frozen_test_semantic_judgments.json": "f00ac8b82557f2172190a7b2c698e4cebbf7347635fc91cab5edcc1448a64728",
+        "InsureRAG-VLM/reports/research_v1/frozen_test_semantic_review.md": "3fc42e6cad20afa0b4b28794eaef7f4f71314244eb5c8abc10188d5c0a413eca",
+        "InsureRAG-VLM/reports/research_v1/qwen25_dev_v1/predictions.jsonl": "5230dcab00ea883459eb52721763fdfc5f725c165bf9c151df58a55238c4bc2f",
+        "InsureRAG-VLM/reports/research_v1/qwen25_dev_v1/run_metadata.json": "c58e285e73c31538482b091dfe0acb7accb73d214ef4e429fd5f707244d7a2ea",
+        "InsureRAG-VLM/reports/research_v1/qwen25_dev_v1/summary.json": "4f04d18c78f62195c44866904771ce997a4df9027cee110405c4e2f9c2f80f3c",
+        "InsureRAG-VLM/reports/research_v1/qwen25_dev_v1_score_v2/predictions.jsonl": "3f22e6991de88b91fa952c256cb131a46695405c0d6c6b05a01ac55096991673",
+        "InsureRAG-VLM/reports/research_v1/qwen25_dev_v1_score_v2/rescore_metadata.json": "ecf08cbd03b9b1f46bfe3875c5dff6dcb8699dbede7a2fccaf201237f0233661",
+        "InsureRAG-VLM/reports/research_v1/qwen25_dev_v1_score_v2/summary.json": "e856704307a9e313866ccd42cc82658f1dd5191ca39b0fe7521ca7579ad4b78e",
+        "InsureRAG-VLM/reports/research_v1/qwen25_test_frozen/predictions.jsonl": "5bd48c22eaf8362b8a1390c639406b0a2f33294a116a3d4f9ba7891ba45d7d72",
+        "InsureRAG-VLM/reports/research_v1/qwen25_test_frozen/run_metadata.json": "d41c732d7119ed60c11e28076255e39edc1cff40388c57a983a20b2abf94124c",
+        "InsureRAG-VLM/reports/research_v1/qwen25_test_frozen/summary.json": "e0162ec6fb17a6a6a96fe5608379844e096d4ed738ef6dc84672fa0d40c2f414",
+        "InsureRAG-VLM/reports/research_v1/qwen35_bge_dev/predictions.jsonl": "6604ae7c9d1cdd721605cc3aa809b1979716a023dcfcb1da547fc88e43a8b9c1",
+        "InsureRAG-VLM/reports/research_v1/qwen35_bge_dev/run_metadata.json": "73b7700bcc0b7717652f769dc84404e815cdc5678df75d9f8c1231141456b192",
+        "InsureRAG-VLM/reports/research_v1/qwen35_bge_dev/summary.json": "840afe30b95b2ffa7f9fcd6a4a6bdd8015f44812cbfbfbdca9487dc6cd7f07a5",
+        "InsureRAG-VLM/reports/research_v1/qwen35_dev_packed/predictions.jsonl": "9b0a224c19caa801c8ac5ca993206ca07678fa2afb1ec7e2f8b5e73394d1659c",
+        "InsureRAG-VLM/reports/research_v1/qwen35_dev_packed/run_metadata.json": "86d6ca806dce4496caa0b8b3ccf74b76dbb95e68edb280b6919b006a26279f6d",
+        "InsureRAG-VLM/reports/research_v1/qwen35_dev_packed/summary.json": "b54c59ea6b6881bc7b41fe74c37a50b0a41f9cb1cb62e47e335dd83dcc0016db",
+        "InsureRAG-VLM/reports/research_v1/qwen35_dev_v1/predictions.jsonl": "18a90b469aab4b09329601e2ea445177f7e953e68d37eb3151163b0935e0a45b",
+        "InsureRAG-VLM/reports/research_v1/qwen35_dev_v1/run_metadata.json": "bfabaa122dde89055d8cce969711538bfb7583d5fdefbea334ea654f6ccd8b78",
+        "InsureRAG-VLM/reports/research_v1/qwen35_dev_v1/summary.json": "183b1af1999dccd9cb0a75ac47986cccc6b7a342df86f5810802d68876cab6a5",
+        "InsureRAG-VLM/reports/research_v1/qwen35_dev_v1_score_v2/predictions.jsonl": "2e42684bcf36e0cfd275f60ce5f5184eca813e2d6e44615bc64f95ef8e4682a4",
+        "InsureRAG-VLM/reports/research_v1/qwen35_dev_v1_score_v2/rescore_metadata.json": "890ce29a4b2461770981c9d9f779f80c04fb1147d2d74146706cdffd8d78f5d4",
+        "InsureRAG-VLM/reports/research_v1/qwen35_dev_v1_score_v2/summary.json": "b794fe2610f2839fb5ff91553b019b9fd4a12449c0846ab37fa258c3d6616de9",
+        "InsureRAG-VLM/reports/research_v1/qwen35_test_frozen/predictions.jsonl": "110a1e72f4f9607da02879c041993d585b69be2dc4543d48610c2c52a2f89b41",
+        "InsureRAG-VLM/reports/research_v1/qwen35_test_frozen/run_metadata.json": "74d34de40ea83618b47cb274e673c9f5d62cfe35c5bc05ddd94425687bbf706b",
+        "InsureRAG-VLM/reports/research_v1/qwen35_test_frozen/summary.json": "cdf9a1395a7de820716489d4d2c2ac37d29b1baf5f111506677ea46b78dd724d",
+        "InsureRAG-VLM/reports/research_v1/retrieval_dev/predictions.jsonl": "b8274caff6c46c92155f9ecbd557ab90542f91f2bfea92d451932006b8258f61",
+        "InsureRAG-VLM/reports/research_v1/retrieval_dev/run_metadata.json": "66732fd8c8b8f10f8ef779a83c5f75a3bc025b748e44f788d7c7173ef0a673b8",
+        "InsureRAG-VLM/reports/research_v1/retrieval_dev/summary.json": "011bba6e3b4055e7d745d2d6445545f1780977e07dfc949302104ddb1f9d2489",
+        "InsureRAG-VLM/reports/research_v1/test_protocol_v1.json": "2e0e861a55b295366ff332b7876d7584bc0e115d8f8395aca3072c71ce32b024",
+        "InsureRAG-VLM/reports/research_v2/development_iteration1_source.zip": "f9e65f6086e09eff27560dc7a98ad507d8b6740cf15480d83d642823c69bdf5f",
+        "InsureRAG-VLM/reports/research_v2/development_iteration2_source.zip": "a6ba5150231f8902eb8261caab91c9efc914122c53f47ea2706116ee9f2a3371",
+        "InsureRAG-VLM/reports/research_v2/final_code_replay/inputs.jsonl": "b714258c4a97b03d89aaff839fc9f73728d648362fbe677ffefa23f687e3abfa",
+        "InsureRAG-VLM/reports/research_v2/final_code_replay/pages.jsonl": "da7f37022db6fad5e08df5f12021f3f7e51d1e95253a884189fdd66476d9b273",
+        "InsureRAG-VLM/reports/research_v2/final_code_replay/protocol.json": "2deaf0b26cbd5a7659c2f6ee7893f5671f7e596485169950e1f506d6db04c548",
+        "InsureRAG-VLM/reports/research_v2/final_prepared_dev/inputs.jsonl": "37ceb6306a45c94191a3d0430a4059350236af4fa0b12df2547fc01d26c3335c",
+        "InsureRAG-VLM/reports/research_v2/final_prepared_dev/pages.jsonl": "0d37bd72140a4d06e3e5b15c86ee8b33adbb3d87a6e342502ce97fc0b3b96563",
+        "InsureRAG-VLM/reports/research_v2/final_prepared_dev/protocol.json": "969f17767cd3b237b942a8fb99681b5c9032559f1a082f71be410cc058505b79",
+        "InsureRAG-VLM/reports/research_v2/final_prepared_test/inputs.jsonl": "15a840b326ff189fd88f8daab9ca494e8d0b2b8881fe3b24e100f825a49c68c0",
+        "InsureRAG-VLM/reports/research_v2/final_prepared_test/pages.jsonl": "da7f37022db6fad5e08df5f12021f3f7e51d1e95253a884189fdd66476d9b273",
+        "InsureRAG-VLM/reports/research_v2/final_prepared_test/protocol.json": "006660e582837669e678f05c491dfe5f15411776f32c2684bf2adc5e22444ad1",
+        "InsureRAG-VLM/reports/research_v2/graph_revision2_prepared_dev/inputs.jsonl": "fb340dc9cd89ef89eaab26dfe53147b20500253531b2cb86c34b05b6b0cec48e",
+        "InsureRAG-VLM/reports/research_v2/graph_revision2_prepared_dev/pages.jsonl": "0d37bd72140a4d06e3e5b15c86ee8b33adbb3d87a6e342502ce97fc0b3b96563",
+        "InsureRAG-VLM/reports/research_v2/graph_revision2_prepared_dev/protocol.json": "e73d6d050100099da2311f45025739ccd2877847f04ba6a543d5e5206e2a5931",
+        "InsureRAG-VLM/reports/research_v2/graph_revision_prepared_dev/inputs.jsonl": "a61fd492f4457bc2fc93ab4b5d8375c0608dc0f84ee908c518cc3d98c4494ff4",
+        "InsureRAG-VLM/reports/research_v2/graph_revision_prepared_dev/pages.jsonl": "0d37bd72140a4d06e3e5b15c86ee8b33adbb3d87a6e342502ce97fc0b3b96563",
+        "InsureRAG-VLM/reports/research_v2/graph_revision_prepared_dev/protocol.json": "fca4e715379f50ccef5d5bf7d810a958cd6446bace99ba28d4a8df56d5ef7cbd",
+        "InsureRAG-VLM/reports/research_v2/graph_revision_prepared_test/inputs.jsonl": "b2011bae40406b226bc87691be96b2cbfeb8bbc940f7ecef6b615acb1bd6f14e",
+        "InsureRAG-VLM/reports/research_v2/graph_revision_prepared_test/pages.jsonl": "da7f37022db6fad5e08df5f12021f3f7e51d1e95253a884189fdd66476d9b273",
+        "InsureRAG-VLM/reports/research_v2/graph_revision_prepared_test/protocol.json": "4836c99b07935e9ebcca7f268a8ab57e74ae5c789df5113b9dfaffe34c477513",
+        "InsureRAG-VLM/reports/research_v2/qwen35_final_dev/predictions.jsonl": "88120d9a86369b6155de5d83c7984c9f048e310953f05b0c10724fbc689bb538",
+        "InsureRAG-VLM/reports/research_v2/qwen35_final_dev/run_metadata.json": "d05a14cf485a374359c255aff0a45670380b84c5533b4e79013882851affd4f4",
+        "InsureRAG-VLM/reports/research_v2/qwen35_final_dev/summary.json": "a693826d3ba44065def73d2a3e16a498b3bdc782e2df370926a288d5dbef117b",
+        "InsureRAG-VLM/reports/research_v2/qwen35_final_dev/summary.md": "1d6d65e7a8df284deba7ce905a19620551430e0de45c94a4046586038edd7e84",
+        "InsureRAG-VLM/reports/research_v2/qwen35_final_test/predictions.jsonl": "d9a9fc4adfecd2433c84dc8cade35446ee47848e756cd2a94e85c4826e85e8a6",
+        "InsureRAG-VLM/reports/research_v2/qwen35_final_test/run_metadata.json": "eebc5c20c34b1ed2c2e6f4ada2de99af2b670838930057643181ad2ff847a4a9",
+        "InsureRAG-VLM/reports/research_v2/qwen35_final_test/summary.json": "72d65698a562fab3b9b552136084e488c6f01f95743f8e3261b12636e7d17c35",
+        "InsureRAG-VLM/reports/research_v2/qwen35_final_test/summary.md": "0cd0716ce198f3a8fa64e9183959a2ced051ede1ed76c32714fed42a4718ae9c",
+        "InsureRAG-VLM/reports/research_v2/qwen35_graph_revision_dev/predictions.jsonl": "ae22a6436da2f14ec3f2552eb213e5304feedf2477fbe390e1c3feac707bd9b9",
+        "InsureRAG-VLM/reports/research_v2/qwen35_graph_revision_dev/run_metadata.json": "0bd3187021a6105ac355c6423e57ab15148c0d7a0fc394ef794782a6cf710731",
+        "InsureRAG-VLM/reports/research_v2/qwen35_graph_revision_dev/summary.json": "b79e1f8f7f633d966aabe34add35d2163c5291fb490b67b753d672d1c0338cbe",
+        "InsureRAG-VLM/reports/research_v2/qwen35_graph_revision_dev/summary.md": "114748be040edf413f063d4286dbd3e61b8b13ab3907a405d0894d18e683d861",
+        "InsureRAG-VLM/reports/retrieval_eval/before_after.json": "ce94d4a8dfa7e465437d65d910d25967a4ef7e75e978596f1c09cdc8e6250aff",
+        "InsureRAG-VLM/reports/retrieval_eval/before_after.md": "dd81bfee9572f00b6c03bcd5d6ab9df9bf991fac95003b57368017283fe82e02",
+        "InsureRAG-VLM/reports/retrieval_eval/clean_exact_source.jsonl": "b52f3bfadb831fae256f0694565b3f7b1aabc6d2d14fecc473e3ceef339c8111",
+        "InsureRAG-VLM/reports/retrieval_eval/clean_exact_source_before_after.json": "b92f659a35675a6dd645fbd52ce5382c60119ee43285502f28ae56082dd98116",
+        "InsureRAG-VLM/reports/retrieval_eval/clean_exact_source_before_after.md": "76feb0ddd7964032f338e552fbadbc2a92a278b36df8eba574328d1c6be8a72d",
+        "InsureRAG-VLM/reports/retrieval_eval/cpu_diagnostic/predictions.jsonl": "75b92aad8a3521ee7313395efe248905f94abeee189fcd0cb62cd35f6b2630f1",
+        "InsureRAG-VLM/reports/retrieval_eval/cpu_diagnostic/summary.json": "e82cd602abb5dafe27261fd57b2a323a8f3a43375bd38d046e609366d6529ca2",
+        "InsureRAG-VLM/reports/retrieval_eval/cpu_diagnostic/summary.md": "022afd03d5c0002689de63f313f3dc032edbb01c4773317957f6ebc6b4e90c7d",
+        "InsureRAG-VLM/reports/retrieval_eval/cpu_diagnostic/test_manifest.jsonl": "c03b5ecc790b72876281227a8df430552989cc48f88528579b2b20a67add4026",
+        "InsureRAG-VLM/reports/retrieval_eval/expanded_targeted/test.jsonl": "846834fecd1e94b65282ee988bbb6080be86e92a70dd734703b9646517c32057",
+        "InsureRAG-VLM/reports/retrieval_eval/expanded_targeted/valid.jsonl": "58be9701a2ffaa794b08e4b7dcfa646b08fb05e587aad74b63d068ae560385bf",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/corpus/public_docs/ca_auto_insurance_guide.txt": "cde7e1d9c5415515f3a5aad04d3450cafd6eea7878947f2c4e881f554a650df2",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/corpus/public_docs/ca_auto_insurance_terms.txt": "700496fc736534b24ab947cd78ca4212e35b21b444e6833e69f1814bda70d0ca",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/corpus/public_docs/naic_auto_insurance_topic.txt": "5f18114c07eda41278b10ae57cd638201c4bc34332f3b7ebedfce14a82d14c36",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/corpus/public_docs/naic_glossary_insurance_terms.txt": "55faa05a783d9f446c745e6f9322b0c64ae0e54b3e2f2aa5516c9000aac334c8",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/corpus/public_docs/naic_homeowners_insurance_topic.txt": "22f1b5f88b2b8327da852e5f67864243f843dbe18ceceedce0210b8805dc5c86",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/corpus/public_docs/ny_home_insurance_replacement_cost.txt": "d7f41146df856159ac7ffa13915910a3d1747868c6a8b900b4f7e346325524e4",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/corpus/public_docs/ny_homeowners_basic_coverage.txt": "f9eb5cc0b6ce3b50fed2fea0ceab879445983767a168f0efbabad3cc99d8fdc9",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/corpus/public_docs/sc_purchasing_home_insurance.txt": "7130ff04e2284ae1f977abf5b573919d9ca73a7c8f28f569f9d6875e153d195f",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/corpus/public_docs/sc_understanding_your_deductible.txt": "acbfe8eb42384c91d9d863d9c5d28894df6a1ae1e7bf740c462fb4269bdaf024",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/corpus/public_docs/tx_auto_insurance_glossary.txt": "18fe2a8664f3f9ab0e1302b40ba079bf5f88c86fcf94b4b383b10b2be78256a9",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/corpus/public_docs/tx_home_insurance_guide.txt": "76415723a65b76587c31fcb19891626f5bdaa83430b88aeea8646e97bafa4065",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/corpus/public_docs/wa_consumer_insurance_glossary.txt": "b50091e01d46e314a294f4b3940ac9f72da65644c2e34ee748dcb113049e6ac9",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/corpus/state_doi_docs/vermont_consumer_advisory_rising_premiums.txt": "69e2a1eb65207cf5463a9b312552e64e2c1304f49a3de096fa68f50dd87b76c8",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/test.jsonl": "bcb13f6496602752c883321c0de5cdba1cb6b93f07dcec5ce5872b8458c91e8b",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official/valid.jsonl": "d6bd0c8a10f537959d06b0c953cc274e418e1beabbc773089283f3d4450be4e5",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official_hybrid_vs_dense.json": "cd9ee4d975b3025b94af43051573c53c86d11b54815111a3c20d66a163e25cae",
+        "InsureRAG-VLM/reports/retrieval_eval/external_official_hybrid_vs_dense.md": "6c38aa5af0572274ac3f763c36ef0b9f0d594ad11b7ad7c8625043c4b43b4e44",
+        "InsureRAG-VLM/reports/retrieval_eval/hybrid_vs_dense.json": "e33178f4d8758a6b65f0beb34e1438092e851fc7a7245053bdd31ac73277ae72",
+        "InsureRAG-VLM/reports/retrieval_eval/hybrid_vs_dense.md": "e474b274a676644bb50e2c87d6e228de830b3ce73123694bbc9ecb821813b600",
+        "InsureRAG-VLM/reports/sft_eval/adapter_spot_check.json": "649f7291a2f22be699d26601410dd42209a777f8218b20add9f2b04aafecde2f",
+        "InsureRAG-VLM/reports/sft_eval/adapter_spot_check.md": "fa24cd007d3912ba971af4d26a0d722ec7177b86f30a79ee2a0795a027617e9e",
+        "InsureRAG-VLM/reports/sft_eval/retrieval_adapter_spot_check.json": "9bc8037deb68ecca5205bc858d54369d6370662edb29edd81ff91dcbfdc9879e",
+        "InsureRAG-VLM/reports/sft_eval/retrieval_adapter_spot_check.md": "78a84f65638a5f1ee164d9ecec119e822dc9f6f0e23014bda45b4d42b7653d11",
+        "InsureRAG-VLM/reports/sft_eval/retrieval_adapter_summary.md": "179f33fcaf440375376c8b3ed2af03541e2ee709b7d5872ae87c682de51c1450",
+        "InsureRAG-VLM/reports/sft_eval/training_metadata.json": "3cfbabc62248481bba76de2bb67b5222bffa11b386d9233bb9e714a4fc02904e",
+        "InsureRAG-VLM/reports/sft_tokenization_audit/records.jsonl": "a9da965d8c2faa6fdb13ed703d851ccc59abea6c39c4dedf9aee6a35791595b5",
+        "InsureRAG-VLM/reports/sft_tokenization_audit/summary.json": "75650723f44de839153ee9658f754948cd87e7e2b336bcaefc3d99739d1ab155",
+        "InsureRAG-VLM/reports/source_provenance_v1/README.md": "5ed317db0b5ea977613152b7f94478c018468efb9886247d9294bf479be483b3",
+        "InsureRAG-VLM/reports/source_provenance_v1/audit.json": "2452b21e9eb998a15654f7b7ff20ed0a8e20b7a5e82b906a9a5f012cf1c3905c",
+        "InsureRAG-VLM/reports/vision_smoke/qwen35_v1/results.json": "b2a74ca143e3c9913c6cd56ea6122df5ed7e25a068abca3484f6ea3750ee2ec4",
+        "InsureRAG-VLM/reports/vision_smoke/qwen35_v2/results.json": "d71e467fd543917b41838e95f191572b197aa02e9b1dc00d345cc84230b6645c",
+        "InsureRAG-VLM/reports/visual_counterfactual_v1/no_image_control_review.md": "90bb8135f395c930e1fe2b8e81d86244927dfbf36fd31c8ee21db0aa81828e06",
+        "InsureRAG-VLM/reports/visual_counterfactual_v1/no_image_v1/predictions.jsonl": "2344fc03c690637df326538adfb21ab4cd31bf6b533d84f59f2761ded83bb6ea",
+        "InsureRAG-VLM/reports/visual_counterfactual_v1/no_image_v1/run_metadata.json": "d4cd6751309f7554ec9633144e68e06fde3281d0f8fc1bf8fe4ea325197778f2",
+        "InsureRAG-VLM/reports/visual_counterfactual_v1/no_image_v1/summary.json": "d7121db98dd627cc84473586225540e2aa45a82a78ba52db9c51096c8bad2ef9",
+        "InsureRAG-VLM/reports/visual_counterfactual_v1/qwen35_v1/predictions.jsonl": "a4c40f9e701cd0f9791cca5da1487d20698113dc62a148dca2bf4e2bbc3f34d7",
+        "InsureRAG-VLM/reports/visual_counterfactual_v1/qwen35_v1/run_metadata.json": "de1a1c2c027f5781a0e96da9f80391b8aa6577a1c60f09ded5cf35221ce5b9d0",
+        "InsureRAG-VLM/reports/visual_counterfactual_v1/qwen35_v1/summary.json": "16b226e84165c92fe2d28fe07d70bf18740caea5d81e3b36cb8a79ba19b77218",
+        "InsureRAG-VLM/requirements-dev.txt": "f767a70982613ce769e4f8f74374e637d72635b5f815662f5d18c8301c54e5c3",
+        "InsureRAG-VLM/requirements-domain-training.txt": "da62ac3ed8722f6046c64f121508bd067b11936a57552d8e1cf43f3f2d94f745",
+        "InsureRAG-VLM/requirements-gpu.txt": "d408593c662fd3837cfe095e81c8e4789283b1490daf072049f172e3945857c9",
+        "InsureRAG-VLM/requirements-qwen35-smoke.txt": "485af9b3a6307a164821dce2b6965fe01df3aab4bedd9eedc2e380924bb43993",
+        "InsureRAG-VLM/requirements-scale.txt": "ff7865299c3408765bb8679b773e2d381361246fefa8190f096c27813dd43332",
+        "InsureRAG-VLM/requirements-tested.txt": "5bcb7caa4f25d713ce8748e549e2e97642495108a3e0262d4c15918dbef4ed19",
+        "InsureRAG-VLM/requirements.txt": "f986eb9fca58e1897ef8afca9f59f8072831b5bbb0e2be1d4b5df5929039f1c4",
+        "InsureRAG-VLM/scripts/acquire_minilm_reranker.py": "fa2bf3400377b2e6479ee57d1986b57d08c1f214e8506ec70877698fe3e777fb",
+        "InsureRAG-VLM/scripts/acquire_policy_wordings.py": "4aaeb3b28a7f882a7a99709d4263f90f1589691b1fb6b1c4259dc582e5bbf8b2",
+        "InsureRAG-VLM/scripts/analyze_insuranceqa_fusion.py": "282f35fcd8f28b9b85030054f7a462546bef1735e9f834bd9e07f90d3a4bac03",
+        "InsureRAG-VLM/scripts/audit_expanded_sources.py": "f0a472f24cc67bf2f9db8cb2de9a9cceeaaeea7505eec1aa94644420e8d9ac39",
+        "InsureRAG-VLM/scripts/audit_insuranceqa_split.py": "2fc059fea6ea50b94f13d6dcd66e5885019978623b1667c774a8019797a7a62f",
+        "InsureRAG-VLM/scripts/audit_public_pdf_sources.py": "a9ed85112b30979285f9ed01ffb173b04ac1518532a0eacf4da5d96711d15ac6",
+        "InsureRAG-VLM/scripts/audit_qwen35_adapter.py": "bfb8ab6f980dfc77efae07f98a6223336c7c8d8b16d07605ae601bb7ab842ecd",
+        "InsureRAG-VLM/scripts/audit_sft_supervision.py": "801b9037a6e066fcf5505ff018a6cc39af5eb30db38bdcd86d16d2a33dcbd3a9",
+        "InsureRAG-VLM/scripts/build_expanded_corpus.py": "76b0396da2d797c6ed334f0c83cd3d6ee1efc8469b60929a810443f676d3c8b3",
+        "InsureRAG-VLM/scripts/build_packet_stress.py": "39e6020f42a535cc32dc10a8a02395b6f9d49bc991c1e0d4a7ab0cd87c3e24f0",
+        "InsureRAG-VLM/scripts/build_policy_wordings.py": "33152e8153f97a7916ddd82a1bcf855eab0a9c3ff5dcbd3f4b0c7e95e54b06f3",
+        "InsureRAG-VLM/scripts/build_research_benchmark.py": "f8c38cb072e5dae59a54483bbdadcaab8ae80addac243caf7c75b05af4f87655",
+        "InsureRAG-VLM/scripts/build_source_linked_corpus.py": "19653b0fa4c0f650cd32dd5c3370658c8fb7ea209e5a1279e27af2377df1a089",
+        "InsureRAG-VLM/scripts/build_training_corpora_msi_a40.sbatch": "f7b6129cfe9077c6f0d866a0342a0614f143bbd9e792f2151232a6c08d784290",
+        "InsureRAG-VLM/scripts/build_visual_counterfactual.py": "585f33f4c45e27b9b561d6fe35641e99b9a6f69873ea754e76cd22cc5f673f95",
+        "InsureRAG-VLM/scripts/compare_research_runs.py": "35f23e8c3420146af3dd2e84abc690ef7cd68bc30f32d5c9b9fe129a53162853",
+        "InsureRAG-VLM/scripts/compare_research_runs_v2.py": "37bd62282edebfc0d5892c68fffd7ce5bfac9753a0930a1b3397ed9030cffe7f",
+        "InsureRAG-VLM/scripts/curate_insurance_datasets.py": "9d67c62768a14245449522e2834fac6848f6668e82499f3cbb67d598cf7420d9",
+        "InsureRAG-VLM/scripts/demo_source_linked.py": "9e34ded166f495ff18c058a9f667ffeb86abc4485ada92f332a8a3414c7631c5",
+        "InsureRAG-VLM/scripts/eval_clean_exact_source.py": "fa4052ebc9afa4cdcbf9754bb2cc983a2427bd85e5a613aac1f27c95fcb96cd8",
+        "InsureRAG-VLM/scripts/eval_clean_exact_source_msi_a40.sbatch": "578ee7e376ee6291244e98002b0f3adfbc9506788f7b3f102573425e0a7c4a0b",
+        "InsureRAG-VLM/scripts/eval_cpu_diagnostic.py": "6b7406a457c0fe716fb3fbf875065826350f976664e296fc4746cb7d326aa36a",
+        "InsureRAG-VLM/scripts/eval_domain_training.py": "a966308dd025e246ad39a66b3aa8ddbe4ee61f7d5b0df653e7f275bf0e146899",
+        "InsureRAG-VLM/scripts/eval_expanded_retrieval.py": "021bbaabde43d6b7cb812ef4b75a3a1862693f9973797553ad60738ff1249e64",
+        "InsureRAG-VLM/scripts/eval_external_official_hybrid_vs_dense.py": "97b46af8b759d45ce799235372f559e55e29d5ddeb6185d6d9bf1a925f93ad63",
+        "InsureRAG-VLM/scripts/eval_external_official_hybrid_vs_dense_msi_a40.sbatch": "3d914f101b5b75b30f5b7ec51b5437bf805cf0b8b8971b19e077cd4bd9d34e45",
+        "InsureRAG-VLM/scripts/eval_government_transfer.py": "382597f5e06816240d170e7f41dfe2ec42ca740571ef45ad3e44d8d33304af4f",
+        "InsureRAG-VLM/scripts/eval_hybrid_vs_dense.py": "ffcd54e02dd47047348161766432823ccda1877d261212237367c0045c9feb20",
+        "InsureRAG-VLM/scripts/eval_hybrid_vs_dense_msi_a40.sbatch": "6121713a3f37ea47418b00599b1f235899823994258157002df3cd0a72b15b03",
+        "InsureRAG-VLM/scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+        "InsureRAG-VLM/scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872",
+        "InsureRAG-VLM/scripts/eval_packet_stress.py": "7df4552dcb134c843b72514c55dc4fd4f1e61fb2e38a41aa753476ab039dac3d",
+        "InsureRAG-VLM/scripts/eval_policy_navigation.py": "94985b373f050ea9a639b4044ec1e5b64a7d277016da87e816e2b732d9649974",
+        "InsureRAG-VLM/scripts/eval_research_benchmark.py": "1eac538ca4328b47c42c21627c402643c473fdfdaaa7ba6cfc63daa558e1e1e5",
+        "InsureRAG-VLM/scripts/eval_research_benchmark_v2.py": "99e02b8dbef01eff62f7da766cf04a523c50987900d48235588b694a2c2dd3a3",
+        "InsureRAG-VLM/scripts/eval_retrieval_before_after.py": "1c945b295f08f65915b7a1ed9beeaf66cfc3b4dce119889089cf5c73924aaa37",
+        "InsureRAG-VLM/scripts/eval_retrieval_before_after_msi_a40.sbatch": "20156933a63c0bd1ac550209f123d7446783675ea56ac4bc30941da4be52fd39",
+        "InsureRAG-VLM/scripts/eval_sft_adapter.py": "ed2f2bdd347e2f4beb75dbf6c03667ebd962ca769301ae28a8edd6b53884f5b4",
+        "InsureRAG-VLM/scripts/eval_sft_adapter.sbatch": "0f90159318c96c069dbb6478c41ae346336940f06e509f3580aff5cda4eef32e",
+        "InsureRAG-VLM/scripts/eval_vision_smoke.py": "82f69575c02b353472381b53aeaa497035fca1ec23ebeae9c8e02c4ded5e851b",
+        "InsureRAG-VLM/scripts/eval_visual_counterfactual.py": "ddcd7807f4ea17749bf8aa9e7a887b9fbf6b348f5c18a7677f5ef29e2c10a449",
+        "InsureRAG-VLM/scripts/eval_visual_no_image_control.py": "a4271c2818244027be7794568e18b5893791da141797f44aefe706f287bcb8db",
+        "InsureRAG-VLM/scripts/gpu_smoke_test.py": "ef953a958d7950dc25e68ed3514b4938475220cf0dd41568a7ab46bca67cd731",
+        "InsureRAG-VLM/scripts/graph_retrieval_study.py": "a00353379683241861ce375198081c0e566cfbe6e5de904b4b3ccb149919e294",
+        "InsureRAG-VLM/scripts/index_research_corpus.py": "c2d4bbfa3dd4d561e394f1742eb4259863315e048325fe32bba575ab2c9a4cf2",
+        "InsureRAG-VLM/scripts/plot_domain_results.py": "adaeb356ec96219d52ef3f26496bf81f430120caed18461c4072d0f17ec691c3",
+        "InsureRAG-VLM/scripts/prepare_hicric_extension.py": "40dc58fedc7000a082d96b8a00b00ae9253ca2362d9e1725cb76dd632ec64947",
+        "InsureRAG-VLM/scripts/prepare_insuranceqa.py": "4fb3ccb6028ef911ea1e7a4bdd5e17ee084c619b2f06fd0a931b8a8386f15636",
+        "InsureRAG-VLM/scripts/prepare_reranker_training.py": "9a79c2f5b27261c4bf7d475ebe9f852d0902f3514c2c6b90c09703ecdd6b704c",
+        "InsureRAG-VLM/scripts/prepare_research_benchmark_v2.py": "e7004f47914368b696cd7a3a428ec79a2346ed5d5806457d750162b6624f4d5b",
+        "InsureRAG-VLM/scripts/query_domain_reranker.py": "b2fbec59e22038027e4acad7c1796791b22f79eea6c6529fd3bfd5f0d589b43a",
+        "InsureRAG-VLM/scripts/query_insuranceqa.py": "3aef1efe07bb0034d1241126f5ebdf8f046cd49d0e8e980f357dc3a461f7cb16",
+        "InsureRAG-VLM/scripts/refine_training_answer_dedup.py": "d558cefe232f5bd120325f1b7291a7daecc0cf73c3c29a18ea0a697967008fab",
+        "InsureRAG-VLM/scripts/rescore_research_benchmark.py": "d943a1368b7635c2b9c1c12af260a245ac89668d932a8c5f2cddbe2783cb0e85",
+        "InsureRAG-VLM/scripts/research_v2.py": "670bcd86be2c61ce5b3cec05e1c90b26390784faf1b0f5e8f4106b6ef9dc3e2c",
+        "InsureRAG-VLM/scripts/score_domain_checkpoint.py": "c53e4b3138021ad1b0b2826b3f5dda5cdf17c3e9d61d9a0f681fd4497c6c1d41",
+        "InsureRAG-VLM/scripts/score_insuranceqa_reranker.py": "76cac4b0e2b89d29ced688d77809598de1ccf272674ed7b9b5c18a4a0a93e959",
+        "InsureRAG-VLM/scripts/setup_local.sh": "7459aaf9f6e3c81253c0eb72dd1f4f33aac7f8550e5a329d1044ef99690ca042",
+        "InsureRAG-VLM/scripts/sft_msi_a40.sbatch": "612479a6d1f9e7017cdfed129eb641697031c0ef505a071b5206882cb94d422a",
+        "InsureRAG-VLM/scripts/sft_retrieval_conditioned_msi_a40.sbatch": "e4d627251d34f8aa85c33840868c2821daabd91d4018c59b20543b2f2595b21c",
+        "InsureRAG-VLM/scripts/smoke_qwen35_lora.py": "c9e9b9b620a24d1f175fa50e076a628a2258f6c77ef8c0768da89169aafdb97c",
+        "InsureRAG-VLM/scripts/smoke_test.sh": "04ce735aa51b36d74eca23076a70091d003a8e2d33c84fbeefe3c704e06f2097",
+        "InsureRAG-VLM/scripts/train_dense_retriever_msi_a40.sbatch": "15e700743ed54b689911ef40eae83393304ba1ee640ad10bff21d4a1ef3f0df1",
+        "InsureRAG-VLM/scripts/train_domain_reranker.py": "6dfa79747867c062fa73fd6361920486f27d774c2bf12b939acf402eb5889000",
+        "InsureRAG-VLM/scripts/verify_data_scale.py": "47c084a615e87bd1d8ed62097112d40558261b3049b3c2a51dfbbc398e98e79d",
+        "InsureRAG-VLM/scripts/verify_domain_training.py": "c03cdf3c3188b7121d9e3314337147423681156c8c6ab53c394aa1fa6a8b108a",
+        "InsureRAG-VLM/scripts/verify_retrieval_fusion.py": "0a574a6e34d29423870bf8efb4a739d3d1c4787b5a231beb1b4eb20c34910a1d",
+        "InsureRAG-VLM/src/__init__.py": "faa2adefa30cebe1675d21f97ca53c8287721529cf99a95f1bab93c6865933cd",
+        "InsureRAG-VLM/src/insurerag_vlm/__init__.py": "de655f7f00531d8e4ffb8a1edf0c38f689dd4915e8d2622e803bc6dd1eee85e3",
+        "InsureRAG-VLM/src/insurerag_vlm/ablation.py": "3d5b4b2dba63653752fecd19a80912a65e40ae4580caa48130051c82edcb33d7",
+        "InsureRAG-VLM/src/insurerag_vlm/answer_safety.py": "9ebe7c835714443fbef208410acf1f0c91e838c945181eb7c1437599b0a9d103",
+        "InsureRAG-VLM/src/insurerag_vlm/app.py": "f351d798f20302d48a46d70afe15b015c93337c2147da56310a8babd249f45e0",
+        "InsureRAG-VLM/src/insurerag_vlm/benchmark.py": "a709fd94d11d2e36834d08bfdeb03e76930854d215c7c8d7591b4bf35c7a5125",
+        "InsureRAG-VLM/src/insurerag_vlm/calibration.py": "8c6753afb726450311b05d53b8a78e8b2867f42e36ff8456844a0534f5724970",
+        "InsureRAG-VLM/src/insurerag_vlm/cli.py": "ca02883e8a2549ff0c9161461b2b3a346ea8f078a0179d1ba748e67ea3629bd0",
+        "InsureRAG-VLM/src/insurerag_vlm/config.py": "87fda93c37bfdceba41bca82a9cbf5ee992298db457118260d1980de70a2e82f",
+        "InsureRAG-VLM/src/insurerag_vlm/data.py": "b9706f4e9025a3092efa2192015f5703423f233bc5afe328f9a763216049ef0e",
+        "InsureRAG-VLM/src/insurerag_vlm/dense_training.py": "72c0591779ac587405c43d3bd95bedcd7d8194221cf77caae717422ccb82dcd4",
+        "InsureRAG-VLM/src/insurerag_vlm/diff.py": "ca4b9b537ce988e3f735de00e5666cad39b6ddc8493c6d121b380c8c509b8f9c",
+        "InsureRAG-VLM/src/insurerag_vlm/domain_reranker.py": "7f1904228435358bfeb14483f5f599e961e5759f9d2c94f8faaa8368a049aeb5",
+        "InsureRAG-VLM/src/insurerag_vlm/evaluation.py": "899b63a19eb449328b7ea4f0bc15156fce9aca96037bcc6cf167fe1b5e511376",
+        "InsureRAG-VLM/src/insurerag_vlm/graph.py": "99538b0b35e2069f531ad264a474a96fce0fec4dc02119deda76b30a5b6614d0",
+        "InsureRAG-VLM/src/insurerag_vlm/hybrid_pipeline.py": "0c3f56c14926f61622b676024063396d531243b8d4acf95efc4ed0532d9a6256",
+        "InsureRAG-VLM/src/insurerag_vlm/insurance_structure.py": "dff514f1fc71cf02b7ebbd43df7ae8b7db1910bd02fe73275c9ee69ccdc2053f",
+        "InsureRAG-VLM/src/insurerag_vlm/knowledge.py": "6fbeb5f362fc6540866b72e0dae4c9cec7b7ae273ab5e67ac5ecae75cf871eb8",
+        "InsureRAG-VLM/src/insurerag_vlm/ocr.py": "37ffe74a77fef66e70415a5cb3548fc26602bbf209d02f6a47f8440642369645",
+        "InsureRAG-VLM/src/insurerag_vlm/pdf.py": "05fc9659dd7b1a57ce56ad854307c48eb98c0c386947def008af66c69c8a7613",
+        "InsureRAG-VLM/src/insurerag_vlm/pipeline.py": "63a8322376bb5bb683a99173ac158ab82ab2c0d7675ce2bd128b84b98f4be78f",
+        "InsureRAG-VLM/src/insurerag_vlm/preprocess.py": "bbd281ecb9f11579cff05fc53def89408f3cf33b6ecbeab73b49ee9d046a52ff",
+        "InsureRAG-VLM/src/insurerag_vlm/qa.py": "937d73f19e7b4ba9228e5e37a518d69de2d28572d772a019a75b56eee7e99b21",
+        "InsureRAG-VLM/src/insurerag_vlm/query_understanding.py": "8f605ceac2cb836991f3acb8fb17cd0757155c7af10c2f6b25a222e43f0502ae",
+        "InsureRAG-VLM/src/insurerag_vlm/reranker.py": "bb90e6c134b44d7cb0c0cd6ca3165e098827bd908a3a86e73101040cf65734a3",
+        "InsureRAG-VLM/src/insurerag_vlm/retriever.py": "f9d17a456d84bda779bdf78a9c2135bae0c0a955e1ac15ba9bb6c4e44123f85e",
+        "InsureRAG-VLM/src/insurerag_vlm/sft.py": "a6d49fada09ccb3272ece42e48ec8e318cc6c5f48da77e7b947002dc9aa5f856",
+        "InsureRAG-VLM/src/insurerag_vlm/sft_integrity.py": "d5c81e8c8fafeaa158f8b4010eb1df9db8cb1c99a3237a36f40ab78d63cd97e7",
+        "InsureRAG-VLM/src/insurerag_vlm/state_doi_sources.py": "056129b68636d8d5196842d0715bc2b4461881fe852049f04441e4c374ba35ab",
+        "InsureRAG-VLM/src/insurerag_vlm/tables.py": "f572d141c82c40d73d49c6b583ef9f94541666c72e8adaafc6cfcdf9109cb564",
+        "InsureRAG-VLM/src/insurerag_vlm/training_data.py": "58ee89219dc7ff6a68e37ea6b7d311ca2dd3fd6a686c24c3a2df346814a46d42",
+        "InsureRAG-VLM/src/insurerag_vlm/validation.py": "02d17f0d2ca972dfd0d523d4f9ebca0838648350eaff964362f01b710cc19e45",
+        "InsureRAG-VLM/src/insurerag_vlm/visual.py": "1ebe89199bf75afcc73cee7d9e6b305f64fd5d16e7cf4af5808d66093056ad86",
+        "InsureRAG-VLM/src/insurerag_vlm/vlm.py": "109f2555cc767d4ef8119296d3edb54433abe1306157974c740a5b6637cada75",
+        "InsureRAG-VLM/tests/__init__.py": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+        "InsureRAG-VLM/tests/test_ablation_opt_in.py": "302f8af5d9404f4738373a78a9dd3f2e80213f49382c800edf6df507ff33d4e3",
+        "InsureRAG-VLM/tests/test_adapter_source_audit.py": "a25f3cd369c119e7c96b21d6338402d9b022cd79fe2d37f5a62a16a5079cc8f1",
+        "InsureRAG-VLM/tests/test_answer_postprocessing.py": "9c42d90f7e3af7bb78615474d6c152d03f793f4beb5ce34a10d52670c38403d5",
+        "InsureRAG-VLM/tests/test_answer_safety.py": "281d6e20a99d7e2cb7425fef34947b48b69eba6dc2d9f2ea80ecc7f54622a85f",
+        "InsureRAG-VLM/tests/test_app_serving.py": "ce3f40251dd816a205a5941b92131acd82ceceb94e2736c63b157bfe467e8a25",
+        "InsureRAG-VLM/tests/test_citation_previews.py": "95b0edbc7620322b380c7f6af65ddf5d4a0960e053fdc1e0fd18f6acf3443429",
+        "InsureRAG-VLM/tests/test_comparison_protocol.py": "7140fe1f67cffc771e706b3dbda1c17e690a9220fa7723a41a9396e369535aaf",
+        "InsureRAG-VLM/tests/test_context_packing.py": "eb1863eaabc06a6aac63205764bdceba324895ead89255b865e7bb0dbdfa988b",
+        "InsureRAG-VLM/tests/test_corpus_selection.py": "5c182e34bda598c90d7f1b034b1984ab9721e9953317de387fb893b350ec97d7",
+        "InsureRAG-VLM/tests/test_curated_validation.py": "558f4e25ba311204cf1719a423ea4d051abeb8cb0981a342c3b0e9472c554876",
+        "InsureRAG-VLM/tests/test_domain_training.py": "ee88dc214b102c853e20173700a889c840af6e4508a0272e53731846df89ef57",
+        "InsureRAG-VLM/tests/test_embedding_backend.py": "d9df0f96373f0a76dd2355e0e4455a893aa1409ec178f6554e8f1314e55820d4",
+        "InsureRAG-VLM/tests/test_graph_research.py": "fda6ff83abd441fefed9a9fbb6e20820438dc68a059e5dccb6e5162a42483bfd",
+        "InsureRAG-VLM/tests/test_hybrid_pipeline.py": "32585ed21fdd7042fa2e713cb5fcdab7c6b208fd47b9b1992393098ef81b1394",
+        "InsureRAG-VLM/tests/test_index_identity.py": "3229e90277fcacedccece9483910f5bc1cf6cecbd3fc22890045ca2b433cf34c",
+        "InsureRAG-VLM/tests/test_ingestion_upload.py": "f832105c408eea3c8cc91098cd15f61d512c24eab03311f6cb347ee85a6561c3",
+        "InsureRAG-VLM/tests/test_insuranceqa_scale.py": "3faada4db0df1e17d0928167f16bb26207871f59506c87898c7fe11e372d3e62",
+        "InsureRAG-VLM/tests/test_packet_stress.py": "977517888d4ae0dcde27c15434b0b4e80f5fc4cfed7136318c910e44dfeb6736",
+        "InsureRAG-VLM/tests/test_policy_wordings.py": "bbf1b1e551019dd235f7bd5eb72a22b812017e9de2defb98e05eabeb31ec98cf",
+        "InsureRAG-VLM/tests/test_qwen35_lora_smoke.py": "ee3603fed80df548b011616bdd2af048de10c2f1da94f6f3a7fde708b7af9f01",
+        "InsureRAG-VLM/tests/test_reliability.py": "b6785597d0d477066d4c654fcc9aa35ab21f7076fa777328f4cae31de3848663",
+        "InsureRAG-VLM/tests/test_reranker.py": "e60089cbfe1010d244f1bfe949482dad756ad97d93e1b32ec5a493dec5b172b3",
+        "InsureRAG-VLM/tests/test_research_benchmark.py": "f8ecc386d6f8dc25dc3a3c08eb7a0e0cd50db92b60bb57c2b937f4ab357b01d3",
+        "InsureRAG-VLM/tests/test_research_v2.py": "420e11b7a458779676eec6a9d8d5fb9c9ebce2186ba4dabe42bd58dc9c616863",
+        "InsureRAG-VLM/tests/test_retrieval_evaluation.py": "ea1b9bd1ff37b1cb72aa0e6108b0e36442101bca94fbcb0c4706769e17a11ccc",
+        "InsureRAG-VLM/tests/test_sft_integrity.py": "11259e987631d093d44c17874b4b2ef0fed67bc6a8cde8b410dbdc252bafb6ea",
+        "InsureRAG-VLM/tests/test_sft_tokenization.py": "96b69eea889ec7cbd5b0b79dccaab8c22a7b0bce5478eae269148d3e161d4a21",
+        "InsureRAG-VLM/tests/test_training_data.py": "cfd882853fa02ebad77a5896f85c86323aacb15f180a2f7e0ac636fa160555be",
+        "InsureRAG-VLM/tests/test_visual_counterfactual.py": "b930aa8334d7568d6a9f525eb647d7412768a242b87f7ffba09f0488328c4546",
+        "InsureRAG-VLM/tests/test_vlm_runtime.py": "6939e7d358fade1f95e5c119d8a6ba7e125d763b1b100fd1385889553940e293"
+      }
+    },
+    {
+      "filename": "InsureRAG_Domain_Trained_20261001_Model.zip",
+      "bytes": 83441315,
+      "sha256": "2fe1816d59123f5ca3e2de4c1ae553b9a8003dded4f9b7d0071662b38124da42",
+      "files": 8,
+      "original_bytes": 91600379,
+      "crc_and_all_file_hashes_verified": true,
+      "files_sha256": {
+        "models/insurerag-domain-reranker-v2/BASE_LICENSE": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+        "models/insurerag-domain-reranker-v2/BASE_MODEL_CARD.md": "9d1f3b4dc2a15a7a6a1602f59f998a1b143f6eee3fa8c090d1a2e48149058b42",
+        "models/insurerag-domain-reranker-v2/MODEL_CARD.md": "8043122ce055b8582b480f2b302266f2bc408ce40d9f8522d4d32b669f3d63f8",
+        "models/insurerag-domain-reranker-v2/epoch-1/config.json": "bde16d9648b01e19b9d4c5f3deca28cd2851fbbc660f8a90cecd87efde5c5429",
+        "models/insurerag-domain-reranker-v2/epoch-1/model.safetensors": "88207632c798e8a5a7eb2799447dc1f1f08aec03daaa142b31fb29572a2071fe",
+        "models/insurerag-domain-reranker-v2/epoch-1/tokenizer.json": "91f1def9b9391fdabe028cd3f3fcc4efd34e5d1f08c3bf2de513ebb5911a1854",
+        "models/insurerag-domain-reranker-v2/epoch-1/tokenizer_config.json": "65687cd448ac234da7b4db3f535aa0e88a4d8c2c8f5a0fe84a01593f936be44d",
+        "models/insurerag-domain-reranker-v2/epoch-1/training_provenance.json": "1dcd647fabc47c863e1b9f3fe140a4ca8276d449209640570095389d8941b452"
+      }
+    },
+    {
+      "filename": "InsureRAG_Domain_Trained_20261001_Data_Index.zip",
+      "bytes": 213997138,
+      "sha256": "eb007eafde77abda89e6671ad53fe257f1e01523872f382b68ccb856a4424388",
+      "files": 11,
+      "original_bytes": 464867919,
+      "crc_and_all_file_hashes_verified": true,
+      "files_sha256": {
+        "InsureRAG-VLM/data/research_corpus/hicric_public_v1/README.md": "d5fc7cbb2f0a9e15518d93a22e0d295520b8c47fb03c94d1bd8475c0eff1453c",
+        "InsureRAG-VLM/data/research_corpus/hicric_public_v1/UPSTREAM_README.md": "8690473304b9834add30d74892057e3b33c929a5901899651f460cda4e43816e",
+        "InsureRAG-VLM/data/research_corpus/hicric_public_v1/manifest.json": "7770250b6a456ba9cfee852e19f0d2776a1331a6f02b5f2db4cb005f3fd9228a",
+        "InsureRAG-VLM/data/research_corpus/hicric_public_v1/rag_pages.jsonl": "5ca7b822ccb227035fc22052fc8d89e9f59ee66d8cde5bddca1dfe53f19d6ea8",
+        "InsureRAG-VLM/data/research_corpus/hicric_public_v1/rag_snippets.jsonl": "57d40e491d9a4eb8da27ba5240ab62e359f3d2ca108230ff7be1c3f488a04098",
+        "InsureRAG-VLM/data/research_corpus/hicric_public_v1/records.jsonl": "62d41421ebe6d0463638e5bcf57491579ccf10efe3220893cda3093366cba221",
+        "InsureRAG-VLM/reports/hicric_public_v1/bge_index/answer_embeddings.npy": "87ff137a4300520c9da633fef05e169fc626e6baa0b3ce153e4349057316ae49",
+        "InsureRAG-VLM/reports/hicric_public_v1/bge_index/completion.json": "ec08933d7b46d3d14291cc96ca2744c78655525e8dc093c4ca92188f5b851f43",
+        "InsureRAG-VLM/reports/hicric_public_v1/bge_index/protocol.json": "105fa7fd9bf41e6d6c40617dc03cd0ce81f5ab4e075361809cd4bd61bc8b595f",
+        "InsureRAG-VLM/reports/insuranceqa_v2/retrieval_frozen/answer_embeddings.npy": "a944d27bbb2432c8bee6b75d972fe69bee92c1d80a524d41fd10836d7217fe0b",
+        "InsureRAG-VLM/reports/insuranceqa_v2/retrieval_frozen/query_embeddings.npy": "ee1b61b24ce4ec99eeb4fc6d8217c203216ac221d218bf357fbd1f56e48c4008"
+      }
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "training_questions": 11729,
+    "author_positive_pairs": 19193,
+    "mined_negative_pairs": 105561,
+    "original_question_and_positive_labels_preserved": true,
+    "heldout_positive_id_collisions": 0,
+    "heldout_positive_text_collisions": 0,
+    "duplicate_training_questions": 0,
+    "optimizer_steps": 2202,
+    "pair_exposures": 211122,
+    "selected_epoch": 1,
+    "actual_parameter_comparison": {
+      "changed_elements": 22713566,
+      "total_elements": 22713601,
+      "changed_tensors": 105,
+      "total_tensors": 105,
+      "l2_delta": 2.65430548017774,
+      "excluded_nonlearned_buffers": [
+        "bert.embeddings.position_ids"
+      ]
+    },
+    "historical_test": {
+      "questions": 2000,
+      "arms": 7,
+      "all_per_question_metrics_recomputed": true,
+      "all_aggregate_metrics_recomputed": true,
+      "selection_lock_sha256": "0226eb054a9a61baa62f9f05981a35707268e6a0a92c7dfb8034a0123ef0769a"
+    },
+    "government_transfer": {
+      "questions": 416,
+      "arms": 6,
+      "all_per_question_metrics_recomputed": true,
+      "all_aggregate_metrics_recomputed": true,
+      "selection_lock_sha256": "0226eb054a9a61baa62f9f05981a35707268e6a0a92c7dfb8034a0123ef0769a"
+    },
+    "selection_lock_sha256": "0226eb054a9a61baa62f9f05981a35707268e6a0a92c7dfb8034a0123ef0769a",
+    "verification_code_sha256": "c03cdf3c3188b7121d9e3314337147423681156c8c6ab53c394aa1fa6a8b108a"
+  },
+  "tests": {
+    "full_suite": {
+      "passed": 265,
+      "subtests_passed": 58,
+      "exit_code": 0,
+      "log_sha256": "265e5641bb59912f15c854333aeb51a8cb4d8a45403f694f2df0528f2eaf08df"
+    },
+    "minimal_dependencies": {
+      "passed": 258,
+      "skipped": 7,
+      "subtests_passed": 58,
+      "exit_code": 0,
+      "log_sha256": "79ffda51d6691e228335ad999e3df01b5e8a7137fb5b318366fa0bceddc22fd1"
+    }
+  },
+  "historical_test": {
+    "trained_selected": {
+      "n": 2000,
+      "hit_at_1": 0.432,
+      "hit_at_5": 0.6635,
+      "hit_at_10": 0.734,
+      "hit_at_100": 0.886,
+      "mrr_at_100": 0.5386038961086295,
+      "label_recall_at_10": 0.6282156746031745,
+      "hit_at_1_wilson_95": [
+        0.41044132080375967,
+        0.45381939762649065
+      ],
+      "hit_at_10_wilson_95": [
+        0.7141995838511511,
+        0.7529032380212225
+      ],
+      "no_exact_overlap": {
+        "n": 1992,
+        "hit_at_1": 0.43323293172690763,
+        "hit_at_5": 0.6631526104417671,
+        "hit_at_10": 0.7339357429718876,
+        "hit_at_100": 0.8855421686746988,
+        "mrr_at_100": 0.5392035675215728,
+        "label_recall_at_10": 0.6285465273793587,
+        "hit_at_1_wilson_95": [
+          0.41162163293142495,
+          0.4551012478743609
+        ],
+        "hit_at_10_wilson_95": [
+          0.7140933966437929,
+          0.752877562337439
+        ]
+      },
+      "by_domain": {
+        "annuities": {
+          "n": 94,
+          "hit_at_1": 0.3404255319148936,
+          "hit_at_5": 0.5319148936170213,
+          "hit_at_10": 0.6170212765957447,
+          "hit_at_100": 0.776595744680851,
+          "mrr_at_100": 0.42373887654769965,
+          "label_recall_at_10": 0.5432624113475177,
+          "hit_at_1_wilson_95": [
+            0.2525897357172143,
+            0.4407917779928532
+          ],
+          "hit_at_10_wilson_95": [
+            0.5159955881639535,
+            0.7088579684486636
+          ]
+        },
+        "auto-insurance": {
+          "n": 249,
+          "hit_at_1": 0.39759036144578314,
+          "hit_at_5": 0.6104417670682731,
+          "hit_at_10": 0.7068273092369478,
+          "hit_at_100": 0.8514056224899599,
+          "mrr_at_100": 0.49561096432347085,
+          "label_recall_at_10": 0.6006310958118188,
+          "hit_at_1_wilson_95": [
+            0.338802544143189,
+            0.4594900292430162
+          ],
+          "hit_at_10_wilson_95": [
+            0.6474867573661366,
+            0.7598831434421157
+          ]
+        },
+        "critical-illness-insurance": {
+          "n": 17,
+          "hit_at_1": 0.6470588235294118,
+          "hit_at_5": 0.8235294117647058,
+          "hit_at_10": 0.8235294117647058,
+          "hit_at_100": 1.0,
+          "mrr_at_100": 0.7043214654282766,
+          "label_recall_at_10": 0.5833333333333333,
+          "hit_at_1_wilson_95": [
+            0.41300363485218694,
+            0.8269027960275627
+          ],
+          "hit_at_10_wilson_95": [
+            0.5897054143116588,
+            0.9380887336237901
+          ]
+        },
+        "disability-insurance": {
+          "n": 102,
+          "hit_at_1": 0.49019607843137253,
+          "hit_at_5": 0.7549019607843137,
+          "hit_at_10": 0.7647058823529411,
+          "hit_at_100": 0.9411764705882353,
+          "mrr_at_100": 0.6115949785184192,
+          "label_recall_at_10": 0.6625816993464052,
+          "hit_at_1_wilson_95": [
+            0.3953140272637241,
+            0.5857897857195398
+          ],
+          "hit_at_10_wilson_95": [
+            0.6737179817230023,
+            0.83647906772887
+          ]
+        },
+        "health-insurance": {
+          "n": 245,
+          "hit_at_1": 0.49795918367346936,
+          "hit_at_5": 0.6857142857142857,
+          "hit_at_10": 0.7346938775510204,
+          "hit_at_100": 0.8693877551020408,
+          "mrr_at_100": 0.5856440616241707,
+          "label_recall_at_10": 0.6783673469387754,
+          "hit_at_1_wilson_95": [
+            0.43586758209503174,
+            0.5601137949442317
+          ],
+          "hit_at_10_wilson_95": [
+            0.6760966369306227,
+            0.7860450035540714
+          ]
+        },
+        "home-insurance": {
+          "n": 201,
+          "hit_at_1": 0.22885572139303484,
+          "hit_at_5": 0.5174129353233831,
+          "hit_at_10": 0.6169154228855721,
+          "hit_at_100": 0.835820895522388,
+          "mrr_at_100": 0.35937337411478304,
+          "label_recall_at_10": 0.5514096185737977,
+          "hit_at_1_wilson_95": [
+            0.17618715868366255,
+            0.2916939986390255
+          ],
+          "hit_at_10_wilson_95": [
+            0.5481135932662352,
+            0.6813321462368257
+          ]
+        },
+        "life-insurance": {
+          "n": 514,
+          "hit_at_1": 0.5077821011673151,
+          "hit_at_5": 0.7568093385214008,
+          "hit_at_10": 0.8268482490272373,
+          "hit_at_100": 0.9396887159533074,
+          "mrr_at_100": 0.622907004789643,
+          "label_recall_at_10": 0.6201616638873448,
+          "hit_at_1_wilson_95": [
+            0.4646650220540311,
+            0.5507837216951055
+          ],
+          "hit_at_10_wilson_95": [
+            0.7917441726689006,
+            0.8571030647948382
+          ]
+        },
+        "long-term-care-insurance": {
+          "n": 89,
+          "hit_at_1": 0.4943820224719101,
+          "hit_at_5": 0.651685393258427,
+          "hit_at_10": 0.6966292134831461,
+          "hit_at_100": 0.8314606741573034,
+          "mrr_at_100": 0.5692029545468811,
+          "label_recall_at_10": 0.6290262172284644,
+          "hit_at_1_wilson_95": [
+            0.3929145023562317,
+            0.596314447590243
+          ],
+          "hit_at_10_wilson_95": [
+            0.5946286603942715,
+            0.7823580914791123
+          ]
+        },
+        "medicare-insurance": {
+          "n": 251,
+          "hit_at_1": 0.4262948207171315,
+          "hit_at_5": 0.6892430278884463,
+          "hit_at_10": 0.7569721115537849,
+          "hit_at_100": 0.9442231075697212,
+          "mrr_at_100": 0.5461598754878144,
+          "label_recall_at_10": 0.7207835325365205,
+          "hit_at_1_wilson_95": [
+            0.36667838059928304,
+            0.4881333122421352
+          ],
+          "hit_at_10_wilson_95": [
+            0.7002962377998858,
+            0.8059008331043587
+          ]
+        },
+        "other-insurance": {
+          "n": 3,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "hit_at_10": 1.0,
+          "hit_at_100": 1.0,
+          "mrr_at_100": 1.0,
+          "label_recall_at_10": 0.5,
+          "hit_at_1_wilson_95": [
+            0.4385029682449546,
+            1.0
+          ],
+          "hit_at_10_wilson_95": [
+            0.4385029682449546,
+            1.0
+          ]
+        },
+        "renters-insurance": {
+          "n": 140,
+          "hit_at_1": 0.2642857142857143,
+          "hit_at_5": 0.4857142857142857,
+          "hit_at_10": 0.5571428571428572,
+          "hit_at_100": 0.7642857142857142,
+          "mrr_at_100": 0.3722948475507091,
+          "label_recall_at_10": 0.5071428571428571,
+          "hit_at_1_wilson_95": [
+            0.19824577409710042,
+            0.34291572036276574
+          ],
+          "hit_at_10_wilson_95": [
+            0.4744276571463636,
+            0.6368059199542749
+          ]
+        },
+        "retirement-plans": {
+          "n": 95,
+          "hit_at_1": 0.5473684210526316,
+          "hit_at_5": 0.7473684210526316,
+          "hit_at_10": 0.8421052631578947,
+          "hit_at_100": 0.9368421052631579,
+          "mrr_at_100": 0.6405846407156683,
+          "label_recall_at_10": 0.7695906432748538,
+          "hit_at_1_wilson_95": [
+            0.44738266913924607,
+            0.6436722394728039
+          ],
+          "hit_at_10_wilson_95": [
+            0.7557039468613879,
+            0.9019148375589726
+          ]
+        }
+      }
+    },
+    "previous_untrained": {
+      "n": 2000,
+      "hit_at_1": 0.3735,
+      "hit_at_5": 0.6185,
+      "hit_at_10": 0.6955,
+      "hit_at_100": 0.886,
+      "mrr_at_100": 0.4838551055613348,
+      "label_recall_at_10": 0.5845591269841269,
+      "hit_at_1_wilson_95": [
+        0.35256129877589387,
+        0.394923714186263
+      ],
+      "hit_at_10_wilson_95": [
+        0.6749724939649412,
+        0.7152779405480888
+      ],
+      "no_exact_overlap": {
+        "n": 1992,
+        "hit_at_1": 0.3744979919678715,
+        "hit_at_5": 0.6189759036144579,
+        "hit_at_10": 0.695281124497992,
+        "hit_at_100": 0.8855421686746988,
+        "mrr_at_100": 0.4843403837630538,
+        "label_recall_at_10": 0.5848819882705424,
+        "hit_at_1_wilson_95": [
+          0.3535045492651441,
+          0.39597454999385184
+        ],
+        "hit_at_10_wilson_95": [
+          0.6747081063901451,
+          0.7151024151628572
+        ]
+      },
+      "by_domain": {
+        "annuities": {
+          "n": 94,
+          "hit_at_1": 0.26595744680851063,
+          "hit_at_5": 0.5425531914893617,
+          "hit_at_10": 0.5638297872340425,
+          "hit_at_100": 0.776595744680851,
+          "mrr_at_100": 0.37826026925199524,
+          "label_recall_at_10": 0.48741134751773046,
+          "hit_at_1_wilson_95": [
+            0.18711610480785898,
+            0.3631767819669066
+          ],
+          "hit_at_10_wilson_95": [
+            0.4630290566620046,
+            0.6596183378539684
+          ]
+        },
+        "auto-insurance": {
+          "n": 249,
+          "hit_at_1": 0.3453815261044177,
+          "hit_at_5": 0.5502008032128514,
+          "hit_at_10": 0.642570281124498,
+          "hit_at_100": 0.8514056224899599,
+          "mrr_at_100": 0.44151474474359065,
+          "label_recall_at_10": 0.5302830369095429,
+          "hit_at_1_wilson_95": [
+            0.28907416113226375,
+            0.4063871751567127
+          ],
+          "hit_at_10_wilson_95": [
+            0.581292771338239,
+            0.6995156068888089
+          ]
+        },
+        "critical-illness-insurance": {
+          "n": 17,
+          "hit_at_1": 0.5294117647058824,
+          "hit_at_5": 0.8235294117647058,
+          "hit_at_10": 0.8823529411764706,
+          "hit_at_100": 1.0,
+          "mrr_at_100": 0.6380197296309827,
+          "label_recall_at_10": 0.6029411764705882,
+          "hit_at_1_wilson_95": [
+            0.30963235060004424,
+            0.7383489355759056
+          ],
+          "hit_at_10_wilson_95": [
+            0.6566364940511412,
+            0.9671202262362074
+          ]
+        },
+        "disability-insurance": {
+          "n": 102,
+          "hit_at_1": 0.35294117647058826,
+          "hit_at_5": 0.6764705882352942,
+          "hit_at_10": 0.7352941176470589,
+          "hit_at_100": 0.9411764705882353,
+          "mrr_at_100": 0.4994432381322699,
+          "label_recall_at_10": 0.6241830065359477,
+          "hit_at_1_wilson_95": [
+            0.26707997479873313,
+            0.4494772199502266
+          ],
+          "hit_at_10_wilson_95": [
+            0.6422725125202735,
+            0.811235975881391
+          ]
+        },
+        "health-insurance": {
+          "n": 245,
+          "hit_at_1": 0.40408163265306124,
+          "hit_at_5": 0.6081632653061224,
+          "hit_at_10": 0.7020408163265306,
+          "hit_at_100": 0.8693877551020408,
+          "mrr_at_100": 0.5064643588284122,
+          "label_recall_at_10": 0.6399319727891156,
+          "hit_at_1_wilson_95": [
+            0.3445745975561091,
+            0.4665501232892769
+          ],
+          "hit_at_10_wilson_95": [
+            0.6420104100162126,
+            0.7558332630966978
+          ]
+        },
+        "home-insurance": {
+          "n": 201,
+          "hit_at_1": 0.263681592039801,
+          "hit_at_5": 0.5024875621890548,
+          "hit_at_10": 0.6069651741293532,
+          "hit_at_100": 0.835820895522388,
+          "mrr_at_100": 0.36801637975718643,
+          "label_recall_at_10": 0.5360696517412935,
+          "hit_at_1_wilson_95": [
+            0.20760990579295716,
+            0.32861679095617463
+          ],
+          "hit_at_10_wilson_95": [
+            0.5380429418475884,
+            0.6718755006764888
+          ]
+        },
+        "life-insurance": {
+          "n": 514,
+          "hit_at_1": 0.42996108949416345,
+          "hit_at_5": 0.7023346303501945,
+          "hit_at_10": 0.7821011673151751,
+          "hit_at_100": 0.9396887159533074,
+          "mrr_at_100": 0.5510488324473664,
+          "label_recall_at_10": 0.5770211846087332,
+          "hit_at_1_wilson_95": [
+            0.3878375551533768,
+            0.4731237511043933
+          ],
+          "hit_at_10_wilson_95": [
+            0.7443913011546327,
+            0.8156256597515706
+          ]
+        },
+        "long-term-care-insurance": {
+          "n": 89,
+          "hit_at_1": 0.43820224719101125,
+          "hit_at_5": 0.6179775280898876,
+          "hit_at_10": 0.651685393258427,
+          "hit_at_100": 0.8314606741573034,
+          "mrr_at_100": 0.5158497952865192,
+          "label_recall_at_10": 0.5794007490636703,
+          "hit_at_1_wilson_95": [
+            0.33980052533459154,
+            0.5417179240766308
+          ],
+          "hit_at_10_wilson_95": [
+            0.5482931796636432,
+            0.7425251717815387
+          ]
+        },
+        "medicare-insurance": {
+          "n": 251,
+          "hit_at_1": 0.3904382470119522,
+          "hit_at_5": 0.6733067729083665,
+          "hit_at_10": 0.749003984063745,
+          "hit_at_100": 0.9442231075697212,
+          "mrr_at_100": 0.5153421863596224,
+          "label_recall_at_10": 0.700199203187251,
+          "hit_at_1_wilson_95": [
+            0.3321709710773429,
+            0.45200857233557606
+          ],
+          "hit_at_10_wilson_95": [
+            0.6918844267656868,
+            0.7986166109322245
+          ]
+        },
+        "other-insurance": {
+          "n": 3,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "hit_at_10": 1.0,
+          "hit_at_100": 1.0,
+          "mrr_at_100": 1.0,
+          "label_recall_at_10": 0.4166666666666667,
+          "hit_at_1_wilson_95": [
+            0.4385029682449546,
+            1.0
+          ],
+          "hit_at_10_wilson_95": [
+            0.4385029682449546,
+            1.0
+          ]
+        },
+        "renters-insurance": {
+          "n": 140,
+          "hit_at_1": 0.22857142857142856,
+          "hit_at_5": 0.44285714285714284,
+          "hit_at_10": 0.5071428571428571,
+          "hit_at_100": 0.7642857142857142,
+          "mrr_at_100": 0.32492002320349767,
+          "label_recall_at_10": 0.4619047619047618,
+          "hit_at_1_wilson_95": [
+            0.16681621731086882,
+            0.30482429146109824
+          ],
+          "hit_at_10_wilson_95": [
+            0.4252500550206417,
+            0.588654142116938
+          ]
+        },
+        "retirement-plans": {
+          "n": 95,
+          "hit_at_1": 0.4842105263157895,
+          "hit_at_5": 0.6947368421052632,
+          "hit_at_10": 0.7578947368421053,
+          "hit_at_100": 0.9368421052631579,
+          "mrr_at_100": 0.5829741552763468,
+          "label_recall_at_10": 0.6630409356725147,
+          "hit_at_1_wilson_95": [
+            0.3863005773182999,
+            0.5833477864776834
+          ],
+          "hit_at_10_wilson_95": [
+            0.6628317922510378,
+            0.8329115990812341
+          ]
+        }
+      }
+    },
+    "untrained_same_fusion": {
+      "n": 2000,
+      "hit_at_1": 0.3735,
+      "hit_at_5": 0.6185,
+      "hit_at_10": 0.6955,
+      "hit_at_100": 0.886,
+      "mrr_at_100": 0.4838551055613348,
+      "label_recall_at_10": 0.5845591269841269,
+      "hit_at_1_wilson_95": [
+        0.35256129877589387,
+        0.394923714186263
+      ],
+      "hit_at_10_wilson_95": [
+        0.6749724939649412,
+        0.7152779405480888
+      ],
+      "no_exact_overlap": {
+        "n": 1992,
+        "hit_at_1": 0.3744979919678715,
+        "hit_at_5": 0.6189759036144579,
+        "hit_at_10": 0.695281124497992,
+        "hit_at_100": 0.8855421686746988,
+        "mrr_at_100": 0.4843403837630538,
+        "label_recall_at_10": 0.5848819882705424,
+        "hit_at_1_wilson_95": [
+          0.3535045492651441,
+          0.39597454999385184
+        ],
+        "hit_at_10_wilson_95": [
+          0.6747081063901451,
+          0.7151024151628572
+        ]
+      },
+      "by_domain": {
+        "annuities": {
+          "n": 94,
+          "hit_at_1": 0.26595744680851063,
+          "hit_at_5": 0.5425531914893617,
+          "hit_at_10": 0.5638297872340425,
+          "hit_at_100": 0.776595744680851,
+          "mrr_at_100": 0.37826026925199524,
+          "label_recall_at_10": 0.48741134751773046,
+          "hit_at_1_wilson_95": [
+            0.18711610480785898,
+            0.3631767819669066
+          ],
+          "hit_at_10_wilson_95": [
+            0.4630290566620046,
+            0.6596183378539684
+          ]
+        },
+        "auto-insurance": {
+          "n": 249,
+          "hit_at_1": 0.3453815261044177,
+          "hit_at_5": 0.5502008032128514,
+          "hit_at_10": 0.642570281124498,
+          "hit_at_100": 0.8514056224899599,
+          "mrr_at_100": 0.44151474474359065,
+          "label_recall_at_10": 0.5302830369095429,
+          "hit_at_1_wilson_95": [
+            0.28907416113226375,
+            0.4063871751567127
+          ],
+          "hit_at_10_wilson_95": [
+            0.581292771338239,
+            0.6995156068888089
+          ]
+        },
+        "critical-illness-insurance": {
+          "n": 17,
+          "hit_at_1": 0.5294117647058824,
+          "hit_at_5": 0.8235294117647058,
+          "hit_at_10": 0.8823529411764706,
+          "hit_at_100": 1.0,
+          "mrr_at_100": 0.6380197296309827,
+          "label_recall_at_10": 0.6029411764705882,
+          "hit_at_1_wilson_95": [
+            0.30963235060004424,
+            0.7383489355759056
+          ],
+          "hit_at_10_wilson_95": [
+            0.6566364940511412,
+            0.9671202262362074
+          ]
+        },
+        "disability-insurance": {
+          "n": 102,
+          "hit_at_1": 0.35294117647058826,
+          "hit_at_5": 0.6764705882352942,
+          "hit_at_10": 0.7352941176470589,
+          "hit_at_100": 0.9411764705882353,
+          "mrr_at_100": 0.4994432381322699,
+          "label_recall_at_10": 0.6241830065359477,
+          "hit_at_1_wilson_95": [
+            0.26707997479873313,
+            0.4494772199502266
+          ],
+          "hit_at_10_wilson_95": [
+            0.6422725125202735,
+            0.811235975881391
+          ]
+        },
+        "health-insurance": {
+          "n": 245,
+          "hit_at_1": 0.40408163265306124,
+          "hit_at_5": 0.6081632653061224,
+          "hit_at_10": 0.7020408163265306,
+          "hit_at_100": 0.8693877551020408,
+          "mrr_at_100": 0.5064643588284122,
+          "label_recall_at_10": 0.6399319727891156,
+          "hit_at_1_wilson_95": [
+            0.3445745975561091,
+            0.4665501232892769
+          ],
+          "hit_at_10_wilson_95": [
+            0.6420104100162126,
+            0.7558332630966978
+          ]
+        },
+        "home-insurance": {
+          "n": 201,
+          "hit_at_1": 0.263681592039801,
+          "hit_at_5": 0.5024875621890548,
+          "hit_at_10": 0.6069651741293532,
+          "hit_at_100": 0.835820895522388,
+          "mrr_at_100": 0.36801637975718643,
+          "label_recall_at_10": 0.5360696517412935,
+          "hit_at_1_wilson_95": [
+            0.20760990579295716,
+            0.32861679095617463
+          ],
+          "hit_at_10_wilson_95": [
+            0.5380429418475884,
+            0.6718755006764888
+          ]
+        },
+        "life-insurance": {
+          "n": 514,
+          "hit_at_1": 0.42996108949416345,
+          "hit_at_5": 0.7023346303501945,
+          "hit_at_10": 0.7821011673151751,
+          "hit_at_100": 0.9396887159533074,
+          "mrr_at_100": 0.5510488324473664,
+          "label_recall_at_10": 0.5770211846087332,
+          "hit_at_1_wilson_95": [
+            0.3878375551533768,
+            0.4731237511043933
+          ],
+          "hit_at_10_wilson_95": [
+            0.7443913011546327,
+            0.8156256597515706
+          ]
+        },
+        "long-term-care-insurance": {
+          "n": 89,
+          "hit_at_1": 0.43820224719101125,
+          "hit_at_5": 0.6179775280898876,
+          "hit_at_10": 0.651685393258427,
+          "hit_at_100": 0.8314606741573034,
+          "mrr_at_100": 0.5158497952865192,
+          "label_recall_at_10": 0.5794007490636703,
+          "hit_at_1_wilson_95": [
+            0.33980052533459154,
+            0.5417179240766308
+          ],
+          "hit_at_10_wilson_95": [
+            0.5482931796636432,
+            0.7425251717815387
+          ]
+        },
+        "medicare-insurance": {
+          "n": 251,
+          "hit_at_1": 0.3904382470119522,
+          "hit_at_5": 0.6733067729083665,
+          "hit_at_10": 0.749003984063745,
+          "hit_at_100": 0.9442231075697212,
+          "mrr_at_100": 0.5153421863596224,
+          "label_recall_at_10": 0.700199203187251,
+          "hit_at_1_wilson_95": [
+            0.3321709710773429,
+            0.45200857233557606
+          ],
+          "hit_at_10_wilson_95": [
+            0.6918844267656868,
+            0.7986166109322245
+          ]
+        },
+        "other-insurance": {
+          "n": 3,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "hit_at_10": 1.0,
+          "hit_at_100": 1.0,
+          "mrr_at_100": 1.0,
+          "label_recall_at_10": 0.4166666666666667,
+          "hit_at_1_wilson_95": [
+            0.4385029682449546,
+            1.0
+          ],
+          "hit_at_10_wilson_95": [
+            0.4385029682449546,
+            1.0
+          ]
+        },
+        "renters-insurance": {
+          "n": 140,
+          "hit_at_1": 0.22857142857142856,
+          "hit_at_5": 0.44285714285714284,
+          "hit_at_10": 0.5071428571428571,
+          "hit_at_100": 0.7642857142857142,
+          "mrr_at_100": 0.32492002320349767,
+          "label_recall_at_10": 0.4619047619047618,
+          "hit_at_1_wilson_95": [
+            0.16681621731086882,
+            0.30482429146109824
+          ],
+          "hit_at_10_wilson_95": [
+            0.4252500550206417,
+            0.588654142116938
+          ]
+        },
+        "retirement-plans": {
+          "n": 95,
+          "hit_at_1": 0.4842105263157895,
+          "hit_at_5": 0.6947368421052632,
+          "hit_at_10": 0.7578947368421053,
+          "hit_at_100": 0.9368421052631579,
+          "mrr_at_100": 0.5829741552763468,
+          "label_recall_at_10": 0.6630409356725147,
+          "hit_at_1_wilson_95": [
+            0.3863005773182999,
+            0.5833477864776834
+          ],
+          "hit_at_10_wilson_95": [
+            0.6628317922510378,
+            0.8329115990812341
+          ]
+        }
+      }
+    },
+    "trained_bge_candidates": {
+      "n": 2000,
+      "hit_at_1": 0.4085,
+      "hit_at_5": 0.645,
+      "hit_at_10": 0.7245,
+      "hit_at_100": 0.885,
+      "mrr_at_100": 0.5185050449405908,
+      "label_recall_at_10": 0.6197928571428573,
+      "hit_at_1_wilson_95": [
+        0.3871523387205605,
+        0.43019848093190866
+      ],
+      "hit_at_10_wilson_95": [
+        0.7045036477617654,
+        0.743635598008952
+      ],
+      "no_exact_overlap": {
+        "n": 1992,
+        "hit_at_1": 0.40963855421686746,
+        "hit_at_5": 0.6450803212851406,
+        "hit_at_10": 0.7243975903614458,
+        "hit_at_100": 0.8850401606425703,
+        "mrr_at_100": 0.5190640598004824,
+        "label_recall_at_10": 0.6202572193536049,
+        "hit_at_1_wilson_95": [
+          0.3882370890395624,
+          0.4313878624269147
+        ],
+        "hit_at_10_wilson_95": [
+          0.7043582647157192,
+          0.7435731058091963
+        ]
+      },
+      "by_domain": {
+        "annuities": {
+          "n": 94,
+          "hit_at_1": 0.2872340425531915,
+          "hit_at_5": 0.5106382978723404,
+          "hit_at_10": 0.6063829787234043,
+          "hit_at_100": 0.776595744680851,
+          "mrr_at_100": 0.3931094867545905,
+          "label_recall_at_10": 0.5379432624113475,
+          "hit_at_1_wilson_95": [
+            0.20554361168210775,
+            0.3856317399313156
+          ],
+          "hit_at_10_wilson_95": [
+            0.5053112567832916,
+            0.6991010674099969
+          ]
+        },
+        "auto-insurance": {
+          "n": 249,
+          "hit_at_1": 0.36947791164658633,
+          "hit_at_5": 0.5983935742971888,
+          "hit_at_10": 0.6947791164658634,
+          "hit_at_100": 0.8594377510040161,
+          "mrr_at_100": 0.477002741772261,
+          "label_recall_at_10": 0.5891183782750048,
+          "hit_at_1_wilson_95": [
+            0.31193457478273645,
+            0.43098733247419163
+          ],
+          "hit_at_10_wilson_95": [
+            0.6349811407336561,
+            0.7486584745906204
+          ]
+        },
+        "critical-illness-insurance": {
+          "n": 17,
+          "hit_at_1": 0.47058823529411764,
+          "hit_at_5": 0.7647058823529411,
+          "hit_at_10": 0.8235294117647058,
+          "hit_at_100": 0.9411764705882353,
+          "mrr_at_100": 0.598292877522526,
+          "label_recall_at_10": 0.5637254901960783,
+          "hit_at_1_wilson_95": [
+            0.26165106442409436,
+            0.6903676493999558
+          ],
+          "hit_at_10_wilson_95": [
+            0.5897054143116588,
+            0.9380887336237901
+          ]
+        },
+        "disability-insurance": {
+          "n": 102,
+          "hit_at_1": 0.46078431372549017,
+          "hit_at_5": 0.7254901960784313,
+          "hit_at_10": 0.7549019607843137,
+          "hit_at_100": 0.9215686274509803,
+          "mrr_at_100": 0.5772007161024674,
+          "label_recall_at_10": 0.6380718954248366,
+          "hit_at_1_wilson_95": [
+            0.3672348657242559,
+            0.5571803862087998
+          ],
+          "hit_at_10_wilson_95": [
+            0.663182417362967,
+            0.8281184450721693
+          ]
+        },
+        "health-insurance": {
+          "n": 245,
+          "hit_at_1": 0.4775510204081633,
+          "hit_at_5": 0.6571428571428571,
+          "hit_at_10": 0.7306122448979592,
+          "hit_at_100": 0.8734693877551021,
+          "mrr_at_100": 0.5685557864166081,
+          "label_recall_at_10": 0.6719047619047619,
+          "hit_at_1_wilson_95": [
+            0.4158356370240251,
+            0.5399595104078738
+          ],
+          "hit_at_10_wilson_95": [
+            0.6718160947654831,
+            0.782288299797738
+          ]
+        },
+        "home-insurance": {
+          "n": 201,
+          "hit_at_1": 0.23383084577114427,
+          "hit_at_5": 0.5074626865671642,
+          "hit_at_10": 0.6069651741293532,
+          "hit_at_100": 0.835820895522388,
+          "mrr_at_100": 0.36138672978744774,
+          "label_recall_at_10": 0.5352404643449419,
+          "hit_at_1_wilson_95": [
+            0.18064466830553705,
+            0.29700013750664295
+          ],
+          "hit_at_10_wilson_95": [
+            0.5380429418475884,
+            0.6718755006764888
+          ]
+        },
+        "life-insurance": {
+          "n": 514,
+          "hit_at_1": 0.48249027237354086,
+          "hit_at_5": 0.7412451361867705,
+          "hit_at_10": 0.8171206225680934,
+          "hit_at_100": 0.933852140077821,
+          "mrr_at_100": 0.5977209074571339,
+          "label_recall_at_10": 0.6170248903711938,
+          "hit_at_1_wilson_95": [
+            0.4395818542226329,
+            0.5256584723418095
+          ],
+          "hit_at_10_wilson_95": [
+            0.7813904471641667,
+            0.8481458606131514
+          ]
+        },
+        "long-term-care-insurance": {
+          "n": 89,
+          "hit_at_1": 0.4606741573033708,
+          "hit_at_5": 0.6067415730337079,
+          "hit_at_10": 0.6966292134831461,
+          "hit_at_100": 0.8426966292134831,
+          "mrr_at_100": 0.5387558694873867,
+          "label_recall_at_10": 0.6346441947565543,
+          "hit_at_1_wilson_95": [
+            0.3608972112390251,
+            0.5637054383862982
+          ],
+          "hit_at_10_wilson_95": [
+            0.5946286603942715,
+            0.7823580914791123
+          ]
+        },
+        "medicare-insurance": {
+          "n": 251,
+          "hit_at_1": 0.3944223107569721,
+          "hit_at_5": 0.6772908366533864,
+          "hit_at_10": 0.7569721115537849,
+          "hit_at_100": 0.9482071713147411,
+          "mrr_at_100": 0.5248933772942483,
+          "label_recall_at_10": 0.7221115537848606,
+          "hit_at_1_wilson_95": [
+            0.33598888347338596,
+            0.4560386765426996
+          ],
+          "hit_at_10_wilson_95": [
+            0.7002962377998858,
+            0.8059008331043587
+          ]
+        },
+        "other-insurance": {
+          "n": 3,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "hit_at_10": 1.0,
+          "hit_at_100": 1.0,
+          "mrr_at_100": 1.0,
+          "label_recall_at_10": 0.5,
+          "hit_at_1_wilson_95": [
+            0.4385029682449546,
+            1.0
+          ],
+          "hit_at_10_wilson_95": [
+            0.4385029682449546,
+            1.0
+          ]
+        },
+        "renters-insurance": {
+          "n": 140,
+          "hit_at_1": 0.2714285714285714,
+          "hit_at_5": 0.4642857142857143,
+          "hit_at_10": 0.5214285714285715,
+          "hit_at_100": 0.7642857142857142,
+          "mrr_at_100": 0.3640728980713471,
+          "label_recall_at_10": 0.4797619047619048,
+          "hit_at_1_wilson_95": [
+            0.2046044593860109,
+            0.350461232211435
+          ],
+          "hit_at_10_wilson_95": [
+            0.4392192052347867,
+            0.6024933861779527
+          ]
+        },
+        "retirement-plans": {
+          "n": 95,
+          "hit_at_1": 0.5263157894736842,
+          "hit_at_5": 0.7368421052631579,
+          "hit_at_10": 0.8315789473684211,
+          "hit_at_100": 0.9263157894736842,
+          "mrr_at_100": 0.625342114285132,
+          "label_recall_at_10": 0.7569590643274854,
+          "hit_at_1_wilson_95": [
+            0.42685348170018467,
+            0.623732578639843
+          ],
+          "hit_at_10_wilson_95": [
+            0.743796910314561,
+            0.8935874499697887
+          ]
+        }
+      }
+    },
+    "bge": {
+      "n": 2000,
+      "hit_at_1": 0.3445,
+      "hit_at_5": 0.587,
+      "hit_at_10": 0.675,
+      "hit_at_100": 0.885,
+      "mrr_at_100": 0.4541058051728594,
+      "label_recall_at_10": 0.5630111111111111,
+      "hit_at_1_wilson_95": [
+        0.32398954487377196,
+        0.3656066568306976
+      ],
+      "hit_at_10_wilson_95": [
+        0.6541544022367746,
+        0.695174631214787
+      ],
+      "no_exact_overlap": {
+        "n": 1992,
+        "hit_at_1": 0.3453815261044177,
+        "hit_at_5": 0.5873493975903614,
+        "hit_at_10": 0.6752008032128514,
+        "hit_at_100": 0.8850401606425703,
+        "mrr_at_100": 0.4546409695802811,
+        "label_recall_at_10": 0.5636657742079428,
+        "hit_at_1_wilson_95": [
+          0.324816308509974,
+          0.36654194177710897
+        ],
+        "hit_at_10_wilson_95": [
+          0.6543156855374201,
+          0.6954114918970216
+        ]
+      },
+      "by_domain": {
+        "annuities": {
+          "n": 94,
+          "hit_at_1": 0.26595744680851063,
+          "hit_at_5": 0.4787234042553192,
+          "hit_at_10": 0.5638297872340425,
+          "hit_at_100": 0.776595744680851,
+          "mrr_at_100": 0.3617704326777014,
+          "label_recall_at_10": 0.4870567375886525,
+          "hit_at_1_wilson_95": [
+            0.18711610480785898,
+            0.3631767819669066
+          ],
+          "hit_at_10_wilson_95": [
+            0.4630290566620046,
+            0.6596183378539684
+          ]
+        },
+        "auto-insurance": {
+          "n": 249,
+          "hit_at_1": 0.3172690763052209,
+          "hit_at_5": 0.5220883534136547,
+          "hit_at_10": 0.6465863453815262,
+          "hit_at_100": 0.8594377510040161,
+          "mrr_at_100": 0.4153378631835812,
+          "label_recall_at_10": 0.5345668387837063,
+          "hit_at_1_wilson_95": [
+            0.2626111345871953,
+            0.377479535572504
+          ],
+          "hit_at_10_wilson_95": [
+            0.585394972994798,
+            0.7033235003935752
+          ]
+        },
+        "critical-illness-insurance": {
+          "n": 17,
+          "hit_at_1": 0.47058823529411764,
+          "hit_at_5": 0.7058823529411765,
+          "hit_at_10": 0.8823529411764706,
+          "hit_at_100": 0.9411764705882353,
+          "mrr_at_100": 0.5800128384687209,
+          "label_recall_at_10": 0.5735294117647058,
+          "hit_at_1_wilson_95": [
+            0.26165106442409436,
+            0.6903676493999558
+          ],
+          "hit_at_10_wilson_95": [
+            0.6566364940511412,
+            0.9671202262362074
+          ]
+        },
+        "disability-insurance": {
+          "n": 102,
+          "hit_at_1": 0.3235294117647059,
+          "hit_at_5": 0.6372549019607843,
+          "hit_at_10": 0.696078431372549,
+          "hit_at_100": 0.9215686274509803,
+          "mrr_at_100": 0.45710363952116895,
+          "label_recall_at_10": 0.5898692810457515,
+          "hit_at_1_wilson_95": [
+            0.24057906530881729,
+            0.4192895683899344
+          ],
+          "hit_at_10_wilson_95": [
+            0.6010479530545229,
+            0.7768757872801973
+          ]
+        },
+        "health-insurance": {
+          "n": 245,
+          "hit_at_1": 0.3795918367346939,
+          "hit_at_5": 0.6081632653061224,
+          "hit_at_10": 0.6816326530612244,
+          "hit_at_100": 0.8734693877551021,
+          "mrr_at_100": 0.4838508428954564,
+          "label_recall_at_10": 0.6212244897959183,
+          "hit_at_1_wilson_95": [
+            0.32112661631718925,
+            0.4417746289993591
+          ],
+          "hit_at_10_wilson_95": [
+            0.620881157497506,
+            0.7367762860080397
+          ]
+        },
+        "home-insurance": {
+          "n": 201,
+          "hit_at_1": 0.20398009950248755,
+          "hit_at_5": 0.472636815920398,
+          "hit_at_10": 0.6019900497512438,
+          "hit_at_100": 0.835820895522388,
+          "mrr_at_100": 0.32381334430537373,
+          "label_recall_at_10": 0.5236318407960199,
+          "hit_at_1_wilson_95": [
+            0.15407122977078863,
+            0.2649916851044396
+          ],
+          "hit_at_10_wilson_95": [
+            0.5330183305571738,
+            0.6671364634774115
+          ]
+        },
+        "life-insurance": {
+          "n": 514,
+          "hit_at_1": 0.4046692607003891,
+          "hit_at_5": 0.6673151750972762,
+          "hit_at_10": 0.7529182879377432,
+          "hit_at_100": 0.933852140077821,
+          "mrr_at_100": 0.5207193339826738,
+          "label_recall_at_10": 0.5460193934902106,
+          "hit_at_1_wilson_95": [
+            0.36309598474067095,
+            0.447656904332405
+          ],
+          "hit_at_10_wilson_95": [
+            0.7138460127138453,
+            0.7882381591330956
+          ]
+        },
+        "long-term-care-insurance": {
+          "n": 89,
+          "hit_at_1": 0.4044943820224719,
+          "hit_at_5": 0.550561797752809,
+          "hit_at_10": 0.6179775280898876,
+          "hit_at_100": 0.8426966292134831,
+          "mrr_at_100": 0.48640498114024117,
+          "label_recall_at_10": 0.5372659176029962,
+          "hit_at_1_wilson_95": [
+            0.3085343968169969,
+            0.5083577522730738
+          ],
+          "hit_at_10_wilson_95": [
+            0.5141411986237105,
+            0.7120508525003197
+          ]
+        },
+        "medicare-insurance": {
+          "n": 251,
+          "hit_at_1": 0.3426294820717131,
+          "hit_at_5": 0.6414342629482072,
+          "hit_at_10": 0.701195219123506,
+          "hit_at_100": 0.9482071713147411,
+          "mrr_at_100": 0.47469573574006585,
+          "label_recall_at_10": 0.6606905710491369,
+          "hit_at_1_wilson_95": [
+            0.286685348560364,
+            0.40331799561455606
+          ],
+          "hit_at_10_wilson_95": [
+            0.6418819420491225,
+            0.75444289641079
+          ]
+        },
+        "other-insurance": {
+          "n": 3,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "hit_at_10": 1.0,
+          "hit_at_100": 1.0,
+          "mrr_at_100": 1.0,
+          "label_recall_at_10": 0.4166666666666667,
+          "hit_at_1_wilson_95": [
+            0.4385029682449546,
+            1.0
+          ],
+          "hit_at_10_wilson_95": [
+            0.4385029682449546,
+            1.0
+          ]
+        },
+        "renters-insurance": {
+          "n": 140,
+          "hit_at_1": 0.22142857142857142,
+          "hit_at_5": 0.4142857142857143,
+          "hit_at_10": 0.4857142857142857,
+          "hit_at_100": 0.7642857142857142,
+          "mrr_at_100": 0.30985221203112956,
+          "label_recall_at_10": 0.43809523809523804,
+          "hit_at_1_wilson_95": [
+            0.16060805138486434,
+            0.2971282602495229
+          ],
+          "hit_at_10_wilson_95": [
+            0.4044181106648916,
+            0.5677734950599487
+          ]
+        },
+        "retirement-plans": {
+          "n": 95,
+          "hit_at_1": 0.4842105263157895,
+          "hit_at_5": 0.6736842105263158,
+          "hit_at_10": 0.7684210526315789,
+          "hit_at_100": 0.9263157894736842,
+          "mrr_at_100": 0.5705643494496676,
+          "label_recall_at_10": 0.6618713450292397,
+          "hit_at_1_wilson_95": [
+            0.3863005773182999,
+            0.5833477864776834
+          ],
+          "hit_at_10_wilson_95": [
+            0.6741746146961753,
+            0.8418032007721075
+          ]
+        }
+      }
+    },
+    "bm25": {
+      "n": 2000,
+      "hit_at_1": 0.23,
+      "hit_at_5": 0.406,
+      "hit_at_10": 0.4825,
+      "hit_at_100": 0.715,
+      "mrr_at_100": 0.3143632992945487,
+      "label_recall_at_10": 0.3884470238095238,
+      "hit_at_1_wilson_95": [
+        0.21208456215584898,
+        0.24895064337602757
+      ],
+      "hit_at_10_wilson_95": [
+        0.4606548863465414,
+        0.5044122103083023
+      ],
+      "no_exact_overlap": {
+        "n": 1992,
+        "hit_at_1": 0.23042168674698796,
+        "hit_at_5": 0.40562248995983935,
+        "hit_at_10": 0.482429718875502,
+        "hit_at_100": 0.714859437751004,
+        "mrr_at_100": 0.31469094970539213,
+        "label_recall_at_10": 0.3884591939185313,
+        "hit_at_1_wilson_95": [
+          0.21245874800731057,
+          0.24942235720101263
+        ],
+        "hit_at_10_wilson_95": [
+          0.4605411782114709,
+          0.5043858956847886
+        ]
+      },
+      "by_domain": {
+        "annuities": {
+          "n": 94,
+          "hit_at_1": 0.18085106382978725,
+          "hit_at_5": 0.39361702127659576,
+          "hit_at_10": 0.44680851063829785,
+          "hit_at_100": 0.6382978723404256,
+          "mrr_at_100": 0.2719762986306733,
+          "label_recall_at_10": 0.37748226950354613,
+          "hit_at_1_wilson_95": [
+            0.1160934066167844,
+            0.2706696208033505
+          ],
+          "hit_at_10_wilson_95": [
+            0.3503637013365734,
+            0.5474301365667823
+          ]
+        },
+        "auto-insurance": {
+          "n": 249,
+          "hit_at_1": 0.19678714859437751,
+          "hit_at_5": 0.3413654618473896,
+          "hit_at_10": 0.42971887550200805,
+          "hit_at_100": 0.6265060240963856,
+          "mrr_at_100": 0.2687659125625954,
+          "label_recall_at_10": 0.3416810097532989,
+          "hit_at_1_wilson_95": [
+            0.1521731622285804,
+            0.2506146530913602
+          ],
+          "hit_at_10_wilson_95": [
+            0.3697589468159676,
+            0.4918143878608399
+          ]
+        },
+        "critical-illness-insurance": {
+          "n": 17,
+          "hit_at_1": 0.29411764705882354,
+          "hit_at_5": 0.4117647058823529,
+          "hit_at_10": 0.7647058823529411,
+          "hit_at_100": 0.8823529411764706,
+          "mrr_at_100": 0.39232485518997834,
+          "label_recall_at_10": 0.4852941176470588,
+          "hit_at_1_wilson_95": [
+            0.1327998961029523,
+            0.5313311006653985
+          ],
+          "hit_at_10_wilson_95": [
+            0.5273820188043501,
+            0.9044495567791988
+          ]
+        },
+        "disability-insurance": {
+          "n": 102,
+          "hit_at_1": 0.29411764705882354,
+          "hit_at_5": 0.5098039215686274,
+          "hit_at_10": 0.5784313725490197,
+          "hit_at_100": 0.7941176470588235,
+          "mrr_at_100": 0.3944082506834127,
+          "label_recall_at_10": 0.4681372549019608,
+          "hit_at_1_wilson_95": [
+            0.21446358193820547,
+            0.3887164907103381
+          ],
+          "hit_at_10_wilson_95": [
+            0.4814653869221886,
+            0.6697041092116998
+          ]
+        },
+        "health-insurance": {
+          "n": 245,
+          "hit_at_1": 0.24489795918367346,
+          "hit_at_5": 0.3795918367346939,
+          "hit_at_10": 0.4448979591836735,
+          "hit_at_100": 0.6408163265306123,
+          "mrr_at_100": 0.3092936408467822,
+          "label_recall_at_10": 0.38843537414965984,
+          "hit_at_1_wilson_95": [
+            0.1952615046385006,
+            0.30241062526944074
+          ],
+          "hit_at_10_wilson_95": [
+            0.3839975112369629,
+            0.5074996688231524
+          ]
+        },
+        "home-insurance": {
+          "n": 201,
+          "hit_at_1": 0.09950248756218906,
+          "hit_at_5": 0.24378109452736318,
+          "hit_at_10": 0.34328358208955223,
+          "hit_at_100": 0.6268656716417911,
+          "mrr_at_100": 0.17698694699804138,
+          "label_recall_at_10": 0.28233830845771146,
+          "hit_at_1_wilson_95": [
+            0.06533892623243026,
+            0.14868737036346683
+          ],
+          "hit_at_10_wilson_95": [
+            0.2811350046232606,
+            0.4113100679577425
+          ]
+        },
+        "life-insurance": {
+          "n": 514,
+          "hit_at_1": 0.2587548638132296,
+          "hit_at_5": 0.48638132295719844,
+          "hit_at_10": 0.5525291828793775,
+          "hit_at_100": 0.8268482490272373,
+          "mrr_at_100": 0.36232547956946554,
+          "label_recall_at_10": 0.3796777530726947,
+          "hit_at_1_wilson_95": [
+            0.22278176564605617,
+            0.2983071781307078
+          ],
+          "hit_at_10_wilson_95": [
+            0.5093115264926883,
+            0.5949674938139841
+          ]
+        },
+        "long-term-care-insurance": {
+          "n": 89,
+          "hit_at_1": 0.3707865168539326,
+          "hit_at_5": 0.4606741573033708,
+          "hit_at_10": 0.5056179775280899,
+          "hit_at_100": 0.7865168539325843,
+          "mrr_at_100": 0.41896341568445683,
+          "label_recall_at_10": 0.43576779026217227,
+          "hit_at_1_wilson_95": [
+            0.277736316499798,
+            0.4745295322691212
+          ],
+          "hit_at_10_wilson_95": [
+            0.40368555240975695,
+            0.6070854976437683
+          ]
+        },
+        "medicare-insurance": {
+          "n": 251,
+          "hit_at_1": 0.28286852589641437,
+          "hit_at_5": 0.47410358565737054,
+          "hit_at_10": 0.5657370517928287,
+          "hit_at_100": 0.7689243027888446,
+          "mrr_at_100": 0.3766269315248904,
+          "label_recall_at_10": 0.5242363877822045,
+          "hit_at_1_wilson_95": [
+            0.23074736260635176,
+            0.3415357325210696
+          ],
+          "hit_at_10_wilson_95": [
+            0.5038830022458582,
+            0.6256092717063904
+          ]
+        },
+        "other-insurance": {
+          "n": 3,
+          "hit_at_1": 0.6666666666666666,
+          "hit_at_5": 0.6666666666666666,
+          "hit_at_10": 0.6666666666666666,
+          "hit_at_100": 1.0,
+          "mrr_at_100": 0.6862745098039215,
+          "label_recall_at_10": 0.25,
+          "hit_at_1_wilson_95": [
+            0.2076596008020477,
+            0.9385080552796037
+          ],
+          "hit_at_10_wilson_95": [
+            0.2076596008020477,
+            0.9385080552796037
+          ]
+        },
+        "renters-insurance": {
+          "n": 140,
+          "hit_at_1": 0.1,
+          "hit_at_5": 0.25,
+          "hit_at_10": 0.3357142857142857,
+          "hit_at_100": 0.5214285714285715,
+          "mrr_at_100": 0.17224037368844755,
+          "label_recall_at_10": 0.3059523809523809,
+          "hit_at_1_wilson_95": [
+            0.06050605724462705,
+            0.16085890305090336
+          ],
+          "hit_at_10_wilson_95": [
+            0.26280357713393476,
+            0.4173998887017295
+          ]
+        },
+        "retirement-plans": {
+          "n": 95,
+          "hit_at_1": 0.2736842105263158,
+          "hit_at_5": 0.4421052631578947,
+          "hit_at_10": 0.4842105263157895,
+          "hit_at_100": 0.7473684210526316,
+          "mrr_at_100": 0.3553553228900886,
+          "label_recall_at_10": 0.4138011695906433,
+          "hit_at_1_wilson_95": [
+            0.1941455436715417,
+            0.37081433740421976
+          ],
+          "hit_at_10_wilson_95": [
+            0.3863005773182999,
+            0.5833477864776834
+          ]
+        }
+      }
+    },
+    "rrf": {
+      "n": 2000,
+      "hit_at_1": 0.314,
+      "hit_at_5": 0.5365,
+      "hit_at_10": 0.6295,
+      "hit_at_100": 0.864,
+      "mrr_at_100": 0.41839989586278714,
+      "label_recall_at_10": 0.520838888888889,
+      "hit_at_1_wilson_95": [
+        0.29403252603687446,
+        0.33468061555175155
+      ],
+      "hit_at_10_wilson_95": [
+        0.6081052511789583,
+        0.6503982335751971
+      ],
+      "no_exact_overlap": {
+        "n": 1992,
+        "hit_at_1": 0.3147590361445783,
+        "hit_at_5": 0.5366465863453815,
+        "hit_at_10": 0.6295180722891566,
+        "hit_at_100": 0.8639558232931727,
+        "mrr_at_100": 0.41888181549302733,
+        "label_recall_at_10": 0.5210062472110665,
+        "hit_at_1_wilson_95": [
+          0.2947375396762269,
+          0.33549361083005097
+        ],
+        "hit_at_10_wilson_95": [
+          0.6080801612099167,
+          0.6504574083547994
+        ]
+      },
+      "by_domain": {
+        "annuities": {
+          "n": 94,
+          "hit_at_1": 0.26595744680851063,
+          "hit_at_5": 0.4574468085106383,
+          "hit_at_10": 0.5,
+          "hit_at_100": 0.7553191489361702,
+          "mrr_at_100": 0.3554776782208212,
+          "label_recall_at_10": 0.40372340425531916,
+          "hit_at_1_wilson_95": [
+            0.18711610480785898,
+            0.3631767819669066
+          ],
+          "hit_at_10_wilson_95": [
+            0.4009266984859888,
+            0.5990733015140113
+          ]
+        },
+        "auto-insurance": {
+          "n": 249,
+          "hit_at_1": 0.26907630522088355,
+          "hit_at_5": 0.4979919678714859,
+          "hit_at_10": 0.5502008032128514,
+          "hit_at_100": 0.8353413654618473,
+          "mrr_at_100": 0.37275875323314295,
+          "label_recall_at_10": 0.4518741633199464,
+          "hit_at_1_wilson_95": [
+            0.21780875570085526,
+            0.32736077252294066
+          ],
+          "hit_at_10_wilson_95": [
+            0.4881145164959174,
+            0.6107616730206485
+          ]
+        },
+        "critical-illness-insurance": {
+          "n": 17,
+          "hit_at_1": 0.5882352941176471,
+          "hit_at_5": 0.7647058823529411,
+          "hit_at_10": 0.8235294117647058,
+          "hit_at_100": 1.0,
+          "mrr_at_100": 0.6439183803602743,
+          "label_recall_at_10": 0.5147058823529411,
+          "hit_at_1_wilson_95": [
+            0.3600544264299978,
+            0.7838894320978518
+          ],
+          "hit_at_10_wilson_95": [
+            0.5897054143116588,
+            0.9380887336237901
+          ]
+        },
+        "disability-insurance": {
+          "n": 102,
+          "hit_at_1": 0.3627450980392157,
+          "hit_at_5": 0.6470588235294118,
+          "hit_at_10": 0.7352941176470589,
+          "hit_at_100": 0.9019607843137255,
+          "mrr_at_100": 0.48907310872482895,
+          "label_recall_at_10": 0.6200980392156863,
+          "hit_at_1_wilson_95": [
+            0.2759951054473271,
+            0.45945827631836855
+          ],
+          "hit_at_10_wilson_95": [
+            0.6422725125202735,
+            0.811235975881391
+          ]
+        },
+        "health-insurance": {
+          "n": 245,
+          "hit_at_1": 0.3469387755102041,
+          "hit_at_5": 0.5102040816326531,
+          "hit_at_10": 0.6122448979591837,
+          "hit_at_100": 0.8489795918367347,
+          "mrr_at_100": 0.43385549160073594,
+          "label_recall_at_10": 0.55578231292517,
+          "hit_at_1_wilson_95": [
+            0.2901132617027786,
+            0.4084900162419862
+          ],
+          "hit_at_10_wilson_95": [
+            0.5499493381275032,
+            0.6710749247130027
+          ]
+        },
+        "home-insurance": {
+          "n": 201,
+          "hit_at_1": 0.1890547263681592,
+          "hit_at_5": 0.373134328358209,
+          "hit_at_10": 0.5074626865671642,
+          "hit_at_100": 0.8059701492537313,
+          "mrr_at_100": 0.28722206704859854,
+          "label_recall_at_10": 0.43739635157545603,
+          "hit_at_1_wilson_95": [
+            0.14094960498963838,
+            0.24882236441711397
+          ],
+          "hit_at_10_wilson_95": [
+            0.43885882701996726,
+            0.5757866457142707
+          ]
+        },
+        "life-insurance": {
+          "n": 514,
+          "hit_at_1": 0.3560311284046693,
+          "hit_at_5": 0.6342412451361867,
+          "hit_at_10": 0.7354085603112841,
+          "hit_at_100": 0.9299610894941635,
+          "mrr_at_100": 0.4805545067412398,
+          "label_recall_at_10": 0.5310959792477302,
+          "hit_at_1_wilson_95": [
+            0.3158445866880256,
+            0.3983536539529464
+          ],
+          "hit_at_10_wilson_95": [
+            0.695629282601086,
+            0.7716952158102975
+          ]
+        },
+        "long-term-care-insurance": {
+          "n": 89,
+          "hit_at_1": 0.39325842696629215,
+          "hit_at_5": 0.5617977528089888,
+          "hit_at_10": 0.6067415730337079,
+          "hit_at_100": 0.8202247191011236,
+          "mrr_at_100": 0.47284104293575785,
+          "label_recall_at_10": 0.5307116104868914,
+          "hit_at_1_wilson_95": [
+            0.29821544438248115,
+            0.49713460460053904
+          ],
+          "hit_at_10_wilson_95": [
+            0.5028653953994611,
+            0.7017845556175188
+          ]
+        },
+        "medicare-insurance": {
+          "n": 251,
+          "hit_at_1": 0.3466135458167331,
+          "hit_at_5": 0.5776892430278885,
+          "hit_at_10": 0.6932270916334662,
+          "hit_at_100": 0.9043824701195219,
+          "mrr_at_100": 0.45899031229491144,
+          "label_recall_at_10": 0.6470783532536521,
+          "hit_at_1_wilson_95": [
+            0.29045196904550213,
+            0.4073993917325846
+          ],
+          "hit_at_10_wilson_95": [
+            0.6336209073446565,
+            0.7470078979089229
+          ]
+        },
+        "other-insurance": {
+          "n": 3,
+          "hit_at_1": 1.0,
+          "hit_at_5": 1.0,
+          "hit_at_10": 1.0,
+          "hit_at_100": 1.0,
+          "mrr_at_100": 1.0,
+          "label_recall_at_10": 0.4166666666666667,
+          "hit_at_1_wilson_95": [
+            0.4385029682449546,
+            1.0
+          ],
+          "hit_at_10_wilson_95": [
+            0.4385029682449546,
+            1.0
+          ]
+        },
+        "renters-insurance": {
+          "n": 140,
+          "hit_at_1": 0.16428571428571428,
+          "hit_at_5": 0.35714285714285715,
+          "hit_at_10": 0.42857142857142855,
+          "hit_at_100": 0.7214285714285714,
+          "mrr_at_100": 0.24736500706196723,
+          "label_recall_at_10": 0.3892857142857143,
+          "hit_at_1_wilson_95": [
+            0.11203833565432049,
+            0.23446439887942827
+          ],
+          "hit_at_10_wilson_95": [
+            0.3495844356842502,
+            0.5113735929399517
+          ]
+        },
+        "retirement-plans": {
+          "n": 95,
+          "hit_at_1": 0.3684210526315789,
+          "hit_at_5": 0.5578947368421052,
+          "hit_at_10": 0.6842105263157895,
+          "hit_at_100": 0.9263157894736842,
+          "mrr_at_100": 0.46088548717664013,
+          "label_recall_at_10": 0.5973099415204679,
+          "hit_at_1_wilson_95": [
+            0.2783009458551568,
+            0.46876875244470445
+          ],
+          "hit_at_10_wilson_95": [
+            0.5851346840006258,
+            0.7689677383795684
+          ]
+        }
+      }
+    }
+  },
+  "government_transfer": {
+    "bge": {
+      "n": 416,
+      "hit_at_1": 0.6778846153846154,
+      "hit_at_5": 0.90625,
+      "hit_at_10": 0.9615384615384616,
+      "hit_at_100": 0.9879807692307693,
+      "mrr_at_100": 0.7782372718564745,
+      "label_recall_at_10": 0.9615384615384616,
+      "hit_at_1_wilson_95": [
+        0.6315292871211399,
+        0.7209847318986154
+      ],
+      "hit_at_10_wilson_95": [
+        0.9384418745717481,
+        0.9761890936957253
+      ]
+    },
+    "bm25": {
+      "n": 416,
+      "hit_at_1": 0.6081730769230769,
+      "hit_at_5": 0.8461538461538461,
+      "hit_at_10": 0.9182692307692307,
+      "hit_at_100": 0.9663461538461539,
+      "mrr_at_100": 0.7155325573222852,
+      "label_recall_at_10": 0.9182692307692307,
+      "hit_at_1_wilson_95": [
+        0.560478281538662,
+        0.653888351649027
+      ],
+      "hit_at_10_wilson_95": [
+        0.8879592273325144,
+        0.9409250876598833
+      ]
+    },
+    "previous_untrained": {
+      "n": 416,
+      "hit_at_1": 0.7115384615384616,
+      "hit_at_5": 0.9471153846153846,
+      "hit_at_10": 0.9711538461538461,
+      "hit_at_100": 0.9903846153846154,
+      "mrr_at_100": 0.8051371166297153,
+      "label_recall_at_10": 0.9711538461538461,
+      "hit_at_1_wilson_95": [
+        0.6662237525041118,
+        0.7529821079518134
+      ],
+      "hit_at_10_wilson_95": [
+        0.9502625737322323,
+        0.9834232063741466
+      ]
+    },
+    "untrained_same_fusion": {
+      "n": 416,
+      "hit_at_1": 0.7115384615384616,
+      "hit_at_5": 0.9471153846153846,
+      "hit_at_10": 0.9711538461538461,
+      "hit_at_100": 0.9903846153846154,
+      "mrr_at_100": 0.8051371166297153,
+      "label_recall_at_10": 0.9711538461538461,
+      "hit_at_1_wilson_95": [
+        0.6662237525041118,
+        0.7529821079518134
+      ],
+      "hit_at_10_wilson_95": [
+        0.9502625737322323,
+        0.9834232063741466
+      ]
+    },
+    "trained_selected": {
+      "n": 416,
+      "hit_at_1": 0.7019230769230769,
+      "hit_at_5": 0.9182692307692307,
+      "hit_at_10": 0.9591346153846154,
+      "hit_at_100": 0.9903846153846154,
+      "mrr_at_100": 0.7975018958402279,
+      "label_recall_at_10": 0.9591346153846154,
+      "hit_at_1_wilson_95": [
+        0.6562828761106798,
+        0.7438681725063396
+      ],
+      "hit_at_10_wilson_95": [
+        0.9355357523621158,
+        0.974331512945631
+      ]
+    },
+    "trained_bge_candidates": {
+      "n": 416,
+      "hit_at_1": 0.6826923076923077,
+      "hit_at_5": 0.9230769230769231,
+      "hit_at_10": 0.9519230769230769,
+      "hit_at_100": 0.9879807692307693,
+      "mrr_at_100": 0.7839885318374674,
+      "label_recall_at_10": 0.9519230769230769,
+      "hit_at_1_wilson_95": [
+        0.6364690263505425,
+        0.7255723985886656
+      ],
+      "hit_at_10_wilson_95": [
+        0.9269112257456533,
+        0.9686649306829143
+      ]
+    }
+  },
+  "extraction": "Extract all three ZIP files into the same parent directory. Source/data populate InsureRAG-VLM; weights populate sibling models.",
+  "notes": [
+    "Previous deliveries retained; original public BGE/base MiniLM weights and environments are not redistributed.",
+    "InsuranceQA research-only terms apply; HICRIC derived data retains CC-BY-SA-4.0 and original-source attribution.",
+    "Source includes all raw metrics, selected and rejected run provenance. Large generated data/index files are delivered separately.",
+    "No new Qwen generation or GraphRAG accuracy claim. Historical PDF-demo limitations remain documented."
+  ]
+}

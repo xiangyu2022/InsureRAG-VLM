@@ -1,0 +1,53 @@
+{
+  "question": "How are term life and whole life insurance different?",
+  "corpus": "fiqa",
+  "annual_report_scope": null,
+  "corpus_candidates": 57638,
+  "reranked_candidates": 135,
+  "selected_config": {
+    "name": "seed_123_epoch_2_cw50",
+    "model": "seed_123_epoch_2",
+    "cross_weight": 0.5
+  },
+  "new_training_promoted": true,
+  "selection_lock_sha256": "a40b41968aa39fc4f4967e5bc8f58ff96251558203ee33edf97ed16c8f070525",
+  "selected_weights_sha256": "697d3a725ad9d684c1b978365bda314114e8dbec2a27c2841a07f028ed2e81b8",
+  "fixed_encoders_match_inherited_inventories": true,
+  "query_encoder_passes": 2,
+  "generation_calls": 0,
+  "numerical_program_execution": false,
+  "expert_answer_adjudication": false,
+  "seconds_including_loading": 9.995171800022945,
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "fiqa_a_323498",
+      "text": "Term life insurance is just that - life insurance that pays out if you die, just like car insurance pays out if you have an accident. Like car insurance, it's easy to compare amongst term life insurance policies - you can even compare quotes online.  Whole life insurance is life insurance plus an investment component. The money that you pay goes to pay for your life insurance and it also is invested by the insurance company. Insurance companies love whole life because it is not a commodity; they can come up with a large variety of variants, and that fact plus the fact that it combines insurance and investment means that is very difficult to compare policies. Not to mention that fact that none of the companies - as far as I can tell - publish their whole life insurance rates, so it is very difficult to shop around.",
+      "source_group": "fiqa_document:323498"
+    },
+    {
+      "rank": 2,
+      "answer_id": "fiqa_a_109675",
+      "text": "Whole life in most instances is a very bad plan. It's marketed as a life insurance policy wrapped in an investment but it does neither very well. The hidden caveat of whole life is that the investment goes away if you die.  Say for example I have a $100,000 whole life insurance policy and over the years I have paid in enough to have a $15,000 cash value on the policy. If I die, my family gets $100,000 and the cash value is lost. With term life you can get a substantially higher amount of coverage for a smaller payment. If you invest the difference you end up not only with better coverage, but a better cash value from the difference if you don't die (which is what we all hope for anyways). As JackiYo said, your insurance should be designed around replacing lost income/value.  You should get 10x your annual income in term life insurance.",
+      "source_group": "fiqa_document:109675"
+    },
+    {
+      "rank": 3,
+      "answer_id": "fiqa_a_211839",
+      "text": "\"Whole life is life insurance that lasts your whole life.  Seriously. Since the insurance company must make a profit, and since they know they will always pay out on a whole life policy, whole life tends to be very expensive, and has lower \"\"death\"\" benefits than a term policy. Some of these policies are \"\"paid-up\"\" policies, meaning that they are structured so that you don't have to pay premiums forever.  But what it amounts to is that the insurance company invests your premiums, and then pays you a smaller \"\"dividend,\"\" much like banks do with savings accounts. Unless you are especially risk-averse, it is almost always a better decision to get an inexpensive term policy, and invest the money you save yourself, rather than letting the insurance company invest it for you and reap most of the benefits. If you are doing things properly, you won't need life insurance your whole life, as retirement investments will eventually replace your working income.\"",
+      "source_group": "fiqa_document:211839"
+    },
+    {
+      "rank": 4,
+      "answer_id": "fiqa_a_31550",
+      "text": "\"There are two types of insurance: whole life and term. I don't recommend whole life insurance, because you are insuring against something that will happen, your death. Maybe you could buy it if members of your family have a history of outliving the averages. This is called \"\"adverse selection.\"\" Term is different: it insures against your UNTIMELY death. Many people I know take term insurance for the X years until their last child leaves college, or some other well defined \"\"term.\"\" They don't want to die before this term but will be satisfied with the insurance as a \"\"consolation\"\" prize.\"",
+      "source_group": "fiqa_document:31550"
+    },
+    {
+      "rank": 5,
+      "answer_id": "fiqa_a_405178",
+      "text": "\"I would refer you to this question and answers. Here in the US we have two basic types of life insurance: term and whole life.  Universal life is a marketing response to whole life being such a bad deal, and is whole life just not quite as bad. I am not familiar with the products in India, but given the acronym (ULIP), it is probably universal life, and as you describe is variable universal life.   Likely Description \"\"Under the hood\"\", or in effect, you are purchasing a term life policy and investing excess premiums in a collection of stock mutual funds.  This is a bad deal for a few reasons: A much better option is to buy \"\"level term insurance\"\" and invest on your own. You won't necessarily lose money, but you can make better financial decisions.  It is good to invest, it is good to have life.  A better decision would not to combine the two into a single product.\"",
+      "source_group": "fiqa_document:405178"
+    }
+  ]
+}

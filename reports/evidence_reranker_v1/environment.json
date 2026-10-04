@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-03T04:42:26.706420+00:00",
+  "python_executable": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\.venv-qwen-smoke\\Scripts\\python.exe",
+  "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "machine": "AMD64",
+  "packages": {
+    "torch": "2.14.0+cu130",
+    "transformers": "5.17.0",
+    "tokenizers": "0.23.2",
+    "safetensors": "0.8.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "threadpoolctl": "3.7.0",
+    "huggingface-hub": "1.32.0"
+  },
+  "gpu_name_memory_MiB_driver_csv": "NVIDIA GeForce RTX 4070 Laptop GPU, 8188, 596.08",
+  "git_head": "2923b32e728387bfa788788eb731ef83c6e7e60d",
+  "git_branch": "codex/evaluation-integrity",
+  "workspace_includes_uncommitted_changes": true,
+  "code_sha256": "0c532ed46e238ec6ff2050aaa57e17b7de6f09a7c6e129a750cc64ca2c972502",
+  "training_precision": "FP32 weights/optimizer with BF16 autocast forward",
+  "evaluation_precision": "DomainCrossEncoder FP16 CUDA weights/inference; query encoding FP32",
+  "tf32_matmul": false,
+  "torch_cpu_threads": 4,
+  "seed_values": [
+    42,
+    123
+  ],
+  "strict_bitwise_determinism_requested": false,
+  "limits": "Pinned seeds, source and weights are reproducibility records; bitwise identical GPU retraining is not guaranteed."
+}

@@ -2,11 +2,13 @@
 import argparse
 import gc
 import json
+import math
 from pathlib import Path
 from typing import Any, Dict, List
 
 from src.insurerag_vlm.evaluation import exact_match, f1_score
 from src.insurerag_vlm.sft import DEFAULT_QWEN_7B_MODEL, format_sft_messages, read_sft_records
+from src.insurerag_vlm.sft_integrity import audit_evaluation_records, file_sha256, load_provenance
 
 
 def _is_unsupported(record: Dict[str, Any]) -> bool:
@@ -30,13 +32,15 @@ def _abstains(text: str) -> bool:
 
 
 def _pick_records(records: List[Dict[str, Any]], answerable_count: int, unsupported_count: int) -> List[Dict[str, Any]]:
+    if answerable_count < 0 or unsupported_count < 0:
+        raise ValueError("Sample counts must be non-negative.")
     chosen: List[Dict[str, Any]] = []
     seen_answerable_sources = set()
     seen_unsupported_sources = set()
 
     for record in records:
         source = str(record.get("source") or "")
-        if not _is_unsupported(record):
+        if answerable_count > 0 and not _is_unsupported(record):
             if source in seen_answerable_sources:
                 continue
             chosen.append(record)
@@ -46,7 +50,7 @@ def _pick_records(records: List[Dict[str, Any]], answerable_count: int, unsuppor
 
     for record in records:
         source = str(record.get("source") or "")
-        if _is_unsupported(record):
+        if unsupported_count > 0 and _is_unsupported(record):
             if source in seen_unsupported_sources:
                 continue
             chosen.append(record)
@@ -139,20 +143,32 @@ def _generate_for_records(
     return rows
 
 
+def _wilson_interval(successes: int, count: int) -> List[float] | None:
+    if count == 0:
+        return None
+    z = 1.959963984540054
+    rate = successes / count
+    denominator = 1 + z * z / count
+    center = (rate + z * z / (2 * count)) / denominator
+    half_width = z * math.sqrt(rate * (1 - rate) / count + z * z / (4 * count * count)) / denominator
+    return [max(0.0, center - half_width), min(1.0, center + half_width)]
+
+
 def _summarize(rows: List[Dict[str, Any]]) -> Dict[str, Any]:
     answerable = [row for row in rows if row["answerable"]]
     unsupported = [row for row in rows if not row["answerable"]]
 
-    def avg(key: str, subset: List[Dict[str, Any]]) -> float:
+    def avg(key: str, subset: List[Dict[str, Any]]) -> float | None:
         if not subset:
-            return 0.0
+            return None
         return sum(float(item[key]) for item in subset) / len(subset)
 
-    def rate(key: str, subset: List[Dict[str, Any]]) -> float:
+    def rate(key: str, subset: List[Dict[str, Any]]) -> float | None:
         if not subset:
-            return 0.0
+            return None
         return sum(1 for item in subset if item[key]) / len(subset)
 
+    abstain_count = sum(bool(row["prediction_abstains"]) for row in unsupported)
     return {
         "count": len(rows),
         "overall_em": avg("exact_match", rows),
@@ -161,28 +177,48 @@ def _summarize(rows: List[Dict[str, Any]]) -> Dict[str, Any]:
         "answerable_em": avg("exact_match", answerable),
         "answerable_f1": avg("f1", answerable),
         "unsupported_count": len(unsupported),
+        "unsupported_prediction_abstain_count": abstain_count,
         "unsupported_reference_abstain_rate": rate("reference_abstains", unsupported),
         "unsupported_prediction_abstain_rate": rate("prediction_abstains", unsupported),
+        "unsupported_prediction_abstain_wilson_95": _wilson_interval(abstain_count, len(unsupported)),
+        "answerable_prediction_abstain_count": sum(bool(row["prediction_abstains"]) for row in answerable),
+        "answerable_prediction_abstain_rate": rate("prediction_abstains", answerable),
     }
 
 
 def _write_markdown(output_md: Path, payload: Dict[str, Any]) -> None:
+    def fmt(value: float | None) -> str:
+        return "N/A" if value is None else f"{value:.4f}"
+
     lines = [
-        "# SFT Adapter Spot Check",
+        "# SFT Adapter Evaluation",
         "",
         f"- Base model: `{payload['model_name']}`",
         f"- Adapter dir: `{payload['adapter_dir']}`",
         f"- Samples: `{payload['sample_count']}`",
+        f"- Evaluation role: `{payload['evaluation_role']}`",
+        f"- Selection: `{payload['selection_method']}`",
+        "",
+        "Token F1 and exact match measure reference overlap, not factual error or hallucination rate. "
+        "Abstention is a keyword heuristic. Confidence intervals describe a binomial model and do not "
+        "make a convenience sample representative. This workflow supplies reference evidence and "
+        "does not measure end-to-end retrieval quality.",
+        "",
+        f"Training-provenance audit: `{json.dumps(payload['provenance_audit'], ensure_ascii=False)}`",
         "",
         "## Summary",
         "",
-        "| variant | overall_f1 | answerable_f1 | unsupported_abstain_rate |",
-        "| --- | ---: | ---: | ---: |",
+        "| variant | overall_f1 (n) | answerable_f1 (n) | unsupported abstentions / n | abstention 95% Wilson interval |",
+        "| --- | ---: | ---: | ---: | --- |",
     ]
     for variant in ["base", "adapter"]:
         summary = payload["summary"][variant]
+        interval = summary["unsupported_prediction_abstain_wilson_95"]
+        interval_text = "N/A" if interval is None else f"[{interval[0]:.4f}, {interval[1]:.4f}]"
         lines.append(
-            f"| {variant} | {summary['overall_f1']:.4f} | {summary['answerable_f1']:.4f} | {summary['unsupported_prediction_abstain_rate']:.4f} |"
+            f"| {variant} | {fmt(summary['overall_f1'])} ({summary['count']}) | "
+            f"{fmt(summary['answerable_f1'])} ({summary['answerable_count']}) | "
+            f"{summary['unsupported_prediction_abstain_count']} / {summary['unsupported_count']} | {interval_text} |"
         )
 
     lines.extend(["", "## Samples", ""])
@@ -203,12 +239,15 @@ def _write_markdown(output_md: Path, payload: Dict[str, Any]) -> None:
                 "",
             ]
         )
+    output_md.parent.mkdir(parents=True, exist_ok=True)
     output_md.write_text("\n".join(lines), encoding="utf-8")
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Spot-check a trained LoRA adapter against the base model.")
-    parser.add_argument("--dataset-path", type=Path, default=Path("data/04_curated/sft_dataset.jsonl"))
+    parser.add_argument("--dataset-path", type=Path, help="Explicit evaluation dataset; omitted means a training-data diagnostic.")
+    parser.add_argument("--heldout-evaluation", action="store_true", help="Require a dataset disjoint from every documented SFT source document in the adapter lineage.")
+    parser.add_argument("--all-records", action="store_true", help="Evaluate the full dataset instead of the source-diverse convenience sample.")
     parser.add_argument("--adapter-dir", type=Path, default=Path("models/qwen7b-insurerag-lora"))
     parser.add_argument("--model-name", type=str, default=DEFAULT_QWEN_7B_MODEL)
     parser.add_argument("--answerable-count", type=int, default=4)
@@ -218,10 +257,21 @@ def main() -> None:
     parser.add_argument("--output-md", type=Path, default=Path("reports/sft_eval/adapter_spot_check.md"))
     args = parser.parse_args()
 
+    if args.heldout_evaluation and args.dataset_path is None:
+        parser.error("--heldout-evaluation requires an explicit --dataset-path.")
+    args.dataset_path = args.dataset_path or Path("data/04_curated/sft_dataset.jsonl")
     records = read_sft_records(args.dataset_path)
-    chosen = _pick_records(records, args.answerable_count, args.unsupported_count)
-    if len(chosen) < args.answerable_count + args.unsupported_count:
+    provenance = load_provenance(args.adapter_dir)
+    if args.heldout_evaluation and provenance and provenance.get("model_name") != args.model_name:
+        raise ValueError("Base model does not match the adapter training provenance.")
+    audit = audit_evaluation_records(records, provenance, require_heldout=args.heldout_evaluation)
+    chosen = records if args.all_records else _pick_records(records, args.answerable_count, args.unsupported_count)
+    if not chosen:
+        raise ValueError("Choose at least one evaluation record.")
+    if not args.all_records and len(chosen) < args.answerable_count + args.unsupported_count:
         raise ValueError("Not enough records to build the requested spot-check set.")
+    evaluation_role = "document_disjoint_sft_evaluation" if args.heldout_evaluation else "diagnostic_only_not_a_heldout_benchmark"
+    print(f"Evaluation role: {evaluation_role}; {len(chosen)} records. Token F1 is not an error rate.", flush=True)
 
     base_rows = _generate_for_records(args.model_name, chosen, adapter_dir=None, max_new_tokens=args.max_new_tokens)
     adapter_rows = _generate_for_records(args.model_name, chosen, adapter_dir=args.adapter_dir, max_new_tokens=args.max_new_tokens)
@@ -250,7 +300,12 @@ def main() -> None:
         "model_name": args.model_name,
         "adapter_dir": str(args.adapter_dir),
         "dataset_path": str(args.dataset_path),
+        "dataset_sha256": file_sha256(args.dataset_path),
         "sample_count": len(chosen),
+        "evaluation_role": evaluation_role,
+        "selection_method": "all_records" if args.all_records else "first_per_source_with_answerability_quotas_convenience_sample",
+        "provenance_audit": audit,
+        "metric_limitations": "Token F1/EM are reference-overlap scores; abstention is a keyword heuristic. Reference evidence is supplied; retrieval errors are not evaluated.",
         "summary": {
             "base": _summarize(base_rows),
             "adapter": _summarize(adapter_rows),

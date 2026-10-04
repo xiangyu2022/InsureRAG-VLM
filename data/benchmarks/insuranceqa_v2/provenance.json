@@ -1,0 +1,51 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/shuzi/insuranceQA/5c380dd086067adacc2fec3bfa920a78e57bdcf6/README.md",
+    "file": "upstream/README.md",
+    "sha256": "7a158e058a68a70837373fe54998fcc53e6bd7e197ac5f5c8c52807ea0cabaf9",
+    "bytes": 2482,
+    "retrieved_utc": "2026-10-01T16:51:14.729961+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/shuzi/insuranceQA/5c380dd086067adacc2fec3bfa920a78e57bdcf6/V2/README.md",
+    "file": "upstream/V2/README.md",
+    "sha256": "c11889c2c2539a56650453a9962bbba95b5d812f20770d41dba8703dd0c3735a",
+    "bytes": 1904,
+    "retrieved_utc": "2026-10-01T16:51:15.009192+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/shuzi/insuranceQA/5c380dd086067adacc2fec3bfa920a78e57bdcf6/V2/vocabulary",
+    "file": "upstream/V2/vocabulary",
+    "sha256": "087ad8bd0254b57711082856b24d3526178b407d6f849798af1e34f599b2557d",
+    "bytes": 1303358,
+    "retrieved_utc": "2026-10-01T16:51:15.701854+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/shuzi/insuranceQA/5c380dd086067adacc2fec3bfa920a78e57bdcf6/V2/InsuranceQA.label2answer.raw.encoded.gz",
+    "file": "upstream/V2/InsuranceQA.label2answer.raw.encoded.gz",
+    "sha256": "25f63201c51e3e2e5c73ca30da114bf8c77c8f40194550148e469a430cceabd2",
+    "bytes": 4954141,
+    "retrieved_utc": "2026-10-01T16:51:16.537009+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/shuzi/insuranceQA/5c380dd086067adacc2fec3bfa920a78e57bdcf6/V2/InsuranceQA.question.anslabel.raw.100.pool.solr.train.encoded.gz",
+    "file": "upstream/V2/InsuranceQA.question.anslabel.raw.100.pool.solr.train.encoded.gz",
+    "sha256": "7da9e607180ad5c47cb4069c7480cb4eb198ef88f59a2be62383a67ccb2a6981",
+    "bytes": 3377981,
+    "retrieved_utc": "2026-10-01T16:51:17.349020+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/shuzi/insuranceQA/5c380dd086067adacc2fec3bfa920a78e57bdcf6/V2/InsuranceQA.question.anslabel.raw.1000.pool.solr.valid.encoded.gz",
+    "file": "upstream/V2/InsuranceQA.question.anslabel.raw.1000.pool.solr.valid.encoded.gz",
+    "sha256": "ffef57c3d551d75979455e08e6788fc07f776044c8e78f1c7d997fca886c0bb5",
+    "bytes": 4850859,
+    "retrieved_utc": "2026-10-01T16:51:18.051841+00:00"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/shuzi/insuranceQA/5c380dd086067adacc2fec3bfa920a78e57bdcf6/V2/InsuranceQA.question.anslabel.raw.1000.pool.solr.test.encoded.gz",
+    "file": "upstream/V2/InsuranceQA.question.anslabel.raw.1000.pool.solr.test.encoded.gz",
+    "sha256": "519e59478f7afb6ba2c47093af347fb939c97ccdd948d948a0459b7f88f63db4",
+    "bytes": 4852298,
+    "retrieved_utc": "2026-10-01T16:51:18.928764+00:00"
+  }
+]

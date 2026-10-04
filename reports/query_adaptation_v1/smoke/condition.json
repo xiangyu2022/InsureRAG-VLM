@@ -1,0 +1,53 @@
+{
+  "question": "When can a health plan impose cost sharing on preventive services?",
+  "corpus": "condition",
+  "corpus_size": 48172,
+  "candidate_count": 157,
+  "query_configuration": {
+    "name": "seed_42_epoch_2_a50",
+    "model": "seed_42_epoch_2",
+    "seed": 42,
+    "epoch": 2,
+    "alpha": 0.5
+  },
+  "ranking_configuration": {
+    "pool": "union200",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "query_encoder_passes": 2,
+  "document_encoder": "unchanged BGE-small-en-v1.5",
+  "reranker_changed_this_iteration": false,
+  "selection_lock_sha256": "431317429ff2eaabe0891902628aa71b78f703395e5efc031963b5cdd05227dd",
+  "selected_query_weights_sha256": "e067a9a14428aabb32dbd2f0e84a7af31bcb8290ffc6fe422faed906d4d5b857",
+  "generation_calls": 0,
+  "research_retrieval_only": true,
+  "answers_expert_adjudicated": false,
+  "seconds_including_loading": 8.278165299911052,
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "gov2_a_9c15653b42abc900",
+      "text": "Yes. In the preamble to interim final rules issued in November 2020 in response to the COVID- 19 Public Health Emergency (November 2020 interim final rules), the Departments reiterated that regulations and guidance issued with respect to the preventive services requirements generally require plans and issuers subject to section 2713 of the PHS Act to cover, without cost sharing, items and services that are integral to the furnishing of the recommended preventive service, regardless of whether the item or service is billed separately.14 The preamble to the November 2020 interim final rules cited previous guidance issued with respect to colonoscopies, clarifying that a plan or issuer may not impose cost sharing for polyp removal during or anesthesia provided in connection with a preventive screening colonoscopy. Other examples included covering, without cost sharing, collection of a specimen for recommended screenings or tests typically performed by laboratories and administration of a recommended immunization by a medical professional. The requirement to cover, without cost sharing, items and services that are integral to the furnishing of a recommended preventive service also applies to coverage of contraceptive services under the HRSA-Supported Guidelines, including coverage for anesthesia for a tubal ligation procedure or pregnancy tests needed before provision of certain forms of contraceptives, such as an intrauterine device (also known as an IUD), regardless of whether the items and services are billed separately. 13 See FAQs Part 51, available at https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource- center/faqs/aca-part-51.pdf and https://www.cms.gov/CCIIO/Resources/Fact-Sheets-and-FAQs/Downloads/FAQs- Part-51.pdf. 14 85 FR 71142, 71174 (Nov. 6, 2020). 4",
+      "domain": "government",
+      "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-54.pdf",
+      "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-54.pdf"
+    },
+    {
+      "rank": 2,
+      "answer_id": "gov2_a_870edf7f675ea808",
+      "text": "No. While nothing in the interim final regulations generally requires a plan or issuer that has a network of providers to provide benefits for preventive services provided out-of-network, this 5 75 FR 41726 (July 19, 2010). 6 Womens Preventive Services: Required Health Plan Coverage Guidelines (HRSA Guidelines) were adopted and released on August 1, 2012, based on recommendations developed by the Institute of Medicine (IOM) at the request of HHS. These recommended womens preventive services are required to be covered without cost-sharing, for plan years (or, in the individual market, policy years) beginning on or after August 1, 2012. 7 See 26 CFR 54.9815-2713T(a)(4), 29 CFR 2590.715-2713(a)(4), 45 CFR 147.130(a)(4). 8 Certain non-grandfathered, non-profit religious organizations are not required to cover the contraceptive services recommendation that is part of the HRSA guidelines. For information on these entities, see 77 FR 8725 and http://cciio.cms.gov/resources/files/prev-services-guidance-08152012.pdf. See also proposed rules published on February 6, 2013, at 78 FR 8456. 3 provision is premised on enrollees being able to access the required preventive services from in- network providers. Thus, if a plan or issuer does not have in its network a provider who can provide the particular service, then the plan or issuer must cover the item or service when performed by an out-of-network provider and not impose cost-sharing with respect to the item or service. United States Preventive Services Task Force (USPSTF)",
+      "domain": "government",
+      "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-xii.pdf",
+      "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-xii.pdf"
+    },
+    {
+      "rank": 3,
+      "answer_id": "condgov_a_6c0bdd8964f83650",
+      "text": "The maximum annual limitation on cost sharing for the 2022 plan year will be $8,700 for self- only coverage, and $17,400 for other than self-only coverage.4",
+      "domain": "government",
+      "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-46.pdf",
+      "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-46.pdf"
+    }
+  ]
+}

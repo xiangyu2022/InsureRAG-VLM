@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Set
 
 from .config import ModelConfig
+from .answer_safety import is_explicit_abstention
 from .data import PageDocument, load_documents
 from .evaluation import evaluate_predictions, load_evaluation_examples
 from .ocr import extract_text_from_image
@@ -23,6 +24,9 @@ class DocumentRetrievalPipeline:
             use_hf_api=config.use_hf_api,
             hf_api_token=config.hf_api_token,
             openai_api_key=config.openai_api_key,
+            pooling=config.retrieval_pooling,
+            query_instruction=config.retrieval_query_instruction,
+            max_length=config.retrieval_max_length,
         )
         self.vlm_client = VLMClient(
             model_name=config.vlm_model,
@@ -30,6 +34,12 @@ class DocumentRetrievalPipeline:
             openai_api_key=config.openai_api_key,
             anthropic_api_key=getattr(config, "anthropic_api_key", None),
             use_hf_api=config.use_hf_api,
+            provider=config.vlm_provider,
+            ollama_base_url=config.ollama_base_url,
+            generation_options=config.ollama_generation_options,
+            thinking=config.vlm_thinking,
+            request_timeout=config.vlm_request_timeout,
+            expected_model_digest=config.vlm_expected_digest,
         )
 
     def build_index(self, data_folder: Path) -> None:
@@ -73,6 +83,15 @@ class DocumentRetrievalPipeline:
         result = self.query_with_ranking(question, data_folder, top_k=top_k)
         return result["answer"]
 
+    def _validate_index_identity(self) -> None:
+        path = self.config.index_path.with_suffix(".manifest.json")
+        try:
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as exc:
+            raise ValueError(f"Dense index identity is missing or invalid at {path}; rebuild the index.") from exc
+        if not isinstance(manifest, dict) or manifest.get("embedding_fingerprint") != self.retriever.index_fingerprint():
+            raise ValueError("Dense index embedding configuration changed; rebuild the index before searching.")
+
     def query_with_ranking(
         self,
         question: str,
@@ -82,11 +101,13 @@ class DocumentRetrievalPipeline:
     ) -> Dict[str, object]:
         top_k = top_k or self.config.max_retrievals
         answer_top_k = min(top_k, getattr(self.config, "max_answer_pages", top_k))
+        self._validate_index_identity()
         index = load_index(self.config.index_path)
         if index.size == 0:
             return {
                 "answer": "I cannot support an answer from the retrieved evidence. SOURCE: insufficient_evidence",
                 "source_ranking": [],
+                **self.vlm_client.answer_trace(invoked=False),
             }
 
         candidate_pool = min(len(index), max(top_k, top_k * 4, getattr(self.config, "candidate_pool_size", 20)))
@@ -128,7 +149,11 @@ class DocumentRetrievalPipeline:
         )
         prompt = format_prompt(combined_context, question, self.config.prompt_template)
         answer = self.vlm_client.generate_extractive(prompt) if force_extractive else self.vlm_client.generate(prompt)
-        return {"answer": answer, "source_ranking": ranked_pages}
+        return {
+            "answer": answer,
+            "source_ranking": ranked_pages,
+            **self.vlm_client.answer_trace(invoked=True, force_extractive=force_extractive),
+        }
 
     def query_structured(
         self,
@@ -139,6 +164,9 @@ class DocumentRetrievalPipeline:
     ) -> Dict[str, object]:
         result = self.query_with_ranking(question, data_folder, top_k=top_k, force_extractive=force_extractive)
         answer = str(result["answer"]).strip()
+        answer_repaired = False
+        explicit_abstention = is_explicit_abstention(answer)
+        generation_truncated = bool(((result.get("backend_metadata") or {}).get("last_generation") or {}).get("truncated"))
         ranked_pages = result["source_ranking"]
         citations = []
         cited_source = self._extract_answer_source(answer, ranked_pages)
@@ -148,7 +176,7 @@ class DocumentRetrievalPipeline:
             cited_page = next((page for page in ranked_pages if page["source"] == cited_source), None)
         if cited_page is None:
             cited_page = self._choose_cited_page(question, clean_answer, ranked_pages)
-        if cited_page:
+        if cited_page and not explicit_abstention and not generation_truncated:
             repaired_answer = self._repair_answer_from_evidence(question, clean_answer, cited_page)
             if not repaired_answer and (
                 "insufficient_evidence" in answer.lower() or not clean_answer
@@ -159,6 +187,7 @@ class DocumentRetrievalPipeline:
                 )
             if repaired_answer:
                 clean_answer = repaired_answer
+                answer_repaired = True
             citations.append(
                 {
                     "source": cited_page["source"],
@@ -177,13 +206,20 @@ class DocumentRetrievalPipeline:
         if not supported:
             confidence = min(confidence, 0.19)
         threshold = getattr(self.config, "abstain_threshold", 0.20)
-        abstain = confidence < threshold or "insufficient_evidence" in answer.lower() or not supported
+        abstain = confidence < threshold or explicit_abstention or generation_truncated or not supported
         return {
             "answer": "" if abstain else clean_answer,
+            "raw_answer": answer,
+            "answer_repaired": answer_repaired,
+            "explicit_abstention": explicit_abstention,
+            "generation_truncated": generation_truncated,
+            "generation_used": result.get("generation_used", False),
+            "answer_backend": "deterministic-evidence-repair" if answer_repaired and not abstain else result.get("answer_backend"),
+            "backend_metadata": result.get("backend_metadata"),
             "citations": [] if abstain else citations,
             "confidence": confidence,
             "abstain": abstain,
-            "abstain_reason": "insufficient_retrieved_evidence" if abstain else None,
+            "abstain_reason": "generation_truncated" if generation_truncated else "insufficient_retrieved_evidence" if abstain else None,
             "citation_support": supported,
             "citation_support_reason": support_reason,
             "source_ranking": ranked_pages,
@@ -301,6 +337,8 @@ class DocumentRetrievalPipeline:
         answer: str,
         cited_page: Dict[str, object],
     ) -> Optional[str]:
+        if is_explicit_abstention(answer):
+            return None
         if not cls._question_requires_numeric_evidence(question):
             return None
         if set(_AMOUNT_RE.findall(answer or "")):
@@ -365,7 +403,7 @@ class DocumentRetrievalPipeline:
         citations: List[Dict[str, object]],
         min_overlap: float = 0.20,
     ) -> tuple[bool, str]:
-        if "insufficient_evidence" in (answer or "").lower():
+        if is_explicit_abstention(answer):
             return False, "model_reported_insufficient_evidence"
         if not citations:
             return False, "missing_citation"
@@ -543,6 +581,7 @@ class DocumentRetrievalPipeline:
 
     def rank_pages(self, question: str, data_folder: Path, top_k: Optional[int] = None) -> List[Dict[str, object]]:
         top_k = top_k or self.config.max_retrievals
+        self._validate_index_identity()
         index = load_index(self.config.index_path)
         if index.size == 0:
             return []

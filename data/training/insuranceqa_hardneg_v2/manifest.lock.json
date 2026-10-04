@@ -1,0 +1,74 @@
+{
+  "created_utc": "2026-10-01T20:04:28.061046+00:00",
+  "version": "insuranceqa_hardneg_v2",
+  "fixture_lock_sha256": "4c46a374c2f5eebd4a2609f030c5fdc0aa660fb5e7a1a653cc198f6cc177fcc6",
+  "mining_code_sha256": "9a79c2f5b27261c4bf7d475ebe9f852d0902f3514c2c6b90c09703ecdd6b704c",
+  "embedding": {
+    "schema_version": 1,
+    "backend": "local-transformer",
+    "model": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\bge-small-en-v1.5",
+    "is_baseline": false,
+    "query_instruction": "Represent this sentence for searching relevant passages: ",
+    "pooling": "cls",
+    "max_length": 512,
+    "normalization": "l2",
+    "embedding_dim": 384,
+    "pooling_source": "explicit_argument",
+    "checkpoint_sha256": "03f953a6eccb84cee28665e8229fcef40f985e9df911e120e0a13b09109c3a92",
+    "checkpoint_files_sha256": {
+      "1_Pooling/config.json": "d1caf60c96f5fba2157c0c26b76d80818fad6cf0b8eb5e73ec372ff9818eba5c",
+      "config.json": "094f8e891b932f2000c92cfc663bac4c62069f5d8af5b5278c4306aef3084750",
+      "config_sentence_transformers.json": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56",
+      "download_provenance.json": "32f017723727bff0f8102b4e7920904c2e3bfcb270d82a494dc6ecac7fb5e4ce",
+      "model.safetensors": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+      "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "sentence_bert_config.json": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf",
+      "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "tokenizer_config.json": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3",
+      "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    }
+  },
+  "answer_embeddings_sha256": "a944d27bbb2432c8bee6b75d972fe69bee92c1d80a524d41fd10836d7217fe0b",
+  "original_train_questions": 12889,
+  "training_questions": 11729,
+  "labeled_positive_pairs": 19193,
+  "mined_negative_pairs": 105561,
+  "negative_types": {
+    "dense_hard": 46916,
+    "lexical_hard": 46916,
+    "random": 11729
+  },
+  "domains": {
+    "disability-insurance": 673,
+    "life-insurance": 2987,
+    "renters-insurance": 713,
+    "annuities": 577,
+    "home-insurance": 1229,
+    "retirement-plans": 476,
+    "auto-insurance": 1520,
+    "medicare-insurance": 1621,
+    "long-term-care-insurance": 390,
+    "health-insurance": 1422,
+    "critical-illness-insurance": 93,
+    "other-insurance": 28
+  },
+  "seed": 20261001,
+  "test_used_for_hyperparameters": false,
+  "heldout_used_for_split_hygiene_only": true,
+  "positive_annotation": "Original InsuranceQA authors, unchanged answer IDs",
+  "negative_annotation": "Unlabeled retrieved distractors, not human-verified incorrect answers",
+  "limitations": [
+    "Plausible unlabeled answers can be false negatives.",
+    "Lexical decontamination is not complete semantic decontamination.",
+    "Pair count does not equal independent question count."
+  ],
+  "use_terms": "InsuranceQA original research-only use terms retained",
+  "files": {
+    "train_groups.jsonl": "b9247169f7503cdcdc1b68bdc539551ec8477a3feb469d9519f689c49f481b78",
+    "decontamination.json": "918d9299117cd0bea6fe7672fd42b3e34ee5bb0803acea8d14d2d73dae64b5e3"
+  },
+  "parent_manifest_sha256": "7303e4bb4f143c813af9baf05789455db65100e688d54d8746e0b0ea44a036e3",
+  "refinement_code_sha256": "d558cefe232f5bd120325f1b7291a7daecc0cf73c3c29a18ea0a697967008fab",
+  "additional_text_duplicate_exclusions": 10
+}

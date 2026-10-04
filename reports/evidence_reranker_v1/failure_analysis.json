@@ -1,0 +1,1212 @@
+{
+  "created_utc": "2026-10-03T05:50:31.419013+00:00",
+  "historical_default_parity": {
+    "insuranceqa": {
+      "questions": 2000,
+      "rank_list_changes": 0,
+      "hit_at_1_changes": 0,
+      "hit_at_10_changes": 0,
+      "mrr_at_100_changes": 0,
+      "candidate_hit_changes": 0
+    },
+    "multidomain": {
+      "questions": 681,
+      "rank_list_changes": 0,
+      "hit_at_1_changes": 0,
+      "hit_at_10_changes": 0,
+      "mrr_at_100_changes": 0,
+      "candidate_hit_changes": 0
+    },
+    "fiqa": {
+      "questions": 648,
+      "rank_list_changes": 0,
+      "hit_at_1_changes": 0,
+      "hit_at_10_changes": 0,
+      "mrr_at_100_changes": 0,
+      "candidate_hit_changes": 0
+    },
+    "historical_government": {
+      "questions": 416,
+      "rank_list_changes": 0,
+      "hit_at_1_changes": 0,
+      "hit_at_10_changes": 0,
+      "mrr_at_100_changes": 0,
+      "candidate_hit_changes": 0
+    },
+    "condition_government": {
+      "questions": 157,
+      "rank_list_changes": 0,
+      "hit_at_1_changes": 0,
+      "hit_at_10_changes": 0,
+      "mrr_at_100_changes": 0,
+      "candidate_hit_changes": 0
+    }
+  },
+  "failure_stages": {
+    "insuranceqa/all/previous_default": {
+      "n": 2000,
+      "top1_hit": 880,
+      "ranked_after_top10": 311,
+      "candidate_missing": 176,
+      "top10_only": 633
+    },
+    "insuranceqa/all/previous_validation_best": {
+      "n": 2000,
+      "top1_hit": 880,
+      "ranked_after_top10": 311,
+      "candidate_missing": 176,
+      "top10_only": 633
+    },
+    "insuranceqa/all/selected": {
+      "n": 2000,
+      "top1_hit": 900,
+      "ranked_after_top10": 307,
+      "candidate_missing": 176,
+      "top10_only": 617
+    },
+    "multidomain/government/previous_default": {
+      "n": 81,
+      "top1_hit": 66,
+      "top10_only": 14,
+      "ranked_after_top10": 1
+    },
+    "multidomain/government/previous_validation_best": {
+      "n": 81,
+      "top1_hit": 66,
+      "top10_only": 14,
+      "ranked_after_top10": 1
+    },
+    "multidomain/government/selected": {
+      "n": 81,
+      "top1_hit": 66,
+      "ranked_after_top10": 1,
+      "top10_only": 14
+    },
+    "multidomain/general/previous_default": {
+      "n": 600,
+      "top10_only": 60,
+      "top1_hit": 532,
+      "ranked_after_top10": 3,
+      "candidate_missing": 5
+    },
+    "multidomain/general/previous_validation_best": {
+      "n": 600,
+      "top10_only": 60,
+      "top1_hit": 532,
+      "ranked_after_top10": 3,
+      "candidate_missing": 5
+    },
+    "multidomain/general/selected": {
+      "n": 600,
+      "top10_only": 65,
+      "top1_hit": 527,
+      "ranked_after_top10": 3,
+      "candidate_missing": 5
+    },
+    "fiqa/all/previous_default": {
+      "n": 648,
+      "top1_hit": 265,
+      "top10_only": 177,
+      "candidate_missing": 73,
+      "ranked_after_top10": 133
+    },
+    "fiqa/all/previous_validation_best": {
+      "n": 648,
+      "top1_hit": 265,
+      "top10_only": 177,
+      "candidate_missing": 73,
+      "ranked_after_top10": 133
+    },
+    "fiqa/all/selected": {
+      "n": 648,
+      "top1_hit": 258,
+      "top10_only": 185,
+      "candidate_missing": 73,
+      "ranked_after_top10": 132
+    },
+    "historical_government/all/previous_default": {
+      "n": 416,
+      "top10_only": 99,
+      "top1_hit": 304,
+      "ranked_after_top10": 10,
+      "candidate_missing": 3
+    },
+    "historical_government/all/previous_validation_best": {
+      "n": 416,
+      "top10_only": 99,
+      "top1_hit": 304,
+      "ranked_after_top10": 10,
+      "candidate_missing": 3
+    },
+    "historical_government/all/selected": {
+      "n": 416,
+      "top10_only": 100,
+      "top1_hit": 304,
+      "ranked_after_top10": 9,
+      "candidate_missing": 3
+    },
+    "condition_government/all/previous_default": {
+      "n": 157,
+      "top1_hit": 127,
+      "top10_only": 29,
+      "ranked_after_top10": 1
+    },
+    "condition_government/all/previous_validation_best": {
+      "n": 157,
+      "top1_hit": 127,
+      "top10_only": 29,
+      "ranked_after_top10": 1
+    },
+    "condition_government/all/selected": {
+      "n": 157,
+      "top1_hit": 126,
+      "top10_only": 30,
+      "ranked_after_top10": 1
+    },
+    "finqa/all/previous_default": {
+      "n": 1147,
+      "ranked_after_top10": 77,
+      "required_fact_ranked_after_top5": 381,
+      "top1_hit": 717,
+      "all_evidence_top5": 740,
+      "top10_only": 348,
+      "candidate_missing_required_fact": 26,
+      "candidate_missing": 5
+    },
+    "finqa/all/previous_validation_best": {
+      "n": 1147,
+      "ranked_after_top10": 77,
+      "required_fact_ranked_after_top5": 381,
+      "top1_hit": 717,
+      "all_evidence_top5": 740,
+      "top10_only": 348,
+      "candidate_missing_required_fact": 26,
+      "candidate_missing": 5
+    },
+    "finqa/all/selected": {
+      "n": 1147,
+      "ranked_after_top10": 34,
+      "required_fact_ranked_after_top5": 290,
+      "top1_hit": 820,
+      "all_evidence_top5": 831,
+      "top10_only": 288,
+      "candidate_missing_required_fact": 26,
+      "candidate_missing": 5
+    }
+  },
+  "failure_cards": 2194,
+  "finqa_company_cluster_sensitivity": {
+    "previous_default": {
+      "n": 1147,
+      "clusters": 100,
+      "cluster_unit": "company",
+      "bootstrap_repetitions": 5000,
+      "multiple_comparisons_adjusted": false,
+      "metrics": {
+        "hit_at_1": {
+          "difference": 0.08979947689625109,
+          "cluster_bootstrap_95ci": [
+            0.06536311117270757,
+            0.11676734132812541
+          ],
+          "wins": 129,
+          "losses": 26
+        },
+        "hit_at_10": {
+          "difference": 0.037489102005231034,
+          "cluster_bootstrap_95ci": [
+            0.022662900818574874,
+            0.05349287224604407
+          ],
+          "wins": 51,
+          "losses": 8
+        },
+        "mrr_at_100": {
+          "difference": 0.080073663312757,
+          "cluster_bootstrap_95ci": [
+            0.06432688221481944,
+            0.09671763913021407
+          ],
+          "wins": 316,
+          "losses": 52
+        },
+        "ndcg_at_10": {
+          "difference": 0.07750056182997221,
+          "cluster_bootstrap_95ci": [
+            0.06536188592807629,
+            0.0898318213434148
+          ],
+          "wins": 432,
+          "losses": 89
+        },
+        "all_evidence_at_5": {
+          "difference": 0.07933740191804708,
+          "cluster_bootstrap_95ci": [
+            0.0590505021730926,
+            0.09892120550135233
+          ],
+          "wins": 105,
+          "losses": 14
+        },
+        "all_evidence_at_10": {
+          "difference": 0.06538796861377506,
+          "cluster_bootstrap_95ci": [
+            0.04072283150548355,
+            0.09084027385657818
+          ],
+          "wins": 95,
+          "losses": 20
+        },
+        "evidence_recall_at_5": {
+          "difference": 0.07462946817785528,
+          "cluster_bootstrap_95ci": [
+            0.059436882711977695,
+            0.08886949169402167
+          ],
+          "wins": 170,
+          "losses": 24
+        }
+      }
+    },
+    "previous_validation_best": {
+      "n": 1147,
+      "clusters": 100,
+      "cluster_unit": "company",
+      "bootstrap_repetitions": 5000,
+      "multiple_comparisons_adjusted": false,
+      "metrics": {
+        "hit_at_1": {
+          "difference": 0.08979947689625109,
+          "cluster_bootstrap_95ci": [
+            0.06536311117270757,
+            0.11676734132812541
+          ],
+          "wins": 129,
+          "losses": 26
+        },
+        "hit_at_10": {
+          "difference": 0.037489102005231034,
+          "cluster_bootstrap_95ci": [
+            0.022662900818574874,
+            0.05349287224604407
+          ],
+          "wins": 51,
+          "losses": 8
+        },
+        "mrr_at_100": {
+          "difference": 0.080073663312757,
+          "cluster_bootstrap_95ci": [
+            0.06432688221481944,
+            0.09671763913021407
+          ],
+          "wins": 316,
+          "losses": 52
+        },
+        "ndcg_at_10": {
+          "difference": 0.07750056182997221,
+          "cluster_bootstrap_95ci": [
+            0.06536188592807629,
+            0.0898318213434148
+          ],
+          "wins": 432,
+          "losses": 89
+        },
+        "all_evidence_at_5": {
+          "difference": 0.07933740191804708,
+          "cluster_bootstrap_95ci": [
+            0.0590505021730926,
+            0.09892120550135233
+          ],
+          "wins": 105,
+          "losses": 14
+        },
+        "all_evidence_at_10": {
+          "difference": 0.06538796861377506,
+          "cluster_bootstrap_95ci": [
+            0.04072283150548355,
+            0.09084027385657818
+          ],
+          "wins": 95,
+          "losses": 20
+        },
+        "evidence_recall_at_5": {
+          "difference": 0.07462946817785528,
+          "cluster_bootstrap_95ci": [
+            0.059436882711977695,
+            0.08886949169402167
+          ],
+          "wins": 170,
+          "losses": 24
+        }
+      }
+    },
+    "previous_same_weight": {
+      "n": 1147,
+      "clusters": 100,
+      "cluster_unit": "company",
+      "bootstrap_repetitions": 5000,
+      "multiple_comparisons_adjusted": false,
+      "metrics": {
+        "hit_at_1": {
+          "difference": 0.08979947689625109,
+          "cluster_bootstrap_95ci": [
+            0.06536311117270757,
+            0.11676734132812541
+          ],
+          "wins": 129,
+          "losses": 26
+        },
+        "hit_at_10": {
+          "difference": 0.037489102005231034,
+          "cluster_bootstrap_95ci": [
+            0.022662900818574874,
+            0.05349287224604407
+          ],
+          "wins": 51,
+          "losses": 8
+        },
+        "mrr_at_100": {
+          "difference": 0.080073663312757,
+          "cluster_bootstrap_95ci": [
+            0.06432688221481944,
+            0.09671763913021407
+          ],
+          "wins": 316,
+          "losses": 52
+        },
+        "ndcg_at_10": {
+          "difference": 0.07750056182997221,
+          "cluster_bootstrap_95ci": [
+            0.06536188592807629,
+            0.0898318213434148
+          ],
+          "wins": 432,
+          "losses": 89
+        },
+        "all_evidence_at_5": {
+          "difference": 0.07933740191804708,
+          "cluster_bootstrap_95ci": [
+            0.0590505021730926,
+            0.09892120550135233
+          ],
+          "wins": 105,
+          "losses": 14
+        },
+        "all_evidence_at_10": {
+          "difference": 0.06538796861377506,
+          "cluster_bootstrap_95ci": [
+            0.04072283150548355,
+            0.09084027385657818
+          ],
+          "wins": 95,
+          "losses": 20
+        },
+        "evidence_recall_at_5": {
+          "difference": 0.07462946817785528,
+          "cluster_bootstrap_95ci": [
+            0.059436882711977695,
+            0.08886949169402167
+          ],
+          "wins": 170,
+          "losses": 24
+        }
+      }
+    },
+    "bge": {
+      "n": 1147,
+      "clusters": 100,
+      "cluster_unit": "company",
+      "bootstrap_repetitions": 5000,
+      "multiple_comparisons_adjusted": false,
+      "metrics": {
+        "hit_at_1": {
+          "difference": 0.12292938099389712,
+          "cluster_bootstrap_95ci": [
+            0.09781465505764571,
+            0.15053911549512722
+          ],
+          "wins": 172,
+          "losses": 31
+        },
+        "hit_at_10": {
+          "difference": 0.044463818657367045,
+          "cluster_bootstrap_95ci": [
+            0.027244520238599006,
+            0.06274247442506477
+          ],
+          "wins": 56,
+          "losses": 5
+        },
+        "mrr_at_100": {
+          "difference": 0.09786154204031261,
+          "cluster_bootstrap_95ci": [
+            0.0830945806077013,
+            0.11345094205703339
+          ],
+          "wins": 352,
+          "losses": 58
+        },
+        "ndcg_at_10": {
+          "difference": 0.09268003305388822,
+          "cluster_bootstrap_95ci": [
+            0.08047048654263186,
+            0.1052801528120971
+          ],
+          "wins": 454,
+          "losses": 93
+        },
+        "all_evidence_at_5": {
+          "difference": 0.0967741935483871,
+          "cluster_bootstrap_95ci": [
+            0.07251406425473214,
+            0.12104318773902564
+          ],
+          "wins": 131,
+          "losses": 20
+        },
+        "all_evidence_at_10": {
+          "difference": 0.08369659982563209,
+          "cluster_bootstrap_95ci": [
+            0.05792163543441227,
+            0.1109204768548149
+          ],
+          "wins": 116,
+          "losses": 20
+        },
+        "evidence_recall_at_5": {
+          "difference": 0.07995495495495496,
+          "cluster_bootstrap_95ci": [
+            0.06403907897990098,
+            0.09457658893981512
+          ],
+          "wins": 188,
+          "losses": 35
+        }
+      }
+    }
+  },
+  "finqa_single_multiple_fact_strata": {
+    "single_fact": {
+      "n": 568,
+      "arms": {
+        "previous_default": {
+          "n": 568,
+          "hit_at_1": 0.7077464788732394,
+          "hit_at_5": 0.9119718309859155,
+          "hit_at_10": 0.9612676056338029,
+          "hit_at_100": 0.9947183098591549,
+          "mrr_at_100": 0.7965104017307917,
+          "label_recall_at_10": 0.9612676056338029,
+          "hit_at_1_wilson_95": [
+            0.6690488105670972,
+            0.7436529905347354
+          ],
+          "hit_at_10_wilson_95": [
+            0.942053230815862,
+            0.9742846665458347
+          ],
+          "ndcg_at_10": 0.8355501215975698,
+          "candidate_hit": 0.9947183098591549,
+          "all_evidence_at_5": 0.9119718309859155,
+          "all_evidence_at_10": 0.9612676056338029,
+          "evidence_recall_at_5": 0.9119718309859155,
+          "candidate_all_evidence": 0.9947183098591549
+        },
+        "previous_validation_best": {
+          "n": 568,
+          "hit_at_1": 0.7077464788732394,
+          "hit_at_5": 0.9119718309859155,
+          "hit_at_10": 0.9612676056338029,
+          "hit_at_100": 0.9947183098591549,
+          "mrr_at_100": 0.7965104017307917,
+          "label_recall_at_10": 0.9612676056338029,
+          "hit_at_1_wilson_95": [
+            0.6690488105670972,
+            0.7436529905347354
+          ],
+          "hit_at_10_wilson_95": [
+            0.942053230815862,
+            0.9742846665458347
+          ],
+          "ndcg_at_10": 0.8355501215975698,
+          "candidate_hit": 0.9947183098591549,
+          "all_evidence_at_5": 0.9119718309859155,
+          "all_evidence_at_10": 0.9612676056338029,
+          "evidence_recall_at_5": 0.9119718309859155,
+          "candidate_all_evidence": 0.9947183098591549
+        },
+        "selected": {
+          "n": 568,
+          "hit_at_1": 0.7852112676056338,
+          "hit_at_5": 0.9577464788732394,
+          "hit_at_10": 0.9788732394366197,
+          "hit_at_100": 0.9947183098591549,
+          "mrr_at_100": 0.8591988525654479,
+          "label_recall_at_10": 0.9788732394366197,
+          "hit_at_1_wilson_95": [
+            0.7495811927122228,
+            0.8170094155801239
+          ],
+          "hit_at_10_wilson_95": [
+            0.9634385614515012,
+            0.9878740648171304
+          ],
+          "ndcg_at_10": 0.8880158566347666,
+          "candidate_hit": 0.9947183098591549,
+          "all_evidence_at_5": 0.9577464788732394,
+          "all_evidence_at_10": 0.9788732394366197,
+          "evidence_recall_at_5": 0.9577464788732394,
+          "candidate_all_evidence": 0.9947183098591549
+        },
+        "bge": {
+          "n": 568,
+          "hit_at_1": 0.6883802816901409,
+          "hit_at_5": 0.9014084507042254,
+          "hit_at_10": 0.9436619718309859,
+          "hit_at_100": 0.9947183098591549,
+          "mrr_at_100": 0.7821688776312191,
+          "label_recall_at_10": 0.9436619718309859,
+          "hit_at_1_wilson_95": [
+            0.6491327730770141,
+            0.7250968262271903
+          ],
+          "hit_at_10_wilson_95": [
+            0.9215498610955436,
+            0.9598133073592178
+          ],
+          "ndcg_at_10": 0.8195647003811832,
+          "candidate_hit": 0.9947183098591549,
+          "all_evidence_at_5": 0.9014084507042254,
+          "all_evidence_at_10": 0.9436619718309859,
+          "evidence_recall_at_5": 0.9014084507042254,
+          "candidate_all_evidence": 0.9947183098591549
+        }
+      }
+    },
+    "multiple_facts": {
+      "n": 579,
+      "arms": {
+        "previous_default": {
+          "n": 579,
+          "hit_at_1": 0.5440414507772021,
+          "hit_at_5": 0.8169257340241797,
+          "hit_at_10": 0.8963730569948186,
+          "hit_at_100": 0.9965457685664939,
+          "mrr_at_100": 0.6660720305049846,
+          "label_recall_at_10": 0.7223373632700058,
+          "hit_at_1_wilson_95": [
+            0.5033156845301269,
+            0.5841866700607633
+          ],
+          "hit_at_10_wilson_95": [
+            0.8688799897577704,
+            0.9186412015602397
+          ],
+          "ndcg_at_10": 0.5959012161495739,
+          "candidate_hit": 0.9965457685664939,
+          "all_evidence_at_5": 0.38341968911917096,
+          "all_evidence_at_10": 0.538860103626943,
+          "evidence_recall_at_5": 0.5995538284398387,
+          "candidate_all_evidence": 0.9602763385146805
+        },
+        "previous_validation_best": {
+          "n": 579,
+          "hit_at_1": 0.5440414507772021,
+          "hit_at_5": 0.8169257340241797,
+          "hit_at_10": 0.8963730569948186,
+          "hit_at_100": 0.9965457685664939,
+          "mrr_at_100": 0.6660720305049846,
+          "label_recall_at_10": 0.7223373632700058,
+          "hit_at_1_wilson_95": [
+            0.5033156845301269,
+            0.5841866700607633
+          ],
+          "hit_at_10_wilson_95": [
+            0.8688799897577704,
+            0.9186412015602397
+          ],
+          "ndcg_at_10": 0.5959012161495739,
+          "candidate_hit": 0.9965457685664939,
+          "all_evidence_at_5": 0.38341968911917096,
+          "all_evidence_at_10": 0.538860103626943,
+          "evidence_recall_at_5": 0.5995538284398387,
+          "candidate_all_evidence": 0.9602763385146805
+        },
+        "selected": {
+          "n": 579,
+          "hit_at_1": 0.6459412780656304,
+          "hit_at_5": 0.9032815198618307,
+          "hit_at_10": 0.9533678756476683,
+          "hit_at_100": 0.9965457685664939,
+          "mrr_at_100": 0.7632006172850322,
+          "label_recall_at_10": 0.8084340817501439,
+          "hit_at_1_wilson_95": [
+            0.606142873271435,
+            0.6838159095885731
+          ],
+          "hit_at_10_wilson_95": [
+            0.9330032050056134,
+            0.9677563275476659
+          ],
+          "ndcg_at_10": 0.6979609863013018,
+          "candidate_hit": 0.9965457685664939,
+          "all_evidence_at_5": 0.49568221070811747,
+          "all_evidence_at_10": 0.6511226252158895,
+          "evidence_recall_at_5": 0.702489925158319,
+          "candidate_all_evidence": 0.9602763385146805
+        },
+        "bge": {
+          "n": 579,
+          "hit_at_1": 0.49740932642487046,
+          "hit_at_5": 0.846286701208981,
+          "hit_at_10": 0.8998272884283247,
+          "hit_at_100": 0.9913644214162349,
+          "mrr_at_100": 0.6449032719351244,
+          "label_recall_at_10": 0.7089522164651698,
+          "hit_at_1_wilson_95": [
+            0.4568347157611581,
+            0.538018086909966
+          ],
+          "hit_at_10_wilson_95": [
+            0.8726759986930545,
+            0.9217081223967901
+          ],
+          "ndcg_at_10": 0.5815123832602405,
+          "candidate_hit": 0.9913644214162349,
+          "all_evidence_at_5": 0.3592400690846287,
+          "all_evidence_at_10": 0.5198618307426598,
+          "evidence_recall_at_5": 0.5993667242371905,
+          "candidate_all_evidence": 0.917098445595855
+        }
+      }
+    }
+  },
+  "finqa_duplicate_question_sensitivity": {
+    "original_test_rows": 1147,
+    "unique_report_question_groups": 1138,
+    "normalization": "casefold and whitespace only; report identifier included",
+    "groups": [
+      {
+        "source_group": "GPN/2008",
+        "question": "what percentage of net assets acquired was considered goodwill?",
+        "ids": [
+          "finqa_q_b5d869cf713106bba9265fe0",
+          "finqa_q_c07a53f89c1dcaa39e1a2175"
+        ],
+        "identical_gold_ids": true
+      },
+      {
+        "source_group": "MRO/2003",
+        "question": "by what percentage did protect carrying values of excess inventories increase from 2002 to 2003?",
+        "ids": [
+          "finqa_q_49e24d713866e1145a8d910f",
+          "finqa_q_0c633cc657435ee894bb11d4"
+        ],
+        "identical_gold_ids": true
+      },
+      {
+        "source_group": "SLG/2001",
+        "question": "what was the average total revenue in 1999 , 2000 and 2001?",
+        "ids": [
+          "finqa_q_ea6cecc6bb7891e294ecdb22",
+          "finqa_q_093491841e6f5ac6999fb886"
+        ],
+        "identical_gold_ids": true
+      },
+      {
+        "source_group": "IPG/2006",
+        "question": "what percent increase in long-term debt did the floating rate notes maturing in 2010?",
+        "ids": [
+          "finqa_q_b095be42dc8e3d40f48cb040",
+          "finqa_q_e365b8e0827ffe34c5038008"
+        ],
+        "identical_gold_ids": true
+      },
+      {
+        "source_group": "DVN/2018",
+        "question": "what is the percentage increase in total expense from 2017 to 2018?",
+        "ids": [
+          "finqa_q_07c3ab80d5ecb134e4f5aab0",
+          "finqa_q_973a3fef3994b76174c2a906"
+        ],
+        "identical_gold_ids": true
+      },
+      {
+        "source_group": "MRO/2008",
+        "question": "what percentage of pipeline barrels handled consisted of crude oil trunk lines in 2007?",
+        "ids": [
+          "finqa_q_6269a2b4a3e7feaf81ebd050",
+          "finqa_q_363f38407829a69ebdda064f"
+        ],
+        "identical_gold_ids": true
+      },
+      {
+        "source_group": "PNC/2012",
+        "question": "what was the two-year total for specific reserves in the alll , in millions?",
+        "ids": [
+          "finqa_q_eb829797d2995ae39d6368d8",
+          "finqa_q_3877216e5bd16d6fb659ffc3"
+        ],
+        "identical_gold_ids": true
+      },
+      {
+        "source_group": "WRK/2018",
+        "question": "what was the total balance in 2018 , if the company was to include interest and penalty liabilities?",
+        "ids": [
+          "finqa_q_69957d3b8523528286bfb19f",
+          "finqa_q_92b458eff9057df59718321a"
+        ],
+        "identical_gold_ids": true
+      },
+      {
+        "source_group": "MRO/2013",
+        "question": "by what percentage did the average price of wti crude oil increase from 2011 to 2013?",
+        "ids": [
+          "finqa_q_5663eef1befeca5c2e61c162",
+          "finqa_q_086452d5cb9c7bb5842f306e"
+        ],
+        "identical_gold_ids": true
+      }
+    ],
+    "primary_test_unchanged": true,
+    "group_equally_weighted_metrics": {
+      "previous_default": {
+        "hit_at_1": 0.6230228471001757,
+        "hit_at_10": 0.9279437609841827,
+        "all_evidence_at_5": 0.6458699472759226,
+        "all_evidence_at_10": 0.7486818980667839
+      },
+      "previous_validation_best": {
+        "hit_at_1": 0.6230228471001757,
+        "hit_at_10": 0.9279437609841827,
+        "all_evidence_at_5": 0.6458699472759226,
+        "all_evidence_at_10": 0.7486818980667839
+      },
+      "selected": {
+        "hit_at_1": 0.7152899824253075,
+        "hit_at_10": 0.9657293497363796,
+        "all_evidence_at_5": 0.7258347978910369,
+        "all_evidence_at_10": 0.8137082601054482
+      },
+      "bge": {
+        "hit_at_1": 0.5905096660808435,
+        "hit_at_10": 0.9209138840070299,
+        "all_evidence_at_5": 0.6282952548330404,
+        "all_evidence_at_10": 0.7293497363796133
+      }
+    }
+  },
+  "fiqa_inherited_exposure_sensitivity": {
+    "excluded_ids": [
+      "fiqa_q_3446"
+    ],
+    "n": 647,
+    "primary_test_unchanged": true,
+    "prior_exposure_audit_sha256": "94f01c23cef2d8e2a18b07a7fd4c057978e60c9af260a2d6d0349d3cfe70b555",
+    "summaries": {
+      "previous_default": {
+        "n": 647,
+        "hit_at_1": 0.4080370942812983,
+        "hit_at_5": 0.6027820710973725,
+        "hit_at_10": 0.6816074188562596,
+        "hit_at_100": 0.8778979907264297,
+        "mrr_at_100": 0.49892237242352133,
+        "label_recall_at_10": 0.48531950189600886,
+        "hit_at_1_wilson_95": [
+          0.370818109275842,
+          0.4463416638344565
+        ],
+        "hit_at_10_wilson_95": [
+          0.6447296833621685,
+          0.7163413529326201
+        ],
+        "ndcg_at_10": 0.414265111596209,
+        "candidate_hit": 0.8871715610510046,
+        "all_evidence_at_5": 0.2472952086553323,
+        "all_evidence_at_10": 0.3091190108191654,
+        "evidence_recall_at_5": 0.40364459943285286,
+        "candidate_all_evidence": 0.5502318392581144
+      },
+      "previous_validation_best": {
+        "n": 647,
+        "hit_at_1": 0.4080370942812983,
+        "hit_at_5": 0.6027820710973725,
+        "hit_at_10": 0.6816074188562596,
+        "hit_at_100": 0.8778979907264297,
+        "mrr_at_100": 0.49892237242352133,
+        "label_recall_at_10": 0.48531950189600886,
+        "hit_at_1_wilson_95": [
+          0.370818109275842,
+          0.4463416638344565
+        ],
+        "hit_at_10_wilson_95": [
+          0.6447296833621685,
+          0.7163413529326201
+        ],
+        "ndcg_at_10": 0.414265111596209,
+        "candidate_hit": 0.8871715610510046,
+        "all_evidence_at_5": 0.2472952086553323,
+        "all_evidence_at_10": 0.3091190108191654,
+        "evidence_recall_at_5": 0.40364459943285286,
+        "candidate_all_evidence": 0.5502318392581144
+      },
+      "selected": {
+        "n": 647,
+        "hit_at_1": 0.3972179289026275,
+        "hit_at_5": 0.5996908809891809,
+        "hit_at_10": 0.6831530139103554,
+        "hit_at_100": 0.8763523956723338,
+        "mrr_at_100": 0.4932226063364596,
+        "label_recall_at_10": 0.4758380122367758,
+        "hit_at_1_wilson_95": [
+          0.36022685022083717,
+          0.4354223079612612
+        ],
+        "hit_at_10_wilson_95": [
+          0.6463123780018476,
+          0.7178316032826837
+        ],
+        "ndcg_at_10": 0.4070984506435545,
+        "candidate_hit": 0.8871715610510046,
+        "all_evidence_at_5": 0.23956723338485317,
+        "all_evidence_at_10": 0.29675425038639874,
+        "evidence_recall_at_5": 0.3989753077079198,
+        "candidate_all_evidence": 0.5502318392581144
+      },
+      "bge": {
+        "n": 647,
+        "hit_at_1": 0.40030911901081917,
+        "hit_at_5": 0.5873261205564142,
+        "hit_at_10": 0.6738794435857806,
+        "hit_at_100": 0.8578052550231839,
+        "mrr_at_100": 0.4942593299685572,
+        "label_recall_at_10": 0.46397737158942726,
+        "hit_at_1_wilson_95": [
+          0.3632509896417933,
+          0.4385440585197909
+        ],
+        "hit_at_10_wilson_95": [
+          0.6368229343276491,
+          0.7088833770184252
+        ],
+        "ndcg_at_10": 0.4032430960658065,
+        "candidate_hit": 0.8578052550231839,
+        "all_evidence_at_5": 0.22565687789799072,
+        "all_evidence_at_10": 0.28593508500772796,
+        "evidence_recall_at_5": 0.38053280224841274,
+        "candidate_all_evidence": 0.5069551777434312
+      }
+    }
+  },
+  "finqa_candidate_scope_statistics": {
+    "min": 8,
+    "median": 161.0,
+    "max": 969,
+    "unique_reports": 278
+  },
+  "finqa_insurance_keyword_slice": {
+    "n": 4,
+    "expert_insurance_classification": false,
+    "arms": {
+      "previous_default": {
+        "n": 4,
+        "hit_at_1": 0.75,
+        "hit_at_5": 1.0,
+        "hit_at_10": 1.0,
+        "hit_at_100": 1.0,
+        "mrr_at_100": 0.8333333333333334,
+        "label_recall_at_10": 0.875,
+        "hit_at_1_wilson_95": [
+          0.30064184258240184,
+          0.9544127391902995
+        ],
+        "hit_at_10_wilson_95": [
+          0.5101091635454027,
+          1.0
+        ],
+        "ndcg_at_10": 0.7892296254793709,
+        "candidate_hit": 1.0,
+        "all_evidence_at_5": 0.75,
+        "all_evidence_at_10": 0.75,
+        "evidence_recall_at_5": 0.875,
+        "candidate_all_evidence": 0.75
+      },
+      "selected": {
+        "n": 4,
+        "hit_at_1": 0.75,
+        "hit_at_5": 1.0,
+        "hit_at_10": 1.0,
+        "hit_at_100": 1.0,
+        "mrr_at_100": 0.875,
+        "label_recall_at_10": 0.875,
+        "hit_at_1_wilson_95": [
+          0.30064184258240184,
+          0.9544127391902995
+        ],
+        "hit_at_10_wilson_95": [
+          0.5101091635454027,
+          1.0
+        ],
+        "ndcg_at_10": 0.8160170306431478,
+        "candidate_hit": 1.0,
+        "all_evidence_at_5": 0.75,
+        "all_evidence_at_10": 0.75,
+        "evidence_recall_at_5": 0.875,
+        "candidate_all_evidence": 0.75
+      },
+      "bge": {
+        "n": 4,
+        "hit_at_1": 0.75,
+        "hit_at_5": 1.0,
+        "hit_at_10": 1.0,
+        "hit_at_100": 1.0,
+        "mrr_at_100": 0.8333333333333334,
+        "label_recall_at_10": 0.875,
+        "hit_at_1_wilson_95": [
+          0.30064184258240184,
+          0.9544127391902995
+        ],
+        "hit_at_10_wilson_95": [
+          0.5101091635454027,
+          1.0
+        ],
+        "ndcg_at_10": 0.7959472279301947,
+        "candidate_hit": 1.0,
+        "all_evidence_at_5": 0.75,
+        "all_evidence_at_10": 0.75,
+        "evidence_recall_at_5": 0.875,
+        "candidate_all_evidence": 0.75
+      }
+    }
+  },
+  "finqa_complete_at_5_theoretical_ceiling": 0.998256320836966,
+  "source_row_quality": {
+    "raw_finqa_source_rows": 86421,
+    "rows_without_ascii_alphanumeric": 5486,
+    "not_a_count_of_clean_expert_examples": true,
+    "known_noise_not_advertised_as_additional_training_examples": true
+  },
+  "test_predictions_sha256": "11638958befa3802ea6eca13c50a061155af1f851f78283f5c0bb1aa75e77518",
+  "literal_text_alias_sensitivity_not_primary": {
+    "insuranceqa": {
+      "n": 2000,
+      "normalization": "whitespace only; case and punctuation preserved",
+      "arms": {
+        "previous_default": {
+          "hit_at_1": {
+            "literal_text_equivalent": 0.44,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "hit_at_10": {
+            "literal_text_equivalent": 0.7565,
+            "additional_hits": 0,
+            "question_ids": []
+          }
+        },
+        "previous_validation_best": {
+          "hit_at_1": {
+            "literal_text_equivalent": 0.44,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "hit_at_10": {
+            "literal_text_equivalent": 0.7565,
+            "additional_hits": 0,
+            "question_ids": []
+          }
+        },
+        "selected": {
+          "hit_at_1": {
+            "literal_text_equivalent": 0.45,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "hit_at_10": {
+            "literal_text_equivalent": 0.7585,
+            "additional_hits": 0,
+            "question_ids": []
+          }
+        },
+        "bge": {
+          "hit_at_1": {
+            "literal_text_equivalent": 0.3445,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "hit_at_10": {
+            "literal_text_equivalent": 0.675,
+            "additional_hits": 0,
+            "question_ids": []
+          }
+        }
+      }
+    },
+    "fiqa": {
+      "n": 648,
+      "normalization": "whitespace only; case and punctuation preserved",
+      "arms": {
+        "previous_default": {
+          "hit_at_1": {
+            "literal_text_equivalent": 0.4089506172839506,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "hit_at_10": {
+            "literal_text_equivalent": 0.6820987654320988,
+            "additional_hits": 0,
+            "question_ids": []
+          }
+        },
+        "previous_validation_best": {
+          "hit_at_1": {
+            "literal_text_equivalent": 0.4089506172839506,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "hit_at_10": {
+            "literal_text_equivalent": 0.6820987654320988,
+            "additional_hits": 0,
+            "question_ids": []
+          }
+        },
+        "selected": {
+          "hit_at_1": {
+            "literal_text_equivalent": 0.39814814814814814,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "hit_at_10": {
+            "literal_text_equivalent": 0.683641975308642,
+            "additional_hits": 0,
+            "question_ids": []
+          }
+        },
+        "bge": {
+          "hit_at_1": {
+            "literal_text_equivalent": 0.4012345679012346,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "hit_at_10": {
+            "literal_text_equivalent": 0.6743827160493827,
+            "additional_hits": 0,
+            "question_ids": []
+          }
+        }
+      }
+    },
+    "finqa": {
+      "n": 1147,
+      "normalization": "whitespace only; case and punctuation preserved",
+      "arms": {
+        "previous_default": {
+          "hit_at_1": {
+            "literal_text_equivalent": 0.6259808195292066,
+            "additional_hits": 1,
+            "question_ids": [
+              "finqa_q_a429b3b3bb18a0b5e58dbd61"
+            ]
+          },
+          "hit_at_10": {
+            "literal_text_equivalent": 0.9285091543156059,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "all_evidence_at_5": {
+            "literal_text_equivalent": 0.6451612903225806,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "all_evidence_at_10": {
+            "literal_text_equivalent": 0.7480383609415867,
+            "additional_hits": 0,
+            "question_ids": []
+          }
+        },
+        "previous_validation_best": {
+          "hit_at_1": {
+            "literal_text_equivalent": 0.6259808195292066,
+            "additional_hits": 1,
+            "question_ids": [
+              "finqa_q_a429b3b3bb18a0b5e58dbd61"
+            ]
+          },
+          "hit_at_10": {
+            "literal_text_equivalent": 0.9285091543156059,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "all_evidence_at_5": {
+            "literal_text_equivalent": 0.6451612903225806,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "all_evidence_at_10": {
+            "literal_text_equivalent": 0.7480383609415867,
+            "additional_hits": 0,
+            "question_ids": []
+          }
+        },
+        "selected": {
+          "hit_at_1": {
+            "literal_text_equivalent": 0.7149084568439407,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "hit_at_10": {
+            "literal_text_equivalent": 0.966870095902354,
+            "additional_hits": 1,
+            "question_ids": [
+              "finqa_q_a7e38b5b2dc1b9957df57699"
+            ]
+          },
+          "all_evidence_at_5": {
+            "literal_text_equivalent": 0.7244986922406277,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "all_evidence_at_10": {
+            "literal_text_equivalent": 0.8142981691368788,
+            "additional_hits": 1,
+            "question_ids": [
+              "finqa_q_e11e48e06815fca11ff13d72"
+            ]
+          }
+        },
+        "bge": {
+          "hit_at_1": {
+            "literal_text_equivalent": 0.5937227550130776,
+            "additional_hits": 2,
+            "question_ids": [
+              "finqa_q_29aba9679d8bce4f010dc368",
+              "finqa_q_87904a837736d66c3cf58326"
+            ]
+          },
+          "hit_at_10": {
+            "literal_text_equivalent": 0.9224062772449869,
+            "additional_hits": 1,
+            "question_ids": [
+              "finqa_q_814efa09ceeb6cbaf95899c1"
+            ]
+          },
+          "all_evidence_at_5": {
+            "literal_text_equivalent": 0.6277244986922407,
+            "additional_hits": 0,
+            "question_ids": []
+          },
+          "all_evidence_at_10": {
+            "literal_text_equivalent": 0.7306015693112468,
+            "additional_hits": 1,
+            "question_ids": [
+              "finqa_q_814efa09ceeb6cbaf95899c1"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "selection_unchanged_sha256": "a40b41968aa39fc4f4967e5bc8f58ff96251558203ee33edf97ed16c8f070525",
+  "post_test_diagnostic_only": true,
+  "code_sha256": "bfd5ef01deec932084c122d88a714b399974837d1301a78bc71872fe2d82caef"
+}

@@ -1,0 +1,22 @@
+{
+  "benchmark_version": "research_v1",
+  "frozen_before_model_inference": true,
+  "annotation_author": "AI-assisted/manual-agent-verified; no human-expert adjudication",
+  "counts": {
+    "dev": 12,
+    "test": 24,
+    "answerable": 24,
+    "unsupported": 12
+  },
+  "question_split_policy": "Document-disjoint dev/test questions across six named archived public guides.",
+  "training_exposure_note": "These public documents exist in the legacy SFT corpus; this is NOT a document holdout from previous fine-tuning. Compare unadapted Ollama base instruct models only and report possible public pretraining exposure.",
+  "files": {
+    "dev.jsonl": "8e666859f29bc2ad8ad05ef9b1e2cd71a4d08e5b3337605fa5b5941d7f21809f",
+    "test.jsonl": "f4615efc16a3f1d66d8afac27f1d234aa20199812c23b050cf6d5f84b122eeea",
+    "documents.json": "7611db67b9122bdd3619e616cfc23d007402f6316274b391279836357f526824"
+  },
+  "corpus_files": {
+    "data/04_curated/rag_pages.jsonl": "cd89222cbe79add5ac72a8f695ba15d42011f94206dc934b76c6436ce19c2b33",
+    "data/04_curated/rag_snippets.jsonl": "5d844f3ddc63aefb954ded0ca073027e22942c39fa1ab48cf9d707cabd365cbd"
+  }
+}

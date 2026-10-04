@@ -1,12 +1,43 @@
 #!/usr/bin/env python3
 import argparse
+import hashlib
 import json
+from collections import Counter
 from pathlib import Path
 from typing import Dict
 
 from src.insurerag_vlm.config import ModelConfig
 from src.insurerag_vlm.pipeline import DocumentRetrievalPipeline
-from src.insurerag_vlm.qa import compute_retrieval_metrics
+from src.insurerag_vlm.qa import _read_jsonl, _retrieval_gold, compute_retrieval_metrics
+
+
+def _check_comparable_manifests(before_path: Path, after_path: Path) -> None:
+    def identities(path):
+        rows = []
+        for item in _read_jsonl(path):
+            if item.get("answerable", True):
+                sources, keys = _retrieval_gold(item)
+                rows.append((item["question"], tuple(sorted(sources)), tuple(sorted(keys))))
+        return Counter(rows)
+    if identities(before_path) != identities(after_path):
+        raise ValueError("Before/after evaluation requires the same questions and gold labels.")
+
+
+def _require_retriever(retrieval_model: str) -> None:
+    # This benchmark compares local retrievers. A missing checkpoint must not be
+    # silently reported as a trained-model run backed by local hashing.
+    if retrieval_model == "local-hashing":
+        return
+    model_path = Path(retrieval_model)
+    # EmbeddingRetriever reserves the local-* prefix for hashing, even if a
+    # directory with that name exists. Use an absolute/./ path to such a model.
+    if retrieval_model.startswith("local-"):
+        raise ValueError("The local-* prefix selects hashing; use local-hashing explicitly or an absolute checkpoint path.")
+    if not model_path.is_dir() or not (model_path / "config.json").is_file():
+        raise FileNotFoundError(
+            f"Retrieval checkpoint is unavailable: {retrieval_model}. "
+            "Use a local model directory containing config.json or explicitly select local-hashing."
+        )
 
 
 def _metrics_to_dict(metrics) -> Dict[str, float]:
@@ -29,11 +60,13 @@ def _run_eval(
     enable_image_signal: bool,
     top_k: int,
 ) -> Dict[str, float]:
+    _require_retriever(retrieval_model)
     pipeline = DocumentRetrievalPipeline(
         ModelConfig(
             retrieval_model=retrieval_model,
             retrieval_mode=retrieval_mode,
             corpus_source=corpus_source,
+            curated_dataset_dir=data_folder,
             enable_image_signal=enable_image_signal,
             index_dir=index_dir,
         )
@@ -55,6 +88,8 @@ def _write_markdown(output_md: Path, payload: Dict[str, object]) -> None:
         f"- Corpus source: `{payload['corpus_source']}`",
         f"- Image signal enabled: `{payload['enable_image_signal']}`",
         f"- Top-k: `{payload['top_k']}`",
+        f"- Before retrieval model: `{payload['before_retrieval_model']}`",
+        f"- After retrieval model: `{payload['after_retrieval_model']}`",
         "",
     ]
 
@@ -100,11 +135,15 @@ def main() -> None:
     parser.add_argument("--output-md", type=Path, default=Path("reports/retrieval_eval/before_after.md"))
     args = parser.parse_args()
 
+    _require_retriever(args.before_retrieval_model)
+    _require_retriever(args.after_retrieval_model)
+
     results = {}
     for split_name, before_qa, after_qa in (
         ("dev", args.before_qa_dev, args.after_qa_dev),
         ("test", args.before_qa_test, args.after_qa_test),
     ):
+        _check_comparable_manifests(before_qa, after_qa)
         before = _run_eval(
             args.data_folder,
             before_qa,
@@ -131,6 +170,8 @@ def main() -> None:
         }
         results[split_name] = {
             "qa_path": str(after_qa),
+            "before_qa_sha256": hashlib.sha256(before_qa.read_bytes()).hexdigest(),
+            "after_qa_sha256": hashlib.sha256(after_qa.read_bytes()).hexdigest(),
             "before": before,
             "after": after,
             "delta": delta,
@@ -142,6 +183,8 @@ def main() -> None:
         "corpus_source": args.corpus_source,
         "enable_image_signal": args.enable_image_signal,
         "top_k": args.top_k,
+        "before_retrieval_model": args.before_retrieval_model,
+        "after_retrieval_model": args.after_retrieval_model,
         "results": results,
     }
     args.output_json.parent.mkdir(parents=True, exist_ok=True)

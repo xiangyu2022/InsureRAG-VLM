@@ -1,0 +1,233 @@
+{
+  "summary": {
+    "counts": {
+      "documents": 73,
+      "page_records": 1592,
+      "pdf_text_pages": 1550,
+      "html_records": 42,
+      "snippets": 6804,
+      "explicit_page_references": 177
+    },
+    "explicit_edges": 784,
+    "preview_pdfs": 17,
+    "all_previews_resolve": true,
+    "retrieval_backend": "local-hashing",
+    "generator": "local-extractive",
+    "generation_calls": 0,
+    "quality_claim": false
+  },
+  "responses": [
+    {
+      "question": "In the 2026 SAMBA Health Benefit Plan document, where are precertification requirements described?",
+      "response": {
+        "source": "abstain",
+        "answer": "",
+        "knowledge_terms": [],
+        "citations": [],
+        "citation_origin": null,
+        "confidence": 0.19,
+        "abstain": true,
+        "abstain_reason": "The available document evidence does not establish this answer. Upload the relevant policy pages or ask a more specific question.",
+        "abstain_reason_code": "insufficient_retrieved_evidence",
+        "backend": "local-extractive",
+        "configured_backend": "local-extractive (no LLM)",
+        "generation_used": false,
+        "answer_repaired": false,
+        "raw_answer": "- SAMBA Health Benefit Plan www.SambaPlans.com Customer Service 800-638-6589 2026 A Fee-for-Service Plan (High and Standard Option) with a Preferred Provider Organization This plan's health coverage qualifies as minimum essential coverage IMPORTANTand meets the minimum value standard for the benefits it provides.\n\nSOURCE: opm_2026_71-015.pdf#page=1",
+        "backend_metadata": {
+          "provider": "local-extractive",
+          "requested_model": "local-extractive",
+          "resolved_model": "local-extractive",
+          "model_digest": null,
+          "model_details": {},
+          "ollama_version": null,
+          "base_url": null,
+          "generation_options": null,
+          "thinking": null,
+          "last_generation": {}
+        },
+        "retrieval_trace": [
+          {
+            "rank": 1,
+            "source": "opm_2026_71-015.pdf#page=9",
+            "score": 0.475,
+            "page_number": 9,
+            "snippet": "FEHB Facts Coverage information • No pre-existing We will not refuse to cover the treatment of a condition you had before you enrolled in this Plan condition limitation solely because you had the condition before you enrolled. • Minimum essential Coverage under this plan qualifies as minimum essential coverage. • Minimum value Our health coverage meets the minimum value standard of 60% established by the ACA. This standard means that we provide benefits to cover at least 60% of the total allowed costs of essential health benefits. The 60% standard is an actuarial value; your specific out-of-pocket costs are determined as explained in this brochure. • Where you can get See www.opm.gov/healthcare-insurance/healthcare for enrollment information as well as: information about • Information on the FEHB Program and plans available to you enrolling in the FEHB • A health plan comparison tool Program • A list of agencies that participate in Employee Express • A link to Employee Express • Information on and links to other electronic enrollment systems Also, your employing or retirement office can answer your questions, give you other plans' brochures and other materials you need to make an informed decision about your FEHB coverage. Once enrolled in your FEHB Program Plan, you should contact your carrier directly for updates and questions about your benefit coverage. 2026 SAMBA Health Benefit Plan 7 FEHB Facts"
+          },
+          {
+            "rank": 2,
+            "source": "opm_2026_71-015.pdf#page=1",
+            "score": 0.457,
+            "page_number": 1,
+            "snippet": "SAMBA Health Benefit Plan www.SambaPlans.com Customer Service 800-638-6589 2026 A Fee-for-Service Plan (High and Standard Option) with a Preferred Provider Organization This plan's health coverage qualifies as minimum essential coverage IMPORTANTand meets the minimum value standard for the benefits it provides. This plan is accredited. the Special Agents Mutual Benefit Association (SAMBA) Who may enroll in this Plan: All Federal employees, Tribal employees, and annuitants who are eligible to enroll in the Federal Employees Health Benefits Program (FEHB) may enroll in the SAMBA Health Benefit Plan. Employees and annuitants enrolling in the SAMBA Health Benefit Plan will automatically become members of the Special Agents Mutual Benefit Association. Postal Employees and Annuitants are no longer eligible for this plan (unless currently under Temporary Continuation of Coverage). 441 Self Only - High Option 443 Self Plus One - High SAMBA Health Benefit Plan www.SambaPlans.com Customer Service 800-638-6589 2026 A Fee-for-Service Plan (High and Standard Option) with a Preferred Provider Organization This plan's health coverage qualifies as minimum essential coverage IMPORTANTand meets the minimum value standard for the benefits it provides. the Special Agents Mutual Benefit Association (SAMBA) Who may enroll in this Plan: All Federal employees, Tribal employees, and annuitants who are eligible to enroll in the Federal Employees Health Benefits Program (FEHB) may enroll in the SAMBA Health Benefit Plan. Employees and annuitants enrolling in the SAMBA Health Benefit Plan will automatically become members of the Special Agents Mutual Benefit Association. Postal Employees and Annuitants are no longer eligible for this plan (unless currently under Temporary Continuation of Coverage)."
+          },
+          {
+            "rank": 3,
+            "source": "opm_2026_71-015.pdf#page=14",
+            "score": 0.43,
+            "page_number": 14,
+            "snippet": "SAMBA holds the following accreditation: The vendors that support SAMBA hold accreditations from URAC (Cigna Health Management, Inc. To learn more about this plan's accreditations, please visit the following websites: This means that certain hospitals and other healthcare providers are \"preferred providers.\" We have entered into an arrangement with Cigna to offer the Cigna Open Access Plus (OAP) Network to serve as the Plan's PPO for SAMBA enrollees in all states. SAMBA is solely responsible for the selection of the OAP network in your area. Contact Evernorth Health Services (Cigna's Medical Management Team) at 800-887-9735 for the names of OAP providers and to verify their continued participation. The Non-PPO benefits are the regular benefits of this Plan. The nature of the services (such as urgent or emergency situations) does not affect whether benefits are paid as PPO or Non-PPO. Other Participating Providers The Plan offers access to certain Non-PPO healthcare providers that have agreed to discount their charges. These providers are available to you through the MultiPlan network. Covered services by these providers are considered at the negotiated rate and are subject to applicable deductibles, coinsurances, and copayments. Since these Other Participating Providers are not PPO providers, the regular Non-PPO benefits will apply. How we pay providers When you use a PPO provider or facility, our Plan allowance is the negotiated rate for the service. You are not responsible for charges above the negotiated amount. Non-PPO facilities and providers do not have special agreements with the Plan. When you use a Non-PPO provider to perform the service or provide the supply, our payment is based on our allowance for covered services (see Plan allowance in Section 10, page 114). 2026 SAMBA Health Benefit Plan 12 Section 1"
+          }
+        ]
+      }
+    },
+    {
+      "question": "In the 2026 Compass Rose Health Plan document, what changes are listed for emergency room visits?",
+      "response": {
+        "source": "abstain",
+        "answer": "",
+        "knowledge_terms": [],
+        "citations": [],
+        "citation_origin": null,
+        "confidence": 0.19,
+        "abstain": true,
+        "abstain_reason": "The available document evidence does not establish this answer. Upload the relevant policy pages or ask a more specific question.",
+        "abstain_reason_code": "insufficient_retrieved_evidence",
+        "backend": "local-extractive",
+        "configured_backend": "local-extractive (no LLM)",
+        "generation_used": false,
+        "answer_repaired": false,
+        "raw_answer": "- Compass Rose Health Plan www.compassrosebenefits.com 888-438-9135 2026 A Fee-for-Service with a Preferred Provider Organization (High Option) and Exclusive Provider Organization (Standard Option) This Plan's health coverage qualifies as minimum essential coverage IMPORTANTand meets the minimum value standard for the benefits it provides.\n\nSOURCE: opm_2026_71-028.pdf#page=1",
+        "backend_metadata": {
+          "provider": "local-extractive",
+          "requested_model": "local-extractive",
+          "resolved_model": "local-extractive",
+          "model_digest": null,
+          "model_details": {},
+          "ollama_version": null,
+          "base_url": null,
+          "generation_options": null,
+          "thinking": null,
+          "last_generation": {}
+        },
+        "retrieval_trace": [
+          {
+            "rank": 1,
+            "source": "opm_2026_71-028.pdf#page=17",
+            "score": 0.61,
+            "page_number": 17,
+            "snippet": "Changes for 2026 Do not rely only on these change descriptions; this Section is not an official statement of benefits. The Plan will remove surgery for Sex-Trait Modification to treat gender dysphoria. The PPO out-of-pocket maximum is increasing from $5,000 to $6,000 for Self Only and $10,000 to $12,000 for Self Plus One and Self and Family. The Non-PPO out of pocket maximum is increasing from $7,000 to $8,000 for Self Only and from $14,000 to $16,000 for Self Plus One and Self and Family. The Plan will apply the deductible of $350 Self Only/$700 Self Plus One/Self and Family in conjunction to the 10% of the Plan allowance. The Plan now includes an enhanced benefit for members who use Centers of Excellence (COEs) for select surgical procedures. The Plan will increase the maximum cost share for Tier 5 Specialty Formulary/Preferred Brand Name drugs, 30-day supply from $250 to $300. Changes to Standard Option Only • Emergency Room: The Plan will remove the $500 Emergency room copayment and apply the Plan deductible of $500 Self Only / $1,000 Self Plus One and Self and Family and add a 30% coinsurance of the Plan allowance for Emergency Services/Accidents in the Emergency Room. 2026 Compass Rose Health Plan 15 Section 2 eligible for a $2,000 travel benefit related to these specifies surgeries. The Plan will increase the maximum cost share for Tier 5 Specialty Formulary/Preferred Brand Name drugs, 30-day supply from $250 to $300. The Plan will remove the $500 Emergency room copayment and apply the Plan deductible of $500 Self Only / $1,000 Self Plus One and Self and Family and add a 30% coinsurance of the Plan allowance for Emergency Services/Accidents in the Emergency Room. 2026 Compass Rose Health Plan 15 Section 2 See Section 5(d) Emergency Services/Accidents, page 77. 2026 Compass Rose Health Plan 15 Section 2"
+          },
+          {
+            "rank": 2,
+            "source": "opm_2026_71-028.pdf#page=1",
+            "score": 0.475,
+            "page_number": 1,
+            "snippet": "Compass Rose Health Plan www.compassrosebenefits.com 888-438-9135 2026 A Fee-for-Service with a Preferred Provider Organization (High Option) and Exclusive Provider Organization (Standard Option) This Plan's health coverage qualifies as minimum essential coverage IMPORTANTand meets the minimum value standard for the benefits it provides. See • Rates: Back Coverpage 8 for details. This Plan is accredited. See page 13 for details. • Changes for 2026: Page 15 Who may enroll in this Plan: All Federal employees and annuitants • Summary of Benefits: Page 128 who are eligible to enroll in the Federal Employees Health Benefits Program. Membership dues: There are no membership dues. Postal Employees and Annuitants are no longer eligible for this plan. (unless currently under Temporary Continuation of Coverage) Enrollment codes for this Plan: High Option Standard Option 421 - Self Only 424 - Self Only 423 - Self Plus One 426 - Self Plus One 422 - Self and Family 425 - Self and Family RI 71-028"
+          },
+          {
+            "rank": 3,
+            "source": "opm_2026_71-028.pdf#page=6",
+            "score": 0.4754,
+            "page_number": 6,
+            "snippet": "If you are enrolled in this Plan, you are entitled to the benefits described in this brochure. You do not have a right to benefits that were available before January 1, 2026, unless those benefits are also shown in this brochure. OPM negotiates benefits and rates for each plan annually. Benefit changes are effective January 1, 2026, and changes are summarized on page 15. Rates are shown at the end of this brochure. For instance, “you” means the enrollee and each covered family member; “we” means the Compass Rose Health Plan. FEHB is the Federal Employees Health Benefits Program. Introduction This brochure describes the benefits of the Compass Rose Health Plan under contract (CS 1065) between Compass Rose Benefits Group and the United States Office of Personnel Management, as authorized by the Federal Employees Health Benefits law. The address for the Compass Rose Health Plan administrative office is: Compass Rose Health Plan 11490 Commerce Park Dr. If you are enrolled in this Plan, you are entitled to the benefits described in this brochure. You do not have a right to benefits that were available before January 1, 2026, unless those benefits are also shown in this brochure. OPM negotiates benefits and rates for each plan annually. Benefit changes are effective January 1, 2026, and changes are summarized on page 15. For instance, “you” means the enrollee and each covered family member; “we” means the Compass Rose Health Plan. Fraud increases the cost of healthcare for everyone and increases your Federal Employees Health Benefits Program premium. • Do not give your plan identification (ID) number over the phone or to people you do not know, except for your healthcare provider, authorized health benefits plan, or OPM representative. 2026 Compass Rose Health Plan 4 Introduction/Plain Language/Advisory"
+          }
+        ]
+      }
+    }
+  ],
+  "previews": [
+    {
+      "source": "fema_nfip_claims_2024.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "13ff0d9ce9e5f71cffb211ea889a8da4f346b355c0e5317ea24a77b4b7695859"
+    },
+    {
+      "source": "fema_nfip_coverage_2023.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "32590b3b46b7f8fa8aae89c81656b4ac4c5537db141a8b9b08f80aca1052f51d"
+    },
+    {
+      "source": "md_life_guide.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "654936be4928bd7350432bc45893417f021cb76858585e871548624911f7271e"
+    },
+    {
+      "source": "nj_auto_guide_2026.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "80f3c4d7c9b77b86c2e230582577a33c003f82f9eae5c0fb7f235268a9878424"
+    },
+    {
+      "source": "opm_2026_71-004.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "87c2e63e0005c0f806df50007ac3f323e71aff3780448dbe124e9ba021dad9f3"
+    },
+    {
+      "source": "opm_2026_71-006.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "84ae6e29cb2f65c1f56a7f7e1191a813cdd1aec0bf8978a5de57a98660b5a21a"
+    },
+    {
+      "source": "opm_2026_71-014.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "c93430bcc42e9ada4799d964e4bb95817827d069c96fd031f637bd1deeab222f"
+    },
+    {
+      "source": "opm_2026_71-015.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "91541648b9ad4eb2743fa4612b97802bed475efd9b0fa4176d6fe74e2fe69b77"
+    },
+    {
+      "source": "opm_2026_71-024.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "93cb62cb8b41ea354f62928423e3b7f5c4dcbaa30e12122604a0bba5cdaad6e1"
+    },
+    {
+      "source": "opm_2026_71-027.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "e5966e3e882b15758192d9af8e78e177958e7b2e0dc2eaa6b9d861de6d8ec702"
+    },
+    {
+      "source": "opm_2026_71-028.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "05e71a2e92d83681ce4eaef0f39234d7ef8bf28de1779c9f136948ea83b60b56"
+    },
+    {
+      "source": "opm_2026_72-001.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "a4405dd58ea865fc4991a564cbef031316248134aaa603a6b6bdefeeb170a7f7"
+    },
+    {
+      "source": "wi_auto_pi057.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "2bb9e72bc5483210bc353982118f9988dfee3f7724f61ff5a531596d26610a59"
+    },
+    {
+      "source": "wi_health_pi225.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "aae64417ece7459783d72b28a42bedede54afdbf1b93956921d442c31cb7c03b"
+    },
+    {
+      "source": "wi_ltc_pi047.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "f3fca20d4e56fd8a763c765aa8c491c2ac88f8e5eda3806c90006e546543d531"
+    },
+    {
+      "source": "wi_property_claims_pi084.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "ce46b7c9e9c39bc4f453e198ad214119b68fa97547661cb3e096909db24bbfc1"
+    },
+    {
+      "source": "wi_renters_pi017.pdf",
+      "resolved": true,
+      "page": 1,
+      "sha256": "6e134771e51f2714bab95f3920747896cbb6c8f3b6213d746a1ce65bc655e5d2"
+    }
+  ]
+}

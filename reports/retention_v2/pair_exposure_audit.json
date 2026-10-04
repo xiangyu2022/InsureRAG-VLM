@@ -1,0 +1,19 @@
+{
+  "dataset_sha256": "4af8fa883e7c3ce16b7da8902decc78c0101b2d3e0edc7d28c8a939eeff01c9e",
+  "sampler_sha256": "6dfa79747867c062fa73fd6361920486f27d774c2bf12b939acf402eb5889000",
+  "counts": [
+    {
+      "through_epoch": 1,
+      "unique_positive_pairs_presented": 19941,
+      "unique_negative_pairs_presented": 100446,
+      "pair_presentations": 123480
+    },
+    {
+      "through_epoch": 2,
+      "unique_positive_pairs_presented": 24484,
+      "unique_negative_pairs_presented": 139926,
+      "pair_presentations": 246960
+    }
+  ],
+  "method": "Replay recorded deterministic seed/order/sampler without running the model; repeated exposures distinguished from unique pairs"
+}

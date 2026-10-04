@@ -1,0 +1,72 @@
+--- train_query_adaptation.py
++++ train_query_data_ablation.py
+@@ -1,5 +1,6 @@
+ """Full-corpus multi-positive query-encoder learning with original-BGE retention."""
+ import argparse
++import hashlib
+ from collections import Counter, defaultdict
+ from datetime import datetime, timezone
+ import json
+@@ -44,6 +45,27 @@
+     for name in ['answer_embeddings', 'training_query_embeddings']:
+         assert sha(cache / (name + '.npy')) == cm[name + '_sha256']
+     groups = read_jsonl(data / 'train_groups.jsonl')
++    ablation = json.loads((run / 'data_ablation_implementation.lock.json').read_text(encoding='utf8'))
++    assert sha(Path(__file__)) == ablation['training_code_sha256']
++    assert sha(run / 'data_ablation_protocol.json') == ablation['ablation_protocol_sha256']
++    old_unique = [g for g in groups if g['source_domain'] != 'finance']
++    old_slots = [i for i, g in enumerate(groups) if g['source_domain'] != 'finance'
++                 for _ in range(plan['training']['repeat_factors'][g['source_domain']])]
++    anchor_indices = list(range(len(groups)))
++    replacements = []
++    for i, g in enumerate(groups):
++        if g['source_domain'] != 'finance': continue
++        j = old_slots[int(hashlib.sha256(g['id'].encode()).hexdigest(), 16) % len(old_slots)]
++        old = groups[j]
++        anchor_indices[i] = j
++        replacements.append({'optimization_slot_id': g['id'], 'replacement_question_id': old['id'],
++                             'replacement_source_domain': old['source_domain']})
++        groups[i] = {**g, 'question': old['question'], 'positive_ids': old['positive_ids'],
++                     'replacement_question_id': old['id'], 'actual_source_domain': old['source_domain']}
++    assert len(replacements) == 5464
++    assert len({g['question'] for g in groups}) == len(old_unique)
++    # source_domain remains the optimization slot: repeat and KL weights are held fixed.
++
+     answers = read_jsonl(data / 'answers.jsonl')
+     forbidden = set(json.loads((data / 'isolation.json').read_text(encoding='utf8'))['forbidden_answer_ids'])
+     allowed = [i for i, a in enumerate(answers) if a['id'] not in forbidden]
+@@ -55,16 +77,17 @@
+     assert all(positive_columns)
+     assert all(a in positions for g in groups for a in g['positive_ids'])
+     docs = torch.tensor(np.load(cache / 'answer_embeddings.npy')[allowed], device='cuda')
+-    anchors = torch.tensor(np.load(cache / 'training_query_embeddings.npy'), device='cuda')
++    anchors = torch.tensor(np.load(cache / 'training_query_embeddings.npy')[anchor_indices], device='cuda')
+     modelpath = ROOT / '../models/bge-small-en-v1.5'
+     assert sha(modelpath / 'model.safetensors') == plan['initial_query_weights_sha256']
+     tokenizer = AutoTokenizer.from_pretrained(modelpath, local_files_only=True, trust_remote_code=False)
+     model = AutoModel.from_pretrained(modelpath, local_files_only=True, trust_remote_code=False,
+                                       dtype=torch.float32).to('cuda')
+-    out = run / f'train_seed_{args.seed}'
+-    models = ROOT / f'../models/insurerag-query-adaptation-v1-seed-{args.seed}'
++    out = run / f'ablation_train_seed_{args.seed}'
++    models = ROOT / f'../models/insurerag-query-ablation-v1-seed-{args.seed}'
+     out.mkdir(exist_ok=False)
+     models.mkdir(exist_ok=False)
++    write_json(replacements, out / 'replacement_mapping.json')
+     recipe = plan['training']
+     indices = [i for i, g in enumerate(groups) for _ in range(recipe['repeat_factors'][g['source_domain']])]
+     micro, accumulation = recipe['micro_batch'], recipe['accumulation']
+@@ -75,7 +98,12 @@
+     scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda s: (s+1)/max(1,warmup) if s < warmup else max(0., (steps-s)/max(1,steps-warmup)))
+     lengths = tokenizer([QUERY_INSTRUCTION + g['question'] for g in groups], truncation=False, verbose=False)['input_ids']
+     protocol = {'created_utc': datetime.now(timezone.utc).isoformat(), 'seed': args.seed,
+-                'unique_training_questions': len(groups), 'domains': lock['source_domains'],
++                'unique_training_questions': len(old_unique), 'optimization_question_slots': len(groups),
++                'domains': dict(Counter(g['source_domain'] for g in old_unique)),
++                'optimization_slot_domains': lock['source_domains'],
++                'ablation_protocol_sha256': sha(run / 'data_ablation_protocol.json'),
++                'ablation_training_code_sha256': sha(Path(__file__)),
++                'additional_labelled_finance_questions': 0,
+                 'query_presentations_per_epoch': len(indices), 'eligible_document_vectors': len(allowed),
+                 'supervised_positive_pairs': sum(len(g['positive_ids']) for g in groups),
+                 'positive_text_aliases_are_also_positives': True,

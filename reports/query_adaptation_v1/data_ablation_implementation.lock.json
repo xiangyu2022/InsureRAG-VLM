@@ -1,0 +1,8 @@
+{
+  "training_code_sha256": "4c689f7dc01c3bf1c8277c71cc37c79a4c41123bdd6d0453776a24229876fc63",
+  "parent_training_code_sha256": "5dca2bd34680dbf7801b2ff78905fd35800d7e5470b8abb8c58b31204fc04d93",
+  "ablation_protocol_sha256": "d01c8fdb648bec530e95aa182269f7ef358afde7eb3482a04cf2b52b9722e27c",
+  "fork_generator_sha256": "44c19f081bb5256fdf394a159e9ccd3f8fee1af9a85870a5ea5fef353388438e",
+  "training_changes_diff_sha256": "afa209cfd294b59fc91d22274b48cbc5c33f2c273487d488af703e674aa56e15",
+  "primary_experiment_files_modified": false
+}

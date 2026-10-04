@@ -1,0 +1,23 @@
+{
+  "questions": 11729,
+  "available_author_positive_pairs": 19193,
+  "distinct_author_positive_pairs_exposed_across_three_epochs": 17994,
+  "one_epoch_pair_exposures": 70374,
+  "three_epoch_pair_exposures": 211122,
+  "three_epoch_positive_exposures": 35187,
+  "positive_count_distribution": {
+    "1": 7186,
+    "2": 2821,
+    "4": 431,
+    "3": 1028,
+    "8": 18,
+    "5": 136,
+    "7": 26,
+    "6": 71,
+    "9": 5,
+    "13": 2,
+    "10": 4,
+    "14": 1
+  },
+  "important": "Each epoch samples one original positive per question and five mined negatives. Pair exposures are not unique examples."
+}

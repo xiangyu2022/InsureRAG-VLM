@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-10-01T23:08:39.528261+00:00",
+  "split": "test",
+  "questions": 157,
+  "question_file_sha256": "aaba50a5fa7165bc0a199b34d4ddccd10e5fcb83076038e6db5c9fea277d7c5c",
+  "answer_file_sha256": "ed1475b822ef2b1032b90430c2b21acb7e6259c35afc1f90dd5e07cf05666d35",
+  "answer_count": 48172,
+  "gold_injection": false,
+  "code_sha256": "f6c57011feb0f585343e9f215bc1594743075e64ed10400098ed78b8615792e0",
+  "selection_lock_sha256": "f4eebfdb45836d31edc9152732dcf9f4e4c4622eeb9d34b3e310682e3a8b3dc0",
+  "selection_protocol_sha256": "d8d956f2f66e159e494e0e09dccb937d85e6bc8771c75287834140b568d5eed2",
+  "model": {
+    "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\ms-marco-MiniLM-L6-v2",
+    "files_sha256": {
+      "config.json": "380e02c93f431831be65d99a4e7e5f67c133985bf2e77d9d4eba46847190bacc",
+      "download_provenance.json": "6f3f6cb2330ee56c4676228ca529b9f31a9704df3a28c92955feb51d758d9196",
+      "model.safetensors": "821d1aa69520101d6e0737f78a042ae25b19e5cb9160701909d10434f4aeb0ae",
+      "special_tokens_map.json": "3c3507f36dff57bce437223db3b3081d1e2b52ec3e56ee55438193ecb2c94dd6",
+      "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "tokenizer_config.json": "a5c2e5a7b1a29a0702cd28c08a399b5ecc110c263009d17f7e3b415f25905fd8",
+      "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    },
+    "checkpoint_sha256": "d889a9b6d961d5fbda537d7eae8dec7ba0aa440497fc0c92bf8871eeae44cf02",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "max_length": 512,
+    "batch_size": 64,
+    "truncation": "longest_first",
+    "score": "raw single relevance logit",
+    "remote_code": false,
+    "fine_tuned_in_this_project": false
+  },
+  "candidate_source_sha256": "c34f168708e6b06addee0106580b8e98c760989dcca5ad7ed1083bd514dc661b"
+}

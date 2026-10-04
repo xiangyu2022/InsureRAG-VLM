@@ -1,0 +1,310 @@
+{
+  "summaries": {
+    "historical_insuranceqa": {
+      "n": 2000,
+      "failure_stages": {
+        "hit_at_10": 1485,
+        "absent_from_union": 194,
+        "reranking_below_top10": 321
+      },
+      "wins_vs_previous_default": [
+        "iqa_v2_test_00019",
+        "iqa_v2_test_00069",
+        "iqa_v2_test_00101",
+        "iqa_v2_test_00104",
+        "iqa_v2_test_00166",
+        "iqa_v2_test_00249",
+        "iqa_v2_test_00324",
+        "iqa_v2_test_00418",
+        "iqa_v2_test_00439",
+        "iqa_v2_test_00440",
+        "iqa_v2_test_00460",
+        "iqa_v2_test_00583",
+        "iqa_v2_test_00594",
+        "iqa_v2_test_00627",
+        "iqa_v2_test_00631",
+        "iqa_v2_test_00641",
+        "iqa_v2_test_00697",
+        "iqa_v2_test_00727",
+        "iqa_v2_test_00737",
+        "iqa_v2_test_00809",
+        "iqa_v2_test_00833",
+        "iqa_v2_test_00995",
+        "iqa_v2_test_00997",
+        "iqa_v2_test_01209",
+        "iqa_v2_test_01279",
+        "iqa_v2_test_01316",
+        "iqa_v2_test_01386",
+        "iqa_v2_test_01402",
+        "iqa_v2_test_01413",
+        "iqa_v2_test_01488",
+        "iqa_v2_test_01526",
+        "iqa_v2_test_01624",
+        "iqa_v2_test_01627",
+        "iqa_v2_test_01708",
+        "iqa_v2_test_01731",
+        "iqa_v2_test_01746",
+        "iqa_v2_test_01782",
+        "iqa_v2_test_01788",
+        "iqa_v2_test_01877",
+        "iqa_v2_test_01894",
+        "iqa_v2_test_01903",
+        "iqa_v2_test_01940"
+      ],
+      "losses_vs_previous_default": [
+        "iqa_v2_test_00095",
+        "iqa_v2_test_00132",
+        "iqa_v2_test_00138",
+        "iqa_v2_test_00161",
+        "iqa_v2_test_00191",
+        "iqa_v2_test_00206",
+        "iqa_v2_test_00278",
+        "iqa_v2_test_00293",
+        "iqa_v2_test_00351",
+        "iqa_v2_test_00461",
+        "iqa_v2_test_00923",
+        "iqa_v2_test_00933",
+        "iqa_v2_test_01032",
+        "iqa_v2_test_01206",
+        "iqa_v2_test_01228",
+        "iqa_v2_test_01289",
+        "iqa_v2_test_01321",
+        "iqa_v2_test_01365",
+        "iqa_v2_test_01431",
+        "iqa_v2_test_01562",
+        "iqa_v2_test_01677",
+        "iqa_v2_test_01722",
+        "iqa_v2_test_01762",
+        "iqa_v2_test_01949"
+      ]
+    },
+    "historical_multidomain": {
+      "n": 681,
+      "failure_stages": {
+        "hit_at_10": 668,
+        "reranking_below_top10": 7,
+        "absent_from_union": 6
+      },
+      "wins_vs_previous_default": [
+        "squad_q_56e7770037bdd419002c3fe3",
+        "squad_q_572674f6f1498d1400e8e03d",
+        "squad_q_57268d1b708984140094c9d1",
+        "squad_q_5729f24baf94a219006aa6e0",
+        "squad_q_572fc80b04bcaa1900d76d13"
+      ],
+      "losses_vs_previous_default": []
+    },
+    "historical_government": {
+      "n": 416,
+      "failure_stages": {
+        "hit_at_10": 404,
+        "reranking_below_top10": 9,
+        "absent_from_union": 3
+      },
+      "wins_vs_previous_default": [
+        "gov_question_19a8846b168505ea"
+      ],
+      "losses_vs_previous_default": [
+        "gov_question_ecb52c2f6cfdfd63"
+      ]
+    },
+    "fresh_government": {
+      "n": 157,
+      "failure_stages": {
+        "hit_at_10": 156,
+        "reranking_below_top10": 1
+      },
+      "wins_vs_previous_default": [
+        "condgov_q_3bb44ae8a679af6f"
+      ],
+      "losses_vs_previous_default": []
+    }
+  },
+  "fresh_government_version_family_sensitivity": {
+    "bge": {
+      "n": 157,
+      "source_groups": 27,
+      "hit_at_10_difference": 0.025477707006369428,
+      "source_cluster_bootstrap_95ci": [
+        0.0,
+        0.0625
+      ],
+      "wins": 4,
+      "losses": 0,
+      "bootstrap_repetitions": 5000
+    },
+    "previous_default": {
+      "n": 157,
+      "source_groups": 27,
+      "hit_at_10_difference": 0.006369426751592357,
+      "source_cluster_bootstrap_95ci": [
+        0.0,
+        0.021739130434782608
+      ],
+      "wins": 1,
+      "losses": 0,
+      "bootstrap_repetitions": 5000
+    },
+    "previous_matched": {
+      "n": 157,
+      "source_groups": 27,
+      "hit_at_10_difference": 0.0,
+      "source_cluster_bootstrap_95ci": [
+        0.0,
+        0.0
+      ],
+      "wins": 0,
+      "losses": 0,
+      "bootstrap_repetitions": 5000
+    },
+    "public_matched": {
+      "n": 157,
+      "source_groups": 27,
+      "hit_at_10_difference": 0.0,
+      "source_cluster_bootstrap_95ci": [
+        0.0,
+        0.0
+      ],
+      "wins": 0,
+      "losses": 0,
+      "bootstrap_repetitions": 5000
+    }
+  },
+  "fresh_government_source_balanced_sensitivity": {
+    "macro_source_hit10": {
+      "bge": 0.9702198139698138,
+      "previous_default": 0.9957879957879958,
+      "previous_matched": 0.999034749034749,
+      "public_matched": 0.999034749034749,
+      "selected": 0.999034749034749
+    },
+    "selected_minus_controls": {
+      "bge": {
+        "difference": 0.028814935064935064,
+        "source_bootstrap_95ci": [
+          0.0,
+          0.07305194805194805
+        ]
+      },
+      "previous_default": {
+        "difference": 0.003246753246753248,
+        "source_bootstrap_95ci": [
+          0.0,
+          0.009740259740259744
+        ]
+      },
+      "previous_matched": {
+        "difference": 0.0,
+        "source_bootstrap_95ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "public_matched": {
+        "difference": 0.0,
+        "source_bootstrap_95ci": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "status": "Post-selection sensitivity analysis; not a new selection objective"
+  },
+  "fresh_government_long_input_diagnostic": {
+    "over_512": 5,
+    "over_512_misses": 0,
+    "causal_interpretation": false
+  },
+  "original_historical_duplicate_flag_sensitivity": {
+    "bge": {
+      "n": 1524,
+      "hit_at_1": 0.37926509186351703,
+      "hit_at_5": 0.6076115485564304,
+      "hit_at_10": 0.6876640419947506,
+      "hit_at_100": 0.884514435695538,
+      "mrr_at_100": 0.48147759086969605,
+      "label_recall_at_10": 0.578376661250677,
+      "hit_at_1_wilson_95": [
+        0.35523724663944023,
+        0.40390006575941895
+      ],
+      "hit_at_10_wilson_95": [
+        0.6639489074081639,
+        0.7104354874501309
+      ]
+    },
+    "previous_default": {
+      "n": 1524,
+      "hit_at_1": 0.4625984251968504,
+      "hit_at_5": 0.6751968503937008,
+      "hit_at_10": 0.7414698162729659,
+      "hit_at_100": 0.8832020997375328,
+      "mrr_at_100": 0.5617368772946294,
+      "label_recall_at_10": 0.6421512415114777,
+      "hit_at_1_wilson_95": [
+        0.4376911083752804,
+        0.48769381992219235
+      ],
+      "hit_at_10_wilson_95": [
+        0.7189004129360632,
+        0.7628249622662184
+      ]
+    },
+    "previous_matched": {
+      "n": 1524,
+      "hit_at_1": 0.4717847769028871,
+      "hit_at_5": 0.6856955380577427,
+      "hit_at_10": 0.7480314960629921,
+      "hit_at_100": 0.8989501312335958,
+      "mrr_at_100": 0.5698591905992274,
+      "label_recall_at_10": 0.6517422301378994,
+      "hit_at_1_wilson_95": [
+        0.44682414750534644,
+        0.4968872896313435
+      ],
+      "hit_at_10_wilson_95": [
+        0.7256297612694337,
+        0.7691859773894315
+      ]
+    },
+    "public_matched": {
+      "n": 1524,
+      "hit_at_1": 0.4068241469816273,
+      "hit_at_5": 0.6384514435695539,
+      "hit_at_10": 0.708005249343832,
+      "hit_at_100": 0.8786089238845144,
+      "mrr_at_100": 0.5120426176228291,
+      "label_recall_at_10": 0.6032272007665708,
+      "hit_at_1_wilson_95": [
+        0.382425057977845,
+        0.4316917809386659
+      ],
+      "hit_at_10_wilson_95": [
+        0.6846773204468295,
+        0.7302872011268751
+      ]
+    },
+    "selected": {
+      "n": 1524,
+      "hit_at_1": 0.479002624671916,
+      "hit_at_5": 0.6902887139107612,
+      "hit_at_10": 0.7467191601049868,
+      "hit_at_100": 0.8982939632545932,
+      "mrr_at_100": 0.5743395499329232,
+      "label_recall_at_10": 0.6502486668333125,
+      "hit_at_1_wilson_95": [
+        0.4540060590348871,
+        0.504104777904045
+      ],
+      "hit_at_10_wilson_95": [
+        0.7242833712311272,
+        0.7679142947364213
+      ]
+    }
+  },
+  "original_duplicate_audit_sha256": "153f152cb57ebf6b6a03564eae0b636a7d344b7669946fbb4afea45209461db9",
+  "selection_lock_sha256": "f4eebfdb45836d31edc9152732dcf9f4e4c4622eeb9d34b3e310682e3a8b3dc0",
+  "post_test_diagnostic_only": true,
+  "labels_modified": false,
+  "failure_count_caveat": "A miss means missing original labeled evidence; plausible unlabelled answers remain possible."
+}

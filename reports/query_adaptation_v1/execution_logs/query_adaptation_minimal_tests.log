@@ -1,0 +1,20 @@
+
+=================================== ERRORS ====================================
+____________ ERROR collecting tests/test_query_adaptation_eval.py _____________
+ImportError while importing test module 'C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\InsureRAG-VLM\tests\test_query_adaptation_eval.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\zhan6\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_query_adaptation_eval.py:2: in <module>
+    from scripts.eval_query_adaptation import configurations, measure, partitions
+scripts\eval_query_adaptation.py:14: in <module>
+    from scripts.eval_insuranceqa_scale import SparseBM25, ranked, rrf, metrics, aggregate
+scripts\eval_insuranceqa_scale.py:9: in <module>
+    from sklearn.feature_extraction.text import CountVectorizer
+E   ModuleNotFoundError: No module named 'sklearn'
+=========================== short test summary info ===========================
+ERROR tests/test_query_adaptation_eval.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+2 skipped, 1 error in 1.38s

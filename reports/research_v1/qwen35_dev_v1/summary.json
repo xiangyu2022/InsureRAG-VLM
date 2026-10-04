@@ -1,0 +1,129 @@
+{
+  "oracle": {
+    "cases": 12,
+    "answerable_cases": 8,
+    "unsupported_cases": 4,
+    "transport_errors": 0,
+    "answer_key_match": {
+      "successes": 8,
+      "total": 8,
+      "rate": 1.0,
+      "ci95_low": 0.6755924351161198,
+      "ci95_high": 1.0
+    },
+    "citation_match": {
+      "successes": 8,
+      "total": 8,
+      "rate": 1.0,
+      "ci95_low": 0.6755924351161198,
+      "ci95_high": 1.0
+    },
+    "verbatim_evidence": {
+      "successes": 8,
+      "total": 8,
+      "rate": 1.0,
+      "ci95_low": 0.6755924351161198,
+      "ci95_high": 1.0
+    },
+    "gold_span_covered": {
+      "successes": 8,
+      "total": 8,
+      "rate": 1.0,
+      "ci95_low": 0.6755924351161198,
+      "ci95_high": 1.0
+    },
+    "grounded_key_pass": {
+      "successes": 8,
+      "total": 8,
+      "rate": 1.0,
+      "ci95_low": 0.6755924351161198,
+      "ci95_high": 1.0
+    },
+    "strict_unsupported_abstention": {
+      "successes": 4,
+      "total": 4,
+      "rate": 1.0,
+      "ci95_low": 0.5101091635454027,
+      "ci95_high": 1.0
+    },
+    "json_contract_success": {
+      "successes": 12,
+      "total": 12,
+      "rate": 1.0,
+      "ci95_low": 0.7575059933447592,
+      "ci95_high": 1.0
+    },
+    "wall_seconds": {
+      "p50": 1.031935050006723,
+      "p95": 1.7147580300021217,
+      "total": 12.918704500072636
+    }
+  },
+  "retrieved": {
+    "cases": 12,
+    "answerable_cases": 8,
+    "unsupported_cases": 4,
+    "transport_errors": 0,
+    "answer_key_match": {
+      "successes": 6,
+      "total": 8,
+      "rate": 0.75,
+      "ci95_low": 0.40927543031016883,
+      "ci95_high": 0.9285207872478909
+    },
+    "citation_match": {
+      "successes": 6,
+      "total": 8,
+      "rate": 0.75,
+      "ci95_low": 0.40927543031016883,
+      "ci95_high": 0.9285207872478909
+    },
+    "verbatim_evidence": {
+      "successes": 6,
+      "total": 8,
+      "rate": 0.75,
+      "ci95_low": 0.40927543031016883,
+      "ci95_high": 0.9285207872478909
+    },
+    "gold_span_covered": {
+      "successes": 5,
+      "total": 8,
+      "rate": 0.625,
+      "ci95_low": 0.30574239460262737,
+      "ci95_high": 0.8631557141764026
+    },
+    "grounded_key_pass": {
+      "successes": 5,
+      "total": 8,
+      "rate": 0.625,
+      "ci95_low": 0.30574239460262737,
+      "ci95_high": 0.8631557141764026
+    },
+    "retrieval_hit_at_k": {
+      "successes": 7,
+      "total": 8,
+      "rate": 0.875,
+      "ci95_low": 0.5291118177871464,
+      "ci95_high": 0.9775825085499433
+    },
+    "strict_unsupported_abstention": {
+      "successes": 4,
+      "total": 4,
+      "rate": 1.0,
+      "ci95_low": 0.5101091635454027,
+      "ci95_high": 1.0
+    },
+    "json_contract_success": {
+      "successes": 12,
+      "total": 12,
+      "rate": 1.0,
+      "ci95_low": 0.7575059933447592,
+      "ci95_high": 1.0
+    },
+    "wall_seconds": {
+      "p50": 1.1340707499766722,
+      "p95": 3.7179313250002424,
+      "total": 17.901475799968466
+    }
+  }
+}

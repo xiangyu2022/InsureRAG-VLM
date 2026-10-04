@@ -1,0 +1,615 @@
+{
+  "protocol_version": "prepared_document_benchmark_v2_1",
+  "score_version": "research_v2_context_contract_v1",
+  "prepared_utc": "2026-10-01T16:17:31.525883+00:00",
+  "preparation_generation_calls": 0,
+  "benchmark_lock_sha256": "0c849f3bdd2ab17c41b0254822a66f73e2f24707d741fb954d4ecd1f9c36fd4d",
+  "benchmark_lock": {
+    "benchmark_version": "research_v2",
+    "frozen_before_model_inference": true,
+    "created_utc": "2026-10-01T16:09:07.363872+00:00",
+    "counts": {
+      "dev": 60,
+      "test": 240,
+      "answerable": 225,
+      "unsupported": 75,
+      "dev_supported": 45,
+      "dev_unsupported": 15,
+      "test_supported": 180,
+      "test_unsupported": 60,
+      "documents": 25,
+      "dev_documents": 5,
+      "test_documents": 20,
+      "page_records": 179,
+      "snippets": 891,
+      "new_pdf_physical_pages": 167,
+      "html_records": 16,
+      "test_families": 13,
+      "dev_families": 4
+    },
+    "annotation_author": "AI-authored, source-span and reference/key checked; no human expert adjudication",
+    "question_split_policy": "Document-family disjoint dev/test; CA and NE dev; no reuse of six research_v1 documents; hand-authored distinct fact targets.",
+    "training_exposure_note": "16 archived HTML documents come from historical project corpus. 9 official PDFs acquired separately. Both evaluated Ollama arms are unadapted; unknown public pretraining exposure remains. Not a holdout from legacy SFT.",
+    "chunking": {
+      "unit": "whitespace words",
+      "window": 180,
+      "stride": 120,
+      "same_for_all_documents": true,
+      "answer_aware": false
+    },
+    "files": {
+      "dev.jsonl": "2f2e29227a555277827fce8f705b1f7d25b914aa1c944ec6d923a33cfa769bf9",
+      "test.jsonl": "9f6ce13cdd51a9315265cb8b1f442f54c11f3f0efd92a9f06092aaadbfb33a1c",
+      "documents.json": "2fd0a3bee6b68fa92869bf8c177c6a78e229e08c6e7116d8cdd115d53a9b80cc"
+    },
+    "corpus_files": {
+      "data/benchmarks/research_v2/corpus/rag_pages.jsonl": "3db67d475625c5887f38b1be950fa8fece6f57ad77a84039d845a17c6d17e22f",
+      "data/benchmarks/research_v2/corpus/rag_snippets.jsonl": "c928efd760fdcc8091ead249c7122a9a45d3085b17bede2b0adeb20a4a75e8aa"
+    },
+    "source_files": {
+      "sources/fema_nfip_claims_2024.pdf": "13ff0d9ce9e5f71cffb211ea889a8da4f346b355c0e5317ea24a77b4b7695859",
+      "sources/fema_nfip_coverage_2023.pdf": "32590b3b46b7f8fa8aae89c81656b4ac4c5537db141a8b9b08f80aca1052f51d",
+      "sources/md_life_guide.pdf": "654936be4928bd7350432bc45893417f021cb76858585e871548624911f7271e",
+      "sources/nj_auto_guide_2026.pdf": "80f3c4d7c9b77b86c2e230582577a33c003f82f9eae5c0fb7f235268a9878424",
+      "sources/wi_auto_pi057.pdf": "2bb9e72bc5483210bc353982118f9988dfee3f7724f61ff5a531596d26610a59",
+      "sources/wi_health_pi225.pdf": "aae64417ece7459783d72b28a42bedede54afdbf1b93956921d442c31cb7c03b",
+      "sources/wi_ltc_pi047.pdf": "f3fca20d4e56fd8a763c765aa8c491c2ac88f8e5eda3806c90006e546543d531",
+      "sources/wi_property_claims_pi084.pdf": "ce46b7c9e9c39bc4f453e198ad214119b68fa97547661cb3e096909db24bbfc1",
+      "sources/wi_renters_pi017.pdf": "6e134771e51f2714bab95f3920747896cbb6c8f3b6213d746a1ce65bc655e5d2"
+    }
+  },
+  "fixture_audit": {
+    "counts": {
+      "dev": 60,
+      "test": 240
+    },
+    "document_counts": {
+      "dev": 5,
+      "test": 20
+    },
+    "family_counts": {
+      "dev": 4,
+      "test": 13
+    },
+    "categories": {
+      "procedure": 25,
+      "numeric": 47,
+      "unsupported_missing_numeric_detail": 13,
+      "unsupported_missing_personal_term": 20,
+      "condition": 24,
+      "definition": 23,
+      "unsupported_missing_carrier_detail": 6,
+      "exclusion": 13,
+      "coverage": 10,
+      "unsupported_missing_endorsement": 1,
+      "qualified_duration": 1,
+      "procedure_exclusion": 1,
+      "procedure_deadline": 10,
+      "unsupported_absent_policy_field": 6,
+      "procedure_duration": 1,
+      "payment_condition": 1,
+      "unsupported_missing_necessary_value": 7,
+      "numeric_condition": 5,
+      "exclusion_condition": 2,
+      "coverage_condition": 5,
+      "document_definition": 1,
+      "document_precedence": 1,
+      "conditional_limit": 3,
+      "claim_procedure": 2,
+      "unsupported_missing_necessary_condition": 3,
+      "coverage_rule": 16,
+      "unsupported_missing_detail": 18,
+      "eligibility_condition": 4,
+      "conditional_duration": 4,
+      "benefit_adjustment": 1,
+      "policy_classification": 1,
+      "unsupported_absent_table_field": 1,
+      "numeric_example": 4,
+      "coverage_benefit": 1,
+      "coverage_definition": 1,
+      "conditional_price": 1,
+      "comparison": 3,
+      "coverage_classification": 1,
+      "numeric_limit": 4,
+      "consumer_right": 1,
+      "numeric_definition": 1,
+      "dated_numeric_example": 1,
+      "review_procedure": 1,
+      "plan_condition": 1,
+      "procedure_condition": 1,
+      "exception": 1,
+      "payment_procedure": 1,
+      "settlement_condition": 1
+    },
+    "verified_original_source_files": 9,
+    "same_split_duplicate_page_groups": [],
+    "duplicate_guards": [
+      "unique case IDs",
+      "unique normalized questions",
+      "unique authored fact IDs",
+      "document/family split separation",
+      "no exact normalized page duplicates across splits"
+    ],
+    "limitation": "Declared families and exact-page duplicate checks do not detect all paraphrased or partial near-duplicates, nor pretraining exposure."
+  },
+  "split": "dev",
+  "case_count": 60,
+  "partial_dev_smoke": false,
+  "mode": "retrieved",
+  "request_schedule": [
+    {
+      "id": "dev_ca_doi_auto_guide_broker_negotiable",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_guide_caarp_fee",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_guide_caarp_removal",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_guide_clca_county_price",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_guide_clca_income",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_guide_fault_surcharge",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_guide_loan_shortfall",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_guide_med_minimum",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_guide_standard_bi",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_guide_storm_example",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_guide_um_waiver",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_guide_umpd_identified",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_terms_2011_pd",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_terms_acv",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_terms_binder",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_terms_deductible_recovery",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_terms_equipment_limit",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_terms_first_party",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_terms_nonrenewal",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_terms_own_effective_date",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_terms_rental_daily",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_terms_rental_trigger",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_terms_salvage",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_auto_terms_second_party",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_glossary_burglary",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_glossary_cat_loss",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_glossary_depreciation",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_glossary_fidelity",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_glossary_grace_days",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_glossary_grace_types",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_glossary_incontestable",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_glossary_loan_death",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_glossary_prorata_example",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_glossary_short_rate_schedule",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_glossary_title_lender",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ca_doi_glossary_workers_benefits",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_auto_coverages_animal",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_auto_coverages_bi_limits",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_auto_coverages_collision",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_auto_coverages_deductibles",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_auto_coverages_medical",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_auto_coverages_mexico",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_auto_coverages_mexico_price",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_auto_coverages_noninstalled",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_auto_coverages_own_tow_limit",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_auto_coverages_pd_limit",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_auto_coverages_rental",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_auto_coverages_windshield_carrier",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_home_policy_forms_condo_interior",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_home_policy_forms_ho2_property",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_home_policy_forms_ho3_belongings",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_home_policy_forms_ho3_common",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_home_policy_forms_ho5_perils",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_home_policy_forms_ho5_price",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_home_policy_forms_ho8_eligibility",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_home_policy_forms_mobile_transit",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_home_policy_forms_mobile_trip_rider",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_home_policy_forms_own_rent_limit",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_home_policy_forms_rent_displacement",
+      "mode": "retrieved"
+    },
+    {
+      "id": "dev_ne_doi_home_policy_forms_rent_dwelling",
+      "mode": "retrieved"
+    }
+  ],
+  "prepared_files": {
+    "inputs.jsonl": "fb340dc9cd89ef89eaab26dfe53147b20500253531b2cb86c34b05b6b0cec48e",
+    "pages.jsonl": "0d37bd72140a4d06e3e5b15c86ee8b33adbb3d87a6e342502ce97fc0b3b96563"
+  },
+  "prompt_contract": {
+    "system": "Answer only from the provided archived insurance-guide evidence. Do not use outside knowledge. A general guide or worked example does not identify the questioner's own policy terms or private facts. Return JSON with exactly: answer (short string), evidence (verbatim supporting quote), source (exact SOURCE identifier), abstain (boolean). If the evidence does not establish the answer, set abstain=true and all three strings to empty. Otherwise set abstain=false. Use no extra commentary and never substitute a general example for a person's own policy amount.",
+    "template": "Context:\n{context}\n\nQuestion:\n{question}\n\nAnswer:",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer": {
+          "type": "string"
+        },
+        "evidence": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "abstain": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "answer",
+        "evidence",
+        "source",
+        "abstain"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "prompt_contract_sha256": "af7ca4ee249e7102a917e36e9dc746eae55387b64e7247a2ae634fb8dbb79e3f",
+  "code_sha256": {
+    "src/insurerag_vlm/__init__.py": "de655f7f00531d8e4ffb8a1edf0c38f689dd4915e8d2622e803bc6dd1eee85e3",
+    "src/insurerag_vlm/ablation.py": "3d5b4b2dba63653752fecd19a80912a65e40ae4580caa48130051c82edcb33d7",
+    "src/insurerag_vlm/answer_safety.py": "9ebe7c835714443fbef208410acf1f0c91e838c945181eb7c1437599b0a9d103",
+    "src/insurerag_vlm/app.py": "f351d798f20302d48a46d70afe15b015c93337c2147da56310a8babd249f45e0",
+    "src/insurerag_vlm/benchmark.py": "a709fd94d11d2e36834d08bfdeb03e76930854d215c7c8d7591b4bf35c7a5125",
+    "src/insurerag_vlm/calibration.py": "8c6753afb726450311b05d53b8a78e8b2867f42e36ff8456844a0534f5724970",
+    "src/insurerag_vlm/cli.py": "ca02883e8a2549ff0c9161461b2b3a346ea8f078a0179d1ba748e67ea3629bd0",
+    "src/insurerag_vlm/config.py": "87fda93c37bfdceba41bca82a9cbf5ee992298db457118260d1980de70a2e82f",
+    "src/insurerag_vlm/data.py": "b9706f4e9025a3092efa2192015f5703423f233bc5afe328f9a763216049ef0e",
+    "src/insurerag_vlm/dense_training.py": "72c0591779ac587405c43d3bd95bedcd7d8194221cf77caae717422ccb82dcd4",
+    "src/insurerag_vlm/diff.py": "ca4b9b537ce988e3f735de00e5666cad39b6ddc8493c6d121b380c8c509b8f9c",
+    "src/insurerag_vlm/evaluation.py": "899b63a19eb449328b7ea4f0bc15156fce9aca96037bcc6cf167fe1b5e511376",
+    "src/insurerag_vlm/graph.py": "b70a4eaa61b9c6d4b1c1a5c40bb7ae94b0ecbadf2167ef01a374a17b0939cdcc",
+    "src/insurerag_vlm/hybrid_pipeline.py": "dc9dafb2a253862b6fff38d55d9c0f07c7e1f851c6b901cbbfc26b1fee9c7a24",
+    "src/insurerag_vlm/insurance_structure.py": "dff514f1fc71cf02b7ebbd43df7ae8b7db1910bd02fe73275c9ee69ccdc2053f",
+    "src/insurerag_vlm/knowledge.py": "6fbeb5f362fc6540866b72e0dae4c9cec7b7ae273ab5e67ac5ecae75cf871eb8",
+    "src/insurerag_vlm/ocr.py": "37ffe74a77fef66e70415a5cb3548fc26602bbf209d02f6a47f8440642369645",
+    "src/insurerag_vlm/pdf.py": "05fc9659dd7b1a57ce56ad854307c48eb98c0c386947def008af66c69c8a7613",
+    "src/insurerag_vlm/pipeline.py": "63a8322376bb5bb683a99173ac158ab82ab2c0d7675ce2bd128b84b98f4be78f",
+    "src/insurerag_vlm/preprocess.py": "bbd281ecb9f11579cff05fc53def89408f3cf33b6ecbeab73b49ee9d046a52ff",
+    "src/insurerag_vlm/qa.py": "937d73f19e7b4ba9228e5e37a518d69de2d28572d772a019a75b56eee7e99b21",
+    "src/insurerag_vlm/query_understanding.py": "8f605ceac2cb836991f3acb8fb17cd0757155c7af10c2f6b25a222e43f0502ae",
+    "src/insurerag_vlm/retriever.py": "f9d17a456d84bda779bdf78a9c2135bae0c0a955e1ac15ba9bb6c4e44123f85e",
+    "src/insurerag_vlm/sft.py": "a6d49fada09ccb3272ece42e48ec8e318cc6c5f48da77e7b947002dc9aa5f856",
+    "src/insurerag_vlm/sft_integrity.py": "d5c81e8c8fafeaa158f8b4010eb1df9db8cb1c99a3237a36f40ab78d63cd97e7",
+    "src/insurerag_vlm/state_doi_sources.py": "056129b68636d8d5196842d0715bc2b4461881fe852049f04441e4c374ba35ab",
+    "src/insurerag_vlm/tables.py": "f572d141c82c40d73d49c6b583ef9f94541666c72e8adaafc6cfcdf9109cb564",
+    "src/insurerag_vlm/training_data.py": "58ee89219dc7ff6a68e37ea6b7d311ca2dd3fd6a686c24c3a2df346814a46d42",
+    "src/insurerag_vlm/validation.py": "02d17f0d2ca972dfd0d523d4f9ebca0838648350eaff964362f01b710cc19e45",
+    "src/insurerag_vlm/visual.py": "1ebe89199bf75afcc73cee7d9e6b305f64fd5d16e7cf4af5808d66093056ad86",
+    "src/insurerag_vlm/vlm.py": "109f2555cc767d4ef8119296d3edb54433abe1306157974c740a5b6637cada75",
+    "scripts/eval_research_benchmark.py": "1eac538ca4328b47c42c21627c402643c473fdfdaaa7ba6cfc63daa558e1e1e5",
+    "scripts/research_v2.py": "670bcd86be2c61ce5b3cec05e1c90b26390784faf1b0f5e8f4106b6ef9dc3e2c",
+    "scripts/prepare_research_benchmark_v2.py": "e7004f47914368b696cd7a3a428ec79a2346ed5d5806457d750162b6624f4d5b",
+    "scripts/eval_research_benchmark_v2.py": "99e02b8dbef01eff62f7da766cf04a523c50987900d48235588b694a2c2dd3a3",
+    "scripts/compare_research_runs_v2.py": "37bd62282edebfc0d5892c68fffd7ce5bfac9753a0930a1b3397ed9030cffe7f"
+  },
+  "retrieval_fingerprints": {
+    "ca_doi_auto_guide": {
+      "schema_version": 1,
+      "backend": "local-transformer",
+      "model": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\bge-small-en-v1.5",
+      "is_baseline": false,
+      "query_instruction": "",
+      "pooling": "cls",
+      "max_length": 512,
+      "normalization": "l2",
+      "embedding_dim": 384,
+      "pooling_source": "1_Pooling/config.json",
+      "checkpoint_sha256": "03f953a6eccb84cee28665e8229fcef40f985e9df911e120e0a13b09109c3a92",
+      "checkpoint_files_sha256": {
+        "1_Pooling/config.json": "d1caf60c96f5fba2157c0c26b76d80818fad6cf0b8eb5e73ec372ff9818eba5c",
+        "config.json": "094f8e891b932f2000c92cfc663bac4c62069f5d8af5b5278c4306aef3084750",
+        "config_sentence_transformers.json": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56",
+        "download_provenance.json": "32f017723727bff0f8102b4e7920904c2e3bfcb270d82a494dc6ecac7fb5e4ce",
+        "model.safetensors": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+        "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "sentence_bert_config.json": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf",
+        "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+        "tokenizer_config.json": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      }
+    },
+    "ca_doi_auto_terms": {
+      "schema_version": 1,
+      "backend": "local-transformer",
+      "model": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\bge-small-en-v1.5",
+      "is_baseline": false,
+      "query_instruction": "",
+      "pooling": "cls",
+      "max_length": 512,
+      "normalization": "l2",
+      "embedding_dim": 384,
+      "pooling_source": "1_Pooling/config.json",
+      "checkpoint_sha256": "03f953a6eccb84cee28665e8229fcef40f985e9df911e120e0a13b09109c3a92",
+      "checkpoint_files_sha256": {
+        "1_Pooling/config.json": "d1caf60c96f5fba2157c0c26b76d80818fad6cf0b8eb5e73ec372ff9818eba5c",
+        "config.json": "094f8e891b932f2000c92cfc663bac4c62069f5d8af5b5278c4306aef3084750",
+        "config_sentence_transformers.json": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56",
+        "download_provenance.json": "32f017723727bff0f8102b4e7920904c2e3bfcb270d82a494dc6ecac7fb5e4ce",
+        "model.safetensors": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+        "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "sentence_bert_config.json": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf",
+        "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+        "tokenizer_config.json": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      }
+    },
+    "ca_doi_glossary": {
+      "schema_version": 1,
+      "backend": "local-transformer",
+      "model": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\bge-small-en-v1.5",
+      "is_baseline": false,
+      "query_instruction": "",
+      "pooling": "cls",
+      "max_length": 512,
+      "normalization": "l2",
+      "embedding_dim": 384,
+      "pooling_source": "1_Pooling/config.json",
+      "checkpoint_sha256": "03f953a6eccb84cee28665e8229fcef40f985e9df911e120e0a13b09109c3a92",
+      "checkpoint_files_sha256": {
+        "1_Pooling/config.json": "d1caf60c96f5fba2157c0c26b76d80818fad6cf0b8eb5e73ec372ff9818eba5c",
+        "config.json": "094f8e891b932f2000c92cfc663bac4c62069f5d8af5b5278c4306aef3084750",
+        "config_sentence_transformers.json": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56",
+        "download_provenance.json": "32f017723727bff0f8102b4e7920904c2e3bfcb270d82a494dc6ecac7fb5e4ce",
+        "model.safetensors": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+        "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "sentence_bert_config.json": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf",
+        "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+        "tokenizer_config.json": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      }
+    },
+    "ne_doi_auto_coverages": {
+      "schema_version": 1,
+      "backend": "local-transformer",
+      "model": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\bge-small-en-v1.5",
+      "is_baseline": false,
+      "query_instruction": "",
+      "pooling": "cls",
+      "max_length": 512,
+      "normalization": "l2",
+      "embedding_dim": 384,
+      "pooling_source": "1_Pooling/config.json",
+      "checkpoint_sha256": "03f953a6eccb84cee28665e8229fcef40f985e9df911e120e0a13b09109c3a92",
+      "checkpoint_files_sha256": {
+        "1_Pooling/config.json": "d1caf60c96f5fba2157c0c26b76d80818fad6cf0b8eb5e73ec372ff9818eba5c",
+        "config.json": "094f8e891b932f2000c92cfc663bac4c62069f5d8af5b5278c4306aef3084750",
+        "config_sentence_transformers.json": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56",
+        "download_provenance.json": "32f017723727bff0f8102b4e7920904c2e3bfcb270d82a494dc6ecac7fb5e4ce",
+        "model.safetensors": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+        "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "sentence_bert_config.json": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf",
+        "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+        "tokenizer_config.json": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      }
+    },
+    "ne_doi_home_policy_forms": {
+      "schema_version": 1,
+      "backend": "local-transformer",
+      "model": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\bge-small-en-v1.5",
+      "is_baseline": false,
+      "query_instruction": "",
+      "pooling": "cls",
+      "max_length": 512,
+      "normalization": "l2",
+      "embedding_dim": 384,
+      "pooling_source": "1_Pooling/config.json",
+      "checkpoint_sha256": "03f953a6eccb84cee28665e8229fcef40f985e9df911e120e0a13b09109c3a92",
+      "checkpoint_files_sha256": {
+        "1_Pooling/config.json": "d1caf60c96f5fba2157c0c26b76d80818fad6cf0b8eb5e73ec372ff9818eba5c",
+        "config.json": "094f8e891b932f2000c92cfc663bac4c62069f5d8af5b5278c4306aef3084750",
+        "config_sentence_transformers.json": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56",
+        "download_provenance.json": "32f017723727bff0f8102b4e7920904c2e3bfcb270d82a494dc6ecac7fb5e4ce",
+        "model.safetensors": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+        "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+        "sentence_bert_config.json": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf",
+        "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+        "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+        "tokenizer_config.json": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3",
+        "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+      }
+    }
+  },
+  "retrieval_config": {
+    "retrieval_model": "../models/bge-small-en-v1.5",
+    "retrieval_mode": "hybrid_text",
+    "graph_mode": "explicit",
+    "top_k": 3,
+    "max_page_chars": 2400,
+    "max_context_chars": 8000
+  },
+  "generation_options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 384,
+    "top_k": 40,
+    "top_p": 1.0,
+    "repeat_penalty": 1.0,
+    "presence_penalty": 0.0
+  },
+  "thinking": false,
+  "statistics": {
+    "bootstrap_draws": 2000,
+    "bootstrap_seed": 42,
+    "cluster_unit": "document_id"
+  },
+  "preparation_wall_seconds": 19.732605200028047,
+  "evaluation_path": "Frozen actual hybrid retrieval/context followed by direct JSON model contract; no application repair.",
+  "limitations": [
+    "AI-authored cases and exact-key/quote checks are not expert semantic accuracy.",
+    "Document/family split separation does not establish absence from previous SFT or public pretraining.",
+    "Oracle evidence is an optional diagnostic and is not the primary retrieved result."
+  ]
+}

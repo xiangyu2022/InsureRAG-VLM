@@ -1,0 +1,46 @@
+{
+  "question": "What are the requirements for mental health parity?",
+  "corpus": "hicric",
+  "answer_candidates": 78830,
+  "candidates_scored_per_model": 143,
+  "reranker_passes": 1,
+  "selected_epoch": 2,
+  "domain_weight": 1.0,
+  "generation_calls": 0,
+  "research_retrieval_only": true,
+  "seconds_including_loading": 12.558498699916527,
+  "selection_lock_sha256": "111a12d841ff50fe1006c4c76d464f905394a14e1c5e172690f1f8255b255261",
+  "model_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "rag_snippet::hicric_8186749e7591c9c6::p0001::s0020",
+      "text": "assessing reimbursement for behavioral health services, states must consider federal mental health parity requirements, as applicable. For instance, as part of a states mental health parity analysis, reimbursement rates should be assessed as a non-quantitative treatment limit to ensure that policies and procedures related to reimbursement for behavioral health are comparable to and applied no more stringently than in reimbursement for physical health services. Additionally, section 1902(a)(30)(A) requires states to assure that payments are consistent with efficiency, economy, and quality of care and are sufficient to enlist enough providers so that care and services are available under the plan at least to the extent that such care and services are available to the general population in the geographic area. While these requirements do not directly apply to managed care programs, there are similar requirements for network adequacy and access requirements for Medicaid managed care programs at 42 CFR 438.68 and 438.206. States must ensure that all covered services are available and accessible to managed care enrollees and that managed care plans13 meet the states network adequacy standards. Additionally, 42 CFR",
+      "source_url": "https://www.medicaid.gov/media/142256",
+      "doc_id": "hicric_8186749e7591c9c6",
+      "start_word": 2400,
+      "end_word": 2580,
+      "page_unit": "Logical source record; not a physical PDF page"
+    },
+    {
+      "rank": 2,
+      "answer_id": "rag_snippet::hicric_2c26a9f6c66a639b::p0001::s0005",
+      "text": "eliminated this exception. The final rules also apply parity requirements to benefits for intermediate levels of care for mental health conditions and substance use disorders. The final rules accomplish this by providing that plans and issuers first identify what is meant by an intermediate service for mental health and substance use disorder care and medical/surgical care and requiring that such intermediate level services be treated comparably within the structure of plan benefits. Under the final rules, parity requirements for nonquantitative treatment limitations also apply to restrictions based on geographic location, facility type, provider specialty, and other criteria that limit the scope or duration of benefits for services (including access to intermediate level services). Finally, the final rules clarify the disclosure rights of plan participants with respect to both mental health and substance use disorder benefits and medical/surgical benefits. See Q8 regarding the type of information that individuals can receive from their plans and issuers under Federal law. Q4: What are the Departments doing to promote compliance? The Departments are working with plans, issuers, and their service providers to help them",
+      "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-xvii.pdf",
+      "doc_id": "hicric_2c26a9f6c66a639b",
+      "start_word": 600,
+      "end_word": 780,
+      "page_unit": "Logical source record; not a physical PDF page"
+    },
+    {
+      "rank": 3,
+      "answer_id": "rag_snippet::hicric_17ef4dd8fbea5e99::p0001::s0001",
+      "text": "title XIX of the Act. Statutory Basis for CHIPRA Parity Requirement Section 502 of CHIPRA amended section 2103(c) of the Act to incorporate, by reference, provisions added to section 2705 of the Public Health Service (PHS) Act by the Paul Wellstone and Pete Domenici Mental Health Parity and Addiction Equity Act of 2008 (MHPAEA), Public Law 110-343. Prior to MHPAEA, the PHS Act required parity in annual or lifetime dollar limits between mental health and medical/surgical benefits (as a result of the Mental Health Parity Act of 1996). MHPAEA expanded the application of the existing mental health parity requirements in section 2705 to substance use disorder benefits, and added new requirements such as: Financial requirements (e.g., co-payments) that are applied to mental health or substance use disorder benefits must be no more restrictive than the predominant financial requirements that are applied to substantially all medical/surgical benefits. Treatment limitations (e.g., numbers of visits or days of coverage) that are applied to mental health or substance use disorder benefits must be no more restrictive than the predominant treatment limitations that are applied",
+      "source_url": "https://www.medicaid.gov/media/37766",
+      "doc_id": "hicric_17ef4dd8fbea5e99",
+      "start_word": 120,
+      "end_word": 300,
+      "page_unit": "Logical source record; not a physical PDF page"
+    }
+  ]
+}

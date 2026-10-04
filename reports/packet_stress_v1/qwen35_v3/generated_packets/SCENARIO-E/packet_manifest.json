@@ -1,0 +1,24 @@
+{
+  "documents": [
+    {
+      "path": "SCENARIO-E-VERSION-A.pdf",
+      "packet_id": "SCENARIO-E",
+      "document_role": "base_policy",
+      "source_origin": "synthetic_stress_fixture",
+      "source_name": "SCENARIO-E-VERSION-A.pdf",
+      "source_authority": "Invented regression fixture; no legal authority",
+      "policy_number": "SYN-E-001",
+      "version_id": "A"
+    },
+    {
+      "path": "SCENARIO-E-VERSION-B.pdf",
+      "packet_id": "SCENARIO-E",
+      "document_role": "base_policy",
+      "source_origin": "synthetic_stress_fixture",
+      "source_name": "SCENARIO-E-VERSION-B.pdf",
+      "source_authority": "Invented regression fixture; no legal authority",
+      "policy_number": "SYN-E-001",
+      "version_id": "B"
+    }
+  ]
+}

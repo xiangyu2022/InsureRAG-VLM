@@ -1,0 +1,134 @@
+{
+  "status": "completed",
+  "edges": 171,
+  "cases": 171,
+  "rankings": 513,
+  "generation_calls": 0,
+  "summaries": {
+    "dev": {
+      "anchor_plus_bm25": {
+        "n": 17,
+        "target_in_context": 0.4117647058823529,
+        "by_family": {
+          "apwu": {
+            "n": 10,
+            "hits": 4
+          },
+          "geha": {
+            "n": 7,
+            "hits": 3
+          }
+        }
+      },
+      "anchor_plus_graph_then_bm25": {
+        "n": 17,
+        "target_in_context": 0.5882352941176471,
+        "by_family": {
+          "apwu": {
+            "n": 10,
+            "hits": 5
+          },
+          "geha": {
+            "n": 7,
+            "hits": 5
+          }
+        }
+      },
+      "direct_printed_page_lookup": {
+        "n": 17,
+        "target_in_context": 1.0,
+        "by_family": {
+          "apwu": {
+            "n": 10,
+            "hits": 10
+          },
+          "geha": {
+            "n": 7,
+            "hits": 7
+          }
+        }
+      }
+    },
+    "test": {
+      "anchor_plus_bm25": {
+        "n": 154,
+        "target_in_context": 0.5194805194805194,
+        "by_family": {
+          "compass_rose": {
+            "n": 29,
+            "hits": 8
+          },
+          "foreign_service": {
+            "n": 13,
+            "hits": 9
+          },
+          "mhbp": {
+            "n": 8,
+            "hits": 1
+          },
+          "nalc": {
+            "n": 21,
+            "hits": 13
+          },
+          "samba": {
+            "n": 83,
+            "hits": 49
+          }
+        }
+      },
+      "anchor_plus_graph_then_bm25": {
+        "n": 154,
+        "target_in_context": 0.6558441558441559,
+        "by_family": {
+          "compass_rose": {
+            "n": 29,
+            "hits": 22
+          },
+          "foreign_service": {
+            "n": 13,
+            "hits": 5
+          },
+          "mhbp": {
+            "n": 8,
+            "hits": 8
+          },
+          "nalc": {
+            "n": 21,
+            "hits": 14
+          },
+          "samba": {
+            "n": 83,
+            "hits": 52
+          }
+        }
+      },
+      "direct_printed_page_lookup": {
+        "n": 154,
+        "target_in_context": 1.0,
+        "by_family": {
+          "compass_rose": {
+            "n": 29,
+            "hits": 29
+          },
+          "foreign_service": {
+            "n": 13,
+            "hits": 13
+          },
+          "mhbp": {
+            "n": 8,
+            "hits": 8
+          },
+          "nalc": {
+            "n": 21,
+            "hits": 21
+          },
+          "samba": {
+            "n": 83,
+            "hits": 83
+          }
+        }
+      }
+    }
+  },
+  "predictions_sha256": "ddfabc0458b16cbd843718b1447fb7934763e45ea8c68d836df4c54d5683b631"
+}

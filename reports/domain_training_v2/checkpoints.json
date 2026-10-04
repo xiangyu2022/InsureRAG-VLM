@@ -1,0 +1,41 @@
+{
+  "completed_checkpoints": [
+    {
+      "epoch": 1,
+      "optimizer_steps": 734,
+      "training_groups_seen": 11729,
+      "mean_loss": 1.5521022580003117,
+      "weights_sha256": "88207632c798e8a5a7eb2799447dc1f1f08aec03daaa142b31fb29572a2071fe",
+      "fine_tuned_in_this_project": true,
+      "base_model": "..\\models\\ms-marco-MiniLM-L6-v2",
+      "training_manifest_sha256": "7bae2f9990831396c8f347ae23952e640c6f9a3a07937a8bf5436c998ed36c01",
+      "training_protocol_sha256": "497db8286ac41be5948ef27ce754939d76c4559febceb31bbde98a670af28d9d",
+      "training_code_sha256": "6dfa79747867c062fa73fd6361920486f27d774c2bf12b939acf402eb5889000"
+    },
+    {
+      "epoch": 2,
+      "optimizer_steps": 1468,
+      "training_groups_seen": 11729,
+      "mean_loss": 1.1187215411903935,
+      "weights_sha256": "c07b6d1d92f9b5dcb5013368b45bcd7e1616d622cc89c3e2d10077a591f73b3a",
+      "fine_tuned_in_this_project": true,
+      "base_model": "..\\models\\ms-marco-MiniLM-L6-v2",
+      "training_manifest_sha256": "7bae2f9990831396c8f347ae23952e640c6f9a3a07937a8bf5436c998ed36c01",
+      "training_protocol_sha256": "497db8286ac41be5948ef27ce754939d76c4559febceb31bbde98a670af28d9d",
+      "training_code_sha256": "6dfa79747867c062fa73fd6361920486f27d774c2bf12b939acf402eb5889000"
+    },
+    {
+      "epoch": 3,
+      "optimizer_steps": 2202,
+      "training_groups_seen": 11729,
+      "mean_loss": 1.035065356064904,
+      "weights_sha256": "ce6a50e80fdc90d560eeb6cc08fc28aa43e7d151766dad18f004f17259b9252d",
+      "fine_tuned_in_this_project": true,
+      "base_model": "..\\models\\ms-marco-MiniLM-L6-v2",
+      "training_manifest_sha256": "7bae2f9990831396c8f347ae23952e640c6f9a3a07937a8bf5436c998ed36c01",
+      "training_protocol_sha256": "497db8286ac41be5948ef27ce754939d76c4559febceb31bbde98a670af28d9d",
+      "training_code_sha256": "6dfa79747867c062fa73fd6361920486f27d774c2bf12b939acf402eb5889000"
+    }
+  ],
+  "current_epoch": 3
+}

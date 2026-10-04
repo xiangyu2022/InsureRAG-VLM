@@ -1,0 +1,123 @@
+{
+  "started_utc": "2026-09-20T22:52:52.846733+00:00",
+  "fixture_lock_sha256": "2a2a1d194b45a9b28200ced8963345c745e8ccfccb460d147c9687aea40405fc",
+  "fixture": {
+    "version": "visual_counterfactual_v1",
+    "frozen_before_model_inference": true,
+    "label": "AI-authored synthetic image-only counterfactual diagnostic; not real-policy visual accuracy",
+    "files": {
+      "design.json": "1c0faea17011bb198b9c146c7a0ac5fc20dca9ec277ba6e66d571bb6d32eed1b",
+      "cases.jsonl": "9f318679c8e2de9e32da397f36565356e038f850b41088141f56f1aa4d10ca22",
+      "assets/visual_A.pdf": "40b53b0b9b17995b224ec7ca45a7347590ddb6848a54fb791b2d009508ef3923",
+      "assets/visual_A.png": "0ab8b099037c8011e27d842cfbbbaf4018cf65df025cbe728f706817e872e92a",
+      "assets/visual_B.pdf": "d6bc02d957d802ab12f6ae9915ba1babed09eac2fa1ca86558fa7b27fc8c0027",
+      "assets/visual_B.png": "4819c6eb824c812f389ee5bbe554c6ce496ba9bb78da100b9703828f264cb301",
+      "assets/visual_C.pdf": "b93a0136f810db6c27a0652a43a94f365ff7f30dc509dde4a44f2842ea95208c",
+      "assets/visual_C.png": "38381270f7994478445f8f8899a7d5f624f34ccfa91adcb7be34ffece6ed966a"
+    },
+    "cases": 12,
+    "answerable": 9,
+    "unsupported": 3
+  },
+  "score_version": "visual-counterfactual-v1-exact-keys",
+  "backend": {
+    "provider": "ollama",
+    "requested_model": "ollama:qwen3.5:4b",
+    "resolved_model": "qwen3.5:4b",
+    "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+    "model_details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen35",
+      "families": [
+        "qwen35"
+      ],
+      "parameter_size": "4.7B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560
+    },
+    "ollama_version": "0.34.2",
+    "base_url": "http://127.0.0.1:11435",
+    "generation_options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 192,
+      "num_ctx": 8192,
+      "top_k": 40,
+      "top_p": 1.0,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0
+    },
+    "thinking": false,
+    "last_generation": {}
+  },
+  "system_prompt": "Read only the attached image. Return JSON with exactly answer (short string), evidence (a short transcription of the image text supporting that answer), and abstain (boolean). If the requested fact is absent or unreadable, set abstain=true and both strings empty. Otherwise set abstain=false. Do not infer policy terms from general insurance knowledge.",
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "answer": {
+        "type": "string"
+      },
+      "evidence": {
+        "type": "string"
+      },
+      "abstain": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "answer",
+      "evidence",
+      "abstain"
+    ],
+    "additionalProperties": false
+  },
+  "generation_options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 192,
+    "top_k": 40,
+    "top_p": 1.0,
+    "repeat_penalty": 1.0,
+    "presence_penalty": 0.0
+  },
+  "runtime_environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "logical_cpu_count": 24,
+    "package_versions": {
+      "numpy": "2.5.3",
+      "requests": "2.34.2",
+      "torch": "2.14.0+cpu",
+      "transformers": "5.17.0",
+      "scikit-learn": "1.9.1"
+    },
+    "memory_note": "Per-request Ollama api/ps reports model size and size_vram; physical RAM is not inferred."
+  },
+  "input_note": "One PNG plus exact question text; no PDF extraction/OCR/transcription/gold values are sent as text.",
+  "request_schedule": [
+    "A_dwelling",
+    "B_dwelling",
+    "C_dwelling",
+    "A_deductible",
+    "B_deductible",
+    "C_deductible",
+    "A_exclusion",
+    "B_exclusion",
+    "C_exclusion",
+    "A_premium",
+    "B_premium",
+    "C_premium"
+  ],
+  "code_sha256": {
+    "scripts\\eval_visual_counterfactual.py": "ddcd7807f4ea17749bf8aa9e7a887b9fbf6b348f5c18a7677f5ef29e2c10a449",
+    "scripts\\build_visual_counterfactual.py": "585f33f4c45e27b9b561d6fe35641e99b9a6f69873ea754e76cd22cc5f673f95",
+    "scripts\\eval_research_benchmark.py": "1eac538ca4328b47c42c21627c402643c473fdfdaaa7ba6cfc63daa558e1e1e5",
+    "src\\insurerag_vlm\\vlm.py": "109f2555cc767d4ef8119296d3edb54433abe1306157974c740a5b6637cada75"
+  },
+  "completed_utc": "2026-09-20T22:53:13.981959+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "smokes": [
+    {
+      "corpus": "insuranceqa",
+      "answer_candidates": 27413,
+      "seconds_including_loading": 15.87006270000711,
+      "top_answer_id": "11785",
+      "selected_model_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac"
+    },
+    {
+      "corpus": "multidomain",
+      "answer_candidates": 47969,
+      "seconds_including_loading": 7.194043399998918,
+      "top_answer_id": "gov2_a_7912ec98e56737fa",
+      "selected_model_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac"
+    },
+    {
+      "corpus": "hicric",
+      "answer_candidates": 78830,
+      "seconds_including_loading": 12.558498699916527,
+      "top_answer_id": "rag_snippet::hicric_8186749e7591c9c6::p0001::s0020",
+      "selected_model_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac"
+    }
+  ],
+  "scope": "Integration checks only; no manual relevance scoring or generation accuracy claimed."
+}

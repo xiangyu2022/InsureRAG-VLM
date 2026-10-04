@@ -118,7 +118,10 @@ def run_ablation(
     index_dir: Path = Path("data"),
     visual_index_dir: Path = Path("data/03_index/colqwen2"),
     top_k: int = 5,
+    include_openai: bool = False,
 ) -> Dict[str, Path]:
+    if include_openai and not os.environ.get("OPENAI_API_KEY"):
+        raise ValueError("--include-openai requires OPENAI_API_KEY; no hosted ablation was run.")
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -126,7 +129,10 @@ def run_ablation(
     answer_rows: List[Dict[str, Any]] = []
     error_rows: List[Dict[str, Any]] = []
 
-    local_config = ModelConfig(index_dir=index_dir, retrieval_model="local-hashing", vlm_model="local-extractive")
+    local_config = ModelConfig(
+        index_dir=index_dir, retrieval_model="local-hashing", vlm_model="local-extractive",
+        curated_dataset_dir=data_folder,
+    )
     local_pipeline = DocumentRetrievalPipeline(local_config)
     if not local_config.index_path.exists() or not local_config.metadata_path.exists():
         local_pipeline.build_index(data_folder)
@@ -136,13 +142,14 @@ def run_ablation(
     answer_rows.append(local_answer_metrics)
     error_rows.extend(local_errors)
 
-    if os.environ.get("OPENAI_API_KEY"):
+    if include_openai:
         openai_config = ModelConfig(
             index_dir=output_dir / "openai_index",
             retrieval_model=os.environ.get("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small"),
             vlm_model=os.environ.get("OPENAI_CHAT_MODEL", "gpt-4o-mini"),
             use_hf_api=False,
             openai_api_key=os.environ["OPENAI_API_KEY"],
+            curated_dataset_dir=data_folder,
         )
         openai_pipeline = DocumentRetrievalPipeline(openai_config)
         openai_pipeline.build_index(data_folder)

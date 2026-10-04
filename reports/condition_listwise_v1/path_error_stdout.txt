@@ -1,0 +1,56 @@
+Running run_condition_listwise_tests.py
+Running: scripts/score_condition_listwise.py score --split test --questions data/benchmarks/insuranceqa_v2/test.jsonl --answers data/benchmarks/insuranceqa_v2/answers.jsonl --candidates reports/retention_v2/test_legacy_selected --model C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\models\insurerag-condition-listwise-v1-seed-123\epoch-1 --output reports/condition_listwise_v1/test_legacy_selected
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 3176.08it/s]
+{"scored": 200, "total": 2000, "seconds": 17.2}
+{"scored": 400, "total": 2000, "seconds": 28.9}
+{"scored": 600, "total": 2000, "seconds": 40.5}
+{"scored": 800, "total": 2000, "seconds": 52.1}
+{"scored": 1000, "total": 2000, "seconds": 63.3}
+{"scored": 1200, "total": 2000, "seconds": 74.9}
+{"scored": 1400, "total": 2000, "seconds": 86.2}
+{"scored": 1600, "total": 2000, "seconds": 97.8}
+{"scored": 1800, "total": 2000, "seconds": 109.2}
+{"scored": 2000, "total": 2000, "seconds": 120.8}
+Running: scripts/score_condition_listwise.py score --split test --questions data/benchmarks/multidomain_v1/test.jsonl --answers data/training/retention_v2/answers.jsonl --candidates reports/retention_v2/test_new_selected --model C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\models\insurerag-condition-listwise-v1-seed-123\epoch-1 --output reports/condition_listwise_v1/test_mixed_selected
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 2749.95it/s]
+{"scored": 200, "total": 681, "seconds": 21.4}
+{"scored": 400, "total": 681, "seconds": 36.5}
+{"scored": 600, "total": 681, "seconds": 51.9}
+{"scored": 681, "total": 681, "seconds": 58.4}
+Running: scripts/score_condition_listwise.py score --split test --questions data/benchmarks/hicric_government_qa_v1/questions.jsonl --answers reports/condition_listwise_v1/historical_government_answers.jsonl --candidates reports/retention_v2/historical_government --model C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\models\insurerag-condition-listwise-v1-seed-123\epoch-1 --output reports/condition_listwise_v1/test_oldgov_selected
+Traceback (most recent call last):
+  File "C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\InsureRAG-VLM\scripts\score_condition_listwise.py", line 66, in <module>
+    p.add_argument('--candidates',type=Path);p.add_argument('--split',choices=['valid','test'],required=True);run(p.parse_args())
+                                                                                                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\InsureRAG-VLM\scripts\score_condition_listwise.py", line 46, in run
+    else:expected=plan['historical_score_hashes'][str((args.candidates/'scores.jsonl').relative_to(ROOT)).replace('\\','/')]
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhan6\AppData\Local\Programs\Python\Python312\Lib\pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: 'reports\\retention_v2\\historical_government\\scores.jsonl' is not in the subpath of 'C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\InsureRAG-VLM'
+Traceback (most recent call last):
+  File "C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\InsureRAG-VLM\scripts\run_condition_listwise_tests.py", line 28, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\InsureRAG-VLM\scripts\run_condition_listwise_tests.py", line 19, in run
+    command('scripts/score_condition_listwise.py','score','--split','test','--questions',questions,'--answers',answers,'--candidates',candidates,
+  File "C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\InsureRAG-VLM\scripts\run_condition_listwise_tests.py", line 6, in command
+    print('Running: '+' '.join(map(str,args)),flush=True);subprocess.run([sys.executable,*map(str,args)],cwd=ROOT,check=True)
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhan6\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\.venv-qwen-smoke\\Scripts\\python.exe', 'scripts/score_condition_listwise.py', 'score', '--split', 'test', '--questions', 'data/benchmarks/hicric_government_qa_v1/questions.jsonl', '--answers', 'reports/condition_listwise_v1/historical_government_answers.jsonl', '--candidates', 'reports/retention_v2/historical_government', '--model', 'C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\insurerag-condition-listwise-v1-seed-123\\epoch-1', '--output', 'reports/condition_listwise_v1/test_oldgov_selected']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\InsureRAG-VLM\scripts\run_condition_final_evaluation.py", line 12, in <module>
+    if __name__=='__main__':run()
+                            ^^^^^
+  File "C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\InsureRAG-VLM\scripts\run_condition_final_evaluation.py", line 11, in run
+    print('Running '+script,flush=True);subprocess.run([sys.executable,'scripts/'+script],cwd=ROOT,check=True)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\zhan6\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\.venv-qwen-smoke\\Scripts\\python.exe', 'scripts/run_condition_listwise_tests.py']' returned non-zero exit status 1.

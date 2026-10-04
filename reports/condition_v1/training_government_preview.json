@@ -1,0 +1,146 @@
+[
+  {
+    "question": "If a woman indicates on the application she is pregnant, do States need to enroll her as a pregnant woman if she is otherwise eligible for the adult group? Would there be a need to track pregnancy if the benefits for both groups are the same?",
+    "text": "If a woman indicates on the application that she is pregnant, she should be enrolled in Medicaid coverage as a pregnant woman. The Affordable Care Act specifies that pregnant women are not eligible for the new adult group. As mentioned above, if a woman enrolled in the adult group later becomes pregnant, she will have the option to stay enrolled in the adult group or request that the State move her to a pregnancy-related eligibility group.",
+    "question_span": [
+      2615,
+      2862
+    ],
+    "answer_span": [
+      2866,
+      3321
+    ],
+    "extraction_method": "explicit_qa_markers",
+    "source_record_id": "hicric_b29373baeebebda4",
+    "source_group": "medicaid.gov/media/39591",
+    "source_url": "https://www.medicaid.gov/media/39591"
+  },
+  {
+    "question": "How would a State demonstrate that it meets the maintenance of agency contribution condition?",
+    "text": "A State must demonstrate that the amount of expenditures for a public agency made on behalf of employees with dependent coverage for the most recent State fiscal year is not less than the amount of such expenditures made in 1997, adjusted for inflation. (1997 was the year CHIP was enacted into law.) This does not require a case-by-case determination but can be calculated on an average basis for each public agency (and, where multiple public agencies have the same contribution rate structures, can be done in the aggregate for all such agencies). To do this, a State would first determine the amount of expenditures made by the public agency toward dependent coverage for State fiscal year (SFY) 1997. Next, a State would use the SFY 1997 expenditures and adjust it on an annual basis using the Consumer Price Index for medical expenses (CPI-M) in order to calculate what the expenditures would have been for the most recent prior fiscal year. You can find the CPI-M on the Bureau of Labor Statistics website: http://www.bls.gov/cpi/home.htm#tables. Finally, the State would then compare this adjusted 1997 expenditure amount to the current expenditure amount (calculated in the same manner as for 1997). If the State demonstrates that the public agency contributed an amount in the most recent prior fiscal year that is at least equivalent to the amount spent in SFY 1997, trended forward, then the maintenance of agency contribution condition will be met. The State will then be able to make dependents of employees of the public agency eligible for CHIP to the extent that other eligibility standards are met for those dependents. If different public agencies, such as State agencies, public universities or local education agencies all offer coverage under a State health benefits program, but provide different contribution levels for dependent care coverage, then a separate calculation and comparison between 1997 and current expenditures must be made for each public agency that has a different contribution level. A State would need to amend section 4.4.1 of its CHIP State plan and provide a methodology for how it would calculate the public agency expenditures on an annual basis in subsequent years. A State would need to provide an assurance that it would make these calculations on an annual basis.",
+    "question_span": [
+      7022,
+      7120
+    ],
+    "answer_span": [
+      7126,
+      9497
+    ],
+    "extraction_method": "explicit_qa_markers",
+    "source_record_id": "hicric_5252ba4030594fcb",
+    "source_group": "medicaid.gov/media/37821",
+    "source_url": "https://www.medicaid.gov/media/37821"
+  },
+  {
+    "question": "Are there other services in addition to those listed above for which the increased translation/interpretation administrative match rate may be claimed?",
+    "text": "Yes. Because this list of activities is not exhaustive, CMS Regional and Central Office staff is available to help States determine, on a case-by-case basis, if proposed translation or interpretation activities are properly allocated in either Medicaid or CHIP and therefore are reimbursable at the increased translation/interpretation administrative match rate. Page 6 State Medicaid Director State Health Official",
+    "question_span": [
+      12119,
+      12275
+    ],
+    "answer_span": [
+      12284,
+      12714
+    ],
+    "extraction_method": "explicit_qa_markers",
+    "source_record_id": "hicric_878bce308b140ab9",
+    "source_group": "medicaid.gov/media/38056",
+    "source_url": "https://www.medicaid.gov/media/38056"
+  },
+  {
+    "question": "What are the general Medicaid and CHIP MOE provisions under the Affordable Care Act?",
+    "text": "The MOE provisions in the Affordable Care Act specify that existing coverage for adults under the Medicaid program generally remains in place until the Secretary determines that an Exchange established by the State under section 1311 of the Affordable Care Act is fully operational, which is likely to be January 1, 2014, and, for children, under both Medicaid and the Childrens Health Insurance Program (CHIP), through Federal fiscal year 2019. As discussed below, exceptions apply to the Medicaid MOE for States experiencing or projecting a deficit to permit Medicaid eligibility restrictions for certain nonpregnant, nondisabled adults. Sections 1902(a)(74) and 1902(gg) of the Social Security Act (the Act), as added by section 2001(b) of the Affordable Care Act, contain the Medicaid MOE provision. With certain exceptions, as a condition of receiving Federal Medicaid funding, States must maintain Medicaid eligibility standards, methodologies, and procedures that are no more restrictive than those in effect on March 23, 2010 (the date of enactment of the Affordable Care Act). The CHIP MOE provision is in section 2105(d)(3) of the Act, as added by section 2101(b) of the Affordable Care Act. The CHIP MOE also requires maintenance of CHIP eligibility standards, methods and procedures in effect on March 23, 2010 as a condition of continued Medicaid funding, with certain exceptions such as to permit enrollment of CHIP eligibles in qualified health plans certified by the Secretary if funding under the States available Federal CHIP allotments is insufficient after September 30, 2015, or to allow the State to impose a limitation related to the establishment of waiting lists in order to limit expenditures under the CHIP program to those for which Federal funds are available. The statutory language requiring maintenance of eligibility standard, methods and procedures is very similar to the Medicaid MOE provision in section 5001(f)(1) of the American Recovery and Reinvestment Act (Recovery Act, P.L. 111-5). Therefore, in general, and unless otherwise indicated, the Recovery Act MOE provisions and guidelines are applicable to implementation of Affordable Care Act Medicaid MOE provisions. We are continuing to review these guidelines and new questions and issues as they arise and may issue further Q&As; please continue to let us know your questions. Nonapplication of Medicaid MOE",
+    "question_span": [
+      3752,
+      3841
+    ],
+    "answer_span": [
+      3850,
+      6304
+    ],
+    "extraction_method": "explicit_qa_markers",
+    "source_record_id": "hicric_feb7b5d7cf0ab9bb",
+    "source_group": "medicaid.gov/media/38646",
+    "source_url": "https://www.medicaid.gov/media/38646"
+  },
+  {
+    "question": "Where can I get a copy of the Department of Labors newest model notices?",
+    "text": "The model general notice and model election notice are available on the DOL website at www.dol.gov/ebsa/cobra.html and the model CHIPRA notice is available at http://www.dol.gov/ebsa/compliance_assistance.html. (The model notices are available in modifiable, electronic form). As with the earlier model notices, in order to use the model properly, the plan administrator must complete it by filling in the blanks with the appropriate plan information. Contemporaneous with the issuance of these FAQs, DOL is also issuing a notice of proposed rulemaking to update its regulations with respect to the COBRA model notices. Until rulemaking is finalized and effective, DOL will consider use of the model notices available on its website, appropriately completed, to constitute compliance with the notice content requirements of COBRA. Limitations on Cost-Sharing under the Affordable Care Act Public Health Service (PHS) Act section 2707(b), as added by the Affordable Care Act, provides that a non-grandfathered group health plan shall ensure that any annual cost-sharing imposed under the plan does not exceed the limitations provided for under sections 1302(c)(1) of the Affordable Care Act. Section 1302(c)(1) limits an enrollees out-of-pocket costs.4 For plan or policy years beginning in 2014, the annual limitation on out-of-pocket costs in effect under Affordable Care Act section 1302(c)(1) is $6,350 for self-only coverage and $12,700 for coverage other than self-only coverage. Beginning with the 2015 plan or policy year and for plan or policy years thereafter, the annual limitation on out-of-pocket costs is increased by the premium adjustment percentage described under Affordable Care Act section 1302(c)(4). HHS has proposed that after applying the premium adjustment percentage, the annual limitation on out-of-pocket costs for 2015 would be $6,600 for self-only coverage and $13,200 for coverage other than self-only coverage.5 4 The annual limitation on out-of-pocket costs is also applied to non-grandfathered individual market coverage through the essential health benefits package requirements of PHS Act section 2707(a). On April 1, 2014, Public Law No. 113-93 was enacted. Section 213 of that law repeals the limitation on deductibles in the small group market that was previously required in this market under section 2707(b) of the PHS Act and section 1302(c)(2) of the Affordable Care Act. 5 Patient Protection and Affordable Care Act; Exchange and Insurance Market Standards for 2015 and Beyond; Proposed Rule, 79 FR 15808 (Mar. 21, 2014). 3 Previous FAQs provided guidance on out-of-pocket maximums.6 Set forth below are FAQs addressing additional questions about out-of-pocket maximums.",
+    "question_span": [
+      6917,
+      6989
+    ],
+    "answer_span": [
+      6991,
+      9831
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "hicric_7969f9941477805d",
+    "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-xix.pdf",
+    "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-xix.pdf"
+  },
+  {
+    "question": "If a plan or issuer covers dependent children, is the plan or issuer required to cover without cost sharing recommended womens preventive care services for dependent children, including recommended preventive services related to pregnancy, such as preconception and prenatal care?",
+    "text": "Yes. Non-grandfathered group health plans and health insurance issuers offering non- grandfathered group or individual health insurance coverage must cover specified recommended preventive care services without cost sharing, consistent with PHS Act section 2713 and its implementing regulations, for all participants and beneficiaries under a group health plan (and all individuals enrolled in individual market coverage). If the plan or issuer covers dependent children, such dependent children must be provided the full range of recommended preventive services applicable to them (e.g., for their age group) without cost sharing and subject to 6 reasonable medical management techniques, in accordance with the requirements of PHS Act section 2713 and its implementing regulations.14 For example, the HRSA Guidelines recommend well-woman visits for adult women to obtain the recommended preventive services that are age- and developmentally-appropriate, including preconception care and many services necessary for prenatal care.15 Therefore, consistent with PHS Act section 2713 and its implementing regulations, plans and issuers must cover without cost sharing these recommended preventive services for dependent children where an attending provider determines that well- woman preventive services are age- and developmentally-appropriate for the dependent. Coverage of Colonoscopies Pursuant to USPSTF Recommendations",
+    "question_span": [
+      20268,
+      20551
+    ],
+    "answer_span": [
+      20553,
+      22001
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "hicric_654a0c4315d71278",
+    "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-xxvi.pdf",
+    "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-xxvi.pdf"
+  },
+  {
+    "question": "If a colonoscopy is scheduled and performed as a preventive screening procedure for colorectal cancer pursuant to the USPSTF recommendation, is it permissible for a plan or issuer to impose cost sharing with respect to anesthesia services performed in connection with the preventive colonoscopy?",
+    "text": "No. The plan or issuer may not impose cost sharing with respect to anesthesia services performed in connection with the preventive colonoscopy if the attending provider determines that anesthesia would be medically appropriate for the individual. 14 Section 2714 of the PHS Act and the implementing regulations provide that a group health plan or health insurance issuer that makes available dependent coverage of children must make such coverage available for children until attainment of 26 years of age. 29 CFR 2590.715.2714 (a)(1) and 45 CFR 147.120(a)(1). The rules also provide that nothing in the regulations requires a plan or issuer to make coverage available for the child of a child receiving dependent coverage. 29 CFR 2590.715-2714(c) and 45 CFR 147.120(c). 15 See HRSA Guidelines, available at http://www.hrsa.gov/womensguidelines/. See also Frequently Asked Questions about Affordable Care Act Implementation Part XII for additional clarifications about well-woman visits and other HRSA guidelines, available at http://www.dol.gov/ebsa/faqs/faq-aca12.html and http://www.cms.gov/CCIIO/Resources/Fact-Sheets-and-FAQs/aca_implementation_faqs12.html. 7",
+    "question_span": [
+      22005,
+      22303
+    ],
+    "answer_span": [
+      22305,
+      23551
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "hicric_654a0c4315d71278",
+    "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-xxvi.pdf",
+    "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-xxvi.pdf"
+  },
+  {
+    "question": "If an individual receives a COVID-19 test in an emergency department of a hospital that is out-of-network, how do the requirements of section 3202(a) of the CARES Act interact with PHS Act section 2719A?",
+    "text": "Under PHS Act section 2719A and its implementing regulations, non-grandfathered group health plans and health insurance issuers offering non-grandfathered group or individual health insurance coverage cannot impose cost sharing (expressed as a copayment amount or 18 See also Centers for Medicare & Medicaid Services, Price Transparency: Requirements for Providers to Make Public Cash Prices for COVID-19 Diagnostic Testing (May 12, 2020), available at https://www.cms.gov/files/document/covid-ffs-price-transparency-faqs.pdf. 9 coinsurance rate) on out-of-network emergency services in a greater amount than what is imposed for in-network emergency services. Additionally, the Departments regulations provide that a plan or issuer satisfies the cost-sharing limitations in the statute if it provides benefits for out-of-network emergency services in an amount at least equal to the greatest of the following three amounts (adjusted for in-network cost-sharing requirements): (1) the median amount negotiated with in-network providers for the emergency service; (2) the amount for the emergency service calculated using the same method the plan generally uses to determine payments for out-of-network services (such as the usual, customary, and reasonable amount); or (3) the amount that would be paid under Medicare for the emergency service (collectively, minimum payment standards).19 The minimum payment standards do not prohibit a group health plan or health insurance issuer from paying an amount for an emergency service that is greater than the amounts specified in the regulations. Because the Departments interpret the provisions of section 3202 of the CARES Act as specifying a rate that generally protects participants, beneficiaries, and enrollees from balance billing for a COVID-19 test (see Q9 above), the requirement to pay the greatest of three amounts under the regulations implementing section 2719A of the PHS Act is superseded by the requirements of section 3202(a) of the CARES Act with regard to COVID-19 diagnostic tests that are out-of-network emergency services. For these services, the plan or issuer must reimburse an out-of-network provider of COVID-19 testing an amount that equals the cash price for such service that is listed by the provider on a public website, or the plan or issuer may negotiate a rate that is lower than the cash price. For all other out-of-network emergency services, which are not subject to the requirements of section 3202(a) (see Q8 above), the minimum payment standards under section 2719A of the PHS Act continue to apply. Notice Requirements",
+    "question_span": [
+      28842,
+      29047
+    ],
+    "answer_span": [
+      29049,
+      31759
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "hicric_ce2cd48e1e9e5b6b",
+    "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-43.pdf",
+    "source_url": "https://www.dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-43.pdf"
+  },
+  {
+    "question": "May a provider, facility, or provider of air ambulance services initiate open negotiation prior to receiving an initial payment or notice of denial of payment for items and services subject to the surprise billing protections?",
+    "text": "No. In general, providers, facilities, and providers of air ambulance services have 30 business days from the day they receive an initial payment or a notice of denial of payment from the plan 31 26 CFR 54.9816-4T(b)(3)(iv)(A), 29 CFR 2590.716-4(b)(3)(iv)(A), and 45 CFR 149.110(b)(3)(iv)(A); 26 CFR 54.9816-5T(c)(3), 29 CFR 2590.716-5(c)(3), and 45 CFR 149.120(c)(3); and 26 CFR 54.9817-1T(b)(4)(i), 29 CFR 2590.717-1(b)(4)(i), and 45 CFR 149.130(b)(4)(i). 32 26 CFR 54.9816-6T(d)(1), 26 CFR 54.9816-6(d)(1), 29 CFR 2590.716-6(d)(1), and 45 CFR 149.140(d)(1). 33 26 CFR 54.9816-8T(b)(1), 29 CFR 2590.716-8(b)(1), and 45 CFR 149.510(b)(1). 34 The Departments note that a plan or issuer must send an initial payment or notice of denial of payment directly to the provider, facility, or provider of air ambulance services, as applicable. 26 CFR 54.9816-4T(b)(3)(iv)(A), 54.9816-5T(c)(3), and 54.9817(b)(4)(i); 29 CFR 2590.716-4(b)(3)(iv)(A), 2590.716-5(c)(3), and 2590.717- 1(b)(4)(i); or 45 CFR 149.110(b)(3)(iv)(A), 149.120(c)(3), and 149.130(b)(4)(i). A plan or issuer does not satisfy its obligation under the statute and regulations if the plan or issuer sends an initial payment or notice of denial of payment to a participant, beneficiary, or enrollee that was furnished items or services by a nonparticipating provider, facility, or provider of air ambulance services. 35 86 FR 36872, 36900 (July 13, 2021). 19 or issuer regarding an item or service that falls within the scope of the surprise billing provisions to initiate open negotiation with respect to that item or service. If a plan or issuer fails to send an initial payment or notice of denial of payment not later than 30 calendar days after the plan or issuer receives a bill related to such an item or service from a nonparticipating provider, facility, or provider of air ambulance services that includes the information necessary to decide a claim for payment (i.e., a clean claim), the 30-business-day timeline to initiate open negotiations will not begin until an initial payment or notice of denial of payment is made. Providers, facilities, and providers of air ambulance services with concerns about a plans or issuers compliance with the requirements to timely make an initial payment or provide notice of denial of payment may contact the No Surprises Help Desk at 1-800-985-3059 or submit a complaint at https://www.cms.gov/nosurprises/policies-and-resources/providers-submit-a- billing-complaint. The Departments will generally enforce the applicable provisions of the No Surprises Act, in conjunction with states where applicable.",
+    "question_span": [
+      65740,
+      65968
+    ],
+    "answer_span": [
+      65970,
+      68622
+    ],
+    "extraction_method": "numbered_question_terminated_line",
+    "source_record_id": "hicric_cd50813a6e241c53",
+    "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-55.pdf",
+    "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-55.pdf"
+  }
+]

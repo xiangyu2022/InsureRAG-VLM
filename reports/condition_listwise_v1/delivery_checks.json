@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-10-01T23:29:41.129989+00:00",
+  "status": "verified",
+  "immutable_experiment_artifacts_rechecked": true,
+  "deep_training_verification_sha256": "23383074528654d8cc3a32e7018f525cf94ded19018e905ff5188aa8dd8c11d8",
+  "selected_weights_sha256": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+  "smoke_queries": [
+    {
+      "corpus": "condition",
+      "answer_candidates": 48172,
+      "artifact": "query_condition_smoke.json",
+      "sha256": "10c49b417b0875120250aaaef0a0f21e28d6b717184c641f0a2ac86049ce56ae",
+      "execution_passed": true,
+      "expert_answer_quality_judged": false
+    },
+    {
+      "corpus": "insuranceqa",
+      "answer_candidates": 27413,
+      "artifact": "query_insuranceqa_smoke.json",
+      "sha256": "b5a1eafcc0ad21c160906b93e8436b81b6a41e5f61ca90723e5431e1a2fdd170",
+      "execution_passed": true,
+      "expert_answer_quality_judged": false
+    },
+    {
+      "corpus": "hicric",
+      "answer_candidates": 78830,
+      "artifact": "query_hicric_smoke.json",
+      "sha256": "951b5b91a5645862b17fc70701108342e4104d231fb0c3aaa66755ac94b682a8",
+      "execution_passed": true,
+      "expert_answer_quality_judged": false
+    }
+  ],
+  "software_suites": {
+    "full": {
+      "summary": "294 passed, 58 subtests passed in 7.97s",
+      "log": "pytest_delivery_full.txt",
+      "sha256": "7e4f3b6bbdec4a0e6e2bc9cc66315b5e06a7aeacb9f1f27abc794aa624b04174"
+    },
+    "minimal": {
+      "summary": "273 passed, 9 skipped, 58 subtests passed in 6.89s",
+      "log": "pytest_delivery_minimal.txt",
+      "sha256": "3c9b3b9dbb4407967ee59d350b77fce574dbbabe3f73e4e6e5e6c1e49ff4daf6"
+    }
+  },
+  "git_diff_check": "passed",
+  "future_parser_changes_frozen_fixture": false,
+  "post_test_parser_repair_used_to_rescore": false,
+  "figure_visually_reviewed": "docs/assets/condition_results.png",
+  "verification_code_sha256": "9ea5005d97af6fca91b7a1af3a8b87795ea6d6219f5b89f8d96d604691f79e36"
+}

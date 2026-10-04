@@ -1,0 +1,14 @@
+{"epoch": 1, "optimizer_step": 200, "groups_seen_in_epoch": 3200, "mean_supervised_loss": 1.0877502688765526, "mean_teacher_kl": 1.7006469249725342, "pairs_seen": 19200, "seconds": 43.9}
+{"epoch": 1, "optimizer_step": 400, "groups_seen_in_epoch": 6400, "mean_supervised_loss": 1.0653263101540507, "mean_teacher_kl": 1.350680457195267, "pairs_seen": 38400, "seconds": 88.6}
+{"epoch": 1, "optimizer_step": 600, "groups_seen_in_epoch": 9600, "mean_supervised_loss": 1.0440061774353186, "mean_teacher_kl": 1.2144363186974079, "pairs_seen": 57600, "seconds": 132.0}
+{"epoch": 1, "optimizer_step": 800, "groups_seen_in_epoch": 12800, "mean_supervised_loss": 1.0279868666641414, "mean_teacher_kl": 1.1371743754134513, "pairs_seen": 76800, "seconds": 176.0}
+{"epoch": 1, "optimizer_step": 1000, "groups_seen_in_epoch": 16000, "mean_supervised_loss": 1.0204275046288966, "mean_teacher_kl": 1.0904392628725619, "pairs_seen": 96000, "seconds": 220.0}
+{"epoch": 1, "optimizer_step": 1200, "groups_seen_in_epoch": 19200, "mean_supervised_loss": 1.0130572460467617, "mean_teacher_kl": 1.0613638375808174, "pairs_seen": 115200, "seconds": 263.4}
+{"epoch": 1, "optimizer_step": 1287, "groups_seen_in_epoch": 20580, "mean_supervised_loss": 1.0076102569916505, "mean_teacher_kl": 1.0523281607541561, "pairs_seen": 123480, "seconds": 283.9}
+{"epoch": 2, "optimizer_step": 1400, "groups_seen_in_epoch": 1808, "mean_supervised_loss": 0.963484985111034, "mean_teacher_kl": 0.895878780600244, "pairs_seen": 134328, "seconds": 309.0}
+{"epoch": 2, "optimizer_step": 1600, "groups_seen_in_epoch": 5008, "mean_supervised_loss": 0.9576858100466454, "mean_teacher_kl": 0.9208284889142544, "pairs_seen": 153528, "seconds": 353.7}
+{"epoch": 2, "optimizer_step": 1800, "groups_seen_in_epoch": 8208, "mean_supervised_loss": 0.9601279985573556, "mean_teacher_kl": 0.9027462727036218, "pairs_seen": 172728, "seconds": 398.8}
+{"epoch": 2, "optimizer_step": 2000, "groups_seen_in_epoch": 11408, "mean_supervised_loss": 0.9549698515012756, "mean_teacher_kl": 0.9111526781303853, "pairs_seen": 191928, "seconds": 443.3}
+{"epoch": 2, "optimizer_step": 2200, "groups_seen_in_epoch": 14608, "mean_supervised_loss": 0.9527293150471309, "mean_teacher_kl": 0.902350357095104, "pairs_seen": 211128, "seconds": 486.8}
+{"epoch": 2, "optimizer_step": 2400, "groups_seen_in_epoch": 17808, "mean_supervised_loss": 0.9512868276918567, "mean_teacher_kl": 0.9017180149005818, "pairs_seen": 230328, "seconds": 530.7}
+{"epoch": 2, "optimizer_step": 2574, "groups_seen_in_epoch": 20580, "mean_supervised_loss": 0.9516889056149215, "mean_teacher_kl": 0.9019928443282698, "pairs_seen": 246960, "seconds": 569.0}

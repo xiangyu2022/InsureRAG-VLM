@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-10-01T22:10:27.800046+00:00",
+  "max_sequence_length": 512,
+  "policy": "longest_first; no cases removed or relabeled",
+  "counts": {
+    "train_government": {
+      "questions": 46,
+      "over_512": 6,
+      "percent_over_512": 13.043478260869565,
+      "median_tokens": 306.5,
+      "p95_tokens": 626.75,
+      "max_tokens": 886
+    },
+    "train_general": {
+      "questions": 6000,
+      "over_512": 0,
+      "percent_over_512": 0.0,
+      "median_tokens": 160.0,
+      "p95_tokens": 292.0,
+      "max_tokens": 498
+    },
+    "test_government": {
+      "questions": 157,
+      "over_512": 5,
+      "percent_over_512": 3.1847133757961785,
+      "median_tokens": 189.0,
+      "p95_tokens": 490.59999999999985,
+      "max_tokens": 727
+    }
+  },
+  "long_pairs": [
+    {
+      "id": "condgov_q_20f57ed96ded0fd1",
+      "split": "train",
+      "domain": "government",
+      "pair_tokens": 517
+    },
+    {
+      "id": "condgov_q_2217b9d3f7799536",
+      "split": "train",
+      "domain": "government",
+      "pair_tokens": 635
+    },
+    {
+      "id": "condgov_q_425baf4508303bf4",
+      "split": "train",
+      "domain": "government",
+      "pair_tokens": 516
+    },
+    {
+      "id": "condgov_q_a02450484e361a43",
+      "split": "train",
+      "domain": "government",
+      "pair_tokens": 602
+    },
+    {
+      "id": "condgov_q_c6aedc4fe5ae481b",
+      "split": "train",
+      "domain": "government",
+      "pair_tokens": 886
+    },
+    {
+      "id": "condgov_q_e2f0dbf5bb6b6ac4",
+      "split": "train",
+      "domain": "government",
+      "pair_tokens": 870
+    },
+    {
+      "id": "condgov_q_219ed0cf5e65379a",
+      "split": "test",
+      "domain": "government",
+      "pair_tokens": 607
+    },
+    {
+      "id": "condgov_q_410e28166a387980",
+      "split": "test",
+      "domain": "government",
+      "pair_tokens": 727
+    },
+    {
+      "id": "condgov_q_6fb070e0d773df01",
+      "split": "test",
+      "domain": "government",
+      "pair_tokens": 534
+    },
+    {
+      "id": "condgov_q_769abb0491205765",
+      "split": "test",
+      "domain": "government",
+      "pair_tokens": 592
+    },
+    {
+      "id": "condgov_q_7a5e38cadd31c359",
+      "split": "test",
+      "domain": "government",
+      "pair_tokens": 517
+    }
+  ],
+  "fixture_sha256": "90fa68ccfa46dd94c8a64be774d4d4c87e6f268be9af0f80f251a598e383c9c9",
+  "code_sha256": "1edd593d7c21b9734c23e8968d30653c3ead13a139ba8fcd77f556d9a923e4df",
+  "interpretation": "Input truncation only; does not prove the decisive condition or gold answer span was lost."
+}

@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-10-03T04:21:20.845226+00:00",
+  "fixes_before_gradient_training_and_new_test_scoring": true,
+  "issues": [
+    "Full random-candidate materialization was inefficient; replaced with early-stop unique sampling before training.",
+    "Lexical candidates discarded by normalized-text deduplication were still used as teacher-score keys; corrected to scored-pool intersection."
+  ],
+  "source_data_or_gold_labels_changed": false,
+  "failed_attempts_produced_trained_weights": false,
+  "failed_attempts_produced_test_scores": false,
+  "source_snapshots_sha256": {
+    "mine_before_alias_fix.py": "7c13b6a9d616b3348262f5d391e176cc1879cfb6cc778515ab14bf3eb458cf2a",
+    "mine_before_efficiency_fix.py": "b3afcc785e2db3e25f6b6120f6e4a85695749f20af28d47aa3ca7cede1aa0502"
+  },
+  "cache_comparison": {
+    "answer_embeddings.npy": {
+      "interrupted_attempt": "0a6492fa82b870b50a63ca85945b675beb3489bbfbd30785254889a32690aa8f",
+      "accepted": "0a6492fa82b870b50a63ca85945b675beb3489bbfbd30785254889a32690aa8f"
+    },
+    "training_queries.npy": {
+      "interrupted_attempt": "daddd496c518ea55153031712cfc02c9910fdf63fc84e02145dc41cc3e859137",
+      "accepted": "daddd496c518ea55153031712cfc02c9910fdf63fc84e02145dc41cc3e859137"
+    }
+  },
+  "accepted_mining_code_sha256": "ac98254db8035ac06805988ff9d37ba3784e17ea0d474c25f7097cd8eb858f7c",
+  "training_manifest_sha256": "02fc798aa9f7373bbb3cd8ad810eee50ba7dd5734a97eed59b4ed52b22fed1df"
+}

@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-10-03T01:31:36.208934+00:00",
+  "seed": 42,
+  "unique_training_questions": 31351,
+  "domains": {
+    "insuranceqa": 11629,
+    "government": 259,
+    "general": 13999,
+    "finance": 5464
+  },
+  "query_presentations_per_epoch": 50257,
+  "eligible_document_vectors": 100465,
+  "supervised_positive_pairs": 47239,
+  "positive_text_aliases_are_also_positives": true,
+  "full_candidate_denominator_not_sampled_negatives": true,
+  "training": {
+    "epochs": 2,
+    "learning_rate": 8e-06,
+    "micro_batch": 16,
+    "accumulation": 2,
+    "temperature": 0.05,
+    "repeat_factors": {
+      "insuranceqa": 2,
+      "government": 8,
+      "general": 1,
+      "finance": 2
+    },
+    "retention_weights": {
+      "insuranceqa": 0.25,
+      "government": 1.0,
+      "general": 1.0,
+      "finance": 0.5
+    },
+    "loss": "full allowed-corpus multi-positive softmax + KL(original BGE query distribution || adapted)",
+    "pooling": "cls",
+    "max_query_tokens": 512,
+    "normalization": "l2",
+    "precision": "FP32 parameters/logits with BF16 encoder autocast",
+    "document_encoder_updated": false,
+    "reranker_updated": false
+  },
+  "optimizer_steps_planned": 3142,
+  "trainable_parameters": 33360000,
+  "query_lengths_over_512": 0,
+  "selection_protocol_sha256": "86232ef122b0bcd1e19d34e9470311c8bb56643238919b5240eae2573a7cfa1f",
+  "training_manifest_sha256": "a155b935bbf3daae5e2c96f68e00109ca831ca2dc6c279c368df3998c8f860b3",
+  "document_index_sha256": "6256c65e2c7e71f33d38bb328743ad9f3a0defd5637411f4c0cabcfd02fed4e1",
+  "initial_weights_sha256": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+  "code_sha256": {
+    "scripts/train_query_adaptation.py": "5dca2bd34680dbf7801b2ff78905fd35800d7e5470b8abb8c58b31204fc04d93",
+    "src/insurerag_vlm/query_adaptation.py": "dcc7d325050dbf871808900b239119c01b24e4d92766c239cdd25ac888402180",
+    "scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872",
+    "src/insurerag_vlm/reranker.py": "bb90e6c134b44d7cb0c0cd6ca3165e098827bd908a3a86e73101040cf65734a3",
+    "src/insurerag_vlm/domain_reranker.py": "7f1904228435358bfeb14483f5f599e961e5759f9d2c94f8faaa8368a049aeb5"
+  },
+  "test_used": false
+}

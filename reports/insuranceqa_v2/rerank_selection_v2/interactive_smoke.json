@@ -1,0 +1,30 @@
+{
+  "question": "How does a deductible differ from a copayment?",
+  "retrieval_only": true,
+  "generation_calls": 0,
+  "corpus": "Historical InsuranceQA FAQ answers; not a personal policy or current benefits authority",
+  "config": {
+    "pool": "hybrid100",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "candidates_scored": 191,
+  "seconds_including_model_and_index_loading": 27.441438399953768,
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "23471",
+      "text": "As +Larry Gilmore and +Tony Canas have indicated, the deductible is an amount you must pay before accessing the major medical portion of your health insurance plan. Some health insurance plans have copay's for items such as doctor and Rx while others are simple catastrophic plans where you are responsible for paying all illness and accident related claims before the plan pays anything. If your plan has doc & Rx copay's you generally do not have to meet the deductible before the plan pays. Regardless of whether your plan has copay's or not, keep in mind you are not paying the \"full retail\" price of care when you are in the deductible phase. If you are using par (network) providers, you are only paying the negotiated rate for your care. Also some plans have zero coinsurance after the deductible, meaning the carrier pays 100% of your approved major medical related claims when using par providers."
+    },
+    {
+      "rank": 2,
+      "answer_id": "13628",
+      "text": "Deductibles are the amount of money you have to pay out of your own pocket before the insurance \"kicks in\". For instance, if you have a $1000 deductible and your bill from the hospital is $3000, you would pay the first $1,000, then the insurance would pay their agreed upon portion of the remaining $2,000. Co-insurance is similar to a co-pay in that it is your portion of the bill that is owed. The difference is that a co-pay is a set amount, say $20 per office visit where a co-insurance is a percentage of the bill."
+    },
+    {
+      "rank": 3,
+      "answer_id": "13195",
+      "text": "A deductible is the amount you have to pay before insurance pays for your medical costs. Say you have a $1000 deductible and you go to the doctor and they bill you $500. You are responsible for paying all of that $500. Say the next time you go, they bill you $1000. Well you would pay $500 and then the other $500 will be covered by your insurance, unless you also have to pay coinsurance and copay, then you will need to pay more out of pocket costs."
+    }
+  ]
+}

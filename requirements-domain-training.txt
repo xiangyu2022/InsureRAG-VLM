@@ -1,0 +1,5 @@
+-r requirements-scale.txt
+pyarrow>=20
+huggingface-hub>=1,<2
+# Actual CUDA training additionally needs a PyTorch build matching the local GPU.
+# Recorded run: torch 2.14.0+cu130, transformers 5.17.0, RTX 4070 Laptop 8GB.

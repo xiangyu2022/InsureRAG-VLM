@@ -1,0 +1,3381 @@
+{
+  "status": "posthoc_sensitivity_audit_not_model_selection",
+  "test_questions": 2000,
+  "near_duplicate_rule": "char_wb TF-IDF 3-5 grams, min_df=2; nearest train/valid cosine >= 0.92. Lexical proxy, not semantic deduplication.",
+  "near_duplicate_count": 476,
+  "near_duplicates": [
+    {
+      "id": "iqa_v2_test_00002",
+      "question": "What Does Renters Insurance Cover?",
+      "neighbor_id": "iqa_v2_train_08812",
+      "neighbor_question": "What Does The Renters Insurance Cover?",
+      "cosine": 0.9490991482337449
+    },
+    {
+      "id": "iqa_v2_test_00004",
+      "question": "What Should You Look For In Long Term Care Insurance?",
+      "neighbor_id": "iqa_v2_valid_00988",
+      "neighbor_question": "What Should I Look For In Long Term Care Insurance?",
+      "cosine": 0.9655700332302137
+    },
+    {
+      "id": "iqa_v2_test_00007",
+      "question": "What Companies Will Issue Life Insurance To The Mentally Ill?",
+      "neighbor_id": "iqa_v2_train_02554",
+      "neighbor_question": "Which Companies Will Issue Life Insurance To The Mentally Ill?",
+      "cosine": 0.9477040545564452
+    },
+    {
+      "id": "iqa_v2_test_00019",
+      "question": "Is Disability Insurance Necessary?",
+      "neighbor_id": "iqa_v2_train_12523",
+      "neighbor_question": "Why Is Disability Insurance Necessary?",
+      "cosine": 0.973381287938518
+    },
+    {
+      "id": "iqa_v2_test_00025",
+      "question": "How Long To Plan For Retirement?",
+      "neighbor_id": "iqa_v2_valid_01937",
+      "neighbor_question": "How To Plan For Retirement?",
+      "cosine": 0.9316491659031876
+    },
+    {
+      "id": "iqa_v2_test_00028",
+      "question": "How To File A Renters Insurance Claim?",
+      "neighbor_id": "iqa_v2_train_07474",
+      "neighbor_question": "How Do You File A Renters Insurance Claim?",
+      "cosine": 0.943452544288168
+    },
+    {
+      "id": "iqa_v2_test_00041",
+      "question": "Why Should You Buy Long Term Care Insurance?",
+      "neighbor_id": "iqa_v2_train_11301",
+      "neighbor_question": "Why Should I Buy Long Term Care Insurance?",
+      "cosine": 0.9541631809370801
+    },
+    {
+      "id": "iqa_v2_test_00046",
+      "question": "Why Is Universal Life Insurance Bad?",
+      "neighbor_id": "iqa_v2_train_09641",
+      "neighbor_question": "Is Universal Life Insurance Bad?",
+      "cosine": 0.9671368697491073
+    },
+    {
+      "id": "iqa_v2_test_00048",
+      "question": "Does Homeowners Insurance Cover Renters?",
+      "neighbor_id": "iqa_v2_train_08289",
+      "neighbor_question": "Does My Homeowners Insurance Cover Renters?",
+      "cosine": 0.9774544647627309
+    },
+    {
+      "id": "iqa_v2_test_00051",
+      "question": "Can Medicaid Take Your Life Insurance?",
+      "neighbor_id": "iqa_v2_valid_00814",
+      "neighbor_question": "Does Medicaid Take Your Life Insurance?",
+      "cosine": 0.9564192641461161
+    },
+    {
+      "id": "iqa_v2_test_00053",
+      "question": "Does Medicare Cover Emergency Room Visits?",
+      "neighbor_id": "iqa_v2_train_01900",
+      "neighbor_question": "Does Health Insurance Cover Emergency Room Visits?",
+      "cosine": 0.9387624483497594
+    },
+    {
+      "id": "iqa_v2_test_00054",
+      "question": "What Does Car Insurance Group 5 Mean?",
+      "neighbor_id": "iqa_v2_train_06734",
+      "neighbor_question": "What Does Car Insurance Group 7 Mean?",
+      "cosine": 0.9218881003191167
+    },
+    {
+      "id": "iqa_v2_test_00055",
+      "question": "What Is A Renters Insurance Declaration Page?",
+      "neighbor_id": "iqa_v2_train_08767",
+      "neighbor_question": "What Is Home Insurance Declaration Page?",
+      "cosine": 0.920808329694069
+    },
+    {
+      "id": "iqa_v2_test_00066",
+      "question": "Do Annuities Have Beneficiaries?",
+      "neighbor_id": "iqa_v2_train_11657",
+      "neighbor_question": "Can Annuities Have Beneficiaries?",
+      "cosine": 0.9818719385447817
+    },
+    {
+      "id": "iqa_v2_test_00068",
+      "question": "What Is Employer Sponsored Retirement Plan?",
+      "neighbor_id": "iqa_v2_train_08240",
+      "neighbor_question": "What Is An Employer Sponsored Retirement Plan?",
+      "cosine": 0.9929377284342514
+    },
+    {
+      "id": "iqa_v2_test_00072",
+      "question": "What Is The Right Age To Buy Long Term Care Insurance?",
+      "neighbor_id": "iqa_v2_train_11077",
+      "neighbor_question": "What Is The Right Age To Get Long Term Care Insurance?",
+      "cosine": 0.9254007263355298
+    },
+    {
+      "id": "iqa_v2_test_00073",
+      "question": "Can I Get Long Term Care Insurance For My Parents?",
+      "neighbor_id": "iqa_v2_train_02068",
+      "neighbor_question": "Can I Buy Long Term Care Insurance For My Parents?",
+      "cosine": 0.9210162448009739
+    },
+    {
+      "id": "iqa_v2_test_00077",
+      "question": "Can Disability Insurance Cover Maternity Leave?",
+      "neighbor_id": "iqa_v2_train_06600",
+      "neighbor_question": "Does Disability Insurance Cover Maternity Leave?",
+      "cosine": 0.9793522582781673
+    },
+    {
+      "id": "iqa_v2_test_00078",
+      "question": "When To Sign Up For Medicare Part A?",
+      "neighbor_id": "iqa_v2_train_12564",
+      "neighbor_question": "How To Sign Up For Medicare Part A?",
+      "cosine": 0.9328215974152897
+    },
+    {
+      "id": "iqa_v2_test_00081",
+      "question": "What Should Life Insurance Cost?",
+      "neighbor_id": "iqa_v2_train_00782",
+      "neighbor_question": "What Should Term Life Insurance Cost?",
+      "cosine": 0.9237391261277303
+    },
+    {
+      "id": "iqa_v2_test_00085",
+      "question": "When To File A Claim With Homeowners Insurance?",
+      "neighbor_id": "iqa_v2_valid_00996",
+      "neighbor_question": "When To File A Claim On Homeowners Insurance?",
+      "cosine": 0.9210432895343377
+    },
+    {
+      "id": "iqa_v2_test_00087",
+      "question": "Can You Get Life Insurance With Cancer?",
+      "neighbor_id": "iqa_v2_train_09316",
+      "neighbor_question": "Can I Get Life Insurance With Cancer?",
+      "cosine": 0.9554792189466282
+    },
+    {
+      "id": "iqa_v2_test_00089",
+      "question": "What Life Insurance Is Best Term Or Whole?",
+      "neighbor_id": "iqa_v2_valid_00262",
+      "neighbor_question": "What Is The Best Life Insurance Term Or Whole?",
+      "cosine": 0.9686032591104632
+    },
+    {
+      "id": "iqa_v2_test_00090",
+      "question": "Does Homeowners Insurance Cover Vandalism?",
+      "neighbor_id": "iqa_v2_train_10497",
+      "neighbor_question": "Does Homeowners Insurance Cover Car Vandalism?",
+      "cosine": 0.984802725642469
+    },
+    {
+      "id": "iqa_v2_test_00095",
+      "question": "How Long Does It Take To Process A Renters Insurance Claim?",
+      "neighbor_id": "iqa_v2_train_08619",
+      "neighbor_question": "How Long Does It Take To Process A Life Insurance Claim?",
+      "cosine": 0.9335269815403319
+    },
+    {
+      "id": "iqa_v2_test_00097",
+      "question": "What Do You Need To Know About Life Insurance?",
+      "neighbor_id": "iqa_v2_train_12475",
+      "neighbor_question": "What Do I Need To Know About Term Life Insurance?",
+      "cosine": 0.9205247849820095
+    },
+    {
+      "id": "iqa_v2_test_00098",
+      "question": "Does Medicare Pay For Circumcision?",
+      "neighbor_id": "iqa_v2_train_01965",
+      "neighbor_question": "Does Medicare Cover Circumcision?",
+      "cosine": 0.955543028412151
+    },
+    {
+      "id": "iqa_v2_test_00105",
+      "question": "How Much Commission Does Health Insurance Agent Make?",
+      "neighbor_id": "iqa_v2_train_11624",
+      "neighbor_question": "How Much Commission Does An Auto Insurance Agent Make?",
+      "cosine": 0.9350739288916154
+    },
+    {
+      "id": "iqa_v2_test_00106",
+      "question": "Can I Get Health Insurance If I Have Hepatitis C?",
+      "neighbor_id": "iqa_v2_train_05364",
+      "neighbor_question": "Can I Get Life Insurance If I Have Hepatitis C?",
+      "cosine": 0.9517279738898846
+    },
+    {
+      "id": "iqa_v2_test_00110",
+      "question": "What Do You Need In Renters Insurance?",
+      "neighbor_id": "iqa_v2_valid_01252",
+      "neighbor_question": "What Do You Need For Renters Insurance?",
+      "cosine": 0.9368307937384773
+    },
+    {
+      "id": "iqa_v2_test_00115",
+      "question": "What Are Medigap Plans?",
+      "neighbor_id": "iqa_v2_train_08413",
+      "neighbor_question": "What Are The Medigap Plans?",
+      "cosine": 0.9658890284234793
+    },
+    {
+      "id": "iqa_v2_test_00116",
+      "question": "What Is Waiting Period In Disability Insurance?",
+      "neighbor_id": "iqa_v2_train_10783",
+      "neighbor_question": "What Is The Waiting Period For Disability Insurance?",
+      "cosine": 0.9645901687875711
+    },
+    {
+      "id": "iqa_v2_test_00125",
+      "question": "Who Is Covered Under Disability Insurance?",
+      "neighbor_id": "iqa_v2_train_02873",
+      "neighbor_question": "What Is Covered Under Disability Insurance?",
+      "cosine": 0.9424554213582562
+    },
+    {
+      "id": "iqa_v2_test_00136",
+      "question": "How Much Can You Make Selling Life Insurance?",
+      "neighbor_id": "iqa_v2_valid_01100",
+      "neighbor_question": "How Much Can You Make Selling Car Insurance?",
+      "cosine": 0.957206732865373
+    },
+    {
+      "id": "iqa_v2_test_00139",
+      "question": "Why Is My Car Insurance Deductible So High?",
+      "neighbor_id": "iqa_v2_train_09950",
+      "neighbor_question": "Why Is My Health Insurance Deductible So High?",
+      "cosine": 0.940496295147923
+    },
+    {
+      "id": "iqa_v2_test_00140",
+      "question": "What Does Elimination Period Mean For Disability Insurance?",
+      "neighbor_id": "iqa_v2_train_02489",
+      "neighbor_question": "What Is An Elimination Period For Disability Insurance?",
+      "cosine": 0.9398825013980743
+    },
+    {
+      "id": "iqa_v2_test_00147",
+      "question": "How To Compare Home Insurance Rates?",
+      "neighbor_id": "iqa_v2_train_01357",
+      "neighbor_question": "How To Compare Life Insurance Rates?",
+      "cosine": 0.9253745531181358
+    },
+    {
+      "id": "iqa_v2_test_00149",
+      "question": "Can Life Insurance Companies Drop You?",
+      "neighbor_id": "iqa_v2_train_00266",
+      "neighbor_question": "Can Car Insurance Companies Drop You?",
+      "cosine": 0.9590009881966101
+    },
+    {
+      "id": "iqa_v2_test_00154",
+      "question": "Who Qualifies For Disability Insurance?",
+      "neighbor_id": "iqa_v2_train_11135",
+      "neighbor_question": "What Qualifies You For Disability Insurance?",
+      "cosine": 0.9252032996921211
+    },
+    {
+      "id": "iqa_v2_test_00185",
+      "question": "How Is Medicare Advantage Affected By Obamacare?",
+      "neighbor_id": "iqa_v2_train_11610",
+      "neighbor_question": "Is Medicare Advantage Affected By Obamacare?",
+      "cosine": 0.9926487737631297
+    },
+    {
+      "id": "iqa_v2_test_00189",
+      "question": "Can You Cancel Car Insurance At Any Time?",
+      "neighbor_id": "iqa_v2_train_03328",
+      "neighbor_question": "Can I Cancel Car Insurance At Any Time?",
+      "cosine": 0.9659847020965426
+    },
+    {
+      "id": "iqa_v2_test_00190",
+      "question": "What Does Surrender Value Mean On A Life Insurance Policy?",
+      "neighbor_id": "iqa_v2_valid_01383",
+      "neighbor_question": "What Does Cash Surrender Value Mean On Life Insurance Policy?",
+      "cosine": 0.9421082136471932
+    },
+    {
+      "id": "iqa_v2_test_00192",
+      "question": "Why Would You Be Turned Down For Life Insurance?",
+      "neighbor_id": "iqa_v2_valid_00844",
+      "neighbor_question": "Why Would I Be Turned Down For Life Insurance?",
+      "cosine": 0.9767725297342745
+    },
+    {
+      "id": "iqa_v2_test_00196",
+      "question": "Does Car Insurance Cover Dwi?",
+      "neighbor_id": "iqa_v2_train_12501",
+      "neighbor_question": "Does Car Insurance Cover DWI?",
+      "cosine": 1.0
+    },
+    {
+      "id": "iqa_v2_test_00199",
+      "question": "Can You Get Auto Insurance Without Owning A Car?",
+      "neighbor_id": "iqa_v2_train_09789",
+      "neighbor_question": "Can I Get Auto Insurance Without Owning A Car?",
+      "cosine": 0.9742099333016516
+    },
+    {
+      "id": "iqa_v2_test_00203",
+      "question": "What Is Medicare Plan J?",
+      "neighbor_id": "iqa_v2_train_11999",
+      "neighbor_question": "What Is A Medicare Plan J?",
+      "cosine": 0.994579868789673
+    },
+    {
+      "id": "iqa_v2_test_00216",
+      "question": "Can I Buy A Life Insurance Policy On My Brother?",
+      "neighbor_id": "iqa_v2_train_07680",
+      "neighbor_question": "Can I Get A Life Insurance Policy On My Brother?",
+      "cosine": 0.9333707766370833
+    },
+    {
+      "id": "iqa_v2_test_00218",
+      "question": "How Can I Find Out If Someone Has Auto Insurance?",
+      "neighbor_id": "iqa_v2_train_03790",
+      "neighbor_question": "How Can I Find Out If Someone Has Car Insurance?",
+      "cosine": 0.9321424913454454
+    },
+    {
+      "id": "iqa_v2_test_00219",
+      "question": "Will My Health Insurance Cover Gastric Bypass?",
+      "neighbor_id": "iqa_v2_train_03868",
+      "neighbor_question": "Does My Health Insurance Cover Gastric Bypass?",
+      "cosine": 0.9604267369092241
+    },
+    {
+      "id": "iqa_v2_test_00229",
+      "question": "What Does The Medicare Suffix T Mean?",
+      "neighbor_id": "iqa_v2_train_11527",
+      "neighbor_question": "What Does Medicare Suffix T Mean?",
+      "cosine": 0.9827259833635807
+    },
+    {
+      "id": "iqa_v2_test_00231",
+      "question": "Does Owning A Trampoline Affect Homeowners Insurance?",
+      "neighbor_id": "iqa_v2_valid_01348",
+      "neighbor_question": "Does Owning A Trampoline Affect Home Insurance?",
+      "cosine": 0.9384657589756419
+    },
+    {
+      "id": "iqa_v2_test_00236",
+      "question": "Can You Buy Short Term Disability Insurance?",
+      "neighbor_id": "iqa_v2_train_05515",
+      "neighbor_question": "Can I Buy Short Term Disability Insurance?",
+      "cosine": 0.963434314440412
+    },
+    {
+      "id": "iqa_v2_test_00240",
+      "question": "Does Term Life Insurance Have Cash Value?",
+      "neighbor_id": "iqa_v2_train_05265",
+      "neighbor_question": "Does Term Life Insurance Have A Cash Value?",
+      "cosine": 0.9968717516587062
+    },
+    {
+      "id": "iqa_v2_test_00242",
+      "question": "What Is Guaranteed Cash Value For Life Insurance?",
+      "neighbor_id": "iqa_v2_train_07579",
+      "neighbor_question": "What Is Guaranteed Cash Value In Life Insurance?",
+      "cosine": 0.9788649984955577
+    },
+    {
+      "id": "iqa_v2_test_00248",
+      "question": "What Is Covered With Critical Illness Insurance?",
+      "neighbor_id": "iqa_v2_train_11821",
+      "neighbor_question": "What Is Covered By Critical Illness Insurance?",
+      "cosine": 0.9288041170367973
+    },
+    {
+      "id": "iqa_v2_test_00249",
+      "question": "What Happens When My Term Life Insurance Ends?",
+      "neighbor_id": "iqa_v2_train_02365",
+      "neighbor_question": "What Happens When Term Life Insurance Ends?",
+      "cosine": 0.9852282173151379
+    },
+    {
+      "id": "iqa_v2_test_00253",
+      "question": "How Do I Calculate How Much Life Insurance I Need?",
+      "neighbor_id": "iqa_v2_valid_00019",
+      "neighbor_question": "How To Calculate How Much Life Insurance I Need?",
+      "cosine": 0.9792235754283729
+    },
+    {
+      "id": "iqa_v2_test_00261",
+      "question": "When Is Disability Insurance Worth It?",
+      "neighbor_id": "iqa_v2_train_10849",
+      "neighbor_question": "Is Disability Insurance Worth It?",
+      "cosine": 0.9459786245845077
+    },
+    {
+      "id": "iqa_v2_test_00264",
+      "question": "Does Renters Insurance Cover Air Conditioners?",
+      "neighbor_id": "iqa_v2_valid_01760",
+      "neighbor_question": "Does Home Insurance Cover Air Conditioners?",
+      "cosine": 0.9230680875587463
+    },
+    {
+      "id": "iqa_v2_test_00265",
+      "question": "How Much Is Health Insurance For A Married Couple?",
+      "neighbor_id": "iqa_v2_train_12197",
+      "neighbor_question": "How Much Does Health Insurance Cost For A Married Couple?",
+      "cosine": 0.9509228978474595
+    },
+    {
+      "id": "iqa_v2_test_00275",
+      "question": "At What Age Does Life Insurance Go Up?",
+      "neighbor_id": "iqa_v2_train_01571",
+      "neighbor_question": "At What Age Does Term Life Insurance Go Up?",
+      "cosine": 0.9309680106754882
+    },
+    {
+      "id": "iqa_v2_test_00279",
+      "question": "How Much Is A Medicare Levy Surcharge?",
+      "neighbor_id": "iqa_v2_train_01668",
+      "neighbor_question": "How Much Is The Medicare Levy Surcharge?",
+      "cosine": 0.9834672797947439
+    },
+    {
+      "id": "iqa_v2_test_00280",
+      "question": "How Much Does Life Insurance Typically Cost?",
+      "neighbor_id": "iqa_v2_train_09468",
+      "neighbor_question": "How Much Does Auto Insurance Typically Cost?",
+      "cosine": 0.9406473704015877
+    },
+    {
+      "id": "iqa_v2_test_00282",
+      "question": "How Does Social Security Fit In A Retirement Plan?",
+      "neighbor_id": "iqa_v2_train_12151",
+      "neighbor_question": "How Does Social Security Fit In My Retirement Plan?",
+      "cosine": 0.9896232471818178
+    },
+    {
+      "id": "iqa_v2_test_00284",
+      "question": "Is My Bike Covered Under Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_03376",
+      "neighbor_question": "Is A Bike Covered Under Renters Insurance?",
+      "cosine": 0.9820010731112637
+    },
+    {
+      "id": "iqa_v2_test_00286",
+      "question": "Who Has The Cheapest Term Life Insurance?",
+      "neighbor_id": "iqa_v2_train_01288",
+      "neighbor_question": "Who Has The Cheapest Life Insurance?",
+      "cosine": 0.94861090965475
+    },
+    {
+      "id": "iqa_v2_test_00292",
+      "question": "How Much Does A Claim Affect Car Insurance?",
+      "neighbor_id": "iqa_v2_valid_01918",
+      "neighbor_question": "How Much Does A Claim Affect Home Insurance?",
+      "cosine": 0.9235174562024376
+    },
+    {
+      "id": "iqa_v2_test_00296",
+      "question": "How Much Does Homeowners Insurance Go Up With A Pool?",
+      "neighbor_id": "iqa_v2_train_08449",
+      "neighbor_question": "Does Homeowners Insurance Go Up With A Pool?",
+      "cosine": 0.9501305816647506
+    },
+    {
+      "id": "iqa_v2_test_00297",
+      "question": "Is Military Retired Pay A Qualified Retirement Plan?",
+      "neighbor_id": "iqa_v2_train_06011",
+      "neighbor_question": "Is Military Retirement A Qualified Retirement Plan?",
+      "cosine": 0.9230501304569046
+    },
+    {
+      "id": "iqa_v2_test_00300",
+      "question": "Who Has The Best Retirement Plan?",
+      "neighbor_id": "iqa_v2_train_05405",
+      "neighbor_question": "Who Has Best Retirement Plan?",
+      "cosine": 0.9722070421000301
+    },
+    {
+      "id": "iqa_v2_test_00302",
+      "question": "What Is A Good Homeowners Insurance Deductible?",
+      "neighbor_id": "iqa_v2_train_07137",
+      "neighbor_question": "What Is A Homeowners Insurance Deductible?",
+      "cosine": 0.9284811516219285
+    },
+    {
+      "id": "iqa_v2_test_00303",
+      "question": "What Is The Biggest Life Insurance Company?",
+      "neighbor_id": "iqa_v2_train_00451",
+      "neighbor_question": "Who Is The Biggest Life Insurance Company?",
+      "cosine": 0.9643406197965105
+    },
+    {
+      "id": "iqa_v2_test_00304",
+      "question": "Does Asthma Affect Life Insurance?",
+      "neighbor_id": "iqa_v2_train_12125",
+      "neighbor_question": "How Does Asthma Affect Life Insurance?",
+      "cosine": 0.9894574664786626
+    },
+    {
+      "id": "iqa_v2_test_00310",
+      "question": "Does Car Insurance Build Your Credit?",
+      "neighbor_id": "iqa_v2_train_03977",
+      "neighbor_question": "Does Auto Insurance Build Your Credit?",
+      "cosine": 0.938396060978481
+    },
+    {
+      "id": "iqa_v2_test_00323",
+      "question": "Can You Negotiate Life Insurance Rates?",
+      "neighbor_id": "iqa_v2_train_05256",
+      "neighbor_question": "Can You Negotiate Auto Insurance Rates?",
+      "cosine": 0.9542116731153845
+    },
+    {
+      "id": "iqa_v2_test_00325",
+      "question": "Does My Renters Insurance Cover My Roommate?",
+      "neighbor_id": "iqa_v2_train_11903",
+      "neighbor_question": "Does Renters Insurance Cover My Roommate?",
+      "cosine": 0.9877312025507756
+    },
+    {
+      "id": "iqa_v2_test_00337",
+      "question": "Do You Need Home Insurance Before Closing?",
+      "neighbor_id": "iqa_v2_valid_00066",
+      "neighbor_question": "Do You Need Homeowners Insurance Before Closing?",
+      "cosine": 0.9281320582838352
+    },
+    {
+      "id": "iqa_v2_test_00339",
+      "question": "How Much Does Life Insurance Cost For A 40 Year Old?",
+      "neighbor_id": "iqa_v2_valid_01742",
+      "neighbor_question": "Much Does Life Insurance Cost A 40 Year Old?",
+      "cosine": 0.9633014731143263
+    },
+    {
+      "id": "iqa_v2_test_00347",
+      "question": "What Is The Cost Of Part D Medicare?",
+      "neighbor_id": "iqa_v2_train_07762",
+      "neighbor_question": "What Is The Cost Of Part B Medicare?",
+      "cosine": 0.9529048960501296
+    },
+    {
+      "id": "iqa_v2_test_00355",
+      "question": "Does Medicare Pay For Urgent Care?",
+      "neighbor_id": "iqa_v2_train_04822",
+      "neighbor_question": "Will Medicare Pay For Urgent Care?",
+      "cosine": 0.9280337090202682
+    },
+    {
+      "id": "iqa_v2_test_00364",
+      "question": "Can I Get Insurance On A Car I Don't Own?",
+      "neighbor_id": "iqa_v2_train_02250",
+      "neighbor_question": "Can I Get Auto Insurance On A Car I Don't Own?",
+      "cosine": 0.9483702093910633
+    },
+    {
+      "id": "iqa_v2_test_00379",
+      "question": "Does Home Insurance Cover Structural Damage?",
+      "neighbor_id": "iqa_v2_train_12171",
+      "neighbor_question": "Does Renters Insurance Cover Structural Damage?",
+      "cosine": 0.9295942848281814
+    },
+    {
+      "id": "iqa_v2_test_00381",
+      "question": "Will My Homeowners Insurance Cover Asbestos Removal?",
+      "neighbor_id": "iqa_v2_train_08157",
+      "neighbor_question": "Will Homeowners Insurance Cover Asbestos Removal?",
+      "cosine": 0.9923706531451608
+    },
+    {
+      "id": "iqa_v2_test_00385",
+      "question": "Does Medigap Insurance Cover Drugs?",
+      "neighbor_id": "iqa_v2_train_11308",
+      "neighbor_question": "Does Medigap Cover Drugs?",
+      "cosine": 0.9823770923536843
+    },
+    {
+      "id": "iqa_v2_test_00395",
+      "question": "What Happens If My Auto Insurance Lapses?",
+      "neighbor_id": "iqa_v2_train_01830",
+      "neighbor_question": "What Happens If My Home Insurance Lapses?",
+      "cosine": 0.9276344974053267
+    },
+    {
+      "id": "iqa_v2_test_00397",
+      "question": "Does Dave Ramsey Recommend Long Term Care Insurance?",
+      "neighbor_id": "iqa_v2_train_06198",
+      "neighbor_question": "Does Dave Ramsey Recommend Life Insurance?",
+      "cosine": 0.9247120833414864
+    },
+    {
+      "id": "iqa_v2_test_00402",
+      "question": "Can You Remove Spouse From Health Insurance?",
+      "neighbor_id": "iqa_v2_train_07424",
+      "neighbor_question": "When Can I Remove Spouse From Health Insurance?",
+      "cosine": 0.946870583820399
+    },
+    {
+      "id": "iqa_v2_test_00407",
+      "question": "Will My Homeowners Insurance Increase After A Claim?",
+      "neighbor_id": "iqa_v2_train_06603",
+      "neighbor_question": "Will Homeowners Insurance Increase After A Claim?",
+      "cosine": 0.9891884107291132
+    },
+    {
+      "id": "iqa_v2_test_00408",
+      "question": "What Life Insurance Is The Best To Buy?",
+      "neighbor_id": "iqa_v2_train_02038",
+      "neighbor_question": "What Is The Best Life Insurance To Buy?",
+      "cosine": 1.0
+    },
+    {
+      "id": "iqa_v2_test_00414",
+      "question": "Can One Person Have Multiple Life Insurance Policies?",
+      "neighbor_id": "iqa_v2_train_01721",
+      "neighbor_question": "Can A Person Have Multiple Life Insurance Policies?",
+      "cosine": 0.9627264779512396
+    },
+    {
+      "id": "iqa_v2_test_00428",
+      "question": "Where Can I Buy Renters Insurance Online?",
+      "neighbor_id": "iqa_v2_train_05833",
+      "neighbor_question": "Where To Buy Renters Insurance Online?",
+      "cosine": 0.9685464371467384
+    },
+    {
+      "id": "iqa_v2_test_00431",
+      "question": "Will Home Insurance Cover Termites?",
+      "neighbor_id": "iqa_v2_train_09550",
+      "neighbor_question": "Does Home Insurance Cover Termites?",
+      "cosine": 0.9214875364497959
+    },
+    {
+      "id": "iqa_v2_test_00434",
+      "question": "What Is A Life Insurance Wrapper?",
+      "neighbor_id": "iqa_v2_train_09733",
+      "neighbor_question": "What Is Life Insurance Wrapper?",
+      "cosine": 0.9975533193081692
+    },
+    {
+      "id": "iqa_v2_test_00435",
+      "question": "When Does Life Insurance Payout?",
+      "neighbor_id": "iqa_v2_train_08088",
+      "neighbor_question": "When Does Term Life Insurance Payout?",
+      "cosine": 0.9457482764820221
+    },
+    {
+      "id": "iqa_v2_test_00437",
+      "question": "Can I Get Health Insurance With MS?",
+      "neighbor_id": "iqa_v2_valid_00202",
+      "neighbor_question": "How To Get Health Insurance With MS?",
+      "cosine": 0.9264753132543251
+    },
+    {
+      "id": "iqa_v2_test_00445",
+      "question": "What Is Mortgage Life And Disability Insurance?",
+      "neighbor_id": "iqa_v2_train_02341",
+      "neighbor_question": "What Is Disability Mortgage Insurance?",
+      "cosine": 0.9408794323554722
+    },
+    {
+      "id": "iqa_v2_test_00446",
+      "question": "Is Lunesta Covered By Medicare?",
+      "neighbor_id": "iqa_v2_train_02263",
+      "neighbor_question": "Is Lunesta Covered By Medicare D?",
+      "cosine": 0.9373138770038952
+    },
+    {
+      "id": "iqa_v2_test_00450",
+      "question": "How Is Car Insurance Calculated?",
+      "neighbor_id": "iqa_v2_train_00066",
+      "neighbor_question": "How Is Home Insurance Calculated?",
+      "cosine": 0.9384668569836602
+    },
+    {
+      "id": "iqa_v2_test_00452",
+      "question": "When Can I Borrow Against My Life Insurance?",
+      "neighbor_id": "iqa_v2_train_02992",
+      "neighbor_question": "When Can You Borrow Against Life Insurance?",
+      "cosine": 0.9589149488356914
+    },
+    {
+      "id": "iqa_v2_test_00458",
+      "question": "Can I Get Disability Insurance If Already Pregnant?",
+      "neighbor_id": "iqa_v2_valid_00617",
+      "neighbor_question": "Can I Get Disability Insurance If I'm Already Pregnant?",
+      "cosine": 0.9448645905749921
+    },
+    {
+      "id": "iqa_v2_test_00469",
+      "question": "Can I Add A Non Family Member To My Car Insurance?",
+      "neighbor_id": "iqa_v2_train_03933",
+      "neighbor_question": "Can I Add A Non Family Member To My Auto Insurance?",
+      "cosine": 0.955631388541692
+    },
+    {
+      "id": "iqa_v2_test_00470",
+      "question": "Can I Cash In My Life Insurance Policy?",
+      "neighbor_id": "iqa_v2_valid_01896",
+      "neighbor_question": "Can I Cash In A Life Insurance Policy?",
+      "cosine": 0.9675497250448905
+    },
+    {
+      "id": "iqa_v2_test_00478",
+      "question": "Can A Deferred Annuity Be Surrendered?",
+      "neighbor_id": "iqa_v2_train_07540",
+      "neighbor_question": "Can Deferred Annuities Be Surrendered?",
+      "cosine": 0.9320706200878407
+    },
+    {
+      "id": "iqa_v2_test_00490",
+      "question": "What Does Contingent Mean On Life Insurance?",
+      "neighbor_id": "iqa_v2_train_03700",
+      "neighbor_question": "What Does Contingent Mean With Life Insurance?",
+      "cosine": 0.9373110982951205
+    },
+    {
+      "id": "iqa_v2_test_00491",
+      "question": "What Are The Top Rated Term Life Insurance Companies?",
+      "neighbor_id": "iqa_v2_valid_01400",
+      "neighbor_question": "Who Are The Top Rated Life Insurance Companies?",
+      "cosine": 0.9242898175373907
+    },
+    {
+      "id": "iqa_v2_test_00492",
+      "question": "How Much Is The Average Cost Of Home Insurance?",
+      "neighbor_id": "iqa_v2_train_07088",
+      "neighbor_question": "How Much Is The Average Cost Of Life Insurance?",
+      "cosine": 0.9254422414094102
+    },
+    {
+      "id": "iqa_v2_test_00496",
+      "question": "At What Age Can You Go On Medicare?",
+      "neighbor_id": "iqa_v2_valid_00494",
+      "neighbor_question": "At What Age Do You Go On Medicare?",
+      "cosine": 0.9510719477253389
+    },
+    {
+      "id": "iqa_v2_test_00498",
+      "question": "Does Renters Insurance Cover Me If I Move?",
+      "neighbor_id": "iqa_v2_valid_00267",
+      "neighbor_question": "Does Renters Insurance Cover A Move?",
+      "cosine": 0.9263013432373256
+    },
+    {
+      "id": "iqa_v2_test_00500",
+      "question": "Why Is It A Good Idea To Have Renters Insurance?",
+      "neighbor_id": "iqa_v2_valid_01322",
+      "neighbor_question": "Is It A Good Idea To Have Renters Insurance?",
+      "cosine": 0.9645512374535407
+    },
+    {
+      "id": "iqa_v2_test_00506",
+      "question": "Why Is Life Insurance More Expensive For Males?",
+      "neighbor_id": "iqa_v2_train_01305",
+      "neighbor_question": "Why Is Auto Insurance More Expensive For Males?",
+      "cosine": 0.9561160245087315
+    },
+    {
+      "id": "iqa_v2_test_00509",
+      "question": "How Does Obamacare Hurt Medicare?",
+      "neighbor_id": "iqa_v2_train_04912",
+      "neighbor_question": "Does Obamacare Hurt Medicare?",
+      "cosine": 0.9886619570738634
+    },
+    {
+      "id": "iqa_v2_test_00514",
+      "question": "What Is A 1035 Exchange From Life Insurance To An Annuity?",
+      "neighbor_id": "iqa_v2_train_09284",
+      "neighbor_question": "Can You 1035 Exchange From Life Insurance To An Annuity?",
+      "cosine": 0.9606637485034053
+    },
+    {
+      "id": "iqa_v2_test_00522",
+      "question": "Does Suze Orman Recommend Long Term Care Insurance?",
+      "neighbor_id": "iqa_v2_train_06467",
+      "neighbor_question": "Does Suze Orman Recommend Term Life Insurance?",
+      "cosine": 0.9464559050372423
+    },
+    {
+      "id": "iqa_v2_test_00524",
+      "question": "Will Homeowners Insurance Cover Shingles?",
+      "neighbor_id": "iqa_v2_valid_01177",
+      "neighbor_question": "Does Homeowners Insurance Cover Shingles?",
+      "cosine": 0.9412498516305363
+    },
+    {
+      "id": "iqa_v2_test_00534",
+      "question": "Which Medicare Supplement Plan Is Best For Me?",
+      "neighbor_id": "iqa_v2_train_05813",
+      "neighbor_question": "Which Medicare Supplement Is Best For Me?",
+      "cosine": 0.9537147887011359
+    },
+    {
+      "id": "iqa_v2_test_00544",
+      "question": "Can I Borrow Against My Life Insurance?",
+      "neighbor_id": "iqa_v2_train_09368",
+      "neighbor_question": "How Can I Borrow Against My Life Insurance?",
+      "cosine": 0.9869229629432759
+    },
+    {
+      "id": "iqa_v2_test_00546",
+      "question": "Where Does Life Insurance Go On A Tax Return?",
+      "neighbor_id": "iqa_v2_train_05548",
+      "neighbor_question": "Where Does Life Insurance Go On My Tax Return?",
+      "cosine": 0.9837629970859373
+    },
+    {
+      "id": "iqa_v2_test_00551",
+      "question": "How To Find Out What Life Insurance Someone Has?",
+      "neighbor_id": "iqa_v2_train_00481",
+      "neighbor_question": "How To Find Out How Much Life Insurance Someone Has?",
+      "cosine": 0.9419218245591157
+    },
+    {
+      "id": "iqa_v2_test_00561",
+      "question": "How Much Does A Doctor Visit Cost Without Health Insurance?",
+      "neighbor_id": "iqa_v2_train_04873",
+      "neighbor_question": "How Much Is A Doctor Visit Without Health Insurance?",
+      "cosine": 0.9504630766368343
+    },
+    {
+      "id": "iqa_v2_test_00563",
+      "question": "What Is A Key Employee For 401K?",
+      "neighbor_id": "iqa_v2_train_00760",
+      "neighbor_question": "Who Is A Key Employee In 401K?",
+      "cosine": 0.9364744283655423
+    },
+    {
+      "id": "iqa_v2_test_00570",
+      "question": "Who Is The Number One Life Insurance Company?",
+      "neighbor_id": "iqa_v2_train_00910",
+      "neighbor_question": "What Is The Number One Life Insurance Company?",
+      "cosine": 0.9595012203729082
+    },
+    {
+      "id": "iqa_v2_test_00578",
+      "question": "Why Contribute To A Retirement Plan?",
+      "neighbor_id": "iqa_v2_train_10551",
+      "neighbor_question": "How Much To Contribute To A Retirement Plan?",
+      "cosine": 0.9358579518804125
+    },
+    {
+      "id": "iqa_v2_test_00580",
+      "question": "When Will Annuity Rates Go Up?",
+      "neighbor_id": "iqa_v2_train_00958",
+      "neighbor_question": "Will Annuity Rates Go Up?",
+      "cosine": 0.9516457918722423
+    },
+    {
+      "id": "iqa_v2_test_00583",
+      "question": "When Does Life Insurance End?",
+      "neighbor_id": "iqa_v2_train_04405",
+      "neighbor_question": "When Does Term Life Insurance End?",
+      "cosine": 0.9214591922760257
+    },
+    {
+      "id": "iqa_v2_test_00591",
+      "question": "Does Private Health Insurance Cover Ct Scans?",
+      "neighbor_id": "iqa_v2_valid_00334",
+      "neighbor_question": "Does Private Health Insurance Cover CT Scans?",
+      "cosine": 0.9999999999999999
+    },
+    {
+      "id": "iqa_v2_test_00594",
+      "question": "Does Homeowners Insurance Cover Dog Attacks?",
+      "neighbor_id": "iqa_v2_train_04468",
+      "neighbor_question": "Will Homeowners Insurance Cover Dog Attacks?",
+      "cosine": 0.9544821675989215
+    },
+    {
+      "id": "iqa_v2_test_00595",
+      "question": "Can I Claim X Rays On Medicare?",
+      "neighbor_id": "iqa_v2_train_12187",
+      "neighbor_question": "Can You Claim X Rays On Medicare?",
+      "cosine": 0.9697816834478687
+    },
+    {
+      "id": "iqa_v2_test_00601",
+      "question": "Which Retirement Plan Is Best For Small Business?",
+      "neighbor_id": "iqa_v2_train_11813",
+      "neighbor_question": "What Retirement Plan Is Best For Small Business?",
+      "cosine": 0.9377160573688055
+    },
+    {
+      "id": "iqa_v2_test_00602",
+      "question": "Where Can I Find Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_04244",
+      "neighbor_question": "Where To Find Renters Insurance?",
+      "cosine": 0.9511834499790338
+    },
+    {
+      "id": "iqa_v2_test_00610",
+      "question": "How To Roll Over 401K To Roth IRA?",
+      "neighbor_id": "iqa_v2_valid_01006",
+      "neighbor_question": "Why Roll Over 401K To Roth IRA?",
+      "cosine": 0.9533571791646356
+    },
+    {
+      "id": "iqa_v2_test_00616",
+      "question": "Can I Switch Medigap Plans?",
+      "neighbor_id": "iqa_v2_train_06126",
+      "neighbor_question": "How To Switch Medigap Plans?",
+      "cosine": 0.9575033198821115
+    },
+    {
+      "id": "iqa_v2_test_00617",
+      "question": "Who Can Be Trustee Of Irrevocable Life Insurance Trust?",
+      "neighbor_id": "iqa_v2_train_10296",
+      "neighbor_question": "Who Should Be Trustee Of Irrevocable Life Insurance Trust?",
+      "cosine": 0.9636775584529564
+    },
+    {
+      "id": "iqa_v2_test_00625",
+      "question": "What Is A Good Life Insurance Company?",
+      "neighbor_id": "iqa_v2_train_08084",
+      "neighbor_question": "Who Is A Good Life Insurance Company?",
+      "cosine": 0.9261203081639882
+    },
+    {
+      "id": "iqa_v2_test_00640",
+      "question": "What Is Surrender Value Of A Life Insurance Policy?",
+      "neighbor_id": "iqa_v2_train_11588",
+      "neighbor_question": "What Is The Surrender Value Of A Life Insurance Policy?",
+      "cosine": 0.9821266317952334
+    },
+    {
+      "id": "iqa_v2_test_00645",
+      "question": "What Is 20 Year Term Life Insurance?",
+      "neighbor_id": "iqa_v2_train_04969",
+      "neighbor_question": "What Is A 20 Year Term Life Insurance?",
+      "cosine": 0.9950067472276237
+    },
+    {
+      "id": "iqa_v2_test_00646",
+      "question": "Who Can Cash In A Life Insurance Policy?",
+      "neighbor_id": "iqa_v2_valid_01896",
+      "neighbor_question": "Can I Cash In A Life Insurance Policy?",
+      "cosine": 0.9426578743515087
+    },
+    {
+      "id": "iqa_v2_test_00651",
+      "question": "How Do I Apply For Medicare Part B?",
+      "neighbor_id": "iqa_v2_train_00676",
+      "neighbor_question": "How To Apply For Medicare Part B?",
+      "cosine": 0.9672634319152876
+    },
+    {
+      "id": "iqa_v2_test_00652",
+      "question": "Is Xeloda Covered By Medicare?",
+      "neighbor_id": "iqa_v2_train_02304",
+      "neighbor_question": "How Is Xeloda Covered By Medicare?",
+      "cosine": 0.990009702445706
+    },
+    {
+      "id": "iqa_v2_test_00655",
+      "question": "What Happens To A Life Insurance Policy With No Beneficiary?",
+      "neighbor_id": "iqa_v2_train_03194",
+      "neighbor_question": "What Happens To Life Insurance With No Beneficiary?",
+      "cosine": 0.9364582081024359
+    },
+    {
+      "id": "iqa_v2_test_00657",
+      "question": "How Do I Get Life Insurance On My Husband?",
+      "neighbor_id": "iqa_v2_train_05373",
+      "neighbor_question": "How To Get Life Insurance On My Husband?",
+      "cosine": 0.9746784373059899
+    },
+    {
+      "id": "iqa_v2_test_00660",
+      "question": "How Does Life Insurance Cash Value Work?",
+      "neighbor_id": "iqa_v2_train_10691",
+      "neighbor_question": "How Does Cash Value Life Insurance Work?",
+      "cosine": 1.0
+    },
+    {
+      "id": "iqa_v2_test_00663",
+      "question": "Can I Unenroll From Medicare?",
+      "neighbor_id": "iqa_v2_train_12117",
+      "neighbor_question": "Can You Unenroll From Medicare?",
+      "cosine": 0.9755264339001328
+    },
+    {
+      "id": "iqa_v2_test_00668",
+      "question": "Does My Health Insurance Cover Psychiatrist?",
+      "neighbor_id": "iqa_v2_train_02334",
+      "neighbor_question": "Does Health Insurance Cover A Psychiatrist?",
+      "cosine": 0.9903854572598431
+    },
+    {
+      "id": "iqa_v2_test_00677",
+      "question": "Will Getting Married Affect My Medicare?",
+      "neighbor_id": "iqa_v2_train_12395",
+      "neighbor_question": "Does Getting Married Affect Medicare?",
+      "cosine": 0.9436867538165158
+    },
+    {
+      "id": "iqa_v2_test_00679",
+      "question": "Do Auto Insurance Companies Share Information?",
+      "neighbor_id": "iqa_v2_train_06649",
+      "neighbor_question": "Do Life Insurance Companies Share Information?",
+      "cosine": 0.9637293811297912
+    },
+    {
+      "id": "iqa_v2_test_00683",
+      "question": "Can BMI Affect Life Insurance?",
+      "neighbor_id": "iqa_v2_train_07318",
+      "neighbor_question": "Does BMI Affect Life Insurance?",
+      "cosine": 0.9566418067990534
+    },
+    {
+      "id": "iqa_v2_test_00684",
+      "question": "Does Home Insurance Cover Foundation Problems?",
+      "neighbor_id": "iqa_v2_train_09337",
+      "neighbor_question": "Does Home Owners Insurance Cover Foundation Problems?",
+      "cosine": 0.9540753411381605
+    },
+    {
+      "id": "iqa_v2_test_00696",
+      "question": "What Qualifies For Disability Insurance?",
+      "neighbor_id": "iqa_v2_train_11135",
+      "neighbor_question": "What Qualifies You For Disability Insurance?",
+      "cosine": 0.9731199018874463
+    },
+    {
+      "id": "iqa_v2_test_00703",
+      "question": "What Is Enhanced Annuities?",
+      "neighbor_id": "iqa_v2_train_09287",
+      "neighbor_question": "What Are Enhanced Annuities?",
+      "cosine": 0.9741605613092406
+    },
+    {
+      "id": "iqa_v2_test_00706",
+      "question": "Will Health Insurance Cover A Breast Pump?",
+      "neighbor_id": "iqa_v2_train_09163",
+      "neighbor_question": "Will My Health Insurance Cover A Breast Pump?",
+      "cosine": 0.9877912116508777
+    },
+    {
+      "id": "iqa_v2_test_00717",
+      "question": "Does Divorce Affect Life Insurance?",
+      "neighbor_id": "iqa_v2_train_05296",
+      "neighbor_question": "Does Divorce Affect Auto Insurance?",
+      "cosine": 0.9395843658984945
+    },
+    {
+      "id": "iqa_v2_test_00719",
+      "question": "Can My Girlfriend Be On My Car Insurance?",
+      "neighbor_id": "iqa_v2_train_01120",
+      "neighbor_question": "Can A Girlfriend Be On My Health Insurance?",
+      "cosine": 0.9357494263432201
+    },
+    {
+      "id": "iqa_v2_test_00730",
+      "question": "Does Farmers Insurance Have Renters Insurance?",
+      "neighbor_id": "iqa_v2_valid_00621",
+      "neighbor_question": "Does Farmers Do Renters Insurance?",
+      "cosine": 0.9250819413520609
+    },
+    {
+      "id": "iqa_v2_test_00736",
+      "question": "How Do I Borrow Against My Life Insurance?",
+      "neighbor_id": "iqa_v2_train_09368",
+      "neighbor_question": "How Can I Borrow Against My Life Insurance?",
+      "cosine": 0.9744092619971482
+    },
+    {
+      "id": "iqa_v2_test_00737",
+      "question": "Where To Purchase Disability Insurance?",
+      "neighbor_id": "iqa_v2_valid_01156",
+      "neighbor_question": "Where Can I Purchase Disability Insurance?",
+      "cosine": 0.9716295199870147
+    },
+    {
+      "id": "iqa_v2_test_00741",
+      "question": "How Much Does Life Insurance Cost For A 20 Year Old?",
+      "neighbor_id": "iqa_v2_train_03787",
+      "neighbor_question": "How Much Does Health Insurance Cost For A 20 Year Old?",
+      "cosine": 0.9252546938653923
+    },
+    {
+      "id": "iqa_v2_test_00743",
+      "question": "Can I Get Life Insurance If I Have Hypertension?",
+      "neighbor_id": "iqa_v2_train_00104",
+      "neighbor_question": "Can I Get Life Insurance With Hypertension?",
+      "cosine": 0.9221578100051213
+    },
+    {
+      "id": "iqa_v2_test_00744",
+      "question": "How Do Health Insurance Companies Make Money?",
+      "neighbor_id": "iqa_v2_train_05737",
+      "neighbor_question": "What Do Health Insurance Companies Do To Make Money?",
+      "cosine": 0.9543028419546538
+    },
+    {
+      "id": "iqa_v2_test_00749",
+      "question": "When Should I Drop Life Insurance?",
+      "neighbor_id": "iqa_v2_train_05597",
+      "neighbor_question": "When Should You Drop Life Insurance?",
+      "cosine": 0.9527419756808294
+    },
+    {
+      "id": "iqa_v2_test_00751",
+      "question": "Can I Keep My Car Without Insurance?",
+      "neighbor_id": "iqa_v2_train_10758",
+      "neighbor_question": "Can I Keep A Car Without Insurance?",
+      "cosine": 0.9756875804104848
+    },
+    {
+      "id": "iqa_v2_test_00752",
+      "question": "What Is Disability Insurance For Pregnancy?",
+      "neighbor_id": "iqa_v2_train_02033",
+      "neighbor_question": "How To Get Disability Insurance For Pregnancy?",
+      "cosine": 0.9390087326962662
+    },
+    {
+      "id": "iqa_v2_test_00753",
+      "question": "What Kind Of Annuities Are Out There?",
+      "neighbor_id": "iqa_v2_train_03143",
+      "neighbor_question": "What Kind Of Annuities Are There?",
+      "cosine": 0.9483669166699837
+    },
+    {
+      "id": "iqa_v2_test_00758",
+      "question": "Who Can Get USAA Car Insurance?",
+      "neighbor_id": "iqa_v2_train_09626",
+      "neighbor_question": "Who Can Get USAA Insurance?",
+      "cosine": 0.9582738643861736
+    },
+    {
+      "id": "iqa_v2_test_00759",
+      "question": "Can Life Insurance Be Used As Collateral For A Loan?",
+      "neighbor_id": "iqa_v2_train_02728",
+      "neighbor_question": "Can Term Life Insurance Be Used As Collateral For A Loan?",
+      "cosine": 0.97688553196183
+    },
+    {
+      "id": "iqa_v2_test_00764",
+      "question": "Do You Need Long Term Disability Insurance?",
+      "neighbor_id": "iqa_v2_valid_00944",
+      "neighbor_question": "Why Do You Need Long Term Disability Insurance?",
+      "cosine": 0.9568558306887331
+    },
+    {
+      "id": "iqa_v2_test_00767",
+      "question": "How To Sue Someone With No Auto Insurance?",
+      "neighbor_id": "iqa_v2_train_06481",
+      "neighbor_question": "How To Sue Someone With No Car Insurance?",
+      "cosine": 0.926834598435741
+    },
+    {
+      "id": "iqa_v2_test_00775",
+      "question": "Does My Renters Insurance Cover Theft?",
+      "neighbor_id": "iqa_v2_train_11915",
+      "neighbor_question": "How Does Renters Insurance Cover Theft?",
+      "cosine": 0.9609723299738387
+    },
+    {
+      "id": "iqa_v2_test_00783",
+      "question": "Does Medicare Pay For IV Antibiotics At Home?",
+      "neighbor_id": "iqa_v2_valid_01134",
+      "neighbor_question": "Does Medicare Pay For IV Antibiotics Used At Home?",
+      "cosine": 0.9515109997985366
+    },
+    {
+      "id": "iqa_v2_test_00784",
+      "question": "Does Life Insurance Know If You Smoke?",
+      "neighbor_id": "iqa_v2_train_10842",
+      "neighbor_question": "How Does Life Insurance Know You Smoke?",
+      "cosine": 0.9586442836986854
+    },
+    {
+      "id": "iqa_v2_test_00787",
+      "question": "Does Medicare Pay For Lucentis?",
+      "neighbor_id": "iqa_v2_train_11620",
+      "neighbor_question": "Does Medicare Cover Lucentis?",
+      "cosine": 0.9332631813420653
+    },
+    {
+      "id": "iqa_v2_test_00789",
+      "question": "What Is The Cheapest Health Insurance In Georgia?",
+      "neighbor_id": "iqa_v2_train_01001",
+      "neighbor_question": "What Is The Cheapest Car Insurance In Georgia?",
+      "cosine": 0.9492438765322999
+    },
+    {
+      "id": "iqa_v2_test_00790",
+      "question": "Where Can I Find Cheap Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_11974",
+      "neighbor_question": "Where To Find Cheap Renters Insurance?",
+      "cosine": 0.9653824304311298
+    },
+    {
+      "id": "iqa_v2_test_00794",
+      "question": "Does Part B Medicare Cover Prescriptions?",
+      "neighbor_id": "iqa_v2_train_07238",
+      "neighbor_question": "Does Medicare Plan B Cover Prescriptions?",
+      "cosine": 0.9220017192596028
+    },
+    {
+      "id": "iqa_v2_test_00796",
+      "question": "Who Has The Cheapest Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_03927",
+      "neighbor_question": "Who Is The Cheapest Renters Insurance?",
+      "cosine": 0.9217917233993034
+    },
+    {
+      "id": "iqa_v2_test_00803",
+      "question": "What Is The Difference Between Term Life And Universal Life Insurance?",
+      "neighbor_id": "iqa_v2_train_08836",
+      "neighbor_question": "What Is The Difference Between Universal And Term Life Insurance?",
+      "cosine": 0.9910859069283257
+    },
+    {
+      "id": "iqa_v2_test_00812",
+      "question": "Can I Have Multiple Home Insurance Policies?",
+      "neighbor_id": "iqa_v2_train_08165",
+      "neighbor_question": "Can I Have Multiple Life Insurance Policies?",
+      "cosine": 0.9603818012116548
+    },
+    {
+      "id": "iqa_v2_test_00815",
+      "question": "Is There A Penalty For Switching Car Insurance?",
+      "neighbor_id": "iqa_v2_valid_00952",
+      "neighbor_question": "Is There A Penalty For Switching Auto Insurance?",
+      "cosine": 0.9596058515505982
+    },
+    {
+      "id": "iqa_v2_test_00816",
+      "question": "What Health Insurance Covers Nuvaring?",
+      "neighbor_id": "iqa_v2_train_04548",
+      "neighbor_question": "Which Health Insurance Covers Nuvaring?",
+      "cosine": 0.9221526196736878
+    },
+    {
+      "id": "iqa_v2_test_00822",
+      "question": "Can I Get Car Insurance With An Out Of state License?",
+      "neighbor_id": "iqa_v2_train_12231",
+      "neighbor_question": "Can I Get Car Insurance With An Out Of State License?",
+      "cosine": 0.9999999999999999
+    },
+    {
+      "id": "iqa_v2_test_00841",
+      "question": "What Does Health Insurance Cost In California?",
+      "neighbor_id": "iqa_v2_train_06269",
+      "neighbor_question": "What Does Car Insurance Cost In California?",
+      "cosine": 0.9375593123484267
+    },
+    {
+      "id": "iqa_v2_test_00843",
+      "question": "Where To Buy Cheap Life Insurance?",
+      "neighbor_id": "iqa_v2_train_06960",
+      "neighbor_question": "Where To Buy Cheap Car Insurance?",
+      "cosine": 0.9309937162958116
+    },
+    {
+      "id": "iqa_v2_test_00845",
+      "question": "Can You Use A PO Box For Car Insurance?",
+      "neighbor_id": "iqa_v2_train_10765",
+      "neighbor_question": "Can You Use PO Box For Car Insurance?",
+      "cosine": 0.9966344106344377
+    },
+    {
+      "id": "iqa_v2_test_00851",
+      "question": "What Does Medicare Cover For Eyeglasses?",
+      "neighbor_id": "iqa_v2_train_05291",
+      "neighbor_question": "When Does Medicare Cover Eyeglasses?",
+      "cosine": 0.9486098676582597
+    },
+    {
+      "id": "iqa_v2_test_00861",
+      "question": "Does Progressive Offer Life Insurance?",
+      "neighbor_id": "iqa_v2_train_04545",
+      "neighbor_question": "Does Progressive Offer Renters Insurance?",
+      "cosine": 0.9264785514082877
+    },
+    {
+      "id": "iqa_v2_test_00867",
+      "question": "Does Renters Insurance Cover Broken Car Window?",
+      "neighbor_id": "iqa_v2_train_09956",
+      "neighbor_question": "Does Renters Insurance Cover A Broken Window?",
+      "cosine": 0.9834662598666426
+    },
+    {
+      "id": "iqa_v2_test_00870",
+      "question": "Does Progressive Insurance Have Life Insurance?",
+      "neighbor_id": "iqa_v2_train_08769",
+      "neighbor_question": "Does Progressive Have Home Insurance?",
+      "cosine": 0.941308359201659
+    },
+    {
+      "id": "iqa_v2_test_00871",
+      "question": "Does Homeowners Insurance Cover Leak In Roof?",
+      "neighbor_id": "iqa_v2_train_07763",
+      "neighbor_question": "Will Homeowners Insurance Cover A Leak In My Roof?",
+      "cosine": 0.927467542707322
+    },
+    {
+      "id": "iqa_v2_test_00873",
+      "question": "How To Get Life Insurance For Someone Else?",
+      "neighbor_id": "iqa_v2_train_10243",
+      "neighbor_question": "How Do I Get Life Insurance On Someone Else?",
+      "cosine": 0.9380229577655892
+    },
+    {
+      "id": "iqa_v2_test_00876",
+      "question": "Who Has To Have Health Insurance Under Obamacare?",
+      "neighbor_id": "iqa_v2_train_07378",
+      "neighbor_question": "Who Has To Buy Health Insurance Under Obamacare?",
+      "cosine": 0.9257255955408084
+    },
+    {
+      "id": "iqa_v2_test_00877",
+      "question": "Does Homeowners Insurance Cover Earthquakes?",
+      "neighbor_id": "iqa_v2_train_11006",
+      "neighbor_question": "Does USAA Homeowners Insurance Cover Earthquakes?",
+      "cosine": 0.9242140079931302
+    },
+    {
+      "id": "iqa_v2_test_00900",
+      "question": "Can You Get Life Insurance With Lupus?",
+      "neighbor_id": "iqa_v2_train_11008",
+      "neighbor_question": "Can I Get Life Insurance With Lupus?",
+      "cosine": 0.9701136207946404
+    },
+    {
+      "id": "iqa_v2_test_00906",
+      "question": "Why Should You Plan For Retirement?",
+      "neighbor_id": "iqa_v2_train_02645",
+      "neighbor_question": "Why Should I Plan For Retirement?",
+      "cosine": 0.9650562251222714
+    },
+    {
+      "id": "iqa_v2_test_00907",
+      "question": "How Old Do You Have To Be To Receive Medicare?",
+      "neighbor_id": "iqa_v2_train_12261",
+      "neighbor_question": "How Old Can You Be To Receive Medicare?",
+      "cosine": 0.9245365457803709
+    },
+    {
+      "id": "iqa_v2_test_00910",
+      "question": "Does Car Insurance Have To Be In Owners Name?",
+      "neighbor_id": "iqa_v2_train_01577",
+      "neighbor_question": "Does Auto Insurance Have To Be In Owners Name?",
+      "cosine": 0.9222217283846371
+    },
+    {
+      "id": "iqa_v2_test_00911",
+      "question": "Where Should I Keep My Car Insurance Card?",
+      "neighbor_id": "iqa_v2_train_02194",
+      "neighbor_question": "Where Should I Keep My Auto Insurance Card?",
+      "cosine": 0.9346431432931644
+    },
+    {
+      "id": "iqa_v2_test_00912",
+      "question": "How Long Does It Take To Get Money From A Life Insurance Policy?",
+      "neighbor_id": "iqa_v2_train_09415",
+      "neighbor_question": "How Long Will It Take To Get Money From A Life Insurance Policy?",
+      "cosine": 0.9415548972857352
+    },
+    {
+      "id": "iqa_v2_test_00915",
+      "question": "Which Home Insurance Is Best In California?",
+      "neighbor_id": "iqa_v2_train_10428",
+      "neighbor_question": "Which Life Insurance Is Best In California?",
+      "cosine": 0.9573294089602478
+    },
+    {
+      "id": "iqa_v2_test_00917",
+      "question": "Does Life Insurance Count Net Worth?",
+      "neighbor_id": "iqa_v2_train_11243",
+      "neighbor_question": "Does Life Insurance Count In Net Worth?",
+      "cosine": 0.990532798894861
+    },
+    {
+      "id": "iqa_v2_test_00920",
+      "question": "What Should I Know About Long Term Care Insurance?",
+      "neighbor_id": "iqa_v2_train_03333",
+      "neighbor_question": "What You Should Know About Long Term Care Insurance?",
+      "cosine": 0.97212468121467
+    },
+    {
+      "id": "iqa_v2_test_00925",
+      "question": "How Much Will Medicare Pay For A Hospital Bed?",
+      "neighbor_id": "iqa_v2_train_10528",
+      "neighbor_question": "Will Medicare Pay For An In Home Hospital Bed?",
+      "cosine": 0.9226358166493241
+    },
+    {
+      "id": "iqa_v2_test_00929",
+      "question": "How To Get Cheap Health Insurance?",
+      "neighbor_id": "iqa_v2_train_12814",
+      "neighbor_question": "How Can I Get Cheap Health Insurance?",
+      "cosine": 0.9449073535595552
+    },
+    {
+      "id": "iqa_v2_test_00931",
+      "question": "Does Medicare Pay For A Breast Reduction?",
+      "neighbor_id": "iqa_v2_train_01034",
+      "neighbor_question": "Does Medicare Pay For Breast Reduction?",
+      "cosine": 0.9981362123482085
+    },
+    {
+      "id": "iqa_v2_test_00932",
+      "question": "Can Minor Be Beneficiary Of Life Insurance?",
+      "neighbor_id": "iqa_v2_train_10140",
+      "neighbor_question": "Can A Minor Be Beneficiary For Life Insurance?",
+      "cosine": 0.9719305480901195
+    },
+    {
+      "id": "iqa_v2_test_00943",
+      "question": "Can You Pay Health Insurance Premiums With An HSA?",
+      "neighbor_id": "iqa_v2_train_03166",
+      "neighbor_question": "Can I Pay My Health Insurance Premiums With An HSA?",
+      "cosine": 0.9645033391935646
+    },
+    {
+      "id": "iqa_v2_test_00947",
+      "question": "Does Home Insurance Cover Mobile Phones?",
+      "neighbor_id": "iqa_v2_train_08814",
+      "neighbor_question": "Can Home Insurance Cover Mobile Phones?",
+      "cosine": 0.9749339970834857
+    },
+    {
+      "id": "iqa_v2_test_00954",
+      "question": "What Is Best Retirement Plan For A Small Business?",
+      "neighbor_id": "iqa_v2_train_11813",
+      "neighbor_question": "What Retirement Plan Is Best For Small Business?",
+      "cosine": 0.9984937145128007
+    },
+    {
+      "id": "iqa_v2_test_00957",
+      "question": "What Is Good Homeowners Insurance?",
+      "neighbor_id": "iqa_v2_train_08778",
+      "neighbor_question": "What Is A Good Homeowners Insurance?",
+      "cosine": 0.9947783833779167
+    },
+    {
+      "id": "iqa_v2_test_00958",
+      "question": "Is A 401K Qualified Or Nonqualified?",
+      "neighbor_id": "iqa_v2_train_06540",
+      "neighbor_question": "Is 401K Qualified Or Nonqualified?",
+      "cosine": 0.9990719756973334
+    },
+    {
+      "id": "iqa_v2_test_00960",
+      "question": "Can You Rent A Car With SR22 Insurance?",
+      "neighbor_id": "iqa_v2_train_02140",
+      "neighbor_question": "Can I Rent A Car With SR22 Insurance?",
+      "cosine": 0.9647064977611488
+    },
+    {
+      "id": "iqa_v2_test_00963",
+      "question": "What Is Non Qualified Retirement Plan?",
+      "neighbor_id": "iqa_v2_train_11487",
+      "neighbor_question": "What Is Qualified Retirement Plan?",
+      "cosine": 0.932853440398662
+    },
+    {
+      "id": "iqa_v2_test_00970",
+      "question": "Does Child Support Include Health Insurance?",
+      "neighbor_id": "iqa_v2_train_02665",
+      "neighbor_question": "Does Child Support Include Car Insurance?",
+      "cosine": 0.9536940961314474
+    },
+    {
+      "id": "iqa_v2_test_00973",
+      "question": "Can I Get Health Insurance If I Have A Preexisting Condition?",
+      "neighbor_id": "iqa_v2_train_01372",
+      "neighbor_question": "Can Get Health Insurance If Have Preexisting Condition?",
+      "cosine": 0.9919282299242778
+    },
+    {
+      "id": "iqa_v2_test_00977",
+      "question": "Can You Take Out A Life Insurance Policy On A Stranger?",
+      "neighbor_id": "iqa_v2_train_06413",
+      "neighbor_question": "Can I Take Out A Life Insurance Policy On A Stranger?",
+      "cosine": 0.9811963138607158
+    },
+    {
+      "id": "iqa_v2_test_00984",
+      "question": "Who Sells The Best Life Insurance?",
+      "neighbor_id": "iqa_v2_train_09777",
+      "neighbor_question": "Who Sells The Best Term Life Insurance?",
+      "cosine": 0.9402783971444044
+    },
+    {
+      "id": "iqa_v2_test_00987",
+      "question": "Can You Sell A Car Without Insurance?",
+      "neighbor_id": "iqa_v2_train_10052",
+      "neighbor_question": "Can I Sell A Car Without Insurance?",
+      "cosine": 0.9550864164663934
+    },
+    {
+      "id": "iqa_v2_test_00992",
+      "question": "How Long Will My Life Insurance Last?",
+      "neighbor_id": "iqa_v2_valid_00577",
+      "neighbor_question": "How Long Will Life Insurance Last?",
+      "cosine": 0.9760633887030814
+    },
+    {
+      "id": "iqa_v2_test_00995",
+      "question": "Which Life Insurance Is Best?",
+      "neighbor_id": "iqa_v2_train_01990",
+      "neighbor_question": "Which Term Life Insurance Is Best?",
+      "cosine": 0.9237548736012996
+    },
+    {
+      "id": "iqa_v2_test_00999",
+      "question": "How Long Does An Auto Insurance Claim Stay On Record?",
+      "neighbor_id": "iqa_v2_train_08600",
+      "neighbor_question": "How Long Does Home Insurance Claim Stay On Record?",
+      "cosine": 0.9260865474678633
+    },
+    {
+      "id": "iqa_v2_test_01003",
+      "question": "Will Homeowners Insurance Cover Mold?",
+      "neighbor_id": "iqa_v2_train_02962",
+      "neighbor_question": "Will My Homeowners Insurance Cover Mold?",
+      "cosine": 0.9811983876081584
+    },
+    {
+      "id": "iqa_v2_test_01006",
+      "question": "What Is The Difference Between Life Insurance And Disability Insurance?",
+      "neighbor_id": "iqa_v2_train_09248",
+      "neighbor_question": "What Is The Difference Between Long Term Care Insurance And Disability Insurance?",
+      "cosine": 0.9263338085190637
+    },
+    {
+      "id": "iqa_v2_test_01008",
+      "question": "What Does Face Amount Mean In Life Insurance?",
+      "neighbor_id": "iqa_v2_valid_00661",
+      "neighbor_question": "What Does Face Amount Mean On Life Insurance?",
+      "cosine": 0.9759803861417213
+    },
+    {
+      "id": "iqa_v2_test_01012",
+      "question": "Does Health Insurance Cover Car Accident Injuries?",
+      "neighbor_id": "iqa_v2_train_01960",
+      "neighbor_question": "Does Health Insurance Pay For Car Accident Injuries?",
+      "cosine": 0.9423612691491614
+    },
+    {
+      "id": "iqa_v2_test_01018",
+      "question": "How Much Is Home Insurance Yearly?",
+      "neighbor_id": "iqa_v2_train_01471",
+      "neighbor_question": "How Much Is Life Insurance Yearly?",
+      "cosine": 0.9286795741996835
+    },
+    {
+      "id": "iqa_v2_test_01021",
+      "question": "Can You Borrow From A Term Life Insurance Policy?",
+      "neighbor_id": "iqa_v2_valid_01921",
+      "neighbor_question": "Can You Borrow From A Life Insurance Policy?",
+      "cosine": 0.9592988556192411
+    },
+    {
+      "id": "iqa_v2_test_01025",
+      "question": "When Should I Get A Life Insurance?",
+      "neighbor_id": "iqa_v2_train_01881",
+      "neighbor_question": "When Should I Get Life Insurance?",
+      "cosine": 0.9938305159900093
+    },
+    {
+      "id": "iqa_v2_test_01027",
+      "question": "Does Life Insurance Have To Go Through Probate?",
+      "neighbor_id": "iqa_v2_train_00696",
+      "neighbor_question": "Does Life Insurance Go Through Probate?",
+      "cosine": 0.9580571051515471
+    },
+    {
+      "id": "iqa_v2_test_01036",
+      "question": "What Are Bonus Annuities?",
+      "neighbor_id": "iqa_v2_train_08182",
+      "neighbor_question": "What Is Bonus Annuities?",
+      "cosine": 0.9671975656354478
+    },
+    {
+      "id": "iqa_v2_test_01038",
+      "question": "What Is A 457 Retirement Plan?",
+      "neighbor_id": "iqa_v2_train_10373",
+      "neighbor_question": "What Is A 457 B Retirement Plan?",
+      "cosine": 0.9854890604254393
+    },
+    {
+      "id": "iqa_v2_test_01044",
+      "question": "What Is The Average Cost For Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_04718",
+      "neighbor_question": "What Is The Average Cost Of Renters Insurance?",
+      "cosine": 0.9521320694283496
+    },
+    {
+      "id": "iqa_v2_test_01048",
+      "question": "Does Homeowners Insurance Cover Wind Damage?",
+      "neighbor_id": "iqa_v2_train_03796",
+      "neighbor_question": "Will Homeowners Insurance Cover Wind Damage?",
+      "cosine": 0.9325308288869022
+    },
+    {
+      "id": "iqa_v2_test_01054",
+      "question": "Can An Illegal Immigrant Get Life Insurance?",
+      "neighbor_id": "iqa_v2_train_00244",
+      "neighbor_question": "Can An Illegal Immigrant Get Car Insurance?",
+      "cosine": 0.976182248407435
+    },
+    {
+      "id": "iqa_v2_test_01056",
+      "question": "Can I Go To Emergency Room Without Health Insurance?",
+      "neighbor_id": "iqa_v2_train_07613",
+      "neighbor_question": "Can You Go To Emergency Room Without Health Insurance?",
+      "cosine": 0.9844012919352659
+    },
+    {
+      "id": "iqa_v2_test_01057",
+      "question": "Does Homeowners Insurance Cover House Shifting?",
+      "neighbor_id": "iqa_v2_train_10076",
+      "neighbor_question": "Would Homeowners Insurance Cover House Shifting?",
+      "cosine": 0.9342109207906597
+    },
+    {
+      "id": "iqa_v2_test_01059",
+      "question": "Does Medicare Cover Pulmonary Rehab?",
+      "neighbor_id": "iqa_v2_train_04493",
+      "neighbor_question": "Does Medicare Pay For Pulmonary Rehab?",
+      "cosine": 0.9557837159070013
+    },
+    {
+      "id": "iqa_v2_test_01062",
+      "question": "Does My US Car Insurance Cover Driving In Europe?",
+      "neighbor_id": "iqa_v2_train_11796",
+      "neighbor_question": "Does US Auto Insurance Cover Driving In Europe?",
+      "cosine": 0.9465861303271463
+    },
+    {
+      "id": "iqa_v2_test_01079",
+      "question": "What Is A Deductible On Health Insurance?",
+      "neighbor_id": "iqa_v2_train_01179",
+      "neighbor_question": "What Is A Deductible In Health Insurance?",
+      "cosine": 0.9650036358139633
+    },
+    {
+      "id": "iqa_v2_test_01089",
+      "question": "How Does Supplemental Life Insurance Work?",
+      "neighbor_id": "iqa_v2_train_04161",
+      "neighbor_question": "How Does Medicare Supplemental Insurance Work?",
+      "cosine": 0.9216034819760992
+    },
+    {
+      "id": "iqa_v2_test_01094",
+      "question": "Should I Pay For Disability Insurance?",
+      "neighbor_id": "iqa_v2_train_03830",
+      "neighbor_question": "What Should I Pay For Disability Insurance?",
+      "cosine": 0.971037850627839
+    },
+    {
+      "id": "iqa_v2_test_01108",
+      "question": "How To Compare Medicare Part D Plans?",
+      "neighbor_id": "iqa_v2_train_02420",
+      "neighbor_question": "How Can I Compare Medicare Part D Plans?",
+      "cosine": 0.9727431812590277
+    },
+    {
+      "id": "iqa_v2_test_01114",
+      "question": "What Does Long Term Disability Insurance Cover?",
+      "neighbor_id": "iqa_v2_train_09325",
+      "neighbor_question": "What Is Long Term Disability Insurance What Does It Cover?",
+      "cosine": 0.9457834853730654
+    },
+    {
+      "id": "iqa_v2_test_01118",
+      "question": "Can Life Insurance Be A Tax Deduction?",
+      "neighbor_id": "iqa_v2_valid_00364",
+      "neighbor_question": "Can Auto Insurance Be A Tax Deduction?",
+      "cosine": 0.9242110023684642
+    },
+    {
+      "id": "iqa_v2_test_01131",
+      "question": "How To Evaluate Life Insurance Companies?",
+      "neighbor_id": "iqa_v2_train_06961",
+      "neighbor_question": "How To Evaluate Auto Insurance Companies?",
+      "cosine": 0.952122788948735
+    },
+    {
+      "id": "iqa_v2_test_01134",
+      "question": "What Should I Be Paying For Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_04603",
+      "neighbor_question": "How Much Should I Be Paying For Renters Insurance?",
+      "cosine": 0.9210596674007604
+    },
+    {
+      "id": "iqa_v2_test_01139",
+      "question": "What Happens To My Variable Annuity If I Die?",
+      "neighbor_id": "iqa_v2_train_07059",
+      "neighbor_question": "What Happens To A Variable Annuity When You Die?",
+      "cosine": 0.9240715855920901
+    },
+    {
+      "id": "iqa_v2_test_01142",
+      "question": "Is A 401K A Retirement Plan?",
+      "neighbor_id": "iqa_v2_train_10552",
+      "neighbor_question": "Is 401K Plan A Retirement Plan?",
+      "cosine": 0.9431197071998194
+    },
+    {
+      "id": "iqa_v2_test_01144",
+      "question": "Does Home Insurance Cover Arson?",
+      "neighbor_id": "iqa_v2_train_11187",
+      "neighbor_question": "Does Car Insurance Cover Arson?",
+      "cosine": 0.9200611019861236
+    },
+    {
+      "id": "iqa_v2_test_01149",
+      "question": "How much is health insurance for a family of 3?",
+      "neighbor_id": "iqa_v2_train_06982",
+      "neighbor_question": "How Much Is Health Insurance For A Family Of 3?",
+      "cosine": 0.9999999999999999
+    },
+    {
+      "id": "iqa_v2_test_01154",
+      "question": "Is Long Term Care Insurance A Good Idea?",
+      "neighbor_id": "iqa_v2_train_06726",
+      "neighbor_question": "When Is Long Term Care Insurance A Good Idea?",
+      "cosine": 0.9512308924138859
+    },
+    {
+      "id": "iqa_v2_test_01155",
+      "question": "Which Health Insurance Is Best?",
+      "neighbor_id": "iqa_v2_train_06768",
+      "neighbor_question": "Which Health Insurance Is The Best?",
+      "cosine": 0.9597269785510821
+    },
+    {
+      "id": "iqa_v2_test_01160",
+      "question": "Can You Cash Out Of A Life Insurance Policy?",
+      "neighbor_id": "iqa_v2_valid_00486",
+      "neighbor_question": "Can You Cash Out A Life Insurance Policy?",
+      "cosine": 0.9759415463815951
+    },
+    {
+      "id": "iqa_v2_test_01171",
+      "question": "Does Homeowners Insurance Cover A Toilet Overflow?",
+      "neighbor_id": "iqa_v2_train_07227",
+      "neighbor_question": "Does Homeowners Insurance Cover Toilet Overflow?",
+      "cosine": 0.9987892179912514
+    },
+    {
+      "id": "iqa_v2_test_01172",
+      "question": "Why Is Car Insurance Expensive For Young Drivers?",
+      "neighbor_id": "iqa_v2_train_09581",
+      "neighbor_question": "Why Is Car Insurance So Expensive For Young Drivers?",
+      "cosine": 0.9758178980464265
+    },
+    {
+      "id": "iqa_v2_test_01207",
+      "question": "Does Term Life Insurance Expire?",
+      "neighbor_id": "iqa_v2_train_11100",
+      "neighbor_question": "Does Life Insurance Expire?",
+      "cosine": 0.9397717614548436
+    },
+    {
+      "id": "iqa_v2_test_01211",
+      "question": "Can Health Insurance Be Denied For Pre Existing Condition?",
+      "neighbor_id": "iqa_v2_train_01940",
+      "neighbor_question": "Can You Be Denied Health Insurance For A Pre Existing Condition?",
+      "cosine": 0.9854525936998344
+    },
+    {
+      "id": "iqa_v2_test_01214",
+      "question": "What 3 Questions Does AARP Ask For Life Insurance?",
+      "neighbor_id": "iqa_v2_train_09320",
+      "neighbor_question": "What 3 Questions Does Aarp Ask For Life Insurance?",
+      "cosine": 1.0
+    },
+    {
+      "id": "iqa_v2_test_01217",
+      "question": "Is Renters Insurance Really Necessary?",
+      "neighbor_id": "iqa_v2_train_01412",
+      "neighbor_question": "Is Life Insurance Really Necessary?",
+      "cosine": 0.9327755352849582
+    },
+    {
+      "id": "iqa_v2_test_01223",
+      "question": "Who Provides The Best Long Term Care Insurance?",
+      "neighbor_id": "iqa_v2_train_08559",
+      "neighbor_question": "Who Provides Long Term Care Insurance?",
+      "cosine": 0.9257753269862012
+    },
+    {
+      "id": "iqa_v2_test_01224",
+      "question": "How Much Long Term Care Insurance Is Needed?",
+      "neighbor_id": "iqa_v2_train_06134",
+      "neighbor_question": "Is Long Term Care Insurance Needed?",
+      "cosine": 0.9286502135602634
+    },
+    {
+      "id": "iqa_v2_test_01226",
+      "question": "Can I Deduct Disability Insurance Premiums From My Taxes?",
+      "neighbor_id": "iqa_v2_train_07990",
+      "neighbor_question": "Can I Deduct Disability Insurance Premiums On My Taxes?",
+      "cosine": 0.9400539528928327
+    },
+    {
+      "id": "iqa_v2_test_01230",
+      "question": "What Happens When My Life Insurance Policy Matures?",
+      "neighbor_id": "iqa_v2_train_09588",
+      "neighbor_question": "What Happens When Life Insurance Policy Matures?",
+      "cosine": 0.9892691821555718
+    },
+    {
+      "id": "iqa_v2_test_01231",
+      "question": "Will A DUI Affect My Car Insurance?",
+      "neighbor_id": "iqa_v2_train_08596",
+      "neighbor_question": "Will A DUI Affect Life Insurance?",
+      "cosine": 0.9271922480002576
+    },
+    {
+      "id": "iqa_v2_test_01232",
+      "question": "Why Should Landlords Require Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_04934",
+      "neighbor_question": "Why Landlords Require Renters Insurance?",
+      "cosine": 0.9415261230757183
+    },
+    {
+      "id": "iqa_v2_test_01235",
+      "question": "Can Term Life Insurance Premiums Increase?",
+      "neighbor_id": "iqa_v2_train_01182",
+      "neighbor_question": "Can Life Insurance Premiums Increase?",
+      "cosine": 0.9660796672274788
+    },
+    {
+      "id": "iqa_v2_test_01247",
+      "question": "What Are The Disadvantage Of Annuities?",
+      "neighbor_id": "iqa_v2_valid_01667",
+      "neighbor_question": "What Is A Disadvantage Of Annuities?",
+      "cosine": 0.9537909127740105
+    },
+    {
+      "id": "iqa_v2_test_01248",
+      "question": "Does Homeowners Insurance Cover Electrical Wiring?",
+      "neighbor_id": "iqa_v2_train_11571",
+      "neighbor_question": "Does Home Insurance Cover Electrical Wiring?",
+      "cosine": 0.936935672765992
+    },
+    {
+      "id": "iqa_v2_test_01251",
+      "question": "How Do I Estimate Home Insurance?",
+      "neighbor_id": "iqa_v2_train_11832",
+      "neighbor_question": "How Do You Estimate Home Insurance?",
+      "cosine": 0.9654369004685983
+    },
+    {
+      "id": "iqa_v2_test_01255",
+      "question": "Is Car Insurance Cheaper When You Are Married?",
+      "neighbor_id": "iqa_v2_train_02526",
+      "neighbor_question": "Is Car Insurance Cheaper If You Are Married?",
+      "cosine": 0.948584150002553
+    },
+    {
+      "id": "iqa_v2_test_01257",
+      "question": "How Much Critical Illness Insurance To Buy?",
+      "neighbor_id": "iqa_v2_valid_00293",
+      "neighbor_question": "How Much Critical Illness Insurance Should I Buy?",
+      "cosine": 0.9203184085604899
+    },
+    {
+      "id": "iqa_v2_test_01266",
+      "question": "How To Write A Letter To Cancel Auto Insurance?",
+      "neighbor_id": "iqa_v2_train_02184",
+      "neighbor_question": "How To Write A Letter To Cancel Life Insurance?",
+      "cosine": 0.9489629818623608
+    },
+    {
+      "id": "iqa_v2_test_01267",
+      "question": "Can You Deduct Homeowners Insurance On A Rental Property?",
+      "neighbor_id": "iqa_v2_train_07508",
+      "neighbor_question": "Can I Deduct Homeowners Insurance On A Rental Property?",
+      "cosine": 0.9815264656118504
+    },
+    {
+      "id": "iqa_v2_test_01271",
+      "question": "Does Accidental Life Insurance Cover Heart Attack?",
+      "neighbor_id": "iqa_v2_train_07895",
+      "neighbor_question": "Does Accidental Life Insurance Cover A Heart Attack?",
+      "cosine": 0.9986192160876252
+    },
+    {
+      "id": "iqa_v2_test_01277",
+      "question": "Why Is Whole Life Insurance A Bad Investment?",
+      "neighbor_id": "iqa_v2_train_08789",
+      "neighbor_question": "Is Whole Life Insurance A Bad Investment?",
+      "cosine": 0.9726965619024102
+    },
+    {
+      "id": "iqa_v2_test_01284",
+      "question": "Can I Get Life Insurance With Sleep Apnea?",
+      "neighbor_id": "iqa_v2_train_06758",
+      "neighbor_question": "Can You Get Life Insurance With Sleep Apnea?",
+      "cosine": 0.9792920194640272
+    },
+    {
+      "id": "iqa_v2_test_01286",
+      "question": "Can I Apply For Life Insurance Online?",
+      "neighbor_id": "iqa_v2_train_07205",
+      "neighbor_question": "How To Apply For Life Insurance Online?",
+      "cosine": 0.9523483535002387
+    },
+    {
+      "id": "iqa_v2_test_01288",
+      "question": "Is Hazard Insurance The Same As Homeowners Insurance?",
+      "neighbor_id": "iqa_v2_valid_00044",
+      "neighbor_question": "Is Homeowners Insurance The Same As Hazard Insurance?",
+      "cosine": 1.0
+    },
+    {
+      "id": "iqa_v2_test_01293",
+      "question": "What Effect Does Obamacare Have On Medicare?",
+      "neighbor_id": "iqa_v2_train_04562",
+      "neighbor_question": "What Effect Will Obamacare Have On Medicare?",
+      "cosine": 0.9488908690838929
+    },
+    {
+      "id": "iqa_v2_test_01295",
+      "question": "Does Renters Insurance Cover Garage?",
+      "neighbor_id": "iqa_v2_train_00242",
+      "neighbor_question": "Does Renters Insurance Cover My Garage?",
+      "cosine": 0.9814587582247842
+    },
+    {
+      "id": "iqa_v2_test_01300",
+      "question": "What Does A Million Dollar Life Insurance Cost?",
+      "neighbor_id": "iqa_v2_train_04279",
+      "neighbor_question": "What Does A Million Dollar Life Insurance Policy Cost?",
+      "cosine": 0.937248444852733
+    },
+    {
+      "id": "iqa_v2_test_01302",
+      "question": "Which Home Insurance Is Best In New Jersey?",
+      "neighbor_id": "iqa_v2_train_07439",
+      "neighbor_question": "Which Life Insurance Is Best In New Jersey?",
+      "cosine": 0.9557134486259139
+    },
+    {
+      "id": "iqa_v2_test_01304",
+      "question": "Will Medicare Pay For Diabetic Shoes?",
+      "neighbor_id": "iqa_v2_train_01520",
+      "neighbor_question": "Does Medicare Pay For Diabetic Shoes?",
+      "cosine": 0.9571094270220746
+    },
+    {
+      "id": "iqa_v2_test_01307",
+      "question": "Can I Take Life Insurance Out On Anyone?",
+      "neighbor_id": "iqa_v2_train_04037",
+      "neighbor_question": "Can You Take Out Life Insurance On Anyone?",
+      "cosine": 0.9696740885033887
+    },
+    {
+      "id": "iqa_v2_test_01308",
+      "question": "How Much Life Insurance Should My Husband Have?",
+      "neighbor_id": "iqa_v2_train_00820",
+      "neighbor_question": "How Much Life Insurance Should A Husband Have?",
+      "cosine": 0.984287572283338
+    },
+    {
+      "id": "iqa_v2_test_01310",
+      "question": "What Is An Annual Premium For Car Insurance?",
+      "neighbor_id": "iqa_v2_train_00281",
+      "neighbor_question": "What Is An Annual Premium For Home Insurance?",
+      "cosine": 0.9410067313686398
+    },
+    {
+      "id": "iqa_v2_test_01312",
+      "question": "Is A Roth IRA A Qualified Retirement Plan?",
+      "neighbor_id": "iqa_v2_train_04399",
+      "neighbor_question": "Is Ira A Qualified Retirement Plan?",
+      "cosine": 0.9259627905328054
+    },
+    {
+      "id": "iqa_v2_test_01313",
+      "question": "What Drugs Do Health Insurance Companies Test For?",
+      "neighbor_id": "iqa_v2_train_12103",
+      "neighbor_question": "What Drugs Do Life Insurance Companies Test For?",
+      "cosine": 0.9462109917861873
+    },
+    {
+      "id": "iqa_v2_test_01319",
+      "question": "What Is A Non Registered Retirement Savings Plan?",
+      "neighbor_id": "iqa_v2_valid_00933",
+      "neighbor_question": "What Is A Registered Retirement Savings Plan?",
+      "cosine": 0.9598020174052195
+    },
+    {
+      "id": "iqa_v2_test_01321",
+      "question": "Who Has The Cheapest Home Insurance?",
+      "neighbor_id": "iqa_v2_train_01288",
+      "neighbor_question": "Who Has The Cheapest Life Insurance?",
+      "cosine": 0.9263667365931394
+    },
+    {
+      "id": "iqa_v2_test_01323",
+      "question": "When Does Disability Insurance Kick In?",
+      "neighbor_id": "iqa_v2_train_01393",
+      "neighbor_question": "When Does Long Term Disability Insurance Kick In?",
+      "cosine": 0.9229499565535969
+    },
+    {
+      "id": "iqa_v2_test_01325",
+      "question": "Does Homeowners Insurance Cover Jewelry?",
+      "neighbor_id": "iqa_v2_train_12287",
+      "neighbor_question": "Does My Homeowners Insurance Cover Jewelry?",
+      "cosine": 0.987449401913287
+    },
+    {
+      "id": "iqa_v2_test_01327",
+      "question": "Where Can You Get Life Insurance?",
+      "neighbor_id": "iqa_v2_train_07372",
+      "neighbor_question": "Where Do You Get Life Insurance?",
+      "cosine": 0.9255144503644405
+    },
+    {
+      "id": "iqa_v2_test_01339",
+      "question": "When Is Open Enrollment For Medicare B?",
+      "neighbor_id": "iqa_v2_train_05193",
+      "neighbor_question": "When Is Open Enrollment For Medicare D?",
+      "cosine": 0.9378777968048692
+    },
+    {
+      "id": "iqa_v2_test_01349",
+      "question": "How Much Commission Does A Life Insurance Agent Make?",
+      "neighbor_id": "iqa_v2_train_11624",
+      "neighbor_question": "How Much Commission Does An Auto Insurance Agent Make?",
+      "cosine": 0.952481828646467
+    },
+    {
+      "id": "iqa_v2_test_01352",
+      "question": "How Cheap Is Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_07139",
+      "neighbor_question": "What Is Cheap Renters Insurance?",
+      "cosine": 0.9311659289717433
+    },
+    {
+      "id": "iqa_v2_test_01358",
+      "question": "Can I Get Health Insurance If I'm Unemployed?",
+      "neighbor_id": "iqa_v2_train_12864",
+      "neighbor_question": "How Can I Get Health Insurance If I'M Unemployed?",
+      "cosine": 0.9900547680310798
+    },
+    {
+      "id": "iqa_v2_test_01360",
+      "question": "Can Car Insurance Deny Coverage?",
+      "neighbor_id": "iqa_v2_train_11785",
+      "neighbor_question": "Can Life Insurance Deny Coverage?",
+      "cosine": 0.9438257981713357
+    },
+    {
+      "id": "iqa_v2_test_01363",
+      "question": "When Will An Insurance Company Total Your Car?",
+      "neighbor_id": "iqa_v2_train_06032",
+      "neighbor_question": "When Will An Insurance Company Total A Car?",
+      "cosine": 0.9387469306578378
+    },
+    {
+      "id": "iqa_v2_test_01364",
+      "question": "Is Geico A Good Home Insurance Company?",
+      "neighbor_id": "iqa_v2_train_11715",
+      "neighbor_question": "Is Geico A Good Car Insurance Company?",
+      "cosine": 0.9415613081973718
+    },
+    {
+      "id": "iqa_v2_test_01365",
+      "question": "What Do I Need To Get Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_12741",
+      "neighbor_question": "What Do You Need To Get Renters Insurance?",
+      "cosine": 0.9394476109417652
+    },
+    {
+      "id": "iqa_v2_test_01366",
+      "question": "Can You Take Life Insurance Out On Anyone?",
+      "neighbor_id": "iqa_v2_train_04037",
+      "neighbor_question": "Can You Take Out Life Insurance On Anyone?",
+      "cosine": 1.0
+    },
+    {
+      "id": "iqa_v2_test_01368",
+      "question": "Can A Landlord Force You To Buy Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_07808",
+      "neighbor_question": "Can A Landlord Force You To Get Renters Insurance?",
+      "cosine": 0.9488237692280045
+    },
+    {
+      "id": "iqa_v2_test_01371",
+      "question": "Is Part A Medicare Free?",
+      "neighbor_id": "iqa_v2_train_00702",
+      "neighbor_question": "Is Part D Medicare Free?",
+      "cosine": 0.975628646126378
+    },
+    {
+      "id": "iqa_v2_test_01372",
+      "question": "Does Dave Ramsey Recommend Disability Insurance?",
+      "neighbor_id": "iqa_v2_train_09174",
+      "neighbor_question": "Does Dave Ramsey Recommend Long Term Disability Insurance?",
+      "cosine": 0.9567419799213506
+    },
+    {
+      "id": "iqa_v2_test_01376",
+      "question": "How Does Life Insurance Pay For Funeral Expenses?",
+      "neighbor_id": "iqa_v2_valid_00786",
+      "neighbor_question": "Does Life Insurance Pay For Funeral Expenses?",
+      "cosine": 0.9901291463947115
+    },
+    {
+      "id": "iqa_v2_test_01393",
+      "question": "What Is The Best Health Insurance For Young Adults?",
+      "neighbor_id": "iqa_v2_train_04188",
+      "neighbor_question": "What Is The Best Car Insurance For Young Adults?",
+      "cosine": 0.951666151247584
+    },
+    {
+      "id": "iqa_v2_test_01398",
+      "question": "How Can I Get Health Insurance If I Am Overweight?",
+      "neighbor_id": "iqa_v2_train_10242",
+      "neighbor_question": "How To Get Health Insurance If Overweight?",
+      "cosine": 0.9455958387354335
+    },
+    {
+      "id": "iqa_v2_test_01405",
+      "question": "Can A Non Citizen Get Life Insurance?",
+      "neighbor_id": "iqa_v2_train_02859",
+      "neighbor_question": "Can A Non Us Citizen Get Life Insurance?",
+      "cosine": 0.9603025967127441
+    },
+    {
+      "id": "iqa_v2_test_01406",
+      "question": "How Does Type Of Car Affect Insurance?",
+      "neighbor_id": "iqa_v2_train_02857",
+      "neighbor_question": "Does The Type Of Car Affect Insurance?",
+      "cosine": 0.9488339076265908
+    },
+    {
+      "id": "iqa_v2_test_01407",
+      "question": "Is Disability Insurance Payments Taxable?",
+      "neighbor_id": "iqa_v2_train_07219",
+      "neighbor_question": "Is A Disability Insurance Payment Taxable?",
+      "cosine": 0.9266339000483598
+    },
+    {
+      "id": "iqa_v2_test_01411",
+      "question": "When Is It Too Late To Get Long Term Care Insurance?",
+      "neighbor_id": "iqa_v2_train_09071",
+      "neighbor_question": "When Is It Too Late For Long Term Care Insurance?",
+      "cosine": 0.9416325304903854
+    },
+    {
+      "id": "iqa_v2_test_01412",
+      "question": "Why Is Auto Insurance Expensive?",
+      "neighbor_id": "iqa_v2_train_07857",
+      "neighbor_question": "Why Is My Auto Insurance So Expensive?",
+      "cosine": 0.940845237323553
+    },
+    {
+      "id": "iqa_v2_test_01413",
+      "question": "Does Life Insurance Test Urine?",
+      "neighbor_id": "iqa_v2_train_04812",
+      "neighbor_question": "Why Does Life Insurance Test Urine?",
+      "cosine": 0.9614422979488335
+    },
+    {
+      "id": "iqa_v2_test_01414",
+      "question": "Does Edward Jones Offer Health Insurance?",
+      "neighbor_id": "iqa_v2_train_09862",
+      "neighbor_question": "Does Edward Jones Offer Life Insurance?",
+      "cosine": 0.9574116019830643
+    },
+    {
+      "id": "iqa_v2_test_01417",
+      "question": "When Should You Stop Buying Term Life Insurance?",
+      "neighbor_id": "iqa_v2_train_05070",
+      "neighbor_question": "When Should You Stop Buying Life Insurance?",
+      "cosine": 0.963375919287225
+    },
+    {
+      "id": "iqa_v2_test_01422",
+      "question": "How To Evaluate Disability Insurance?",
+      "neighbor_id": "iqa_v2_train_06050",
+      "neighbor_question": "How To Evaluate Long Term Disability Insurance?",
+      "cosine": 0.9337060497669587
+    },
+    {
+      "id": "iqa_v2_test_01424",
+      "question": "Does Health Insurance Cover The Lap Band Surgery?",
+      "neighbor_id": "iqa_v2_train_06466",
+      "neighbor_question": "Does Health Insurance Cover Lap Band Surgery?",
+      "cosine": 0.9826733884937434
+    },
+    {
+      "id": "iqa_v2_test_01427",
+      "question": "Why Would Homeowners Insurance Go Up?",
+      "neighbor_id": "iqa_v2_valid_00109",
+      "neighbor_question": "Why Would My Homeowners Insurance Go Up?",
+      "cosine": 0.9802455687786237
+    },
+    {
+      "id": "iqa_v2_test_01428",
+      "question": "Does Home Insurance Cover Electrical Surges?",
+      "neighbor_id": "iqa_v2_train_08401",
+      "neighbor_question": "Does Renters Insurance Cover Electrical Surges?",
+      "cosine": 0.9294407591460585
+    },
+    {
+      "id": "iqa_v2_test_01447",
+      "question": "How Do I Get Proof Of Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_09424",
+      "neighbor_question": "How To Get Proof Of Renters Insurance?",
+      "cosine": 0.9672707743004603
+    },
+    {
+      "id": "iqa_v2_test_01449",
+      "question": "Can A Quadriplegic Buy Life Insurance?",
+      "neighbor_id": "iqa_v2_train_04732",
+      "neighbor_question": "Can A Quadriplegic Get Life Insurance?",
+      "cosine": 0.9639396184990013
+    },
+    {
+      "id": "iqa_v2_test_01450",
+      "question": "When Does Homeowners Insurance Pay For A New Roof?",
+      "neighbor_id": "iqa_v2_train_02171",
+      "neighbor_question": "Does Homeowners Insurance Pay For New Roof?",
+      "cosine": 0.9574027752828851
+    },
+    {
+      "id": "iqa_v2_test_01451",
+      "question": "Why Buy Medicare Supplemental Insurance?",
+      "neighbor_id": "iqa_v2_valid_01467",
+      "neighbor_question": "Why Get Medicare Supplemental Insurance?",
+      "cosine": 0.9291144088729401
+    },
+    {
+      "id": "iqa_v2_test_01454",
+      "question": "How Much Life Insurance Does A Single Person Need?",
+      "neighbor_id": "iqa_v2_train_06332",
+      "neighbor_question": "Much Life Insurance Does A Single Person Need?",
+      "cosine": 0.9881268705087576
+    },
+    {
+      "id": "iqa_v2_test_01455",
+      "question": "Can You Use Life Insurance As Collateral?",
+      "neighbor_id": "iqa_v2_train_11422",
+      "neighbor_question": "Can I Use My Life Insurance As Collateral?",
+      "cosine": 0.9644315020591009
+    },
+    {
+      "id": "iqa_v2_test_01459",
+      "question": "Can I Have Car Insurance From Another State?",
+      "neighbor_id": "iqa_v2_train_03018",
+      "neighbor_question": "Can I Have Car Insurance From Another state?",
+      "cosine": 1.0
+    },
+    {
+      "id": "iqa_v2_test_01465",
+      "question": "How Much Disability Insurance Can You Buy?",
+      "neighbor_id": "iqa_v2_train_08723",
+      "neighbor_question": "How Much Disability Insurance Can I Buy?",
+      "cosine": 0.9584114074723566
+    },
+    {
+      "id": "iqa_v2_test_01468",
+      "question": "Will Medicare Pay For Non Emergency Transportation?",
+      "neighbor_id": "iqa_v2_train_07992",
+      "neighbor_question": "How Much Does Medicare Pay For Non Emergency Transportation?",
+      "cosine": 0.9565956896015012
+    },
+    {
+      "id": "iqa_v2_test_01470",
+      "question": "What Happens When You Stop Paying Life Insurance?",
+      "neighbor_id": "iqa_v2_train_06082",
+      "neighbor_question": "What Happens If I Stop Paying Life Insurance?",
+      "cosine": 0.9233798286258909
+    },
+    {
+      "id": "iqa_v2_test_01472",
+      "question": "Will Home Insurance Cover My Laptop?",
+      "neighbor_id": "iqa_v2_train_02780",
+      "neighbor_question": "Does Home Insurance Cover My Laptop?",
+      "cosine": 0.9351097493113386
+    },
+    {
+      "id": "iqa_v2_test_01474",
+      "question": "What Information Do I Need For Home Insurance Quote?",
+      "neighbor_id": "iqa_v2_train_03593",
+      "neighbor_question": "What Information Do I Need For A Home Insurance Quote?",
+      "cosine": 0.9984148889388893
+    },
+    {
+      "id": "iqa_v2_test_01476",
+      "question": "Can You Be Denied Medigap Insurance?",
+      "neighbor_id": "iqa_v2_train_12132",
+      "neighbor_question": "Can I Be Denied Medigap Insurance?",
+      "cosine": 0.9617094327346671
+    },
+    {
+      "id": "iqa_v2_test_01480",
+      "question": "Does Home Insurance Cover Plumbing?",
+      "neighbor_id": "iqa_v2_train_00343",
+      "neighbor_question": "Can Home Insurance Cover Plumbing?",
+      "cosine": 0.9708899811682065
+    },
+    {
+      "id": "iqa_v2_test_01485",
+      "question": "What Is Elimination Period In Disability Insurance?",
+      "neighbor_id": "iqa_v2_valid_01027",
+      "neighbor_question": "What Is An Elimination Period In Disability Insurance?",
+      "cosine": 0.9919208415916986
+    },
+    {
+      "id": "iqa_v2_test_01489",
+      "question": "How Much Is Renters Insurance From Allstate?",
+      "neighbor_id": "iqa_v2_train_03642",
+      "neighbor_question": "How Much Is Renters Insurance Allstate?",
+      "cosine": 0.9245186247168174
+    },
+    {
+      "id": "iqa_v2_test_01497",
+      "question": "Will Renters Insurance Cover My Iphone?",
+      "neighbor_id": "iqa_v2_train_04906",
+      "neighbor_question": "Will Renters Insurance Cover Iphone?",
+      "cosine": 0.9854539073762457
+    },
+    {
+      "id": "iqa_v2_test_01498",
+      "question": "What The Difference Between Medigap And Medicare Advantage?",
+      "neighbor_id": "iqa_v2_train_11906",
+      "neighbor_question": "What Is The Difference Between Medigap And Medicare Advantage?",
+      "cosine": 0.9974640692709084
+    },
+    {
+      "id": "iqa_v2_test_01501",
+      "question": "How Long Does It Take To Get Money From Home Insurance?",
+      "neighbor_id": "iqa_v2_train_03085",
+      "neighbor_question": "How Long Does It Take To Get Money From Life Insurance?",
+      "cosine": 0.9423265718523635
+    },
+    {
+      "id": "iqa_v2_test_01502",
+      "question": "Is Disability Insurance Deductible?",
+      "neighbor_id": "iqa_v2_train_04810",
+      "neighbor_question": "Is Disability Insurance Tax Deductible?",
+      "cosine": 0.9370034297183921
+    },
+    {
+      "id": "iqa_v2_test_01503",
+      "question": "When Are Annuities Taxed?",
+      "neighbor_id": "iqa_v2_train_04959",
+      "neighbor_question": "How Are Annuities Taxed?",
+      "cosine": 0.9272382203718154
+    },
+    {
+      "id": "iqa_v2_test_01510",
+      "question": "Why Is Auto Insurance Important To Have?",
+      "neighbor_id": "iqa_v2_train_03748",
+      "neighbor_question": "Why Is Life Insurance Important To Have?",
+      "cosine": 0.937580647022565
+    },
+    {
+      "id": "iqa_v2_test_01516",
+      "question": "Why Does Health Insurance Go Up?",
+      "neighbor_id": "iqa_v2_train_06055",
+      "neighbor_question": "Why Does My Health Insurance Go Up?",
+      "cosine": 0.9669043246937783
+    },
+    {
+      "id": "iqa_v2_test_01520",
+      "question": "What Is Health And Disability Insurance?",
+      "neighbor_id": "iqa_v2_valid_01255",
+      "neighbor_question": "What Is Disability Health Insurance?",
+      "cosine": 0.9200381938140901
+    },
+    {
+      "id": "iqa_v2_test_01521",
+      "question": "How Much Does The Average Person Spend On Home Insurance?",
+      "neighbor_id": "iqa_v2_train_10175",
+      "neighbor_question": "How Much Does The Average Person Spend On Life Insurance?",
+      "cosine": 0.960189949993306
+    },
+    {
+      "id": "iqa_v2_test_01526",
+      "question": "Can I Change My Home Insurance At Any Time?",
+      "neighbor_id": "iqa_v2_train_12149",
+      "neighbor_question": "Can I Change Car Insurance At Any Time?",
+      "cosine": 0.9230832712178829
+    },
+    {
+      "id": "iqa_v2_test_01527",
+      "question": "Can I Keep My Ex Wife On My Car Insurance?",
+      "neighbor_id": "iqa_v2_train_01419",
+      "neighbor_question": "Can I Keep My Ex Wife On My Health Insurance?",
+      "cosine": 0.9243972751148294
+    },
+    {
+      "id": "iqa_v2_test_01532",
+      "question": "Who Is The Cheapest Home Insurance?",
+      "neighbor_id": "iqa_v2_train_07189",
+      "neighbor_question": "Who Does The Cheapest Home Insurance?",
+      "cosine": 0.9655661622077266
+    },
+    {
+      "id": "iqa_v2_test_01534",
+      "question": "Can I Pay Auto Insurance With A Credit Card?",
+      "neighbor_id": "iqa_v2_train_10228",
+      "neighbor_question": "Can I Pay Life Insurance With A Credit Card?",
+      "cosine": 0.9298174587943537
+    },
+    {
+      "id": "iqa_v2_test_01535",
+      "question": "Is Life Insurance Ever Deductible?",
+      "neighbor_id": "iqa_v2_valid_00034",
+      "neighbor_question": "Is Life Insurance Ever Tax Deductible?",
+      "cosine": 0.9340195342078207
+    },
+    {
+      "id": "iqa_v2_test_01539",
+      "question": "When Is The Best Time To Buy Long Term Care Insurance?",
+      "neighbor_id": "iqa_v2_train_10852",
+      "neighbor_question": "What Is The Best Time To Buy Long Term Care Insurance?",
+      "cosine": 0.9322271466369493
+    },
+    {
+      "id": "iqa_v2_test_01540",
+      "question": "Can Home Insurance Companies Drop You?",
+      "neighbor_id": "iqa_v2_train_00266",
+      "neighbor_question": "Can Car Insurance Companies Drop You?",
+      "cosine": 0.9400714312882165
+    },
+    {
+      "id": "iqa_v2_test_01541",
+      "question": "Can You Have Two Disability Insurance Policies?",
+      "neighbor_id": "iqa_v2_train_07027",
+      "neighbor_question": "Can I Have Two Disability Insurance Policies?",
+      "cosine": 0.9724458020522612
+    },
+    {
+      "id": "iqa_v2_test_01542",
+      "question": "What The Best Disability Insurance?",
+      "neighbor_id": "iqa_v2_train_05634",
+      "neighbor_question": "What Is The Best Disability Insurance?",
+      "cosine": 0.9892845667310332
+    },
+    {
+      "id": "iqa_v2_test_01543",
+      "question": "Can I Be Denied Health Insurance Coverage For A Pre Existing Condition?",
+      "neighbor_id": "iqa_v2_train_01940",
+      "neighbor_question": "Can You Be Denied Health Insurance For A Pre Existing Condition?",
+      "cosine": 0.9267887818744438
+    },
+    {
+      "id": "iqa_v2_test_01556",
+      "question": "How Much Renters Insurance Should You Get?",
+      "neighbor_id": "iqa_v2_train_04312",
+      "neighbor_question": "How Much Renters Insurance Should I Get?",
+      "cosine": 0.958190807533149
+    },
+    {
+      "id": "iqa_v2_test_01563",
+      "question": "Does Medicare Cover A Nursing Home?",
+      "neighbor_id": "iqa_v2_train_08494",
+      "neighbor_question": "How Long Does Medicare Cover Nursing Home?",
+      "cosine": 0.9396446843978872
+    },
+    {
+      "id": "iqa_v2_test_01566",
+      "question": "What Does Medigap Mean?",
+      "neighbor_id": "iqa_v2_train_05573",
+      "neighbor_question": "What Does Medigap Insurance Mean?",
+      "cosine": 0.9739064411973408
+    },
+    {
+      "id": "iqa_v2_test_01568",
+      "question": "How To Get Homeowners Insurance Quote?",
+      "neighbor_id": "iqa_v2_train_11040",
+      "neighbor_question": "How To Get A Homeowners Insurance Quote?",
+      "cosine": 0.9967702056134622
+    },
+    {
+      "id": "iqa_v2_test_01572",
+      "question": "Does Life Insurance Pay For Accidental Death?",
+      "neighbor_id": "iqa_v2_train_04252",
+      "neighbor_question": "Does Life Insurance Cover Accidental Death?",
+      "cosine": 0.9233339702337474
+    },
+    {
+      "id": "iqa_v2_test_01577",
+      "question": "Does Health Insurance Cover A Tubal Reversal?",
+      "neighbor_id": "iqa_v2_train_12208",
+      "neighbor_question": "Does Health Insurance Cover Tubal Reversal?",
+      "cosine": 0.998408993656571
+    },
+    {
+      "id": "iqa_v2_test_01582",
+      "question": "Is Renters Insurance Necessary?",
+      "neighbor_id": "iqa_v2_train_01848",
+      "neighbor_question": "Why Is Renters Insurance Necessary?",
+      "cosine": 0.9702571734369154
+    },
+    {
+      "id": "iqa_v2_test_01585",
+      "question": "How Can Life Insurance Be An Investment?",
+      "neighbor_id": "iqa_v2_train_04900",
+      "neighbor_question": "Can Life Insurance Be An Investment?",
+      "cosine": 0.983672094785087
+    },
+    {
+      "id": "iqa_v2_test_01588",
+      "question": "Does Medicare Cover Cymbalta?",
+      "neighbor_id": "iqa_v2_train_00801",
+      "neighbor_question": "Does Medicare Part D Cover Cymbalta?",
+      "cosine": 0.9493517515076554
+    },
+    {
+      "id": "iqa_v2_test_01590",
+      "question": "What Does Dave Ramsey Say About Long Term Care Insurance?",
+      "neighbor_id": "iqa_v2_valid_01488",
+      "neighbor_question": "What Does Dave Ramsey Say About Car Insurance?",
+      "cosine": 0.9227676149974302
+    },
+    {
+      "id": "iqa_v2_test_01591",
+      "question": "Does Renters Insurance Cover Theft Outside The Home?",
+      "neighbor_id": "iqa_v2_train_10877",
+      "neighbor_question": "Does Home Insurance Cover Theft Outside The Home?",
+      "cosine": 0.9292279857770783
+    },
+    {
+      "id": "iqa_v2_test_01592",
+      "question": "Does Disability Insurance Pay For Maternity Leave?",
+      "neighbor_id": "iqa_v2_train_02188",
+      "neighbor_question": "Will Disability Insurance Pay For Maternity Leave?",
+      "cosine": 0.9581131028659055
+    },
+    {
+      "id": "iqa_v2_test_01597",
+      "question": "How To Choose A Home Insurance Company?",
+      "neighbor_id": "iqa_v2_valid_01669",
+      "neighbor_question": "How To Choose A Life Insurance Company?",
+      "cosine": 0.9426185227854145
+    },
+    {
+      "id": "iqa_v2_test_01600",
+      "question": "Can I Change From Medicare Advantage To Medigap?",
+      "neighbor_id": "iqa_v2_train_00361",
+      "neighbor_question": "Can You Change From Medicare Advantage To Medigap?",
+      "cosine": 0.9828481404207394
+    },
+    {
+      "id": "iqa_v2_test_01601",
+      "question": "What Does Car Insurance Lapse Mean?",
+      "neighbor_id": "iqa_v2_train_05240",
+      "neighbor_question": "What Does A Lapse In Car Insurance Mean?",
+      "cosine": 0.9849609665138932
+    },
+    {
+      "id": "iqa_v2_test_01602",
+      "question": "Why Is Home Insurance So Expensive In Wisconsin?",
+      "neighbor_id": "iqa_v2_train_06770",
+      "neighbor_question": "Why Is Life Insurance So Expensive In Wisconsin?",
+      "cosine": 0.9690432044721069
+    },
+    {
+      "id": "iqa_v2_test_01607",
+      "question": "How Can I Become A Car Insurance Broker?",
+      "neighbor_id": "iqa_v2_train_03996",
+      "neighbor_question": "How To Become A Home Insurance Broker?",
+      "cosine": 0.9204953592530567
+    },
+    {
+      "id": "iqa_v2_test_01610",
+      "question": "Where Can You Buy Annuities?",
+      "neighbor_id": "iqa_v2_train_11868",
+      "neighbor_question": "Where Do You Buy Annuities?",
+      "cosine": 0.9577453898565256
+    },
+    {
+      "id": "iqa_v2_test_01612",
+      "question": "Should I Choose Medigap Or Medicare Advantage?",
+      "neighbor_id": "iqa_v2_train_00986",
+      "neighbor_question": "Why Choose Medigap Or Medicare Advantage?",
+      "cosine": 0.92351409595759
+    },
+    {
+      "id": "iqa_v2_test_01621",
+      "question": "Can Auto Insurance Companies See My Driving Record?",
+      "neighbor_id": "iqa_v2_train_07008",
+      "neighbor_question": "Can Insurance Companies See My Driving Record?",
+      "cosine": 0.9725052646846497
+    },
+    {
+      "id": "iqa_v2_test_01624",
+      "question": "What Happens When Your Term Life Insurance Expires?",
+      "neighbor_id": "iqa_v2_train_09241",
+      "neighbor_question": "What Happens When Life Insurance Term Expires?",
+      "cosine": 0.9515730065356838
+    },
+    {
+      "id": "iqa_v2_test_01626",
+      "question": "Why Is Critical Illness Insurance Important?",
+      "neighbor_id": "iqa_v2_train_06249",
+      "neighbor_question": "Is Critical Illness Insurance Important?",
+      "cosine": 0.9807931524805276
+    },
+    {
+      "id": "iqa_v2_test_01628",
+      "question": "Can You Borrow Against Globe Life Insurance?",
+      "neighbor_id": "iqa_v2_train_12447",
+      "neighbor_question": "Can I Borrow Against My Globe Life Insurance?",
+      "cosine": 0.9688930176675472
+    },
+    {
+      "id": "iqa_v2_test_01630",
+      "question": "What Type Of Life Insurance Is Best For Me?",
+      "neighbor_id": "iqa_v2_train_05617",
+      "neighbor_question": "What The Best Type Of Life Insurance For Me?",
+      "cosine": 0.9576645094897115
+    },
+    {
+      "id": "iqa_v2_test_01633",
+      "question": "What To Look For In A Term Life Insurance Policy?",
+      "neighbor_id": "iqa_v2_valid_00929",
+      "neighbor_question": "What To Look For In A Life Insurance Policy?",
+      "cosine": 0.9451367786102808
+    },
+    {
+      "id": "iqa_v2_test_01634",
+      "question": "What Term Life Insurance Should I Get?",
+      "neighbor_id": "iqa_v2_train_03439",
+      "neighbor_question": "What Life Insurance Term Should I Get?",
+      "cosine": 1.0
+    },
+    {
+      "id": "iqa_v2_test_01637",
+      "question": "How Much Does Renters Insurance Cost A Year?",
+      "neighbor_id": "iqa_v2_train_09353",
+      "neighbor_question": "How Much Does Renters Insurance Cost Per Year?",
+      "cosine": 0.9281389533290003
+    },
+    {
+      "id": "iqa_v2_test_01638",
+      "question": "Does Home Insurance Cover Locksmith?",
+      "neighbor_id": "iqa_v2_train_05278",
+      "neighbor_question": "Does Renters Insurance Cover Locksmith?",
+      "cosine": 0.9312028824293506
+    },
+    {
+      "id": "iqa_v2_test_01639",
+      "question": "What Are The Coverage Characteristics Of Life Insurance?",
+      "neighbor_id": "iqa_v2_train_00367",
+      "neighbor_question": "What Are The Coverage Characteristics Of Home Insurance?",
+      "cosine": 0.9740622651617462
+    },
+    {
+      "id": "iqa_v2_test_01646",
+      "question": "Will My Homeowners Insurance Cover Asbestos?",
+      "neighbor_id": "iqa_v2_train_11374",
+      "neighbor_question": "Does Homeowners Insurance Cover Asbestos?",
+      "cosine": 0.944857528115086
+    },
+    {
+      "id": "iqa_v2_test_01663",
+      "question": "When Should You Get Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_02560",
+      "neighbor_question": "When Should I Get Renters Insurance?",
+      "cosine": 0.9472107756807876
+    },
+    {
+      "id": "iqa_v2_test_01670",
+      "question": "Does Medigap Plan F Cover Physical Therapy?",
+      "neighbor_id": "iqa_v2_valid_00257",
+      "neighbor_question": "Does Medigap Cover Physical Therapy?",
+      "cosine": 0.9568096804551705
+    },
+    {
+      "id": "iqa_v2_test_01675",
+      "question": "Can I Buy Auto Insurance Without Owning A Car?",
+      "neighbor_id": "iqa_v2_train_09789",
+      "neighbor_question": "Can I Get Auto Insurance Without Owning A Car?",
+      "cosine": 0.939204206010036
+    },
+    {
+      "id": "iqa_v2_test_01681",
+      "question": "Can I Switch Auto Insurance In The Middle Of A Policy?",
+      "neighbor_id": "iqa_v2_train_08696",
+      "neighbor_question": "Can You Switch Auto Insurance In The Middle Of A Policy?",
+      "cosine": 0.982523063164983
+    },
+    {
+      "id": "iqa_v2_test_01684",
+      "question": "How Does Long Term Disability Insurance Work?",
+      "neighbor_id": "iqa_v2_train_08803",
+      "neighbor_question": "Does Long Term Disability Insurance Work?",
+      "cosine": 0.9815404397709562
+    },
+    {
+      "id": "iqa_v2_test_01690",
+      "question": "What Is The Oldest Life Insurance Company?",
+      "neighbor_id": "iqa_v2_train_07216",
+      "neighbor_question": "Who Is The Oldest Life Insurance Company?",
+      "cosine": 0.9571690513835281
+    },
+    {
+      "id": "iqa_v2_test_01691",
+      "question": "What Factors Affect Life Insurance Premiums?",
+      "neighbor_id": "iqa_v2_train_03733",
+      "neighbor_question": "What Factors Affect Auto Insurance Premiums?",
+      "cosine": 0.9554036022951308
+    },
+    {
+      "id": "iqa_v2_test_01696",
+      "question": "Is Money From Disability Insurance Taxable?",
+      "neighbor_id": "iqa_v2_train_03352",
+      "neighbor_question": "Is Disability Insurance Money Taxable?",
+      "cosine": 0.9320461789268744
+    },
+    {
+      "id": "iqa_v2_test_01697",
+      "question": "How Does Social Security Fit Into My Retirement Plan?",
+      "neighbor_id": "iqa_v2_valid_01672",
+      "neighbor_question": "How Does Social Security Fit Into A Retirement Plan?",
+      "cosine": 0.9907472490496423
+    },
+    {
+      "id": "iqa_v2_test_01699",
+      "question": "How Do You Become Eligible For Medicare?",
+      "neighbor_id": "iqa_v2_train_05331",
+      "neighbor_question": "When Do You Become Eligible For Medicare?",
+      "cosine": 0.9585243767102989
+    },
+    {
+      "id": "iqa_v2_test_01705",
+      "question": "What Age Should You Buy Long Term Care Insurance?",
+      "neighbor_id": "iqa_v2_valid_01193",
+      "neighbor_question": "What Age Should I Buy Long Term Care Insurance?",
+      "cosine": 0.9590610319339428
+    },
+    {
+      "id": "iqa_v2_test_01707",
+      "question": "How Much Should I Expect To Pay For Disability Insurance?",
+      "neighbor_id": "iqa_v2_train_02831",
+      "neighbor_question": "What Should I Expect To Pay For Disability Insurance?",
+      "cosine": 0.9371489819429113
+    },
+    {
+      "id": "iqa_v2_test_01715",
+      "question": "Where Can You Get Renters Insurance?",
+      "neighbor_id": "iqa_v2_valid_01342",
+      "neighbor_question": "Where Do You Get Renters Insurance?",
+      "cosine": 0.9439074128965521
+    },
+    {
+      "id": "iqa_v2_test_01716",
+      "question": "How Much Is Homeowners Insurance Deductible?",
+      "neighbor_id": "iqa_v2_train_07137",
+      "neighbor_question": "What Is A Homeowners Insurance Deductible?",
+      "cosine": 0.9230394894507941
+    },
+    {
+      "id": "iqa_v2_test_01717",
+      "question": "Does AARP Offer Term Life Insurance?",
+      "neighbor_id": "iqa_v2_train_12189",
+      "neighbor_question": "Does AARP Offer Life Insurance?",
+      "cosine": 0.9419411338572803
+    },
+    {
+      "id": "iqa_v2_test_01726",
+      "question": "How Much Does Home Insurance Increase After A Claim?",
+      "neighbor_id": "iqa_v2_train_10666",
+      "neighbor_question": "Does Home Insurance Increase After A Claim?",
+      "cosine": 0.9587412285647601
+    },
+    {
+      "id": "iqa_v2_test_01734",
+      "question": "Can A Life Insurance Policy Be Used As Collateral?",
+      "neighbor_id": "iqa_v2_train_08626",
+      "neighbor_question": "Can Life Insurance Be Used As Collateral?",
+      "cosine": 0.9317293980285638
+    },
+    {
+      "id": "iqa_v2_test_01746",
+      "question": "How Long Does A Home Insurance Claim Take?",
+      "neighbor_id": "iqa_v2_train_01806",
+      "neighbor_question": "How Long Does Home Insurance Claim Take?",
+      "cosine": 0.9967380752677238
+    },
+    {
+      "id": "iqa_v2_test_01747",
+      "question": "Does Car Insurance Affect Your Credit Score?",
+      "neighbor_id": "iqa_v2_train_12491",
+      "neighbor_question": "Does Life Insurance Affect Your Credit Score?",
+      "cosine": 0.9696438242534816
+    },
+    {
+      "id": "iqa_v2_test_01750",
+      "question": "How Much Is Health Insurance If Unemployed?",
+      "neighbor_id": "iqa_v2_train_02767",
+      "neighbor_question": "How Much Is Health Insurance For The Unemployed?",
+      "cosine": 0.9430693402866752
+    },
+    {
+      "id": "iqa_v2_test_01751",
+      "question": "When To Apply For Homeowners Insurance?",
+      "neighbor_id": "iqa_v2_train_11914",
+      "neighbor_question": "How To Apply For Homeowners Insurance?",
+      "cosine": 0.9211966319613936
+    },
+    {
+      "id": "iqa_v2_test_01752",
+      "question": "Does auto insurance cover theft?",
+      "neighbor_id": "iqa_v2_train_02440",
+      "neighbor_question": "Does Home Insurance Cover Auto Theft?",
+      "cosine": 0.9491080508092821
+    },
+    {
+      "id": "iqa_v2_test_01755",
+      "question": "What Do I Need To Plan For Retirement?",
+      "neighbor_id": "iqa_v2_train_03988",
+      "neighbor_question": "What Do You Need To Plan For Retirement?",
+      "cosine": 0.9627059378540027
+    },
+    {
+      "id": "iqa_v2_test_01756",
+      "question": "Why Is The Cost Of Health Insurance Rising?",
+      "neighbor_id": "iqa_v2_train_11611",
+      "neighbor_question": "Why Is Health Insurance Cost Rising?",
+      "cosine": 0.9601485694227309
+    },
+    {
+      "id": "iqa_v2_test_01759",
+      "question": "When Is Whole Life Insurance A Good Investment?",
+      "neighbor_id": "iqa_v2_train_11241",
+      "neighbor_question": "Is Whole Life Insurance A Good Investment?",
+      "cosine": 0.9634999057200409
+    },
+    {
+      "id": "iqa_v2_test_01763",
+      "question": "Will Homeowners Insurance Cover Termite Damage?",
+      "neighbor_id": "iqa_v2_valid_00725",
+      "neighbor_question": "Will Homeowners Insurance Pay For Termite Damage?",
+      "cosine": 0.9289180819010294
+    },
+    {
+      "id": "iqa_v2_test_01771",
+      "question": "Will Medicare Pay For CT Scan?",
+      "neighbor_id": "iqa_v2_train_07368",
+      "neighbor_question": "Will Medicare Pay For A CT Scan?",
+      "cosine": 0.9972711395689766
+    },
+    {
+      "id": "iqa_v2_test_01773",
+      "question": "How Much Commission Can A Life Insurance Agent Make?",
+      "neighbor_id": "iqa_v2_train_11624",
+      "neighbor_question": "How Much Commission Does An Auto Insurance Agent Make?",
+      "cosine": 0.9361718786648582
+    },
+    {
+      "id": "iqa_v2_test_01776",
+      "question": "How Much Does Life Insurance Cost For A Newborn?",
+      "neighbor_id": "iqa_v2_train_08285",
+      "neighbor_question": "How Much Does Health Insurance Cost For A Newborn?",
+      "cosine": 0.9466791524600348
+    },
+    {
+      "id": "iqa_v2_test_01781",
+      "question": "Does Getting Auto Insurance Quotes Affect Credit Score?",
+      "neighbor_id": "iqa_v2_train_00809",
+      "neighbor_question": "Does Getting Auto Insurance Quotes Affect Your Credit Score?",
+      "cosine": 0.9688487609142106
+    },
+    {
+      "id": "iqa_v2_test_01785",
+      "question": "How Good Is Liberty Mutual Auto Insurance?",
+      "neighbor_id": "iqa_v2_train_07569",
+      "neighbor_question": "Is Liberty Mutual A Good Auto Insurance?",
+      "cosine": 0.9888768518653739
+    },
+    {
+      "id": "iqa_v2_test_01786",
+      "question": "How Much Should I Be Paying For Home Insurance?",
+      "neighbor_id": "iqa_v2_train_09967",
+      "neighbor_question": "How Much Should I Be Paying For Life Insurance?",
+      "cosine": 0.9358230847450856
+    },
+    {
+      "id": "iqa_v2_test_01788",
+      "question": "Why Is It Important To Have A Retirement Plan?",
+      "neighbor_id": "iqa_v2_train_06717",
+      "neighbor_question": "How Important Is It To Have A Retirement Plan?",
+      "cosine": 0.967631674767451
+    },
+    {
+      "id": "iqa_v2_test_01793",
+      "question": "Will Home Insurance Cover Bat Removal?",
+      "neighbor_id": "iqa_v2_train_05221",
+      "neighbor_question": "Does Home Insurance Cover Bat Removal?",
+      "cosine": 0.9390655171735182
+    },
+    {
+      "id": "iqa_v2_test_01797",
+      "question": "How Good Is Primerica Life Insurance?",
+      "neighbor_id": "iqa_v2_train_09099",
+      "neighbor_question": "Is Primerica A Good Life Insurance?",
+      "cosine": 0.984075243741659
+    },
+    {
+      "id": "iqa_v2_test_01798",
+      "question": "Is Vandalism Covered By Auto Insurance?",
+      "neighbor_id": "iqa_v2_train_04878",
+      "neighbor_question": "Is Vandalism Covered By Car Insurance?",
+      "cosine": 0.9461316026707193
+    },
+    {
+      "id": "iqa_v2_test_01799",
+      "question": "What Is The Best Life Insurance Company?",
+      "neighbor_id": "iqa_v2_train_03471",
+      "neighbor_question": "What Is Best Life Insurance Company?",
+      "cosine": 0.9625330974339154
+    },
+    {
+      "id": "iqa_v2_test_01803",
+      "question": "Can I Get Medicare Before Age 65?",
+      "neighbor_id": "iqa_v2_train_00731",
+      "neighbor_question": "Can I Get On Medicare Before The Age Of 65?",
+      "cosine": 0.9497442453185049
+    },
+    {
+      "id": "iqa_v2_test_01804",
+      "question": "Does Medicare B Cover Prescriptions?",
+      "neighbor_id": "iqa_v2_train_07238",
+      "neighbor_question": "Does Medicare Plan B Cover Prescriptions?",
+      "cosine": 0.9643146566845225
+    },
+    {
+      "id": "iqa_v2_test_01809",
+      "question": "What Life Insurance Does Dave Ramsey Recommend?",
+      "neighbor_id": "iqa_v2_train_12484",
+      "neighbor_question": "What Kind Of Life Insurance Does Dave Ramsey Recommend?",
+      "cosine": 0.9347836327351936
+    },
+    {
+      "id": "iqa_v2_test_01811",
+      "question": "Is Life Insurance Considered An Asset?",
+      "neighbor_id": "iqa_v2_valid_01371",
+      "neighbor_question": "Is Whole Life Insurance Considered An Asset?",
+      "cosine": 0.9318964482305826
+    },
+    {
+      "id": "iqa_v2_test_01812",
+      "question": "Is A Variable Life Insurance A Good Investment?",
+      "neighbor_id": "iqa_v2_train_10275",
+      "neighbor_question": "Is Variable Life Insurance A Good Investment?",
+      "cosine": 0.9980687475398359
+    },
+    {
+      "id": "iqa_v2_test_01817",
+      "question": "Where Do You Buy Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_05437",
+      "neighbor_question": "Where Can You Buy Renters Insurance?",
+      "cosine": 0.9472602334463601
+    },
+    {
+      "id": "iqa_v2_test_01819",
+      "question": "Do Life Insurance Proceeds Go Through Probate?",
+      "neighbor_id": "iqa_v2_train_12118",
+      "neighbor_question": "Do Life Insurance Proceeds Have To Go Through Probate?",
+      "cosine": 0.9718178698260997
+    },
+    {
+      "id": "iqa_v2_test_01822",
+      "question": "Where Do I Withdraw My 401K?",
+      "neighbor_id": "iqa_v2_train_03485",
+      "neighbor_question": "Where Can I Withdraw My 401K?",
+      "cosine": 0.9772851712324311
+    },
+    {
+      "id": "iqa_v2_test_01825",
+      "question": "What Is A Good Renters Insurance?",
+      "neighbor_id": "iqa_v2_valid_01192",
+      "neighbor_question": "What Is Good Renters Insurance?",
+      "cosine": 0.9935935458456593
+    },
+    {
+      "id": "iqa_v2_test_01826",
+      "question": "Is Globe Life Insurance Good?",
+      "neighbor_id": "iqa_v2_train_07894",
+      "neighbor_question": "Is Globe Life Insurance Any Good?",
+      "cosine": 0.9333349032226308
+    },
+    {
+      "id": "iqa_v2_test_01828",
+      "question": "How Long Can A Home Insurance Claim Take?",
+      "neighbor_id": "iqa_v2_train_01806",
+      "neighbor_question": "How Long Does Home Insurance Claim Take?",
+      "cosine": 0.9548659864436457
+    },
+    {
+      "id": "iqa_v2_test_01829",
+      "question": "What Is Loss Of Use In Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_08822",
+      "neighbor_question": "What Is Loss Of Use On Renters Insurance?",
+      "cosine": 0.9621899320784706
+    },
+    {
+      "id": "iqa_v2_test_01834",
+      "question": "How Does Cash Value Of Life Insurance Work?",
+      "neighbor_id": "iqa_v2_train_10691",
+      "neighbor_question": "How Does Cash Value Life Insurance Work?",
+      "cosine": 0.9788340941259699
+    },
+    {
+      "id": "iqa_v2_test_01835",
+      "question": "Can I Sell My Whole Life Insurance Policy?",
+      "neighbor_id": "iqa_v2_train_08996",
+      "neighbor_question": "Can You Sell A Whole Life Insurance Policy?",
+      "cosine": 0.9354811783523067
+    },
+    {
+      "id": "iqa_v2_test_01848",
+      "question": "Where Can I Get Individual Health Insurance?",
+      "neighbor_id": "iqa_v2_train_10171",
+      "neighbor_question": "Where Can I Buy Individual Health Insurance?",
+      "cosine": 0.9421203966057452
+    },
+    {
+      "id": "iqa_v2_test_01849",
+      "question": "Can A Sole Proprietor Deduct Health Insurance Premiums?",
+      "neighbor_id": "iqa_v2_train_00718",
+      "neighbor_question": "Can A Sole Proprietor Deduct Disability Insurance Premiums?",
+      "cosine": 0.9261043802726062
+    },
+    {
+      "id": "iqa_v2_test_01853",
+      "question": "Why Does Life Insurance Have Cash Value?",
+      "neighbor_id": "iqa_v2_train_04489",
+      "neighbor_question": "Does Life Insurance Have Cash Value?",
+      "cosine": 0.9592802261707537
+    },
+    {
+      "id": "iqa_v2_test_01863",
+      "question": "How Does A SEP Retirement Plan Work?",
+      "neighbor_id": "iqa_v2_train_07694",
+      "neighbor_question": "How Does A Sep Retirement Plan Work?",
+      "cosine": 1.0
+    },
+    {
+      "id": "iqa_v2_test_01865",
+      "question": "How Much Home Insurance Should You Have?",
+      "neighbor_id": "iqa_v2_train_07086",
+      "neighbor_question": "How Much Home Insurance Should I Have?",
+      "cosine": 0.9543836497914234
+    },
+    {
+      "id": "iqa_v2_test_01867",
+      "question": "Do Long Term Care Insurance Premiums Increase?",
+      "neighbor_id": "iqa_v2_train_00895",
+      "neighbor_question": "Can Long Term Care Insurance Premiums Increase?",
+      "cosine": 0.9795248150210185
+    },
+    {
+      "id": "iqa_v2_test_01868",
+      "question": "How Is Banner Life Insurance?",
+      "neighbor_id": "iqa_v2_train_05102",
+      "neighbor_question": "Who Is Banner Life Insurance?",
+      "cosine": 0.9401879503739102
+    },
+    {
+      "id": "iqa_v2_test_01872",
+      "question": "Why Does My Child Need Life Insurance?",
+      "neighbor_id": "iqa_v2_train_12251",
+      "neighbor_question": "Does My Child Need Life Insurance?",
+      "cosine": 0.9494475194325775
+    },
+    {
+      "id": "iqa_v2_test_01877",
+      "question": "What Does Basic Homeowners Insurance Cover?",
+      "neighbor_id": "iqa_v2_train_07385",
+      "neighbor_question": "What Does A Basic Homeowners Insurance Cover?",
+      "cosine": 0.997272166983798
+    },
+    {
+      "id": "iqa_v2_test_01881",
+      "question": "Where Can I Purchase Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_11494",
+      "neighbor_question": "Where To Purchase Renters Insurance?",
+      "cosine": 0.9674613566405402
+    },
+    {
+      "id": "iqa_v2_test_01884",
+      "question": "Why Buy Life Insurance For A Child?",
+      "neighbor_id": "iqa_v2_train_06866",
+      "neighbor_question": "Why Buy Life Insurance On A Child?",
+      "cosine": 0.9471843419715538
+    },
+    {
+      "id": "iqa_v2_test_01887",
+      "question": "Do Medigap Plans Cover Prescription Drugs?",
+      "neighbor_id": "iqa_v2_train_01501",
+      "neighbor_question": "Does Medigap Cover Prescription Drugs?",
+      "cosine": 0.9291966533093449
+    },
+    {
+      "id": "iqa_v2_test_01888",
+      "question": "Why Is Renters Insurance So Important?",
+      "neighbor_id": "iqa_v2_valid_01059",
+      "neighbor_question": "Why Is Renters Insurance Important?",
+      "cosine": 0.9639531301126957
+    },
+    {
+      "id": "iqa_v2_test_01891",
+      "question": "What Is A 5 Year Term Life Insurance?",
+      "neighbor_id": "iqa_v2_train_03919",
+      "neighbor_question": "What Is 5 Year Term Life Insurance?",
+      "cosine": 0.9942877783655735
+    },
+    {
+      "id": "iqa_v2_test_01894",
+      "question": "Will Medicare Pay For A Knee Replacement?",
+      "neighbor_id": "iqa_v2_train_01067",
+      "neighbor_question": "Will Medicare Pay For My Knee Replacement?",
+      "cosine": 0.9875338647687284
+    },
+    {
+      "id": "iqa_v2_test_01898",
+      "question": "When Can You Buy A Medigap Policy?",
+      "neighbor_id": "iqa_v2_train_00897",
+      "neighbor_question": "When Can I Buy A Medigap Policy?",
+      "cosine": 0.9589919589746156
+    },
+    {
+      "id": "iqa_v2_test_01900",
+      "question": "Will Renters Insurance Cover Vandalism?",
+      "neighbor_id": "iqa_v2_train_08466",
+      "neighbor_question": "Does Renters Insurance Cover Vandalism?",
+      "cosine": 0.9477849797095371
+    },
+    {
+      "id": "iqa_v2_test_01904",
+      "question": "Can You Switch From Medicare Advantage To Medigap?",
+      "neighbor_id": "iqa_v2_train_10637",
+      "neighbor_question": "Can I Switch From Medicare Advantage To Medigap?",
+      "cosine": 0.9829854869820492
+    },
+    {
+      "id": "iqa_v2_test_01906",
+      "question": "Why Buy Critical Illness Insurance?",
+      "neighbor_id": "iqa_v2_train_09525",
+      "neighbor_question": "Why Get Critical Illness Insurance?",
+      "cosine": 0.932261863220711
+    },
+    {
+      "id": "iqa_v2_test_01908",
+      "question": "Does Auto Insurance Go Down When You Get Married?",
+      "neighbor_id": "iqa_v2_train_02520",
+      "neighbor_question": "Does Car Insurance Go Down When You Get Married?",
+      "cosine": 0.944739001429444
+    },
+    {
+      "id": "iqa_v2_test_01910",
+      "question": "What Is A Tax Qualified Long Term Care Insurance?",
+      "neighbor_id": "iqa_v2_train_07026",
+      "neighbor_question": "What Is Tax Qualified Long Term Care Insurance?",
+      "cosine": 0.9973835068692323
+    },
+    {
+      "id": "iqa_v2_test_01913",
+      "question": "How Much Does Medicare Pay For Physical Therapy?",
+      "neighbor_id": "iqa_v2_train_03196",
+      "neighbor_question": "Does Medicare Pay For Physical Therapy?",
+      "cosine": 0.9675473544598554
+    },
+    {
+      "id": "iqa_v2_test_01915",
+      "question": "How Does Group Universal Life Insurance Work?",
+      "neighbor_id": "iqa_v2_train_03599",
+      "neighbor_question": "Does Group Universal Life Insurance Work?",
+      "cosine": 0.9880193020504086
+    },
+    {
+      "id": "iqa_v2_test_01924",
+      "question": "Does Term Life Insurance Have A Surrender Value?",
+      "neighbor_id": "iqa_v2_train_02881",
+      "neighbor_question": "Does Term Life Insurance Have A Cash Surrender Value?",
+      "cosine": 0.9360479483625492
+    },
+    {
+      "id": "iqa_v2_test_01930",
+      "question": "How Much Money Can You Make Selling Life Insurance?",
+      "neighbor_id": "iqa_v2_train_07129",
+      "neighbor_question": "How Much Money Can I Make Selling Life Insurance?",
+      "cosine": 0.9741736778020329
+    },
+    {
+      "id": "iqa_v2_test_01941",
+      "question": "What Does Medicare Cover For Assisted Living?",
+      "neighbor_id": "iqa_v2_train_02238",
+      "neighbor_question": "Will Medicare Cover Assisted Living?",
+      "cosine": 0.9252581310197675
+    },
+    {
+      "id": "iqa_v2_test_01946",
+      "question": "Does Medicare Cover Dental Implants?",
+      "neighbor_id": "iqa_v2_train_07715",
+      "neighbor_question": "Will Medicare Cover Dental Implants?",
+      "cosine": 0.9468490804034901
+    },
+    {
+      "id": "iqa_v2_test_01948",
+      "question": "Can You Park A Car On The Road Without Insurance?",
+      "neighbor_id": "iqa_v2_train_04791",
+      "neighbor_question": "Can I Park My Car On The Road Without Insurance?",
+      "cosine": 0.9615306042534351
+    },
+    {
+      "id": "iqa_v2_test_01950",
+      "question": "How Does Medigap Work?",
+      "neighbor_id": "iqa_v2_train_01164",
+      "neighbor_question": "How Does Medigap Insurance Work?",
+      "cosine": 0.9719083164383077
+    },
+    {
+      "id": "iqa_v2_test_01952",
+      "question": "Can Someone Have Two Health Insurance Policies?",
+      "neighbor_id": "iqa_v2_train_11074",
+      "neighbor_question": "Can Someone Have Two Life Insurance Policies?",
+      "cosine": 0.9427929937502879
+    },
+    {
+      "id": "iqa_v2_test_01953",
+      "question": "Who Needs To Buy Long Term Care Insurance?",
+      "neighbor_id": "iqa_v2_train_08659",
+      "neighbor_question": "Who Needs Long Term Care Insurance?",
+      "cosine": 0.9243212119537257
+    },
+    {
+      "id": "iqa_v2_test_01960",
+      "question": "How Does Long Term Care Insurance Work?",
+      "neighbor_id": "iqa_v2_valid_00124",
+      "neighbor_question": "How Does A Long Term Care Insurance Work?",
+      "cosine": 0.9951595781230391
+    },
+    {
+      "id": "iqa_v2_test_01962",
+      "question": "Does Auto Insurance Cover Vandalism?",
+      "neighbor_id": "iqa_v2_train_11364",
+      "neighbor_question": "Does Renters Insurance Cover Auto Vandalism?",
+      "cosine": 0.9430373351126599
+    },
+    {
+      "id": "iqa_v2_test_01964",
+      "question": "How Much Should I Invest In Annuities?",
+      "neighbor_id": "iqa_v2_train_05017",
+      "neighbor_question": "How Much Should You Invest In Annuities?",
+      "cosine": 0.9705968405367655
+    },
+    {
+      "id": "iqa_v2_test_01965",
+      "question": "How Much Does Allstate Auto Insurance Cost?",
+      "neighbor_id": "iqa_v2_train_12367",
+      "neighbor_question": "How Much Does Allstate Life Insurance Cost?",
+      "cosine": 0.9318433498325074
+    },
+    {
+      "id": "iqa_v2_test_01973",
+      "question": "Can I Get Life Insurance If I Have Ulcerative Colitis?",
+      "neighbor_id": "iqa_v2_train_05002",
+      "neighbor_question": "Can I Get Life Insurance With Ulcerative Colitis?",
+      "cosine": 0.939866016503059
+    },
+    {
+      "id": "iqa_v2_test_01978",
+      "question": "Does Medicare Part D Cover Diabetic Supplies?",
+      "neighbor_id": "iqa_v2_train_05862",
+      "neighbor_question": "Does Medicare Part B Cover Diabetic Supplies?",
+      "cosine": 0.9845879583093632
+    },
+    {
+      "id": "iqa_v2_test_01987",
+      "question": "Is Military Retirement A Qualified Plan?",
+      "neighbor_id": "iqa_v2_train_06011",
+      "neighbor_question": "Is Military Retirement A Qualified Retirement Plan?",
+      "cosine": 0.9486666856266782
+    },
+    {
+      "id": "iqa_v2_test_01992",
+      "question": "What Is Critical Illness In Insurance?",
+      "neighbor_id": "iqa_v2_train_07940",
+      "neighbor_question": "What Is Critical Illness Insurance?",
+      "cosine": 0.9896082839728025
+    },
+    {
+      "id": "iqa_v2_test_01993",
+      "question": "What Is The 403B Retirement Plan?",
+      "neighbor_id": "iqa_v2_train_05403",
+      "neighbor_question": "What Is A 403B Retirement Plan?",
+      "cosine": 0.9758876991308651
+    },
+    {
+      "id": "iqa_v2_test_01995",
+      "question": "Which Medigap Policy Is Best?",
+      "neighbor_id": "iqa_v2_train_10499",
+      "neighbor_question": "Which Medigap Policy Is The Best?",
+      "cosine": 0.9739906004367107
+    },
+    {
+      "id": "iqa_v2_test_01996",
+      "question": "What Is A Declaration Page For Renters Insurance?",
+      "neighbor_id": "iqa_v2_train_09840",
+      "neighbor_question": "What Is A Declaration Page For Home Insurance?",
+      "cosine": 0.9227630402025231
+    },
+    {
+      "id": "iqa_v2_test_02000",
+      "question": "How Can I Get Auto Insurance With A Suspended License?",
+      "neighbor_id": "iqa_v2_train_05503",
+      "neighbor_question": "Can I Get Auto Insurance With A Suspended License?",
+      "cosine": 0.9918912590404948
+    }
+  ],
+  "shared_gold_connected_components": 1995,
+  "largest_component": 2,
+  "bootstrap_seed": 20261001,
+  "bootstrap_draws": 3000,
+  "all_answer_retrieval": {
+    "bm25": {
+      "hit_at_10": 0.4825,
+      "shared_gold_cluster_bootstrap_95": [
+        0.46099902402402404,
+        0.50499512987013
+      ],
+      "char_ngram_near_duplicates_excluded_n": 1524,
+      "hit_at_10_after_excluding_similar_questions": 0.4954068241469816
+    },
+    "bge": {
+      "hit_at_10": 0.675,
+      "shared_gold_cluster_bootstrap_95": [
+        0.6548274137068534,
+        0.6955038043478261
+      ],
+      "char_ngram_near_duplicates_excluded_n": 1524,
+      "hit_at_10_after_excluding_similar_questions": 0.6876640419947506
+    },
+    "rrf": {
+      "hit_at_10": 0.6295,
+      "shared_gold_cluster_bootstrap_95": [
+        0.6081959020489756,
+        0.6510494667149702
+      ],
+      "char_ngram_near_duplicates_excluded_n": 1524,
+      "hit_at_10_after_excluding_similar_questions": 0.6417322834645669
+    }
+  },
+  "bge_minus_rrf_hit10_paired_cluster_95": [
+    0.029503341350033754,
+    0.062438342517053214
+  ],
+  "limitations": [
+    "Original test split and all main scores are retained. This is a sensitivity slice chosen after the run, not a new benchmark.",
+    "Answer-ID clusters address shared labels only; remaining topical/paraphrase dependence and model pretraining exposure are not ruled out."
+  ]
+}

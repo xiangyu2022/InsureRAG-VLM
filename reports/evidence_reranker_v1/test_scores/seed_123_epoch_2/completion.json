@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "seconds": 333.39339189999737,
+  "protocol_sha256": "bbce6fbe135ebfb914014cee2f1b6c0c34ed336f3d816807bb2847f803d41af1",
+  "new_pairs": 803127,
+  "reused_pairs": 0,
+  "score_files_sha256": {
+    "condition_government.jsonl": "e443ce98629ba590992c92f8d04b0ece469c6b019e13bc25aa3414e8ab8dff16",
+    "finqa.jsonl": "1c030cc392975b47d72831493143633fe54fc428dc0dedff92c115d0978f7db2",
+    "fiqa.jsonl": "686141ad217a259e8075b7e9a0e022176869c28d1f8be78f7571485aeb98fd8f",
+    "historical_government.jsonl": "2930410169e6ff65c024bc2330b1beb994703588ed80c98d46799505a445ea24",
+    "insuranceqa.jsonl": "92e217c0ecdcf0a256185600da681fb61aceb1e1cc523e5d833839bd4f584f6a",
+    "multidomain.jsonl": "f759583655991e4ac02444b049eaafcc748d295787f8d97ca9295b3129d245d0"
+  }
+}

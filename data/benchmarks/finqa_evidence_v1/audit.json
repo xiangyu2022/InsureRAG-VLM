@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-10-03T03:48:02.899152+00:00",
+  "raw_counts": {
+    "train": 6251,
+    "dev": 883,
+    "test": 1147
+  },
+  "counts": {
+    "test": 1147,
+    "valid": 496,
+    "train": 2351
+  },
+  "annual_reports": {
+    "test": 278,
+    "valid": 131,
+    "train": 390
+  },
+  "source_pages": 2789,
+  "answer_rows": 86421,
+  "invalid_training_record": [
+    {
+      "id": "RE/2010/page_120.pdf-2",
+      "split": "train",
+      "reason": "unresolvable_original_evidence_index",
+      "keys": [
+        "text_-1"
+      ]
+    }
+  ],
+  "official_page_split_has_no_overlap_but_annual_reports_overlap": true,
+  "train_removed_heldout_annual_report": 3899,
+  "valid_removed_test_annual_report": 387,
+  "gold_fact_text_verified_against_label_independent_source_serialization": true,
+  "official_retriever_predictions_and_qa_model_input_never_used": true,
+  "test_exclusions": 0,
+  "scope_is_report_conditioned_not_global_search_or_program_execution": true
+}

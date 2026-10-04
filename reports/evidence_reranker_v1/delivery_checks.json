@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-10-03T05:58:21.868451+00:00",
+  "status": "verified",
+  "deep_verification_sha256": "b813801d26c95ab0f7ca83e19fc2c5b6ce8e4481c61bf482059ce3dce5e7c6bd",
+  "selection_lock_sha256": "a40b41968aa39fc4f4967e5bc8f58ff96251558203ee33edf97ed16c8f070525",
+  "software_suites": {
+    "full": {
+      "summary": "310 passed, 58 subtests passed in 9.35s",
+      "log_sha256": "52bc6d66f23a8e730d6686e20595a889a1cbca8407e687fb7b0f56d1aa27763c"
+    },
+    "minimal": {
+      "summary": "280 passed, 16 skipped, 58 subtests passed in 7.69s",
+      "log_sha256": "4f48c978eaa1db8f2d5d7d9d8000054d00e7cbad585720be0f31ca1fa150c556"
+    }
+  },
+  "actual_query_routes": 4,
+  "smoke_summary_sha256": "1ded2fcf57dd17ea56fcff62759335894558fafa3880eaf032c76415b566d7b5",
+  "git_diff_check": "passed",
+  "reviewed_test_cases_sha256": "9a4117c02998e75cfbeaf4572b1535e96a01231711afc2a646a854e0313fdf48",
+  "expert_case_reviews_completed": 0,
+  "documents_sha256": {
+    "README.md": "de20869c44fa52c77461fec6f982801fd047a652abaa37536877f017ce684703",
+    "docs/EVIDENCE_RERANKER_UPDATE_ZH.md": "241331a99d231fffef808bc6e91f07c2c1ea419346040497ca47169aa432bf09",
+    "docs/EVIDENCE_RERANKER_REPRODUCTION.md": "a3bfd9e103457d85407c2c09c936fca177fd1c8d1bcd1518e69b94541586c8f0",
+    "docs/assets/evidence_reranker_results.png": "2f6dc0480c3aed2bd309808fdb01d8b8ddd2b5cb32cade9ae7a652fb4b8dc8fa",
+    "docs/assets/evidence_reranker_results.svg": "936dc7f3e18cdf6a83613fa286ce8ea95c4fd7a924c70f7690c4e3c175d51b02"
+  },
+  "figure_visually_reviewed": "docs/assets/evidence_reranker_results.png",
+  "all_historical_previous_default_predictions_exactly_reproduced": true,
+  "new_finqa_test_questions": 1147,
+  "github_pushed": false,
+  "verification_code_sha256": "0ca8a5a122a929da8bd63db5b17d692b0210fb4024b1f6188779dd8e73a0677d"
+}

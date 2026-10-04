@@ -1,0 +1,96 @@
+{
+  "created_utc": "2026-10-01T21:24:15.124512+00:00",
+  "selected_on": "valid",
+  "promoted": true,
+  "epoch": 2,
+  "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\insurerag-retention-v2\\epoch-2",
+  "domain_weight": 1.0,
+  "config": {
+    "pool": "hybrid100",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "validation_metrics": {
+    "model": "epoch_2",
+    "domain_weight": 1.0,
+    "domains": {
+      "insuranceqa": {
+        "n": 2000,
+        "hit_at_1": 0.404,
+        "hit_at_5": 0.653,
+        "hit_at_10": 0.7395,
+        "hit_at_100": 0.8815,
+        "mrr_at_100": 0.5163417190049995,
+        "label_recall_at_10": 0.6243024891774892,
+        "hit_at_1_wilson_95": [
+          0.3826985022887915,
+          0.42566957078920903
+        ],
+        "hit_at_10_wilson_95": [
+          0.7198182161636315,
+          0.7582635181886483
+        ]
+      },
+      "government": {
+        "n": 127,
+        "hit_at_1": 0.7716535433070866,
+        "hit_at_5": 0.9133858267716536,
+        "hit_at_10": 0.952755905511811,
+        "hit_at_100": 0.9921259842519685,
+        "mrr_at_100": 0.8307390422351052,
+        "label_recall_at_10": 0.952755905511811,
+        "hit_at_1_wilson_95": [
+          0.6913114055666176,
+          0.8360443776989754
+        ],
+        "hit_at_10_wilson_95": [
+          0.9007560955638818,
+          0.9781702098787735
+        ]
+      },
+      "general": {
+        "n": 400,
+        "hit_at_1": 0.8475,
+        "hit_at_5": 0.9475,
+        "hit_at_10": 0.975,
+        "hit_at_100": 0.9875,
+        "mrr_at_100": 0.897209854508635,
+        "label_recall_at_10": 0.975,
+        "hit_at_1_wilson_95": [
+          0.8089761434535727,
+          0.8794128119840912
+        ],
+        "hit_at_10_wilson_95": [
+          0.9545984121283544,
+          0.986364908254064
+        ]
+      }
+    },
+    "macro_hit_at_10": 0.8890853018372704,
+    "macro_mrr_at_100": 0.7480968719162465,
+    "macro_hit_at_1": 0.6743845144356956,
+    "eligible": true
+  },
+  "selected_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+  "public_weights_sha256": "821d1aa69520101d6e0737f78a042ae25b19e5cb9160701909d10434f4aeb0ae",
+  "previous_weights_sha256": "88207632c798e8a5a7eb2799447dc1f1f08aec03daaa142b31fb29572a2071fe",
+  "selection_protocol_sha256": "8973a211283002c114fa41e5fc12a5fe1c728c2819312452243f99c49c235651",
+  "validation_sweep_sha256": "dbc70899c41f0eecd68c17e61251013603d9d1b80e8928d0c5ad5ab18a3c9365",
+  "validation_artifacts": {
+    "1": {
+      "reports\\retention_v2\\valid_legacy_epoch_1": "c1280afd1ce4573beadfa54cbb612fc2d098c7efd9cb9e965c4c1e34ce2798f2",
+      "reports\\retention_v2\\valid_new_epoch_1": "49962c34b15bb804e4aeacb9d4dd8fc4d985542297976fb8c74a747d29f5a72d"
+    },
+    "2": {
+      "reports\\retention_v2\\valid_legacy_epoch_2": "e6963b2eb88bb4027ceb001f404e18816a7d46b34beb43a86c73f73797e93611",
+      "reports\\retention_v2\\valid_new_epoch_2": "843ef5b14c643efac8a9a8bb428b09718a589ed25b55f488935849dd7daccd87"
+    }
+  },
+  "code_sha256": {
+    "scripts/eval_retention_v2.py": "a2915e60a53184c9f90dae334b8dae438c1bfdd355ff997ee72e9ad3d0d866da",
+    "src/insurerag_vlm/retention.py": "628ef9e54d276a9154f7c361d20e69024ff9e85c0ce0b66e1ec1c08909725f7f",
+    "scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872"
+  },
+  "fresh_test_status": "Not scored at selection"
+}

@@ -1,0 +1,712 @@
+{
+  "summaries": {
+    "historical_insuranceqa": {
+      "all": {
+        "bge": {
+          "n": 2000,
+          "hit_at_1": 0.3445,
+          "hit_at_5": 0.587,
+          "hit_at_10": 0.675,
+          "hit_at_100": 0.885,
+          "mrr_at_100": 0.4541058051728594,
+          "label_recall_at_10": 0.5630111111111111,
+          "hit_at_1_wilson_95": [
+            0.32398954487377196,
+            0.3656066568306976
+          ],
+          "hit_at_10_wilson_95": [
+            0.6541544022367746,
+            0.695174631214787
+          ]
+        },
+        "public": {
+          "n": 2000,
+          "hit_at_1": 0.3735,
+          "hit_at_5": 0.6185,
+          "hit_at_10": 0.6955,
+          "hit_at_100": 0.886,
+          "mrr_at_100": 0.4838551055613348,
+          "label_recall_at_10": 0.5845591269841269,
+          "hit_at_1_wilson_95": [
+            0.35256129877589387,
+            0.394923714186263
+          ],
+          "hit_at_10_wilson_95": [
+            0.6749724939649412,
+            0.7152779405480888
+          ]
+        },
+        "previous": {
+          "n": 2000,
+          "hit_at_1": 0.432,
+          "hit_at_5": 0.6635,
+          "hit_at_10": 0.734,
+          "hit_at_100": 0.886,
+          "mrr_at_100": 0.5386038961086295,
+          "label_recall_at_10": 0.6282156746031745,
+          "hit_at_1_wilson_95": [
+            0.41044132080375967,
+            0.45381939762649065
+          ],
+          "hit_at_10_wilson_95": [
+            0.7141995838511511,
+            0.7529032380212225
+          ]
+        },
+        "selected": {
+          "n": 2000,
+          "hit_at_1": 0.432,
+          "hit_at_5": 0.663,
+          "hit_at_10": 0.7335,
+          "hit_at_100": 0.886,
+          "mrr_at_100": 0.538259074719548,
+          "label_recall_at_10": 0.6265156746031746,
+          "hit_at_1_wilson_95": [
+            0.41044132080375967,
+            0.45381939762649065
+          ],
+          "hit_at_10_wilson_95": [
+            0.7136889900470432,
+            0.7524157488726116
+          ]
+        },
+        "selected_unanchored": {
+          "n": 2000,
+          "hit_at_1": 0.432,
+          "hit_at_5": 0.663,
+          "hit_at_10": 0.7335,
+          "hit_at_100": 0.886,
+          "mrr_at_100": 0.538259074719548,
+          "label_recall_at_10": 0.6265156746031746,
+          "hit_at_1_wilson_95": [
+            0.41044132080375967,
+            0.45381939762649065
+          ],
+          "hit_at_10_wilson_95": [
+            0.7136889900470432,
+            0.7524157488726116
+          ]
+        },
+        "previous_same_anchor": {
+          "n": 2000,
+          "hit_at_1": 0.432,
+          "hit_at_5": 0.6635,
+          "hit_at_10": 0.734,
+          "hit_at_100": 0.886,
+          "mrr_at_100": 0.5386038961086295,
+          "label_recall_at_10": 0.6282156746031745,
+          "hit_at_1_wilson_95": [
+            0.41044132080375967,
+            0.45381939762649065
+          ],
+          "hit_at_10_wilson_95": [
+            0.7141995838511511,
+            0.7529032380212225
+          ]
+        }
+      }
+    },
+    "fresh_multidomain": {
+      "government": {
+        "bge": {
+          "n": 81,
+          "hit_at_1": 0.7777777777777778,
+          "hit_at_5": 0.9135802469135802,
+          "hit_at_10": 0.9506172839506173,
+          "hit_at_100": 0.9753086419753086,
+          "mrr_at_100": 0.8342445620223399,
+          "label_recall_at_10": 0.9506172839506173,
+          "hit_at_1_wilson_95": [
+            0.6758471376953772,
+            0.8545539259532811
+          ],
+          "hit_at_10_wilson_95": [
+            0.8797976976951905,
+            0.9806306944459662
+          ]
+        },
+        "public": {
+          "n": 81,
+          "hit_at_1": 0.8148148148148148,
+          "hit_at_5": 0.9259259259259259,
+          "hit_at_10": 0.9629629629629629,
+          "hit_at_100": 0.9876543209876543,
+          "mrr_at_100": 0.8690582097036347,
+          "label_recall_at_10": 0.9629629629629629,
+          "hit_at_1_wilson_95": [
+            0.7166841055275461,
+            0.884437099940933
+          ],
+          "hit_at_10_wilson_95": [
+            0.8966768869310617,
+            0.9873248858167019
+          ]
+        },
+        "previous": {
+          "n": 81,
+          "hit_at_1": 0.8024691358024691,
+          "hit_at_5": 0.9382716049382716,
+          "hit_at_10": 0.9753086419753086,
+          "hit_at_100": 0.9876543209876543,
+          "mrr_at_100": 0.866935050993022,
+          "label_recall_at_10": 0.9753086419753086,
+          "hit_at_1_wilson_95": [
+            0.7029560930488834,
+            0.8745917318129888
+          ],
+          "hit_at_10_wilson_95": [
+            0.9143727407780347,
+            0.9932024125763359
+          ]
+        },
+        "selected": {
+          "n": 81,
+          "hit_at_1": 0.8024691358024691,
+          "hit_at_5": 0.9506172839506173,
+          "hit_at_10": 0.9629629629629629,
+          "hit_at_100": 0.9876543209876543,
+          "mrr_at_100": 0.8652122165738722,
+          "label_recall_at_10": 0.9629629629629629,
+          "hit_at_1_wilson_95": [
+            0.7029560930488834,
+            0.8745917318129888
+          ],
+          "hit_at_10_wilson_95": [
+            0.8966768869310617,
+            0.9873248858167019
+          ]
+        },
+        "selected_unanchored": {
+          "n": 81,
+          "hit_at_1": 0.8024691358024691,
+          "hit_at_5": 0.9506172839506173,
+          "hit_at_10": 0.9629629629629629,
+          "hit_at_100": 0.9876543209876543,
+          "mrr_at_100": 0.8652122165738722,
+          "label_recall_at_10": 0.9629629629629629,
+          "hit_at_1_wilson_95": [
+            0.7029560930488834,
+            0.8745917318129888
+          ],
+          "hit_at_10_wilson_95": [
+            0.8966768869310617,
+            0.9873248858167019
+          ]
+        },
+        "previous_same_anchor": {
+          "n": 81,
+          "hit_at_1": 0.8024691358024691,
+          "hit_at_5": 0.9382716049382716,
+          "hit_at_10": 0.9753086419753086,
+          "hit_at_100": 0.9876543209876543,
+          "mrr_at_100": 0.866935050993022,
+          "label_recall_at_10": 0.9753086419753086,
+          "hit_at_1_wilson_95": [
+            0.7029560930488834,
+            0.8745917318129888
+          ],
+          "hit_at_10_wilson_95": [
+            0.9143727407780347,
+            0.9932024125763359
+          ]
+        }
+      },
+      "general": {
+        "bge": {
+          "n": 600,
+          "hit_at_1": 0.615,
+          "hit_at_5": 0.8633333333333333,
+          "hit_at_10": 0.9116666666666666,
+          "hit_at_100": 0.9583333333333334,
+          "mrr_at_100": 0.7222294112408342,
+          "label_recall_at_10": 0.9116666666666666,
+          "hit_at_1_wilson_95": [
+            0.5754505349201839,
+            0.653086273846665
+          ],
+          "hit_at_10_wilson_95": [
+            0.8862624651137733,
+            0.9318330677182797
+          ]
+        },
+        "public": {
+          "n": 600,
+          "hit_at_1": 0.8283333333333334,
+          "hit_at_5": 0.96,
+          "hit_at_10": 0.9733333333333334,
+          "hit_at_100": 0.9816666666666667,
+          "mrr_at_100": 0.8866893403496664,
+          "label_recall_at_10": 0.9733333333333334,
+          "hit_at_1_wilson_95": [
+            0.7960952941653718,
+            0.8563938555022981
+          ],
+          "hit_at_10_wilson_95": [
+            0.9571240661880865,
+            0.9835201901856102
+          ]
+        },
+        "previous": {
+          "n": 600,
+          "hit_at_1": 0.7466666666666667,
+          "hit_at_5": 0.9083333333333333,
+          "hit_at_10": 0.9383333333333334,
+          "hit_at_100": 0.9816666666666667,
+          "mrr_at_100": 0.820350945608426,
+          "label_recall_at_10": 0.9383333333333334,
+          "hit_at_1_wilson_95": [
+            0.710372621099191,
+            0.7798222730673834
+          ],
+          "hit_at_10_wilson_95": [
+            0.9161569372167724,
+            0.9549326382278833
+          ]
+        },
+        "selected": {
+          "n": 600,
+          "hit_at_1": 0.8533333333333334,
+          "hit_at_5": 0.9633333333333334,
+          "hit_at_10": 0.975,
+          "hit_at_100": 0.9816666666666667,
+          "mrr_at_100": 0.9032934052662313,
+          "label_recall_at_10": 0.975,
+          "hit_at_1_wilson_95": [
+            0.8227790872103292,
+            0.8793919774066558
+          ],
+          "hit_at_10_wilson_95": [
+            0.959164223636837,
+            0.9847921604001473
+          ]
+        },
+        "selected_unanchored": {
+          "n": 600,
+          "hit_at_1": 0.8533333333333334,
+          "hit_at_5": 0.9633333333333334,
+          "hit_at_10": 0.975,
+          "hit_at_100": 0.9816666666666667,
+          "mrr_at_100": 0.9032934052662313,
+          "label_recall_at_10": 0.975,
+          "hit_at_1_wilson_95": [
+            0.8227790872103292,
+            0.8793919774066558
+          ],
+          "hit_at_10_wilson_95": [
+            0.959164223636837,
+            0.9847921604001473
+          ]
+        },
+        "previous_same_anchor": {
+          "n": 600,
+          "hit_at_1": 0.7466666666666667,
+          "hit_at_5": 0.9083333333333333,
+          "hit_at_10": 0.9383333333333334,
+          "hit_at_100": 0.9816666666666667,
+          "mrr_at_100": 0.820350945608426,
+          "label_recall_at_10": 0.9383333333333334,
+          "hit_at_1_wilson_95": [
+            0.710372621099191,
+            0.7798222730673834
+          ],
+          "hit_at_10_wilson_95": [
+            0.9161569372167724,
+            0.9549326382278833
+          ]
+        }
+      },
+      "all": {
+        "bge": {
+          "n": 681,
+          "hit_at_1": 0.6343612334801763,
+          "hit_at_5": 0.869309838472834,
+          "hit_at_10": 0.9162995594713657,
+          "hit_at_100": 0.960352422907489,
+          "mrr_at_100": 0.7355527992192511,
+          "label_recall_at_10": 0.9162995594713657,
+          "hit_at_1_wilson_95": [
+            0.5975295793810746,
+            0.6696855514247158
+          ],
+          "hit_at_10_wilson_95": [
+            0.8930921025034909,
+            0.9348367454029741
+          ]
+        },
+        "public": {
+          "n": 681,
+          "hit_at_1": 0.8267254038179148,
+          "hit_at_5": 0.9559471365638766,
+          "hit_at_10": 0.9720998531571219,
+          "hit_at_100": 0.9823788546255506,
+          "mrr_at_100": 0.8845922455151162,
+          "label_recall_at_10": 0.9720998531571219,
+          "hit_at_1_wilson_95": [
+            0.7964869191776347,
+            0.8532985081916367
+          ],
+          "hit_at_10_wilson_95": [
+            0.9568364249184135,
+            0.9820670128308934
+          ]
+        },
+        "previous": {
+          "n": 681,
+          "hit_at_1": 0.7533039647577092,
+          "hit_at_5": 0.9118942731277533,
+          "hit_at_10": 0.9427312775330396,
+          "hit_at_100": 0.9823788546255506,
+          "mrr_at_100": 0.8258917863369902,
+          "label_recall_at_10": 0.9427312775330396,
+          "hit_at_1_wilson_95": [
+            0.7195654914999404,
+            0.7842007387076969
+          ],
+          "hit_at_10_wilson_95": [
+            0.9226693104143731,
+            0.9578264484702801
+          ]
+        },
+        "selected": {
+          "n": 681,
+          "hit_at_1": 0.8472834067547724,
+          "hit_at_5": 0.9618208516886931,
+          "hit_at_10": 0.973568281938326,
+          "hit_at_100": 0.9823788546255506,
+          "mrr_at_100": 0.8987639246728671,
+          "label_recall_at_10": 0.973568281938326,
+          "hit_at_1_wilson_95": [
+            0.8183242631682136,
+            0.8723465394063153
+          ],
+          "hit_at_10_wilson_95": [
+            0.9586074382675255,
+            0.9832163834250139
+          ]
+        },
+        "selected_unanchored": {
+          "n": 681,
+          "hit_at_1": 0.8472834067547724,
+          "hit_at_5": 0.9618208516886931,
+          "hit_at_10": 0.973568281938326,
+          "hit_at_100": 0.9823788546255506,
+          "mrr_at_100": 0.8987639246728671,
+          "label_recall_at_10": 0.973568281938326,
+          "hit_at_1_wilson_95": [
+            0.8183242631682136,
+            0.8723465394063153
+          ],
+          "hit_at_10_wilson_95": [
+            0.9586074382675255,
+            0.9832163834250139
+          ]
+        },
+        "previous_same_anchor": {
+          "n": 681,
+          "hit_at_1": 0.7533039647577092,
+          "hit_at_5": 0.9118942731277533,
+          "hit_at_10": 0.9427312775330396,
+          "hit_at_100": 0.9823788546255506,
+          "mrr_at_100": 0.8258917863369902,
+          "label_recall_at_10": 0.9427312775330396,
+          "hit_at_1_wilson_95": [
+            0.7195654914999404,
+            0.7842007387076969
+          ],
+          "hit_at_10_wilson_95": [
+            0.9226693104143731,
+            0.9578264484702801
+          ]
+        }
+      }
+    }
+  },
+  "selected_minus_comparators": {
+    "historical_insuranceqa": {
+      "all": {
+        "bge": {
+          "n": 2000,
+          "wins": 143,
+          "losses": 26,
+          "ties": 1831,
+          "hit10_difference": 0.0585,
+          "label_cluster_bootstrap_95": [
+            0.04695304695304695,
+            0.07139291063404893
+          ],
+          "clusters": 1995,
+          "draws": 5000,
+          "seed": 42,
+          "paired_exact_binomial_p": 8.9387466419652e-21,
+          "interpretation": "Historical test was inspected previously. Cluster intervals do not establish independent insurance-domain generalization."
+        },
+        "public": {
+          "n": 2000,
+          "wins": 108,
+          "losses": 32,
+          "ties": 1860,
+          "hit10_difference": 0.038,
+          "label_cluster_bootstrap_95": [
+            0.02695956065901148,
+            0.049475262368815595
+          ],
+          "clusters": 1995,
+          "draws": 5000,
+          "seed": 42,
+          "paired_exact_binomial_p": 7.793986201015429e-11,
+          "interpretation": "Historical test was inspected previously. Cluster intervals do not establish independent insurance-domain generalization."
+        },
+        "previous": {
+          "n": 2000,
+          "wins": 19,
+          "losses": 20,
+          "ties": 1961,
+          "hit10_difference": -0.0005,
+          "label_cluster_bootstrap_95": [
+            -0.0065032516258129065,
+            0.0055055055055055055
+          ],
+          "clusters": 1995,
+          "draws": 5000,
+          "seed": 42,
+          "paired_exact_binomial_p": 1.0,
+          "interpretation": "Historical test was inspected previously. Cluster intervals do not establish independent insurance-domain generalization."
+        },
+        "selected_unanchored": {
+          "n": 2000,
+          "wins": 0,
+          "losses": 0,
+          "ties": 2000,
+          "hit10_difference": 0.0,
+          "label_cluster_bootstrap_95": [
+            0.0,
+            0.0
+          ],
+          "clusters": 1995,
+          "draws": 5000,
+          "seed": 42,
+          "paired_exact_binomial_p": 1.0,
+          "interpretation": "Historical test was inspected previously. Cluster intervals do not establish independent insurance-domain generalization."
+        },
+        "previous_same_anchor": {
+          "n": 2000,
+          "wins": 19,
+          "losses": 20,
+          "ties": 1961,
+          "hit10_difference": -0.0005,
+          "label_cluster_bootstrap_95": [
+            -0.0065032516258129065,
+            0.0055055055055055055
+          ],
+          "clusters": 1995,
+          "draws": 5000,
+          "seed": 42,
+          "paired_exact_binomial_p": 1.0,
+          "interpretation": "Historical test was inspected previously. Cluster intervals do not establish independent insurance-domain generalization."
+        }
+      }
+    },
+    "fresh_multidomain": {
+      "government": {
+        "bge": {
+          "n": 81,
+          "source_groups": 14,
+          "hit_at_10_difference": 0.012345679012345678,
+          "source_cluster_bootstrap_95ci": [
+            0.0,
+            0.037037037037037035
+          ],
+          "wins": 1,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        },
+        "public": {
+          "n": 81,
+          "source_groups": 14,
+          "hit_at_10_difference": 0.0,
+          "source_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        },
+        "previous": {
+          "n": 81,
+          "source_groups": 14,
+          "hit_at_10_difference": -0.012345679012345678,
+          "source_cluster_bootstrap_95ci": [
+            -0.05,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 1,
+          "bootstrap_repetitions": 5000
+        },
+        "selected_unanchored": {
+          "n": 81,
+          "source_groups": 14,
+          "hit_at_10_difference": 0.0,
+          "source_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        },
+        "previous_same_anchor": {
+          "n": 81,
+          "source_groups": 14,
+          "hit_at_10_difference": -0.012345679012345678,
+          "source_cluster_bootstrap_95ci": [
+            -0.05,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 1,
+          "bootstrap_repetitions": 5000
+        }
+      },
+      "general": {
+        "bge": {
+          "n": 600,
+          "source_groups": 24,
+          "hit_at_10_difference": 0.06333333333333334,
+          "source_cluster_bootstrap_95ci": [
+            0.04451432539929504,
+            0.08177397655461699
+          ],
+          "wins": 38,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        },
+        "public": {
+          "n": 600,
+          "source_groups": 24,
+          "hit_at_10_difference": 0.0016666666666666668,
+          "source_cluster_bootstrap_95ci": [
+            0.0,
+            0.005484460694698354
+          ],
+          "wins": 1,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        },
+        "previous": {
+          "n": 600,
+          "source_groups": 24,
+          "hit_at_10_difference": 0.03666666666666667,
+          "source_cluster_bootstrap_95ci": [
+            0.02385008517887564,
+            0.0504890106274471
+          ],
+          "wins": 22,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        },
+        "selected_unanchored": {
+          "n": 600,
+          "source_groups": 24,
+          "hit_at_10_difference": 0.0,
+          "source_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        },
+        "previous_same_anchor": {
+          "n": 600,
+          "source_groups": 24,
+          "hit_at_10_difference": 0.03666666666666667,
+          "source_cluster_bootstrap_95ci": [
+            0.02385008517887564,
+            0.0504890106274471
+          ],
+          "wins": 22,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        }
+      },
+      "all": {
+        "bge": {
+          "n": 681,
+          "source_groups": 38,
+          "hit_at_10_difference": 0.05726872246696035,
+          "source_cluster_bootstrap_95ci": [
+            0.03938986555435818,
+            0.07425125280374695
+          ],
+          "wins": 39,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        },
+        "public": {
+          "n": 681,
+          "source_groups": 38,
+          "hit_at_10_difference": 0.0014684287812041115,
+          "source_cluster_bootstrap_95ci": [
+            0.0,
+            0.004800192307692305
+          ],
+          "wins": 1,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        },
+        "previous": {
+          "n": 681,
+          "source_groups": 38,
+          "hit_at_10_difference": 0.030837004405286344,
+          "source_cluster_bootstrap_95ci": [
+            0.01803160750088454,
+            0.043123729305837924
+          ],
+          "wins": 22,
+          "losses": 1,
+          "bootstrap_repetitions": 5000
+        },
+        "selected_unanchored": {
+          "n": 681,
+          "source_groups": 38,
+          "hit_at_10_difference": 0.0,
+          "source_cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0,
+          "bootstrap_repetitions": 5000
+        },
+        "previous_same_anchor": {
+          "n": 681,
+          "source_groups": 38,
+          "hit_at_10_difference": 0.030837004405286344,
+          "source_cluster_bootstrap_95ci": [
+            0.01803160750088454,
+            0.043123729305837924
+          ],
+          "wins": 22,
+          "losses": 1,
+          "bootstrap_repetitions": 5000
+        }
+      }
+    }
+  },
+  "selection_lock_sha256": "111a12d841ff50fe1006c4c76d464f905394a14e1c5e172690f1f8255b255261",
+  "predictions_sha256": "03796f89aaf02a183a7f2fc6d26d88ddb639807a6eabb814755df6f08178b5b6",
+  "code_sha256": {
+    "scripts/eval_retention_v2.py": "a2915e60a53184c9f90dae334b8dae438c1bfdd355ff997ee72e9ad3d0d866da",
+    "src/insurerag_vlm/retention.py": "628ef9e54d276a9154f7c361d20e69024ff9e85c0ce0b66e1ec1c08909725f7f",
+    "scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872"
+  },
+  "limitations": [
+    "InsuranceQA test is historical and repeatedly inspected.",
+    "Fresh test is source-held-out for this fine-tuning only; public pretraining exposure unknown.",
+    "Government has 81 cases across 14 sources; uncertainty must be reported.",
+    "Teacher blending costs two reranker passes if beta < 1."
+  ]
+}

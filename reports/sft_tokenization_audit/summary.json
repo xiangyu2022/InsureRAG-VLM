@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-09-20T22:11:01.742232+00:00",
+  "role": "tokenization_and_dataset_audit_not_training",
+  "dataset_sha256": "db1efee513b1f67084d89beb14567ad6652f80c7fd42db05ce71d69c25605f5a",
+  "tokenizer": "Qwen/Qwen2.5-7B-Instruct",
+  "tokenizer_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "versions": {
+    "transformers": "5.17.0",
+    "tokenizers": "0.23.2"
+  },
+  "records": 3850,
+  "prompt_prefix_mismatches": 0,
+  "full_token_quantiles": {
+    "p50": 326.0,
+    "p90": 369.0,
+    "p95": 382.0,
+    "p99": 418.0,
+    "max": 487.0
+  },
+  "truncation": {
+    "1024": {
+      "zero_assistant_tokens": 0,
+      "partially_truncated_answers": 0,
+      "fully_retained_answers": 3850
+    },
+    "2048": {
+      "zero_assistant_tokens": 0,
+      "partially_truncated_answers": 0,
+      "fully_retained_answers": 3850
+    },
+    "4096": {
+      "zero_assistant_tokens": 0,
+      "partially_truncated_answers": 0,
+      "fully_retained_answers": 3850
+    }
+  },
+  "distinct_answerable_question_templates": 39,
+  "templates_with_multiple_gold_pages": 39,
+  "top_question_templates": [
+    [
+      "Summarize the insurance-specific point supported by this evidence.",
+      908
+    ],
+    [
+      "What coverage information is explained by the evidence?",
+      587
+    ],
+    [
+      "How would you summarize the coverage point on this page?",
+      587
+    ],
+    [
+      "What does this evidence say about the deductible?",
+      107
+    ],
+    [
+      "How should the deductible be explained from this page?",
+      107
+    ]
+  ],
+  "limitations": [
+    "This checks tokenization, not training convergence or model answer quality.",
+    "Repeated generic questions are not uniquely grounded retrieval queries across the full corpus.",
+    "The current full curated dataset is not the historical 3231-row retrieval-conditioned training artifact.",
+    "No new Qwen3.5 fine-tuning is asserted."
+  ]
+}

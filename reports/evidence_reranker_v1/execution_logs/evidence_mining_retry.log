@@ -1,0 +1,26 @@
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3970.12it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3675.41it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3940.12it/s]
+{"encoded_documents": 192231, "encoded_training_queries": 33454, "seconds": 83.9}
+{"retrieved_domain": "insuranceqa", "groups_so_far": 11629, "seconds": 137.3}
+{"retrieved_domain": "government", "groups_so_far": 11888, "seconds": 141.8}
+{"retrieved_domain": "general", "groups_so_far": 25887, "seconds": 247.8}
+{"retrieved_domain": "finance", "groups_so_far": 31351, "seconds": 299.9}
+{"retrieved_domain": "financial_report", "groups_so_far": 33426, "seconds": 300.8}
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 1574.02it/s]
+Traceback (most recent call last):
+  File "C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\InsureRAG-VLM\scripts\mine_evidence_reranker_training.py", line 137, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\zhan6\Documents\Codex\2026-09-20\g\work\InsureRAG-VLM\scripts\mine_evidence_reranker_training.py", line 123, in main
+    'anchor_scores':{a:scores[a] for a in g['positive_ids']+negatives}})
+                       ~~~~~~^^^
+KeyError: '20168'

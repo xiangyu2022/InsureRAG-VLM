@@ -1,0 +1,1133 @@
+{
+  "excluded_records": {
+    "hicric_c6f1b7e8feddbf7e": "Previously observed severe repeated-glyph OCR",
+    "hicric_d061b462979df7a1": "Severe interleaved-glyph OCR observed before inference"
+  },
+  "exclusions": [
+    {
+      "id": "condgov_q_a49ad712c7e83cbd",
+      "reason": "near_previously_used_question",
+      "cosine": 0.985682051335593,
+      "nearest": "gov_question_d094c35db89f829f"
+    },
+    {
+      "id": "condgov_q_4da71ff17492d339",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_00619",
+      "cosine": 0.1846102947494921
+    },
+    {
+      "id": "condgov_q_d31160b3ae7ffb43",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_bb640be0de03d89f",
+      "cosine": 0.22839836951952486
+    },
+    {
+      "id": "condgov_q_c09c0c706ebfb753",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_01025",
+      "cosine": 0.2557211359768049
+    },
+    {
+      "id": "condgov_q_813bc01ce685ca7e",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_00081",
+      "cosine": 0.19687787900708442
+    },
+    {
+      "id": "condgov_q_7779a63e4d1f1df1",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_00540",
+      "cosine": 0.1618288267306649
+    },
+    {
+      "id": "condgov_q_c2229db92b7e2c1e",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_a0c56dbf745e8b54",
+      "cosine": 0.22222095030689526
+    },
+    {
+      "id": "condgov_q_272f1dc58465b8e8",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_00540",
+      "cosine": 0.23096824992134357
+    },
+    {
+      "id": "condgov_q_87e5892f6e1e7081",
+      "reason": "duplicate_training_question",
+      "nearest": "squad_q_5706149552bb891400689882",
+      "cosine": 0.20730934007844792
+    },
+    {
+      "id": "condgov_q_e714529a7b83db79",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_00012",
+      "cosine": 0.21545381363193905
+    },
+    {
+      "id": "condgov_q_0c2f9fce97080692",
+      "reason": "duplicate_training_question",
+      "nearest": "squad_q_572751b4708984140094dc1f",
+      "cosine": 0.18841050190639375
+    },
+    {
+      "id": "condgov_q_13f06ec9814a1405",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_1418ddd2a07d4a41",
+      "cosine": 0.3126630005326232
+    },
+    {
+      "id": "condgov_q_4552a3abdb81a327",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_01272",
+      "cosine": 0.29963479942078974
+    },
+    {
+      "id": "condgov_q_acaca08283a86be2",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_417be7bbca511a49",
+      "cosine": 0.34159898040573267
+    },
+    {
+      "id": "condgov_q_fd68d09d5aa02970",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_f78b42fa9707500a",
+      "cosine": 0.3584463577566601
+    },
+    {
+      "id": "condgov_q_f675ee04723d3cfe",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_d277422c59edcb86",
+      "cosine": 0.21080413642607243
+    },
+    {
+      "id": "condgov_q_9dfa9e5a86598e6d",
+      "reason": "duplicate_training_question",
+      "nearest": "squad_q_5706149552bb891400689882",
+      "cosine": 0.24039389863021676
+    },
+    {
+      "id": "condgov_q_6d29fbfc693752d0",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_7c63ead5cfddf441",
+      "cosine": 0.35685439891482496
+    },
+    {
+      "id": "condgov_q_5c34f509b3f3bad6",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_7c63ead5cfddf441",
+      "cosine": 0.35024731798908393
+    },
+    {
+      "id": "condgov_q_0e6f094b1bd42365",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_01666",
+      "cosine": 0.3201291513826652
+    },
+    {
+      "id": "condgov_q_7a3da0d3892023b0",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_05ce343a34e66838",
+      "cosine": 0.4453133503896498
+    },
+    {
+      "id": "condgov_q_46ac3e68723a88bf",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_00380",
+      "cosine": 0.3336960984706423
+    },
+    {
+      "id": "condgov_q_dd4f9bb8e56d5508",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_a8748394ae57989a",
+      "cosine": 0.35573840267720147
+    },
+    {
+      "id": "condgov_q_590b031d980625a0",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_8e1969ffbb719466",
+      "cosine": 0.7408644722749222
+    },
+    {
+      "id": "condgov_q_11e862f646ab0c98",
+      "reason": "near_heldout_question",
+      "nearest": "gov_question_8e1969ffbb719466",
+      "cosine": 0.9523619477734958
+    },
+    {
+      "id": "condgov_q_3872ea33b3620ef5",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_f53f40d7f812fbd9",
+      "cosine": 0.3826123769170431
+    },
+    {
+      "id": "condgov_q_05d53d59b44b6c53",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_42c6bd3808154918",
+      "cosine": 0.5056062602244955
+    },
+    {
+      "id": "condgov_q_13dd811f3eaae40c",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_01561",
+      "cosine": 0.35502129471825183
+    },
+    {
+      "id": "condgov_q_679f7214884dad7d",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_b336e27276f243a6",
+      "cosine": 0.3851087353156477
+    },
+    {
+      "id": "condgov_q_6d584583faa3c295",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_e6ccf460901c99c7",
+      "cosine": 0.616578286952944
+    },
+    {
+      "id": "condgov_q_4415d8641b59457c",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_33b32fe8a23cb032",
+      "cosine": 0.48552834628111563
+    },
+    {
+      "id": "condgov_q_c94e1165bb0a3892",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_6572a40757c17336",
+      "cosine": 0.29329068923258705
+    },
+    {
+      "id": "condgov_q_399ca49460797c3f",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_5491d00b044e23f2",
+      "cosine": 0.32008883996089277
+    },
+    {
+      "id": "condgov_q_2d871111346d0ea7",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_4f584f475c4ca7d8",
+      "cosine": 0.3952052659157683
+    },
+    {
+      "id": "condgov_q_616d79b4142ff00a",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_4f584f475c4ca7d8",
+      "cosine": 0.4171183049258187
+    },
+    {
+      "id": "condgov_q_214eddeb04da6adf",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_70225f7a29585ce0",
+      "cosine": 0.3667700794490134
+    },
+    {
+      "id": "condgov_q_59008b1edfc31524",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_00012",
+      "cosine": 0.37709489639335847
+    },
+    {
+      "id": "condgov_q_2a4fa464d91ce18f",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_70225f7a29585ce0",
+      "cosine": 0.4051429585676041
+    },
+    {
+      "id": "condgov_q_19bd5789fbcf0e91",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_7255dd529e518d5c",
+      "cosine": 0.39621238215686005
+    },
+    {
+      "id": "condgov_q_79c5196221f6b705",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_7255dd529e518d5c",
+      "cosine": 0.31113771689459135
+    },
+    {
+      "id": "condgov_q_8736b25a206a5d4a",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_281e977eb2b6ea16",
+      "cosine": 0.48443519330027696
+    },
+    {
+      "id": "condgov_q_c469220a07d0c47f",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_00903",
+      "cosine": 0.30578440600169365
+    },
+    {
+      "id": "condgov_q_44c80d062b2c5d14",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_5bd67b16c666d54a",
+      "cosine": 0.3347151437738126
+    },
+    {
+      "id": "condgov_q_4aa62a842038854c",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_00613",
+      "cosine": 0.3755185983195892
+    },
+    {
+      "id": "condgov_q_4022e886398b4cd3",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_0761ad9f6eee01cb",
+      "cosine": 0.27074969134746163
+    },
+    {
+      "id": "condgov_q_43dba45e8707050c",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_096ce0271bd05259",
+      "cosine": 0.179565776767054
+    },
+    {
+      "id": "condgov_q_d3a81015256bd669",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_01183",
+      "cosine": 0.32087996738361646
+    },
+    {
+      "id": "condgov_q_40d6b9482e8b9b40",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_00754",
+      "cosine": 0.3922073220434681
+    },
+    {
+      "id": "condgov_q_acc02f86b6a37a81",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_bf3b82d777d02854",
+      "cosine": 0.23590309732901193
+    },
+    {
+      "id": "condgov_q_ce2cbdc84b29dd8b",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_4924a26a39212ae5",
+      "cosine": 0.32692462679240775
+    },
+    {
+      "id": "condgov_q_b4df670a893b36b6",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_00719",
+      "cosine": 0.34033909861162304
+    },
+    {
+      "id": "condgov_q_a40ff4e25832d158",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_70225f7a29585ce0",
+      "cosine": 0.4607455975758048
+    },
+    {
+      "id": "condgov_q_94b0b81690a85c3e",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_a5d57832a8253914",
+      "cosine": 0.3812274445547117
+    },
+    {
+      "id": "condgov_q_927b562591b800ff",
+      "reason": "duplicate_training_question",
+      "nearest": "squad_q_5726a0205951b619008f781c",
+      "cosine": 0.3499157278000865
+    },
+    {
+      "id": "condgov_q_b9e73fd85ab0a717",
+      "reason": "duplicate_training_question",
+      "nearest": "squad_q_56e10f14e3433e1400422b5d",
+      "cosine": 0.24128872905880705
+    },
+    {
+      "id": "condgov_q_dccf0440e674d733",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_7255dd529e518d5c",
+      "cosine": 0.3758728297766154
+    },
+    {
+      "id": "condgov_q_5bcb75d8fe128a8a",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_19a8846b168505ea",
+      "cosine": 0.48604451946672955
+    },
+    {
+      "id": "condgov_q_6aeb465a6f8fc524",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_00618",
+      "cosine": 0.4276993452241842
+    },
+    {
+      "id": "condgov_q_c123da62e648c420",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_f058a97d8dda013b",
+      "cosine": 0.34269807411314823
+    },
+    {
+      "id": "condgov_q_d7b2800f77fa0efd",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_1ac4ec132bb1194c",
+      "cosine": 0.3123707406444929
+    },
+    {
+      "id": "condgov_q_b8c0d8b22c6e8a52",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_ab3599ccab3a26ef",
+      "cosine": 0.4037692647872615
+    },
+    {
+      "id": "condgov_q_785bc8839af6ae35",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_f058a97d8dda013b",
+      "cosine": 0.31630896422995325
+    },
+    {
+      "id": "condgov_q_3debbc1afbc4c1db",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_75841330517df5c6",
+      "cosine": 0.4036972256323321
+    },
+    {
+      "id": "condgov_q_8d1b58eef37d25a1",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_e38b25b6ec3d458f",
+      "cosine": 0.3028069566515216
+    },
+    {
+      "id": "condgov_q_33961e27ec5dd415",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_01272",
+      "cosine": 0.33899240618178417
+    },
+    {
+      "id": "condgov_q_b41f9978b162bad7",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_01081",
+      "cosine": 0.31361025833912015
+    },
+    {
+      "id": "condgov_q_4501b1d05956533c",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_70225f7a29585ce0",
+      "cosine": 0.5073636048818749
+    },
+    {
+      "id": "condgov_q_bd8275acff346f32",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_35b72b0e09756be3",
+      "cosine": 0.3088781008889735
+    },
+    {
+      "id": "condgov_q_362927a38cfb095e",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_7ba071da619ac9f2",
+      "cosine": 0.3587273679817815
+    },
+    {
+      "id": "condgov_q_31b5d81e90f73240",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_88b6a1073e84102a",
+      "cosine": 0.33499731626248375
+    },
+    {
+      "id": "condgov_q_8db78dfea3416c6d",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_b01defa05daac482",
+      "cosine": 0.47663584164426687
+    },
+    {
+      "id": "condgov_q_1214596c60476f89",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_00256",
+      "cosine": 0.4783520009468263
+    },
+    {
+      "id": "condgov_q_5ad3eaa51db6ac47",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_58bbbec5c02416bd",
+      "cosine": 0.2980423960812951
+    },
+    {
+      "id": "condgov_q_d49a9780a5c856eb",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_c733fd54efc8f13c",
+      "cosine": 0.4869575530547535
+    },
+    {
+      "id": "condgov_q_4fdd70a1e1d6f47e",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_b0711419a8a71ff5",
+      "cosine": 0.5652852172481799
+    },
+    {
+      "id": "condgov_q_eff86d8876a9f977",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_9849dd7a73b57b51",
+      "cosine": 0.4332068796174431
+    },
+    {
+      "id": "condgov_q_378eb1c236514435",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_4f410791ca39b542",
+      "cosine": 0.4272422684501832
+    },
+    {
+      "id": "condgov_q_a3934ff46d4b7cfb",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_01081",
+      "cosine": 0.29012257535188923
+    },
+    {
+      "id": "condgov_q_3cd2a2fd17c44d78",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_01192",
+      "cosine": 0.32344055453833487
+    },
+    {
+      "id": "condgov_q_777dfa816745ac8c",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_15ac98718206ecbd",
+      "cosine": 0.32764237750305847
+    },
+    {
+      "id": "condgov_q_f0eff25b2ee0138d",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_7e3121e5dd78ac54",
+      "cosine": 0.29688958439003965
+    },
+    {
+      "id": "condgov_q_e4aadf9f8a063c0b",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_b01defa05daac482",
+      "cosine": 0.4657644371749947
+    },
+    {
+      "id": "condgov_q_894f4e37da882aeb",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_4924a26a39212ae5",
+      "cosine": 0.34216605592567495
+    },
+    {
+      "id": "condgov_q_8579da920177d3b9",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_1b5b86bf0ffb1102",
+      "cosine": 0.2380444640413656
+    },
+    {
+      "id": "condgov_q_9a0c7d8aa67f74af",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_608343674365441d",
+      "cosine": 0.2857346080240982
+    },
+    {
+      "id": "condgov_q_a7e70bf396818406",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_01042",
+      "cosine": 0.3847028407243418
+    },
+    {
+      "id": "condgov_q_e0bf5b7fdc494f46",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_01452",
+      "cosine": 0.2864559119120458
+    },
+    {
+      "id": "condgov_q_3045bfa36094544f",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_d455cfc705115557",
+      "cosine": 0.36797054910634186
+    },
+    {
+      "id": "condgov_q_415a971b7939c230",
+      "reason": "duplicate_training_question",
+      "nearest": "squad_q_5725c123271a42140099d133",
+      "cosine": 0.293766317060271
+    },
+    {
+      "id": "condgov_q_1510b91b16089f9b",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_19a8846b168505ea",
+      "cosine": 0.22859306361931964
+    },
+    {
+      "id": "condgov_q_976b4bfd774d49d2",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_f5259cb26dfc14f6",
+      "cosine": 0.35328966945329254
+    },
+    {
+      "id": "condgov_q_4a04d93558aec2a2",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_01081",
+      "cosine": 0.3796024607344586
+    },
+    {
+      "id": "condgov_q_8b3ac3101ca98b69",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_5d16714ebb9ec39d",
+      "cosine": 0.3433293626031775
+    },
+    {
+      "id": "condgov_q_d8be48c9599e13be",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_5d16714ebb9ec39d",
+      "cosine": 0.3283599213565882
+    },
+    {
+      "id": "condgov_q_bf7e6306fcf5243e",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_70225f7a29585ce0",
+      "cosine": 0.25975832126085274
+    },
+    {
+      "id": "condgov_q_dcdac732478c8cb3",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_6ab1b2f4d4c589bd",
+      "cosine": 0.31137718511552004
+    },
+    {
+      "id": "condgov_q_2665af64d25fcced",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_6ab1b2f4d4c589bd",
+      "cosine": 0.27361405263579264
+    },
+    {
+      "id": "condgov_q_cc2c2853fdc5506c",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_70225f7a29585ce0",
+      "cosine": 0.3844296655226087
+    },
+    {
+      "id": "condgov_q_d5005f747796a478",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_c30088432daed1b9",
+      "cosine": 0.30767504466986684
+    },
+    {
+      "id": "condgov_q_ff1f6c2ac64fb5a8",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_98cffaaa94c956bf",
+      "cosine": 0.25082721661664475
+    },
+    {
+      "id": "condgov_q_3303b6939c3001b0",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_78d894488e8c014b",
+      "cosine": 0.31977030266463924
+    },
+    {
+      "id": "condgov_q_0fde5cab9bdbf056",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_441da1322c0f77f8",
+      "cosine": 0.3308325109047269
+    },
+    {
+      "id": "condgov_q_392ac04f84278b3e",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_05ce343a34e66838",
+      "cosine": 0.3805017442826246
+    },
+    {
+      "id": "condgov_q_fa4012529e985207",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_00539",
+      "cosine": 0.4052414696779497
+    },
+    {
+      "id": "condgov_q_4aaaf33b800f656a",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_00709",
+      "cosine": 0.40794852646771695
+    },
+    {
+      "id": "condgov_q_6942e3d97dc9e392",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_98cffaaa94c956bf",
+      "cosine": 0.205670320789618
+    },
+    {
+      "id": "condgov_q_2b4cdc7f7fcf76a8",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_00481",
+      "cosine": 0.3031627806132484
+    },
+    {
+      "id": "condgov_q_cb5ec9d3062099f7",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_0d16d0a7d59fa4ec",
+      "cosine": 0.30802293157062555
+    },
+    {
+      "id": "condgov_q_f455f229b58ca725",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_01452",
+      "cosine": 0.35387495044830997
+    },
+    {
+      "id": "condgov_q_1d78a0094f22bd32",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_21be65c7cef2a325",
+      "cosine": 0.32769700933481616
+    },
+    {
+      "id": "condgov_q_e03b51258c977d4e",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_35b72b0e09756be3",
+      "cosine": 0.24773271194732338
+    },
+    {
+      "id": "condgov_q_37c807e0cd3bdb72",
+      "reason": "duplicate_training_question",
+      "nearest": "squad_q_5728809f2ca10214002da40c",
+      "cosine": 0.30636095651141526
+    },
+    {
+      "id": "condgov_q_2519131ea845c09d",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_c557f965aea0bd7a",
+      "cosine": 0.27708822500985764
+    },
+    {
+      "id": "condgov_q_d4dd4d5dbdd4de63",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_0d16d0a7d59fa4ec",
+      "cosine": 0.26632907249913207
+    },
+    {
+      "id": "condgov_q_83a2fbab5994b9e0",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_00709",
+      "cosine": 0.27150608308212454
+    },
+    {
+      "id": "condgov_q_62351694e09f578c",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_077b6e3d395dc043",
+      "cosine": 0.2672900000001037
+    },
+    {
+      "id": "condgov_q_da037de00f4adca2",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_0d16d0a7d59fa4ec",
+      "cosine": 0.38359660389123906
+    },
+    {
+      "id": "condgov_q_3e28030e6c39f79d",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_98cffaaa94c956bf",
+      "cosine": 0.30798736954751005
+    },
+    {
+      "id": "condgov_q_e8ab7d60c6c1d94b",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_98cffaaa94c956bf",
+      "cosine": 0.2901509327062237
+    },
+    {
+      "id": "condgov_q_a8b1dce902e03a2b",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_00817",
+      "cosine": 0.2969954779599999
+    },
+    {
+      "id": "condgov_q_74a167ce14e75057",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_d094c35db89f829f",
+      "cosine": 0.30134204980739354
+    },
+    {
+      "id": "condgov_q_2bb11a1d0d56a3f6",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_9a5db228d0fb8683",
+      "cosine": 0.31194140642600066
+    },
+    {
+      "id": "condgov_q_e91604f33c629bb9",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_927768aefd44cc6a",
+      "cosine": 0.2859716257261
+    },
+    {
+      "id": "condgov_q_40ffd0cf190bafb8",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_2cfd57c169064ed9",
+      "cosine": 0.326486897980102
+    },
+    {
+      "id": "condgov_q_d74a56d0aadafbff",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_00927",
+      "cosine": 0.3913116135712593
+    },
+    {
+      "id": "condgov_q_e97b6c50a4132d89",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_c30088432daed1b9",
+      "cosine": 0.35961440847815007
+    },
+    {
+      "id": "condgov_q_85629ce4a97693c1",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_78d894488e8c014b",
+      "cosine": 0.33788902925911934
+    },
+    {
+      "id": "condgov_q_4637d94da73e6501",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_6572a40757c17336",
+      "cosine": 0.37804583046943785
+    },
+    {
+      "id": "condgov_q_62e32a034b64a6ce",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_4e9ddd2a8ba18405",
+      "cosine": 0.372584129114476
+    },
+    {
+      "id": "condgov_q_285ae26c496fb722",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_eac266e9436886ed",
+      "cosine": 0.36935628484182415
+    },
+    {
+      "id": "condgov_q_6355373df07b31fb",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_2b91b094fcb5c573",
+      "cosine": 0.4353393244316126
+    },
+    {
+      "id": "condgov_q_5bf40ca13fb982b2",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_2b91b094fcb5c573",
+      "cosine": 0.395289955190534
+    },
+    {
+      "id": "condgov_q_69aaec96ccf28eba",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_00555",
+      "cosine": 0.37990271140605314
+    },
+    {
+      "id": "condgov_q_bc581edc314a4d38",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_8e1aa22d8a0bc9f8",
+      "cosine": 0.29001475673075705
+    },
+    {
+      "id": "condgov_q_690a81d7bf97de50",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_dfb2689cf71f2687",
+      "cosine": 0.3008806170679992
+    },
+    {
+      "id": "condgov_q_c09594d7a3fbfcd5",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_9c28956437c750f0",
+      "cosine": 0.29096871210658937
+    },
+    {
+      "id": "condgov_q_5c817ae7ac3b5641",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_dfb2689cf71f2687",
+      "cosine": 0.4823313497919167
+    },
+    {
+      "id": "condgov_q_8c6095e7406a46fe",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_22f9429840cc5ac9",
+      "cosine": 0.485571613072441
+    },
+    {
+      "id": "condgov_q_cce2183c41193191",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_4d317dbc2f3bca23",
+      "cosine": 0.5534495494001151
+    },
+    {
+      "id": "condgov_q_05bdcf2129885c06",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_4d317dbc2f3bca23",
+      "cosine": 0.5397114807226695
+    },
+    {
+      "id": "condgov_q_95a8f7b2e8ff2ef9",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_2f7637e42574cded",
+      "cosine": 0.5243353865771875
+    },
+    {
+      "id": "condgov_q_0c382a2be457df33",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_0e5ed4d5bf144dc8",
+      "cosine": 0.3371096233455879
+    },
+    {
+      "id": "condgov_q_7934231135d5938f",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_4d317dbc2f3bca23",
+      "cosine": 0.41783173119798245
+    },
+    {
+      "id": "condgov_q_8282709900aa3ffe",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_340d7401160cff7f",
+      "cosine": 0.2156087831229364
+    },
+    {
+      "id": "condgov_q_6653a1ab411ac330",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_ce2bc0a101a67298",
+      "cosine": 0.43091269419905553
+    },
+    {
+      "id": "condgov_q_66c75fb5b3fdab5e",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_148f7615bb080888",
+      "cosine": 0.4556577968205273
+    },
+    {
+      "id": "condgov_q_e1ba30463c595043",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_7874911ca7d65e6e",
+      "cosine": 0.3953127942216774
+    },
+    {
+      "id": "condgov_q_422218c9b3c082c5",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_148f7615bb080888",
+      "cosine": 0.36464776554313705
+    },
+    {
+      "id": "condgov_q_a19bdf15b6c8bab7",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_345b84be4b35d924",
+      "cosine": 0.2645691365600724
+    },
+    {
+      "id": "condgov_q_b0287a2c85e4ebc4",
+      "reason": "duplicate_training_question",
+      "nearest": "squad_q_571ce5055efbb31900334e2d",
+      "cosine": 0.23391208272223607
+    },
+    {
+      "id": "condgov_q_e426882cf98fc12f",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_2c1934e2ce5917e8",
+      "cosine": 0.30248133447225367
+    },
+    {
+      "id": "condgov_q_27297774165eb956",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_340d7401160cff7f",
+      "cosine": 0.4522334449006864
+    },
+    {
+      "id": "condgov_q_efe3355e65e8bc82",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_148f7615bb080888",
+      "cosine": 0.2908882336029859
+    },
+    {
+      "id": "condgov_q_52be08c26541d519",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_79c7bc47863414a2",
+      "cosine": 0.3909134028266774
+    },
+    {
+      "id": "condgov_q_19935598ae3db3ca",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_00806",
+      "cosine": 0.493836636235628
+    },
+    {
+      "id": "condgov_q_53a461fa8741945f",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_71ecfd6b321e2ac5",
+      "cosine": 0.4115847121587064
+    },
+    {
+      "id": "condgov_q_50e2de754f708b27",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_00350",
+      "cosine": 0.5669905012861672
+    },
+    {
+      "id": "condgov_q_49dfc29e17a2bee9",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_dd13835e6b50afd8",
+      "cosine": 0.37520623528169805
+    },
+    {
+      "id": "condgov_q_232ef8f86f1dd192",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_9a5db228d0fb8683",
+      "cosine": 0.472113428319318
+    },
+    {
+      "id": "condgov_q_39d4adfb5ef02863",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_01146",
+      "cosine": 0.3666970803922428
+    },
+    {
+      "id": "condgov_q_6226ef09a6bb1dc1",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_38712d5a4b4a95d8",
+      "cosine": 0.3588008412072412
+    },
+    {
+      "id": "condgov_q_d1b4c53c1b8dc4d3",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_2af9f7c0b98c9364",
+      "cosine": 0.43679191469531187
+    },
+    {
+      "id": "condgov_q_7990319ed43eab66",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_01928",
+      "cosine": 0.5151853743995911
+    },
+    {
+      "id": "condgov_q_9195fe4e4fcb8a42",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_602850878a4c3a6c",
+      "cosine": 0.5376014764882177
+    },
+    {
+      "id": "condgov_q_7f5d1fd1ae5c6cd3",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_d19758c5272655dc",
+      "cosine": 0.35166690694494274
+    },
+    {
+      "id": "condgov_q_f331ebbb9087a686",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_c586f9bad62dd8c3",
+      "cosine": 0.33046190293537536
+    },
+    {
+      "id": "condgov_q_43d39714f5c9a779",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_397818df7692171c",
+      "cosine": 0.3529659116638515
+    },
+    {
+      "id": "condgov_q_f02e60d5052ceceb",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_4aa378a662e03189",
+      "cosine": 0.5265889794161959
+    },
+    {
+      "id": "condgov_q_1fc2cf71d8b12080",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_b4b4a89ea6981c28",
+      "cosine": 0.29879809937321755
+    },
+    {
+      "id": "condgov_q_ca9a0735e61a7fb4",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_01408",
+      "cosine": 0.35750121164348725
+    },
+    {
+      "id": "condgov_q_1820ed21d0f1006a",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_2bae8da5a51c44c2",
+      "cosine": 0.3347065630947552
+    },
+    {
+      "id": "condgov_q_dca12b4ebf891939",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_340d7401160cff7f",
+      "cosine": 0.31626683643847975
+    },
+    {
+      "id": "condgov_q_4435bf5ff358dd87",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_2f7637e42574cded",
+      "cosine": 0.4397076691150643
+    },
+    {
+      "id": "condgov_q_ec63a87526b98c06",
+      "reason": "duplicate_training_question",
+      "nearest": "gov_question_2f7637e42574cded",
+      "cosine": 0.43829371730311384
+    },
+    {
+      "id": "condgov_q_ef66714e0842b233",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_01081",
+      "cosine": 0.34167493455590536
+    },
+    {
+      "id": "condgov_q_3a342d2b29f25bd4",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_18faf82036061b8d",
+      "cosine": 0.49002847500549973
+    },
+    {
+      "id": "condgov_q_0eb1658535762cee",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_c78949e4d7fe1b54",
+      "cosine": 0.47243692574086404
+    },
+    {
+      "id": "condgov_q_1056879634185f8e",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_fed1a0a9cc5cd900",
+      "cosine": 0.5528424016648142
+    },
+    {
+      "id": "condgov_q_2a0331fbe8971fa3",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_61a57cfcfe2c947b",
+      "cosine": 0.41560782868887847
+    },
+    {
+      "id": "condgov_q_ec116b0d990a7924",
+      "reason": "duplicate_training_question",
+      "nearest": "condgov_q_d19758c5272655dc",
+      "cosine": 0.43055676356112926
+    },
+    {
+      "id": "condgov_q_0524e112384828ae",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_c4157a7ace669ee9",
+      "cosine": 0.3390801317934613
+    },
+    {
+      "id": "condgov_q_b853c70622e326cc",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_fed1a0a9cc5cd900",
+      "cosine": 0.4517182063737758
+    },
+    {
+      "id": "condgov_q_388655936addc932",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_c4157a7ace669ee9",
+      "cosine": 0.45855773222083296
+    },
+    {
+      "id": "condgov_q_4675c384a062c0b9",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_test_01201",
+      "cosine": 0.48720279473131045
+    },
+    {
+      "id": "condgov_q_d3e2a6398673900e",
+      "reason": "duplicate_training_question",
+      "nearest": "iqa_v2_valid_00031",
+      "cosine": 0.43918406504492036
+    },
+    {
+      "id": "condgov_q_7c5b71cfffa0da7a",
+      "reason": "duplicate_training_question",
+      "nearest": "gov2_q_c78949e4d7fe1b54",
+      "cosine": 0.3555605055698454
+    },
+    {
+      "id": "squad_q_5728e0433acd2414000e00e4",
+      "reason": "duplicate_training_question",
+      "nearest": "squad_q_57280757ff5b5019007d9b46",
+      "cosine": 0.31651947861901364
+    }
+  ],
+  "fresh_test_questions_compared_against_all_previous_questions": true,
+  "fresh_test_positive_text_compared_against_all_previous_training_pairs": true,
+  "no_model_metrics_used": true
+}

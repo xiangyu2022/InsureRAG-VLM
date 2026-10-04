@@ -1,0 +1,15 @@
+{
+  "full_suite": {
+    "passed": 265,
+    "subtests_passed": 58,
+    "exit_code": 0,
+    "log_sha256": "265e5641bb59912f15c854333aeb51a8cb4d8a45403f694f2df0528f2eaf08df"
+  },
+  "minimal_dependencies": {
+    "passed": 258,
+    "skipped": 7,
+    "subtests_passed": 58,
+    "exit_code": 0,
+    "log_sha256": "79ffda51d6691e228335ad999e3df01b5e8a7137fb5b318366fa0bceddc22fd1"
+  }
+}

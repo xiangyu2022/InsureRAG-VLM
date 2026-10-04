@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-01T19:50:26.430629+00:00",
+  "questions": 416,
+  "answer_candidates": 416,
+  "source_records": 37,
+  "source_urls": 37,
+  "frozen_before_model_inference": true,
+  "training_examples": 0,
+  "hyperparameter_selection_examples": 0,
+  "candidate_text_excludes_question": true,
+  "labels": "Original publisher Q/A association, extracted; not expert adjudication of alternate relevant answers",
+  "corpus_manifest_sha256": "7770250b6a456ba9cfee852e19f0d2776a1331a6f02b5f2db4cb005f3fd9228a",
+  "extraction_code_sha256": "40dc58fedc7000a082d96b8a00b00ae9253ca2362d9e1725cb76dd632ec64947",
+  "limitations": [
+    "Mechanical source-bound extraction; inspect the included extraction audit.",
+    "Government FAQ answer retrieval is a transfer diagnostic, not full legal/policy reasoning.",
+    "Questions from the same source are correlated; report source-cluster uncertainty."
+  ],
+  "files": {
+    "questions.jsonl": "c8d8e1a2fab8f494ee469bb3883d9fef2bd109046b2756032769990e9552772d",
+    "answers.jsonl": "082bc9d446ae9318fd5d7800c3ceb1cc1cd2fc169a80988667ab887545f2d355",
+    "extraction_audit.json": "95ffb8dd02325ce390f991ff818281d85d76657c9efaad85eadb0edf99c73d8c"
+  }
+}

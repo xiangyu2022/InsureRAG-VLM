@@ -1,0 +1,82 @@
+{
+  "created_utc": "2026-10-01T20:04:28.061046+00:00",
+  "previous_retained": 11739,
+  "retained_train": 11729,
+  "additional_exclusions": [
+    {
+      "id": "iqa_v2_train_00114",
+      "positive_answer_ids": [
+        "7558"
+      ],
+      "reason": "normalized_positive_answer_text_overlap_with_heldout"
+    },
+    {
+      "id": "iqa_v2_train_01157",
+      "positive_answer_ids": [
+        "25367"
+      ],
+      "reason": "normalized_positive_answer_text_overlap_with_heldout"
+    },
+    {
+      "id": "iqa_v2_train_02305",
+      "positive_answer_ids": [
+        "21568"
+      ],
+      "reason": "normalized_positive_answer_text_overlap_with_heldout"
+    },
+    {
+      "id": "iqa_v2_train_04393",
+      "positive_answer_ids": [
+        "10002"
+      ],
+      "reason": "normalized_positive_answer_text_overlap_with_heldout"
+    },
+    {
+      "id": "iqa_v2_train_05615",
+      "positive_answer_ids": [
+        "26246"
+      ],
+      "reason": "normalized_positive_answer_text_overlap_with_heldout"
+    },
+    {
+      "id": "iqa_v2_train_06276",
+      "positive_answer_ids": [
+        "13597"
+      ],
+      "reason": "normalized_positive_answer_text_overlap_with_heldout"
+    },
+    {
+      "id": "iqa_v2_train_06661",
+      "positive_answer_ids": [
+        "2955"
+      ],
+      "reason": "normalized_positive_answer_text_overlap_with_heldout"
+    },
+    {
+      "id": "iqa_v2_train_07455",
+      "positive_answer_ids": [
+        "9978"
+      ],
+      "reason": "normalized_positive_answer_text_overlap_with_heldout"
+    },
+    {
+      "id": "iqa_v2_train_08486",
+      "positive_answer_ids": [
+        "2685"
+      ],
+      "reason": "normalized_positive_answer_text_overlap_with_heldout"
+    },
+    {
+      "id": "iqa_v2_train_11114",
+      "positive_answer_ids": [
+        "7558"
+      ],
+      "reason": "normalized_positive_answer_text_overlap_with_heldout"
+    }
+  ],
+  "heldout_used_only_for_exclusion": true,
+  "test_metrics_used_for_this_fix": false,
+  "rule": "Reject whole train question if any normalized positive answer text matches any validation/test positive",
+  "parent_decontamination_sha256": "16c5899c383565a8ec49d4056d523f39ac4dbade314399c6d2af75bd14d6e383",
+  "negative_candidates": "Unlabeled corpus candidates may contain held-out answer texts; held-out relevance labels are not training targets."
+}

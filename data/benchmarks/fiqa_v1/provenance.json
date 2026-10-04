@@ -1,0 +1,24 @@
+{
+  "retrieved_utc": "2026-10-03T01:18:23.060730+00:00",
+  "url": "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/fiqa.zip",
+  "archive_sha256": "32c7df99ed21252fdfb2cf3f5673502a8d245ee0c44c4a133570d92ce2b3ad02",
+  "archive_md5": "17918ed23cd04fb15047f73e6c3bd9d9",
+  "expected_md5_source": "https://github.com/beir-cellar/beir",
+  "dataset_card_url": "https://huggingface.co/datasets/BeIR/fiqa/raw/979c07a7cb5ccc6ca009792241fa1250b98055dd/README.md",
+  "dataset_card_sha256": "aa8389d527feaffdf7ac73b708914155df2781ad9d2a8d146287f1abc7fc762f",
+  "license_as_declared_by_dataset_card": "CC-BY-SA-4.0",
+  "limitations": [
+    "Public historical financial forum answers; not verified insurance or legal guidance.",
+    "Public BGE/MS MARCO pretraining exposure unknown.",
+    "Answer IDs are available; originating thread/author clusters are not supplied."
+  ],
+  "upstream_files_sha256": {
+    "corpus.jsonl": "ff593e4df9933955dc3af83be0c3fa28ac7465f627e08c2e53593e734d506517",
+    "fiqa.zip": "32c7df99ed21252fdfb2cf3f5673502a8d245ee0c44c4a133570d92ce2b3ad02",
+    "queries.jsonl": "eede1e61d4a0188940239b53ebc2da91f577a6a34679c812d1eb9090c29877bc",
+    "UPSTREAM_README.md": "aa8389d527feaffdf7ac73b708914155df2781ad9d2a8d146287f1abc7fc762f",
+    "qrels\\dev.tsv": "03b27e547cd29dc721c3b93ce8ddd70df6b2d0ce954d8ef3659d386e8cd72c11",
+    "qrels\\test.tsv": "6adc2a640dcdd22bb8b3858f89107adef2a7c3db20a63550dfa7a0f71e379e44",
+    "qrels\\train.tsv": "e46a99529aa61b12e086a5c057e4e0ecaeda9502e53d5fe855efce778f1ec59a"
+  }
+}

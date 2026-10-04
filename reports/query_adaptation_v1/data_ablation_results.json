@@ -1,0 +1,430 @@
+{
+  "created_utc": "2026-10-03T02:07:23.085774+00:00",
+  "selected_configuration": "seed_42_epoch_2_a50",
+  "registered_after_primary_validation_before_new_test": true,
+  "selection_changed": false,
+  "all_matched_config_differences_added_finance_minus_old_replay": {
+    "insuranceqa/all": {
+      "seed_42_epoch_1_a50": {
+        "hit_at_1": 0.0015000000000000013,
+        "hit_at_10": 0.0,
+        "mrr_at_100": 0.0009133572939179491,
+        "candidate_hit": -0.0015000000000000568
+      },
+      "seed_42_epoch_1_a100": {
+        "hit_at_1": 0.0015000000000000013,
+        "hit_at_10": -0.0010000000000000009,
+        "mrr_at_100": 0.0003804720397586614,
+        "candidate_hit": -0.0024999999999999467
+      },
+      "seed_42_epoch_2_a50": {
+        "hit_at_1": 0.0030000000000000027,
+        "hit_at_10": 0.0010000000000000009,
+        "mrr_at_100": 0.0014133447456072812,
+        "candidate_hit": 0.0
+      },
+      "seed_42_epoch_2_a100": {
+        "hit_at_1": 0.0030000000000000027,
+        "hit_at_10": -0.0020000000000000018,
+        "mrr_at_100": 0.0005286335089118577,
+        "candidate_hit": -0.0010000000000000009
+      },
+      "seed_123_epoch_1_a50": {
+        "hit_at_1": 0.0005000000000000004,
+        "hit_at_10": -0.0020000000000000018,
+        "mrr_at_100": -0.00010556562597330288,
+        "candidate_hit": -0.0004999999999999449
+      },
+      "seed_123_epoch_1_a100": {
+        "hit_at_1": 0.0025000000000000022,
+        "hit_at_10": -0.0034999999999999476,
+        "mrr_at_100": 0.0006473077135674687,
+        "candidate_hit": -0.0014999999999999458
+      },
+      "seed_123_epoch_2_a50": {
+        "hit_at_1": 0.0005000000000000004,
+        "hit_at_10": 0.0010000000000000009,
+        "mrr_at_100": 0.00013812680172775593,
+        "candidate_hit": 0.0
+      },
+      "seed_123_epoch_2_a100": {
+        "hit_at_1": 0.003500000000000003,
+        "hit_at_10": -0.0010000000000000009,
+        "mrr_at_100": 0.001420560771339785,
+        "candidate_hit": -0.0004999999999999449
+      }
+    },
+    "multidomain/government": {
+      "seed_42_epoch_1_a50": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 0.0,
+        "mrr_at_100": -6.088982466945225e-05,
+        "candidate_hit": 0.0
+      },
+      "seed_42_epoch_1_a100": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 0.0,
+        "mrr_at_100": -3.022610656977509e-05,
+        "candidate_hit": 0.0
+      },
+      "seed_42_epoch_2_a50": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 0.0,
+        "mrr_at_100": -2.0267139463348016e-05,
+        "candidate_hit": 0.0
+      },
+      "seed_42_epoch_2_a100": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 0.0,
+        "mrr_at_100": 6.750317201054123e-05,
+        "candidate_hit": 0.0
+      },
+      "seed_123_epoch_1_a50": {
+        "hit_at_1": 0.007874015748031482,
+        "hit_at_10": 0.0,
+        "mrr_at_100": 0.0035011649184876203,
+        "candidate_hit": -0.007874015748031482
+      },
+      "seed_123_epoch_1_a100": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 0.0,
+        "mrr_at_100": 0.00010100748923080882,
+        "candidate_hit": 0.0
+      },
+      "seed_123_epoch_2_a50": {
+        "hit_at_1": 0.007874015748031482,
+        "hit_at_10": 0.0,
+        "mrr_at_100": 0.003886533414092508,
+        "candidate_hit": 0.0
+      },
+      "seed_123_epoch_2_a100": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 0.0,
+        "mrr_at_100": 8.575481670103358e-05,
+        "candidate_hit": 0.0
+      }
+    },
+    "multidomain/general": {
+      "seed_42_epoch_1_a50": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 0.0,
+        "mrr_at_100": -0.00011449540797359159,
+        "candidate_hit": 0.0
+      },
+      "seed_42_epoch_1_a100": {
+        "hit_at_1": 0.0024999999999999467,
+        "hit_at_10": -0.0025000000000000577,
+        "mrr_at_100": 6.869790837171763e-05,
+        "candidate_hit": -0.0024999999999999467
+      },
+      "seed_42_epoch_2_a50": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 0.0,
+        "mrr_at_100": -0.0002776251526250828,
+        "candidate_hit": 0.0
+      },
+      "seed_42_epoch_2_a100": {
+        "hit_at_1": 0.0024999999999999467,
+        "hit_at_10": -0.0025000000000000577,
+        "mrr_at_100": 3.422943685083002e-05,
+        "candidate_hit": -0.0024999999999999467
+      },
+      "seed_123_epoch_1_a50": {
+        "hit_at_1": -0.0024999999999999467,
+        "hit_at_10": 0.0,
+        "mrr_at_100": -0.0013251242998730817,
+        "candidate_hit": 0.0
+      },
+      "seed_123_epoch_1_a100": {
+        "hit_at_1": 0.0024999999999999467,
+        "hit_at_10": -0.0025000000000000577,
+        "mrr_at_100": -0.0007722625223297586,
+        "candidate_hit": -0.0024999999999999467
+      },
+      "seed_123_epoch_2_a50": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 0.0,
+        "mrr_at_100": -0.0002679562458607343,
+        "candidate_hit": 0.0
+      },
+      "seed_123_epoch_2_a100": {
+        "hit_at_1": 0.0024999999999999467,
+        "hit_at_10": -0.0025000000000000577,
+        "mrr_at_100": -0.0003425700429091627,
+        "candidate_hit": -0.0024999999999999467
+      }
+    },
+    "fiqa/all": {
+      "seed_42_epoch_1_a50": {
+        "hit_at_1": -0.008000000000000007,
+        "hit_at_10": 0.007999999999999896,
+        "mrr_at_100": -0.0027726886028536235,
+        "candidate_hit": 0.0020000000000000018
+      },
+      "seed_42_epoch_1_a100": {
+        "hit_at_1": -0.01200000000000001,
+        "hit_at_10": 0.005999999999999894,
+        "mrr_at_100": -0.004264878954247986,
+        "candidate_hit": 0.008000000000000007
+      },
+      "seed_42_epoch_2_a50": {
+        "hit_at_1": -0.008000000000000007,
+        "hit_at_10": 0.0040000000000000036,
+        "mrr_at_100": -0.004629525899816911,
+        "candidate_hit": -0.0040000000000000036
+      },
+      "seed_42_epoch_2_a100": {
+        "hit_at_1": -0.020000000000000018,
+        "hit_at_10": 0.0020000000000000018,
+        "mrr_at_100": -0.010045188207328914,
+        "candidate_hit": 0.010000000000000009
+      },
+      "seed_123_epoch_1_a50": {
+        "hit_at_1": -0.0040000000000000036,
+        "hit_at_10": 0.0039999999999998925,
+        "mrr_at_100": -0.00124787449578867,
+        "candidate_hit": 0.0020000000000000018
+      },
+      "seed_123_epoch_1_a100": {
+        "hit_at_1": -0.014000000000000012,
+        "hit_at_10": -0.0020000000000000018,
+        "mrr_at_100": -0.005625476095759363,
+        "candidate_hit": 0.0040000000000000036
+      },
+      "seed_123_epoch_2_a50": {
+        "hit_at_1": -0.0040000000000000036,
+        "hit_at_10": 0.0020000000000000018,
+        "mrr_at_100": -0.0016591163272323683,
+        "candidate_hit": 0.0
+      },
+      "seed_123_epoch_2_a100": {
+        "hit_at_1": -0.016000000000000014,
+        "hit_at_10": 0.0,
+        "mrr_at_100": -0.007162593825393637,
+        "candidate_hit": 0.006000000000000005
+      }
+    }
+  },
+  "selected_configuration_paired": {
+    "insuranceqa/all": {
+      "n": 2000,
+      "clusters": 1983,
+      "bootstrap_repetitions": 5000,
+      "cluster_unit": "shared-gold connected components",
+      "multiple_comparisons_adjusted": false,
+      "metrics": {
+        "hit_at_1": {
+          "difference": 0.003,
+          "cluster_bootstrap_95ci": [
+            0.0004995004995004995,
+            0.006
+          ],
+          "wins": 7,
+          "losses": 1
+        },
+        "hit_at_10": {
+          "difference": 0.001,
+          "cluster_bootstrap_95ci": [
+            -0.0015037782520493813,
+            0.003996003996003996
+          ],
+          "wins": 5,
+          "losses": 3
+        },
+        "mrr_at_100": {
+          "difference": 0.0014133447456073469,
+          "cluster_bootstrap_95ci": [
+            -1.4421271493217835e-05,
+            0.002996101335854443
+          ],
+          "wins": 105,
+          "losses": 107
+        },
+        "ndcg_at_10": {
+          "difference": 0.001425238908680461,
+          "cluster_bootstrap_95ci": [
+            0.0001661712831473702,
+            0.002739669747541169
+          ],
+          "wins": 57,
+          "losses": 53
+        },
+        "candidate_hit": {
+          "difference": 0.0,
+          "cluster_bootstrap_95ci": [
+            -0.00298804780876494,
+            0.0029865976611225574
+          ],
+          "wins": 4,
+          "losses": 4
+        }
+      }
+    },
+    "multidomain/government": {
+      "n": 127,
+      "clusters": 14,
+      "bootstrap_repetitions": 5000,
+      "cluster_unit": "source URL/title",
+      "multiple_comparisons_adjusted": false,
+      "metrics": {
+        "hit_at_1": {
+          "difference": 0.0,
+          "cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0
+        },
+        "hit_at_10": {
+          "difference": 0.0,
+          "cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0
+        },
+        "mrr_at_100": {
+          "difference": -2.0267139463446855e-05,
+          "cluster_bootstrap_95ci": [
+            -5.556243891213106e-05,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 2
+        },
+        "ndcg_at_10": {
+          "difference": 0.0,
+          "cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0
+        },
+        "candidate_hit": {
+          "difference": 0.0,
+          "cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0
+        }
+      }
+    },
+    "multidomain/general": {
+      "n": 400,
+      "clusters": 24,
+      "bootstrap_repetitions": 5000,
+      "cluster_unit": "source URL/title",
+      "multiple_comparisons_adjusted": false,
+      "metrics": {
+        "hit_at_1": {
+          "difference": 0.0,
+          "cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0
+        },
+        "hit_at_10": {
+          "difference": 0.0,
+          "cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0
+        },
+        "mrr_at_100": {
+          "difference": -0.00027762515262515263,
+          "cluster_bootstrap_95ci": [
+            -0.0007974358473214489,
+            3.7522799129359105e-05
+          ],
+          "wins": 2,
+          "losses": 2
+        },
+        "ndcg_at_10": {
+          "difference": -0.00027327098521538263,
+          "cluster_bootstrap_95ci": [
+            -0.0007434765764096354,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 2
+        },
+        "candidate_hit": {
+          "difference": 0.0,
+          "cluster_bootstrap_95ci": [
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "losses": 0
+        }
+      }
+    },
+    "fiqa/all": {
+      "n": 500,
+      "clusters": 500,
+      "bootstrap_repetitions": 5000,
+      "cluster_unit": "shared-gold connected components",
+      "multiple_comparisons_adjusted": false,
+      "metrics": {
+        "hit_at_1": {
+          "difference": -0.008,
+          "cluster_bootstrap_95ci": [
+            -0.018,
+            0.0
+          ],
+          "wins": 1,
+          "losses": 5
+        },
+        "hit_at_10": {
+          "difference": 0.004,
+          "cluster_bootstrap_95ci": [
+            -0.006,
+            0.016
+          ],
+          "wins": 5,
+          "losses": 3
+        },
+        "mrr_at_100": {
+          "difference": -0.004629525899816969,
+          "cluster_bootstrap_95ci": [
+            -0.010493478714313722,
+            0.000707878825125233
+          ],
+          "wins": 65,
+          "losses": 65
+        },
+        "ndcg_at_10": {
+          "difference": -0.0013920504746908098,
+          "cluster_bootstrap_95ci": [
+            -0.006138647327348169,
+            0.0032556959496628174
+          ],
+          "wins": 38,
+          "losses": 47
+        },
+        "candidate_hit": {
+          "difference": -0.004,
+          "cluster_bootstrap_95ci": [
+            -0.016,
+            0.006
+          ],
+          "wins": 3,
+          "losses": 5
+        }
+      }
+    }
+  },
+  "unlabelled_finance_documents_in_both_arms": true,
+  "interpretation": "Validation-only labelled-data effect conditional on fixed document corpus and optimization budget; not a fresh-test data ablation.",
+  "primary_summary_sha256": "8bbdce6a727ac6558e55b902646751faaa8480c41004e59f6112040edba1cb20",
+  "ablation_summary_sha256": "9c65d37ea714e89727df3a95324f72e64cc041ccddaafe0ef035816ab6a4a92b"
+}

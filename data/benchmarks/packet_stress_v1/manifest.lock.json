@@ -1,0 +1,10 @@
+{
+  "version": "packet_stress_v1",
+  "seed": 42,
+  "frozen_before_model_inference": true,
+  "files": {
+    "packets.json": "a06ade7fb2f2cd0a5bf5c6aa470059a790164d9a10d81abad8334234e787db93",
+    "cases.jsonl": "bd5edd5c242e134e52b7178af3e6a09f5019fb4c3b297f5d3e9a52761e694dad"
+  },
+  "label": "Synthetic regression only; no real customer documents; no production or held-out accuracy claim"
+}

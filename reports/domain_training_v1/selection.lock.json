@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-10-01T20:02:10.099607+00:00",
+  "selected_on": "valid",
+  "epoch": 1,
+  "config": {
+    "pool": "hybrid100",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "validation_metrics": {
+    "epoch": 1,
+    "config": {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    "n": 2000,
+    "hit_at_1": 0.415,
+    "hit_at_5": 0.654,
+    "hit_at_10": 0.742,
+    "hit_at_100": 0.8815,
+    "mrr_at_100": 0.5228991936124836,
+    "label_recall_at_10": 0.6262989177489177,
+    "hit_at_1_wilson_95": [
+      0.39358894368635533,
+      0.43673695435145754
+    ],
+    "hit_at_10_wilson_95": [
+      0.7223734262506247,
+      0.7606987228652489
+    ]
+  },
+  "selected_weights_sha256": "13232b2d590a516854025b97e0d99401a5aec4953178d8965477319deb724002",
+  "training_manifest_sha256": "7303e4bb4f143c813af9baf05789455db65100e688d54d8746e0b0ea44a036e3",
+  "fixture_lock_sha256": "4c46a374c2f5eebd4a2609f030c5fdc0aa660fb5e7a1a653cc198f6cc177fcc6",
+  "validation_artifacts": {
+    "1": {
+      "protocol_sha256": "3146152d45dc1eb770e53c88a3fd2a67a10b4aea43f4159768123b4c7614e429",
+      "scores_sha256": "27e1979d7e678c93b71d7ffb862748f4a524968f0af8ae3bc96cb59c36827227"
+    },
+    "2": {
+      "protocol_sha256": "2039625e584a4d15fb412872ed475390248150189613b1e1dec29c1b550269d0",
+      "scores_sha256": "8f735e19590e14776a133a2eaa29bf22a7d68d885021d6c60c103f3fb64df3a8"
+    },
+    "3": {
+      "protocol_sha256": "6c21cb1cf23516ecd1f6404722cc310f2b7ff3bd02c417d73d59d7acc712e4e0",
+      "scores_sha256": "c7d0e2bfb7d7696dea50a1f0fa5ba1778041d41a048ce98e353d4127d269bdc4"
+    }
+  },
+  "selection_protocol_sha256": "06e91ea1c94d09f2d4118af73be4acdee4e6913f5a276e5a7d090b3524712a33",
+  "code_sha256": {
+    "scripts/eval_domain_training.py": "a966308dd025e246ad39a66b3aa8ddbe4ee61f7d5b0df653e7f275bf0e146899",
+    "scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872",
+    "src/insurerag_vlm/reranker.py": "bb90e6c134b44d7cb0c0cd6ca3165e098827bd908a3a86e73101040cf65734a3"
+  },
+  "historical_test_status": "Previously inspected in earlier project iterations; not a blind test",
+  "external_transfer_status": "Not scored before checkpoint selection"
+}

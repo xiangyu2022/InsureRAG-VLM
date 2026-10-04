@@ -1,0 +1,31 @@
+{
+  "version": "opm_reference_navigation_v1",
+  "created_utc": "2026-10-01T16:57:57.876109+00:00",
+  "cases": 171,
+  "counts_by_split": {
+    "dev": 17,
+    "test": 154
+  },
+  "families_by_split": {
+    "dev": [
+      "apwu",
+      "geha"
+    ],
+    "test": [
+      "compass_rose",
+      "foreign_service",
+      "mhbp",
+      "nalc",
+      "samba"
+    ]
+  },
+  "files": {
+    "cases.jsonl": "dae56fbc642f751ab6e03c658a847023219a138b1c4d459aa090866270ce76c6"
+  },
+  "corpus_manifest_sha256": "1eafa206d8d16b36e49b040fda46f9880d4ba41e032ba4953799cf193a61c54c",
+  "limitations": [
+    "Labels and edges share literal reference extraction; this is an integration diagnostic, not independent graph extraction accuracy.",
+    "Anchor is supplied. Does not measure end-to-end natural-question answering or support legal precedence.",
+    "No synthetic numeric variants. Multiple references from the same plan are correlated; do not use question-level confidence intervals."
+  ]
+}

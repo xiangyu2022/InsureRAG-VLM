@@ -1,0 +1,39 @@
+{
+  "version": "visual_counterfactual_v1",
+  "seed": 314159,
+  "render_dpi": 144,
+  "label": "AI-authored synthetic image-only counterfactual diagnostic; not real-policy visual accuracy",
+  "variants": [
+    {
+      "id": "A",
+      "dwelling_limit": 546000,
+      "wind_hail_deductible": 1750,
+      "excluded_cause": "Flood",
+      "personal_property_limit": 73000,
+      "personal_liability_limit": 300000,
+      "pdf": "assets/visual_A.pdf",
+      "image": "assets/visual_A.png"
+    },
+    {
+      "id": "B",
+      "dwelling_limit": 631000,
+      "wind_hail_deductible": 1850,
+      "excluded_cause": "Sewer backup",
+      "personal_property_limit": 73000,
+      "personal_liability_limit": 300000,
+      "pdf": "assets/visual_B.pdf",
+      "image": "assets/visual_B.png"
+    },
+    {
+      "id": "C",
+      "dwelling_limit": 643000,
+      "wind_hail_deductible": 4750,
+      "excluded_cause": "Earthquake",
+      "personal_property_limit": 73000,
+      "personal_liability_limit": 300000,
+      "pdf": "assets/visual_C.pdf",
+      "image": "assets/visual_C.png"
+    }
+  ],
+  "question_note": "The same four questions are reused verbatim across all three image variants."
+}

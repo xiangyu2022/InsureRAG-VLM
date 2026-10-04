@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "protocol_sha256": "3fa0d813999ab9850eb6a585162d60132e7a8af38dda798c0a2c1c60020fcea6",
+  "files_sha256": {
+    "condition_government.jsonl": "b2dc744cf53fb5f78f1df12c00ac6fded52f1a254fb8a87aed489edb28cd1e37",
+    "finqa.jsonl": "a22d63d23af7718e5cdc1e5245c83cef6be55118e06dd64b5cbc61db3db9661b",
+    "finqa_adapted_queries.npy": "c6a0ac0331c646e86cf58371c8f0f89382edc734d295efaac94e6ed73b5842cf",
+    "finqa_original_queries.npy": "282e31236a26d29e33eeccc9bc0b6e03a2bbdc4814718c2d51b2874b40f181fe",
+    "fiqa.jsonl": "f0b38b1193f1206e8885aeb99590e2ea7e91d414b8ff29bd5a23a1434f3c2c80",
+    "historical_government.jsonl": "fdfb39ae0bb8b08c9e9bbad98ebdacd68511266ce9cf85a465bc586aca89fa92",
+    "insuranceqa.jsonl": "fe8054acbb18b82fee83d7d1ffb790980f05f55bd7b172bde74be8f5c901b7b3",
+    "multidomain.jsonl": "11b0e4c50cab776b57ddca300806bbcb838ad467e3e55ccc32b647ed62e7e151"
+  }
+}

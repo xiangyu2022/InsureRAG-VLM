@@ -1,6 +1,11 @@
 import json
 import re
+import secrets
 import hashlib
+import logging
+import shutil
+import tempfile
+import threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -10,7 +15,9 @@ from .diff import summarize_policy_diff
 from .knowledge import format_knowledge_answer, knowledge_base_size, search_knowledge
 from .pdf import extract_text_by_page
 from .pipeline import DocumentRetrievalPipeline
-from .vlm import _ANTHROPIC_SYSTEM
+from .hybrid_pipeline import DocumentTextUnavailableError
+from .retriever import EmbeddingBackendError
+from .vlm import BackendConfigurationError, BackendUnavailableError
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -19,6 +26,7 @@ INDEX_DIR = PROJECT_ROOT / "data"
 UPLOAD_DIR = PROJECT_ROOT / "reports" / "demo_uploads" / "current"
 UPLOAD_INDEX_DIR = PROJECT_ROOT / "reports" / "demo_uploads" / "index"
 PAGE_CACHE_DIR = PROJECT_ROOT / "reports" / "demo_uploads" / "page_cache"
+LOGGER = logging.getLogger(__name__)
 
 _DIFF_TRIGGERS = re.compile(
     r"\b(compar|diff|version|drift|v1|v2|chang|updat)\w*\b", re.I
@@ -30,12 +38,41 @@ def _is_diff_query(question: str) -> bool:
     return len(hits) >= 2
 
 
+_POLICY_CONCEPT = r"(?:polic(?:y|ies)|insurance|coverage|deductibles?|limits?|premiums?|endorsements?|exclusions?|benefits?|claims?|copay(?:ment)?s?|coinsurance|plan)"
+
+
+def _is_personal_policy_query(question: str) -> bool:
+    # Permit coverage names and ordinary modifiers between the possessive and
+    # policy concept: "my collision deductible", "our actual annual premium".
+    # A bounded phrase avoids interpreting "my question is: what is ..." as a
+    # request for a private policy fact.
+    modifiers = r"(?:(?!(?:question|example|definition|understanding)\b)[\w'-]+[\s-]+){0,6}"
+    if re.search(r"\b(?:my|our)\s+" + modifiers + _POLICY_CONCEPT + r"\b", question, re.I):
+        return True
+    if re.search(r"\b(?:am\s+i|are\s+we)\s+covered\b", question, re.I):
+        return True
+    return bool(re.search(r"\b" + _POLICY_CONCEPT + r"\b", question, re.I)) and bool(
+        re.search(r"\b(?:do\s+(?:i|we)\s+have|(?:i|we)\s+(?:pay|owe)|appl(?:y|ies)\s+to\s+(?:me|us))\b", question, re.I)
+    )
+
+
 def _is_document_first_query(question: str) -> bool:
-    return bool(re.search(r"\b(document|policy|guide|pdf|uploaded|file)\b", question, re.I))
+    return _is_personal_policy_query(question) or bool(
+        re.search(r"\b(documents?|polic(?:y|ies)|guides?|pdf|uploaded|files?)\b", question, re.I)
+    ) or bool(re.search(r"\bthis\s+(?:[\w-]+\s+){0,4}" + _POLICY_CONCEPT + r"\b", question, re.I))
 
 
 def _backend_label(pipeline: DocumentRetrievalPipeline) -> str:
     return pipeline.vlm_client.backend_label()
+
+
+def _abstention_message(reason: str | None) -> str:
+    messages = {
+        "personal_policy_not_available": "The active documents are public reference guides, which cannot establish your own policy's coverage or amounts. Upload your policy or declarations pages to answer this question.",
+        "generation_truncated": "The model's response ended before it was complete. Try a shorter or more specific question.",
+        "missing_policy_packet_counterevidence": "The available pages leave a policy exception or conflicting clause unresolved. Add the related policy pages to establish the answer.",
+    }
+    return messages.get(reason, "The available document evidence does not establish this answer. Upload the relevant policy pages or ask a more specific question.")
 
 
 def _first_two_pdfs(folder: Path) -> tuple[Path, Path] | None:
@@ -61,192 +98,67 @@ def _retrieval_trace(rag_result: dict, limit: int = 3) -> list[dict]:
 
 
 def build_chat_response(question: str, pipeline: DocumentRetrievalPipeline, data_folder: Path) -> dict:
-    """Route question through knowledge base + RAG and return a unified response."""
+    """Return the pipeline's validated answer without a second generation step."""
+    if Path(data_folder).resolve() == DATA_FOLDER.resolve() and _is_personal_policy_query(question):
+        trace = pipeline.vlm_client.answer_trace(invoked=False)
+        return {
+            "source": "abstain", "answer": "", "knowledge_terms": [], "citations": [],
+            "citation_origin": None,
+            "confidence": None, "abstain": True,
+            "abstain_reason": _abstention_message("personal_policy_not_available"),
+            "abstain_reason_code": "personal_policy_not_available",
+            "backend": "corpus-abstention", "configured_backend": _backend_label(pipeline),
+            "generation_used": False, "answer_repaired": False,
+            "backend_metadata": trace["backend_metadata"], "retrieval_trace": [],
+        }
     if _is_diff_query(question):
         return {"source": "diff"}
 
-    vlm = pipeline.vlm_client
-    kb_entries = search_knowledge(question)
     document_first = _is_document_first_query(question)
-
-    # ── Path A: Ollama available ─────────────────────────────────────────────
-    # Small local LLMs are best used as a last-mile explainer. For exact
-    # glossary matches and cited document snippets, deterministic extraction is
-    # faster and more faithful than asking a reasoning model to regenerate facts.
-    if vlm.is_ollama():
-        rag = pipeline.query_structured(question, data_folder, top_k=3, force_extractive=True)
-        has_kb = len(kb_entries) > 0
-        has_doc = not rag.get("abstain") and bool(rag.get("answer"))
-
-        if has_doc and document_first:
-            return {
-                "source": "document",
-                "answer": rag["answer"],
-                "knowledge_terms": [],
-                "citations": rag.get("citations", []),
-                "confidence": rag.get("confidence", 0.0),
-                "abstain": False,
-                "abstain_reason": None,
-                "backend": "deterministic evidence extraction",
-                "retrieval_trace": _retrieval_trace(rag),
-            }
-        if has_kb and has_doc:
-            return {
-                "source": "combined",
-                "answer": f"{format_knowledge_answer(kb_entries)}\n\n**From your policy documents:**\n{rag['answer']}",
-                "knowledge_terms": [entry.term for entry in kb_entries],
-                "citations": rag.get("citations", []),
-                "confidence": rag.get("confidence", 0.0),
-                "abstain": False,
-                "abstain_reason": None,
-                "backend": f"{_backend_label(pipeline)} + deterministic evidence extraction",
-                "retrieval_trace": _retrieval_trace(rag),
-            }
-        if has_kb:
-            return {
-                "source": "knowledge",
-                "answer": format_knowledge_answer(kb_entries),
-                "knowledge_terms": [entry.term for entry in kb_entries],
-                "citations": [],
-                "confidence": 1.0,
-                "abstain": False,
-                "abstain_reason": None,
-                "backend": "knowledge-base deterministic answer",
-            }
-        if has_doc:
-            return {
-                "source": "document",
-                "answer": rag["answer"],
-                "knowledge_terms": [],
-                "citations": rag.get("citations", []),
-                "confidence": rag.get("confidence", 0.0),
-                "abstain": False,
-                "abstain_reason": None,
-                "backend": "deterministic evidence extraction",
-                "retrieval_trace": _retrieval_trace(rag),
-            }
-
-        answer = vlm.generate_chat(
-            _ANTHROPIC_SYSTEM,
-            f"Answer briefly. If unsure, say you are not sure.\n\nQuestion: {question}",
-        )
+    kb_entries = search_knowledge(question)
+    # Glossary answers are a separately labeled deterministic feature. A
+    # policy-specific request must always go through document evidence checks.
+    if kb_entries and not document_first:
         return {
-            "source": "llm",
-            "answer": answer,
-            "knowledge_terms": [],
+            "source": "knowledge",
+            "answer": format_knowledge_answer(kb_entries),
+            "knowledge_terms": [entry.term for entry in kb_entries],
             "citations": [],
-            "confidence": 0.5,
+            "citation_origin": None,
+            "confidence": None,
             "abstain": False,
             "abstain_reason": None,
-            "backend": _backend_label(pipeline),
+            "abstain_reason_code": None,
+            "backend": "knowledge-base deterministic answer",
+            "configured_backend": _backend_label(pipeline),
+            "generation_used": False,
+            "answer_repaired": False,
             "retrieval_trace": [],
         }
 
-    # ── Path B: real hosted LLM available (Claude / OpenAI / HF) ──────────────
-    if vlm.is_real_llm():
-        # Retrieve document context
-        rag = pipeline.query_structured(question, data_folder, top_k=3)
-        ranked = rag.get("source_ranking", [])
-
-        # Build knowledge context
-        kb_section = ""
-        if kb_entries:
-            kb_section = (
-                "## Insurance Knowledge Base\n"
-                + format_knowledge_answer(kb_entries)
-                + "\n\n"
-            )
-
-        # Build document context
-        doc_section = ""
-        if ranked:
-            doc_lines = []
-            for p in ranked[:3]:
-                doc_lines.append(f"[{p['source']}]\n{p['text_snippet']}")
-            doc_section = "## Policy Document Excerpts\n" + "\n\n".join(doc_lines) + "\n\n"
-
-        context = (kb_section + doc_section).strip()
-        user_prompt = (
-            f"{context}\n\n## Question\n{question}"
-            if context
-            else question
-        )
-
-        answer = vlm.generate_chat(_ANTHROPIC_SYSTEM, user_prompt)
-
-        # Determine source label
-        if ranked and not rag.get("abstain") and document_first:
-            source = "document"
-        elif kb_entries and ranked and not rag.get("abstain"):
-            source = "combined"
-        elif kb_entries:
-            source = "knowledge"
-        elif ranked and not rag.get("abstain"):
-            source = "document"
-        else:
-            source = "knowledge"  # Claude answered from training knowledge
-
-        return {
-            "source": source,
-            "answer": answer,
-            "knowledge_terms": [] if document_first and ranked and not rag.get("abstain") else [e.term for e in kb_entries],
-            "citations": rag.get("citations", []) if not rag.get("abstain") else [],
-            "confidence": 1.0,
-            "abstain": False,
-            "abstain_reason": None,
-            "backend": _backend_label(pipeline),
-            "retrieval_trace": _retrieval_trace(rag),
-        }
-
-    # ── Path C: local-extractive fallback ─────────────────────────────────────
+    # Honor the selected answer model. Forcing extraction here would make an
+    # installed Qwen model appear active while never generating document answers.
     rag = pipeline.query_structured(question, data_folder, top_k=3)
-
-    has_kb = len(kb_entries) > 0
-    has_doc = not rag.get("abstain") and bool(rag.get("answer"))
-
-    if has_doc and document_first:
-        answer = rag["answer"]
-        source = "document"
-    elif has_kb and has_doc:
-        kb_text = format_knowledge_answer(kb_entries)
-        answer = f"{kb_text}\n\n**From your policy documents:**\n{rag['answer']}"
-        source = "combined"
-    elif has_kb:
-        answer = format_knowledge_answer(kb_entries)
-        source = "knowledge"
-    elif has_doc:
-        answer = rag["answer"]
-        source = "document"
-    elif rag.get("abstain"):
-        return {
-            "source": "abstain",
-            "answer": "",
-            "abstain_reason": (
-                "No matching evidence found. Try asking with 'What is…', 'What does…', "
-                "or 'Explain…' for insurance terms, or set ANTHROPIC_API_KEY for open-ended Q&A."
-            ),
-            "citations": [],
-            "confidence": 0.0,
-            "backend": _backend_label(pipeline),
-            "retrieval_trace": _retrieval_trace(rag),
-        }
-    else:
-        answer = (
-            "I couldn't find a specific answer. "
-            "For open-ended questions, set ANTHROPIC_API_KEY to enable Claude as the LLM backend. "
-            "For insurance terms, try: 'What is business insurance?' or 'Explain CI'."
-        )
-        source = "none"
-
+    abstain = bool(rag.get("abstain"))
+    answer = str(rag.get("answer") or "")
+    if not answer and not abstain:
+        abstain = True
     return {
-        "source": source,
-        "answer": answer,
-        "knowledge_terms": [] if source == "document" and document_first else [e.term for e in kb_entries],
-        "citations": rag.get("citations", []),
-        "confidence": rag.get("confidence", 1.0 if has_kb else 0.0),
-        "abstain": False,
-        "abstain_reason": None,
-        "backend": _backend_label(pipeline),
+        "source": "abstain" if abstain else "document",
+        "answer": "" if abstain else answer,
+        "knowledge_terms": [],
+        "citations": [] if abstain else rag.get("citations", []),
+        "citation_origin": None if abstain else rag.get("citation_origin"),
+        "confidence": rag.get("confidence", 0.0),
+        "abstain": abstain,
+        "abstain_reason": _abstention_message(rag.get("abstain_reason")) if abstain else None,
+        "abstain_reason_code": rag.get("abstain_reason") if abstain else None,
+        "backend": rag.get("answer_backend") or _backend_label(pipeline),
+        "configured_backend": _backend_label(pipeline),
+        "generation_used": bool(rag.get("generation_used", False)),
+        "answer_repaired": bool(rag.get("answer_repaired", False)),
+        "raw_answer": str(rag.get("raw_answer") or ""),
+        "backend_metadata": rag.get("backend_metadata", {}),
         "retrieval_trace": _retrieval_trace(rag),
     }
 
@@ -648,7 +560,7 @@ HTML = r"""<!doctype html>
         <div class="uz-hint">Click or drag &amp; drop</div>
         <input id="fileInput" type="file" accept=".pdf" />
       </div>
-      <div id="fileStatus" class="file-status">No file uploaded</div>
+      <div id="fileStatus" class="file-status">Checking active documents…</div>
     </div>
 
     <div class="sb-divider"></div>
@@ -669,7 +581,7 @@ HTML = r"""<!doctype html>
 
     <div class="sb-footer">
       <strong>InsureRAG-VLM</strong><br>
-      LLM: <strong id="backendLabel">detecting…</strong><br>
+      Document answer mode: <strong id="backendLabel">checking…</strong><br>
       Knowledge base: __KNOWLEDGE_BASE_SIZE__ terms
     </div>
   </aside>
@@ -680,7 +592,7 @@ HTML = r"""<!doctype html>
       <span class="topbar-logo">&#x1F6E1;</span>
       <div>
         <div class="topbar-title">InsureRAG-VLM Policy Assistant</div>
-        <div class="topbar-sub">Insurance knowledge + document Q&amp;A</div>
+        <div class="topbar-sub">Research prototype · glossary + cited document Q&amp;A</div>
       </div>
       <span class="topbar-badge" id="topBadge">Ready</span>
     </div>
@@ -690,7 +602,7 @@ HTML = r"""<!doctype html>
       <div class="welcome-logo">&#x1F6E1;</div>
       <div class="welcome-title">InsureRAG-VLM Policy Assistant</div>
       <div class="welcome-sub">
-        Ask about insurance industry terms and acronyms, or query your uploaded policy documents — all in one place.
+        Explore insurance terms or ask about policy documents. Check the cited evidence; this research prototype can make mistakes.
       </div>
       <div class="suggest-grid">
         <button class="suggest-card" data-q="What does PI stand for in insurance?">
@@ -734,8 +646,12 @@ HTML = r"""<!doctype html>
     const r = await fetch('/api/backend');
     const d = await r.json();
     const el = document.getElementById('backendLabel');
-    if (el) el.textContent = d.backend;
-  } catch {}
+    if (el) el.textContent = r.ok ? d.backend : (d.error || 'unavailable');
+    if (d.corpus) showCorpusStatus(d.corpus);
+  } catch {
+    const el = document.getElementById('backendLabel');
+    if (el) el.textContent = 'status unavailable';
+  }
 })();
 
 /* ── refs ── */
@@ -750,6 +666,19 @@ const topBadge      = document.getElementById('topBadge');
 
 /* ── state ── */
 let busy = false;
+
+function showCorpusStatus(corpus) {
+  const el = document.getElementById('fileStatus');
+  if (!el || !corpus) return;
+  el.textContent = 'Documents: ' + corpus.label;
+  const ingestion = corpus.ingestion;
+  if (ingestion && ingestion.total_pages) {
+    el.textContent += ' · text pages ' + ingestion.readable_pages + '/' + ingestion.total_pages;
+    if (ingestion.unreadable_pages) el.textContent += ' · ' + ingestion.unreadable_pages + ' unreadable page(s) excluded; OCR required';
+    else if (ingestion.blank_pages) el.textContent += ' · blank pages skipped';
+  }
+  el.className = 'file-status' + (corpus.mode === 'uploaded' ? ' ok' : '');
+}
 
 /* ── auto-resize textarea ── */
 inputBox.addEventListener('input', () => {
@@ -799,8 +728,7 @@ fileInput.addEventListener('change', async () => {
     const res  = await fetch('/api/upload', { method: 'POST', body });
     const data = await res.json();
     if (data.ok) {
-      fileStatus.textContent = '● ' + data.filename + ' ready for Q&A';
-      fileStatus.className = 'file-status ok';
+      showCorpusStatus(data.corpus);
     } else {
       fileStatus.textContent = data.error || 'Upload failed.';
       fileStatus.className = 'file-status err';
@@ -818,7 +746,7 @@ function escHtml(s) {
 
 function mdToHtml(text) {
   // bold **...**
-  let s = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  let s = escHtml(String(text ?? '')).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   // code `...`
   s = s.replace(/`(.+?)`/g, '<code>$1</code>');
   // diff separator ---
@@ -879,17 +807,37 @@ function appendRow(role, html, meta) {
       badge.innerHTML = label;
       metaRow.appendChild(badge);
 
-      /* confidence bar */
+      /* This retrieval score is a heuristic, not calibrated correctness. */
       if (meta.confidence != null && meta.confidence > 0 && meta.source !== 'knowledge') {
         const cw = document.createElement('div');
         cw.className = 'conf-wrap';
-        const pct = Math.round(meta.confidence * 100);
-        cw.innerHTML = `<span class="conf-label">Confidence</span>
-          <div class="conf-bar"><div class="conf-fill" style="width:${pct}%"></div></div>
-          <span class="conf-pct">${pct}%</span>`;
+        cw.textContent = 'Evidence score: ' + Number(meta.confidence).toFixed(2) + ' (heuristic)';
         metaRow.appendChild(cw);
       }
       bubble.appendChild(metaRow);
+    }
+
+    if (meta.backend) {
+      const backend = document.createElement('div');
+      backend.className = 'conf-label';
+      backend.textContent = 'Answer source: ' + meta.backend;
+      if (meta.answer_repaired) backend.textContent += ' · answer shortened or replaced after evidence checks';
+      if (meta.citation_origin === 'evidence_selection') backend.textContent += ' · citation selected from retrieved evidence';
+      if (meta.citation_origin === 'model_source') backend.textContent += ' · citation supplied by model';
+      bubble.appendChild(backend);
+    }
+
+    if (meta.generation_used && meta.raw_answer) {
+      const det = document.createElement('details');
+      det.className = 'trace';
+      const sum = document.createElement('summary');
+      sum.textContent = 'Original model output (unvalidated)';
+      const body = document.createElement('div');
+      body.className = 'trace-body';
+      body.style.whiteSpace = 'pre-wrap';
+      body.textContent = meta.raw_answer;
+      det.appendChild(sum); det.appendChild(body);
+      bubble.appendChild(det);
     }
 
     /* citations */
@@ -909,13 +857,14 @@ function appendRow(role, html, meta) {
         thumb.className = 'citation-thumb';
         thumb.loading = 'lazy';
         thumb.alt = 'Cited PDF page preview';
-        thumb.src = '/api/page-image?source=' + encodeURIComponent(c.source || '');
+        if (c.preview_url) thumb.src = c.preview_url;
         thumb.onerror = () => { thumb.remove(); preview.style.gridTemplateColumns = '1fr'; };
         const evidence = document.createElement('div');
         evidence.className = 'citation-evidence';
         const snippet = escHtml(c.evidence_text || 'Retrieved cited page.');
         evidence.innerHTML = '<mark>' + snippet + '</mark>';
-        preview.appendChild(thumb);
+        if (c.preview_url) preview.appendChild(thumb);
+        else preview.style.gridTemplateColumns = '1fr';
         preview.appendChild(evidence);
         body.appendChild(preview);
         det.appendChild(sum); det.appendChild(body);
@@ -1006,6 +955,7 @@ async function send() {
     if (isDiff) {
       const res  = await fetch('/api/diff');
       const data = await res.json();
+      if (!res.ok) throw new Error(data.error || data.summary || 'Document comparison failed.');
       typingRow.remove();
 
       let diffItems = [];
@@ -1030,18 +980,25 @@ async function send() {
     } else {
       const res  = await fetch('/api/chat?q=' + encodeURIComponent(q));
       const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'The selected answer backend failed.');
       typingRow.remove();
 
       if (data.abstain) {
         appendRow('assistant',
           escHtml(data.abstain_reason || 'Insufficient evidence in the retrieved documents.'),
-          { source: 'abstain', retrieval_trace: data.retrieval_trace }
+          { source: 'abstain', backend: data.backend, retrieval_trace: data.retrieval_trace,
+            generation_used: data.generation_used, raw_answer: data.raw_answer }
         );
       } else {
         appendRow('assistant', mdToHtml(data.answer), {
           source:     data.source,
           citations:  data.citations,
           confidence: data.confidence,
+          backend: data.backend,
+          answer_repaired: data.answer_repaired,
+          citation_origin: data.citation_origin,
+          generation_used: data.generation_used,
+          raw_answer: data.raw_answer,
           retrieval_trace: data.retrieval_trace,
         });
       }
@@ -1077,11 +1034,33 @@ class DemoHandler(BaseHTTPRequestHandler):
     _pipeline: DocumentRetrievalPipeline | None = None
     _data_folder: Path = DATA_FOLDER
     _index_dir: Path = INDEX_DIR
+    _state_lock = threading.RLock()
+    _preview_bindings: dict[str, dict] = {}
+
+    @classmethod
+    def corpus_status(cls) -> dict:
+        folder = cls._data_folder.resolve()
+        if _is_relative_to(folder, UPLOAD_DIR.parent.resolve()):
+            filenames = sorted(path.name for path in folder.rglob("*.pdf")) if folder.exists() else []
+            return {"mode": "uploaded", "label": ", ".join(filenames) or "Uploaded documents", "filenames": filenames,
+                    "ingestion": getattr(cls._pipeline, "ingestion_report", {})}
+        if folder == DATA_FOLDER.resolve():
+            return {"mode": "public_reference", "label": "Public reference guides", "filenames": []}
+        filenames = sorted(path.name for path in folder.rglob("*.pdf")) if folder.exists() else []
+        return {"mode": "indexed", "label": ", ".join(filenames) or "Indexed reference documents", "filenames": filenames}
 
     @classmethod
     def pipeline(cls) -> DocumentRetrievalPipeline:
         if cls._pipeline is None:
-            config = ModelConfig(index_dir=cls._index_dir)
+            # The demo's public references are an explicit bundled snapshot
+            # when the optional original PDFs are not present. Other folders
+            # retain auto's strict "use this folder" behavior.
+            public_snapshot = cls._data_folder.resolve() == DATA_FOLDER.resolve() and not cls._data_folder.is_dir()
+            config = ModelConfig(
+                index_dir=cls._index_dir,
+                corpus_source="curated" if public_snapshot else "auto",
+                curated_dataset_dir=PROJECT_ROOT / "data" / "04_curated",
+            )
             pipeline = DocumentRetrievalPipeline(config)
             if not config.index_path.exists() or not config.metadata_path.exists():
                 pipeline.build_index(cls._data_folder)
@@ -1089,13 +1068,47 @@ class DemoHandler(BaseHTTPRequestHandler):
         return cls._pipeline
 
     @classmethod
-    def use_uploaded_folder(cls, data_folder: Path, index_dir: Path) -> None:
-        config = ModelConfig(index_dir=index_dir)
+    def use_uploaded_folder(cls, data_folder: Path, index_dir: Path, required_document: str | None = None) -> None:
+        config = ModelConfig(index_dir=index_dir, corpus_source="documents", pdf_render_dir=index_dir / "rendered_pages")
         pipeline = DocumentRetrievalPipeline(config)
         pipeline.build_index(data_folder)
-        cls._data_folder = data_folder
-        cls._index_dir = index_dir
-        cls._pipeline = pipeline
+        if required_document:
+            uploaded_pages = [row for row in pipeline.ingestion_report.get("pages", [])
+                              if row["source"] == required_document or row["source"].startswith(required_document + "#page=")]
+            if not any(row["text_characters"] for row in uploaded_pages):
+                details = next((row["warning"] for row in uploaded_pages if row.get("warning")), "Upload a searchable PDF.")
+                raise DocumentTextUnavailableError(f"No readable text was found in {required_document}. {details} This upload was not activated.")
+        with cls._state_lock:
+            cls._data_folder = data_folder
+            cls._index_dir = index_dir
+            cls._pipeline = pipeline
+
+    @classmethod
+    def activate_upload(cls, filename: str, content: bytes) -> None:
+        """Build an unpublished candidate; activate it only after success.
+
+        Successful directories keep their stable paths so index provenance and
+        rendered-page references remain valid. A failed candidate is discarded.
+        """
+        sessions_root = (UPLOAD_DIR.parent / "sessions").resolve()
+        sessions_root.mkdir(parents=True, exist_ok=True)
+        candidate_root = Path(tempfile.mkdtemp(prefix="candidate-", dir=sessions_root)).resolve()
+        candidate_docs = candidate_root / "documents"
+        try:
+            with cls._state_lock:
+                active_folder = cls._data_folder.resolve()
+                if active_folder.is_dir() and _is_relative_to(active_folder, UPLOAD_DIR.parent.resolve()):
+                    shutil.copytree(active_folder, candidate_docs)
+                else:
+                    candidate_docs.mkdir()
+                (candidate_docs / filename).write_bytes(content)
+                cls.use_uploaded_folder(candidate_docs, candidate_root / "index", required_document=filename)
+        except Exception:
+            # Both paths are created locally above; never delete an active or
+            # user-selected folder while rolling back a failed upload.
+            if candidate_root.parent == sessions_root and candidate_root.name.startswith("candidate-"):
+                shutil.rmtree(candidate_root)
+            raise
 
     def _send(self, status: int, body: bytes, content_type: str) -> None:
         self.send_response(status)
@@ -1105,6 +1118,15 @@ class DemoHandler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def do_GET(self) -> None:
+        try:
+            self._handle_get()
+        except (BackendConfigurationError, BackendUnavailableError, EmbeddingBackendError) as exc:
+            self._send_json({"source": "error", "error": str(exc), "fallback_used": False}, status=503)
+        except Exception:
+            LOGGER.exception("Demo request failed")
+            self._send_json({"source": "error", "error": "The request failed. Check the server logs."}, status=500)
+
+    def _handle_get(self) -> None:
         parsed = urlparse(self.path)
 
         if parsed.path == "/":
@@ -1112,8 +1134,14 @@ class DemoHandler(BaseHTTPRequestHandler):
             return
 
         if parsed.path == "/api/backend":
-            label = _backend_label(self.pipeline())
-            self._send(200, json.dumps({"backend": label}).encode(), "application/json; charset=utf-8")
+            pipeline = self.pipeline()
+            self._send_json({
+                "backend": _backend_label(pipeline),
+                "status": "configured",
+                "answer_model": pipeline.vlm_client.backend_metadata(),
+                "embedding_model": pipeline.retriever.backend_metadata(),
+                "corpus": self.corpus_status(),
+            })
             return
 
         if parsed.path == "/api/chat":
@@ -1121,9 +1149,12 @@ class DemoHandler(BaseHTTPRequestHandler):
             if not question:
                 self._send_json({"error": "Missing question parameter q"}, status=400)
                 return
-            result = build_chat_response(question, self.pipeline(), self._data_folder)
+            with self._state_lock:
+                pipeline, data_folder = self.pipeline(), self._data_folder
+            result = build_chat_response(question, pipeline, data_folder)
+            self._bind_citation_previews(result, data_folder)
             if result.get("source") == "diff":
-                pair = _first_two_pdfs(self._data_folder)
+                pair = _first_two_pdfs(data_folder)
                 if pair is None:
                     self._send_json(
                         {
@@ -1142,8 +1173,11 @@ class DemoHandler(BaseHTTPRequestHandler):
             return
 
         if parsed.path == "/api/page-image":
-            source = parse_qs(parsed.query).get("source", [""])[0].strip()
-            page_image = self._render_source_page_image(source)
+            token = parse_qs(parsed.query).get("token", [""])[0].strip()
+            if not token:
+                self._send(400, b"A citation-bound preview token is required", "text/plain")
+                return
+            page_image = self._render_bound_page_image(token)
             if page_image and page_image.exists():
                 image_bytes = page_image.read_bytes()
                 self._send(200, image_bytes, "image/png")
@@ -1192,11 +1226,10 @@ class DemoHandler(BaseHTTPRequestHandler):
             if Path(safe_name).suffix.lower() != ".pdf":
                 self._send_json({"ok": False, "error": "Please upload a PDF file."}, status=400)
                 return
-            UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
-            upload_path = UPLOAD_DIR / safe_name
-            upload_path.write_bytes(content)
-            self.use_uploaded_folder(UPLOAD_DIR, UPLOAD_INDEX_DIR)
-            self._send_json({"ok": True, "filename": safe_name})
+            self.activate_upload(safe_name, content)
+            self._send_json({"ok": True, "filename": safe_name, "corpus": self.corpus_status()})
+        except DocumentTextUnavailableError as exc:
+            self._send_json({"ok": False, "error": str(exc), "active_documents_unchanged": True}, status=422)
         except Exception as exc:
             self._send_json({"ok": False, "error": str(exc)}, status=500)
 
@@ -1204,21 +1237,68 @@ class DemoHandler(BaseHTTPRequestHandler):
         self._send(status, json.dumps(payload, ensure_ascii=False).encode(), "application/json; charset=utf-8")
 
     @classmethod
-    def _render_source_page_image(cls, source: str) -> Path | None:
-        pdf_path, page_number = cls._resolve_source_pdf(source)
-        if pdf_path is None:
+    def _preview_safe_roots(cls) -> list[Path]:
+        return [(PROJECT_ROOT / "data").resolve(), UPLOAD_DIR.parent.resolve()]
+
+    @classmethod
+    def _bind_citation_previews(cls, result: dict, data_folder: Path) -> None:
+        """Bind each citation to the answer's snapshot, never the next upload.
+
+        Tokens live only for this local server session. Retained upload folders
+        supply old snapshots; missing or modified files fail closed at rendering.
+        """
+        for citation in result.get("citations", []):
+            citation["preview_url"] = None
+            citation["preview_sha256"] = None
+            pdf_path, page_number = cls._resolve_source_pdf(str(citation.get("source") or ""), data_folder)
+            if pdf_path is None:
+                continue
+            try:
+                digest = hashlib.sha256(pdf_path.read_bytes()).hexdigest()
+            except OSError:
+                continue
+            token = secrets.token_hex(24)
+            with cls._state_lock:
+                # Subclass handlers used by isolated local servers do not share
+                # their preview registry with another server's handler class.
+                if "_preview_bindings" not in cls.__dict__:
+                    cls._preview_bindings = {}
+                cls._preview_bindings[token] = {
+                    "path": str(pdf_path), "root": str(Path(data_folder).resolve()),
+                    "sha256": digest, "page_number": page_number,
+                }
+            citation["preview_url"] = f"/api/page-image?token={token}"
+            citation["preview_sha256"] = digest
+
+    @classmethod
+    def _render_bound_page_image(cls, token: str) -> Path | None:
+        if not re.fullmatch(r"[0-9a-f]{48}", token):
             return None
-        PAGE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
-        cache_key = hashlib.sha1(
-            f"{pdf_path.resolve()}:{pdf_path.stat().st_mtime_ns}:{page_number}".encode("utf-8")
-        ).hexdigest()[:16]
-        output_path = PAGE_CACHE_DIR / f"{cache_key}_p{page_number:04d}.png"
-        if output_path.exists():
-            return output_path
+        with cls._state_lock:
+            binding = cls.__dict__.get("_preview_bindings", {}).get(token)
+            binding = dict(binding) if binding else None
+        if not binding:
+            return None
         try:
             import fitz
-
-            with fitz.open(pdf_path) as document:
+            root = Path(binding["root"]).resolve()
+            pdf_path = Path(binding["path"]).resolve()
+            if (pdf_path.suffix.lower() != ".pdf"
+                    or not _is_relative_to(pdf_path, root)
+                    or not any(_is_relative_to(root, safe_root) for safe_root in cls._preview_safe_roots())):
+                return None
+            # Render the same bytes that were checked, avoiding a file reread
+            # between validation and rendering. Validate even on cache hits.
+            pdf_bytes = pdf_path.read_bytes()
+            digest = hashlib.sha256(pdf_bytes).hexdigest()
+            if digest != binding["sha256"]:
+                return None
+            page_number = int(binding["page_number"])
+            PAGE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+            output_path = PAGE_CACHE_DIR / f"{digest}_p{page_number:04d}_v1.png"
+            if output_path.exists():
+                return output_path
+            with fitz.open(stream=pdf_bytes, filetype="pdf") as document:
                 if page_number < 1 or page_number > len(document):
                     return None
                 pix = document[page_number - 1].get_pixmap(dpi=92, annots=False)
@@ -1228,15 +1308,19 @@ class DemoHandler(BaseHTTPRequestHandler):
             return None
 
     @classmethod
-    def _resolve_source_pdf(cls, source: str) -> tuple[Path | None, int]:
+    def _resolve_source_pdf(cls, source: str, data_folder: Path | None = None) -> tuple[Path | None, int]:
         if not source:
             return None, 1
         doc_ref, page_number = source, 1
         if "#page=" in source:
             doc_ref, page_blob = source.split("#page=", 1)
-            match = re.search(r"\d+", page_blob)
-            page_number = int(match.group(0)) if match else 1
+            if not re.fullmatch(r"[1-9]\d*", page_blob):
+                return None, 1
+            page_number = int(page_blob)
 
+        root = Path(data_folder if data_folder is not None else cls._data_folder).resolve()
+        if not any(_is_relative_to(root, safe_root) for safe_root in cls._preview_safe_roots()):
+            return None, page_number
         candidate_ref = Path(doc_ref)
         candidates: list[Path] = []
         if candidate_ref.is_absolute():
@@ -1244,23 +1328,22 @@ class DemoHandler(BaseHTTPRequestHandler):
         else:
             candidates.extend(
                 [
-                    cls._data_folder / candidate_ref,
-                    UPLOAD_DIR / candidate_ref.name,
-                    DATA_FOLDER / candidate_ref,
+                    root / candidate_ref,
                     PROJECT_ROOT / candidate_ref,
                 ]
             )
-            for root in [cls._data_folder, UPLOAD_DIR, DATA_FOLDER]:
-                if root.exists():
-                    candidates.extend(root.rglob(candidate_ref.name))
+            if root.exists() and str(candidate_ref) == candidate_ref.name:
+                candidates.extend(root.rglob(candidate_ref.name))
 
-        safe_roots = [PROJECT_ROOT / "data", PROJECT_ROOT / "reports" / "demo_uploads"]
+        matches: set[Path] = set()
         for candidate in candidates:
-            if candidate.suffix.lower() != ".pdf" or not candidate.exists():
+            if candidate.suffix.lower() != ".pdf" or not candidate.is_file():
                 continue
             resolved = candidate.resolve()
-            if any(_is_relative_to(resolved, root.resolve()) for root in safe_roots if root.exists()):
-                return resolved, page_number
+            if _is_relative_to(resolved, root):
+                matches.add(resolved)
+        if len(matches) == 1:
+            return matches.pop(), page_number
         return None, page_number
 
     @staticmethod

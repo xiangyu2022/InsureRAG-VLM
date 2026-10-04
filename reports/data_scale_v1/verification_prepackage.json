@@ -1,0 +1,9 @@
+{
+  "full_tests_passed": 250,
+  "full_subtests_passed": 52,
+  "minimal_tests_passed": 247,
+  "minimal_skips_optional_dependencies": 3,
+  "minimal_subtests_passed": 52,
+  "diff_check_passed": true,
+  "fixture_integrity_checked": true
+}

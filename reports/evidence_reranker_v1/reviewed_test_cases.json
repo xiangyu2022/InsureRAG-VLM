@@ -1,0 +1,573 @@
+{
+  "created_utc": "2026-10-03T05:55:22.578753+00:00",
+  "reviewer": "assistant",
+  "expert_review_completed": 0,
+  "illustrative_selection_not_a_random_sample": true,
+  "used_for_retraining_or_reselection": false,
+  "cases": [
+    {
+      "cohort": "insuranceqa",
+      "id": "iqa_v2_test_00035",
+      "question": "What Basics Do I Need To Know About Disability Insurance?",
+      "source_group": null,
+      "upstream_id": null,
+      "focus_metric": "hit_at_1",
+      "transition": "gain",
+      "gold_answers": [
+        {
+          "id": "26351",
+          "text": "The #1 thing you need to know about disability insurance is that it is paycheck protection in times of prolonged sickness and injury. You need to select an elimination period. Most Americans have 90 days in cash reserves, so a 90 day elimination period is a consideration. When claims are filled and the elimination period satisfied, the benefits are paid tax free.",
+          "selected_rank": 1,
+          "previous_rank": 2
+        }
+      ],
+      "previous_top5": [
+        {
+          "id": "13948",
+          "text": "The basics to qualify for disability insurance are to have good health, free from illness or injury and to be gainfully employed and working at least 30 hours per week. There are a few details certainly like income level, years of employment and life style questions, but basically these are the qualifying questions."
+        },
+        {
+          "id": "26351",
+          "text": "The #1 thing you need to know about disability insurance is that it is paycheck protection in times of prolonged sickness and injury. You need to select an elimination period. Most Americans have 90 days in cash reserves, so a 90 day elimination period is a consideration. When claims are filled and the elimination period satisfied, the benefits are paid tax free."
+        },
+        {
+          "id": "5447",
+          "text": "There are just too many factors to answer that question. First you must determine the type of disability plan you need either short term or long term. Then you must select a benefit amount, benefit period and elimination period. Once you have that information, the insurance company underwriter will need the following information, your age, build, health status, life style, occupation, job duties, income, length of employment, and net worth. I recommend using an experienced disability broker to walk you through this maze of information to be sure you purchase the right plan and the best price for your unique situation."
+        },
+        {
+          "id": "13474",
+          "text": "You need disability insurance as \"paycheck protection\". You should look at your current monthly budget and determine what needs to be covered if you were to lose your paycheck due to an accident or illness. 1 in 4 20 year olds will go on disability before they retire from work. You should look at the your expenses and determine what is the net amount of income that I could get by on. Many people have disability insurance through their employeer. You have to be careful because this policy is usually paid \"pretex\" and is taxed upon your drawing income. You need to check your employeers policy to determine what your benefits are for disability. Business Owners can get a disability policy to pay for their business income. What would happen to your business if you could not do what you do daily to generate income. Would you need to hire somebody? You can get a policy to cover this. Would your business stop working and revenue dries up? You may be able to cover this. You need to work with an independent agent to compare the rates and benefits of multiple companies as they treat each situation different. An example would be a Physician who might be offered more income during their disability with a particular company. You would need to check to see if you receive benefits if you cannot work your current profession versus working at anything. All paychecks need protection. You should have your evaluated and deceide how you would do if you became disabled."
+        },
+        {
+          "id": "9796",
+          "text": "First understand there are two basic types of disability insurance. The first is a short term disability plan. These benefits are usually a fixed amount not to exceed 70% of your current income and can start paying almost immediately. These short term plans can pay daily, weekly or monthly but for a shorter period of time usually a few months to up to one year. The second type of disability is long term disability plans. These benefits have a longer elimination period usually 30-60-90-180-360 days before benefits commence but will pay for years or up to age 67 years old. Most long term plans will pay up to 70% of your current income at time of claim."
+        }
+      ],
+      "selected_top5": [
+        {
+          "id": "26351",
+          "text": "The #1 thing you need to know about disability insurance is that it is paycheck protection in times of prolonged sickness and injury. You need to select an elimination period. Most Americans have 90 days in cash reserves, so a 90 day elimination period is a consideration. When claims are filled and the elimination period satisfied, the benefits are paid tax free."
+        },
+        {
+          "id": "13948",
+          "text": "The basics to qualify for disability insurance are to have good health, free from illness or injury and to be gainfully employed and working at least 30 hours per week. There are a few details certainly like income level, years of employment and life style questions, but basically these are the qualifying questions."
+        },
+        {
+          "id": "5447",
+          "text": "There are just too many factors to answer that question. First you must determine the type of disability plan you need either short term or long term. Then you must select a benefit amount, benefit period and elimination period. Once you have that information, the insurance company underwriter will need the following information, your age, build, health status, life style, occupation, job duties, income, length of employment, and net worth. I recommend using an experienced disability broker to walk you through this maze of information to be sure you purchase the right plan and the best price for your unique situation."
+        },
+        {
+          "id": "20483",
+          "text": "There's many companies that offer disability insurance such as Guardian, MetLife, Assurity, Standard, Principal, just to name a few. The DEFINITION OF DISABILITY is the single most important factor when determining which disability insurance policy to apply for. Each policy will use 1 of the 3 definitions: 1) True Own Occupation - this says you are considered totally disabled if, solely due to injury or sickness, you are not able to perform the material and substantial duties of your occupation, even if you are at work in another occupation. In short, this is the most favorable definition you can have. 2) Modified Own Occupation - this says that you are considered totally disabled if, solely due to injury or sickness, you are not able to perform the material and substantial duties of your occupation. This one is commonly seen in many individual disability insurance policies. 3) Gainful Occupation - this says if you are unable to perform the duties of your occupation or any occupation for which you are qualified for by education, training, or experience due to sickness or injury. In short, this is the least favorable definition. This one is commonly seen in group disability insurance policies through an employer and property and casualty insurers that offer disability coverage. If you have disability insurance with the gainful occupation definition, I would suggest replacing it immediately or at the very least supplement it with a policy that features a stronger definition (I would highly recommend one with the true own occupation definition). If you're going to buy/have disability insurance, it's not something you want to be cheap about. There are many moving parts to disability insurance and is not something I would suggest trying to buy on your own - this is a type of coverage you should consult with an experienced independent disability insurance broker about. Factors such as your occupation class, your income level, the state you live in, your medical history, your age, your desired benefit amount and benefit period, if you want cost of living adjustment riders, and other factors all impact your policy's structure and premiums. In short, they're very customizable, I hope the information is helpful - please feel free to contact me for help and if you have any other questions. Thanks very much."
+        },
+        {
+          "id": "9796",
+          "text": "First understand there are two basic types of disability insurance. The first is a short term disability plan. These benefits are usually a fixed amount not to exceed 70% of your current income and can start paying almost immediately. These short term plans can pay daily, weekly or monthly but for a shorter period of time usually a few months to up to one year. The second type of disability is long term disability plans. These benefits have a longer elimination period usually 30-60-90-180-360 days before benefits commence but will pay for years or up to age 67 years old. Most long term plans will pay up to 70% of your current income at time of claim."
+        }
+      ],
+      "previous_metrics": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 1.0
+      },
+      "selected_metrics": {
+        "hit_at_1": 1.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 1.0
+      },
+      "expert_adjudicated": false,
+      "used_for_training_or_reselection": false,
+      "review_title_zh": "意图匹配改善",
+      "assistant_observation_zh": "问题询问失能保险的基础知识；旧首条偏向投保资格，新首条转向保障作用和等待期。这是与原始标注意图更接近，不构成对原文保险或税务说法的当前事实核验。"
+    },
+    {
+      "cohort": "insuranceqa",
+      "id": "iqa_v2_test_00432",
+      "question": "How does a claim work when a driver hits a person in a parking lot walking?",
+      "source_group": null,
+      "upstream_id": null,
+      "focus_metric": "hit_at_1",
+      "transition": "loss",
+      "gold_answers": [
+        {
+          "id": "7026",
+          "text": "The injury, if any, caused by the driver of the car to the pedestrian would be covered under the Bodily Injury Liability portion of your auto policy. This is the portion that protects you for any neglegent action for which you are held legally responsible while you are drving your car.",
+          "selected_rank": 2,
+          "previous_rank": 1
+        }
+      ],
+      "previous_top5": [
+        {
+          "id": "7026",
+          "text": "The injury, if any, caused by the driver of the car to the pedestrian would be covered under the Bodily Injury Liability portion of your auto policy. This is the portion that protects you for any neglegent action for which you are held legally responsible while you are drving your car."
+        },
+        {
+          "id": "7768",
+          "text": "While this isnt a legal corner you can probably approach this in one of two ways. You can file a claim with your insurance carrier, particularly if you have comprehensive and collision coverage. They will settle your claim and then pursue the other party. The other way would be to hire an attorney and file a lawsuit. Perhaps it could be handled in small claims but being without insurance doesnt absolve the other driver from responsibility."
+        },
+        {
+          "id": "19522",
+          "text": "As the result of a recent accident where a driver hit a pedestrian in the cross walk, a settlement of approximately $750,000 was reached. If you can afford to pay that sort of claim from your existing assets and can do so without any damage to your economic condition, then you dont need any insurance above what is mandated by state law. If not, consider the highest limits that your company will provide."
+        },
+        {
+          "id": "20593",
+          "text": "Police may not respond to an accident. They avoid accidents in parking lots (the scene of many accidents.) With the proliferation of smart phones, a detail evaluation of a claim can be made by submitting photos of the damage to your car, and any other cars, people or objects. Auto theft is a crime and must be reported to the police."
+        },
+        {
+          "id": "21682",
+          "text": "Honestly, this one sounds like it is going to be well investigated. It semms as if you were saying that the driver who was cut off swerved into the lane you already occupied. If that account can be substantiated, then it may be that the other driver might be at least partially liable. The best thing to do is to talk to your Insurance Professional about the terms and conditions of your policy. Further, let the Claims Professionals who are trained to investigate these matters complete their task."
+        }
+      ],
+      "selected_top5": [
+        {
+          "id": "7768",
+          "text": "While this isnt a legal corner you can probably approach this in one of two ways. You can file a claim with your insurance carrier, particularly if you have comprehensive and collision coverage. They will settle your claim and then pursue the other party. The other way would be to hire an attorney and file a lawsuit. Perhaps it could be handled in small claims but being without insurance doesnt absolve the other driver from responsibility."
+        },
+        {
+          "id": "7026",
+          "text": "The injury, if any, caused by the driver of the car to the pedestrian would be covered under the Bodily Injury Liability portion of your auto policy. This is the portion that protects you for any neglegent action for which you are held legally responsible while you are drving your car."
+        },
+        {
+          "id": "21682",
+          "text": "Honestly, this one sounds like it is going to be well investigated. It semms as if you were saying that the driver who was cut off swerved into the lane you already occupied. If that account can be substantiated, then it may be that the other driver might be at least partially liable. The best thing to do is to talk to your Insurance Professional about the terms and conditions of your policy. Further, let the Claims Professionals who are trained to investigate these matters complete their task."
+        },
+        {
+          "id": "23280",
+          "text": "An auto insurance company wants to close every open claim. To close a claim they must collect all the pertinent information. What may appear to be an open and shut case might be complicated. One common problem is that the driver whose car strikes yours acknowledges responsibility at the scene of an accident then later decides that it was your fault. This can slow down proceedings considerably. You have access to the adjuster and your agent. You should be able to move the claim along unless it is stalled by something outside your control."
+        },
+        {
+          "id": "157",
+          "text": "Actually, though the local police might prepare an accident report for you, in many cases, because the incident occured on private property, it is more likely that they would take no action at all. Therefore, if it is possible, it becomes more important to exchange information with the other party involved. I would also recommend that neither car be moved and that you take photos for your records and that of your Insurance Company to help in the processing of the claim."
+        }
+      ],
+      "previous_metrics": {
+        "hit_at_1": 1.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 1.0
+      },
+      "selected_metrics": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 1.0
+      },
+      "expert_adjudicated": false,
+      "used_for_training_or_reselection": false,
+      "review_title_zh": "受损对象与险种情境错配",
+      "assistant_observation_zh": "问题场景是汽车撞到行人。原标注指向人身伤害责任，新首条转向泛化车险报案及车辆损失文本；标注答案降至第 2。主题相近仍可能遗漏受损对象这一关键条件。"
+    },
+    {
+      "cohort": "insuranceqa",
+      "id": "iqa_v2_test_00262",
+      "question": "Can You Drop A Dependent From My Health Insurance?",
+      "source_group": null,
+      "upstream_id": null,
+      "focus_metric": "hit_at_1",
+      "transition": "loss",
+      "gold_answers": [
+        {
+          "id": "21613",
+          "text": "You can easily drop a dependent from your exiting policy by contacting the carrier and requesting they come off. You should however have a back up plan to keep the dependent insured without a gap in coverage. With different family dynamics, it's common to drop one child off of a plan for various reasons.",
+          "selected_rank": 2,
+          "previous_rank": 1
+        }
+      ],
+      "previous_top5": [
+        {
+          "id": "21613",
+          "text": "You can easily drop a dependent from your exiting policy by contacting the carrier and requesting they come off. You should however have a back up plan to keep the dependent insured without a gap in coverage. With different family dynamics, it's common to drop one child off of a plan for various reasons."
+        },
+        {
+          "id": "10382",
+          "text": "Dependent children are eligible to be covered under their parent's health insurance plan up to age 26. Regarding dropping a dependent from your health insurance coverage, itwill depend upon whether you have an individual health insurance policy or whether you are covered under a group health insurance policy that includes a Section 125 plan. If you have an individual policy then it should be a simple matter of contacting your agent or the health insurance carrier and notifying them of your intention to drop the dependent child from your coverage. It is most likely that you will need to complete and sign a termination request form so that all the legalities associated with terminating a person's coverage are complied with. If you are covering your dependent under your group health insurance coverage through your employer and they have a Section 125 plan in place your situation will be more complicated. If you don't know what a Section 125 plan is, if you are paying any portion of your health insurance premium and it is being taken out of your paycheck on a pre-tax basis then you are almost certainly subject to a Section 125 plan. Check with your HR person, the business owner or their insurance broker to get a definitive answer to this issue. Under IRS regulations because you are enjoying the advantages of pre-tax treatment for your share of your health insurance costs this advantage comes with some strings attached regarding the employee's ability to change their coverage outside of the group's normal open enrollment period. Essentially you have to have what is called a \"Change of Life Status Event\" to change your coverage status outside of open enrollment time. These are specific events such as marriage, divorce, adoption, losing coverage that you had elsewhere and a few other circumstances. Just getting mad at your 23 year old son who won't get off the couch and plays X-Box all day (while certainly a problem) does not meet the criteria of a change of life status event and you would not be able to drop them from your coverage until your group's next open enrollment."
+        },
+        {
+          "id": "18620",
+          "text": "Yes and No. If you are on a group health plan and you are paying a portion of your health insurance costs on a pre-tax basis under your employer's Section 125 plan then changes to your coverage status outside of the annual open enrollment period are confined to IRS defined \"change of life status events\". Examples are marriage, divorce, loss of coverage from a previous job, gaining coverage through a new job, having a child or adopting one. Just because you and the husband had a fight or the family budget has gotten tight doesn't qualify. If you are covered through an individual health insurance policy it is easier to drop a dependent from your coverage throughout the year. However, with the new open enrollment requirements of ObamaCare you are running the risk of leaving your husband uninsured and unable to purchase major medical coverage until the next open enrollment period. In addition, you could be creating a tax penalty liability depending upon how long of a period of time you would be leaving your husband uninsured during the year."
+        },
+        {
+          "id": "23071",
+          "text": "That will depend upon what type of health insurance you have and what your coverage status is. I will presume that you are a young person who has taken advantage of the changing age definition for dependent coverage under the Affordable Care Act (ObamaCare) that allows dependent children to stay on their parent's health insurance until they turn 26. In that case, once you turn 26 you are no longer eligible to be covered as a dependent under your parent's policy. This means you will have to take out health insurance coverage if it is available through your place of employment, purchase your own individual health insurance policy, or enroll in a government based health plan such as Medicaid if you meet the low income requirements for such a program. If you are already enrolled in your employer's group health insurance plan or have already obtained individual health insurance then the fact that you are turning 26 will have no impact on your eligibility for health insurance coverage under that policy."
+        },
+        {
+          "id": "13239",
+          "text": "Yes, absent some court order, there is no mandatory requirement that a husband or wife provide health insurance for their spouse or children. When one spouse could drop their spouse from their health insurance will depend upon whether they are covered under an individual health insurance policy or a group health insurance policy and, in the case of coverage under a group policy, whether the employer uses a Section 125 plan providing for employees to pay their share of health insurance premiums on a pre-tax basis. In the group policy setting when employees are paying their premiums on a pre-tax basis then changes to coverage are limited to the annual open enrollment period or change of life status events (e.g. - marriage, divorce, child birth/adoption, loss of other coverage). So, you and your spouse can't have a fight over the weekend and the your spouse walks into work on Monday and drops you from their group health insurance just out of spite. With individual health policies it is easier to change the coverage level at any month of the policy period. Now, thanks to ObamaCare, which somehow managed to not define a spouse as a dependent for health insurance purposes (remember \"We've got to pass the law to find out what's in it\" from Nancy Pelosi?). This has changed the potential status of spouses being defined as eligible dependents under the personnel policies of some employer's group health plans. While relatively few employers have dropped coverage for spouses entirely, many employers are beginning to adopt personnel policies that require that employee's spouses who are employed and have health insurance coverage available through their employer to enroll in their employer's health plan or some are assessing a penalty or extra charge to spouses who don't enroll in outside coverage through their employer's plans. This may create a situation where a person may misunderstand that they are being forced off their spouse's health plan due to a decision by the spouse's employer and not the employee themselves."
+        }
+      ],
+      "selected_top5": [
+        {
+          "id": "10382",
+          "text": "Dependent children are eligible to be covered under their parent's health insurance plan up to age 26. Regarding dropping a dependent from your health insurance coverage, itwill depend upon whether you have an individual health insurance policy or whether you are covered under a group health insurance policy that includes a Section 125 plan. If you have an individual policy then it should be a simple matter of contacting your agent or the health insurance carrier and notifying them of your intention to drop the dependent child from your coverage. It is most likely that you will need to complete and sign a termination request form so that all the legalities associated with terminating a person's coverage are complied with. If you are covering your dependent under your group health insurance coverage through your employer and they have a Section 125 plan in place your situation will be more complicated. If you don't know what a Section 125 plan is, if you are paying any portion of your health insurance premium and it is being taken out of your paycheck on a pre-tax basis then you are almost certainly subject to a Section 125 plan. Check with your HR person, the business owner or their insurance broker to get a definitive answer to this issue. Under IRS regulations because you are enjoying the advantages of pre-tax treatment for your share of your health insurance costs this advantage comes with some strings attached regarding the employee's ability to change their coverage outside of the group's normal open enrollment period. Essentially you have to have what is called a \"Change of Life Status Event\" to change your coverage status outside of open enrollment time. These are specific events such as marriage, divorce, adoption, losing coverage that you had elsewhere and a few other circumstances. Just getting mad at your 23 year old son who won't get off the couch and plays X-Box all day (while certainly a problem) does not meet the criteria of a change of life status event and you would not be able to drop them from your coverage until your group's next open enrollment."
+        },
+        {
+          "id": "21613",
+          "text": "You can easily drop a dependent from your exiting policy by contacting the carrier and requesting they come off. You should however have a back up plan to keep the dependent insured without a gap in coverage. With different family dynamics, it's common to drop one child off of a plan for various reasons."
+        },
+        {
+          "id": "18620",
+          "text": "Yes and No. If you are on a group health plan and you are paying a portion of your health insurance costs on a pre-tax basis under your employer's Section 125 plan then changes to your coverage status outside of the annual open enrollment period are confined to IRS defined \"change of life status events\". Examples are marriage, divorce, loss of coverage from a previous job, gaining coverage through a new job, having a child or adopting one. Just because you and the husband had a fight or the family budget has gotten tight doesn't qualify. If you are covered through an individual health insurance policy it is easier to drop a dependent from your coverage throughout the year. However, with the new open enrollment requirements of ObamaCare you are running the risk of leaving your husband uninsured and unable to purchase major medical coverage until the next open enrollment period. In addition, you could be creating a tax penalty liability depending upon how long of a period of time you would be leaving your husband uninsured during the year."
+        },
+        {
+          "id": "23071",
+          "text": "That will depend upon what type of health insurance you have and what your coverage status is. I will presume that you are a young person who has taken advantage of the changing age definition for dependent coverage under the Affordable Care Act (ObamaCare) that allows dependent children to stay on their parent's health insurance until they turn 26. In that case, once you turn 26 you are no longer eligible to be covered as a dependent under your parent's policy. This means you will have to take out health insurance coverage if it is available through your place of employment, purchase your own individual health insurance policy, or enroll in a government based health plan such as Medicaid if you meet the low income requirements for such a program. If you are already enrolled in your employer's group health insurance plan or have already obtained individual health insurance then the fact that you are turning 26 will have no impact on your eligibility for health insurance coverage under that policy."
+        },
+        {
+          "id": "13239",
+          "text": "Yes, absent some court order, there is no mandatory requirement that a husband or wife provide health insurance for their spouse or children. When one spouse could drop their spouse from their health insurance will depend upon whether they are covered under an individual health insurance policy or a group health insurance policy and, in the case of coverage under a group policy, whether the employer uses a Section 125 plan providing for employees to pay their share of health insurance premiums on a pre-tax basis. In the group policy setting when employees are paying their premiums on a pre-tax basis then changes to coverage are limited to the annual open enrollment period or change of life status events (e.g. - marriage, divorce, child birth/adoption, loss of other coverage). So, you and your spouse can't have a fight over the weekend and the your spouse walks into work on Monday and drops you from their group health insurance just out of spite. With individual health policies it is easier to change the coverage level at any month of the policy period. Now, thanks to ObamaCare, which somehow managed to not define a spouse as a dependent for health insurance purposes (remember \"We've got to pass the law to find out what's in it\" from Nancy Pelosi?). This has changed the potential status of spouses being defined as eligible dependents under the personnel policies of some employer's group health plans. While relatively few employers have dropped coverage for spouses entirely, many employers are beginning to adopt personnel policies that require that employee's spouses who are employed and have health insurance coverage available through their employer to enroll in their employer's health plan or some are assessing a penalty or extra charge to spouses who don't enroll in outside coverage through their employer's plans. This may create a situation where a person may misunderstand that they are being forced off their spouse's health plan due to a decision by the spouse's employer and not the employee themselves."
+        }
+      ],
+      "previous_metrics": {
+        "hit_at_1": 1.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 1.0
+      },
+      "selected_metrics": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 1.0
+      },
+      "expert_adjudicated": false,
+      "used_for_training_or_reselection": false,
+      "review_title_zh": "原始标签可能不穷尽合理答案",
+      "assistant_observation_zh": "原标注答案由第 1 降至第 2，新首条也讨论移除受抚养人的保障及个体/团体计划条件。它属于确定的 ID 标签失分，但是否为真实业务退步需要专家复核；本轮不据此重标。"
+    },
+    {
+      "cohort": "finqa",
+      "id": "finqa_q_847421011236c2e635bc78d5",
+      "question": "what portion of total purchase price is related to stock awards?",
+      "source_group": "FIS/2010",
+      "upstream_id": "FIS/2010/page_70.pdf-2",
+      "focus_metric": "all_evidence_at_5",
+      "transition": "gain",
+      "gold_answers": [
+        {
+          "id": "finqa_a_728ea296a17df9e33f859d78",
+          "text": "value of metavante common stock the value of metavante stock awards of $ 4066.4 is 121.4 ;",
+          "selected_rank": 5,
+          "source_page": "FIS/2010/page_70.pdf",
+          "evidence_type": "table",
+          "upstream_evidence_key": "table_1",
+          "previous_rank": 7
+        },
+        {
+          "id": "finqa_a_a4e7b8f72c1e7647866501fb",
+          "text": "value of metavante common stock the total purchase price of $ 4066.4 is $ 4187.8 ;",
+          "selected_rank": 3,
+          "source_page": "FIS/2010/page_70.pdf",
+          "evidence_type": "table",
+          "upstream_evidence_key": "table_2",
+          "previous_rank": 6
+        }
+      ],
+      "previous_top5": [
+        {
+          "id": "finqa_a_c93205957bb65ebf0cc80c29",
+          "text": "at december 31 , 2010 and 2009 , the total unrecognized compensation cost related to non-vested stock awards is $ 129.3 million and $ 93.5 million , respectively , which is expected to be recognized in pre-tax income over a weighted average period of 1.7 years as of both year ends ."
+        },
+        {
+          "id": "finqa_a_f268e934f3c72306b30e9f37",
+          "text": "the company granted a total of 1.5 million restricted stock awards at prices ranging from $ 25.76 to $ 28.15 on various dates in 2010 ."
+        },
+        {
+          "id": "finqa_a_b85d5f1d7db38ecc3a716418",
+          "text": "in addition , outstanding metavante stock options and other stock-based awards were converted into comparable fis stock options and other stock-based awards at the same conversion ratio ."
+        },
+        {
+          "id": "finqa_a_e734f3715a05506c4e0640dd",
+          "text": "the total purchase price was as follows ( in millions ) : ."
+        },
+        {
+          "id": "finqa_a_2aed08ec1f5b88326c33da23",
+          "text": "we recorded a preliminary allocation of the purchase price to metavante tangible and identifiable intangible assets acquired and liabilities assumed based on their estimated fair values as of october 1 , 2009 ."
+        }
+      ],
+      "selected_top5": [
+        {
+          "id": "finqa_a_c93205957bb65ebf0cc80c29",
+          "text": "at december 31 , 2010 and 2009 , the total unrecognized compensation cost related to non-vested stock awards is $ 129.3 million and $ 93.5 million , respectively , which is expected to be recognized in pre-tax income over a weighted average period of 1.7 years as of both year ends ."
+        },
+        {
+          "id": "finqa_a_f268e934f3c72306b30e9f37",
+          "text": "the company granted a total of 1.5 million restricted stock awards at prices ranging from $ 25.76 to $ 28.15 on various dates in 2010 ."
+        },
+        {
+          "id": "finqa_a_a4e7b8f72c1e7647866501fb",
+          "text": "value of metavante common stock the total purchase price of $ 4066.4 is $ 4187.8 ;"
+        },
+        {
+          "id": "finqa_a_e734f3715a05506c4e0640dd",
+          "text": "the total purchase price was as follows ( in millions ) : ."
+        },
+        {
+          "id": "finqa_a_728ea296a17df9e33f859d78",
+          "text": "value of metavante common stock the value of metavante stock awards of $ 4066.4 is 121.4 ;"
+        }
+      ],
+      "previous_metrics": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 0.0
+      },
+      "selected_metrics": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 1.0
+      },
+      "expert_adjudicated": false,
+      "used_for_training_or_reselection": false,
+      "review_title_zh": "分子和分母行共同进入前五",
+      "assistant_observation_zh": "股票奖励占总收购价的问题，两个原始标注行在新模型下进入第 5 和第 3。未运行数值计算。原 FinQA 表格文本化可能把首行数据作为列名，文字表述仍有抽取格式局限。"
+    },
+    {
+      "cohort": "finqa",
+      "id": "finqa_q_668b3f95d2c3b60851237141",
+      "question": "what is the percent change in long-term component changes from 12/31/2011 to 12/31/2012?",
+      "source_group": "BLK/2012",
+      "upstream_id": "BLK/2012/page_33.pdf-1",
+      "focus_metric": "all_evidence_at_5",
+      "transition": "loss",
+      "gold_answers": [
+        {
+          "id": "finqa_a_c755c6244d893304a9a087c5",
+          "text": "( dollar amounts in millions ) the long-term of 12/31/2011 is $ 593356 ; the long-term of net new business is $ 85168 ; the long-term of net acquired is $ 7322 ; the long-term of market /fx app ( dep ) is $ 66861 ; the long-term of 12/31/2012 is $ 752707 ;",
+          "selected_rank": 1,
+          "source_page": "BLK/2012/page_33.pdf",
+          "evidence_type": "table",
+          "upstream_evidence_key": "table_5",
+          "previous_rank": 4
+        },
+        {
+          "id": "finqa_a_e4693f25a842431136d91c0b",
+          "text": "component changes in aum 2013 ishares ( dollar amounts in millions ) 12/31/2011 net new business acquired market /fx app ( dep ) 12/31/2012 .",
+          "selected_rank": 8,
+          "source_page": "BLK/2012/page_33.pdf",
+          "evidence_type": "text",
+          "upstream_evidence_key": "text_29",
+          "previous_rank": 1
+        }
+      ],
+      "previous_top5": [
+        {
+          "id": "finqa_a_e4693f25a842431136d91c0b",
+          "text": "component changes in aum 2013 ishares ( dollar amounts in millions ) 12/31/2011 net new business acquired market /fx app ( dep ) 12/31/2012 ."
+        },
+        {
+          "id": "finqa_a_d94c0408e5c1e06c066d1b06",
+          "text": "multi-asset class component changes in multi-asset class aum ( dollar amounts in millions ) 12/31/2011 net new business acquired market /fx app ( dep ) 12/31/2012 ."
+        },
+        {
+          "id": "finqa_a_94302e64dabe5a336e5a3ea1",
+          "text": "alternatives component changes in alternatives aum ( dollar amounts in millions ) 12/31/2011 net new business acquired market /fx app ( dep ) 12/31/2012 ."
+        },
+        {
+          "id": "finqa_a_c755c6244d893304a9a087c5",
+          "text": "( dollar amounts in millions ) the long-term of 12/31/2011 is $ 593356 ; the long-term of net new business is $ 85168 ; the long-term of net acquired is $ 7322 ; the long-term of market /fx app ( dep ) is $ 66861 ; the long-term of 12/31/2012 is $ 752707 ;"
+        },
+        {
+          "id": "finqa_a_f71462cc44142eeb541025d4",
+          "text": "( dollar amounts in millions ) the ( dollar amounts in millions ) of 12/31/2011 is 12/31/2011 ; the ( dollar amounts in millions ) of net new business is net new business ; the ( dollar amounts in millions ) of net acquired is net acquired ; the ( dollar amounts in millions ) of market /fx app ( dep ) is market /fx app ( dep ) ; the ( dollar amounts in millions ) of 12/31/2012 is 12/31/2012 ;"
+        }
+      ],
+      "selected_top5": [
+        {
+          "id": "finqa_a_c755c6244d893304a9a087c5",
+          "text": "( dollar amounts in millions ) the long-term of 12/31/2011 is $ 593356 ; the long-term of net new business is $ 85168 ; the long-term of net acquired is $ 7322 ; the long-term of market /fx app ( dep ) is $ 66861 ; the long-term of 12/31/2012 is $ 752707 ;"
+        },
+        {
+          "id": "finqa_a_e941d39f9608398152bcfbfa",
+          "text": "( dollar amounts in millions ) the core of 12/31/2011 is $ 63647 ; the core of net new business is $ -3922 ( 3922 ) ; the core of net acquired is $ 6166 ; the core of market /fx app ( dep ) is $ 2476 ; the core of 12/31/2012 is $ 68367 ;"
+        },
+        {
+          "id": "finqa_a_39555b312c58503208fa59dc",
+          "text": "( dollar amounts in millions ) the currency and commodities of 12/31/2011 is 41301 ; the currency and commodities of net new business is -1547 ( 1547 ) ; the currency and commodities of net acquired is 860 ; the currency and commodities of market /fx app ( dep ) is 814 ; the currency and commodities of 12/31/2012 is 41428 ;"
+        },
+        {
+          "id": "finqa_a_f71462cc44142eeb541025d4",
+          "text": "( dollar amounts in millions ) the ( dollar amounts in millions ) of 12/31/2011 is 12/31/2011 ; the ( dollar amounts in millions ) of net new business is net new business ; the ( dollar amounts in millions ) of net acquired is net acquired ; the ( dollar amounts in millions ) of market /fx app ( dep ) is market /fx app ( dep ) ; the ( dollar amounts in millions ) of 12/31/2012 is 12/31/2012 ;"
+        },
+        {
+          "id": "finqa_a_112076b488ddceda7ed40216",
+          "text": "( dollar amounts in millions ) the ( dollar amounts in millions ) of 12/31/2011 is 12/31/2011 ; the ( dollar amounts in millions ) of net new business is net new business ; the ( dollar amounts in millions ) of net acquired is net acquired ; the ( dollar amounts in millions ) of market /fx app ( dep ) is market /fx app ( dep ) ; the ( dollar amounts in millions ) of 12/31/2012 is 12/31/2012 ;"
+        }
+      ],
+      "previous_metrics": {
+        "hit_at_1": 1.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 1.0
+      },
+      "selected_metrics": {
+        "hit_at_1": 1.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 0.0
+      },
+      "expert_adjudicated": false,
+      "used_for_training_or_reselection": false,
+      "review_title_zh": "表头落后于数值行",
+      "assistant_observation_zh": "数值行升到第 1，但表头从第 1 降至第 8，严格完整证据@5 因而失分。列名和时间信息也出现在序列化数值行中；该指标不等价于最小充分证据或最终算术正确性。"
+    },
+    {
+      "cohort": "fiqa",
+      "id": "fiqa_q_98",
+      "question": "How can I make $250,000.00 from trading/investing/business within 5 years?",
+      "source_group": null,
+      "upstream_id": null,
+      "focus_metric": "hit_at_1",
+      "transition": "gain",
+      "gold_answers": [
+        {
+          "id": "fiqa_a_527522",
+          "text": "\"The answer to your question is Forex trading.  You can get to 250K quicker than any other \"\"investment\"\" scheme.  You'll just need to start with at least 500K.\"",
+          "selected_rank": 1,
+          "previous_rank": 4
+        },
+        {
+          "id": "fiqa_a_575929",
+          "text": "Deposit $3,500 each month in a brokerage account and invest that money across a handful of diversified index funds. Rebalance those investments every quarter. The hard part is coming up with $3,500 each month; this is where your budget comes in.",
+          "selected_rank": null,
+          "previous_rank": null
+        }
+      ],
+      "previous_top5": [
+        {
+          "id": "fiqa_a_18855",
+          "text": "\"Without knowing what you are trying to achieve - make a bit of pocket money, become financially independent, invest for retirement, learn trading to become a trader - I'll give you a few thoughts ...  The difficulty you will have trading with $400-600 is that brokerage will be a high proportion of your \"\"profits\"\". I'm not sure of the US (assuming US rather than AU, NZ, etc) rates for online brokers, but UK online brokers are the order of £6-10 / trade. Having a quick read suggests that the trading is similar $6-10/trade. With doing day trades you will be killed by the brokerage. I'm not sure what percent of profitable trades you have, but if it is 50% (e.g.), you will need to make twice the brokerage fees value on each profitable trade before you are actually making a profit. There can be an emotional effect that trips you up. You will find that trading with your own real money is very different to trading with fake money. Read up about it, this brief blog shows some personal thoughts from someone I read from time to time. With a $10 brokerage, I would suggest the following Another option, which I wouldn't recommend is to leverage your money, by trading CDFs or other derivatives that allow you to trade on a margin. Further to that, learn about trading/investing Plus other investment types I have written about earlier.\""
+        },
+        {
+          "id": "fiqa_a_267386",
+          "text": "any business selling for only 1,000 will not be worth getting into. marketing alone should cost you more than that if you have any genuine hope of turning a profit. buy some books instead. work for someone, learn the ropes, read books, practice what you read at work, then start something with your savings in 5 years."
+        },
+        {
+          "id": "fiqa_a_146632",
+          "text": "\"Yes. There are several downsides to this strategy: You aren't taking into account commissions. If you pay $5 each time you buy or sell a stock, you may greatly reduce or even eliminate any possible gains you would make from trading such small amounts. This next point sounds obvious, but remember that you pay a commission on every trade regardless of profit, so every trade you make that you make at a loss also costs you commissions. Even if you make trades that are profitable more often than not, if you make quite a few trades with small amounts like this, your commissions may eat away all of your profits. Commissions represent a fixed cost, so their effect on your gains decreases proportionally with the amount of money you place at risk in each trade. Since you're in the US, you're required to follow the SEC rules on pattern day trading. From that link, \"\"FINRA rules define a “pattern day trader” as any customer who executes four or more “day trades” within five business days, provided that the number of day trades represents more than six percent of the customer’s total trades in the margin account for that same five business day period.\"\" If you trip this rule, you'll be required to maintain $25,000 in a margin brokerage account. If you can't maintain the balance, your account will be locked. Don't forget about capital gains taxes. Since you're holding these securities for less than a year, your gains will be taxed at your ordinary income tax rates. You can deduct your capital losses too (assuming you don't repurchase the same security within 30 days, because in that case, the wash sale rule prevents you from deducting the loss), but it's important to think about gains and losses in real terms, not nominal terms. The story is different if you make these trades in a tax-sheltered account like an IRA, but the other problems still apply. You're implicitly assuming that the stock's prices are skewed in the positive direction. Remember that you have limit orders placed at the upper and lower bounds of the range, so if the stock price decreases before it increases, your limit order at the lower bound will be triggered and you'll trade at a loss. If you're hoping to make a profit through buying low and selling high, you want a stock that hits its upper bound before hitting the lower bound the majority of the time. Unless you have data analysis (not just your intuition or a pattern you've talked yourself into from looking at a chart) to back this up, you're essentially gambling that more often than not, the stock price will increase before it decreases. It's dangerous to use any strategy that you haven't backtested extensively. Find several months or years of historical data, either intra-day or daily data, depending on the time frame you're using to trade, and simulate your strategy exactly. This helps you determine the potential profitability of your strategy, and it also forces you to decide on a plan for precisely when you want to invest. Do you invest as soon as the stock trades in a range (which algorithms can determine far better than intuition)? It also helps you figure out how to manage your risk and how much loss you're willing to accept. For risk management, using limit orders is a start, but see my point above about positively skewed prices. Limit orders aren't enough. In general, if an active investment strategy seems like a \"\"no-brainer\"\" or too good to be true, it's probably not viable. In general, as a retail investor, it's foolish to assume that no one else has thought of your simple active strategy to make easy money. I can promise you that someone has thought of it. Trading firms have quantitative researchers that are paid to think of and implement trading strategies all the time.  If it's viable at any scale, they'll probably already have utilized it and arbitraged away the potential for small traders to make significant gains. Trust me, you're not the first person who thought of using limit orders to make \"\"easy money\"\" off volatile stocks. The fact that you're asking here and doing research before implementing this strategy, however, means that you're on the right track. It's always wise to research a strategy extensively before deploying it in the wild. To answer the question in your title, since it could be interpreted a little differently than the body of the question: No, there's nothing wrong with investing in volatile stocks, indexes, etc. I certainly do, and I'm sure many others on this site do as well. It's not the investing that gets you into trouble and costs you a lot of money; it's the rapid buying and selling and attempting to time the market that proves costly, which is what you're doing when you implicitly bet that the distribution of the stock's prices is positively skewed. To address the commission fee problem, assuming a fee of $8 per trade ... and a minimum of $100 profit per sale Commissions aren't your only problem, and counting on $100 profit per sale is a significant assumption. Look at point #4 above. Through your use of limit orders, you're making the implicit assumption that, more often than not, the price will trigger your upper limit order before your lower limit order. Here's a simple example; let's assume you have limit orders placed at +2 and -2 of your purchase price, and that triggering the limit order at +2 earns you $100 profit, while triggering the limit order at -2 incurs a loss of $100. Assume your commission is $5 on each trade.  If your upper limit order is triggered, you earn a profit of 100 - 10 = 90, then set up the same set of limit orders again. If your lower limit order is triggered this time, you incur a loss of 100 + 10 = 110, so your net gain is 90 - 110 = -20. This is a perfect example of why, when taking into account transaction costs, even strategies that at first glance seem profitable mathematically can actually fail.  If you set up the same situation again and incur a loss again (100 + 10 = 110), you're now down -20 - 110 = -130. To make a profit, you need to make two profitable trades, without incurring further losses.  This is why point #4 is so important. Whenever you trade, it's critical to completely understand the risk you're taking and the bet you're actually making, not just the bet you think you're making. Also, according to my \"\"algorithm\"\" a sale only takes place once the stock rises by 1 or 2 points; otherwise the stock is held until it does. Does this mean you've removed the lower limit order? If yes, then you expose yourself to downside risk. What if the stock has traded within a range, then suddenly starts declining because of bad earnings reports or systemic risks (to name a few)? If you haven't removed the lower limit order, then point #4 still stands.  However, I never specified that the trades have to be done within the same day.  Let the investor open up 5 brokerage accounts at 5 different firms (for safeguarding against being labeled a \"\"Pattern Day Trader\"\"). Each account may only hold 1 security at any time, for the span of 1 business week. How do you control how long the security is held? You're using limit orders, which will be triggered when the stock price hits a certain level, regardless of when that happens. Maybe that will happen within a week, or maybe it will happen within the same day. Once again, the bet you're actually making is different from the bet you think you're making. Can you provide some algorithms or methods that do work for generating some extra cash on the side, aside from purchasing S&P 500 type index funds and waiting? When I purchase index funds, it's not to generate extra liquid cash on the side. I don't invest nearly enough to be able to purchase an index fund and earn substantial dividends. I don't want to get into any specific strategies because I'm not in the business of making investment recommendations, and I don't want to start. Furthermore, I don't think explicit investment recommendations are welcome here (unless it's describing why something is a bad idea), and I agree with that policy. I will make a couple of points, however. Understand your goals. Are you investing for retirement or a shorter horizon, e.g. some side income? You seem to know this already, but I include it for future readers.  If a strategy seems too good to be true, it probably is. Educate yourself before designing a strategy. Research fundamental analysis, different types of orders (e.g., so you fully understand that you don't have control over when limit orders are executed), different sectors of the market if that's where your interests lie, etc. Personally, I find some sectors fascinating, so researching them thoroughly allows me to make informed investment decisions as well as learn about something that interests me. Understand your limits. How much money are you willing to risk and possibly lose? Do you have a risk management strategy in place to prevent unexpected losses? What are the costs of the risk management itself? Backtest, backtest, backtest. Ideally your backtesting and simulating should be identical to actual market conditions and incorporate all transaction costs and a wide range of historical data. Get other opinions. Evaluate those opinions with the same critical eye as I and others have evaluated your proposed strategy.\""
+        },
+        {
+          "id": "fiqa_a_527522",
+          "text": "\"The answer to your question is Forex trading.  You can get to 250K quicker than any other \"\"investment\"\" scheme.  You'll just need to start with at least 500K.\""
+        },
+        {
+          "id": "fiqa_a_506149",
+          "text": "I'm a successful day trader. I turned $300,000 into over $10 million over the course of a few years. I went into trading after I sold my failing company for around $1 million just to bring me out of debt and give me some cash. To give you an idea of how I did it, I just studied everything possible for a few months before I even made my first trade. Instead of having a 9-5 job, I was studying the market from 9-5. I looked at graphs, patterns, everything. I subscribed to multiple real time news feeds and have around 6 college students currently working under me just sifting through patterns and watching real time news feed. I only plan on doing this for 5 or 10 more years before I go into long term investing as it is incredibly stressful, but the returns are very good. Feel free to ask me any questions or to send me a PM if you want any specifics."
+        }
+      ],
+      "selected_top5": [
+        {
+          "id": "fiqa_a_527522",
+          "text": "\"The answer to your question is Forex trading.  You can get to 250K quicker than any other \"\"investment\"\" scheme.  You'll just need to start with at least 500K.\""
+        },
+        {
+          "id": "fiqa_a_18855",
+          "text": "\"Without knowing what you are trying to achieve - make a bit of pocket money, become financially independent, invest for retirement, learn trading to become a trader - I'll give you a few thoughts ...  The difficulty you will have trading with $400-600 is that brokerage will be a high proportion of your \"\"profits\"\". I'm not sure of the US (assuming US rather than AU, NZ, etc) rates for online brokers, but UK online brokers are the order of £6-10 / trade. Having a quick read suggests that the trading is similar $6-10/trade. With doing day trades you will be killed by the brokerage. I'm not sure what percent of profitable trades you have, but if it is 50% (e.g.), you will need to make twice the brokerage fees value on each profitable trade before you are actually making a profit. There can be an emotional effect that trips you up. You will find that trading with your own real money is very different to trading with fake money. Read up about it, this brief blog shows some personal thoughts from someone I read from time to time. With a $10 brokerage, I would suggest the following Another option, which I wouldn't recommend is to leverage your money, by trading CDFs or other derivatives that allow you to trade on a margin. Further to that, learn about trading/investing Plus other investment types I have written about earlier.\""
+        },
+        {
+          "id": "fiqa_a_161010",
+          "text": "To me it sounds like you need to come up with 67K (30+37), part of the time you can work in the current job, part of the time you could work a lower paying part time job (for a year).  Lets assume that you can earn 15K for that year, and you can save 5K from your current job.  (I'd try and save more, but what ever you can do.) 67 - 15 - 5 = 47    I'd sell the investment property.  First you will have some funds to throw at this need, second you expense should go down as you don't have a payment on this property. 47 - 26 = 21  You have 32K in cash which is a lot for someone in your expense range.  Six months would be 15K, so I would use some of that cash: 21 - 17 = 4 Now you are really close.  If needed I'd use the investments to cover the last 4k or even more of the on hand cash.  However, could you do something to reduce that amount further ...like working more."
+        },
+        {
+          "id": "fiqa_a_144002",
+          "text": "1) The risks are that you investing in financial markets and therefore should be prepared for volatility in the value of your holdings. 2) You should only ever invest in financial markets with capital that you can reasonably afford to put aside and not touch for 5-10 years (as an investor not a trader). Even then you should be prepared to write this capital off completely. No one can offer you a guarantee of what will happen in the future, only speculation from what has happened in the past. 3) Don't invest. It is simple. Keep your money in cash. However this is not without its risks. Interest rates rarely keep up with inflation so the spending power of cash investments quickly diminishes in real terms over time. So what to do? Extended your time horizon as you have mentioned to say 30 years, reinvest all dividends as these have been proven to make up the bulk of long term returns and drip feed your money into these markets over time. This will benefit you from what is known in as  'dollar cost averaging' and will negate the need for you to time the market."
+        },
+        {
+          "id": "fiqa_a_485243",
+          "text": "Many people have provided very good answers to this question and all the answers provide sound advice and justification. Below are some of my thoughts on the questions that you have put forward. 1) The investment manager question: The returns on your capital for a half year has been quite low; having said that, some investments do take more than half year to show some growth. You could try talking to your investment manager and ask where your money has been deployed and why the returns are low. If there are no real explanation given forth (which would be more likely as you have mentioned your investment manager does not like to discuss your money with you) you should conside Xolorus & Pete's advice and forthwith take all your money from investment manager and park it in the bank till you figure out what to do next with it. 2) Finances are not my forte: At 22 finance is nobodies forte, it takes longer than that; however having said that, how do you know finance is actually not your forte? Being a computer science graduate you would be more than comfortable with the mathematics required for finance. You may not have looked seriously at finance till now (I assume by your statement). Once way to be certain about this would be self learning, some good books have been refered above and there are online information, courses and articles on the Internet, for example here. You could give some spare time and explore if finance interests you or not. 3) If finance interests you: Then consider the 30K as your seed fund and take a small portion of it say 2K and try out your hand at investing on your own in the instruments that you feel most comfortable and see how you fare, you are young enough to take the risk. Rest of the money you could put in other low risk instruments (that you have identified through self study) 4) If finance does not interest you: The probably you are better off with an investment manager, as observed above, it will take some time for you to identify him/her 5) On returns: As mentioned above different instruments produce returns differently, however, one question that is universally asked is how much return on an invetment shoule one expect (you were expecting more than $12 on your investment). It is a difficult question to answer as invetment returns and investment needs depend on a persons financial goals and risk taking profile. One way to have some measure is to take 15-20 years CAGR of the stock index return and reduce it by 2-3%, that is (in many cases, not all) a reasonable return expectation in medium-long term."
+        }
+      ],
+      "previous_metrics": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 0.0
+      },
+      "selected_metrics": {
+        "hit_at_1": 1.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 0.0
+      },
+      "expert_adjudicated": false,
+      "used_for_training_or_reselection": false,
+      "review_title_zh": "命中标注不等于建议质量提升",
+      "assistant_observation_zh": "首位命中的原始标注答案带有反讽性质：以更大的初始资金回应目标收益问题。此次标签命中增加不能解释为可执行金融建议变得更好。"
+    },
+    {
+      "cohort": "fiqa",
+      "id": "fiqa_q_1812",
+      "question": "splitting a joint mortgage - one owner in home",
+      "source_group": null,
+      "upstream_id": null,
+      "focus_metric": "hit_at_1",
+      "transition": "loss",
+      "gold_answers": [
+        {
+          "id": "fiqa_a_219274",
+          "text": "Definitely get a lawyer to write up all the details of the partnership in a formal agreement. If your ex does not want to do this, that is a bad sign. You both need to be clear about expectations and responsibilities in this partnership, and define an exit strategy in the case one of you wants out. This is the most fair to both parties. Generally, what is common is that property is split cleanly when the relationship ends. I would strongly recommend you both work towards a clean split with no joint property ownership. How this looks depends on your unique situation. To address your questions 2 and 3: You have two roles here - tenant and owner.  As a 50% owner, you are running a business with a partner.  That business will have assets (home), income, expenses, and profit. You basically need to run this partnership as a simple business.  All the rent income (your rent and the other tenant's) should go into a separate account. The mortgage and all other housing expenses are then paid from only this account. Any excess is then profit that may be split 50/50. All expenses should be agreed upon by both of you, either by contract or by direct communication. You should see a financial professional to make sure accounting and taxes are set up properly. Under this system, your ex could do work on the house and be paid from the business income. However, they are responsible to you to provide an estimate and scope of work, just like any other contractor. If you as a joint owner agree to his price, he then could be paid out of the business income. This reduces the business cash flow for the year accordingly. You can probably see how this can get very complicated very fast. There is really no right or wrong answer on what both of you decide is fair and best. For the sake of simplicity and the least chance of a disaster, the usual and recommended action is to cleanly split all property. Good Luck!",
+          "selected_rank": 7,
+          "previous_rank": 1
+        },
+        {
+          "id": "fiqa_a_530570",
+          "text": "Get a lawyer to put this in contract form, with everything spelled out explicitly. What is fair is what the two of you agree upon. My own suggestion: Divide the property into things which are yours, his, and shared, then have each of you be responsible for all your costs plus half the shared costs, but get all the benefits of your half. That would mean that if he rents out his half, all the rental income is his; if you decide to live in your half, all the savings of not paying rent are yours.  Each of you pays your half of mortgage, insurance, and other shared costs. Repairs to shared infrastructure should be done by someone both of you trust. If you agree the work is needed and he does it rather than your hiring someone, you owe him the appropriate percentage of the costs; the two of you will need to agree on whether you owe him for that percentage of his time as well. Make sure you agree on some mechanism for one person offering to buy the other out, or to sell their half to the other party... or potentially to someone else entirely. (Personally, I would try to do that at soonest opportunity, to avoid some of the ways this can go wrong -- see past comments about the hazards of guaranteeing a loan; this works or doesn't work similarly.) Does that address your question?",
+          "selected_rank": 4,
+          "previous_rank": 8
+        }
+      ],
+      "previous_top5": [
+        {
+          "id": "fiqa_a_219274",
+          "text": "Definitely get a lawyer to write up all the details of the partnership in a formal agreement. If your ex does not want to do this, that is a bad sign. You both need to be clear about expectations and responsibilities in this partnership, and define an exit strategy in the case one of you wants out. This is the most fair to both parties. Generally, what is common is that property is split cleanly when the relationship ends. I would strongly recommend you both work towards a clean split with no joint property ownership. How this looks depends on your unique situation. To address your questions 2 and 3: You have two roles here - tenant and owner.  As a 50% owner, you are running a business with a partner.  That business will have assets (home), income, expenses, and profit. You basically need to run this partnership as a simple business.  All the rent income (your rent and the other tenant's) should go into a separate account. The mortgage and all other housing expenses are then paid from only this account. Any excess is then profit that may be split 50/50. All expenses should be agreed upon by both of you, either by contract or by direct communication. You should see a financial professional to make sure accounting and taxes are set up properly. Under this system, your ex could do work on the house and be paid from the business income. However, they are responsible to you to provide an estimate and scope of work, just like any other contractor. If you as a joint owner agree to his price, he then could be paid out of the business income. This reduces the business cash flow for the year accordingly. You can probably see how this can get very complicated very fast. There is really no right or wrong answer on what both of you decide is fair and best. For the sake of simplicity and the least chance of a disaster, the usual and recommended action is to cleanly split all property. Good Luck!"
+        },
+        {
+          "id": "fiqa_a_112435",
+          "text": "It's not typically possible for someone to jointly own the house, who is not also jointly liable for the mortgage. This doesn't matter however, because it is possible for two people to get a mortgage together, where only one person's income is assessed by the lender. If that person could get a mortgage of that amount on their own, then the couple should also be able to get the same mortgage. Source: My wife and I got a mortgage like this. She is self-employed, rather than meet the very high requirements for proving her self-employment income, we simply said that we only wanted my income to be taken into consideration."
+        },
+        {
+          "id": "fiqa_a_214071",
+          "text": "\"Both names are on the deed, so the property is jointly owned. You're going to need the second person's signature to be able to sell the property. Ideally the way to know \"\"what happens now\"\" is to consult the written agreement you made before you purchased the house together. The formula for dividing up assets when dissolving your partnership is whatever you agreed to up front. (Your up-front agreement could have said \"\"if you move out, you forfeit any claim to the property\"\".) It sounds like you don't have that, so you'll have to come to some (written) agreement with your partner before you proceed. If you can't come to an agreement, then you'll end up in court, a judge will split up the assets, and the only winners there are the lawyers...\""
+        },
+        {
+          "id": "fiqa_a_223338",
+          "text": "Since you only own half of the house, you would most likely need the cooperation of whoever owns the other half in order to use it as collateral for a loan, but if you can do that, there's no reason you couldn't do what you're talking about.  The complication is that if you default on the loan, the bank isn't going to seize half of the house.  They'll repossess the entire house, sell it, and take what they're owed out of the proceeds, leaving you and whoever owns the other 50% to fight over the remnants. Even if the owner of the other half is family, they may be hesitant to risk losing the house if you don't pay your mortgage, so this could be a dicey conversation."
+        },
+        {
+          "id": "fiqa_a_434437",
+          "text": "You need a cosigner. Someone prepared to repay the mortgager if you should fail to. Needless to say this is going to have to be someone who knows you and trusts you very much. One way is to find someone prepared to share a house with you. Buy a bigger house than you would otherwise need. You would own half each, and the sharing agreement would specify that if one of you defaulted on their payments the other would get a larger share according to how much extra they end up paying. The other way is to find a silent partner, who doesn't live there. They put up no money unless you actually default. They would almost certainly have to be part owners, but you can structure the agreement so that you end up with the whole house if you succeed in paying off the mortgage, or miss no payments until you sell. Parents sometimes do this for their kids."
+        }
+      ],
+      "selected_top5": [
+        {
+          "id": "fiqa_a_223338",
+          "text": "Since you only own half of the house, you would most likely need the cooperation of whoever owns the other half in order to use it as collateral for a loan, but if you can do that, there's no reason you couldn't do what you're talking about.  The complication is that if you default on the loan, the bank isn't going to seize half of the house.  They'll repossess the entire house, sell it, and take what they're owed out of the proceeds, leaving you and whoever owns the other 50% to fight over the remnants. Even if the owner of the other half is family, they may be hesitant to risk losing the house if you don't pay your mortgage, so this could be a dicey conversation."
+        },
+        {
+          "id": "fiqa_a_214071",
+          "text": "\"Both names are on the deed, so the property is jointly owned. You're going to need the second person's signature to be able to sell the property. Ideally the way to know \"\"what happens now\"\" is to consult the written agreement you made before you purchased the house together. The formula for dividing up assets when dissolving your partnership is whatever you agreed to up front. (Your up-front agreement could have said \"\"if you move out, you forfeit any claim to the property\"\".) It sounds like you don't have that, so you'll have to come to some (written) agreement with your partner before you proceed. If you can't come to an agreement, then you'll end up in court, a judge will split up the assets, and the only winners there are the lawyers...\""
+        },
+        {
+          "id": "fiqa_a_337286",
+          "text": "\"We’re buying the home right over $200,000 so that means he will only need to put down (as a ‘gift’) roughly $7000. I'm with the others, don't call this a gift unless it is a gift.   I'd have him check with the bank that previously refused him a mortgage if putting both of you on a mortgage would allay their concerns.  Your cash flow would be paying the mortgage payment and if you failed to do so, then they could fall back on his.  That may make more sense to them, even if they would deny each of you a loan on your own.  This works for them because either of you is responsible for the whole loan.  It works for him because he was already willing to be responsible for the whole loan.  And your alternative plan makes you responsible for the whole loan, so this is just as good for you.   At what percentage would you suggest splitting ownership and future expenses? Typically a cash/financing partnership would be 50/50, but since it’s only a 3.5% down-payment instead of 20% is that still fair? Surprisingly enough, a 3.5% down-payment that accumulates is about half the equity of a 20% down-payment.  So your suggestion of a 25%-75% split makes sense if 20% would give a 50%-50% split.   I expected it to be considerably lower.  The way that I calculated it was to have his share increase by his equity share of the \"\"rent\"\" which I set to the principal plus interest payment for a thirty year loan.  With a 20% down-payment, this would give him 84% equity.  With 3.5%, about 40% equity.  I'm not sure why 84% equity should be the equivalent of a 50% share, but it may be a side effect of other expenses.  Perhaps taking property taxes out would reduce the equity share.   Note that if you increase the down-payment to 20%, your mortgage payment will drop substantially.  The difference in interest between 3.5% and 20% equity is a couple hundred dollars.  Also, you'll be able to eliminate any PMI payment at 20%.   It could be argued that if he pays a third of the monthly mortgage payment, that that would give him the same 50% equity stake on a 3.5% down-payment as he would get with a 20% down-payment.  The problem there is that then he is effectively subsidizing your monthly payment.  If he were to stop doing that for some reason, you'd have what is effectively a 50% increase in your rent.  It would be safer for you to handle the monthly payment while he handles the down-payment.   If you couldn't pay the mortgage, it sounds like he is in a position to buy out your equity, rent the property, and take over the mortgage payment.  If he stopped being able to pay his third of the mortgage, it's not evident that you'd be able to pick up the slack from him much less buy him out.  And it's unlikely that you'd find someone else willing to replace him under those terms.  But your brother could construct things such that in the face of tragedy, you'd inherit his equity in the house.  If you're making the entire mortgage payment, that's a stable situation.   He's not at risk because he could take over the mortgage if necessary.  You're not at risk because you inherit his equity share and can afford the monthly payment.  So even in the face of tragedy, things can go on.  And that's important, as otherwise you could lose your equity in the house.\""
+        },
+        {
+          "id": "fiqa_a_530570",
+          "text": "Get a lawyer to put this in contract form, with everything spelled out explicitly. What is fair is what the two of you agree upon. My own suggestion: Divide the property into things which are yours, his, and shared, then have each of you be responsible for all your costs plus half the shared costs, but get all the benefits of your half. That would mean that if he rents out his half, all the rental income is his; if you decide to live in your half, all the savings of not paying rent are yours.  Each of you pays your half of mortgage, insurance, and other shared costs. Repairs to shared infrastructure should be done by someone both of you trust. If you agree the work is needed and he does it rather than your hiring someone, you owe him the appropriate percentage of the costs; the two of you will need to agree on whether you owe him for that percentage of his time as well. Make sure you agree on some mechanism for one person offering to buy the other out, or to sell their half to the other party... or potentially to someone else entirely. (Personally, I would try to do that at soonest opportunity, to avoid some of the ways this can go wrong -- see past comments about the hazards of guaranteeing a loan; this works or doesn't work similarly.) Does that address your question?"
+        },
+        {
+          "id": "fiqa_a_434437",
+          "text": "You need a cosigner. Someone prepared to repay the mortgager if you should fail to. Needless to say this is going to have to be someone who knows you and trusts you very much. One way is to find someone prepared to share a house with you. Buy a bigger house than you would otherwise need. You would own half each, and the sharing agreement would specify that if one of you defaulted on their payments the other would get a larger share according to how much extra they end up paying. The other way is to find a silent partner, who doesn't live there. They put up no money unless you actually default. They would almost certainly have to be part owners, but you can structure the agreement so that you end up with the whole house if you succeed in paying off the mortgage, or miss no payments until you sell. Parents sometimes do this for their kids."
+        }
+      ],
+      "previous_metrics": {
+        "hit_at_1": 1.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 0.0
+      },
+      "selected_metrics": {
+        "hit_at_1": 0.0,
+        "hit_at_10": 1.0,
+        "all_evidence_at_5": 0.0
+      },
+      "expert_adjudicated": false,
+      "used_for_training_or_reselection": false,
+      "review_title_zh": "决策意图错配",
+      "assistant_observation_zh": "原题涉及共有住房及共同房贷的分配安排，新首条转向把共有房产用于贷款抵押。仍围绕共有产权，但偏离分配责任的决策情境；原标注答案在第 4 和第 7。"
+    }
+  ],
+  "failure_cards_sha256": "c49aa6099e876910b1bb698c6f2f8b99e3694877966150250ef72d94c1f12855",
+  "selection_lock_sha256": "a40b41968aa39fc4f4967e5bc8f58ff96251558203ee33edf97ed16c8f070525",
+  "code_sha256": "2710141a6ab0694638bbf57e620ce30bfc61aa7429bd28b3aae7980654c34728"
+}

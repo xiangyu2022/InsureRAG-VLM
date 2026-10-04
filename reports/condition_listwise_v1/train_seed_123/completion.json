@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "seconds": 579.4761358001269,
+  "optimizer_steps": 2471,
+  "pair_exposures": 237174,
+  "peak_cuda_allocated_bytes": 1807201792,
+  "checkpoint": {
+    "fine_tuned_in_this_project": true,
+    "weights_sha256": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+    "initial_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+    "training_manifest_sha256": "7ec5f1d6b86775214c759ef816ff043e18a3ba19f3d37809b2c0f2e8c8a4fba6",
+    "training_protocol_sha256": "31b9dc43986a584dcc1b3fb16f792b90bedda5ef3406cd72f6b83b44b83828c5",
+    "training_code_sha256": "e85c73bd5c03f0d78ac14ad094686249cd7120c7877249d92dbcce3a526dee5d",
+    "seed": 123,
+    "epoch": 1,
+    "optimizer_steps": 2471,
+    "unique_training_questions": 25987,
+    "pair_exposures": 237174,
+    "recipe": "confidence-adjusted listwise ranking + previous specialist retention"
+  },
+  "log_sha256": "01474cc5839140c967ce8d327dbc6d937be19c6d7ab31a7baa4bfbdbd2db0fbb"
+}

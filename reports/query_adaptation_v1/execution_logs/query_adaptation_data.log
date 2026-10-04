@@ -1,0 +1,2 @@
+{"fiqa_imported": true, "counts": {"train": 5500, "valid": 500, "test": 648}}
+{"training_questions": 31351, "domains": {"insuranceqa": 11629, "government": 259, "general": 13999, "finance": 5464}, "excluded": 136, "eligible_training_answers": 100465}

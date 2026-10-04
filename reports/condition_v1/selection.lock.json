@@ -1,0 +1,166 @@
+{
+  "created_utc": "2026-10-01T22:36:10.089929+00:00",
+  "selected_on": "valid",
+  "promoted_weights": false,
+  "selected_model": "previous",
+  "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\insurerag-retention-v2\\epoch-2",
+  "config": {
+    "pool": "union200",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "validation_metrics": {
+    "model": "previous",
+    "config": {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    "domains": {
+      "insuranceqa": {
+        "n": 2000,
+        "hit_at_1": 0.4235,
+        "hit_at_5": 0.664,
+        "hit_at_10": 0.746,
+        "hit_at_100": 0.8955,
+        "mrr_at_100": 0.5315745124478073,
+        "label_recall_at_10": 0.6334572510822511,
+        "hit_at_1_wilson_95": [
+          0.40201186066314715,
+          0.44528144757088445
+        ],
+        "hit_at_10_wilson_95": [
+          0.7264634598020389,
+          0.7645933529355847
+        ]
+      },
+      "government": {
+        "n": 127,
+        "hit_at_1": 0.7637795275590551,
+        "hit_at_5": 0.9212598425196851,
+        "hit_at_10": 0.9448818897637795,
+        "hit_at_100": 0.9921259842519685,
+        "mrr_at_100": 0.8250471695845711,
+        "label_recall_at_10": 0.9448818897637795,
+        "hit_at_1_wilson_95": [
+          0.6828431511873713,
+          0.8292269572009584
+        ],
+        "hit_at_10_wilson_95": [
+          0.8905934052246904,
+          0.9730472253407012
+        ]
+      },
+      "general": {
+        "n": 400,
+        "hit_at_1": 0.88,
+        "hit_at_5": 0.96,
+        "hit_at_10": 0.975,
+        "hit_at_100": 0.995,
+        "mrr_at_100": 0.9200753168577657,
+        "label_recall_at_10": 0.975,
+        "hit_at_1_wilson_95": [
+          0.8444860470597602,
+          0.9082846092461745
+        ],
+        "hit_at_10_wilson_95": [
+          0.9545984121283544,
+          0.986364908254064
+        ]
+      }
+    },
+    "weighted_hit_at_10": 0.8315763779527559,
+    "weighted_mrr_at_100": 0.6679692047571517,
+    "weighted_hit_at_1": 0.582855905511811,
+    "eligible": true
+  },
+  "best_previous_configuration": {
+    "model": "previous",
+    "config": {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    "domains": {
+      "insuranceqa": {
+        "n": 2000,
+        "hit_at_1": 0.4235,
+        "hit_at_5": 0.664,
+        "hit_at_10": 0.746,
+        "hit_at_100": 0.8955,
+        "mrr_at_100": 0.5315745124478073,
+        "label_recall_at_10": 0.6334572510822511,
+        "hit_at_1_wilson_95": [
+          0.40201186066314715,
+          0.44528144757088445
+        ],
+        "hit_at_10_wilson_95": [
+          0.7264634598020389,
+          0.7645933529355847
+        ]
+      },
+      "government": {
+        "n": 127,
+        "hit_at_1": 0.7637795275590551,
+        "hit_at_5": 0.9212598425196851,
+        "hit_at_10": 0.9448818897637795,
+        "hit_at_100": 0.9921259842519685,
+        "mrr_at_100": 0.8250471695845711,
+        "label_recall_at_10": 0.9448818897637795,
+        "hit_at_1_wilson_95": [
+          0.6828431511873713,
+          0.8292269572009584
+        ],
+        "hit_at_10_wilson_95": [
+          0.8905934052246904,
+          0.9730472253407012
+        ]
+      },
+      "general": {
+        "n": 400,
+        "hit_at_1": 0.88,
+        "hit_at_5": 0.96,
+        "hit_at_10": 0.975,
+        "hit_at_100": 0.995,
+        "mrr_at_100": 0.9200753168577657,
+        "label_recall_at_10": 0.975,
+        "hit_at_1_wilson_95": [
+          0.8444860470597602,
+          0.9082846092461745
+        ],
+        "hit_at_10_wilson_95": [
+          0.9545984121283544,
+          0.986364908254064
+        ]
+      }
+    },
+    "weighted_hit_at_10": 0.8315763779527559,
+    "weighted_mrr_at_100": 0.6679692047571517,
+    "weighted_hit_at_1": 0.582855905511811,
+    "eligible": true
+  },
+  "selected_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+  "previous_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+  "public_weights_sha256": "821d1aa69520101d6e0737f78a042ae25b19e5cb9160701909d10434f4aeb0ae",
+  "selection_protocol_sha256": "9ef9164a4959345939f095eab7278c6cdc7a5eaac4292b033f8637cf47c2a8ea",
+  "validation_sweep_sha256": "e8af3f05b73662659288e607ad2fc2e6e4f5c2b3d0f965b31a0c3789bd6b24cc",
+  "validation_artifacts": {
+    "42": {
+      "reports/condition_v1/valid_legacy_seed_42": "5f21b41d35d44a986fa9b1f26a94e9fd6e29474e823f5f234c322d406c40b23f",
+      "reports/condition_v1/valid_mixed_seed_42": "7448a32ce8194cec80f119c75ed3bfc9d30060dae8447a0022ae70d25f7b7bb7"
+    },
+    "123": {
+      "reports/condition_v1/valid_legacy_seed_123": "75ade5df705f32682f8a5be8b50b2089efc466d51f3ec86d47a30580e7592cfe",
+      "reports/condition_v1/valid_mixed_seed_123": "c0ee131a5c49924639f1dbcdd4b7310c60b4b1612ff366cc6c318a7ee3050fdd"
+    }
+  },
+  "training_manifest_sha256": "e8a3b024e12fe9e77b1e3f5b24e548479fbfec9fab356ca06b97a6fc1e960c26",
+  "fresh_test_status": "Not scored at selection",
+  "code_sha256": {
+    "scripts/eval_condition_v1.py": "e548c5e3f2c7be44b6138f3e994481b3b48708e3c46342d4d0d859519ab7a716",
+    "scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872",
+    "src/insurerag_vlm/reranker.py": "bb90e6c134b44d7cb0c0cd6ca3165e098827bd908a3a86e73101040cf65734a3",
+    "scripts/eval_retention_v2.py": "a2915e60a53184c9f90dae334b8dae438c1bfdd355ff997ee72e9ad3d0d866da"
+  }
+}

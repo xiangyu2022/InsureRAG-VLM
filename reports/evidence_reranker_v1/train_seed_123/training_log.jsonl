@@ -1,0 +1,17 @@
+{"seed": 123, "epoch": 1, "step": 200, "mean_rank_loss": 1.2450423908606172, "mean_kl": 0.1718917576596141, "pair_presentations": 38400, "query_presentations": 6400, "seconds": 124.9}
+{"seed": 123, "epoch": 1, "step": 400, "mean_rank_loss": 1.1873163589462639, "mean_kl": 0.195827302262187, "pair_presentations": 76800, "query_presentations": 12800, "seconds": 249.4}
+{"seed": 123, "epoch": 1, "step": 600, "mean_rank_loss": 1.1592910972237587, "mean_kl": 0.213429632463182, "pair_presentations": 115200, "query_presentations": 19200, "seconds": 424.4}
+{"seed": 123, "epoch": 1, "step": 800, "mean_rank_loss": 1.13726323091425, "mean_kl": 0.22413865915499628, "pair_presentations": 153600, "query_presentations": 25600, "seconds": 589.4}
+{"seed": 123, "epoch": 1, "step": 1000, "mean_rank_loss": 1.1239078843444585, "mean_kl": 0.23171186963282525, "pair_presentations": 192000, "query_presentations": 32000, "seconds": 760.0}
+{"seed": 123, "epoch": 1, "step": 1200, "mean_rank_loss": 1.1172366396151483, "mean_kl": 0.23836045270785688, "pair_presentations": 230400, "query_presentations": 38400, "seconds": 929.2}
+{"seed": 123, "epoch": 1, "step": 1400, "mean_rank_loss": 1.1085005955504519, "mean_kl": 0.24388955312914082, "pair_presentations": 268800, "query_presentations": 44800, "seconds": 1094.8}
+{"seed": 123, "epoch": 1, "step": 1595, "mean_rank_loss": 1.1026435648662696, "mean_kl": 0.24740223823024468, "pair_presentations": 306108, "query_presentations": 51018, "seconds": 1237.4}
+{"seed": 123, "epoch": 2, "step": 1600, "mean_rank_loss": 1.255394321680069, "mean_kl": 0.294893554598093, "pair_presentations": 307068, "query_presentations": 51178, "seconds": 1240.7}
+{"seed": 123, "epoch": 2, "step": 1800, "mean_rank_loss": 1.0230939187291193, "mean_kl": 0.274304197492396, "pair_presentations": 345468, "query_presentations": 57578, "seconds": 1368.5}
+{"seed": 123, "epoch": 2, "step": 2000, "mean_rank_loss": 1.0229963213389301, "mean_kl": 0.26886302135700796, "pair_presentations": 383868, "query_presentations": 63978, "seconds": 1496.7}
+{"seed": 123, "epoch": 2, "step": 2200, "mean_rank_loss": 1.023062409977775, "mean_kl": 0.27012775603774164, "pair_presentations": 422268, "query_presentations": 70378, "seconds": 1624.0}
+{"seed": 123, "epoch": 2, "step": 2400, "mean_rank_loss": 1.0307012199939038, "mean_kl": 0.27245737296870404, "pair_presentations": 460668, "query_presentations": 76778, "seconds": 1751.3}
+{"seed": 123, "epoch": 2, "step": 2600, "mean_rank_loss": 1.0287520902147933, "mean_kl": 0.27204979323499384, "pair_presentations": 499068, "query_presentations": 83178, "seconds": 1879.2}
+{"seed": 123, "epoch": 2, "step": 2800, "mean_rank_loss": 1.0262518999858516, "mean_kl": 0.27362386026956853, "pair_presentations": 537468, "query_presentations": 89578, "seconds": 2006.0}
+{"seed": 123, "epoch": 2, "step": 3000, "mean_rank_loss": 1.025988058053832, "mean_kl": 0.27390318976191547, "pair_presentations": 575868, "query_presentations": 95978, "seconds": 2132.4}
+{"seed": 123, "epoch": 2, "step": 3190, "mean_rank_loss": 1.0246255229911032, "mean_kl": 0.27429206715478693, "pair_presentations": 612216, "query_presentations": 102036, "seconds": 2252.6}

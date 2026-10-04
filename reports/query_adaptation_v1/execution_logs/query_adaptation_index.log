@@ -1,0 +1,33 @@
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3570.25it/s]
+{"fiqa_documents_encoded": 256, "total": 57638, "seconds": 24.6}
+{"fiqa_documents_encoded": 2304, "total": 57638, "seconds": 32.4}
+{"fiqa_documents_encoded": 4352, "total": 57638, "seconds": 40.4}
+{"fiqa_documents_encoded": 6400, "total": 57638, "seconds": 48.2}
+{"fiqa_documents_encoded": 8448, "total": 57638, "seconds": 56.4}
+{"fiqa_documents_encoded": 10496, "total": 57638, "seconds": 64.5}
+{"fiqa_documents_encoded": 12544, "total": 57638, "seconds": 72.6}
+{"fiqa_documents_encoded": 14592, "total": 57638, "seconds": 80.4}
+{"fiqa_documents_encoded": 16640, "total": 57638, "seconds": 88.6}
+{"fiqa_documents_encoded": 18688, "total": 57638, "seconds": 96.8}
+{"fiqa_documents_encoded": 20736, "total": 57638, "seconds": 104.8}
+{"fiqa_documents_encoded": 22784, "total": 57638, "seconds": 112.6}
+{"fiqa_documents_encoded": 24832, "total": 57638, "seconds": 120.5}
+{"fiqa_documents_encoded": 26880, "total": 57638, "seconds": 128.9}
+{"fiqa_documents_encoded": 28928, "total": 57638, "seconds": 137.1}
+{"fiqa_documents_encoded": 30976, "total": 57638, "seconds": 145.3}
+{"fiqa_documents_encoded": 33024, "total": 57638, "seconds": 153.2}
+{"fiqa_documents_encoded": 35072, "total": 57638, "seconds": 161.5}
+{"fiqa_documents_encoded": 37120, "total": 57638, "seconds": 169.4}
+{"fiqa_documents_encoded": 39168, "total": 57638, "seconds": 177.5}
+{"fiqa_documents_encoded": 41216, "total": 57638, "seconds": 185.6}
+{"fiqa_documents_encoded": 43264, "total": 57638, "seconds": 193.8}
+{"fiqa_documents_encoded": 45312, "total": 57638, "seconds": 202.0}
+{"fiqa_documents_encoded": 47360, "total": 57638, "seconds": 210.3}
+{"fiqa_documents_encoded": 49408, "total": 57638, "seconds": 218.3}
+{"fiqa_documents_encoded": 51456, "total": 57638, "seconds": 226.3}
+{"fiqa_documents_encoded": 53504, "total": 57638, "seconds": 234.4}
+{"fiqa_documents_encoded": 55552, "total": 57638, "seconds": 242.3}
+{"fiqa_documents_encoded": 57600, "total": 57638, "seconds": 250.3}
+{"completed": true, "seconds": 255.4}

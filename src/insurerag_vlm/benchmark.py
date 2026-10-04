@@ -14,7 +14,7 @@ from .config import ModelConfig
 from .evaluation import compute_citation_precision, f1_score
 from .pipeline import DocumentRetrievalPipeline
 from .preprocess import PageImagePreprocessConfig, preprocess_page_images
-from .qa import _read_jsonl, generate_policy_qa_pairs
+from .qa import _read_jsonl, _retrieval_gold, _retrieval_hit_positions, generate_policy_qa_pairs
 from .visual import build_visual_index, compute_visual_retrieval_metrics
 
 
@@ -180,18 +180,13 @@ def _text_retrieval_metrics(
     ndcg_10 = 0.0
     latencies: List[float] = []
     for item in examples:
+        _retrieval_gold(item)
         start = time.perf_counter()
         ranked = pipeline.rank_pages(item["question"], data_folder, top_k=top_k)
         latencies.append((time.perf_counter() - start) * 1000)
-        gold_sources = set(item.get("evidence_sources") or item.get("citations") or [])
-        ranked_sources = [candidate["source"] for candidate in ranked]
-        hit_positions = [
-            idx + 1
-            for idx, source in enumerate(ranked_sources[:10])
-            if source in gold_sources
-        ]
-        recall_1 += int(bool(ranked_sources[:1]) and ranked_sources[0] in gold_sources)
-        recall_5 += int(any(source in gold_sources for source in ranked_sources[:5]))
+        hit_positions = _retrieval_hit_positions(item, ranked[:10])
+        recall_1 += int(1 in hit_positions)
+        recall_5 += int(any(position <= 5 for position in hit_positions))
         if hit_positions:
             first_hit = hit_positions[0]
             mrr_10 += 1.0 / first_hit

@@ -1,0 +1,234 @@
+{
+  "review_method": "Agent inspected one question and the first 330 answer characters per source URL before transfer inference; all 416 full spans also verified mechanically. This is not independent expert adjudication.",
+  "reviewed_source_count": 37,
+  "examples": [
+    {
+      "id": "gov_question_d3c395c7a2395138",
+      "source_url": "https://www.medicaid.gov/media/131936",
+      "question": "Are states required to provide 12 months postpartum coverage for Medicaid and CHIP beneficiaries?",
+      "answer_start": "No. States are not required to extend postpartum coverage in Medicaid and CHIP, but extending postpartum coverage offers opportunities to provide care that can reduce pregnancy- related death and severe maternal morbidity and improve continuity of care for chronic conditions including behavioral health conditions. States that ha"
+    },
+    {
+      "id": "gov_question_74ff40e25037efc9",
+      "source_url": "https://www.medicaid.gov/media/39566",
+      "question": "When will the Basic Health Program be operational?",
+      "answer_start": "Given the scope of the coverage changes that states and the federal government will be implementing on January 1, 2014, and the value of building on the experience that will be gained from those changes, HHS expects to issue proposed rules regarding the Basic Health Program for comment in 2013 and final guidance in 2014, so that"
+    },
+    {
+      "id": "gov_question_23263beb85c50568",
+      "source_url": "https://www.medicaid.gov/media/130441",
+      "question": "What are the maximum monthly premiums BHP enrollees can be charged in 2021 and 2022, under Section 9661 of the ARP?",
+      "answer_start": "Section 1331(a)(2)(A)(i) of the Affordable Care Act requires that the amount of the monthly premium an eligible individual pays for coverage under a BHP standard health plan must not exceed the amount of the monthly premium the individual would have been required to pay had the individual instead enrolled in the second-lowest co"
+    },
+    {
+      "id": "gov_question_b5a820d2a68eec79",
+      "source_url": "https://www.medicaid.gov/media/40716",
+      "question": "What is the Institution for Mental Diseases (IMD) Exclusion?",
+      "answer_start": "Section 1905(i) of the Social Security Act (Act) defines an IMD as a hospital, nursing facility, or other institution of more than 16 beds, that is primarily engaged in providing diagnosis, treatment, or care of persons with mental diseases including medical attention, nursing care, and related services. 3 See new section 472(k)"
+    },
+    {
+      "id": "gov_question_21be65c7cef2a325",
+      "source_url": "https://www.medicaid.gov/media/156571",
+      "question": "If CMS determines after the reapproval review the system no longer meets the conditions for reapproval, CMS will reduce FFP for related expenditures for system operations. What does CMS mean by related operational expenditures? Is there a predefined list, or is this determined on a case-by-case basis?",
+      "answer_start": "CMS will assess on a case-by-case basis the extent to which the state's system is non- compliant and will target reduction of FFP for specific system operation costs, which might include one or more module(s)."
+    },
+    {
+      "id": "gov_question_265a1acc6b51bee9",
+      "source_url": "https://www.medicaid.gov/media/116131",
+      "question": "When does a new eligibility period begin and end for an individual whose eligibility is being redetermined at renewal? How is a beneficiarys renewal date determined?",
+      "answer_start": "Individuals enrolled in CHIP or in a Medicaid eligibility group for which the determination of financial eligibility is based on modified adjusted gross income (MAGI), have a 12-month eligibility period. The 12-month period extends from the effective date of the last determination of eligibility, or to the end of the twelfth mon"
+    },
+    {
+      "id": "gov_question_3d331946d2717a74",
+      "source_url": "https://www.medicaid.gov/media/40126",
+      "question": "If a state is already using actual acquisition cost (AAC) as their reimbursement methodology, does the state need to file a State Plan Amendment (SPA) or provide assurances that the current formula meets requirements established in the final rule? Is there a requirement for such states to file a SPA to provide assurance that the states current dispensing fee amount meets the requirements of the final rule?",
+      "answer_start": "If a state is already making payment for prescription drugs under its state plan based on AAC, it may continue to use that methodology. However, if a state decides to change its AAC model of reimbursement, (e.g., the state decides to use the National Average Drug Acquisition Cost (NADAC) instead of a state survey to implement a "
+    },
+    {
+      "id": "gov_question_6f20f09b85d3b494",
+      "source_url": "https://www.medicaid.gov/media/40081",
+      "question": "How should states report 75 percent Medicaid Eligibility and Enrollment (E&E) system maintenance and operations (M&O) activity expenditures on the CMS- 64-10 and CMS-37-10?",
+      "answer_start": "The CMS-64-10 and CMS-37-10 forms capture Medicaid E&E systems M&O expenditures. Such expenditures are tracked separately as follows: M&O expenditures for Medicaid E&E systems, excluding eligibility workers, are reported on the CMS-64.10 and CMS-37.10 on Line 28C Operation of an approved Medicaid Eligibility Determination System"
+    },
+    {
+      "id": "gov_question_b34efabc452e1135",
+      "source_url": "https://www.medicaid.gov/media/39876",
+      "question": "What are the parameters of the Social Security Act related to the liability of health insurers and other third parties in paying for health care services provided to Medicaid beneficiaries?",
+      "answer_start": "The Social Security Act (the Act) generally requires health insurers and other third parties that are legally liable to pay for health care services received by Medicaid beneficiaries to pay for the services that are primary to Medicaid. However, state Medicaid agencies might mistakenly pay claims for which a third party may be "
+    },
+    {
+      "id": "gov_question_1ccd3c1bce3441f2",
+      "source_url": "https://www.medicaid.gov/media/40096",
+      "question": "Inmate Defined: Who is an inmate of a public institution?",
+      "answer_start": "Medicaid regulations at 42 Code of Federal Regulations (CFR) 435.1010 define an inmate of a public institution as \"a person living in a public institution and define a public institution as an institution that is the responsibility of a governmental unit or over which a governmental unit exercises administrative control. A publi"
+    },
+    {
+      "id": "gov_question_a01595b8a16dcfb7",
+      "source_url": "https://www.medicaid.gov/media/40221",
+      "question": "Are states required to cover drugs for the treatment of sexually transmitted diseases (STD)/sexually transmitted infections (STI) if diagnosed during the regular family planning visit for individuals eligible through the optional family planning eligibility group? What Federal Medical Assistance Percentage (FMAP) rate applies?",
+      "answer_start": "Treatment of STDs/STIs may be covered as a family planning related service pursuant to a family planning visit at state option. If a state decides to cover treatment for STD/STIs as a family planning related service, then drugs for the treatment for STD/STIs would be required. Further, such drugs would be subject to the requirem"
+    },
+    {
+      "id": "gov_question_65292c2b0d68ddd2",
+      "source_url": "https://www.medicaid.gov/media/40161",
+      "question": "A number of provisions in the Final Rule were not subject to substantive changes but were redesignated in a new section in 42 CFR part 438 and have an implementation date of July 5, 2016. Will states be required to amend regulatory citations in approved contracts or contracts currently under CMS review?",
+      "answer_start": "CMS understands that many managed care contracts include a general provision that incorporates changes in federal law during the course of the contract term. Amendments to approved contracts, or contracts under CMS review, for the purpose of updating regulatory citations is not necessary. However, the citations will need to be u"
+    },
+    {
+      "id": "gov_question_4362509874877e87",
+      "source_url": "https://www.medicaid.gov/media/39896",
+      "question": "How should states account for the cost of the Health Insurance Providers Fee in their actuarially sound capitation rates?",
+      "answer_start": "States and their actuaries have flexibility in incorporating the Health Insurance Providers Fee into the states managed care capitation rates. This fee is not unlike other taxes and fees that actuaries regularly reflect in developing capitation rates as part of the non- benefit portion of the rate. CMS believes that the Health I"
+    },
+    {
+      "id": "gov_question_229498516eefd3ae",
+      "source_url": "https://www.medicaid.gov/media/40731",
+      "question": "What does a state need to submit in order to apply for an SMI/SED demonstration?",
+      "answer_start": "Per the State Medicaid Director Letter (SMDL) describing this opportunity (referred to as the SMI/SED SMDL) (available at: https://www.medicaid.gov/federal-policy- guidance/downloads/smd18011.pdf), states should commit to ongoing maintenance of effort (MOE) on funding outpatient community-based mental health services and are enc"
+    },
+    {
+      "id": "gov_question_d2d29543a9ee9250",
+      "source_url": "https://www.medicaid.gov/media/40241",
+      "question": "Does the availability of 100 percent FMAP depend on whether the service furnished by the non- IHS/Tribal provider is billed directly by the non-IHS/Tribal provider or by the IHS/Tribal facility?",
+      "answer_start": "No. If all of the requirements of the SHO letter are met, then federal matching funds are available to the state at the 100 percent rate for the amount paid by the state Medicaid program, regardless of whether the service is billed directly by the non-IHS/Tribal provider or by the IHS/Tribal facility. This is a separate issue th"
+    },
+    {
+      "id": "gov_question_40c993e6de336469",
+      "source_url": "https://www.medicaid.gov/media/39746",
+      "question": "What do states need to do to assure availability of federal funding for the new adult group in 2014?",
+      "answer_start": "We are working with states to help them complete all of the steps needed to implement the new adult group on January 1, 2014. States need to make changes and updates to their Medicaid state plan (and sometimes waiver programs) as expeditiously as possible, so they can accurately determine who is eligible, assist individuals with"
+    },
+    {
+      "id": "gov_question_993ec4109c795f9e",
+      "source_url": "https://www.medicaid.gov/media/39631",
+      "question": "Is there a difference between the definition of Indian/Native American for Medicaid and the Exchange. Can you clarify what the difference is?",
+      "answer_start": "For purposes of eligibility for coverage through the Marketplace, the Affordable Care Act defines Indians as individuals who are members of a federally recognized Indian Tribe. The definition of Indian currently in use for Medicaid beneficiaries follows a broader definition that includes descendants of Indians and all American I"
+    },
+    {
+      "id": "gov_question_41196248f7301e4d",
+      "source_url": "https://www.medicaid.gov/media/40316",
+      "question": "What benefits are subject to the parity analysis?",
+      "answer_start": "All medical/surgical (M/S) and mental health and substance use disorder (MH/SUD) benefits that are provided through an Alternative Benefit Plan (ABP) in a state Medicaid program; through the Childrens Health Insurance Program (CHIP); or to enrollees of a Managed Care Organization (MCO) (regardless whether the services are furnis"
+    },
+    {
+      "id": "gov_question_dc372cea324181d5",
+      "source_url": "https://www.medicaid.gov/media/39611",
+      "question": "What methods can be used for conversion to modified adjusted gross income (MAGI)?",
+      "answer_start": "Effective January 1, 2014, MAGI eligibility rules will be used to determine eligibility for nonelderly, nondisabled eligibility groups. The transition to MAGI also involves converting current net income eligibility standards to MAGI standards. MAGI rules apply regardless of whether a state adopts the new adult eligibility group."
+    },
+    {
+      "id": "gov_question_1f96456ddd00e5af",
+      "source_url": "https://www.medicaid.gov/media/39781",
+      "question": "What is hospital presumptive eligibility and how is it different from presumptive eligibility (PE) for pregnant women and children?",
+      "answer_start": "For years, states have had the option to use presumptive eligibility (PE) to connect pregnant women and children to Medicaid. Hospitals were often key to implementing PE for those populations. Starting in January 2014, the Affordable Care Act gives qualified hospitals a unique new opportunity to connect other populations to Medi"
+    },
+    {
+      "id": "gov_question_671fb3e430088ee0",
+      "source_url": "https://www.medicaid.gov/media/40226",
+      "question": "What is a health services initiative?",
+      "answer_start": "States have the option under title XXI to develop a state-designed Health Services Initiatives (HSI) to improve the health of low-income children. HSIs are permitted under section 2105(a)(1)(D)(ii) of the Act and are defined in the regulations at 42 CFR 457.10. Both direct services and public health initiatives are permitted und"
+    },
+    {
+      "id": "gov_question_19a8846b168505ea",
+      "source_url": "https://www.medicaid.gov/media/39391",
+      "question": "How does section 501(d) affect State Medicaid and CHIP programs?",
+      "answer_start": "This section removes potential barriers to FQHCs contracting with private dental providers to furnish Medicaid and/or CHIP-covered FQHC services. In the past, some State Medicaid agencies may have required dental providers who contracted with FQHCs to individually enroll in the Medicaid program. This is no longer permissible und"
+    },
+    {
+      "id": "gov_question_e6e0fbb0aae1c091",
+      "source_url": "https://www.medicaid.gov/media/36996",
+      "question": "Why are the Department of Justice (DOJ) and the Immigration and Naturalization Service (INS) issuing field guidance and a proposed regulation concerning public charge, and what is the effect of these documents?",
+      "answer_start": "DOJ and INS are issuing this guidance and proposed regulation to alleviate growing public confusion over the meaning of the currently undefined term \"public charge\" in immigration law and its relationship to the receipt of Federal, State, or local public benefits. By defining \"public charge,\" DOJ seeks to reduce the negative pub"
+    },
+    {
+      "id": "gov_question_06999ede1922618c",
+      "source_url": "https://www.medicaid.gov/media/40306",
+      "question": "What is the implementation date for the provision at 438.6(e), which would permit a state to make a capitation payment to an MCO or PIHP for an enrollee with a short-term stay in an Institution for Mental Disease (IMD)? The Final Rule at page 27560 provides that states must be in compliance for the rating period for contracts starting July 1, 2017, while the compliance date section in the Final Rule at page 27499 provides that the implementation date is July 5, 2016; which is the effective date for the Final Rule?",
+      "answer_start": "We acknowledge and regret the conflicting dates set forth in the preamble to the Final Rule describing CMS enforcement of compliance with 438.6(e). We intended that the compliance date section at page 27499 of the Final Rule would be the applicable date for CMS enforcement of compliance; therefore, we will review compliance with"
+    },
+    {
+      "id": "gov_question_a3848c5fdf6a0a60",
+      "source_url": "https://www.medicaid.gov/media/39966",
+      "question": "Is provider and supplier screening in Medicaid and CHIP required by statute?",
+      "answer_start": "Yes. Section 6401(a) of the Affordable Care Act amended section 1866(j) (2) of the Social Security Act (the Act) to require the Secretary, in consultation with the HHS Office of Inspector General, to establish procedures for screening providers and suppliers under Medicare, Medicaid, and CHIP. The Secretary was directed to deter"
+    },
+    {
+      "id": "gov_question_ca7a871a49090d36",
+      "source_url": "https://www.medicaid.gov/media/40116",
+      "question": "When do the changes to the conditions at 45 CFR 433.112(b) need to be included in APD submissions?",
+      "answer_start": "The new conditions described at 45 CFR 433.112(b), as well as the revisions to the previously existing conditions, will not be applied to APDs that were approved before the effective date of the regulation, January 1, 2016. As discussed in the final rule at 80 FR 75825, these changes will apply to APDs pending as of January 1, 2"
+    },
+    {
+      "id": "gov_question_9cbfe7267a79e9c4",
+      "source_url": "https://www.medicaid.gov/media/37846",
+      "question": "What Electronic Data Interchange (EDI) transactions are being recommended by the Secretary of Health and Human Services for transmitting plan eligibility and coverage information to State Medicaid agencies?",
+      "answer_start": "Section 1902(a)(25)(I)(i) of the Social Security Act directs States to enact laws requiring health insurers to provide the requisite information in a manner prescribed by the Secretary. CMS collaborated with States and representatives of the health care industry to determine the most efficient way to transmit the required data e"
+    },
+    {
+      "id": "gov_question_2e12643fd74b0269",
+      "source_url": "https://www.medicaid.gov/media/40746",
+      "question": "How do lottery and gambling winnings received by parents impact their childrens eligibility for Medicaid?",
+      "answer_start": "The changes to section 1902(e)(14) of the Act made by the Bipartisan Budget Act of 2018 (Pub. L. No. 115-123, BBA of 2018) only impact the MAGI-based household income of the individuals who themselves receive the lottery or gambling winnings. Therefore, when determining Medicaid eligibility for a child who lives with a parent, t"
+    },
+    {
+      "id": "gov_question_efc565aaaaa8933d",
+      "source_url": "https://www.medicaid.gov/media/39736",
+      "question": "Can states rely on the information contained in the enhanced flat files?",
+      "answer_start": "We believe these files have information that states can rely on. As with any transmission of data or logic process, discrepancies may arise. However, we have done quality reviews and continue to act on reports of issues as quickly as possible by investigating them and introducing systems fixes as needed. We are continuing our te"
+    },
+    {
+      "id": "gov_question_1c3d57fac028eb6a",
+      "source_url": "https://www.medicaid.gov/media/40711",
+      "question": "What is the opportunity for claiming FFP under the SMI/SED demonstration authority?",
+      "answer_start": "Under the SMI/SED demonstration opportunity, upon CMS approval, a state can receive FFP for services furnished to Medicaid beneficiaries during short term stays for acute care in psychiatric hospitals or residential treatment settings that qualify as IMDs.1 The SMDL also states that states will be expected to achieve a statewide"
+    },
+    {
+      "id": "gov_question_a86eaf014b7dd86a",
+      "source_url": "https://www.medicaid.gov/media/166466",
+      "question": "Our state processed but did not act on changes in circumstances while the continuous enrollment condition was in effect. Are individuals who experienced a TMA-qualifying event while the continuous enrollment condition was in effect entitled to TMA following a renewal of eligibility during the states unwinding period?",
+      "answer_start": "Yes. Some states conducted renewals or redeterminations while the continuous enrollment condition was in effect, but did not transition individuals from the P/CR group to TMA coverage when they experienced a TMA-qualifying event. These states are required to provide prospective TMA coverage to individuals who experienced a TMA-q"
+    },
+    {
+      "id": "gov_question_ff97b74ff5051e0f",
+      "source_url": "https://www.medicaid.gov/media/39931",
+      "question": "Regulations at 42 CFR 438.104(b) (1) (IV) prohibit Medicaid managed care plans from seeking to influence enrollment in their plan in conjunction with the sale or offering of private insurance. Does this prohibit a carrier that offers both a qualified health plan (QHP) and a Medicaid managed care plan from marketing both products?",
+      "answer_start": "The regulation only prohibits insurance policies that would be sold in conjunction with enrollment in the Medicaid managed care plan. Section 438.104 alone does not prohibit a Medicaid managed care plan from providing information about a Qualified Health Plans (QHP) to potential enrollees who could enroll in such a plan as an al"
+    },
+    {
+      "id": "gov_question_c1585d8fdbe0b0d3",
+      "source_url": "https://www.medicaid.gov/media/40481",
+      "question": "What is the Office of Management and Budget (OMB) Circular A-87 Exception?",
+      "answer_start": "OMB Circular A-87 requires costs associated with building shared state-based Information Technology (IT) systems that support multiple health and human service programs be allocated across all benefitting programs in proportion to their use of the system. The OMB A-87 Exception revised this approach by allowing human service pro"
+    },
+    {
+      "id": "gov_question_a2392d5675ab5cb4",
+      "source_url": "https://www.medicaid.gov/media/40826",
+      "question": "Are states required to implement a minimum MLR or require an MLR remittance?",
+      "answer_start": "In general, while CMS believes that a minimum MLR with a remittance requirement is a reasonable and effective program integrity approach to ensure high quality of care and appropriate service delivery in Medicaid managed care programs, states are not required to set a minimum MLR or require a remittance under federal law. Howeve"
+    },
+    {
+      "id": "gov_question_4142ffe5d31e1142",
+      "source_url": "https://www.medicaid.gov/media/39891",
+      "question": "Has CMS mandated Applied Behavior Analysis (ABA) services for children under 21 with Autism Spectrum Disorder (ASD)?",
+      "answer_start": "No. Applied Behavior Analysis (ABA) is one treatment modality for ASD. CMS is not endorsing or requiring any particular treatment modality for ASD. State Medicaid agencies are responsible for determining what services are medically necessary for eligible individuals. States are expected to adhere to long-standing EPSDT obligatio"
+    },
+    {
+      "id": "gov_question_fcafb54df853609a",
+      "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-i.pdf",
+      "question": "Under the Affordable Care Act, there are various provisions that apply to group health plans and health insurance issuers and various protections and benefits for consumers that are beginning to take effect or that will become effective very soon. What is the Departments basic approach to implementation?",
+      "answer_start": "The Departments are working together with employers, issuers, States, providers and other stakeholders to help them come into compliance with the new law and are working with families and individuals to help them understand the new law and benefit from it, as intended. Compliance assistance is a high priority for the Departments"
+    },
+    {
+      "id": "gov_question_2d22631b6936f4e2",
+      "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-ii.pdf",
+      "question": "My plan offers three benefit package options a PPO, a POS arrangement, and an HMO. If the HMO relinquishes grandfather status, does that mean that the PPO and POS arrangement must also relinquish grandfather status?",
+      "answer_start": "No. The grandfather analysis applies on a benefit-package-by-benefit-package basis. In this situation, it is permissible to treat the PPO, POS arrangement, and HMO as separate benefit packages. Accordingly, if any benefit package ceases grandfather status, it does not affect the grandfather status of the other benefit packages."
+    }
+  ],
+  "observed_limitations": [
+    "Extracted text can omit apostrophes and other symbols.",
+    "Footnotes can interrupt answers, e.g. the Institution for Mental Diseases definition.",
+    "Some questions refer to a final rule, acronyms or historical dates without supplying full surrounding context.",
+    "One example per source is a sample, not exhaustive semantic validation."
+  ]
+}

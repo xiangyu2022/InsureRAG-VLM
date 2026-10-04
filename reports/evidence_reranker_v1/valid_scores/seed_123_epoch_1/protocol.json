@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-10-03T05:35:31.107243+00:00",
+  "split": "valid",
+  "model": "seed_123_epoch_1",
+  "selection_protocol_sha256": "610d77f635853385c52e0bfcf0e3c216bb61b0a3fa5aa46b4e74a27fbc4aeeac",
+  "selection_lock_sha256": null,
+  "candidate_manifest_sha256": "1284842c4e2b0a351cbb96c6bc029aeefe3c71e92201f1322477a0bfb550fa5b",
+  "model_fingerprint": {
+    "model_path": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\insurerag-evidence-reranker-v1-seed-123\\epoch-1",
+    "files_sha256": {
+      "config.json": "bde16d9648b01e19b9d4c5f3deca28cd2851fbbc660f8a90cecd87efde5c5429",
+      "model.safetensors": "86e884686721266593061e4dfb7bfc4bffb33f54783e9ddc3616adc8f50fd67a",
+      "tokenizer.json": "91f1def9b9391fdabe028cd3f3fcc4efd34e5d1f08c3bf2de513ebb5911a1854",
+      "tokenizer_config.json": "88eb33800f51cc08e19ebe4dffbde5afbc9e517a993ede2861a22ed9c7e0be7f",
+      "training_provenance.json": "2c0e87a5012e81a11f040ea50bc5ab92324ce33a6e495e927931de55bea97ca8"
+    },
+    "checkpoint_sha256": "fdf59a4b36e00d115e5ffc5ed207a52ad5ad5ce0e9cd12ae1bb08c5d03a18315",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "max_length": 512,
+    "batch_size": 64,
+    "truncation": "longest_first",
+    "score": "raw single relevance logit",
+    "remote_code": false,
+    "fine_tuned_in_this_project": true,
+    "training_provenance": {
+      "fine_tuned_in_this_project": true,
+      "seed": 123,
+      "epoch": 1,
+      "weights_sha256": "86e884686721266593061e4dfb7bfc4bffb33f54783e9ddc3616adc8f50fd67a",
+      "initial_weights_sha256": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+      "training_protocol_sha256": "a7c911fde163fa59af3f0c4c94dee628bfc0843bdacadcfed5c0715625460ea0",
+      "optimizer_steps": 1595,
+      "pair_presentations": 306108,
+      "query_presentations": 51018,
+      "recipe": "head-weighted pairwise plus listwise ranking, refreshed negatives and frozen-teacher KL"
+    }
+  },
+  "fixed_query_model_sha256": "e067a9a14428aabb32dbd2f0e84a7af31bcb8290ffc6fe422faed906d4d5b857",
+  "training_inputs_used": false
+}

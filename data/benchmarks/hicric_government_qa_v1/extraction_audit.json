@@ -1,0 +1,4095 @@
+{
+  "rejected_sections": [
+    {
+      "offset": 415590,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b05963c3d0c20fc9"
+    },
+    {
+      "offset": 415644,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b05963c3d0c20fc9"
+    },
+    {
+      "offset": 415674,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b05963c3d0c20fc9"
+    },
+    {
+      "offset": 415730,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b05963c3d0c20fc9"
+    },
+    {
+      "offset": 415755,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b05963c3d0c20fc9"
+    },
+    {
+      "offset": 70973,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_6944001ac0517765"
+    },
+    {
+      "offset": 15696,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1a68c918d5f69aff"
+    },
+    {
+      "offset": 16010,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1a68c918d5f69aff"
+    },
+    {
+      "offset": 16325,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1a68c918d5f69aff"
+    },
+    {
+      "offset": 17516,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1a68c918d5f69aff"
+    },
+    {
+      "offset": 18042,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1a68c918d5f69aff"
+    },
+    {
+      "offset": 18422,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1a68c918d5f69aff"
+    },
+    {
+      "offset": 19031,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1a68c918d5f69aff"
+    },
+    {
+      "offset": 19791,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1a68c918d5f69aff"
+    },
+    {
+      "offset": 20327,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1a68c918d5f69aff"
+    },
+    {
+      "offset": 21581,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1a68c918d5f69aff"
+    },
+    {
+      "offset": 21919,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1a68c918d5f69aff"
+    },
+    {
+      "offset": 22287,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1a68c918d5f69aff"
+    },
+    {
+      "offset": 23002,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1a68c918d5f69aff"
+    },
+    {
+      "offset": 1562,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_dbfeaf5cd5062a68"
+    },
+    {
+      "offset": 3948,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_dbfeaf5cd5062a68"
+    },
+    {
+      "offset": 6843,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_dbfeaf5cd5062a68"
+    },
+    {
+      "offset": 15233,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_a97735d20306132c"
+    },
+    {
+      "offset": 4582,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 6143,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 7031,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 7384,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 7737,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 8298,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 9234,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 9556,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 10869,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 11238,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 11677,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 12242,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 13078,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 13737,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 14002,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 15380,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 15532,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 15854,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5e929116fc6575a6"
+    },
+    {
+      "offset": 10927,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ea087d4569ab3a0a"
+    },
+    {
+      "offset": 10982,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ea087d4569ab3a0a"
+    },
+    {
+      "offset": 11034,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ea087d4569ab3a0a"
+    },
+    {
+      "offset": 11090,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ea087d4569ab3a0a"
+    },
+    {
+      "offset": 1903,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_d11ea6a97da3ff3f"
+    },
+    {
+      "offset": 7026,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_d11ea6a97da3ff3f"
+    },
+    {
+      "offset": 11065,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_d11ea6a97da3ff3f"
+    },
+    {
+      "offset": 13924,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_d11ea6a97da3ff3f"
+    },
+    {
+      "offset": 58771,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_30d096ea2400349c"
+    },
+    {
+      "offset": 6336,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_9cf93b465897b78c"
+    },
+    {
+      "offset": 8381,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_9cf93b465897b78c"
+    },
+    {
+      "offset": 14669,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_9cf93b465897b78c"
+    },
+    {
+      "offset": 16426,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_9cf93b465897b78c"
+    },
+    {
+      "offset": 17213,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_9cf93b465897b78c"
+    },
+    {
+      "offset": 28215,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_9cf93b465897b78c"
+    },
+    {
+      "offset": 33403,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_9cf93b465897b78c"
+    },
+    {
+      "offset": 11253,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_fb4af2c513482c9e"
+    },
+    {
+      "offset": 14634,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_fb4af2c513482c9e"
+    },
+    {
+      "offset": 26956,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_fb4af2c513482c9e"
+    },
+    {
+      "offset": 11589,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_4adc0c70847c5fca"
+    },
+    {
+      "offset": 13214,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_4adc0c70847c5fca"
+    },
+    {
+      "offset": 20973,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_4adc0c70847c5fca"
+    },
+    {
+      "offset": 33035,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_4adc0c70847c5fca"
+    },
+    {
+      "offset": 341,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a405c9fb31f53a71"
+    },
+    {
+      "offset": 1709,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a405c9fb31f53a71"
+    },
+    {
+      "offset": 2539,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a405c9fb31f53a71"
+    },
+    {
+      "offset": 3330,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a405c9fb31f53a71"
+    },
+    {
+      "offset": 8594,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4737360b50ef1a88"
+    },
+    {
+      "offset": 9535,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4737360b50ef1a88"
+    },
+    {
+      "offset": 9938,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4737360b50ef1a88"
+    },
+    {
+      "offset": 10901,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4737360b50ef1a88"
+    },
+    {
+      "offset": 11656,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4737360b50ef1a88"
+    },
+    {
+      "offset": 12192,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4737360b50ef1a88"
+    },
+    {
+      "offset": 3688,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_666a65de2ba734b8"
+    },
+    {
+      "offset": 9017,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_666a65de2ba734b8"
+    },
+    {
+      "offset": 10319,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_666a65de2ba734b8"
+    },
+    {
+      "offset": 98657,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 101293,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 102333,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 102584,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 102930,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 104371,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 104929,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 105321,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 106237,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 106865,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 107194,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 107988,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 108501,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 109313,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 112506,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0c2846ae8f0177bc"
+    },
+    {
+      "offset": 5454,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_fdf5f0a1211f4795"
+    },
+    {
+      "offset": 7826,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_fdf5f0a1211f4795"
+    },
+    {
+      "offset": 11072,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_fdf5f0a1211f4795"
+    },
+    {
+      "offset": 13261,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_fdf5f0a1211f4795"
+    },
+    {
+      "offset": 3801,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_a21afca314955742"
+    },
+    {
+      "offset": 18574,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_a21afca314955742"
+    },
+    {
+      "offset": 1527,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_8fd3f81aa40a9036"
+    },
+    {
+      "offset": 4757,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_8fd3f81aa40a9036"
+    },
+    {
+      "offset": 18416,
+      "reason": "question_depends_on_omitted_context",
+      "record_id": "hicric_8fd3f81aa40a9036"
+    },
+    {
+      "offset": 119798,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 119893,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 122698,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 122872,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 123054,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 123237,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 123436,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 124403,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 124577,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 124759,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 124942,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 125141,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 125343,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 125457,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 125588,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 126375,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 126553,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 126634,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 126792,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 126921,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 127153,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 127283,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 127428,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 127545,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 127785,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 127881,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 128051,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 128148,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 128232,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 128387,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 128515,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 128636,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 128750,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 128901,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 129000,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 130142,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 130275,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 130452,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 131837,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 131932,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 132156,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 132330,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 132512,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 132695,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 132894,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 133096,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 133210,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 133341,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 133543,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 133721,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 133802,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 135115,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 135210,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 135472,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 135605,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 136368,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 136581,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 136709,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 136830,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 136944,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 137095,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 137194,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_9870c0b7f6eeff2e"
+    },
+    {
+      "offset": 339,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a2fce8171a113cae"
+    },
+    {
+      "offset": 2693,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a2fce8171a113cae"
+    },
+    {
+      "offset": 3270,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a2fce8171a113cae"
+    },
+    {
+      "offset": 3819,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a2fce8171a113cae"
+    },
+    {
+      "offset": 4295,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a2fce8171a113cae"
+    },
+    {
+      "offset": 326,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b29373baeebebda4"
+    },
+    {
+      "offset": 2065,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b29373baeebebda4"
+    },
+    {
+      "offset": 2610,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b29373baeebebda4"
+    },
+    {
+      "offset": 3321,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b29373baeebebda4"
+    },
+    {
+      "offset": 3901,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b29373baeebebda4"
+    },
+    {
+      "offset": 5278,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b29373baeebebda4"
+    },
+    {
+      "offset": 6533,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b29373baeebebda4"
+    },
+    {
+      "offset": 7635,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b29373baeebebda4"
+    },
+    {
+      "offset": 9010,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b29373baeebebda4"
+    },
+    {
+      "offset": 4882,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_0609872b4ac9c432"
+    },
+    {
+      "offset": 7541,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0609872b4ac9c432"
+    },
+    {
+      "offset": 7742,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0609872b4ac9c432"
+    },
+    {
+      "offset": 12184,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_0609872b4ac9c432"
+    },
+    {
+      "offset": 16531,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_0609872b4ac9c432"
+    },
+    {
+      "offset": 16754,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_0609872b4ac9c432"
+    },
+    {
+      "offset": 23375,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_0609872b4ac9c432"
+    },
+    {
+      "offset": 1483,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_865a6105e1b8ac67"
+    },
+    {
+      "offset": 7287,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_865a6105e1b8ac67"
+    },
+    {
+      "offset": 11128,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_865a6105e1b8ac67"
+    },
+    {
+      "offset": 16872,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_865a6105e1b8ac67"
+    },
+    {
+      "offset": 194,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_d0266ce9db51ebe5"
+    },
+    {
+      "offset": 3051,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_d0266ce9db51ebe5"
+    },
+    {
+      "offset": 7506,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_d0266ce9db51ebe5"
+    },
+    {
+      "offset": 10011,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_d0266ce9db51ebe5"
+    },
+    {
+      "offset": 17474,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_d0266ce9db51ebe5"
+    },
+    {
+      "offset": 19847,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_d0266ce9db51ebe5"
+    },
+    {
+      "offset": 23429,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_d0266ce9db51ebe5"
+    },
+    {
+      "offset": 24416,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_d0266ce9db51ebe5"
+    },
+    {
+      "offset": 24530,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_d0266ce9db51ebe5"
+    },
+    {
+      "offset": 1495,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_dd4158a8b4d90675"
+    },
+    {
+      "offset": 10723,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_dd4158a8b4d90675"
+    },
+    {
+      "offset": 342,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4d248ddbab6150cf"
+    },
+    {
+      "offset": 1154,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4d248ddbab6150cf"
+    },
+    {
+      "offset": 362,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_67fc92a82581aa72"
+    },
+    {
+      "offset": 2254,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_67fc92a82581aa72"
+    },
+    {
+      "offset": 2636,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_67fc92a82581aa72"
+    },
+    {
+      "offset": 3579,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_67fc92a82581aa72"
+    },
+    {
+      "offset": 4857,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_67fc92a82581aa72"
+    },
+    {
+      "offset": 5524,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_67fc92a82581aa72"
+    },
+    {
+      "offset": 5825,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_67fc92a82581aa72"
+    },
+    {
+      "offset": 6515,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_67fc92a82581aa72"
+    },
+    {
+      "offset": 7474,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_67fc92a82581aa72"
+    },
+    {
+      "offset": 8605,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_67fc92a82581aa72"
+    },
+    {
+      "offset": 7373,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_738fedff6ee37f5b"
+    },
+    {
+      "offset": 25457,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3cfc22c4b3600a54"
+    },
+    {
+      "offset": 25601,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3cfc22c4b3600a54"
+    },
+    {
+      "offset": 27139,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_3cfc22c4b3600a54"
+    },
+    {
+      "offset": 34951,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_3cfc22c4b3600a54"
+    },
+    {
+      "offset": 45311,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_3cfc22c4b3600a54"
+    },
+    {
+      "offset": 3934,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 5813,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 7612,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 9421,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 10625,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 11108,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 13359,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 14195,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 15422,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 16613,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 17819,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 18757,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 19569,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 20432,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 21219,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 22174,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 23329,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e14f65bcf1c53e5"
+    },
+    {
+      "offset": 6730,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_2af60a2c27973422"
+    },
+    {
+      "offset": 311,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_69163f998644994e"
+    },
+    {
+      "offset": 1884,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_69163f998644994e"
+    },
+    {
+      "offset": 5372,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3d342a745c96fee5"
+    },
+    {
+      "offset": 7041,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3d342a745c96fee5"
+    },
+    {
+      "offset": 9019,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3d342a745c96fee5"
+    },
+    {
+      "offset": 10069,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3d342a745c96fee5"
+    },
+    {
+      "offset": 11508,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3d342a745c96fee5"
+    },
+    {
+      "offset": 3018,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 3438,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 4940,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 6375,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 6834,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 7277,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 8128,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 9410,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 11788,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 12344,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 13425,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 15072,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 16628,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 17004,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 17649,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 17922,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 18445,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 20027,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 20924,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 21432,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 22555,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 27837,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d29967ac26f1220"
+    },
+    {
+      "offset": 9433,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_52d99465ab01fd79"
+    },
+    {
+      "offset": 10212,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_52d99465ab01fd79"
+    },
+    {
+      "offset": 10982,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_52d99465ab01fd79"
+    },
+    {
+      "offset": 9600,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_acb6b77c41ef3a5f"
+    },
+    {
+      "offset": 11833,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_acb6b77c41ef3a5f"
+    },
+    {
+      "offset": 16828,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_acb6b77c41ef3a5f"
+    },
+    {
+      "offset": 21239,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_acb6b77c41ef3a5f"
+    },
+    {
+      "offset": 27254,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_acb6b77c41ef3a5f"
+    },
+    {
+      "offset": 29162,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_3a2cb85b52d1df5c"
+    },
+    {
+      "offset": 7427,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_851f747d56733eae"
+    },
+    {
+      "offset": 14363,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_851f747d56733eae"
+    },
+    {
+      "offset": 114,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_317b3d9876dfe4f3"
+    },
+    {
+      "offset": 33983,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_125927af439d4d1e"
+    },
+    {
+      "offset": 23303,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 24197,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 24512,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 24762,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 25432,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 26103,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 26378,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 26759,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 27498,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 27877,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 28168,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 28558,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 29698,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 30536,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 31234,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 32859,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 32970,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 33345,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 35615,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 36593,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 37384,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 37930,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 38126,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 39024,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 39559,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 39921,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 40516,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 40815,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 42007,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 42317,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 43382,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 44176,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 44757,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 45258,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 45842,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 46363,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 46808,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 47914,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 48212,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 48632,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 49361,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 49807,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 50357,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2d14a1d31150fc2f"
+    },
+    {
+      "offset": 5359,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_b68b2883da042497"
+    },
+    {
+      "offset": 5198,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_b17cbecdca553baa"
+    },
+    {
+      "offset": 9428,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e3ce85176def4a4"
+    },
+    {
+      "offset": 13235,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 13742,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 14031,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 14488,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 14808,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 15145,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 15628,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 15718,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 15880,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 16234,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 17327,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 18069,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 18719,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 19197,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0d802e6825764500"
+    },
+    {
+      "offset": 10441,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_878bce308b140ab9"
+    },
+    {
+      "offset": 12106,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_878bce308b140ab9"
+    },
+    {
+      "offset": 12714,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_878bce308b140ab9"
+    },
+    {
+      "offset": 13517,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_878bce308b140ab9"
+    },
+    {
+      "offset": 14250,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_878bce308b140ab9"
+    },
+    {
+      "offset": 14626,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_878bce308b140ab9"
+    },
+    {
+      "offset": 15453,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_878bce308b140ab9"
+    },
+    {
+      "offset": 16040,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_878bce308b140ab9"
+    },
+    {
+      "offset": 16852,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_878bce308b140ab9"
+    },
+    {
+      "offset": 17960,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_878bce308b140ab9"
+    },
+    {
+      "offset": 19562,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_878bce308b140ab9"
+    },
+    {
+      "offset": 1863,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_8b4d2f6a3e967adf"
+    },
+    {
+      "offset": 7570,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_8b4d2f6a3e967adf"
+    },
+    {
+      "offset": 9954,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_8b4d2f6a3e967adf"
+    },
+    {
+      "offset": 14985,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_8b4d2f6a3e967adf"
+    },
+    {
+      "offset": 23887,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_8b4d2f6a3e967adf"
+    },
+    {
+      "offset": 26671,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_8b4d2f6a3e967adf"
+    },
+    {
+      "offset": 29493,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_8b4d2f6a3e967adf"
+    },
+    {
+      "offset": 37096,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_8b4d2f6a3e967adf"
+    },
+    {
+      "offset": 40968,
+      "reason": "question_depends_on_omitted_context",
+      "record_id": "hicric_8b4d2f6a3e967adf"
+    },
+    {
+      "offset": 42685,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_8b4d2f6a3e967adf"
+    },
+    {
+      "offset": 44119,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_8b4d2f6a3e967adf"
+    },
+    {
+      "offset": 18377,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 19247,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 19952,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 20542,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 21911,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 23778,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 24163,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 26217,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 27150,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 28481,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 30311,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 31560,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 32983,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 33756,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 34943,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 35735,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 36482,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 37032,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 38288,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 38942,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 39210,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 40303,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 40591,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 41545,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 42276,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 42594,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 44581,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 45278,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 46419,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 47133,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 47715,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 48393,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 49045,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 50398,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 54156,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 54625,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 55416,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 56808,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 57716,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_68875da9bcb8b9ec"
+    },
+    {
+      "offset": 378,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 3584,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 5511,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 5991,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 7604,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 8769,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 9707,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 10387,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 11406,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 11719,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 12395,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 13584,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 14245,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 14552,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 15113,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 15723,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 16835,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 18029,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 19235,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 20360,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 21664,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 22327,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 22806,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 23519,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 24260,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 24811,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 25123,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_33612ca570dba33c"
+    },
+    {
+      "offset": 3341,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_c9a7385452365ede"
+    },
+    {
+      "offset": 9145,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_c9a7385452365ede"
+    },
+    {
+      "offset": 11934,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_c9a7385452365ede"
+    },
+    {
+      "offset": 26354,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_c9a7385452365ede"
+    },
+    {
+      "offset": 29184,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_c9a7385452365ede"
+    },
+    {
+      "offset": 32159,
+      "reason": "answer_length_outside_25_350_words",
+      "record_id": "hicric_c9a7385452365ede"
+    },
+    {
+      "offset": 3747,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 6304,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 7440,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 8167,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 10883,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 13981,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 14714,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 15304,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 17811,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 19664,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 20337,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 21421,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 23588,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 26742,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 27369,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_feb7b5d7cf0ab9bb"
+    },
+    {
+      "offset": 1294,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_117c9e9fd5c4292f"
+    },
+    {
+      "offset": 4411,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_117c9e9fd5c4292f"
+    },
+    {
+      "offset": 5472,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_117c9e9fd5c4292f"
+    },
+    {
+      "offset": 11464,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_117c9e9fd5c4292f"
+    },
+    {
+      "offset": 12462,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_117c9e9fd5c4292f"
+    },
+    {
+      "offset": 13584,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_117c9e9fd5c4292f"
+    },
+    {
+      "offset": 1278,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_07cf735f12e5bba6"
+    },
+    {
+      "offset": 8379,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_07cf735f12e5bba6"
+    },
+    {
+      "offset": 13028,
+      "reason": "not_a_standalone_question_or_question_length",
+      "record_id": "hicric_07cf735f12e5bba6"
+    },
+    {
+      "offset": 858,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_fc622c35bd2570be"
+    },
+    {
+      "offset": 1658,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_fc622c35bd2570be"
+    },
+    {
+      "offset": 899,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_8e66aa298c17cf68"
+    },
+    {
+      "offset": 2618,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_8e66aa298c17cf68"
+    },
+    {
+      "offset": 3667,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_8e66aa298c17cf68"
+    },
+    {
+      "offset": 2155,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 3487,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 4567,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 5528,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 7392,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 8662,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 11217,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 13138,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 14283,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 14990,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 16321,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 23429,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 24287,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 25062,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 26585,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_0e7278e92ee2b1c3"
+    },
+    {
+      "offset": 632,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_56d3e4169d7a66e9"
+    },
+    {
+      "offset": 3041,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_56d3e4169d7a66e9"
+    },
+    {
+      "offset": 4355,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_56d3e4169d7a66e9"
+    },
+    {
+      "offset": 7211,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_56d3e4169d7a66e9"
+    },
+    {
+      "offset": 8104,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_56d3e4169d7a66e9"
+    },
+    {
+      "offset": 9082,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_56d3e4169d7a66e9"
+    },
+    {
+      "offset": 1014,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_8c24aed3615bb312"
+    },
+    {
+      "offset": 7360,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_8c24aed3615bb312"
+    },
+    {
+      "offset": 7993,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_8c24aed3615bb312"
+    },
+    {
+      "offset": 9541,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_8c24aed3615bb312"
+    },
+    {
+      "offset": 11675,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_8c24aed3615bb312"
+    },
+    {
+      "offset": 12560,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_8c24aed3615bb312"
+    },
+    {
+      "offset": 13311,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_8c24aed3615bb312"
+    },
+    {
+      "offset": 1137,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 2130,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 4751,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 5371,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 6487,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 8155,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 9214,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 10006,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 11015,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 13571,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 16871,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 17714,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 18836,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 21361,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 21662,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 22672,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 22892,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 23462,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 24046,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 24558,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 24669,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 24756,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 24879,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 25132,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c6f1b7e8feddbf7e"
+    },
+    {
+      "offset": 706,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 1814,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 3256,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 4233,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 5040,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 5796,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 7092,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 8352,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 9867,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 10979,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 13860,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 14288,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 15554,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 16303,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c023448d63d901e1"
+    },
+    {
+      "offset": 655,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_290b87a3d36499d0"
+    },
+    {
+      "offset": 2024,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_00ba6cc58a1c772e"
+    },
+    {
+      "offset": 6484,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_00ba6cc58a1c772e"
+    },
+    {
+      "offset": 6993,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_00ba6cc58a1c772e"
+    },
+    {
+      "offset": 7738,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_00ba6cc58a1c772e"
+    },
+    {
+      "offset": 9352,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_00ba6cc58a1c772e"
+    },
+    {
+      "offset": 11206,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_00ba6cc58a1c772e"
+    },
+    {
+      "offset": 12708,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_00ba6cc58a1c772e"
+    },
+    {
+      "offset": 16187,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_00ba6cc58a1c772e"
+    },
+    {
+      "offset": 1069,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 3025,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 7834,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 9677,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 10175,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 11064,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 12492,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 13650,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 15763,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 16728,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 17720,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 18790,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 19329,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 19584,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 21439,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 21985,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 22486,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 22771,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 23476,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 23691,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_300af6343559d085"
+    },
+    {
+      "offset": 597,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ebaebae1b936398b"
+    },
+    {
+      "offset": 2204,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_60a0698137afc707"
+    },
+    {
+      "offset": 4208,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_60a0698137afc707"
+    },
+    {
+      "offset": 5820,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_60a0698137afc707"
+    },
+    {
+      "offset": 8125,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_60a0698137afc707"
+    },
+    {
+      "offset": 9730,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_60a0698137afc707"
+    },
+    {
+      "offset": 13980,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_60a0698137afc707"
+    },
+    {
+      "offset": 17466,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_60a0698137afc707"
+    },
+    {
+      "offset": 717,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e5e7fb3526b5d39f"
+    },
+    {
+      "offset": 4992,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e5e7fb3526b5d39f"
+    },
+    {
+      "offset": 11641,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e5e7fb3526b5d39f"
+    },
+    {
+      "offset": 14520,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e5e7fb3526b5d39f"
+    },
+    {
+      "offset": 1226,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2cc66354828ae42e"
+    },
+    {
+      "offset": 5451,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2cc66354828ae42e"
+    },
+    {
+      "offset": 1601,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2c26a9f6c66a639b"
+    },
+    {
+      "offset": 2987,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2c26a9f6c66a639b"
+    },
+    {
+      "offset": 3576,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2c26a9f6c66a639b"
+    },
+    {
+      "offset": 5531,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2c26a9f6c66a639b"
+    },
+    {
+      "offset": 6932,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2c26a9f6c66a639b"
+    },
+    {
+      "offset": 7151,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2c26a9f6c66a639b"
+    },
+    {
+      "offset": 9019,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2c26a9f6c66a639b"
+    },
+    {
+      "offset": 10790,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2c26a9f6c66a639b"
+    },
+    {
+      "offset": 13390,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_2c26a9f6c66a639b"
+    },
+    {
+      "offset": 3219,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_55b41bf3087920bd"
+    },
+    {
+      "offset": 7956,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_55b41bf3087920bd"
+    },
+    {
+      "offset": 10623,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_55b41bf3087920bd"
+    },
+    {
+      "offset": 11378,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_55b41bf3087920bd"
+    },
+    {
+      "offset": 14428,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_55b41bf3087920bd"
+    },
+    {
+      "offset": 15788,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_55b41bf3087920bd"
+    },
+    {
+      "offset": 17466,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_55b41bf3087920bd"
+    },
+    {
+      "offset": 19363,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_55b41bf3087920bd"
+    },
+    {
+      "offset": 20676,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_55b41bf3087920bd"
+    },
+    {
+      "offset": 21626,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_55b41bf3087920bd"
+    },
+    {
+      "offset": 23787,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_55b41bf3087920bd"
+    },
+    {
+      "offset": 27945,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_55b41bf3087920bd"
+    },
+    {
+      "offset": 6912,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_7969f9941477805d"
+    },
+    {
+      "offset": 9831,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_7969f9941477805d"
+    },
+    {
+      "offset": 10903,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_7969f9941477805d"
+    },
+    {
+      "offset": 13758,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_7969f9941477805d"
+    },
+    {
+      "offset": 17635,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_7969f9941477805d"
+    },
+    {
+      "offset": 24021,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_7969f9941477805d"
+    },
+    {
+      "offset": 25732,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_7969f9941477805d"
+    },
+    {
+      "offset": 27539,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_7969f9941477805d"
+    },
+    {
+      "offset": 3856,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_addd00222e736058"
+    },
+    {
+      "offset": 5192,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_addd00222e736058"
+    },
+    {
+      "offset": 11945,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_addd00222e736058"
+    },
+    {
+      "offset": 1863,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_87ca2572bd03ec4c"
+    },
+    {
+      "offset": 4688,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_6df2560f88196a7d"
+    },
+    {
+      "offset": 8233,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_6df2560f88196a7d"
+    },
+    {
+      "offset": 4899,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_654a0c4315d71278"
+    },
+    {
+      "offset": 15278,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_654a0c4315d71278"
+    },
+    {
+      "offset": 16856,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_654a0c4315d71278"
+    },
+    {
+      "offset": 17888,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_654a0c4315d71278"
+    },
+    {
+      "offset": 19126,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_654a0c4315d71278"
+    },
+    {
+      "offset": 20264,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_654a0c4315d71278"
+    },
+    {
+      "offset": 22001,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_654a0c4315d71278"
+    },
+    {
+      "offset": 2399,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_48917c4343803785"
+    },
+    {
+      "offset": 5799,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_48917c4343803785"
+    },
+    {
+      "offset": 7006,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_48917c4343803785"
+    },
+    {
+      "offset": 11970,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_48917c4343803785"
+    },
+    {
+      "offset": 13355,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_48917c4343803785"
+    },
+    {
+      "offset": 3378,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e9a97a95605e1324"
+    },
+    {
+      "offset": 6941,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e9a97a95605e1324"
+    },
+    {
+      "offset": 8255,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e9a97a95605e1324"
+    },
+    {
+      "offset": 9060,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e9a97a95605e1324"
+    },
+    {
+      "offset": 10500,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e9a97a95605e1324"
+    },
+    {
+      "offset": 10978,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e9a97a95605e1324"
+    },
+    {
+      "offset": 13483,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e9a97a95605e1324"
+    },
+    {
+      "offset": 14911,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e9a97a95605e1324"
+    },
+    {
+      "offset": 16172,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e9a97a95605e1324"
+    },
+    {
+      "offset": 20007,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e9a97a95605e1324"
+    },
+    {
+      "offset": 24640,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e9a97a95605e1324"
+    },
+    {
+      "offset": 33786,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e9a97a95605e1324"
+    },
+    {
+      "offset": 36939,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e9a97a95605e1324"
+    },
+    {
+      "offset": 3263,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e549b1353ef1c5d"
+    },
+    {
+      "offset": 8785,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e549b1353ef1c5d"
+    },
+    {
+      "offset": 11208,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e549b1353ef1c5d"
+    },
+    {
+      "offset": 15576,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e549b1353ef1c5d"
+    },
+    {
+      "offset": 22460,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e549b1353ef1c5d"
+    },
+    {
+      "offset": 24213,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e549b1353ef1c5d"
+    },
+    {
+      "offset": 30681,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e549b1353ef1c5d"
+    },
+    {
+      "offset": 37295,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e549b1353ef1c5d"
+    },
+    {
+      "offset": 42855,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e549b1353ef1c5d"
+    },
+    {
+      "offset": 46920,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e549b1353ef1c5d"
+    },
+    {
+      "offset": 47880,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e549b1353ef1c5d"
+    },
+    {
+      "offset": 50199,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_1e549b1353ef1c5d"
+    },
+    {
+      "offset": 4162,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bda0f24ae4d034a6"
+    },
+    {
+      "offset": 17808,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bda0f24ae4d034a6"
+    },
+    {
+      "offset": 22154,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bda0f24ae4d034a6"
+    },
+    {
+      "offset": 33508,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bda0f24ae4d034a6"
+    },
+    {
+      "offset": 35069,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bda0f24ae4d034a6"
+    },
+    {
+      "offset": 39119,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bda0f24ae4d034a6"
+    },
+    {
+      "offset": 40647,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bda0f24ae4d034a6"
+    },
+    {
+      "offset": 42656,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bda0f24ae4d034a6"
+    },
+    {
+      "offset": 47263,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bda0f24ae4d034a6"
+    },
+    {
+      "offset": 3307,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a3e56a65d499ff7b"
+    },
+    {
+      "offset": 7021,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a3e56a65d499ff7b"
+    },
+    {
+      "offset": 14757,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a3e56a65d499ff7b"
+    },
+    {
+      "offset": 6529,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e0c0aacb9470adc7"
+    },
+    {
+      "offset": 7779,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e0c0aacb9470adc7"
+    },
+    {
+      "offset": 18995,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e0c0aacb9470adc7"
+    },
+    {
+      "offset": 19815,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e0c0aacb9470adc7"
+    },
+    {
+      "offset": 11792,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_55f2a4f42f803cd3"
+    },
+    {
+      "offset": 2651,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_481a71c6ffba487f"
+    },
+    {
+      "offset": 9799,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_481a71c6ffba487f"
+    },
+    {
+      "offset": 13060,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_481a71c6ffba487f"
+    },
+    {
+      "offset": 15090,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_481a71c6ffba487f"
+    },
+    {
+      "offset": 18545,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_481a71c6ffba487f"
+    },
+    {
+      "offset": 19730,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_481a71c6ffba487f"
+    },
+    {
+      "offset": 21471,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_481a71c6ffba487f"
+    },
+    {
+      "offset": 23028,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_481a71c6ffba487f"
+    },
+    {
+      "offset": 24947,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_481a71c6ffba487f"
+    },
+    {
+      "offset": 28760,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_481a71c6ffba487f"
+    },
+    {
+      "offset": 35000,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_481a71c6ffba487f"
+    },
+    {
+      "offset": 37176,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_481a71c6ffba487f"
+    },
+    {
+      "offset": 10531,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_f8ea32641ccee7dd"
+    },
+    {
+      "offset": 14869,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_f8ea32641ccee7dd"
+    },
+    {
+      "offset": 18429,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_f8ea32641ccee7dd"
+    },
+    {
+      "offset": 22208,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_f8ea32641ccee7dd"
+    },
+    {
+      "offset": 23404,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_f8ea32641ccee7dd"
+    },
+    {
+      "offset": 25361,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_f8ea32641ccee7dd"
+    },
+    {
+      "offset": 29351,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_f8ea32641ccee7dd"
+    },
+    {
+      "offset": 32085,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_f8ea32641ccee7dd"
+    },
+    {
+      "offset": 45056,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_f8ea32641ccee7dd"
+    },
+    {
+      "offset": 46996,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_f8ea32641ccee7dd"
+    },
+    {
+      "offset": 48329,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_f8ea32641ccee7dd"
+    },
+    {
+      "offset": 4359,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b66bd6ba6b941bcc"
+    },
+    {
+      "offset": 4960,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_b66bd6ba6b941bcc"
+    },
+    {
+      "offset": 4828,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a79822cf4e774b28"
+    },
+    {
+      "offset": 7023,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a79822cf4e774b28"
+    },
+    {
+      "offset": 10486,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a79822cf4e774b28"
+    },
+    {
+      "offset": 14910,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a79822cf4e774b28"
+    },
+    {
+      "offset": 15859,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a79822cf4e774b28"
+    },
+    {
+      "offset": 18928,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a79822cf4e774b28"
+    },
+    {
+      "offset": 21777,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a79822cf4e774b28"
+    },
+    {
+      "offset": 22798,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a79822cf4e774b28"
+    },
+    {
+      "offset": 27414,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a79822cf4e774b28"
+    },
+    {
+      "offset": 30512,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a79822cf4e774b28"
+    },
+    {
+      "offset": 31278,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a79822cf4e774b28"
+    },
+    {
+      "offset": 31554,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a79822cf4e774b28"
+    },
+    {
+      "offset": 35871,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_a79822cf4e774b28"
+    },
+    {
+      "offset": 7158,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 8413,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 15055,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 16373,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 17133,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 20253,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 23255,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 23617,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 24835,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 27044,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 28836,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 31759,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 35495,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 44026,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 47578,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 53783,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_ce2cd48e1e9e5b6b"
+    },
+    {
+      "offset": 4919,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bfd113ee5e921ce1"
+    },
+    {
+      "offset": 7128,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bfd113ee5e921ce1"
+    },
+    {
+      "offset": 8352,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bfd113ee5e921ce1"
+    },
+    {
+      "offset": 9505,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bfd113ee5e921ce1"
+    },
+    {
+      "offset": 10020,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bfd113ee5e921ce1"
+    },
+    {
+      "offset": 11522,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bfd113ee5e921ce1"
+    },
+    {
+      "offset": 15692,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bfd113ee5e921ce1"
+    },
+    {
+      "offset": 16404,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bfd113ee5e921ce1"
+    },
+    {
+      "offset": 17357,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bfd113ee5e921ce1"
+    },
+    {
+      "offset": 21335,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bfd113ee5e921ce1"
+    },
+    {
+      "offset": 25763,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bfd113ee5e921ce1"
+    },
+    {
+      "offset": 26618,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bfd113ee5e921ce1"
+    },
+    {
+      "offset": 27136,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_bfd113ee5e921ce1"
+    },
+    {
+      "offset": 8937,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c9c239fcdeef1757"
+    },
+    {
+      "offset": 9619,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c9c239fcdeef1757"
+    },
+    {
+      "offset": 17537,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c9c239fcdeef1757"
+    },
+    {
+      "offset": 19935,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c9c239fcdeef1757"
+    },
+    {
+      "offset": 21713,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c9c239fcdeef1757"
+    },
+    {
+      "offset": 24337,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c9c239fcdeef1757"
+    },
+    {
+      "offset": 24762,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c9c239fcdeef1757"
+    },
+    {
+      "offset": 28845,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c9c239fcdeef1757"
+    },
+    {
+      "offset": 3399,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c60cc9debad80b89"
+    },
+    {
+      "offset": 3657,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_c60cc9debad80b89"
+    },
+    {
+      "offset": 8050,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_7361703a5568ce48"
+    },
+    {
+      "offset": 15182,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_7361703a5568ce48"
+    },
+    {
+      "offset": 16117,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_7361703a5568ce48"
+    },
+    {
+      "offset": 1738,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cde3455a6c1de06c"
+    },
+    {
+      "offset": 1616,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4391dba2bad448e9"
+    },
+    {
+      "offset": 4134,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4391dba2bad448e9"
+    },
+    {
+      "offset": 7530,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4391dba2bad448e9"
+    },
+    {
+      "offset": 11973,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4391dba2bad448e9"
+    },
+    {
+      "offset": 15729,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4391dba2bad448e9"
+    },
+    {
+      "offset": 19869,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4391dba2bad448e9"
+    },
+    {
+      "offset": 22824,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4391dba2bad448e9"
+    },
+    {
+      "offset": 26358,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4391dba2bad448e9"
+    },
+    {
+      "offset": 27604,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4391dba2bad448e9"
+    },
+    {
+      "offset": 29652,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4391dba2bad448e9"
+    },
+    {
+      "offset": 31849,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4391dba2bad448e9"
+    },
+    {
+      "offset": 35371,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_4391dba2bad448e9"
+    },
+    {
+      "offset": 3027,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_46a613758cbd29a3"
+    },
+    {
+      "offset": 7087,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_46a613758cbd29a3"
+    },
+    {
+      "offset": 20263,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_46a613758cbd29a3"
+    },
+    {
+      "offset": 22064,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_46a613758cbd29a3"
+    },
+    {
+      "offset": 11618,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5b1346ab06a6350c"
+    },
+    {
+      "offset": 15536,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5b1346ab06a6350c"
+    },
+    {
+      "offset": 21703,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5b1346ab06a6350c"
+    },
+    {
+      "offset": 25443,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5b1346ab06a6350c"
+    },
+    {
+      "offset": 27386,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5b1346ab06a6350c"
+    },
+    {
+      "offset": 29898,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5b1346ab06a6350c"
+    },
+    {
+      "offset": 39066,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5b1346ab06a6350c"
+    },
+    {
+      "offset": 40058,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5b1346ab06a6350c"
+    },
+    {
+      "offset": 47365,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_5b1346ab06a6350c"
+    },
+    {
+      "offset": 12527,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 14581,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 19360,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 21374,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 22506,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 23357,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 26562,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 27216,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 33130,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 36632,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 37717,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 38259,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 40917,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 44830,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e396b74e95bccbc5"
+    },
+    {
+      "offset": 4678,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 8031,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 11268,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 16042,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 17882,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 22635,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 26175,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 27273,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 28186,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 36148,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 40981,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 43041,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 48920,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 54483,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 60289,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 63945,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 65735,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 68622,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 71840,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 78237,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 82983,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 90894,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 93959,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_cd50813a6e241c53"
+    },
+    {
+      "offset": 3615,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_962ce0b5f6ea77fd"
+    },
+    {
+      "offset": 3578,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e0ee4c70ab2abab8"
+    },
+    {
+      "offset": 4923,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_e0ee4c70ab2abab8"
+    },
+    {
+      "offset": 157,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    },
+    {
+      "offset": 1230,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    },
+    {
+      "offset": 3933,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    },
+    {
+      "offset": 4710,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    },
+    {
+      "offset": 5526,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    },
+    {
+      "offset": 6955,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    },
+    {
+      "offset": 7237,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    },
+    {
+      "offset": 8938,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    },
+    {
+      "offset": 10019,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    },
+    {
+      "offset": 10668,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    },
+    {
+      "offset": 11642,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    },
+    {
+      "offset": 12877,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    },
+    {
+      "offset": 13991,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    },
+    {
+      "offset": 15067,
+      "reason": "missing_matching_answer_tag",
+      "record_id": "hicric_3da0f30ea195a286"
+    }
+  ],
+  "ambiguous_question_groups": []
+}

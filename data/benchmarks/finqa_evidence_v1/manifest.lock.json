@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-10-03T03:48:02.900174+00:00",
+  "files": {
+    "answers.jsonl": "9a77566e60a14e4bccaf99add197a6af5241bca82829884e44ebfe826f854d6d",
+    "audit.json": "f4e0ce8a74f0b1d0bf57564ec73a78deed755cfbe0b82ec59751c4f1c4126c3b",
+    "provenance.json": "51da7651671c5c5b48f9f35253045ede01f808221ab2539a89cfff84741870cf",
+    "test.jsonl": "cc42839dbfe1ff29b1f0e19faee06c53c8260d57d171189b4fd48de3b5191e88",
+    "train.jsonl": "b54b0c462c50b6eda432d90d5ed2396519a698a80480ff78fa66b963468db9f2",
+    "UPSTREAM_LICENSE": "92c0e67bd762c15c07ba60de09558338315a8ebf99aac4f51f487179809ac087",
+    "UPSTREAM_README.md": "eb86779cfed6f0a253913761d8e4fabe032a29d9fcf2944e56c23bf007064605",
+    "valid.jsonl": "d620f67780f55489e47cbbe8cfefffee700ebb62636f3fd481db7791080d87b3"
+  },
+  "code_sha256": "e97ae1ec6e0a43ad5c12270f2dfc5b321eb88f26f95274ba44383cb18384c7c9",
+  "serialization_code_sha256": "558751133d7b46cbb125d59b9a038e2a5cde6eff3e51ca34403a04520472a72b"
+}

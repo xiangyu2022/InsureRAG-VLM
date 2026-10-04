@@ -1,0 +1,34 @@
+{
+  "diagnostic": "synthetic same-filename PDF replacement via actual HTTP; controlled answer fixture, no model inference",
+  "frozen_app_sha256": "b81d7cb29e53098dbf39e49abd6a3b1a06ebf92213a5a71ad1171ffb0dc0969f",
+  "current_app_sha256": "f351d798f20302d48a46d70afe15b015c93337c2147da56310a8babd249f45e0",
+  "question": "What is the collision deductible in the uploaded policy?",
+  "735": {
+    "upload_status": true,
+    "answer": "The collision deductible is $735.",
+    "generation_used": false,
+    "answer_backend": "controlled answer fixture (no model)",
+    "citation_source": "policy.pdf#page=1",
+    "pdf_sha256": "d7ed01d8507d85d267274d2ba83a08b66b283cd3b5514da0540b0fa179b0b9ec",
+    "preview_sha256": "6641de64e7d97cbe02410c78158210ff78f81e30d813f325911278f0aee76cc4",
+    "preview_pixels_sha256": "fd3fc9ea1eedc0226f1849d6a664882e84b164f83ce20b791f0ecbc5e60ffa88"
+  },
+  "1820": {
+    "upload_status": true,
+    "answer": "The collision deductible is $1820.",
+    "generation_used": false,
+    "answer_backend": "controlled answer fixture (no model)",
+    "citation_source": "policy.pdf#page=1",
+    "pdf_sha256": "b0dc967a6ac8fe15b7c461a25f3efd551267f1132a6b9d66ba61c22c9fc39724",
+    "preview_sha256": "4aa5661536d0921da6d341918e4141a8c90ce906b4845fc92165df036cce06cd",
+    "preview_pixels_sha256": "bfd6de469c55354195554040957c5a52822080eee68097c68fbecc90510977de"
+  },
+  "checks": {
+    "before_unbound_old_citation_changes_to_new_pixels": true,
+    "after_bound_old_citation_preserves_old_pixels": true,
+    "delayed_registration_uses_captured_old_folder": true,
+    "old_and_new_preview_pixels_differ": true,
+    "unbound_endpoint_status": 400,
+    "wrong_hash_even_with_cached_preview_status": 404
+  }
+}

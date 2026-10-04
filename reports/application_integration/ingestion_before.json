@@ -1,0 +1,64 @@
+{
+  "text_layer_chars": {
+    "text_layer.pdf": [
+      44
+    ],
+    "scanned.pdf": [
+      0
+    ],
+    "text_plus_blank.pdf": [
+      37,
+      0
+    ]
+  },
+  "image_query_norm_default": 0.0,
+  "scanned_images": {
+    "http_status": 500,
+    "payload": {
+      "ok": false,
+      "error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+    },
+    "uploaded_file_remains_after_request": true,
+    "active_folder_after_request": "previous-valid-corpus"
+  },
+  "scanned_textonly": {
+    "http_status": 200,
+    "payload": {
+      "ok": true,
+      "filename": "scanned.pdf",
+      "corpus": {
+        "mode": "uploaded",
+        "label": "scanned.pdf",
+        "filenames": [
+          "scanned.pdf"
+        ]
+      }
+    },
+    "uploaded_file_remains_after_request": true,
+    "active_folder_after_request": "..\\scanned_ingestion_audit\\scanned_textonly\\uploads",
+    "indexed_text_lengths": [
+      0
+    ],
+    "answer_abstain": true,
+    "answer_reason": "insufficient_retrieved_evidence",
+    "generation_used": false
+  },
+  "text_plus_blank_images": {
+    "http_status": 500,
+    "payload": {
+      "ok": false,
+      "error": "tesseract is not installed or it's not in your PATH. See README file for more information."
+    },
+    "uploaded_file_remains_after_request": true,
+    "active_folder_after_request": "previous-valid-corpus"
+  },
+  "failed_upload_retained_blocks_next_valid_upload": {
+    "next_valid_upload_indexed": false,
+    "error_type": "TesseractNotFoundError",
+    "error": "tesseract is not installed or it's not in your PATH. See README file for more information.",
+    "files": [
+      "scanned.pdf",
+      "valid_next.pdf"
+    ]
+  }
+}

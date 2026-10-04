@@ -1,0 +1,20 @@
+{
+  "retrieval-only": {
+    "cases": 12,
+    "answerable_cases": 8,
+    "unsupported_cases": 4,
+    "transport_errors": 0,
+    "retrieval_hit_at_k": {
+      "successes": 7,
+      "total": 8,
+      "rate": 0.875,
+      "ci95_low": 0.5291118177871464,
+      "ci95_high": 0.9775825085499433
+    },
+    "wall_seconds": {
+      "p50": 0.05084409998380579,
+      "p95": 0.11173512999375816,
+      "total": 0.7345850999117829
+    }
+  }
+}

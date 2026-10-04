@@ -1,0 +1,57 @@
+{
+  "label": "Synthetic image-only counterfactual diagnostic, not general visual accuracy",
+  "score_version": "visual-counterfactual-v1-exact-keys",
+  "cases": 12,
+  "runtime_errors": 0,
+  "supported_key_pass": {
+    "successes": 9,
+    "total": 9,
+    "rate": 1.0,
+    "ci95_low": 0.7008549515804559,
+    "ci95_high": 1.0
+  },
+  "supported_evidence_key_pass": {
+    "successes": 9,
+    "total": 9,
+    "rate": 1.0,
+    "ci95_low": 0.7008549515804559,
+    "ci95_high": 1.0
+  },
+  "strict_unsupported_abstention": {
+    "successes": 3,
+    "total": 3,
+    "rate": 1.0,
+    "ci95_low": 0.4385029682449546,
+    "ci95_high": 1.0
+  },
+  "counterfactual_triplets": {
+    "dwelling": {
+      "variants_observed": 3,
+      "all_three_changed_targets_correct": true,
+      "predicted_answers": {
+        "A": "$546,000",
+        "B": "$631,000",
+        "C": "$643,000"
+      }
+    },
+    "deductible": {
+      "variants_observed": 3,
+      "all_three_changed_targets_correct": true,
+      "predicted_answers": {
+        "A": "$1,750",
+        "B": "$1,850",
+        "C": "$4,750"
+      }
+    },
+    "exclusion": {
+      "variants_observed": 3,
+      "all_three_changed_targets_correct": true,
+      "predicted_answers": {
+        "A": "Flood",
+        "B": "Sewer backup",
+        "C": "Earthquake"
+      }
+    }
+  },
+  "limit_note": "Nine answerable and three absent-fact cases share three clean synthetic images; Wilson intervals ignore image clustering and do not establish population reliability."
+}

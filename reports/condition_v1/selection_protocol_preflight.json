@@ -1,0 +1,74 @@
+{
+  "created_utc": "2026-10-01T21:57:58.017617+00:00",
+  "seeds": [
+    42,
+    123
+  ],
+  "epochs_per_seed": 1,
+  "selected_on": "valid",
+  "initial_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+  "configurations": [
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.35
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.65
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.35
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.65
+    }
+  ],
+  "objective": "0.6 insuranceqa + 0.2 government + 0.2 general Hit@10; tie same weighted MRR, then Hit@1; stable order",
+  "guards_vs_previous_default": {
+    "insuranceqa_max_drop": 0.002,
+    "government_max_drop": 0.008,
+    "general_max_drop": 0.01
+  },
+  "promotion": "Compare best eligible trained checkpoint/config with best eligible previous-model config. Promote only strict weighted Hit@10 improvement; otherwise keep best eligible previous config.",
+  "training_recipe": "1 epoch, two independent seeds from same previous checkpoint; LR 3e-6; teacher-aware pairwise margin; FAQ 2x, government 8x, general 1x",
+  "test_plan": {
+    "historical_insuranceqa": 2000,
+    "historical_multidomain": 681,
+    "historical_government": 416,
+    "fresh_government": 179,
+    "fresh_government_sources": 29,
+    "fresh_answer_count": 48195
+  },
+  "test_use": "Only selected model, previous and public controls; both seeds reported on validation only; no post-test changes or relabeling.",
+  "attribution": "Report previous and public at default and selected configuration to distinguish retraining from candidate/fusion changes.",
+  "fixture_sha256": "7d7ca888ef887dfc5fe9c927d893173a2f1d1ad4b8ae5ff3b7ce495522584dc1",
+  "training_code_sha256": "d3370035b3641c30ac23b5900a9f7b8f1f2ae6ff4ca419a27402975bf9d86607",
+  "scoring_code_sha256": "8acac3d7be2a8d837a4112e6f847f9d24e534e1dcce6e2acfc908716e72617c9",
+  "mining_code_sha256": "5563ce6c14e584f2734f1238a705e7d3e37a0631158c1f6fd9cfb9af22945a04",
+  "historical_score_hashes": {
+    "reports/retention_v2/historical_government/scores.jsonl": "1b76075cb7446b3ed269e2d2508d3edf48db35a402e554a04f6bab750e35e5d4"
+  },
+  "code_sha256": {
+    "scripts/eval_condition_v1.py": "e025b5b3209838fb313ae32052aa06902596fd3f21fcb03b1adc0e0b1d77d82b",
+    "scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872",
+    "src/insurerag_vlm/reranker.py": "bb90e6c134b44d7cb0c0cd6ca3165e098827bd908a3a86e73101040cf65734a3",
+    "scripts/eval_retention_v2.py": "a2915e60a53184c9f90dae334b8dae438c1bfdd355ff997ee72e9ad3d0d866da"
+  }
+}

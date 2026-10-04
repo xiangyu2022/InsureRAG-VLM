@@ -1,0 +1,177 @@
+{
+  "selection": "First five key-pass/joint-fail cases, first five answered/key-fail cases in stored order, plus the sole answered unsupported case; selected after evaluation.",
+  "cases": [
+    {
+      "id": "test_v2_fema_nfip_claims_2024_adjuster_contact_typical",
+      "question": "According to this archived FEMA NFIP Claims Handbook, what is the usual adjuster contact time after receipt of notice of loss, and can local conditions make it longer?",
+      "reference": "Generally one to two days; local conditions or flood severity can make it longer.",
+      "gold": [
+        {
+          "evidence_span": "Generally, your adjuster contacts you within one-to-two days of receiving your notice of loss. However, depending on local conditions and the severity of the flooding, it could take longer.",
+          "page": 22,
+          "source": "fema_nfip_claims_2024.pdf#page=22"
+        }
+      ],
+      "raw_response": "{\"answer\": \"one-to-two days; yes, depending on local conditions and severity\", \"evidence\": \"Generally, your adjuster contacts you within one-to-two days of receiving your notice of loss. However, depending on local conditions and the severity of the flooding, it could take longer.\", \"source\": \"fema_nfip_claims_2024.pdf#page=22\", \"abstain\": false}",
+      "review_category": "semantic_answer_key_false_negative",
+      "review_note": "One-to-two days and yes to longer local delays answer the question; frozen lexical aliases reject the concise wording.",
+      "reviewer": "AI source/output inspection; not independent domain-expert adjudication"
+    },
+    {
+      "id": "test_v2_fema_nfip_claims_2024_scoping_definition",
+      "question": "According to this archived FEMA NFIP Claims Handbook, what is taking measurements, photos, and notes of direct flood damage during the initial visit called?",
+      "reference": "Scoping a loss.",
+      "gold": [
+        {
+          "evidence_span": "Your adjuster will take measurements, photos and notes of the damage caused directly by the flood event during the initial visit to your property. This is called “scoping” a loss.",
+          "page": 23,
+          "source": "fema_nfip_claims_2024.pdf#page=23"
+        }
+      ],
+      "raw_response": "{\"answer\": \"scoping a loss\", \"evidence\": \"This is called \\\"scoping\\\" a loss.\", \"source\": \"fema_nfip_claims_2024.pdf#page=23\", \"abstain\": false}",
+      "review_category": "correct_term_quote_format_failure",
+      "review_note": "Correct term; short quote uses escaped straight quotes instead of source curly quotation marks and omits the preceding annotated sentence.",
+      "reviewer": "AI source/output inspection; not independent domain-expert adjudication"
+    },
+    {
+      "id": "test_v2_fema_nfip_claims_2024_substantial_damage_threshold",
+      "question": "According to this archived FEMA NFIP Claims Handbook, at what repair-cost percentage of market value is a structure substantially damaged, and is land value included?",
+      "reference": "50% or more of market value, excluding land value.",
+      "gold": [
+        {
+          "evidence_span": "A structure is considered substantially damaged (SD) if the cost to repair it to its pre-damage condition is 50% or more of the market value (not including the value of the land).",
+          "page": 25,
+          "source": "fema_nfip_claims_2024.pdf#page=25"
+        }
+      ],
+      "raw_response": "{\n  \"answer\": \"50% or more; no\",\n  \"evidence\": \"A structure is considered substantially damaged (SD) if the cost to repair it to its pre-damage condition is 50% or more of the market value (not including the value of the land).\",\n  \"source\": \"fema_nfip_claims_2024.pdf#page=25\",\n  \"abstain\": false\n}",
+      "review_category": "semantic_answer_key_false_negative",
+      "review_note": "50% or more and no to land inclusion answer both clauses; the answer does not repeat the explicit land phrase required by keys.",
+      "reviewer": "AI source/output inspection; not independent domain-expert adjudication"
+    },
+    {
+      "id": "test_v2_fema_nfip_coverage_2023_avoidable_mold_exclusion",
+      "question": "According to this archived FEMA NFIP Summary of Coverage, is moisture, mildew, or mold damage that the owner could have avoided listed among exclusions?",
+      "reference": "Yes. Avoidable moisture, mildew, or mold damage is excluded.",
+      "gold": [
+        {
+          "evidence_span": "Examples of uncovered or excluded losses: • Damage caused by moisture, mildew or mold that could have been avoided by the property owner",
+          "page": 6,
+          "source": "fema_nfip_coverage_2023.pdf#page=6"
+        }
+      ],
+      "raw_response": "{\n  \"answer\": \"Yes\",\n  \"evidence\": \"Damage caused by moisture, mildew or mold that could have been avoided by the property owner\",\n  \"source\": \"fema_nfip_coverage_2023.pdf#page=6\",\n  \"abstain\": false\n}",
+      "review_category": "correct_answer_shorter_quote",
+      "review_note": "Answer and quoted clause match; quote omits the annotated heading and bullet.",
+      "reviewer": "AI source/output inspection; not independent domain-expert adjudication"
+    },
+    {
+      "id": "test_v2_fema_nfip_coverage_2023_contract_controls_conflict",
+      "question": "According to this archived FEMA NFIP Summary of Coverage, if the summary and the insurance policy differ, which controls?",
+      "reference": "The insurance policy.",
+      "gold": [
+        {
+          "evidence_span": "Please keep in mind, this document is a summary of your coverage and not your official contract of insurance. Any differences between the following information and your policy will be resolved in favor of your policy.",
+          "page": 2,
+          "source": "fema_nfip_coverage_2023.pdf#page=2"
+        }
+      ],
+      "raw_response": "{\"answer\": \"your policy\", \"evidence\": \"Any differences between the following information and your policy will be resolved in favor of your policy.\", \"source\": \"fema_nfip_coverage_2023.pdf#page=2\", \"abstain\": false}",
+      "review_category": "correct_answer_shorter_quote",
+      "review_note": "Correct controlling document and supporting sentence; quote omits the first sentence of the full annotated span.",
+      "reviewer": "AI source/output inspection; not independent domain-expert adjudication"
+    },
+    {
+      "id": "test_v2_fema_nfip_coverage_2023_flood_spatial_threshold",
+      "question": "According to this archived FEMA NFIP Summary of Coverage, what two alternative minimum extents of inundation appear in the flood definition, including the requirement about whose property is affected?",
+      "reference": "Two or more acres of normally dry land, or two or more properties including at least your property.",
+      "gold": [
+        {
+          "evidence_span": "The official definition of a flood used by the NFIP is “A general and temporary condition of partial or complete inundation of two or more acres of normally dry land area or of two or more properties (at least one of which is your property) from:",
+          "page": 2,
+          "source": "fema_nfip_coverage_2023.pdf#page=2"
+        }
+      ],
+      "raw_response": "{\n  \"answer\": \"two or more acres of normally dry land area or two or more properties (at least one of which is your property)\",\n  \"evidence\": \"\\\"A general and temporary condition of partial or complete inundation of two or more acres of normally dry land area or of two or more properties (at least one of which is your property)\\\"\",\n  \"source\": \"fema_nfip_coverage_2023.pdf#page=2\",\n  \"abstain\": false\n}",
+      "review_category": "correct_conditions_quote_format_failure",
+      "review_note": "Both alternative extents and insured-property condition are stated; exact quotation contract fails.",
+      "reviewer": "AI source/output inspection; not independent domain-expert adjudication"
+    },
+    {
+      "id": "test_v2_fema_nfip_coverage_2023_loss_report_recipient",
+      "question": "According to this archived FEMA NFIP Summary of Coverage, to whom should a flood loss be reported immediately?",
+      "reference": "The insurance company, agent, or carrier's claims office.",
+      "gold": [
+        {
+          "evidence_span": "Report your loss immediately to your insurance company or agent or to the carrier’s claims office and ask them about an advance payment.",
+          "page": 7,
+          "source": "fema_nfip_coverage_2023.pdf#page=7"
+        }
+      ],
+      "raw_response": "{\"answer\": \"your insurance company or agent\", \"evidence\": \"After experiencing a flood, you should report your loss immediately to your insurance company or agent.\", \"source\": \"fema_nfip_coverage_2023.pdf#page=7\", \"abstain\": false}",
+      "review_category": "acceptable_source_supported_alternative",
+      "review_note": "Names an allowed recipient and quotes a different source sentence on the same page; full annotated-span check fails.",
+      "reviewer": "AI source/output inspection; not independent domain-expert adjudication"
+    },
+    {
+      "id": "test_fl_doi_home_endorsements_06",
+      "question": "Using only the archived Florida CFO Homeowners Policy Endorsements page, what is Coverage B also called in the exclusion endorsement section?",
+      "reference": "Other Structures.",
+      "gold": [
+        {
+          "evidence_span": "Coverage B, also known as Other Structures on your policy, provides coverage on property that is not attached to your home.",
+          "page": 1,
+          "source": "https://www.myfloridacfo.com/division/ica/fullcoverage/homeowners/policyendorsements"
+        }
+      ],
+      "raw_response": "{\n  \"answer\": \"Personal Property Exclusion\",\n  \"evidence\": \"B Exclusion Personal Property Exclusion\",\n  \"source\": \"https://www.myfloridacfo.com/division/ica/fullcoverage/homeowners/policyendorsements\",\n  \"abstain\": false\n}",
+      "review_category": "substantive_wrong_answer",
+      "review_note": "Model calls Coverage B Personal Property Exclusion; the annotated source defines it as Other Structures. Navigation/heading fragments entered context.",
+      "reviewer": "AI source/output inspection; not independent domain-expert adjudication"
+    },
+    {
+      "id": "test_fl_doi_homeowners_overview_07",
+      "question": "Using only the archived Florida DFS Homeowners Insurance Overview page, when escrow funds were available but the mortgage company paid late, within how many days of renewal must the premium be received for the stated no-lapse reinstatement rule?",
+      "reference": "Within 90 days of the renewal date.",
+      "gold": [
+        {
+          "evidence_span": "Mortgage Company's Failure to Pay Premium from Escrow : If funds were available in escrow and the mortgage company failed to pay the premium in a timely manner resulting in cancellation of the policy, the insurance company should reinstate coverage with no lapse if the premium is received within 90 days of the renewal date.",
+          "page": 1,
+          "source": "https://www.myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview"
+        }
+      ],
+      "raw_response": "{\"answer\": \"90\", \"evidence\": \"If funds were available in escrow and the mortgage company failed to pay the premium in a timely manner resulting in cancellation of the policy, the insurance company should reinstate coverage with no lapse if the premium is received within 90 days of the renewal date.\", \"source\": \"https://www.myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview\", \"abstain\": false}",
+      "review_category": "semantic_answer_key_false_negative",
+      "review_note": "Question asks days; model gives 90 and quotes the 90-day rule. Answer keys require a unit phrase in the answer string.",
+      "reviewer": "AI source/output inspection; not independent domain-expert adjudication"
+    },
+    {
+      "id": "test_v2_md_life_guide_settlement_rescission",
+      "question": "According to this archived Maryland Consumer Guide to Life Insurance, within how many days after receiving cash may a life-settlement transaction be rescinded?",
+      "reference": "Within 15 days.",
+      "gold": [
+        {
+          "evidence_span": "By law, you have the right to change your mind and rescind the transaction within 15 days of receiving the cash payment.",
+          "page": 17,
+          "source": "md_life_guide.pdf#page=17"
+        }
+      ],
+      "raw_response": "{\"answer\": \"15\", \"evidence\": \"By law, you have the right to change your mind and rescind the transaction within 15 days of receiving the cash payment.\", \"source\": \"md_life_guide.pdf#page=17\", \"abstain\": false}",
+      "review_category": "semantic_answer_key_false_negative",
+      "review_note": "Question asks days; answer 15 plus exact 15-day evidence is correct in context, but the frozen key requires a days phrase.",
+      "reviewer": "AI source/output inspection; not independent domain-expert adjudication"
+    },
+    {
+      "id": "test_ny_dfs_problems_obtaining_hurricane_amount",
+      "question": "Using only the archived New York Homeowners Insurance: Problems Obtaining Insurance, what dollar hurricane deductible applies to my Broad Form NYPIUA policy, given only the percentage in this page?",
+      "reference": "",
+      "gold": [],
+      "raw_response": "{\"answer\": \"2%\", \"evidence\": \"NYPIUA policies that include Broad Form coverage are subject to a 2% hurricane deductible for insured properties located in the following counties:\", \"source\": \"https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/problems_obtaining_insurance\", \"abstain\": false}",
+      "review_category": "unsupported_question_answered_with_wrong_quantity",
+      "review_note": "Question requests a dollar deductible without the insured value; model gives the source percentage 2%, which does not answer the dollar question.",
+      "reviewer": "AI source/output inspection; not independent domain-expert adjudication"
+    }
+  ],
+  "not_a_semantic_accuracy_estimate": true,
+  "frozen_labels_and_scores_modified": false
+}

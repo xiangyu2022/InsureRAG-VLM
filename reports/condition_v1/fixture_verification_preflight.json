@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "government_exact_source_spans_checked": 226,
+    "original_crowdworker_questions_checked": 6000
+  },
+  "mismatches": [],
+  "new_general_distinct_paragraphs": 6000,
+  "fresh_test_source_groups": 29,
+  "fresh_test_text_in_previous_training_pairs": 0,
+  "fixture_sha256": "7d7ca888ef887dfc5fe9c927d893173a2f1d1ad4b8ae5ff3b7ce495522584dc1",
+  "code_sha256": "1d62c6a0b4bd2b5b9ba2fb1aa80afdf840238d777d88edeababa8de6b1426155",
+  "expert_adjudication": false
+}

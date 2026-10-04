@@ -1,0 +1,110 @@
+{
+  "created_utc": "2026-10-01T23:29:40.168735+00:00",
+  "status": "Post-test diagnostic and future-parser repair only",
+  "case_id": "condgov_q_72f9a4e449c7fa4f",
+  "source_record_id": "hicric_3868153fbcd59e1e",
+  "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/publications/group-health-and-disability-plans-benefit-claims-procedure-regulation.pdf",
+  "source_text_sha256": "3868153fbcd59e1e6f784fc893688546ffb88388d0fe0fa36468fc42bca8a943",
+  "root_cause": "The old line-anchored question regex misreads wrapped cross-reference Q-A5.) as a new question.",
+  "old_answer_span": [
+    9481,
+    9663
+  ],
+  "old_answer_words": 31,
+  "repaired_preview": {
+    "question": "Do the requirements applicable to group health plans apply to contractual disputes between health care providers (e.g., physicians, hospitals) and insurers or managed care organizations (e.g., HMOs)?",
+    "text": "No, provided that the contractual dispute will have no effect on a claimants right to benefits under a plan. The regulation applies only to claims for benefits. (See Q-A3, Q-A4, and Q-A5.) The regulation does not apply to requests by health care providers for payments due them rather than due the claimant in accordance with contractual arrangements between the provider and an insurer or managed care organization, where the provider has no recourse against the claimant for amounts, in whole or in part, not paid by the insurer or managed care organization. The following example illustrates this principle. Under the terms of a group health plan, participants are required to pay only a $10 copayment for each office visit to a preferred provider doctor listed by a managed care organization that contracts with such doctors. Under the preferred provider agreement between the doctors and the managed care organization, the doctor has no recourse against a claimant for amounts in excess of the copayment. Any request by the doctor to the managed care organization for payment or reimbursement for services rendered to a participant is a request made under the contract with the managed care organization, not the group health plan; accordingly, the doctors request is not a claim for benefits governed by the regulation. On the other hand, where a claimant may request payments for medical services from a plan, but the medical provider will continue to have recourse against the claimant for amounts unpaid by the plan, the request, whether made by the claimant or by the medical provider (e.g., in the case of an assignment of benefits by the claimant) would constitute a claim for benefits by the claimant. For information on authorized representatives of claimants, see Q-B1, Q-B2, and Q-B3.",
+    "question_span": [
+      9278,
+      9478
+    ],
+    "answer_span": [
+      9481,
+      11284
+    ],
+    "extraction_method": "validated_explicit_qa_boundaries_v2"
+  },
+  "repaired_answer_words": 293,
+  "source_parser_accepted_pairs": 35,
+  "source_parser_rejections": {
+    "answer_length": 4,
+    "ambiguous_answer": 9
+  },
+  "all_added_government_boundary_screen": {
+    "train_additions": {
+      "government_questions": 46,
+      "flagged": [],
+      "flagged_count": 0
+    },
+    "test": {
+      "government_questions": 157,
+      "flagged": [
+        {
+          "id": "condgov_q_72f9a4e449c7fa4f",
+          "source_record_id": "hicric_3868153fbcd59e1e",
+          "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/publications/group-health-and-disability-plans-benefit-claims-procedure-regulation.pdf",
+          "reasons": [
+            "unbalanced_parentheses",
+            "unfinished_clause"
+          ],
+          "answer_tail": "No, provided that the contractual dispute will have no effect on a claimants right to benefits under a plan. The regulation applies only to claims for benefits. (See Q-A3, Q-A4, and",
+          "v2_matching_pair_count": 1,
+          "v2_answer_span": [
+            9481,
+            11284
+          ]
+        },
+        {
+          "id": "condgov_q_a3b18d44bc8eb0c9",
+          "source_record_id": "hicric_3868153fbcd59e1e",
+          "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/publications/group-health-and-disability-plans-benefit-claims-procedure-regulation.pdf",
+          "reasons": [
+            "unbalanced_parentheses",
+            "unfinished_clause"
+          ],
+          "answer_tail": "on behalf of the plan in connection 20 with the claimants claim. Consequently, merely providing the name of the company employing the expert or the qualifications of the expert would not, in the Departments view, satisfy this requirement of the regulation. (See 2560.503-1(h)(3)(iv) and (4). Also see",
+          "v2_matching_pair_count": 1,
+          "v2_answer_span": [
+            61258,
+            61720
+          ]
+        },
+        {
+          "id": "condgov_q_ea923123802997d8",
+          "source_record_id": "hicric_3868153fbcd59e1e",
+          "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/publications/group-health-and-disability-plans-benefit-claims-procedure-regulation.pdf",
+          "reasons": [
+            "unbalanced_parentheses"
+          ],
+          "answer_tail": "that the plan rules or guidelines were appropriately applied to the claimants claim. Plans are not required to disclose other claimants individual records or information specific to the resolution of other claims in order to comply with this requirement. (See 2560.503-1(m)(8)(iii). Also see question",
+          "v2_matching_pair_count": 0,
+          "v2_answer_span": null
+        },
+        {
+          "id": "condgov_q_f0dbf3ee772e8b8c",
+          "source_record_id": "hicric_298809cbbedbbe69",
+          "source_url": "https://www.medicaid.gov/media/38016",
+          "reasons": [
+            "unbalanced_parentheses"
+          ],
+          "answer_tail": "at 410-786-5647 and request assistance with submitting a bonus payment application. CMS will acknowledge receipt of all requests. Any State submitting a request for a performance bonus that does not receive an acknowledgement may contact us directly at the number listed above as quickly as possible."
+        }
+      ],
+      "flagged_count": 4
+    }
+  },
+  "screening_interpretation": "Heuristic flags require source review; unflagged does not mean correct. Three flagged test cases have wrapped cross-reference boundaries in the same claims-procedure source. A fourth has unmatched parentheses; its cause is not adjudicated. The v2 parser repairs the demonstrated case and one other but conservatively rejects a case with a page-number-prefixed next heading. No cases are removed or rescored.",
+  "repair_parser_sha256": "4be3450d99b8e9d30e55cc7eb5f635192bdc236dd9e9b5405e083df0a01a2b2b",
+  "diagnostic_code_sha256": "74282d419e27568d34700d08ea9d788d832c590c79b818933d05e9acc0a80b35",
+  "frozen_fixture_hashes_before_and_after": {
+    "answers.jsonl": "ed1475b822ef2b1032b90430c2b21acb7e6259c35afc1f90dd5e07cf05666d35",
+    "audit.json": "fd1171c8ffba1d29a827f4c56abdced5c33efac9645797db18cdc22fbb96098b",
+    "manifest.lock.json": "90fa68ccfa46dd94c8a64be774d4d4c87e6f268be9af0f80f251a598e383c9c9",
+    "test.jsonl": "aaba50a5fa7165bc0a199b34d4ddccd10e5fcb83076038e6db5c9fea277d7c5c",
+    "train_additions.jsonl": "8497c24d6e2e942ddaa03fc6b71de6eb1254cc2ff902fd7df918e7a95590382c"
+  },
+  "frozen_fixture_modified": false,
+  "rescored": false,
+  "used_in_training": false,
+  "limitations": "Repair was designed after inspecting this test case. It is a parser regression fixture, not a new blind evaluation. The new parser handles explicit Q/A only, has not been deployed to the frozen data, and still needs broader source and expert review."
+}

@@ -1,0 +1,38 @@
+{
+  "question": "When can a health plan impose cost sharing on preventive services?",
+  "corpus": "condition",
+  "answer_candidates": 48172,
+  "candidates_scored": 159,
+  "config": {
+    "pool": "union200",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "selected_model": "seed_123",
+  "generation_calls": 0,
+  "research_retrieval_only": true,
+  "selection_lock_sha256": "f4eebfdb45836d31edc9152732dcf9f4e4c4622eeb9d34b3e310682e3a8b3dc0",
+  "model_weights_sha256": "5c2a25cc8bc6adae9711646df96d659f4a1f1321a7c2080b8c7acc50c817d723",
+  "seconds_including_loading": 7.504903299966827,
+  "results": [
+    {
+      "rank": 1,
+      "answer_id": "gov2_a_9c15653b42abc900",
+      "text": "Yes. In the preamble to interim final rules issued in November 2020 in response to the COVID- 19 Public Health Emergency (November 2020 interim final rules), the Departments reiterated that regulations and guidance issued with respect to the preventive services requirements generally require plans and issuers subject to section 2713 of the PHS Act to cover, without cost sharing, items and services that are integral to the furnishing of the recommended preventive service, regardless of whether the item or service is billed separately.14 The preamble to the November 2020 interim final rules cited previous guidance issued with respect to colonoscopies, clarifying that a plan or issuer may not impose cost sharing for polyp removal during or anesthesia provided in connection with a preventive screening colonoscopy. Other examples included covering, without cost sharing, collection of a specimen for recommended screenings or tests typically performed by laboratories and administration of a recommended immunization by a medical professional. The requirement to cover, without cost sharing, items and services that are integral to the furnishing of a recommended preventive service also applies to coverage of contraceptive services under the HRSA-Supported Guidelines, including coverage for anesthesia for a tubal ligation procedure or pregnancy tests needed before provision of certain forms of contraceptives, such as an intrauterine device (also known as an IUD), regardless of whether the items and services are billed separately. 13 See FAQs Part 51, available at https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource- center/faqs/aca-part-51.pdf and https://www.cms.gov/CCIIO/Resources/Fact-Sheets-and-FAQs/Downloads/FAQs- Part-51.pdf. 14 85 FR 71142, 71174 (Nov. 6, 2020). 4",
+      "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-54.pdf",
+      "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-54.pdf"
+    },
+    {
+      "rank": 2,
+      "answer_id": "10150",
+      "text": "When plans renew or are effective on or after August 1, 2012, all of the following womens health services will be considered preventive (some were already covered). These services generally will be covered at no cost share, when provided in network: Well-woman visits (annually and now including prenatal visits) Screening for gestational diabetes Human papillomavirus (HPV) DNA testing Counseling for sexually transmitted infections Counseling and screening for human immunodeficiency virus (HIV) Screening and counseling for interpersonal and domestic violence Breastfeeding support, supplies and counseling Generic formulary contraceptives are covered without member cost-share (for example, no copayment). Certain religious organizations or religious employers may be exempt from offering contraceptive services. So unless youremployertakes arighteous moral stand then yes AETNA HEALTH PLANS WITHPRESCRIPTIONPLANS will."
+    },
+    {
+      "rank": 3,
+      "answer_id": "condgov_a_8ab103a9e9d9424a",
+      "text": "Yes. Non-grandfathered group health plans and health insurance issuers offering non- grandfathered group or individual health insurance coverage must cover specified recommended preventive care services without cost sharing, consistent with PHS Act section 2713 and its implementing regulations, for all participants and beneficiaries under a group health plan (and all individuals enrolled in individual market coverage). If the plan or issuer covers dependent children, such dependent children must be provided the full range of recommended preventive services applicable to them (e.g., for their age group) without cost sharing and subject to 6 reasonable medical management techniques, in accordance with the requirements of PHS Act section 2713 and its implementing regulations.14 For example, the HRSA Guidelines recommend well-woman visits for adult women to obtain the recommended preventive services that are age- and developmentally-appropriate, including preconception care and many services necessary for prenatal care.15 Therefore, consistent with PHS Act section 2713 and its implementing regulations, plans and issuers must cover without cost sharing these recommended preventive services for dependent children where an attending provider determines that well- woman preventive services are age- and developmentally-appropriate for the dependent. Coverage of Colonoscopies Pursuant to USPSTF Recommendations",
+      "source_url": "https://www.dol.gov/sites/dolgov/files/EBSA/about-ebsa/our-activities/resource-center/faqs/aca-part-xxvi.pdf",
+      "source_group": "dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-xxvi.pdf"
+    }
+  ]
+}

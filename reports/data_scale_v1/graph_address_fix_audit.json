@@ -1,0 +1,14 @@
+{
+  "before_explicit_mentions": 784,
+  "before_distinct_explicit_edges": 640,
+  "after_distinct_explicit_edges": 533,
+  "removed_distinct_edges": 131,
+  "new_distinct_edges": 24,
+  "after_relation_counts": {
+    "references_section": 356,
+    "references_page": 177
+  },
+  "reason": "Preserve full subsection addresses, reject unsupported suffixes, deduplicate repeated source-target mentions.",
+  "before_graph_sha256": "b9c8b085506aecb1517e079a8704b1040165ccfb0796630581024e4a01f89c8c",
+  "after_graph_sha256": "f81ea2f111ce970514f5944d15ca16e88baa92909c4e194957d85609711b08d9"
+}

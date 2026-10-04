@@ -1,0 +1,74 @@
+[
+  {
+    "source_doc_id": "fema_nfip_claims_2024",
+    "source_physical_page": 15,
+    "target_doc_id": "fema_nfip_claims_2024",
+    "target_physical_page": 17,
+    "target_printed_page_label": "17",
+    "evidence_span": "More on this can be found on page 17",
+    "target_evidence_span": "REPAIRING & REBUILDING",
+    "source_pdf_sha256": "13ff0d9ce9e5f71cffb211ea889a8da4f346b355c0e5317ea24a77b4b7695859",
+    "annotation_author": "AI source inspection; no domain-expert adjudication",
+    "mapping_check": "Native PDF target footer plus quoted target heading; NJ pages visually inspected"
+  },
+  {
+    "source_doc_id": "fema_nfip_claims_2024",
+    "source_physical_page": 15,
+    "target_doc_id": "fema_nfip_claims_2024",
+    "target_physical_page": 9,
+    "target_printed_page_label": "9",
+    "evidence_span": "Return to page 9 for a list of what should be included in your records.",
+    "target_evidence_span": "ORGANIZE LISTS & DOCUMENTATION",
+    "source_pdf_sha256": "13ff0d9ce9e5f71cffb211ea889a8da4f346b355c0e5317ea24a77b4b7695859",
+    "annotation_author": "AI source inspection; no domain-expert adjudication",
+    "mapping_check": "Native PDF target footer plus quoted target heading; NJ pages visually inspected"
+  },
+  {
+    "source_doc_id": "fema_nfip_claims_2024",
+    "source_physical_page": 15,
+    "target_doc_id": "fema_nfip_claims_2024",
+    "target_physical_page": 6,
+    "target_printed_page_label": "6",
+    "evidence_span": "Review coverage scenarios for examples of what the adjuster might consider on page 6.",
+    "target_evidence_span": "Applying the Definition",
+    "source_pdf_sha256": "13ff0d9ce9e5f71cffb211ea889a8da4f346b355c0e5317ea24a77b4b7695859",
+    "annotation_author": "AI source inspection; no domain-expert adjudication",
+    "mapping_check": "Native PDF target footer plus quoted target heading; NJ pages visually inspected"
+  },
+  {
+    "source_doc_id": "nj_auto_guide_2026",
+    "source_physical_page": 4,
+    "target_doc_id": "nj_auto_guide_2026",
+    "target_physical_page": 12,
+    "target_printed_page_label": "10",
+    "evidence_span": "See page 10 for lawsuit options",
+    "target_evidence_span": "The Right to Sue",
+    "source_pdf_sha256": "80f3c4d7c9b77b86c2e230582577a33c003f82f9eae5c0fb7f235268a9878424",
+    "annotation_author": "AI source inspection; no domain-expert adjudication",
+    "mapping_check": "Native PDF target footer plus quoted target heading; NJ pages visually inspected"
+  },
+  {
+    "source_doc_id": "nj_auto_guide_2026",
+    "source_physical_page": 6,
+    "target_doc_id": "nj_auto_guide_2026",
+    "target_physical_page": 7,
+    "target_printed_page_label": "5",
+    "evidence_span": "See chart on page 5 for differences between the STANDARD and BASIC polices.",
+    "target_evidence_span": "The chart below compares the differences between the STANDARD and BASIC policies:",
+    "source_pdf_sha256": "80f3c4d7c9b77b86c2e230582577a33c003f82f9eae5c0fb7f235268a9878424",
+    "annotation_author": "AI source inspection; no domain-expert adjudication",
+    "mapping_check": "Native PDF target footer plus quoted target heading; NJ pages visually inspected"
+  },
+  {
+    "source_doc_id": "wi_ltc_pi047",
+    "source_physical_page": 28,
+    "target_doc_id": "wi_ltc_pi047",
+    "target_physical_page": 5,
+    "target_printed_page_label": "5",
+    "evidence_span": "CBRFs are covered only if your policy identifies these facilities as a covered benefit and the facility has been licensed as a CBRF by DHS. (page 5)",
+    "target_evidence_span": "Community-Based Long-Term Care",
+    "source_pdf_sha256": "f3fca20d4e56fd8a763c765aa8c491c2ac88f8e5eda3806c90006e546543d531",
+    "annotation_author": "AI source inspection; no domain-expert adjudication",
+    "mapping_check": "Native PDF target footer plus quoted target heading; NJ pages visually inspected"
+  }
+]

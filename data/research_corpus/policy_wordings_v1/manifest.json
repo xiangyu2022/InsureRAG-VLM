@@ -1,0 +1,49 @@
+{
+  "version": "policy_wordings_v1",
+  "created_utc": "2026-10-01T16:57:57.572837+00:00",
+  "counts": {
+    "documents": 8,
+    "document_families": 7,
+    "physical_pdf_pages": 1228,
+    "text_page_records": 1228,
+    "snippets": 5174,
+    "unique_directed_page_references": 171,
+    "reference_cases_by_split": {
+      "dev": 17,
+      "test": 154
+    },
+    "mapped_printed_pages": 1212
+  },
+  "files": {
+    "acquisition.json": "c231858eb6cd639921f7cf8fb61624bb1b9d77edb9161ba0978a3d61d2c4ab53",
+    "extracted/opm_2026_71-004.jsonl": "8a0a5e5e39d3ad9fbbc71425c99a0c1d93c5e473b6b80e03eda53cb356cec749",
+    "extracted/opm_2026_71-006.jsonl": "7831b9e0599294c7001aa694590c12846c68be54614e2050583e64fd832bb1fe",
+    "extracted/opm_2026_71-014.jsonl": "375f7213f14b320836078a3517164d0123576f6a797c9db52ef77fb86306bca5",
+    "extracted/opm_2026_71-015.jsonl": "55b526668fe201a0fefbc0a114db15d25e1de10a99a564c886dbcbad071fcf81",
+    "extracted/opm_2026_71-024.jsonl": "de1d19b2090d9f5afda09f1a9d45de2547f44c100efbfda05734d05413ef5117",
+    "extracted/opm_2026_71-027.jsonl": "4aa8d733e9b401d35783b8bb173c1bfa20622c6a45ab25b34b00e5433f4ce466",
+    "extracted/opm_2026_71-028.jsonl": "d1e812e9e383c82c741be02112a3f24ebb79a6529f9ad2656c32ec8a282e81a8",
+    "extracted/opm_2026_72-001.jsonl": "45ae8c1d59d604cfa78d98d51863258bb63f70094372ecc07eda7a1d3b7d3188",
+    "printed_page_maps.json": "79f044a8ee4384b47d62c957b34a4fa0103c12abf9e0f2c2d1486592089374c9",
+    "rag_pages.jsonl": "478856e828a170bf119b093e9a5170de9e1d1cca5dd9487299e2734215afa6eb",
+    "rag_snippets.jsonl": "1352807048e9466e732ddd3ad6848331390b8cb01e2d61a0330a33127f1608eb",
+    "reference_annotations.json": "ad291b55d497b2b3f4982fef05a8831c1b41df17426982b887b91e5371126a64",
+    "rejected_references.json": "16c7152592c179129ecebcfcb59821c241007334eaaa2745ed3f01c0e02946cc",
+    "sources/opm_2026_71-004.pdf": "87c2e63e0005c0f806df50007ac3f323e71aff3780448dbe124e9ba021dad9f3",
+    "sources/opm_2026_71-006.pdf": "84ae6e29cb2f65c1f56a7f7e1191a813cdd1aec0bf8978a5de57a98660b5a21a",
+    "sources/opm_2026_71-014.pdf": "c93430bcc42e9ada4799d964e4bb95817827d069c96fd031f637bd1deeab222f",
+    "sources/opm_2026_71-015.pdf": "91541648b9ad4eb2743fa4612b97802bed475efd9b0fa4176d6fe74e2fe69b77",
+    "sources/opm_2026_71-024.pdf": "93cb62cb8b41ea354f62928423e3b7f5c4dcbaa30e12122604a0bba5cdaad6e1",
+    "sources/opm_2026_71-027.pdf": "e5966e3e882b15758192d9af8e78e177958e7b2e0dc2eaa6b9d861de6d8ec702",
+    "sources/opm_2026_71-028.pdf": "05e71a2e92d83681ce4eaef0f39234d7ef8bf28de1779c9f136948ea83b60b56",
+    "sources/opm_2026_72-001.pdf": "a4405dd58ea865fc4991a564cbef031316248134aaa603a6b6bdefeeb170a7f7"
+  },
+  "qa_labels_used": false,
+  "reference_extraction": "Singular page N; unique numeric footer below 93% page height; skip lists/ranges and self-links; deduplicate source-target",
+  "limitations": [
+    "Eight plan brochures from seven plan families, all use an OPM format; not eight independent document genres.",
+    "Official archived benefit wordings; not personal issued policies, coverage decisions, or current advice.",
+    "Links validate published references and footer mappings, not legal applicability or reference correctness.",
+    "Native PDF text extraction can flatten tables; no VLM/table semantic accuracy is established."
+  ]
+}

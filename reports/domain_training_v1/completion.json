@@ -1,0 +1,49 @@
+{
+  "status": "completed",
+  "optimizer_steps": 2202,
+  "pairs_seen": 211302,
+  "epochs": 3,
+  "seconds": 471.6938420000952,
+  "peak_cuda_allocated_bytes": 1810712576,
+  "base_weights_sha256": "821d1aa69520101d6e0737f78a042ae25b19e5cb9160701909d10434f4aeb0ae",
+  "checkpoints": [
+    {
+      "epoch": 1,
+      "optimizer_steps": 734,
+      "training_groups_seen": 11739,
+      "mean_loss": 1.55074320744083,
+      "weights_sha256": "13232b2d590a516854025b97e0d99401a5aec4953178d8965477319deb724002",
+      "fine_tuned_in_this_project": true,
+      "base_model": "..\\models\\ms-marco-MiniLM-L6-v2",
+      "training_manifest_sha256": "7303e4bb4f143c813af9baf05789455db65100e688d54d8746e0b0ea44a036e3",
+      "training_protocol_sha256": "f585dafcf989b7ddb78170924065359220ae15623a1bdead84d97c194790001a",
+      "training_code_sha256": "6dfa79747867c062fa73fd6361920486f27d774c2bf12b939acf402eb5889000"
+    },
+    {
+      "epoch": 2,
+      "optimizer_steps": 1468,
+      "training_groups_seen": 11739,
+      "mean_loss": 1.118470816349636,
+      "weights_sha256": "a1c77daa8e4cad46bc3df0ff5adb8c17905533f694967241c5c036dec862e8fd",
+      "fine_tuned_in_this_project": true,
+      "base_model": "..\\models\\ms-marco-MiniLM-L6-v2",
+      "training_manifest_sha256": "7303e4bb4f143c813af9baf05789455db65100e688d54d8746e0b0ea44a036e3",
+      "training_protocol_sha256": "f585dafcf989b7ddb78170924065359220ae15623a1bdead84d97c194790001a",
+      "training_code_sha256": "6dfa79747867c062fa73fd6361920486f27d774c2bf12b939acf402eb5889000"
+    },
+    {
+      "epoch": 3,
+      "optimizer_steps": 2202,
+      "training_groups_seen": 11739,
+      "mean_loss": 1.0367332943680645,
+      "weights_sha256": "1a249dc5b136d3591b432803ee02cc6b744fe3cb1e6d20df7f180ccc93bf432f",
+      "fine_tuned_in_this_project": true,
+      "base_model": "..\\models\\ms-marco-MiniLM-L6-v2",
+      "training_manifest_sha256": "7303e4bb4f143c813af9baf05789455db65100e688d54d8746e0b0ea44a036e3",
+      "training_protocol_sha256": "f585dafcf989b7ddb78170924065359220ae15623a1bdead84d97c194790001a",
+      "training_code_sha256": "6dfa79747867c062fa73fd6361920486f27d774c2bf12b939acf402eb5889000"
+    }
+  ],
+  "weights_changed": true,
+  "log_sha256": "f6b93d56d8e7fc1902d07a234a6bb43c2866b63f4a9a698a36f8281604d10cd0"
+}

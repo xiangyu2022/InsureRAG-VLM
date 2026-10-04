@@ -1,0 +1,25 @@
+{
+  "documents": [
+    {
+      "path": "SCENARIO-D-BASE.pdf",
+      "packet_id": "SCENARIO-D",
+      "document_role": "base_policy",
+      "source_origin": "synthetic_stress_fixture",
+      "source_name": "SCENARIO-D-BASE.pdf",
+      "source_authority": "Invented regression fixture; no legal authority",
+      "policy_number": "SYN-D-001",
+      "effective_date": "2026-01-01"
+    },
+    {
+      "path": "SCENARIO-D-ENDORSEMENT.pdf",
+      "packet_id": "SCENARIO-D",
+      "document_role": "endorsement",
+      "source_origin": "synthetic_stress_fixture",
+      "source_name": "SCENARIO-D-ENDORSEMENT.pdf",
+      "source_authority": "Invented regression fixture; no legal authority",
+      "policy_number": "SYN-D-001",
+      "effective_date": "2026-04-01",
+      "form_code": "WB-01"
+    }
+  ]
+}

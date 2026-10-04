@@ -1,0 +1,82 @@
+{
+  "created_utc": "2026-10-01T16:24:36.198185+00:00",
+  "pymupdf": "1.28.2",
+  "verified_pdfs": 9,
+  "verified_text_pages": 163,
+  "physical_pages": 167,
+  "documents": [
+    {
+      "doc_id": "fema_nfip_claims_2024",
+      "source_url": "https://agents.floodsmart.gov/sites/default/files/media/document/2025-07/fema-nfip-claims-handbook-08-2024.pdf",
+      "sha256": "13ff0d9ce9e5f71cffb211ea889a8da4f346b355c0e5317ea24a77b4b7695859",
+      "physical_pages": 32,
+      "exact_text_matches": 32,
+      "empty_pages": 0
+    },
+    {
+      "doc_id": "fema_nfip_coverage_2023",
+      "source_url": "https://agents.floodsmart.gov/sites/default/files/media/document/2025-07/fema-nfip-summary-coverage-brochure-12-2023.pdf",
+      "sha256": "32590b3b46b7f8fa8aae89c81656b4ac4c5537db141a8b9b08f80aca1052f51d",
+      "physical_pages": 8,
+      "exact_text_matches": 8,
+      "empty_pages": 0
+    },
+    {
+      "doc_id": "md_life_guide",
+      "source_url": "https://insurance.maryland.gov/consumer/documents/publications/lifeinsurance.pdf",
+      "sha256": "654936be4928bd7350432bc45893417f021cb76858585e871548624911f7271e",
+      "physical_pages": 24,
+      "exact_text_matches": 21,
+      "empty_pages": 3
+    },
+    {
+      "doc_id": "nj_auto_guide_2026",
+      "source_url": "https://www.nj.gov/dobi/division_consumers/pdf/autoguide2026.pdf",
+      "sha256": "80f3c4d7c9b77b86c2e230582577a33c003f82f9eae5c0fb7f235268a9878424",
+      "physical_pages": 16,
+      "exact_text_matches": 15,
+      "empty_pages": 1
+    },
+    {
+      "doc_id": "wi_auto_pi057",
+      "source_url": "https://oci.wi.gov/Documents/Consumers/pi-057.pdf",
+      "sha256": "2bb9e72bc5483210bc353982118f9988dfee3f7724f61ff5a531596d26610a59",
+      "physical_pages": 18,
+      "exact_text_matches": 18,
+      "empty_pages": 0
+    },
+    {
+      "doc_id": "wi_health_pi225",
+      "source_url": "https://oci.wi.gov/Documents/Consumers/pi-225.pdf",
+      "sha256": "aae64417ece7459783d72b28a42bedede54afdbf1b93956921d442c31cb7c03b",
+      "physical_pages": 16,
+      "exact_text_matches": 16,
+      "empty_pages": 0
+    },
+    {
+      "doc_id": "wi_ltc_pi047",
+      "source_url": "https://oci.wi.gov/Documents/Consumers/PI-047.pdf",
+      "sha256": "f3fca20d4e56fd8a763c765aa8c491c2ac88f8e5eda3806c90006e546543d531",
+      "physical_pages": 35,
+      "exact_text_matches": 35,
+      "empty_pages": 0
+    },
+    {
+      "doc_id": "wi_property_claims_pi084",
+      "source_url": "https://oci.wi.gov/Documents/Consumers/PI-084.pdf",
+      "sha256": "ce46b7c9e9c39bc4f453e198ad214119b68fa97547661cb3e096909db24bbfc1",
+      "physical_pages": 16,
+      "exact_text_matches": 16,
+      "empty_pages": 0
+    },
+    {
+      "doc_id": "wi_renters_pi017",
+      "source_url": "https://oci.wi.gov/Documents/Consumers/PI-017.pdf",
+      "sha256": "6e134771e51f2714bab95f3920747896cbb6c8f3b6213d746a1ce65bc655e5d2",
+      "physical_pages": 2,
+      "exact_text_matches": 2,
+      "empty_pages": 0
+    }
+  ],
+  "meaning": "Byte identity and native text/physical-page correspondence only; not expert semantic review."
+}

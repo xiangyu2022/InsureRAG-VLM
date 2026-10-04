@@ -1,0 +1,7 @@
+-r requirements.txt
+scipy>=1.14
+scikit-learn>=1.6
+# Local BGE inference additionally requires torch and transformers.
+# Tested scale run: torch 2.14.0+cu130, transformers 5.17.0, RTX 4070 Laptop.
+transformers>=5.17,<6
+torch>=2.6

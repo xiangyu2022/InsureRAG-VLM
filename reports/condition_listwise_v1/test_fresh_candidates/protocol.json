@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-10-01T23:08:25.184494+00:00",
+  "split": "test",
+  "questions": 157,
+  "question_file_sha256": "aaba50a5fa7165bc0a199b34d4ddccd10e5fcb83076038e6db5c9fea277d7c5c",
+  "answer_file_sha256": "ed1475b822ef2b1032b90430c2b21acb7e6259c35afc1f90dd5e07cf05666d35",
+  "answer_count": 48172,
+  "gold_injection": false,
+  "code_sha256": "f6c57011feb0f585343e9f215bc1594743075e64ed10400098ed78b8615792e0",
+  "selection_lock_sha256": "f4eebfdb45836d31edc9152732dcf9f4e4c4622eeb9d34b3e310682e3a8b3dc0",
+  "selection_protocol_sha256": "d8d956f2f66e159e494e0e09dccb937d85e6bc8771c75287834140b568d5eed2",
+  "embedding": {
+    "schema_version": 1,
+    "backend": "local-transformer",
+    "model": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\models\\bge-small-en-v1.5",
+    "is_baseline": false,
+    "query_instruction": "Represent this sentence for searching relevant passages: ",
+    "pooling": "cls",
+    "max_length": 512,
+    "normalization": "l2",
+    "embedding_dim": 384,
+    "pooling_source": "explicit_argument",
+    "checkpoint_sha256": "03f953a6eccb84cee28665e8229fcef40f985e9df911e120e0a13b09109c3a92",
+    "checkpoint_files_sha256": {
+      "1_Pooling/config.json": "d1caf60c96f5fba2157c0c26b76d80818fad6cf0b8eb5e73ec372ff9818eba5c",
+      "config.json": "094f8e891b932f2000c92cfc663bac4c62069f5d8af5b5278c4306aef3084750",
+      "config_sentence_transformers.json": "940d5f50db195fa6e5e6a4f122c095f77880de259d74b14a65779ed48bdd7c56",
+      "download_provenance.json": "32f017723727bff0f8102b4e7920904c2e3bfcb270d82a494dc6ecac7fb5e4ce",
+      "model.safetensors": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+      "modules.json": "84e40c8e006c9b1d6c122e02cba9b02458120b5fb0c87b746c41e0207cf642cf",
+      "sentence_bert_config.json": "84e39fda68ccbff05bfa723ae9c0e70e23e2ec373b76e0f8c6e71af72a693cbf",
+      "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "tokenizer_config.json": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3",
+      "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    }
+  },
+  "index_sha256": "8f9ec235207551cc255f2c22f511bbe4d4d4589d5213d8cc2e6009d7f719536f"
+}

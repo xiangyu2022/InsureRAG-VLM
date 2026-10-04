@@ -1,0 +1,132 @@
+{
+  "created_utc": "2026-10-01T18:52:38.864362+00:00",
+  "selection_split": "valid",
+  "configurations": [
+    {
+      "pool": "bge100",
+      "lexical_weight": 0.0,
+      "cross_weight": 0.25
+    },
+    {
+      "pool": "bge100",
+      "lexical_weight": 0.0,
+      "cross_weight": 0.5
+    },
+    {
+      "pool": "bge100",
+      "lexical_weight": 0.0,
+      "cross_weight": 0.75
+    },
+    {
+      "pool": "bge100",
+      "lexical_weight": 0.0,
+      "cross_weight": 1.0
+    },
+    {
+      "pool": "bge100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.25
+    },
+    {
+      "pool": "bge100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    {
+      "pool": "bge100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.75
+    },
+    {
+      "pool": "bge100",
+      "lexical_weight": 0.2,
+      "cross_weight": 1.0
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.0,
+      "cross_weight": 0.25
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.0,
+      "cross_weight": 0.5
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.0,
+      "cross_weight": 0.75
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.0,
+      "cross_weight": 1.0
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.25
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.75
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 1.0
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.0,
+      "cross_weight": 0.25
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.0,
+      "cross_weight": 0.5
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.0,
+      "cross_weight": 0.75
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.0,
+      "cross_weight": 1.0
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.25
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.75
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 1.0
+    }
+  ],
+  "rule": "Max Hit@10, then MRR@100, then Hit@1, stable configuration order",
+  "code_sha256": {
+    "scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+    "src/insurerag_vlm/reranker.py": "bb90e6c134b44d7cb0c0cd6ca3165e098827bd908a3a86e73101040cf65734a3",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872"
+  }
+}

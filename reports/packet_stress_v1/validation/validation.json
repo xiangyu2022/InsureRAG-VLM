@@ -1,0 +1,60 @@
+{
+  "lock_sha256": "2d619fc8582e5890f3b5865d9085d1abf3440fe43ef5a9898f44ea55ec9a3bd8",
+  "pdf_sha256": {
+    "SCENARIO-A/SCENARIO-A.pdf": "f2f226adf1e05462cc77614a3edbf809d3d4879d09d0f5e3a667872eaaba3a3d",
+    "SCENARIO-B/SCENARIO-B-DECLARATIONS.pdf": "2d47da3c789157d3cf1772ee377dada9f3a406932260d31946aa5156ed2f007a",
+    "SCENARIO-B/SCENARIO-B-GUIDE.pdf": "c31ce1c98b4da384265086e8dfa6024e3589bf61b460e064b6704267171d2ec1",
+    "SCENARIO-C/SCENARIO-C-DECLARATIONS.pdf": "642eea83b79728b4353b75052b9fd85f01463b77a06d8e656253a093f4140571",
+    "SCENARIO-C/SCENARIO-C-CLAIM.pdf": "8e4ead26b5c29e6307b89b6a491b9b0656c9f4c1df7496fe2af035f1edbbf945",
+    "SCENARIO-D/SCENARIO-D-BASE.pdf": "d229b6b004acb3a3a0345983dcc63a3bae7217c03c037cf798fa248be0cb1f4f",
+    "SCENARIO-D/SCENARIO-D-ENDORSEMENT.pdf": "98291e9ce226f285d8959d14e681a87ea5cf66a5540309af3ed5f59388e9b337",
+    "SCENARIO-E/SCENARIO-E-VERSION-A.pdf": "c96282caf78379cc28053b356a4507d48dd8a43d6ae453d88ec52c6f18f9b2ee",
+    "SCENARIO-E/SCENARIO-E-VERSION-B.pdf": "cfc2e6ceff08601b70afaf24e906b7a8442b49484a5b74e6cfefcdfa2db0d2c7",
+    "SCENARIO-F/SCENARIO-F-SCHEDULE.pdf": "ee3fff11273c4308bce74260ef701b8f0e1fabca762d3550e98bcbf29398e5ac"
+  },
+  "ingestion": {
+    "SCENARIO-A": {
+      "loaded_pages": 2,
+      "sources": [
+        "scenario-a.pdf#page=1",
+        "scenario-a.pdf#page=2"
+      ]
+    },
+    "SCENARIO-B": {
+      "loaded_pages": 2,
+      "sources": [
+        "scenario-b-declarations.pdf#page=1",
+        "scenario-b-guide.pdf#page=1"
+      ]
+    },
+    "SCENARIO-C": {
+      "loaded_pages": 2,
+      "sources": [
+        "scenario-c-claim.pdf#page=1",
+        "scenario-c-declarations.pdf#page=1"
+      ]
+    },
+    "SCENARIO-D": {
+      "loaded_pages": 2,
+      "sources": [
+        "scenario-d-base.pdf#page=1",
+        "scenario-d-endorsement.pdf#page=1"
+      ]
+    },
+    "SCENARIO-E": {
+      "loaded_pages": 2,
+      "sources": [
+        "scenario-e-version-a.pdf#page=1",
+        "scenario-e-version-b.pdf#page=1"
+      ]
+    },
+    "SCENARIO-F": {
+      "loaded_pages": 3,
+      "sources": [
+        "scenario-f-schedule.pdf#page=1",
+        "scenario-f-schedule.pdf#page=2",
+        "scenario-f-schedule.pdf#page=3"
+      ]
+    }
+  }
+}

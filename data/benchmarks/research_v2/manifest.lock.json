@@ -1,0 +1,54 @@
+{
+  "benchmark_version": "research_v2",
+  "frozen_before_model_inference": true,
+  "created_utc": "2026-10-01T16:09:07.363872+00:00",
+  "counts": {
+    "dev": 60,
+    "test": 240,
+    "answerable": 225,
+    "unsupported": 75,
+    "dev_supported": 45,
+    "dev_unsupported": 15,
+    "test_supported": 180,
+    "test_unsupported": 60,
+    "documents": 25,
+    "dev_documents": 5,
+    "test_documents": 20,
+    "page_records": 179,
+    "snippets": 891,
+    "new_pdf_physical_pages": 167,
+    "html_records": 16,
+    "test_families": 13,
+    "dev_families": 4
+  },
+  "annotation_author": "AI-authored, source-span and reference/key checked; no human expert adjudication",
+  "question_split_policy": "Document-family disjoint dev/test; CA and NE dev; no reuse of six research_v1 documents; hand-authored distinct fact targets.",
+  "training_exposure_note": "16 archived HTML documents come from historical project corpus. 9 official PDFs acquired separately. Both evaluated Ollama arms are unadapted; unknown public pretraining exposure remains. Not a holdout from legacy SFT.",
+  "chunking": {
+    "unit": "whitespace words",
+    "window": 180,
+    "stride": 120,
+    "same_for_all_documents": true,
+    "answer_aware": false
+  },
+  "files": {
+    "dev.jsonl": "2f2e29227a555277827fce8f705b1f7d25b914aa1c944ec6d923a33cfa769bf9",
+    "test.jsonl": "9f6ce13cdd51a9315265cb8b1f442f54c11f3f0efd92a9f06092aaadbfb33a1c",
+    "documents.json": "2fd0a3bee6b68fa92869bf8c177c6a78e229e08c6e7116d8cdd115d53a9b80cc"
+  },
+  "corpus_files": {
+    "data/benchmarks/research_v2/corpus/rag_pages.jsonl": "3db67d475625c5887f38b1be950fa8fece6f57ad77a84039d845a17c6d17e22f",
+    "data/benchmarks/research_v2/corpus/rag_snippets.jsonl": "c928efd760fdcc8091ead249c7122a9a45d3085b17bede2b0adeb20a4a75e8aa"
+  },
+  "source_files": {
+    "sources/fema_nfip_claims_2024.pdf": "13ff0d9ce9e5f71cffb211ea889a8da4f346b355c0e5317ea24a77b4b7695859",
+    "sources/fema_nfip_coverage_2023.pdf": "32590b3b46b7f8fa8aae89c81656b4ac4c5537db141a8b9b08f80aca1052f51d",
+    "sources/md_life_guide.pdf": "654936be4928bd7350432bc45893417f021cb76858585e871548624911f7271e",
+    "sources/nj_auto_guide_2026.pdf": "80f3c4d7c9b77b86c2e230582577a33c003f82f9eae5c0fb7f235268a9878424",
+    "sources/wi_auto_pi057.pdf": "2bb9e72bc5483210bc353982118f9988dfee3f7724f61ff5a531596d26610a59",
+    "sources/wi_health_pi225.pdf": "aae64417ece7459783d72b28a42bedede54afdbf1b93956921d442c31cb7c03b",
+    "sources/wi_ltc_pi047.pdf": "f3fca20d4e56fd8a763c765aa8c491c2ac88f8e5eda3806c90006e546543d531",
+    "sources/wi_property_claims_pi084.pdf": "ce46b7c9e9c39bc4f453e198ad214119b68fa97547661cb3e096909db24bbfc1",
+    "sources/wi_renters_pi017.pdf": "6e134771e51f2714bab95f3920747896cbb6c8f3b6213d746a1ce65bc655e5d2"
+  }
+}

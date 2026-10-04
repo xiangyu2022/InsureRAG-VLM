@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-10-01T22:26:28.729521+00:00",
+  "reason": "Seed 42 pairwise/public-teacher training fails the FAQ validation guard at every registered configuration. Hypothesis: public-teacher regularization pulls the specialist toward a weaker insurance baseline, while pairwise averaging underweights rank supervision.",
+  "conditional_trigger": "Run follow-up only if both registered pairwise seeds fail promotion. No fresh test scored first.",
+  "followup": "Keep the exact same training questions/positives/negatives and initial weights. Use confidence-adjusted listwise CE with smoothing 0.02; replace public KL target with frozen previous specialist (0.1 FAQ, 0.2 other); retain public scores only for negative confidence. Same LR 3e-6, seeds 42/123, one epoch, repeats, validation search and guards.",
+  "tests": "A single final selection is tested on the still-unopened 157-question government cohort. Preserve all rejected pairwise checkpoints and validation scores.",
+  "parent_seed_123_status": "Training, not validated at intent registration."
+}

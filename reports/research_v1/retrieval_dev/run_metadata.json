@@ -1,0 +1,66 @@
+{
+  "started_utc": "2026-09-20T22:08:59.826953+00:00",
+  "benchmark_lock_sha256": "e97695307070c6d1974c56644c31cc3b6df8227aa989f370231e628b9f635f82",
+  "benchmark": {
+    "benchmark_version": "research_v1",
+    "frozen_before_model_inference": true,
+    "annotation_author": "AI-assisted/manual-agent-verified; no human-expert adjudication",
+    "counts": {
+      "dev": 12,
+      "test": 24,
+      "answerable": 24,
+      "unsupported": 12
+    },
+    "question_split_policy": "Document-disjoint dev/test questions across six named archived public guides.",
+    "training_exposure_note": "These public documents exist in the legacy SFT corpus; this is NOT a document holdout from previous fine-tuning. Compare unadapted Ollama base instruct models only and report possible public pretraining exposure.",
+    "files": {
+      "dev.jsonl": "8e666859f29bc2ad8ad05ef9b1e2cd71a4d08e5b3337605fa5b5941d7f21809f",
+      "test.jsonl": "f4615efc16a3f1d66d8afac27f1d234aa20199812c23b050cf6d5f84b122eeea",
+      "documents.json": "7611db67b9122bdd3619e616cfc23d007402f6316274b391279836357f526824"
+    },
+    "corpus_files": {
+      "data/04_curated/rag_pages.jsonl": "cd89222cbe79add5ac72a8f695ba15d42011f94206dc934b76c6436ce19c2b33",
+      "data/04_curated/rag_snippets.jsonl": "5d844f3ddc63aefb954ded0ca073027e22942c39fa1ab48cf9d707cabd365cbd"
+    }
+  },
+  "split": "dev",
+  "case_count": 12,
+  "partial_dev_smoke": false,
+  "model": null,
+  "run_config": {
+    "benchmark": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\InsureRAG-VLM\\data\\benchmarks\\research_v1",
+    "corpus": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\InsureRAG-VLM\\data\\04_curated",
+    "endpoint": "http://localhost:11435",
+    "model": null,
+    "output": "reports\\research_v1\\retrieval_dev",
+    "split": "dev",
+    "mode": "retrieval-only",
+    "retrieval_model": "local-hashing",
+    "retrieval_mode": "hybrid_text",
+    "top_k": 3,
+    "max_context_chars": 8000,
+    "num_ctx": 8192,
+    "num_predict": 192,
+    "timeout": 600,
+    "limit": null,
+    "validate_only": false
+  },
+  "prompt_contract_sha256": "acd6269f20c52cd11627aaf5a6643903fdc364b6ae73ef92bc5c481a6f4b5519",
+  "code_sha256": {
+    "scripts\\eval_research_benchmark.py": "7e05162f1ecfde77a32b1edc8433b12cb7ea230bb3674abeaf85b77d3c215014",
+    "src\\insurerag_vlm\\hybrid_pipeline.py": "54051933aa9de60631491769270b8533885bd9e1b31e2c4501c63bad9729f2cc",
+    "src\\insurerag_vlm\\retriever.py": "9de44e83b42efd61dec339684c156c92e214c2877820de4b37a095879c2a7f0d",
+    "src\\insurerag_vlm\\config.py": "a930bd2c159b8e5ea2f21e7a870bfade5b02ee263f44954e3cb453d6078cd806"
+  },
+  "adapter_status": "No project SFT adapter is loaded; exact local Ollama tag and digest only.",
+  "evaluation_path": "hybrid_pipeline.query_with_ranking plus benchmark JSON generation contract; no app repair or query_structured postprocessing.",
+  "metric_warning": "Deterministic answer-key/evidence contract checks are not semantic accuracy or a production insurance error rate. Wilson intervals treat questions as independent and do not account for document clustering.",
+  "index_build_seconds": {
+    "de_auto_insurance_guide": 0.0892147000413388,
+    "de_homeowners_guide": 0.03792329999851063
+  },
+  "finished_utc": "2026-09-20T22:09:00.296521+00:00",
+  "completed_requests": 12,
+  "request_errors": 0,
+  "predictions_sha256": "b8274caff6c46c92155f9ecbd557ab90542f91f2bfea92d451932006b8258f61"
+}

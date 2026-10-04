@@ -1,0 +1,174 @@
+{
+  "started_utc": "2026-09-20T23:02:12.768566+00:00",
+  "label": "Synthetic regression only; no real customer documents; no production or held-out accuracy claim",
+  "benchmark_lock_sha256": "2d619fc8582e5890f3b5865d9085d1abf3440fe43ef5a9898f44ea55ec9a3bd8",
+  "model_info": {
+    "name": "qwen3.5:4b",
+    "model": "qwen3.5:4b",
+    "modified_at": "2026-09-20T17:03:01.5691057-05:00",
+    "size": 3389983735,
+    "digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen35",
+      "families": [
+        "qwen35"
+      ],
+      "parameter_size": "4.7B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560
+    },
+    "capabilities": [
+      "completion",
+      "vision",
+      "tools",
+      "thinking"
+    ]
+  },
+  "run_config": {
+    "benchmark": "C:\\Users\\zhan6\\Documents\\Codex\\2026-09-20\\g\\work\\InsureRAG-VLM\\data\\benchmarks\\packet_stress_v1",
+    "endpoint": "http://127.0.0.1:11435",
+    "model": "qwen3.5:4b",
+    "retrieval_model": "local-hashing",
+    "output": "reports\\packet_stress_v1\\qwen35_v3",
+    "top_k": 3,
+    "max_context_chars": 8000,
+    "num_ctx": 8192,
+    "num_predict": 192,
+    "timeout": 600.0,
+    "limit": null,
+    "validate_only": false
+  },
+  "runtime_environment": {
+    "python": "3.12.10",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "logical_cpu_count": 24,
+    "package_versions": {
+      "numpy": "2.5.3",
+      "requests": "2.34.2",
+      "torch": "2.14.0+cpu",
+      "transformers": "5.17.0",
+      "scikit-learn": "1.9.1"
+    },
+    "memory_note": "Per-request Ollama api/ps reports model size and size_vram; physical RAM is not inferred."
+  },
+  "pdf_sha256": {
+    "SCENARIO-A/SCENARIO-A.pdf": "f2f226adf1e05462cc77614a3edbf809d3d4879d09d0f5e3a667872eaaba3a3d",
+    "SCENARIO-B/SCENARIO-B-DECLARATIONS.pdf": "2d47da3c789157d3cf1772ee377dada9f3a406932260d31946aa5156ed2f007a",
+    "SCENARIO-B/SCENARIO-B-GUIDE.pdf": "c31ce1c98b4da384265086e8dfa6024e3589bf61b460e064b6704267171d2ec1",
+    "SCENARIO-C/SCENARIO-C-DECLARATIONS.pdf": "642eea83b79728b4353b75052b9fd85f01463b77a06d8e656253a093f4140571",
+    "SCENARIO-C/SCENARIO-C-CLAIM.pdf": "8e4ead26b5c29e6307b89b6a491b9b0656c9f4c1df7496fe2af035f1edbbf945",
+    "SCENARIO-D/SCENARIO-D-BASE.pdf": "d229b6b004acb3a3a0345983dcc63a3bae7217c03c037cf798fa248be0cb1f4f",
+    "SCENARIO-D/SCENARIO-D-ENDORSEMENT.pdf": "98291e9ce226f285d8959d14e681a87ea5cf66a5540309af3ed5f59388e9b337",
+    "SCENARIO-E/SCENARIO-E-VERSION-A.pdf": "c96282caf78379cc28053b356a4507d48dd8a43d6ae453d88ec52c6f18f9b2ee",
+    "SCENARIO-E/SCENARIO-E-VERSION-B.pdf": "cfc2e6ceff08601b70afaf24e906b7a8442b49484a5b74e6cfefcdfa2db0d2c7",
+    "SCENARIO-F/SCENARIO-F-SCHEDULE.pdf": "ee3fff11273c4308bce74260ef701b8f0e1fabca762d3550e98bcbf29398e5ac"
+  },
+  "ingestion": {
+    "SCENARIO-A": {
+      "loaded_pages": 2,
+      "sources": [
+        "scenario-a.pdf#page=1",
+        "scenario-a.pdf#page=2"
+      ]
+    },
+    "SCENARIO-B": {
+      "loaded_pages": 2,
+      "sources": [
+        "scenario-b-declarations.pdf#page=1",
+        "scenario-b-guide.pdf#page=1"
+      ]
+    },
+    "SCENARIO-C": {
+      "loaded_pages": 2,
+      "sources": [
+        "scenario-c-claim.pdf#page=1",
+        "scenario-c-declarations.pdf#page=1"
+      ]
+    },
+    "SCENARIO-D": {
+      "loaded_pages": 2,
+      "sources": [
+        "scenario-d-base.pdf#page=1",
+        "scenario-d-endorsement.pdf#page=1"
+      ]
+    },
+    "SCENARIO-E": {
+      "loaded_pages": 2,
+      "sources": [
+        "scenario-e-version-a.pdf#page=1",
+        "scenario-e-version-b.pdf#page=1"
+      ]
+    },
+    "SCENARIO-F": {
+      "loaded_pages": 3,
+      "sources": [
+        "scenario-f-schedule.pdf#page=1",
+        "scenario-f-schedule.pdf#page=2",
+        "scenario-f-schedule.pdf#page=3"
+      ]
+    }
+  },
+  "generation_options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 192,
+    "top_k": 40,
+    "top_p": 1.0,
+    "repeat_penalty": 1.0,
+    "presence_penalty": 0.0
+  },
+  "adapter_status": "No SFT adapter; exact Ollama base-model tag only",
+  "evaluation_path": "actual PDF load_documents -> index -> query_structured; same-call raw_answer versus served output",
+  "code_sha256": {
+    "scripts\\eval_packet_stress.py": "7df4552dcb134c843b72514c55dc4fd4f1e61fb2e38a41aa753476ab039dac3d",
+    "scripts\\build_packet_stress.py": "39e6020f42a535cc32dc10a8a02395b6f9d49bc991c1e0d4a7ab0cd87c3e24f0",
+    "src\\insurerag_vlm\\hybrid_pipeline.py": "19e7ca89b5ac79648d1539dc97d9fc3caf795bf14bdafb3d310d9700e61d800a",
+    "src\\insurerag_vlm\\vlm.py": "109f2555cc767d4ef8119296d3edb54433abe1306157974c740a5b6637cada75",
+    "src\\insurerag_vlm\\answer_safety.py": "bdabc282966f430a4be7b5f3380022f6577b9d5513c742d1e9ed1c4172c73dd3",
+    "src\\insurerag_vlm\\retriever.py": "f9d17a456d84bda779bdf78a9c2135bae0c0a955e1ac15ba9bb6c4e44123f85e",
+    "src\\insurerag_vlm\\data.py": "b9706f4e9025a3092efa2192015f5703423f233bc5afe328f9a763216049ef0e",
+    "src\\insurerag_vlm\\config.py": "8f4f798e0d449376bf60424432f566b45b90c83ca09e59ecad4a9bfd4e55818f"
+  },
+  "request_schedule": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "F01",
+    "F02",
+    "F03",
+    "F04"
+  ],
+  "index_build_seconds": {
+    "SCENARIO-A": 0.01688910002121702,
+    "SCENARIO-B": 0.054835100017953664,
+    "SCENARIO-C": 0.015640199999324977,
+    "SCENARIO-D": 0.0397458000225015,
+    "SCENARIO-E": 0.05399139999644831,
+    "SCENARIO-F": 0.02771360002225265
+  },
+  "prompt_contract_sha256": "f0e860f4073841c523d1a0895df2bead10ce3dd69d6c4d1085b8ceaea6eed3d6",
+  "completed_utc": "2026-09-20T23:02:52.149018+00:00"
+}

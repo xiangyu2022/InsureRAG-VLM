@@ -1,0 +1,853 @@
+{
+  "by_domain": [
+    {
+      "domain": "annuities",
+      "n": 94,
+      "bge_hit10": 0.5638297872340425,
+      "previous_hit10": 0.5638297872340425,
+      "trained_hit10": 0.6170212765957447,
+      "trained_minus_bge_pp": 5.319148936170215,
+      "trained_minus_previous_pp": 5.319148936170215
+    },
+    {
+      "domain": "auto-insurance",
+      "n": 249,
+      "bge_hit10": 0.6465863453815262,
+      "previous_hit10": 0.642570281124498,
+      "trained_hit10": 0.7068273092369478,
+      "trained_minus_bge_pp": 6.024096385542165,
+      "trained_minus_previous_pp": 6.425702811244982
+    },
+    {
+      "domain": "critical-illness-insurance",
+      "n": 17,
+      "bge_hit10": 0.8823529411764706,
+      "previous_hit10": 0.8823529411764706,
+      "trained_hit10": 0.8235294117647058,
+      "trained_minus_bge_pp": -5.882352941176472,
+      "trained_minus_previous_pp": -5.882352941176472
+    },
+    {
+      "domain": "disability-insurance",
+      "n": 102,
+      "bge_hit10": 0.696078431372549,
+      "previous_hit10": 0.7352941176470589,
+      "trained_hit10": 0.7647058823529411,
+      "trained_minus_bge_pp": 6.8627450980392135,
+      "trained_minus_previous_pp": 2.941176470588225
+    },
+    {
+      "domain": "health-insurance",
+      "n": 245,
+      "bge_hit10": 0.6816326530612244,
+      "previous_hit10": 0.7020408163265306,
+      "trained_hit10": 0.7346938775510204,
+      "trained_minus_bge_pp": 5.3061224489796,
+      "trained_minus_previous_pp": 3.2653061224489854
+    },
+    {
+      "domain": "home-insurance",
+      "n": 201,
+      "bge_hit10": 0.6019900497512438,
+      "previous_hit10": 0.6069651741293532,
+      "trained_hit10": 0.6169154228855721,
+      "trained_minus_bge_pp": 1.492537313432829,
+      "trained_minus_previous_pp": 0.995024875621886
+    },
+    {
+      "domain": "life-insurance",
+      "n": 514,
+      "bge_hit10": 0.7529182879377432,
+      "previous_hit10": 0.7821011673151751,
+      "trained_hit10": 0.8268482490272373,
+      "trained_minus_bge_pp": 7.392996108949412,
+      "trained_minus_previous_pp": 4.47470817120622
+    },
+    {
+      "domain": "long-term-care-insurance",
+      "n": 89,
+      "bge_hit10": 0.6179775280898876,
+      "previous_hit10": 0.651685393258427,
+      "trained_hit10": 0.6966292134831461,
+      "trained_minus_bge_pp": 7.86516853932585,
+      "trained_minus_previous_pp": 4.49438202247191
+    },
+    {
+      "domain": "medicare-insurance",
+      "n": 251,
+      "bge_hit10": 0.701195219123506,
+      "previous_hit10": 0.749003984063745,
+      "trained_hit10": 0.7569721115537849,
+      "trained_minus_bge_pp": 5.5776892430278835,
+      "trained_minus_previous_pp": 0.7968127490039834
+    },
+    {
+      "domain": "other-insurance",
+      "n": 3,
+      "bge_hit10": 1.0,
+      "previous_hit10": 1.0,
+      "trained_hit10": 1.0,
+      "trained_minus_bge_pp": 0.0,
+      "trained_minus_previous_pp": 0.0
+    },
+    {
+      "domain": "renters-insurance",
+      "n": 140,
+      "bge_hit10": 0.4857142857142857,
+      "previous_hit10": 0.5071428571428571,
+      "trained_hit10": 0.5571428571428572,
+      "trained_minus_bge_pp": 7.142857142857145,
+      "trained_minus_previous_pp": 5.000000000000004
+    },
+    {
+      "domain": "retirement-plans",
+      "n": 95,
+      "bge_hit10": 0.7684210526315789,
+      "previous_hit10": 0.7578947368421053,
+      "trained_hit10": 0.8421052631578947,
+      "trained_minus_bge_pp": 7.36842105263158,
+      "trained_minus_previous_pp": 8.42105263157894
+    }
+  ],
+  "regressions_against_previous": [
+    {
+      "id": "iqa_v2_test_00209",
+      "question": "Can I Get A Life Insurance Policy If I Am Pregnant?",
+      "domain": "life-insurance",
+      "gold": [
+        {
+          "24715": "My experience has been that it is possible to get life insurance during the first trimester, but that insurance agencies are reluctant to take an application for a woman in her second and third trimesters of pregnancy, in case of complications. But I am sure there are some companies that will cover women who are up to 6 months pregnant with a medic"
+        }
+      ],
+      "new_top": "I am not aware of any carrier that will issue a life insurance policy to a pregnant female. There are many risk factors to consider which make it impossible to properly price the risk of a life insurance policy on a woman that is pregnant. Every carrier I am aware of will not consider an application until the pregnancy has ended and the woman has b",
+      "previous_gold_ranks": [
+        9
+      ],
+      "trained_gold_ranks": [
+        20
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00351",
+      "question": "What Is The Average Homeowners Insurance Cost Per Month?",
+      "domain": "home-insurance",
+      "gold": [
+        {
+          "26323": "Your cost for homeowners insurance is as unique as the home that you own. There are many factors that are taken into consideration when your premium is determined from an insurance carrier. Based on my experience within my geographic area I would say the average homeowners insurance cost is about eight hundred to fifteen hundred dollars per year. C"
+        }
+      ],
+      "new_top": "Homeowners insurance can vary greatly depending on valuation of property, amount of personal property owned, number of buildings on the property, age of the buildings, distance from nearest responding fire department, city or rural location, number of claims on the property, credit score of the proposed insured, deductible chosen and many other fac",
+      "previous_gold_ranks": [
+        5
+      ],
+      "trained_gold_ranks": [
+        13
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00404",
+      "question": "What Is Home Insurance Dwelling Coverage?",
+      "domain": "home-insurance",
+      "gold": [
+        {
+          "10006": "Generally speaking, there are three elements included in a Homeowners' Policy. The first is dwelling coverage. This covers damage to the building, your home. The second is Personal Property coverage which covers damage or loss of your personal belongings whether inside or outside of your home. The third is Liability coverage which protects you in t"
+        }
+      ],
+      "new_top": "Dwelling coverage is also known as Coverage A in most homeowners policies. The company is obliged to pay for damages sustained to your residence up to the limits of the policy, subject to the stated deductible. It pays these damages if they are caused by a peril that is identified in the policy. Fire is the most commonly identified peril. Many addi",
+      "previous_gold_ranks": [
+        10
+      ],
+      "trained_gold_ranks": [
+        25
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00433",
+      "question": "What Kind Of Insurance Do I Need On My Home?",
+      "domain": "home-insurance",
+      "gold": [
+        {
+          "19216": "You need homeowners insurance at minimum. Depending on the geographic location of your home you could also need or want flood insurance. I would also recommend an umbrella policy to provide added liability protection that covers both your home and autos. To ensure that you get the protection you need and want contact your local agent, they will adv"
+        }
+      ],
+      "new_top": "That would depend on many factors. The price of the home, your personal property in the home, and your geographic location just to name a few things. All of these are going to play a role in the coverage that are offered. The company that you chose will also play a major role in the types of coverage that is offered. Please contact a local agent, t",
+      "previous_gold_ranks": [
+        3
+      ],
+      "trained_gold_ranks": [
+        19
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00440",
+      "question": "How To Get Medicare At Age 62?",
+      "domain": "medicare-insurance",
+      "gold": [
+        {
+          "9398": "You can indeed qualify for Medicare at age 62 . . . as long as you are totally and permanently disabled under Social Security rules. If you have been disabled and on SSDI for 2 years you qualify for Medicare. If you have ESRD or ALS you can also qualify for SSDI and Medicare at age 62"
+        }
+      ],
+      "new_top": "If you are receiving Social Security benefits at age 65, you will automatically be enrolled in Medicare. If you are not yet receiving Social Security at age 65, you can enroll in Medicare on their website, medicare.gov. This website gives you a helpful video to watch before applying: WEBSITELINK . Or you can visit your local Social Security office ",
+      "previous_gold_ranks": [
+        8
+      ],
+      "trained_gold_ranks": [
+        31
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00553",
+      "question": "Which Company Offers The Best Disability Insurance?",
+      "domain": "disability-insurance",
+      "gold": [
+        {
+          "4187": "There are many insurance companies that offer affordable disability insurance policies. Some of them include Mass Mutual, Hartford, Berkshire and Principal. Of course, there are many other very reliable and reputable insurers. A full-time broker or financial planner is the best resource for information and they can also shop for the best prices whe"
+        },
+        {
+          "6451": "The best disability policy for you is the policy that meets your needs in time of claim with the most affordable premium at time of purchase. There are a lot of companies that have disability products. It is more about having the right amount of benefit, elimination period and for the proper time limits than the company. I highly recommend using an"
+        }
+      ],
+      "new_top": "The insurance company that offers the best disability plan is the company you purchase the policy from with the best coverage at the best price. There are too many factors that are in play when buying a disability insurance policy to state if one company is the best. There are several companies that do an outstanding job with disability coverage. I",
+      "previous_gold_ranks": [
+        8,
+        22
+      ],
+      "trained_gold_ranks": [
+        20,
+        28
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00576",
+      "question": "How Are Variable Annuities Insured?",
+      "domain": "annuities",
+      "gold": [
+        {
+          "18286": "A variable annuity is a security investment under FINRA and an insurance product under the department of Insurance of each state. Variable annuity separate sub accounts have equity and bond investments and can lose money. The guaranteed general account is a fixed interest rate which can vary. A variable annuity contract is not insured by any govern"
+        }
+      ],
+      "new_top": "The variable annuity will make sense based on your individual needs and personal circumstances. This type of annuity is a contract between the insurance company and the insured (i.e. client or customer). The insured pays one lump sum payment or may make other payment arrangements to the insurance company. Then, the insurance company agrees to make ",
+      "previous_gold_ranks": [
+        4
+      ],
+      "trained_gold_ranks": [
+        11
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00579",
+      "question": "How Is Car Insurance Quote Calculated?",
+      "domain": "auto-insurance",
+      "gold": [
+        {
+          "67": "There are a lot of factors used when calculating auto insurance rates. Each company has their own formula for calculating rates. Factors they use include age, gender, location, marital status, driving record, credit rating, type and value of vehicle, residential status (owner vs renter), and prior insurance coverage, and claims history all can fact"
+        }
+      ],
+      "new_top": "A car insurance quote is very easy to read. Naturally, the cost is the rate that you pay. It will typically be shown in monthly or semi-annual formats. The deductibles are referring to collision and comprehensive benefits and the liability limits are the bodily injury and property damage figures. If you need help, contact us!",
+      "previous_gold_ranks": [
+        4
+      ],
+      "trained_gold_ranks": [
+        17
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00648",
+      "question": "How Does A Life Insurance Trust Work?",
+      "domain": "life-insurance",
+      "gold": [
+        {
+          "14176": "Generally speaking a life insurance policy is used to fund the trust. The trust spells out the conditions upon which the money can be paid out. For exam a Funeral Trust uses a life insurance policy that uses the trust as the beneficiary. The terms of the trust state that the funds can only be used to pay for matters related to final expenses. The l"
+        },
+        {
+          "6217": "Assuming you are addressing irrevocable life insurance trusts (ILIT), the chronology of events and ownership are very important. The grantor cannot have any incident of ownership. The ILIT must be the owner and the date of the ILIT must precede the policy date. The ILIT will name the beneficiaries of the trust and premium paid by the ITLIT grantor "
+        },
+        {
+          "6636": "Life insurance does not need a specific life insurance trust to be the life insurance owner and/or beneficiary but it can provide some additional flexibility in planning. The decision to engage an experienced estate planning attorney to utilize a life insurance trust is usually reserved for more complex situations where the set up and maintenance c"
+        }
+      ],
+      "new_top": "A life insurance trust is a legal instrument that is normally used as an estate planning tool. A funded trust owns the life insurance policy and the assets to pay (fund) the premiums. The trust is both the owner and beneficiary in most cases. When establishing any trust, including a life insurance trust, you should consult with a qualified estate a",
+      "previous_gold_ranks": [
+        9,
+        14
+      ],
+      "trained_gold_ranks": [
+        12,
+        21
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00727",
+      "question": "What Exactly Does Medicare Supplement F Cover?",
+      "domain": "medicare-insurance",
+      "gold": [
+        {
+          "2433": "Medicare Supplemental Plan F covers 100% of what Medicare doesn't cover. Keep in mind, when you have Supplemental (AKA Medigap) Plans, Medicare is your primary insurance provider. For medically necessary procedures, Medicare Parts A (Hospital) and B (Doctors) provides good coverage, but still leaves folks on Medicare with a lot of out of pocket exp"
+        },
+        {
+          "9231": "Medicare Supplement F (Medigap) covers (among other things) Part A Coinsurance and Hospital costs up to 365 days after Medicare benefits run out. Part B coinsurance and copay are covered along with the first three pints of blood used. The Part A Hospice Care Copay or Coinsurance is covered along with Skilled Nursing Facility Coinsurance. There are "
+        }
+      ],
+      "new_top": "Medicare supplement plan F covers quite a few items. Medicare supplement plans dovetail into Medicare Part A and Part B. Plan F pays 100% of approved Medicare Part A and Part B claims that are not paid by Medicare due to deductibles and coinsurance. Medicare supplement plan F is the top of the line.",
+      "previous_gold_ranks": [
+        10
+      ],
+      "trained_gold_ranks": [
+        11
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00728",
+      "question": "When Can I Sign Up For Medigap Insurance?",
+      "domain": "medicare-insurance",
+      "gold": [
+        {
+          "12970": "There is an \"open enrollment period\" during which you can buy any Medigap insurance policy (Plan F) sold in your state beginning the month in which you turn age 65 and you are enrolled in Medicare Part B. During this six month open enrollment period, you can buy any Medigap insurance offered, even if you have health problems, for the same price as "
+        }
+      ],
+      "new_top": "You can sign up for a Medigap policy at any time, but if you have health issues the best time would be during your IEP (initial enrollment period) or one of the guaranteed issue times. If you miss IEP or do not have a guaranteed right you will need to go through medical underwriting.",
+      "previous_gold_ranks": [
+        9
+      ],
+      "trained_gold_ranks": [
+        34
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00745",
+      "question": "How Good Is Genworth Long Term Care Insurance?",
+      "domain": "long-term-care-insurance",
+      "gold": [
+        {
+          "25822": "There are not many long term care insurance companies (LTCi) left in the extended care market place. Perhaps there are a half a dozen worth your consideration. Genworth is one of the top LTCi companies in the U.S. They generally rank well in annual premium cost against the competitors and offer excellent policy language in their contractual definit"
+        }
+      ],
+      "new_top": "There are less than a dozen good companies remaining in the long term care insurance market. And half of those are excellent long term care insurance companies. Genworth is among the best, especially with its latest policy rendition. And if it means anything, your humble responder (me) owes Genworth.",
+      "previous_gold_ranks": [
+        5
+      ],
+      "trained_gold_ranks": [
+        11
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00785",
+      "question": "Do I Need Medicare Part B With Tricare?",
+      "domain": "medicare-insurance",
+      "gold": [
+        {
+          "11459": "Tricare, formerly known as CHAMPUS, is a health care program of the U.S. Dept of Defense Military Health System. TFL, Tricare for Life, offers secondary coverage to Medicare for all beneficiaries who have both Medicare Parts A and B. There are very few incidences where one can get this coverage without having Part B, and those incidences are tempor"
+        },
+        {
+          "27271": "Tricare , formerly known as CHAMPUS, provides civilian benefits for military personnel, and their dependents. Tricare for Life (TFL) was designed to offer secondary coverage to Medicare for all who have Medicare Part A and Part B. There are very few ways one can have Tricare without having Part B. Here is a helpful link to explain TFL and Medicare."
+        }
+      ],
+      "new_top": "If you are currently on Tricare you will be required to enroll in Medicare parts A & B when you reach age 65. In most cases this happens automatically. The part B has a charge. When you have a claim the claim is processed first by Medicare. They pay the benefit on their schedule. The balance of the bill is then sent to Tricare. Tricare then pays wh",
+      "previous_gold_ranks": [
+        6,
+        11
+      ],
+      "trained_gold_ranks": [
+        13,
+        30
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00933",
+      "question": "How To Get Life Insurance After Being Denied?",
+      "domain": "life-insurance",
+      "gold": [
+        {
+          "11019": "You can still get life insurance. Which plan will depend on the reason for denial. There are some plans that do not ask if you have ever been denied insurance. If you can answer the rest of the health questions with a no answer you can get the insurance. I have a couple plans that ask no health questions at all. Just because you are denied insuranc"
+        },
+        {
+          "17394": "You probably get solicitations in the mail all the time, or see ads on TV saying \"you cannot be turned down\". While it is true there are some \"guaranteed issue\" life insurance plans, they are quite expensive when you compare the premium to the death benefit. A special risk agent can probably save you some money and let you know if you qualify for a"
+        },
+        {
+          "25826": "You can always buy life insurance, the real question is what you will pay for it. Most life companies look at your age, sex, smoking status and health issues when deciding whether to insure you or not. They can often charge a \"rating\" (a premium surcharge) for specific health problems. Some insurance companies haveguaranteedissue policies that ask "
+        }
+      ],
+      "new_top": "Being denied after applying for a life insurance policy can be a disheartening experience. But there are steps that you can take AFTER a life insurance denial, to assure you that there are no other options or get you at least some coverage (because there is almost always SOME coverage to be had). If you had an agency that you trust and that has kep",
+      "previous_gold_ranks": [
+        2,
+        45
+      ],
+      "trained_gold_ranks": [
+        15,
+        65
+      ]
+    },
+    {
+      "id": "iqa_v2_test_00995",
+      "question": "Which Life Insurance Is Best?",
+      "domain": "life-insurance",
+      "gold": [
+        {
+          "11402": "Video Transcript: Which life insurance is best? Sometimes, you have to look at the ratings of the carrier, because people are very concerned about the financial strength of a carrier, so I want to look at the financial strength. The second is: How do they price out on product spreadsheets or grids? Is the premium competitive with other players? The"
+        },
+        {
+          "26145": "That is an excellent question, and one I get a lot! Here's the best way I can answer you. It depends upon what you want it to do, your budget, and your age. If you are looking to provide for your funeral expenses, and leave some money behind, knowing for sure that the policy will do that for you, then a whole life policy is best, especially if you "
+        },
+        {
+          "643": "There is no one best life insurance company, and no one best type of life insurance policy. Life insurance companies are rated by rating agencies (AM Best, Standard and Poore's, Moody's and Fitch are the most popular). You can look at their ratings with each agency to see how life insurance companies compare with each other. Regarding types of life"
+        },
+        {
+          "7492": "The type of life insurance that is best for you depends on what you need it for, your budget, and how much you need. If you need a lot of coverage and have very little to spend, getting Term insurance will most likely be your best option. If you have a lifelong need and can afford to pay the premiums for Whole or Universal Life, those will be your "
+        }
+      ],
+      "new_top": "There really is no way to say which type of life insurance is the best. Both are very different and are used to accomplish different goals. If you need an affordable way to create an immediate estate for your loved ones, then term may be your best option. If you want coverage for your whole life at one rate with options for living benefits, college",
+      "previous_gold_ranks": [
+        7,
+        51
+      ],
+      "trained_gold_ranks": [
+        23,
+        50
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01039",
+      "question": "Does Home Insurance Include Fire Insurance?",
+      "domain": "home-insurance",
+      "gold": [
+        {
+          "14142": "Homeowners insurance is Fire Insurance and more. Homeowners Insurance covers a variety of perils. Many will cover any peril that is not specifically excluded in your policy. Most common perils covered are Fire, Hail, Wind, Lightening, Vandalism, and Theft. Your Homeowners Insurance also protects you for Liability if someone is hurt on your property"
+        }
+      ],
+      "new_top": "One of the coverages provided in a Homeowners' policy today is for damage caused by fire, yes. It is always a good idea to check directly with your Insurance Professional to make sure that you are fully aware of any coverage endorsements or limitations on any of the covered perils included in your policy.",
+      "previous_gold_ranks": [
+        6
+      ],
+      "trained_gold_ranks": [
+        20
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01076",
+      "question": "What Can I Do If My Car Was Hit In A Hit And Run And The Owner Of The Other Vehicle Denies Responsibility?",
+      "domain": "auto-insurance",
+      "gold": [
+        {
+          "5132": "Repair of your car is normally covered by the collision coverage contained in your auto policy. If your car does not have collision coverage you may have exhausted your insurance options. You can litigate directly against the other vehicle owner. An attorney can advise you on the possibility of prevailing in a lawsuit."
+        }
+      ],
+      "new_top": "If your car is damaged as a result of a hit and run caused by another party, then the Collision coverage provided in your auto policy will be used to pay for the damage repair. Unfortunately, the settlement from your insurance company will be subject to your deductible.",
+      "previous_gold_ranks": [
+        7
+      ],
+      "trained_gold_ranks": [
+        53
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01077",
+      "question": "Is It Worth Buying Critical Illness Insurance?",
+      "domain": "critical-illness-insurance",
+      "gold": [
+        {
+          "14203": "The key to a critical illness plan is to get a good one. Sadly, most agents and even fewer consumers know the difference in a good critical illness policy and a poor one. Never buy on price alone, and shop around. This is one area where paying a little more is worth it. Make sure the policy is health insurance, not life insurance with a rider."
+        }
+      ],
+      "new_top": "If you have a critical illness in your future, and will have received a lump sum of money to get you through that process of treatment and (hopefully) recovery, you will have thought it is worth it. No one knows the future. To some, having the knowledge that such a benefit would be provided if they are diagnosed with a life threatening illness, is ",
+      "previous_gold_ranks": [
+        5
+      ],
+      "trained_gold_ranks": [
+        15
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01180",
+      "question": "What Company Has The Cheapest Homeowners Insurance?",
+      "domain": "home-insurance",
+      "gold": [
+        {
+          "26859": "Cheapest Homeowners Insurance? One must be cautious when proceeding; the term may be frightening to many! What will you be missing by finding the 'Cheapest Homeowners Insurance'? Will the carrier not include some necessary endorsements rendering the policy useless should you have a related claim? If you are qualified to compare one policy with anot"
+        }
+      ],
+      "new_top": "The Cheapest Home Insurance may be perceived to be the lowest cost per thousand dollars of insurance. The lowest premium for Homeowners Insurance is offered by Stillwater Insurance Group, formerly known as Fidelity National Insurance Group. Stillwater Insurance is Admitted in all 50 States and writes in the majority of the Cities in the nation; it ",
+      "previous_gold_ranks": [
+        10
+      ],
+      "trained_gold_ranks": [
+        14
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01228",
+      "question": "Can I Get Car Insurance Online?",
+      "domain": "auto-insurance",
+      "gold": [
+        {
+          "30": "Yes the internet is flooded with thousands of insurance companies, insurance brokers, agents offering auto insurance rates online. It just takes a few minutes and few clicks on the mouse. The best thing about getting auto insurance is the competition among the carriers. Because of such competition, many of them offer the cheapest auto insurance rat"
+        }
+      ],
+      "new_top": "It is absolutely possible to purchase automobile insurance online. I have found that the standard of care given to customers purchasing online tends to be minimal as price is usually the only issue. Even though I sell auto insurance, I myself have dialed the 1-800 insurance numbers and priced online and when they are quoting my insurance, I have ne",
+      "previous_gold_ranks": [
+        10
+      ],
+      "trained_gold_ranks": [
+        11
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01229",
+      "question": "How Much Will Medicare Rise?",
+      "domain": "medicare-insurance",
+      "gold": [
+        {
+          "27124": "Every year Congress decides how much of tax revenues to allocate for Medicare spending. They also set the deductibles for the coming year as well as premiums for Part A and Part B. This is all done under a full moon at midnight following the swinging of a dead chicken over their head ceremony. Seriously, there is no predicting what Congress will do"
+        }
+      ],
+      "new_top": "The cost of Medicare will almost certainly go up in 2014. The cost of health care is rising, the population is aging and not getting any healthier. In addition, utilization of medical services continues to rise at a staggering rate. Unless Congress yields to political pressure, you should anticipate your Medicare Part A and Part B deductibles to ri",
+      "previous_gold_ranks": [
+        5
+      ],
+      "trained_gold_ranks": [
+        16
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01250",
+      "question": "When Can An Auto Insurance Company Sue Me?",
+      "domain": "auto-insurance",
+      "gold": [
+        {
+          "195": "An example of being sued by an insurance company would be: Your have been found at fault in an accident. Now you either had no insurance or your insurance coverage's were to low to pay the damages. The latter is very common. The other parties insurance company paid for their own insureds damages and is now seeking to recover it's losses. So lets sa"
+        }
+      ],
+      "new_top": "You can be sued by an auto insurance company. If you are involved in an accident and determined to be at fault but do not have any or enough insurance to cover the claims, the company can sue you for the amount paid to their client. A company could also sue if a claim was paid to you and it was later determined to have been overpaid or fraud. The c",
+      "previous_gold_ranks": [
+        9
+      ],
+      "trained_gold_ranks": [
+        20
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01321",
+      "question": "Who Has The Cheapest Home Insurance?",
+      "domain": "home-insurance",
+      "gold": [
+        {
+          "26980": "Your neighbor and yourself with similiar house values could get insurance from the same company and your rates will be different. Insurance premiums are determined by many factors, including your insurance score, loss history, the existance of dogs, trampolines, pools, oil tanks, etc. They best way to get the best coverage for yourself at the best "
+        },
+        {
+          "5479": "The cheapest homeowners policy is the one that pays the maximum amount possible when you have a claim. Of course it must be a policy on your house and it must be in force. What was paid for the policy is insignificant in many cases. The cheapest policy is sold by your trusted insurance agent, someone who listens to you, gives you sound financial ad"
+        }
+      ],
+      "new_top": "Sorry to say there is no such thing as who is the cheapest assuming you mean premium and not coverage. Premiums from insurance carriers are not cookie cutter as most believe. There are many rating factors that go into a homeowner rate such as location, characteristics of the home and details of the homeowners. To find the best coverage's and premiu",
+      "previous_gold_ranks": [
+        4
+      ],
+      "trained_gold_ranks": [
+        13
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01484",
+      "question": "Does Travelers Auto Insurance Cover Rental Cars?",
+      "domain": "auto-insurance",
+      "gold": [
+        {
+          "15920": "Coverage can vary by State. In Texas, a standard private passenger auto insurance policy will cover you in a rental car as a tempory substitute - and damage to the rental unit actually comes under the Property Damage coverage for contractual liability. Although it IS covered, I STILL buy the physical damage waiver coverage offered by the rental com"
+        }
+      ],
+      "new_top": "You're going to want to read your policy. Often times, your auto insurance will extend the highest level of coverage on your policy to a vehicle you are driving with permission or renting. If you have full coverage(ie. comprehensive and collision coverage), you would be extended full coverage. However, almost all insurance policies exclude coverage",
+      "previous_gold_ranks": [
+        6
+      ],
+      "trained_gold_ranks": [
+        12
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01521",
+      "question": "How Much Does The Average Person Spend On Home Insurance?",
+      "domain": "home-insurance",
+      "gold": [
+        {
+          "12595": "The average cost of a homeowners insurance policy is going to vari from one geographic area to another. In my area I estimate that the average cost for a homeowners policy is about 700-1000/yr.Homeowners insurance will vary depending on home values, claims history for the area, and many other factors. Contact your local agent to find out what cover"
+        }
+      ],
+      "new_top": "That definitely depends on several factors. Each insurance company will apply to each State's Department of Insurance to rate based on different variables. Depending on your State, age of home, prior loss, and discounts, average costs are probably somewhere between $750 - $1500, and for larger homes, a bit more.",
+      "previous_gold_ranks": [
+        8
+      ],
+      "trained_gold_ranks": [
+        12
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01526",
+      "question": "Can I Change My Home Insurance At Any Time?",
+      "domain": "home-insurance",
+      "gold": [
+        {
+          "10126": "Unless you have some sort of special agreement with your lender or other party, homeowners insurance is an at will product. This means that you can normally change carriers at any time that you wish. Find a local agent and carrier that you are comfortable with and verify that you are getting the coverages that you need or want before changing carri"
+        }
+      ],
+      "new_top": "You can change your Homeowners' Insurance at any time, but for the most part, the switch can be a bit less complicated at the policy's anniversary date rather than mid-term. That having been said, if you decide you have a need to change at any time, talk to your Insurance Professional who will be able to help make it as easy and beneficial to you a",
+      "previous_gold_ranks": [
+        5
+      ],
+      "trained_gold_ranks": [
+        13
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01549",
+      "question": "What Does Basic Renters Insurance Cover?",
+      "domain": "renters-insurance",
+      "gold": [
+        {
+          "12388": "A renters policy is essentially a homeowners policy that does not cover the structure. It has two basic coverages, Property Coverage which is designed to make you \"whole\" (within the definitions of the policy) should you have a \"covered loss\" and suffer economic loss in excess of the deductibleas a result. It also covers personal liability for bodi"
+        }
+      ],
+      "new_top": "Renters Insurance is also known as Tenants Insurance, it is a basic policy form offered by most insurers designed to provide contents coverage and liability protection in the event someone becomes injured at the residence. Renters Insurance has 2 sections of coverage; the first covers the Personal Property Coverage and the second section covers the",
+      "previous_gold_ranks": [
+        2
+      ],
+      "trained_gold_ranks": [
+        12
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01573",
+      "question": "How Does Guaranteed Universal Life Insurance Work?",
+      "domain": "life-insurance",
+      "gold": [
+        {
+          "11608": "Guaranteed Universal Life insurance (GUL) is universal life insurance that guarantees that the policy will not lapse when consistently paying a specific premium that is guaranteed to not go up. The guaranteed no lapse period can often be chosen. E.g. you might choose the policy not to lapse to your age 90, or to be safe, to your age 120. The guaran"
+        },
+        {
+          "8454": "How does Guaranteed Universal Life work? Just like level term. Think of it as lifetime level term. With term insurance you pay a premium every month and you have coverage. With GUL you pay the premium every month and you have coverage. The GUL rider on a polcy states that as long as the premium is paid and the policy values remain untouched the com"
+        }
+      ],
+      "new_top": "Universal life is a versatile financial instrument that has applications in estate, retirement and financial planning. To understand if it makes sense for you an understanding of the product design is needed, A permanent insurance policy has three main components: mortality costs, interest (earnings) and expenses. The amount of premium that you pay",
+      "previous_gold_ranks": [
+        3
+      ],
+      "trained_gold_ranks": [
+        24
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01591",
+      "question": "Does Renters Insurance Cover Theft Outside The Home?",
+      "domain": "home-insurance",
+      "gold": [
+        {
+          "15842": "Renters insurance will cover a limited amount of theft from your car, such as contents of the vehicle. It will not cover theft of any equipment attached to the car. Renters works like homeowner coverage with smaller limits and more restrictions on what is actually covered. You are welcome to call me with any additional questions. Keith Prim - Dalla"
+        },
+        {
+          "19060": "In most homeowners policies there is an extension of protection to your property that is temporarily away from your residence. This coverage will be limited to around 10% of the personal property limit. There is a slightly different situation if the personal property is moving to a new location."
+        }
+      ],
+      "new_top": "Talk to your Insurance professional, but in most cases, modern Renters Insurance Policies do include theft as a covered peril, yes. Now, there may be policy limits included that you need to know about. In some cases, companies can settle covered theft losses on certain things, like camera equipment for example, based upon a stated \"inside limit\" li",
+      "previous_gold_ranks": [
+        10
+      ],
+      "trained_gold_ranks": [
+        29
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01621",
+      "question": "Can Auto Insurance Companies See My Driving Record?",
+      "domain": "auto-insurance",
+      "gold": [
+        {
+          "9268": "When you apply for auto insurance coverage with a carrier they pull your MVR record from your driver's license information that you have provided. If the carrier is not able to secure your driving record information they may either decline providing coverage to you or possibly surcharge their base rates."
+        }
+      ],
+      "new_top": "Autoinsurance companies must see your driving record in order to properly rate your auto insurance policy. Once a quote has been offered an agent will ask your permission to run your motor vehicle record in order to validate the rate. Should any violations or accidents show up on the record that were not disclosed the rate would be adjust according",
+      "previous_gold_ranks": [
+        7
+      ],
+      "trained_gold_ranks": [
+        22
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01648",
+      "question": "Is My Life Insurance Safe?",
+      "domain": "life-insurance",
+      "gold": [
+        {
+          "16607": "Life insurance companies are highly regulated by the states in which they do business. Historically, life insurance companies have been very safe and very reliable for paying claims. There are also life insurance state pools that provide a safety net if a life insurance company would default on its contracts. Typically, if a life insurance company "
+        }
+      ],
+      "new_top": "If you know the website is safe and you trust the life insurance company or agency then yes it should be safe. However, do you know if you are getting the right coverage at the best price for your unique situation? If you have doubt, I highly recommend using an experienced independent life insurance broker to shop the market for you. Almost all of ",
+      "previous_gold_ranks": [
+        7
+      ],
+      "trained_gold_ranks": [
+        19
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01693",
+      "question": "How To Sign Up For Medigap?",
+      "domain": "medicare-insurance",
+      "gold": [
+        {
+          "12860": "The best way to buy a Medigap plan is to do it through an independent broker who can compare multiple options to find you the desired plan at the lowest possible cost (brokers do not charge any fees for their services) - I can help you with this as my background is in senior life and health insurance (including Medigap plans). If you're new to Medi"
+        },
+        {
+          "14982": "Using an independent insurance agent specializing in Medicare Supplement insurance (Medigap) is a great way to buy a plan. This type of agent can personally work with you to make sure you get the benefits you desire at a great price. If you are new to Medicare and still in your Initial Enrollment Period, you do not have to answer any health questio"
+        }
+      ],
+      "new_top": "You can sign up for a Medigap policy at any time, but if you have health issues the best time would be during your IEP (initial enrollment period) or one of the guaranteed issue times. If you miss IEP or do not have a guaranteed right you will need to go through medical underwriting.",
+      "previous_gold_ranks": [
+        4
+      ],
+      "trained_gold_ranks": [
+        52
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01710",
+      "question": "How To Sign Up For Obamacare?",
+      "domain": "health-insurance",
+      "gold": [
+        {
+          "10138": "There are a few ways to sign up for health insurance. To sign up for a qualified health care plan be sure and buy one off the Marketplace, healthcare.gov, or be sure and ask your agent or broker if it meets the new ACA laws. You may qualify for a subsidy to help pay for the premiums. It is based on you household income and the number of dependents "
+        }
+      ],
+      "new_top": "Great question! There are a couple of ways. Bear in mind that there is an annual open enrollment period once a year in the fall when you can sign up. The rest of the year, the enrollment is closed, unless you have a major life change, such as a change in employment, get dropped by previous coverage, get married or divorced, for example. When you sh",
+      "previous_gold_ranks": [
+        1
+      ],
+      "trained_gold_ranks": [
+        25
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01745",
+      "question": "What Is Meant By Deductible In Health Insurance?",
+      "domain": "health-insurance",
+      "gold": [
+        {
+          "10629": "A Health Insurance deductible is the amount you would be responsible to pay before your policy would begin paying for covered services. In addition to the deductible, it is quite possible that you also have a \"co insurance\" amount as well. This is a percentage of the amount you would be responsible for paying AFTER meeting the deductible. Check wit"
+        }
+      ],
+      "new_top": "A deductible simply means that you have to pay for some of the losses before your insurance company will pay anything. Unfortunately in health insurance deductibles are more complex than in auto or homeowners insurance. The deductible is the amount of money you'll have to pay out of pocket during a calendar year before the policy will start paying.",
+      "previous_gold_ranks": [
+        10
+      ],
+      "trained_gold_ranks": [
+        21
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01762",
+      "question": "Is It Worth Getting Medicare Part B?",
+      "domain": "medicare-insurance",
+      "gold": [
+        {
+          "21878": "Most people seem to think the only reason for having health insurance (including Medicare) is to cover your hospital bills. The truth of the matter is, over your lifetime you will incur significantly more medical bills as an outpatient than inpatient. When carriers review large claims, those over $50,000, over half the charges occur as an OUTPATIEN"
+        }
+      ],
+      "new_top": "Most of the time medicare part B is required and necessary in most cases. It is also a feature that would benefit you so truthfully I would not opt out or considered opting out. If you have a group health plan this might be the only time that it is not necessary otherwise it automatically comes with Part A medicare.",
+      "previous_gold_ranks": [
+        4
+      ],
+      "trained_gold_ranks": [
+        27
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01837",
+      "question": "What Is The Disadvantage Of A Fixed Annuity?",
+      "domain": "annuities",
+      "gold": [
+        {
+          "19851": "A fixed annuity is a contract guaranteed by an insurance company. Insurance companies have failed although there are a lot of safety stops to preclude that. The benefit is contractual and is generally not adjusted by the cost of living. Your benefit could become less adequate with the passage of time. A fixed annuity may be currently paying one rat"
+        },
+        {
+          "24451": "That is a great question! While a fixed annuity has a lot of great things going for it, there are a couple of things that you do need to look out for. The first is your liquidity. With any deferred annuity there is a period of time where the money you've set aside to fund it cannot be touched without incurring hefty fees, or damaging your earnings "
+        }
+      ],
+      "new_top": "The major disadvantages of a fixed annuity are: the accumulation is set at a fixed interest rate and does not always keep pace with changes in the market. The owner of the annuity doesnt have any control over the investments that underlie the annuity. When the annuity is converted to lifetime income all control over the value of the annuity is rele",
+      "previous_gold_ranks": [
+        10,
+        55
+      ],
+      "trained_gold_ranks": [
+        23,
+        34
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01861",
+      "question": "In What States Is Car Insurance Not Required?",
+      "domain": "auto-insurance",
+      "gold": [
+        {
+          "4471": "Virginia does not require you to carry car insurance as long as you pay an uninsured motor vehicle fee to the state. New Hampshire and Mississippi will offer vehicle owners the option to post a cash bond. All other states will require you to maintain auto insurance to operate a motor vehicle on the roadways."
+        }
+      ],
+      "new_top": "Car insurance is mandatory in all states (I assume). However, you can also provide financial responsibility in many areas. This is when you provide proof that you have sufficient funds to pay a certainamountof damages in the event you were held liable for an incident. Personally, I do remember writing an article earlier this year about car insuranc",
+      "previous_gold_ranks": [
+        9
+      ],
+      "trained_gold_ranks": [
+        35
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01894",
+      "question": "Will Medicare Pay For A Knee Replacement?",
+      "domain": "medicare-insurance",
+      "gold": [
+        {
+          "12813": "Medicare does cover joint replacement if the need to replace the joint is considered medically necessary. Joint replacement includes shoulder, hip, knee and other body joints. Make sure you use a medical provider that accepts assignment. Some replacement joint devices are considered a \"premium\" device. You may be responsible for paying the differen"
+        }
+      ],
+      "new_top": "Yes, Medicare will pay for knee replacement surgeries. Medicare also pays for hip replacements. This type of surgery is one of the larger expenditures by Medicare and provided pain relief and increased mobility to hundreds of thousands of seniors (and younger persons) over the years since knee replacement were invented.",
+      "previous_gold_ranks": [
+        9
+      ],
+      "trained_gold_ranks": [
+        15
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01934",
+      "question": "How Does An Annual Deductible Work For Health Insurance?",
+      "domain": "health-insurance",
+      "gold": [
+        {
+          "7162": "A deductible is the amount of money that you would pay before your health insurance kicks in. For example, if you have a $3,000 deductible and need to go to the hospital then you would pay the first $3,000. Your insurance would kick in after that. For folks age 65 and over that are on Medicare along with a Medicare Supplement it will work a little "
+        }
+      ],
+      "new_top": "A deductible simply means that you have to pay for some of the losses before your insurance company will pay anything. Unfortunately in health insurance deductibles are more complex than in auto or homeowners insurance. The deductible is the amount of money you'll have to pay out of pocket during a calendar year before the policy will start paying.",
+      "previous_gold_ranks": [
+        8
+      ],
+      "trained_gold_ranks": [
+        15
+      ]
+    },
+    {
+      "id": "iqa_v2_test_01991",
+      "question": "What Does A Basic Renters Insurance Policy Cover?",
+      "domain": "renters-insurance",
+      "gold": [
+        {
+          "1462": "A good renters insurance policy will cover your personal belongings for fire, lightning, wind, vandalism and other named perils as well as theft and liability. It covers everything but the building and items owned by the building. It is the landlords responsibility to cover those. There are some basic fire policies that are more limited in nature s"
+        }
+      ],
+      "new_top": "A renters policy, like all other insurance policies, is designed to protect you from an unacceptable risk. The renters policy has two basic sections. The first section will cover damages to your personal property. That is not included in the landlords policy and is your responsibility. The second section covers you should you be sued for personal i",
+      "previous_gold_ranks": [
+        5
+      ],
+      "trained_gold_ranks": [
+        79
+      ]
+    }
+  ],
+  "posthoc_analysis_only": true,
+  "used_to_retrain_or_retune": false
+}

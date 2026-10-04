@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "questions": 2000,
+  "pairs": 348855,
+  "seconds": 116.3512188999448,
+  "scores_sha256": "27e1979d7e678c93b71d7ffb862748f4a524968f0af8ae3bc96cb59c36827227",
+  "protocol_sha256": "3146152d45dc1eb770e53c88a3fd2a67a10b4aea43f4159768123b4c7614e429"
+}

@@ -182,6 +182,7 @@ def build_training_corpora(config: TrainingCorpusBuildConfig) -> Dict[str, Any]:
             retrieval_model=config.retrieval_model,
             retrieval_mode=config.retrieval_mode,
             corpus_source=config.corpus_source,
+            curated_dataset_dir=config.data_folder,
             enable_image_signal=config.enable_image_signal,
             index_dir=config.index_dir,
         )
@@ -207,17 +208,22 @@ def build_training_corpora(config: TrainingCorpusBuildConfig) -> Dict[str, Any]:
         understanding = understand_query(str(qa.get("question") or ""))
         answerable = bool(qa.get("answerable", True))
         positive_sources = list(qa.get("evidence_sources") or qa.get("citations") or [])
+        normalized_positive_sources = {_normalize_source(source) for source in positive_sources}
         hard_negative_sources = [
             str(item.get("negative_source"))
             for item in negatives_by_qa.get(str(qa.get("qa_id")), [])
-            if str(item.get("negative_source"))
+            if item.get("negative_source")
+            and _normalize_source(item["negative_source"]) not in normalized_positive_sources
         ]
         ranked_sources = [
             str(page.get("source"))
             for page in pipeline.rank_pages(str(qa.get("question")), config.data_folder, top_k=max(config.top_k + 2, 8))
         ]
         for source in ranked_sources:
-            if source not in positive_sources and source not in hard_negative_sources:
+            if (
+                _normalize_source(source) not in normalized_positive_sources
+                and _normalize_source(source) not in {_normalize_source(item) for item in hard_negative_sources}
+            ):
                 hard_negative_sources.append(source)
             if len(hard_negative_sources) >= config.max_negatives:
                 break
@@ -314,7 +320,10 @@ def build_training_corpora(config: TrainingCorpusBuildConfig) -> Dict[str, Any]:
                 "split": split,
                 "dataset_variant": "retrieval_conditioned",
                 "retrieval_context_sources": [page.get("source") for page in selected_pages],
-                "gold_in_context": bool(source and any(str(page.get("source")) == source for page in selected_pages)),
+                "gold_in_context": bool(source and any(
+                    _normalize_source(page.get("source") or "") == _normalize_source(source)
+                    for page in selected_pages
+                )),
             }
         )
 

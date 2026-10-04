@@ -1,0 +1,50 @@
+{
+  "created_utc": "2026-10-03T02:20:51.005466+00:00",
+  "status": "verified",
+  "deep_training_verification_sha256": "af9183af42692d1f104e1d80b7a60676304feb1295967c5723f42ade46270f6f",
+  "selection_lock_sha256": "431317429ff2eaabe0891902628aa71b78f703395e5efc031963b5cdd05227dd",
+  "ablation_evidence_verified": true,
+  "software_suites": {
+    "full": {
+      "summary": "302 passed, 58 subtests passed in 10.85s",
+      "log_sha256": "28afaee988bd03b9869dfe43061b9d40f54b616500a5b08b32f337e5bfdeda91"
+    },
+    "minimal": {
+      "summary": "275 passed, 13 skipped, 58 subtests passed in 6.83s",
+      "log_sha256": "b3eab362b70e5d34cc84b8205c8c80975bb9b53eebbfbce393e79afe001a873d"
+    }
+  },
+  "actual_query_routes": 3,
+  "smoke_summary_sha256": "8b2bc35bcf69076378ab37de56144931870e5d654d6daf80ca57c2a8a6f71420",
+  "git_diff_check": "passed",
+  "parsed_scripts": [
+    "scripts/analyze_query_adaptation_results.py",
+    "scripts/audit_query_adaptation_data.py",
+    "scripts/cache_query_adaptation_vectors.py",
+    "scripts/eval_query_adaptation.py",
+    "scripts/prepare_query_adaptation_data.py",
+    "scripts/query_adapted_retrieval.py",
+    "scripts/register_query_adaptation_plan.py",
+    "scripts/report_query_adaptation.py",
+    "scripts/run_query_adaptation_tests.py",
+    "scripts/run_query_adaptation_training.py",
+    "scripts/run_query_adaptation_validation.py",
+    "scripts/smoke_query_adapted_retrieval.py",
+    "scripts/train_query_adaptation.py",
+    "scripts/verify_query_adaptation.py",
+    "scripts/verify_query_adaptation_delivery.py",
+    "src/insurerag_vlm/query_adaptation.py"
+  ],
+  "documents_sha256": {
+    "README.md": "66a1a8dd4174c3396639871762e95eac500a45a916119ddae5869818295caf66",
+    "docs/QUERY_ADAPTATION_UPDATE_ZH.md": "0c0558a632187a2a7c8f75520633c0504e444f68e7432b7e76effac34468b480",
+    "docs/QUERY_ADAPTATION_REPRODUCTION.md": "f5ae516ab8dfa7962d46eb9adfa02631ece1147e8506604bcb856e56199f1c5a",
+    "docs/assets/query_adaptation_results.png": "f288d0bb6baaa86d3244d202dc80a96264f9dfb304b8625c1c64082bb788feed",
+    "docs/assets/query_adaptation_results.svg": "f7a5d4366a72a293156bfce55a543363c7262658869bf6fe1564349ce82fc5f5"
+  },
+  "figure_visually_reviewed": "docs/assets/query_adaptation_results.png",
+  "control_metrics_identical_to_prior": true,
+  "control_rank_lists_bitwise_identical": false,
+  "github_pushed": false,
+  "verification_code_sha256": "68bd8c720f7f0da6111e03dab71a1442ddddd530254a16273d53164a347b38f8"
+}

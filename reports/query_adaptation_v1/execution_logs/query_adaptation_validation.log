@@ -1,0 +1,72 @@
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3718.97it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3234.31it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4161.00it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4467.64it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4057.63it/s]
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 1957.66it/s]
+{"split": "valid", "cohort": "insuranceqa", "questions": 200, "total": 2000, "new_cross_pairs": 6019, "seconds": 20.3}
+{"split": "valid", "cohort": "insuranceqa", "questions": 400, "total": 2000, "new_cross_pairs": 12141, "seconds": 28.0}
+{"split": "valid", "cohort": "insuranceqa", "questions": 600, "total": 2000, "new_cross_pairs": 18146, "seconds": 35.8}
+{"split": "valid", "cohort": "insuranceqa", "questions": 800, "total": 2000, "new_cross_pairs": 24029, "seconds": 43.5}
+{"split": "valid", "cohort": "insuranceqa", "questions": 1000, "total": 2000, "new_cross_pairs": 30175, "seconds": 51.2}
+{"split": "valid", "cohort": "insuranceqa", "questions": 1200, "total": 2000, "new_cross_pairs": 36374, "seconds": 58.8}
+{"split": "valid", "cohort": "insuranceqa", "questions": 1400, "total": 2000, "new_cross_pairs": 42141, "seconds": 66.5}
+{"split": "valid", "cohort": "insuranceqa", "questions": 1600, "total": 2000, "new_cross_pairs": 48125, "seconds": 74.4}
+{"split": "valid", "cohort": "insuranceqa", "questions": 1800, "total": 2000, "new_cross_pairs": 53882, "seconds": 82.1}
+{"split": "valid", "cohort": "insuranceqa", "questions": 2000, "total": 2000, "new_cross_pairs": 60134, "seconds": 89.8}
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4144.88it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3484.79it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4898.77it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4159.69it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4595.85it/s]
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 2885.88it/s]
+{"split": "valid", "cohort": "multidomain", "questions": 200, "total": 527, "new_cross_pairs": 66476, "seconds": 107.8}
+{"split": "valid", "cohort": "multidomain", "questions": 400, "total": 527, "new_cross_pairs": 72141, "seconds": 119.9}
+{"split": "valid", "cohort": "multidomain", "questions": 527, "total": 527, "new_cross_pairs": 75529, "seconds": 127.6}
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3208.50it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3332.83it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3918.81it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4996.18it/s]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 3759.30it/s]
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 2866.94it/s]
+{"split": "valid", "cohort": "fiqa", "questions": 200, "total": 500, "new_cross_pairs": 119907, "seconds": 170.1}
+{"split": "valid", "cohort": "fiqa", "questions": 400, "total": 500, "new_cross_pairs": 163747, "seconds": 206.9}
+{"split": "valid", "cohort": "fiqa", "questions": 500, "total": 500, "new_cross_pairs": 185482, "seconds": 225.3}
+{"selected": {"name": "seed_42_epoch_2_a50", "model": "seed_42_epoch_2", "seed": 42, "epoch": 2, "alpha": 0.5}, "weighted_hit_at_10": 0.7862381889763779, "baseline_weighted_hit_at_10": 0.7809881889763779}
+{"completed": "valid", "seconds": 226.0, "new_cross_pairs": 185482}

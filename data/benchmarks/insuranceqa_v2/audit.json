@@ -1,0 +1,68 @@
+{
+  "counts": {
+    "train": 12889,
+    "valid": 2000,
+    "test": 2000
+  },
+  "answers": 27413,
+  "domains": {
+    "train": {
+      "disability-insurance": 751,
+      "life-insurance": 3328,
+      "renters-insurance": 800,
+      "auto-insurance": 1659,
+      "annuities": 611,
+      "home-insurance": 1340,
+      "retirement-plans": 525,
+      "medicare-insurance": 1770,
+      "health-insurance": 1542,
+      "long-term-care-insurance": 427,
+      "critical-illness-insurance": 107,
+      "other-insurance": 29
+    },
+    "valid": {
+      "medicare-insurance": 280,
+      "long-term-care-insurance": 80,
+      "renters-insurance": 146,
+      "life-insurance": 529,
+      "health-insurance": 215,
+      "disability-insurance": 96,
+      "auto-insurance": 257,
+      "home-insurance": 210,
+      "annuities": 95,
+      "retirement-plans": 77,
+      "other-insurance": 4,
+      "critical-illness-insurance": 11
+    },
+    "test": {
+      "life-insurance": 514,
+      "renters-insurance": 140,
+      "home-insurance": 201,
+      "long-term-care-insurance": 89,
+      "medicare-insurance": 251,
+      "health-insurance": 245,
+      "auto-insurance": 249,
+      "disability-insurance": 102,
+      "retirement-plans": 95,
+      "annuities": 94,
+      "critical-illness-insurance": 17,
+      "other-insurance": 3
+    }
+  },
+  "unique_normalized_questions": {
+    "train": 12871,
+    "valid": 1999,
+    "test": 2000
+  },
+  "test_exact_overlap_with_train_or_valid": 8,
+  "within_test_duplicate_rows": 0,
+  "official_pool_contains_positive": {
+    "train": 8311,
+    "valid": 1721,
+    "test": 1744
+  },
+  "answer_text_duplicate_groups": 17,
+  "answer_text_duplicate_extra_ids": 18,
+  "near_duplicate_questions_not_removed": true,
+  "split_contract": "Original author splits, not document-family holdout. Train is imported for audit only; no fitting in baseline."
+}

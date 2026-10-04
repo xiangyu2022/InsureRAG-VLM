@@ -1,0 +1,112 @@
+{
+  "created_utc": "2026-10-03T04:30:06.711845+00:00",
+  "status": "verified",
+  "all_source_rows_and_original_gold_facts_match": true,
+  "positive_negative_or_forbidden_overlap": 0,
+  "training_questions": 33426,
+  "training_domains": {
+    "insuranceqa": 11629,
+    "government": 259,
+    "general": 13999,
+    "finance": 5464,
+    "financial_report": 2075
+  },
+  "training_negative_pairs": 367338,
+  "annual_report_counts": {
+    "train": 390,
+    "valid": 131,
+    "test": 278
+  },
+  "source_page_counts": {
+    "train": 797,
+    "valid": 173,
+    "test": 380
+  },
+  "company_counts": {
+    "train": 122,
+    "valid": 83,
+    "test": 100
+  },
+  "train_test_shared_companies": 87,
+  "fixture_source_counts_precede_training_question_and_negative_filters": true,
+  "actual_training_report_count": 378,
+  "actual_training_company_count": 121,
+  "actual_train_test_shared_companies": 86,
+  "valid_test_exact_question_text_overlap": 0,
+  "independent_new_company_claim": false,
+  "new_test_questions": 1147,
+  "new_test_questions_excluded": 0,
+  "gold_pair_lengths": {
+    "train": {
+      "questions": 2351,
+      "gold_pairs": 4059,
+      "gold_pairs_over_512": 0,
+      "question_ids_with_long_gold_pair": [],
+      "max_pair_tokens": 296,
+      "questions_more_than_five_gold_facts": 17
+    },
+    "valid": {
+      "questions": 496,
+      "gold_pairs": 838,
+      "gold_pairs_over_512": 0,
+      "question_ids_with_long_gold_pair": [],
+      "max_pair_tokens": 210,
+      "questions_more_than_five_gold_facts": 5
+    },
+    "test": {
+      "questions": 1147,
+      "gold_pairs": 1903,
+      "gold_pairs_over_512": 0,
+      "question_ids_with_long_gold_pair": [],
+      "max_pair_tokens": 313,
+      "questions_more_than_five_gold_facts": 2
+    }
+  },
+  "insurance_keyword_rule": "\\b(?:insurance|insured|insurer|insurers|premium|premiums|deductible|deductibles|copay|medicare|medicaid|annuity|annuities|coverage)\\b",
+  "insurance_keyword_slices": {
+    "train": [
+      "finqa_q_786d03f5fc973c69c027ad70",
+      "finqa_q_5aae2b7c328120a06b06c74a",
+      "finqa_q_5287cdbc25e551d6fa4d7377",
+      "finqa_q_9f3ae790d3c74f83e078b51f",
+      "finqa_q_8092fbc04535f84958862829",
+      "finqa_q_4c0564fadeee6cfaea96e292",
+      "finqa_q_4719ed649168d1a4596bf4da",
+      "finqa_q_269aeda7b20b4dda984d5bf7",
+      "finqa_q_be9b6ffea58ecca1f2ecba76",
+      "finqa_q_9b4eaf9c951b4534455868ec",
+      "finqa_q_633fafa425b5ee92231bd687",
+      "finqa_q_13c4263dcfe5c77f0a0b84ed",
+      "finqa_q_1d9b6510fff86a9bee206f23",
+      "finqa_q_b7f9a0fb7c7c2e89cb948635",
+      "finqa_q_d44a9da3308a4553eacd183a",
+      "finqa_q_807c599b38da35e20a6649c0",
+      "finqa_q_c72446013694fa23ed4149eb",
+      "finqa_q_0e6395f2739bb4ff09aec9d5",
+      "finqa_q_f821407e35efb611ae65246b",
+      "finqa_q_998d00a3ea92c3fce1de5ccf",
+      "finqa_q_6feff9e8a29878c5b727b2d1",
+      "finqa_q_1f61fbd2dbdb15fc48b5c931"
+    ],
+    "valid": [
+      "finqa_q_b8314ab762839bc179d23081",
+      "finqa_q_0b0c54f807a2d595704094c6",
+      "finqa_q_4fa1e38a6c4d1e4eb44f71b4",
+      "finqa_q_1c36902cd316d825f254bf46",
+      "finqa_q_318a7ecc36171c40fa781caa",
+      "finqa_q_3556292c6b7a8bcbcf0279de"
+    ],
+    "test": [
+      "finqa_q_fd328eabe6c1eed10101220e",
+      "finqa_q_5822bcadf5192fdc101a5c32",
+      "finqa_q_7ffe64f24e7a3626dd06213f",
+      "finqa_q_d0104d72ead0b1206c020168"
+    ]
+  },
+  "keyword_slice_is_not_expert_insurance_classification": true,
+  "qa_model_input_or_upstream_retrieved_scores_used": false,
+  "fixture_sha256": "4ca876934c8af7a00ba0804ad9eeacb864896bdb84a14e3e7645b33860bdd62d",
+  "data_manifest_sha256": "e0c82f8294b3f7b2c80308fa83ccaf73ef30fad3b9d031936ce7717165097785",
+  "training_manifest_sha256": "02fc798aa9f7373bbb3cd8ad810eee50ba7dd5734a97eed59b4ed52b22fed1df",
+  "code_sha256": "59ce6227c4a18e9ff744df2a498c595fba95fde7cd663f73724bc7af526970a4"
+}

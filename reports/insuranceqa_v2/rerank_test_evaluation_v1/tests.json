@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-01T19:01:04.455860+00:00",
+  "full_suite": {
+    "passed": 257,
+    "subtests_passed": 58,
+    "seconds": 10.44
+  },
+  "minimal_environment": {
+    "passed": 252,
+    "optional_skipped": 5,
+    "subtests_passed": 58,
+    "seconds": 8.45
+  },
+  "new_tests_cover": [
+    "score scaling and constant channels",
+    "candidate/score alignment and finite inputs",
+    "candidate-order invariance",
+    "candidate-policy enforcement; no gold candidate injection"
+  ],
+  "scope": "Unit/regression checks; not end-to-end Qwen accuracy."
+}

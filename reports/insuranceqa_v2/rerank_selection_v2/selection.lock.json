@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-10-01T18:52:44.051794+00:00",
+  "selected_on": "valid",
+  "config": {
+    "pool": "hybrid100",
+    "lexical_weight": 0.2,
+    "cross_weight": 0.5
+  },
+  "validation_metrics": {
+    "config": {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    "n": 2000,
+    "hit_at_1": 0.3545,
+    "hit_at_5": 0.5985,
+    "hit_at_10": 0.69,
+    "hit_at_100": 0.8815,
+    "mrr_at_100": 0.4669753551448397,
+    "label_recall_at_10": 0.5720828282828282,
+    "hit_at_1_wilson_95": [
+      0.3338324449400018,
+      0.3757254158188427
+    ],
+    "hit_at_10_wilson_95": [
+      0.6693826357392854,
+      0.7098888862938384
+    ]
+  },
+  "fixture_lock_sha256": "4c46a374c2f5eebd4a2609f030c5fdc0aa660fb5e7a1a653cc198f6cc177fcc6",
+  "scoring_protocol_sha256": "353077e4c475a76820594c9f864854ba2e0c9b82ba84ad73c1998e3e15ffc18a",
+  "scored_validation_sha256": "cac8f8e8119a9328843139a065a7981e8d175df26753db4877dfcdd0a4d0a470",
+  "code_sha256": {
+    "scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+    "src/insurerag_vlm/reranker.py": "bb90e6c134b44d7cb0c0cd6ca3165e098827bd908a3a86e73101040cf65734a3",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872"
+  },
+  "ablation_configs": {
+    "bge_plus_cross_same_budget": {
+      "pool": "bge100",
+      "lexical_weight": 0.0,
+      "cross_weight": 0.5
+    },
+    "pure_cross_union": {
+      "pool": "union200",
+      "lexical_weight": 0.0,
+      "cross_weight": 1.0
+    },
+    "linear_no_cross": {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.0
+    }
+  },
+  "test_status": "Original historical test inspected before this work; no new-config test metrics used for selection.",
+  "model_training": "Public MS MARCO checkpoint, no InsuranceQA fine-tuning"
+}

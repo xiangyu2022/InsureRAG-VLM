@@ -1,0 +1,13 @@
+{
+  "documents": [
+    {
+      "path": "SCENARIO-F-SCHEDULE.pdf",
+      "packet_id": "SCENARIO-F",
+      "document_role": "schedule",
+      "source_origin": "synthetic_stress_fixture",
+      "source_name": "SCENARIO-F-SCHEDULE.pdf",
+      "source_authority": "Invented regression fixture; no legal authority",
+      "policy_number": "SYN-F-001"
+    }
+  ]
+}

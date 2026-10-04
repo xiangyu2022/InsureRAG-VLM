@@ -1,0 +1,13 @@
+{"seed": 42, "step": 200, "mean_ranking_loss": 0.14589546010567575, "mean_kl": 0.7774531932361424, "pairs_seen": 19200, "seconds": 46.6}
+{"seed": 42, "step": 400, "mean_ranking_loss": 0.14733671634399798, "mean_kl": 0.641189116211608, "pairs_seen": 38400, "seconds": 93.0}
+{"seed": 42, "step": 600, "mean_ranking_loss": 0.1486156159781361, "mean_kl": 0.5746007359338303, "pairs_seen": 57600, "seconds": 139.5}
+{"seed": 42, "step": 800, "mean_ranking_loss": 0.1485467404697829, "mean_kl": 0.536226441077888, "pairs_seen": 76800, "seconds": 185.5}
+{"seed": 42, "step": 1000, "mean_ranking_loss": 0.14925993867118814, "mean_kl": 0.5100677068941295, "pairs_seen": 96000, "seconds": 231.0}
+{"seed": 42, "step": 1200, "mean_ranking_loss": 0.14804653816299834, "mean_kl": 0.48977574597423273, "pairs_seen": 115200, "seconds": 277.2}
+{"seed": 42, "step": 1400, "mean_ranking_loss": 0.14819271751838511, "mean_kl": 0.4722198346220622, "pairs_seen": 134400, "seconds": 324.5}
+{"seed": 42, "step": 1600, "mean_ranking_loss": 0.148030869359593, "mean_kl": 0.4576938420324586, "pairs_seen": 153600, "seconds": 371.8}
+{"seed": 42, "step": 1800, "mean_ranking_loss": 0.1478099410382068, "mean_kl": 0.4454387664360305, "pairs_seen": 172800, "seconds": 418.4}
+{"seed": 42, "step": 2000, "mean_ranking_loss": 0.14823056184167763, "mean_kl": 0.4378691348936409, "pairs_seen": 192000, "seconds": 464.7}
+{"seed": 42, "step": 2200, "mean_ranking_loss": 0.14825363792009574, "mean_kl": 0.4307379327485846, "pairs_seen": 211200, "seconds": 511.2}
+{"seed": 42, "step": 2400, "mean_ranking_loss": 0.14833485578424643, "mean_kl": 0.425221345302416, "pairs_seen": 230400, "seconds": 557.6}
+{"seed": 42, "step": 2471, "mean_ranking_loss": 0.1482885625930663, "mean_kl": 0.42342632889156534, "pairs_seen": 237174, "seconds": 574.2}

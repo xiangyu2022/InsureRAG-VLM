@@ -1,0 +1,1 @@
+{"status": "verified", "software_suites": {"full": {"summary": "310 passed, 58 subtests passed in 9.35s", "log_sha256": "52bc6d66f23a8e730d6686e20595a889a1cbca8407e687fb7b0f56d1aa27763c"}, "minimal": {"summary": "280 passed, 16 skipped, 58 subtests passed in 7.69s", "log_sha256": "4f48c978eaa1db8f2d5d7d9d8000054d00e7cbad585720be0f31ca1fa150c556"}}, "smoke_routes": 4}

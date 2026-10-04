@@ -1,0 +1,14 @@
+[
+  {
+    "doc_id": "opm_2026_71-004",
+    "source_page": 17,
+    "label": "69",
+    "reason": "multi_target_list_or_range"
+  },
+  {
+    "doc_id": "opm_2026_72-001",
+    "source_page": 89,
+    "label": "87",
+    "reason": "missing_ambiguous_or_self_target"
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "status": "completed",
+  "seconds": 249.44034790014848,
+  "optimizer_steps": 3142,
+  "query_presentations": 100514,
+  "peak_cuda_allocated_bytes": 1366289408,
+  "epochs": [
+    {
+      "role": "query_encoder_only",
+      "document_encoder": "unchanged BAAI/bge-small-en-v1.5",
+      "query_instruction": "Represent this sentence for searching relevant passages: ",
+      "pooling": "cls",
+      "normalize": true,
+      "max_length": 512,
+      "seed": 123,
+      "epoch": 1,
+      "optimizer_steps": 1571,
+      "query_presentations": 50257,
+      "weights_sha256": "159c055e1b4ca60334c2ed5f0787934f9e67a5b8003b19d6746f02c36d7a8676",
+      "document_encoder_weights_sha256": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+      "training_protocol_sha256": "bcd9f24d4ee4ceb1ac52f08ec8a7e9963c14e0a7ce54293afd0b783794a3c4e2"
+    },
+    {
+      "role": "query_encoder_only",
+      "document_encoder": "unchanged BAAI/bge-small-en-v1.5",
+      "query_instruction": "Represent this sentence for searching relevant passages: ",
+      "pooling": "cls",
+      "normalize": true,
+      "max_length": 512,
+      "seed": 123,
+      "epoch": 2,
+      "optimizer_steps": 3142,
+      "query_presentations": 100514,
+      "weights_sha256": "39d7992696bd29d27aa6fe3b346e92d91b05ab4dc143134096b4275fd928e298",
+      "document_encoder_weights_sha256": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+      "training_protocol_sha256": "bcd9f24d4ee4ceb1ac52f08ec8a7e9963c14e0a7ce54293afd0b783794a3c4e2"
+    }
+  ],
+  "training_log_sha256": "3fc0ae54795b461d8ccf914ae59a32f561f2d459f0238316c8e73f9de7eff901"
+}

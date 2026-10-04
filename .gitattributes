@@ -1,0 +1,14 @@
+# Frozen research assets must retain exact bytes and produce applicable patches.
+# Preserve recorded SHA-256 identities across Windows and Linux checkouts.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.sh text eol=lf
+# Override host-level PDF text-conversion diff drivers.
+*.pdf binary
+*.png binary
+*.zip binary
+# Preserve verbatim upstream notices and generated, hash-locked artifacts.
+data/**/UPSTREAM_README.md -whitespace
+data/**/upstream/README.md -whitespace
+docs/assets/*.svg -whitespace
+reports/**/*.log -whitespace
+reports/**/*.diff -whitespace

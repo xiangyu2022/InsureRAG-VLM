@@ -1,0 +1,78 @@
+{
+  "created_utc": "2026-10-01T22:36:12.227363+00:00",
+  "seeds": [
+    42,
+    123
+  ],
+  "epochs_per_seed": 1,
+  "selected_on": "valid",
+  "initial_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+  "configurations": [
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.35
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    {
+      "pool": "hybrid100",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.65
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.35
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    {
+      "pool": "union200",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.65
+    }
+  ],
+  "parent_selection_sha256": "560a7f66a1a92e1900fcf3226c79089f2ad243cc4a2e3e40e1aa910166e59434",
+  "parent_result": "Both pairwise seeds failed promotion; change loss and retention teacher based only on validation.",
+  "objective": "0.6 insuranceqa + 0.2 government + 0.2 general Hit@10; tie same weighted MRR, then Hit@1; stable order",
+  "guards_vs_previous_default": {
+    "insuranceqa_max_drop": 0.002,
+    "government_max_drop": 0.008,
+    "general_max_drop": 0.01
+  },
+  "promotion": "Compare best eligible trained checkpoint/config with best eligible previous-model config. Promote only strict weighted Hit@10 improvement; otherwise keep best eligible previous config.",
+  "training_recipe": "1 epoch per seed, LR 3e-6, confidence-adjusted listwise CE (label smoothing .02), previous-specialist KL .1 FAQ/.2 others; FAQ 2x, government 8x, general 1x",
+  "test_plan": {
+    "historical_insuranceqa": 2000,
+    "historical_multidomain": 681,
+    "historical_government": 416,
+    "fresh_government": 157,
+    "fresh_government_sources": 28,
+    "fresh_answer_count": 48172
+  },
+  "test_use": "Only selected model, previous and public controls; both seeds reported on validation only; no post-test changes or relabeling.",
+  "attribution": "Report previous and public at default and selected configuration to distinguish retraining from candidate/fusion changes.",
+  "fixture_sha256": "90fa68ccfa46dd94c8a64be774d4d4c87e6f268be9af0f80f251a598e383c9c9",
+  "preflight_amendment": "Question-mark anywhere in extracted answer now rejected after source-format inspection; before any new student scoring/training/validation/test. Previous fixture and plan retained under preflight names.",
+  "training_code_sha256": "e85c73bd5c03f0d78ac14ad094686249cd7120c7877249d92dbcce3a526dee5d",
+  "scoring_code_sha256": "f6c57011feb0f585343e9f215bc1594743075e64ed10400098ed78b8615792e0",
+  "mining_code_sha256": "9694f4ab715fb2fb5ab870f6e6a0391804ea35300ea24d279c635360aad418e1",
+  "pre_training_implementation_fix": "Historical government fixture uses source_url instead of source_group; add that alias in memory for clustered evaluation. No labels, scoring rules, hyperparameters, or examples change. Prior code/plan preserved in pre_selection_fixes.",
+  "historical_score_hashes": {
+    "reports/retention_v2/historical_government/scores.jsonl": "1b76075cb7446b3ed269e2d2508d3edf48db35a402e554a04f6bab750e35e5d4"
+  },
+  "code_sha256": {
+    "scripts/eval_condition_listwise.py": "ad1beb8912603141c37ac013489d7c3c03d5737d50f453d59a0f948ea702cc38",
+    "scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872",
+    "src/insurerag_vlm/reranker.py": "bb90e6c134b44d7cb0c0cd6ca3165e098827bd908a3a86e73101040cf65734a3",
+    "scripts/eval_retention_v2.py": "a2915e60a53184c9f90dae334b8dae438c1bfdd355ff997ee72e9ad3d0d866da"
+  }
+}

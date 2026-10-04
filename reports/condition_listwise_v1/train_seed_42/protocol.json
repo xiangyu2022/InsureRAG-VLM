@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-10-01T22:37:02.003162+00:00",
+  "seed": 42,
+  "unique_training_questions": 25987,
+  "domain_counts": {
+    "insuranceqa": 11729,
+    "government": 259,
+    "general": 13999
+  },
+  "presentations_per_epoch": 39529,
+  "repeat_factors": {
+    "insuranceqa": 2,
+    "government": 8,
+    "general": 1
+  },
+  "epochs": 1,
+  "optimizer_steps_planned": 2471,
+  "learning_rate": 3e-06,
+  "optimizer": "AdamW",
+  "weight_decay": 0.01,
+  "warmup_steps": 247,
+  "micro_groups": 4,
+  "accumulation": 4,
+  "loss": "listwise cross entropy on confidence-adjusted negative logits + KL(previous specialist || student)",
+  "ambiguity_rule": "teacher negative >= sampled positive - 1 gives weight 0.25; otherwise 1.0",
+  "kl_temperature": 2.0,
+  "kl_weights": {
+    "insuranceqa": 0.1,
+    "government": 0.2,
+    "general": 0.2
+  },
+  "teacher": "previous retention specialist, not public baseline",
+  "label_smoothing": 0.02,
+  "precision": "FP32 parameters, BF16 autocast",
+  "trainable_parameters": 22713601,
+  "initial_weights_sha256": "f97de794d7035317f083f36741a4c3c2aaca4bab689b276a4f4d8c314f6208ac",
+  "training_manifest_sha256": "7ec5f1d6b86775214c759ef816ff043e18a3ba19f3d37809b2c0f2e8c8a4fba6",
+  "selection_protocol_sha256": "d8d956f2f66e159e494e0e09dccb937d85e6bc8771c75287834140b568d5eed2",
+  "code_sha256": "e85c73bd5c03f0d78ac14ad094686249cd7120c7877249d92dbcce3a526dee5d",
+  "test_metrics_used": false,
+  "positive_sampling": "Cycle author-positive IDs across repeat presentations; seed offsets start."
+}
