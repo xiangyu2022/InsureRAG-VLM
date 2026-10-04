@@ -221,3 +221,4 @@ data/research_corpus/hicric_public_v1/*.jsonl
 /reports/retention_v2/valid_new_epoch_2/scores.jsonl
 /reports/retention_v2/valid_new_previous/scores.jsonl
 /reports/retention_v2/valid_new_public/scores.jsonl
+/reports/source_holdout_v1/local/
