@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-10-04T03:43:26.964265+00:00",
+  "base_commit": "31caa1d51ca724dddf20524cbfbed780390cce66",
+  "purpose": "exposed development diagnosis, no fresh holdout claim",
+  "selection": "first N SHA256(qwen35-dev-20261004:ID), fixed before generation",
+  "counts": {
+    "finqa": 8,
+    "insuranceqa": 4,
+    "condition": 4,
+    "fiqa": 4,
+    "synthetic": 6
+  },
+  "fixture_sha256": {
+    "finqa_evidence_v1/valid.jsonl": "d620f67780f55489e47cbbe8cfefffee700ebb62636f3fd481db7791080d87b3",
+    "insuranceqa_v2/valid.jsonl": "acf03a69edc7e11f9c3d114a7fa676dd395b464cacc75aef0d24c131e974c502",
+    "condition_v1/test.jsonl": "aaba50a5fa7165bc0a199b34d4ddccd10e5fcb83076038e6db5c9fea277d7c5c",
+    "fiqa_v1/valid.jsonl": "08a54cd2a704040d8465b1c8c28ab084e62de7bdde5e4f573799127d639f7d47"
+  },
+  "finqa_upstream_dev_sha256": "a847fb7e0d61a3125a1e2909852df6b89f1ee64d2c5ff1bf689e332214deee51",
+  "retrieval_input_fields": [
+    "question",
+    "corpus",
+    "report"
+  ],
+  "gold_injected": false,
+  "retrieval_output_top_k": 5,
+  "candidate_budget": "dense100 union positive BM25 top100",
+  "context_chars": 8000,
+  "per_page_chars": 2400,
+  "max_answer_pages": 5,
+  "thinking": false,
+  "num_ctx": 4096,
+  "num_predict": 384,
+  "temperature": 0,
+  "seed": 42,
+  "cases_sha256": "d71c1b5d797759fc31e3330892a6ab5d0978048ca252a69f687dba25453e6636",
+  "retrieval_sha256": "25ec4590c637711e48b8c371853911b6d728a3d594fd3b93c9b315139977a7f1"
+}

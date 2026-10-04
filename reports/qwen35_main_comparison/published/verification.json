@@ -1,0 +1,86 @@
+{
+  "base_commit": "31caa1d51ca724dddf20524cbfbed780390cce66",
+  "tests": {
+    "command": "python -m pytest -q -p no:cacheprovider",
+    "passed": 339,
+    "subtests_passed": 58,
+    "seconds": 9.69,
+    "python": "3.12.10",
+    "pytest": "9.1.1",
+    "platform": "Windows",
+    "new_model_downloads_during_tests": false
+  },
+  "trained_asset_sha256": {
+    "original_bge": "3c9f31665447c8911517620762200d2245a2518d6e7208acc78cd9db317e21ad",
+    "query_adaptation": "e067a9a14428aabb32dbd2f0e84a7af31bcb8290ffc6fe422faed906d4d5b857",
+    "selected_reranker": "697d3a725ad9d684c1b978365bda314114e8dbec2a27c2841a07f028ed2e81b8",
+    "document_embeddings": "0a6492fa82b870b50a63ca85945b675beb3489bbfbd30785254889a32690aa8f",
+    "selection_lock": "a40b41968aa39fc4f4967e5bc8f58ff96251558203ee33edf97ed16c8f070525"
+  },
+  "live_end_to_end_smoke": {
+    "original_and_batch_retrieval_top5_equal": true,
+    "pre_post_fix_raw_answers_identical": true,
+    "before_answer_repaired": true,
+    "after_answer_repaired": false,
+    "after_abstain": false,
+    "before_file_sha256": "f43c004b116d886d7c502bb70072029f6c014eb198e01434b5d2b960faeeba87",
+    "after_file_sha256": "7e973e137ff6081c6c432da61da4a8bdafb5be567dc8e7552dc4e4f6f834ad1a"
+  },
+  "encoding_correction": {
+    "legacy_windows_default": "cp936",
+    "final_explicit_encoding": "utf-8",
+    "affected_retrieval_ids": [
+      "fiqa_q_1753"
+    ],
+    "all_four_26_case_answer_arms_rerun": true,
+    "finqa_32_natural_language_answers_identical": true,
+    "all_12_arithmetic_input_records_identical_between_encodings": true
+  },
+  "cleanup": {
+    "other_services_modified": false,
+    "established_connections_before_cleanup": 0,
+    "identity_verified": true,
+    "task_port": 11436,
+    "utc": "2026-10-04T04:26:39.7072053+00:00",
+    "task_pid": 17960,
+    "task_server_stopped": true,
+    "models_unloaded": [
+      "qwen3.5:9b"
+    ]
+  },
+  "publication_scope": {
+    "large_model_outputs": false,
+    "raw_corpus_excerpts": false,
+    "weights": false,
+    "private_data": false,
+    "includes": "code, synthetic unit tests, derived numeric/statistical summaries, IDs, provenance hashes"
+  },
+  "source_terms_review": {
+    "InsuranceQA": {
+      "terms": "research purpose only; no relicensing",
+      "evidence": "data/benchmarks/insuranceqa_v2/manifest.lock.json",
+      "url": "https://github.com/shuzi/insuranceQA"
+    },
+    "FiQA": {
+      "terms": "dataset card declares CC-BY-SA-4.0; no corpus redistributed",
+      "evidence": "data/benchmarks/fiqa_v1/provenance.json",
+      "url": "https://huggingface.co/datasets/BeIR/fiqa"
+    },
+    "FinQA": {
+      "terms": "upstream repository MIT; report contents retain original rights",
+      "evidence": "data/benchmarks/finqa_evidence_v1/UPSTREAM_LICENSE",
+      "url": "https://github.com/czyssrs/FinQA"
+    },
+    "government": {
+      "terms": "original publisher terms and historical dates retained; no corpus redistributed",
+      "evidence": "data/benchmarks/condition_v1/manifest.lock.json"
+    }
+  },
+  "limitations": [
+    "26 repeatedly viewed dev diagnostics, not an independent holdout",
+    "6 synthetic controls do not establish real-world refusal accuracy",
+    "Numeric reference agreement is not official FinQA execution accuracy",
+    "Source/arithmetical checks do not validate semantic operand choice",
+    "Text-only, one sequential local run per arm; no production latency or VLM image-quality claim"
+  ]
+}
