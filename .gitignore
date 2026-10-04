@@ -1,4 +1,9 @@
 __pycache__/
+.pytest_cache/
+pytest-cache-files-*/
+# Keep full model outputs and public-source excerpts local; publish summaries only.
+/reports/qwen35_main_comparison/*
+!/reports/qwen35_main_comparison/published/
 *.pyc
 *.pyo
 *.pyd

@@ -1,0 +1,1049 @@
+{
+  "evaluation_status": "exposed exploratory development diagnostic; no expert accuracy or fresh holdout claim",
+  "reference_metric": "Exposed-dev numeric reference agreement: primary result within0.1 percentage point for percentages,0.01 for decimal counts, exact integers. Contradictory or absent primary answers count as failures. This is not official FinQA execution accuracy, source entailment or real-world answer accuracy.",
+  "retrieval": {
+    "finqa": {
+      "n": 8,
+      "hit_at_5_count": 8,
+      "all_evidence_at_5_count": 6,
+      "macro_gold_recall_at_5": 0.8958333333333334,
+      "candidate_hit_count": 8,
+      "candidate_all_evidence_count": 8
+    },
+    "insuranceqa": {
+      "n": 4,
+      "hit_at_5_count": 1,
+      "all_evidence_at_5_count": 0,
+      "macro_gold_recall_at_5": 0.125,
+      "candidate_hit_count": 3,
+      "candidate_all_evidence_count": 2
+    },
+    "condition": {
+      "n": 4,
+      "hit_at_5_count": 4,
+      "all_evidence_at_5_count": 4,
+      "macro_gold_recall_at_5": 1.0,
+      "candidate_hit_count": 4,
+      "candidate_all_evidence_count": 4
+    },
+    "fiqa": {
+      "n": 4,
+      "hit_at_5_count": 2,
+      "all_evidence_at_5_count": 1,
+      "macro_gold_recall_at_5": 0.375,
+      "candidate_hit_count": 2,
+      "candidate_all_evidence_count": 1
+    }
+  },
+  "answer_arms": {
+    "baseline_4b": {
+      "runtime": {
+        "n": 26,
+        "first_request_seconds": 7.026634800015017,
+        "warm_median_seconds": 2.4081641000229865,
+        "warm_p95_seconds": 5.440654400037602,
+        "median_decode_tokens_per_second": 71.97508075046028,
+        "maximum_observed_gpu_used_mib": 5029,
+        "continuous_peak_measured": false,
+        "minimum_observed_gpu_free_mib": 2920,
+        "maximum_ollama_resident_bytes": 3128038521,
+        "all_postrequest_snapshots_fully_gpu_resident": true,
+        "max_prompt_tokens": 1973,
+        "truncated_outputs": 1,
+        "single_pass_latency_not_a_production_SLA": true
+      },
+      "public_questions": 20,
+      "public_served_nonabstain_count": 1,
+      "public_postprocessing_repair_count": 0,
+      "public_rejection_reasons": {
+        "model_reported_insufficient_evidence": 3,
+        "specific_question_terms_not_in_citation": 8,
+        "answer_amount_not_in_citation": 4,
+        "missing_citation": 2,
+        "identifier_not_in_citation": 1,
+        "answer_terms_not_supported_by_citation": 1
+      },
+      "synthetic_controls": 6,
+      "synthetic_served_abstain_count": 6,
+      "synthetic_explicit_model_abstain_count": 6,
+      "public_with_known_corpus_id_count": 18,
+      "unknown_corpus_ids": {
+        "finqa_q_15f51889cacb0a48c5809a10": [
+          "finqa:finqa_a_810991fc06bd02269ea48bb"
+        ]
+      },
+      "citation_id_checks_do_not_establish_entailment": true,
+      "finqa_primary_numeric_reference_agreement": 1,
+      "finqa_n": 8,
+      "numeric_annotations": [
+        {
+          "id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+          "primary_numeric_answer": null,
+          "reference_answer": "43.9%",
+          "note": "Abstained despite retrieving both labeled supporting rows.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_192479754710591042476c97",
+          "primary_numeric_answer": null,
+          "reference_answer": "331.6",
+          "note": "Lists annual values without computing requested mean.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_755042b37beb5aafac3c97ce",
+          "primary_numeric_answer": 448859,
+          "reference_answer": "4536446",
+          "note": "Returns outstanding securities only, omitting remaining available securities in same row.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_870c48d83470bcc9308477e0",
+          "primary_numeric_answer": null,
+          "reference_answer": "-2138",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_833034b1915641cf4ac95b83",
+          "primary_numeric_answer": 1267,
+          "reference_answer": "6140",
+          "note": "Selects one segment/year and incorrectly calls other same-report rows other companies.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+          "primary_numeric_answer": 25,
+          "reference_answer": "24.69%",
+          "note": "Primary answer is 25%; intermediate 24.7% is rounded to 25 by the model.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_15f51889cacb0a48c5809a10",
+          "primary_numeric_answer": 6.51,
+          "reference_answer": "7%",
+          "note": "Output truncated; uses a different denominator from the benchmark reference.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_97179e8731b01ec937e0b9e2",
+          "primary_numeric_answer": 13.4,
+          "reference_answer": "13.4%",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": true
+        }
+      ]
+    },
+    "baseline_9b": {
+      "runtime": {
+        "n": 26,
+        "first_request_seconds": 14.403618100099266,
+        "warm_median_seconds": 4.6534732999280095,
+        "warm_p95_seconds": 9.497573799919337,
+        "median_decode_tokens_per_second": 42.59653091389646,
+        "maximum_observed_gpu_used_mib": 7568,
+        "continuous_peak_measured": false,
+        "minimum_observed_gpu_free_mib": 381,
+        "maximum_ollama_resident_bytes": 5490081790,
+        "all_postrequest_snapshots_fully_gpu_resident": true,
+        "max_prompt_tokens": 1973,
+        "truncated_outputs": 1,
+        "single_pass_latency_not_a_production_SLA": true
+      },
+      "public_questions": 20,
+      "public_served_nonabstain_count": 2,
+      "public_postprocessing_repair_count": 1,
+      "public_rejection_reasons": {
+        "answer_amount_not_in_citation": 3,
+        "specific_question_terms_not_in_citation": 9,
+        "model_reported_insufficient_evidence": 4,
+        "missing_citation": 1,
+        "answer_terms_not_supported_by_citation": 1
+      },
+      "synthetic_controls": 6,
+      "synthetic_served_abstain_count": 6,
+      "synthetic_explicit_model_abstain_count": 6,
+      "public_with_known_corpus_id_count": 19,
+      "unknown_corpus_ids": {},
+      "citation_id_checks_do_not_establish_entailment": true,
+      "finqa_primary_numeric_reference_agreement": 3,
+      "finqa_n": 8,
+      "numeric_annotations": [
+        {
+          "id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+          "primary_numeric_answer": null,
+          "reference_answer": "43.9%",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_192479754710591042476c97",
+          "primary_numeric_answer": 331.6,
+          "reference_answer": "331.6",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": true
+        },
+        {
+          "id": "finqa_q_755042b37beb5aafac3c97ce",
+          "primary_numeric_answer": 448859,
+          "reference_answer": "4536446",
+          "note": "Returns only one component rather than the benchmark combined total.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_870c48d83470bcc9308477e0",
+          "primary_numeric_answer": null,
+          "reference_answer": "-2138",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_833034b1915641cf4ac95b83",
+          "primary_numeric_answer": null,
+          "reference_answer": "6140",
+          "note": "Abstains on ambiguous segment scope.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+          "primary_numeric_answer": 24.7,
+          "reference_answer": "24.69%",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": true
+        },
+        {
+          "id": "finqa_q_15f51889cacb0a48c5809a10",
+          "primary_numeric_answer": 8.56,
+          "reference_answer": "7%",
+          "note": "Truncated; reports 136+1953=1589, an arithmetic error.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_97179e8731b01ec937e0b9e2",
+          "primary_numeric_answer": 13.4,
+          "reference_answer": "13.4%",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": true
+        }
+      ]
+    },
+    "revised_4b": {
+      "runtime": {
+        "n": 26,
+        "first_request_seconds": 5.992759200045839,
+        "warm_median_seconds": 1.4943220999557525,
+        "warm_p95_seconds": 2.434501000214368,
+        "median_decode_tokens_per_second": 70.52522623013033,
+        "maximum_observed_gpu_used_mib": 5275,
+        "continuous_peak_measured": false,
+        "minimum_observed_gpu_free_mib": 2674,
+        "maximum_ollama_resident_bytes": 3128038521,
+        "all_postrequest_snapshots_fully_gpu_resident": true,
+        "max_prompt_tokens": 1955,
+        "truncated_outputs": 0,
+        "single_pass_latency_not_a_production_SLA": true
+      },
+      "public_questions": 20,
+      "public_served_nonabstain_count": 3,
+      "public_postprocessing_repair_count": 0,
+      "public_rejection_reasons": {
+        "answer_amount_not_in_citation": 6,
+        "specific_question_terms_not_in_citation": 11
+      },
+      "synthetic_controls": 6,
+      "synthetic_served_abstain_count": 6,
+      "synthetic_explicit_model_abstain_count": 5,
+      "public_with_known_corpus_id_count": 20,
+      "unknown_corpus_ids": {},
+      "citation_id_checks_do_not_establish_entailment": true,
+      "finqa_primary_numeric_reference_agreement": 3,
+      "finqa_n": 8,
+      "numeric_annotations": [
+        {
+          "id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+          "primary_numeric_answer": 44.04,
+          "reference_answer": "43.9%",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_192479754710591042476c97",
+          "primary_numeric_answer": 331.6,
+          "reference_answer": "331.6",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": true
+        },
+        {
+          "id": "finqa_q_755042b37beb5aafac3c97ce",
+          "primary_numeric_answer": 448859,
+          "reference_answer": "4536446",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_870c48d83470bcc9308477e0",
+          "primary_numeric_answer": null,
+          "reference_answer": "-2138",
+          "note": "Contradictory final values: -2.14 billion, -2.115 billion and -2.12 billion; no unambiguous primary value.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_833034b1915641cf4ac95b83",
+          "primary_numeric_answer": null,
+          "reference_answer": "6140",
+          "note": "Contradictory 6213 versus 3398; mixes segments and misadds six values.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+          "primary_numeric_answer": 24.68,
+          "reference_answer": "24.69%",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": true
+        },
+        {
+          "id": "finqa_q_15f51889cacb0a48c5809a10",
+          "primary_numeric_answer": null,
+          "reference_answer": "7%",
+          "note": "Contradictory 10.44% versus 6.47%; expression 136/(136+1953) is about 6.51%.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_97179e8731b01ec937e0b9e2",
+          "primary_numeric_answer": 13.41,
+          "reference_answer": "13.4%",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": true
+        }
+      ]
+    },
+    "revised_9b": {
+      "runtime": {
+        "n": 26,
+        "first_request_seconds": 7.225521499989554,
+        "warm_median_seconds": 2.6636330001056194,
+        "warm_p95_seconds": 5.037152499891818,
+        "median_decode_tokens_per_second": 42.54579920110421,
+        "maximum_observed_gpu_used_mib": 7578,
+        "continuous_peak_measured": false,
+        "minimum_observed_gpu_free_mib": 371,
+        "maximum_ollama_resident_bytes": 5490081790,
+        "all_postrequest_snapshots_fully_gpu_resident": true,
+        "max_prompt_tokens": 1955,
+        "truncated_outputs": 0,
+        "single_pass_latency_not_a_production_SLA": true
+      },
+      "public_questions": 20,
+      "public_served_nonabstain_count": 3,
+      "public_postprocessing_repair_count": 0,
+      "public_rejection_reasons": {
+        "model_reported_insufficient_evidence": 3,
+        "specific_question_terms_not_in_citation": 10,
+        "answer_amount_not_in_citation": 4
+      },
+      "synthetic_controls": 6,
+      "synthetic_served_abstain_count": 6,
+      "synthetic_explicit_model_abstain_count": 6,
+      "public_with_known_corpus_id_count": 20,
+      "unknown_corpus_ids": {},
+      "citation_id_checks_do_not_establish_entailment": true,
+      "finqa_primary_numeric_reference_agreement": 3,
+      "finqa_n": 8,
+      "numeric_annotations": [
+        {
+          "id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+          "primary_numeric_answer": null,
+          "reference_answer": "43.9%",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_192479754710591042476c97",
+          "primary_numeric_answer": 331.6,
+          "reference_answer": "331.6",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": true
+        },
+        {
+          "id": "finqa_q_755042b37beb5aafac3c97ce",
+          "primary_numeric_answer": 448859,
+          "reference_answer": "4536446",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_870c48d83470bcc9308477e0",
+          "primary_numeric_answer": null,
+          "reference_answer": "-2138",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_833034b1915641cf4ac95b83",
+          "primary_numeric_answer": 4354.67,
+          "reference_answer": "6140",
+          "note": "Claims mean of 6305 and1267 is4354.67; correct arithmetic for those operands is3786, also not the benchmark scope.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+          "primary_numeric_answer": 24.69,
+          "reference_answer": "24.69%",
+          "note": "Primary result transcribed from raw output; inspect original sources for semantics.",
+          "reference_agreement": true
+        },
+        {
+          "id": "finqa_q_15f51889cacb0a48c5809a10",
+          "primary_numeric_answer": 6.51,
+          "reference_answer": "7%",
+          "note": "Uses lease plus purchase denominator; reference differs, and one labeled evidence row is outside top5.",
+          "reference_agreement": false
+        },
+        {
+          "id": "finqa_q_97179e8731b01ec937e0b9e2",
+          "primary_numeric_answer": 13.44,
+          "reference_answer": "13.4%",
+          "note": "13.44% matches coarse reference tolerance but exact displayed operands yield13.4187%; this is not exact arithmetic accuracy.",
+          "reference_agreement": true
+        }
+      ]
+    }
+  },
+  "arithmetic_arms": {
+    "arithmetic_4b": {
+      "runtime": {
+        "n": 12,
+        "first_request_seconds": 6.875516399974003,
+        "warm_median_seconds": 3.157110499916598,
+        "warm_p95_seconds": 7.533347400138155,
+        "median_decode_tokens_per_second": 70.0734830420603,
+        "maximum_observed_gpu_used_mib": 4866,
+        "continuous_peak_measured": false,
+        "minimum_observed_gpu_free_mib": 3083,
+        "maximum_ollama_resident_bytes": 3128038521,
+        "all_postrequest_snapshots_fully_gpu_resident": true,
+        "max_prompt_tokens": 1019,
+        "truncated_outputs": 0,
+        "single_pass_latency_not_a_production_SLA": true
+      },
+      "public_questions": 8,
+      "statuses": {
+        "model_abstained": 1,
+        "rejected": 7
+      },
+      "computed_reference_agreement": 0,
+      "verified_arithmetic_with_wrong_reference_count": 0,
+      "synthetic_abstentions": 4,
+      "n_synthetic": 4,
+      "semantics_verified": false,
+      "details": [
+        {
+          "id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+          "status": "model_abstained",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_192479754710591042476c97",
+          "status": "rejected",
+          "reason": "Expected a plain decimal string",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_755042b37beb5aafac3c97ce",
+          "status": "rejected",
+          "reason": "Expected a plain decimal string",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_870c48d83470bcc9308477e0",
+          "status": "rejected",
+          "reason": "Operand quotation is not in the supplied evidence",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_833034b1915641cf4ac95b83",
+          "status": "rejected",
+          "reason": "Expected a plain decimal string",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+          "status": "rejected",
+          "reason": "Expected a plain decimal string",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_15f51889cacb0a48c5809a10",
+          "status": "rejected",
+          "reason": "Expected a plain decimal string",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_97179e8731b01ec937e0b9e2",
+          "status": "rejected",
+          "reason": "Expected a plain decimal string",
+          "semantics_verified": false
+        }
+      ]
+    },
+    "arithmetic_9b": {
+      "runtime": {
+        "n": 12,
+        "first_request_seconds": 8.567748399917036,
+        "warm_median_seconds": 5.402216900140047,
+        "warm_p95_seconds": 7.002430900000036,
+        "median_decode_tokens_per_second": 42.32321553301631,
+        "maximum_observed_gpu_used_mib": 7383,
+        "continuous_peak_measured": false,
+        "minimum_observed_gpu_free_mib": 566,
+        "maximum_ollama_resident_bytes": 5490081790,
+        "all_postrequest_snapshots_fully_gpu_resident": true,
+        "max_prompt_tokens": 1019,
+        "truncated_outputs": 0,
+        "single_pass_latency_not_a_production_SLA": true
+      },
+      "public_questions": 8,
+      "statuses": {
+        "model_abstained": 1,
+        "rejected": 6,
+        "inputs_and_arithmetic_verified": 1
+      },
+      "computed_reference_agreement": 1,
+      "verified_arithmetic_with_wrong_reference_count": 0,
+      "synthetic_abstentions": 4,
+      "n_synthetic": 4,
+      "semantics_verified": false,
+      "details": [
+        {
+          "id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+          "status": "model_abstained",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_192479754710591042476c97",
+          "status": "rejected",
+          "reason": "Expected a plain decimal string",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_755042b37beb5aafac3c97ce",
+          "status": "rejected",
+          "reason": "Expected a plain decimal string",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_870c48d83470bcc9308477e0",
+          "status": "rejected",
+          "reason": "Expected a plain decimal string",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_833034b1915641cf4ac95b83",
+          "status": "rejected",
+          "reason": "Expected a plain decimal string",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+          "status": "inputs_and_arithmetic_verified",
+          "semantics_verified": false,
+          "operation": "percent_ratio",
+          "operands": [
+            "60",
+            "243"
+          ],
+          "computed_result": "24.691358024691358024691358024691",
+          "proposed_result": "24.69",
+          "proposed_within_0_02": true,
+          "unit": "percent",
+          "citations": [
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_a52debe334f1cabce87badd0",
+              "source_page": "DVN/2007/page_58.pdf",
+              "value": "60",
+              "quote_utf8_sha256": "e4194c4ed44e336b3946589be4b6033b24379e1fc1cb29e95219b2f74d2f4078"
+            },
+            {
+              "source": "E2",
+              "answer_id": "finqa_a_5e334b80833da76c68fde197",
+              "source_page": "DVN/2007/page_58.pdf",
+              "value": "243",
+              "quote_utf8_sha256": "582f2c32899bb84f1523f0f86765f566018278468fb862e591dc3d5f1d9d2254"
+            }
+          ]
+        },
+        {
+          "id": "finqa_q_15f51889cacb0a48c5809a10",
+          "status": "rejected",
+          "reason": "Expected a plain decimal string",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_97179e8731b01ec937e0b9e2",
+          "status": "rejected",
+          "reason": "Expected a plain decimal string",
+          "semantics_verified": false
+        }
+      ]
+    },
+    "arithmetic_v2_4b": {
+      "runtime": {
+        "n": 12,
+        "first_request_seconds": 3.6913014999590814,
+        "warm_median_seconds": 2.573583299992606,
+        "warm_p95_seconds": 3.972566300071776,
+        "median_decode_tokens_per_second": 68.3044477842017,
+        "maximum_observed_gpu_used_mib": 5004,
+        "continuous_peak_measured": false,
+        "minimum_observed_gpu_free_mib": 2945,
+        "maximum_ollama_resident_bytes": 3128038521,
+        "all_postrequest_snapshots_fully_gpu_resident": true,
+        "max_prompt_tokens": 1041,
+        "truncated_outputs": 0,
+        "single_pass_latency_not_a_production_SLA": true
+      },
+      "public_questions": 8,
+      "statuses": {
+        "rejected": 2,
+        "inputs_and_arithmetic_verified": 6
+      },
+      "computed_reference_agreement": 6,
+      "verified_arithmetic_with_wrong_reference_count": 0,
+      "synthetic_abstentions": 4,
+      "n_synthetic": 4,
+      "semantics_verified": false,
+      "details": [
+        {
+          "id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+          "status": "rejected",
+          "reason": "Invalid operation or operand count",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_192479754710591042476c97",
+          "status": "inputs_and_arithmetic_verified",
+          "semantics_verified": false,
+          "operation": "mean",
+          "operands": [
+            "339.9",
+            "328.4",
+            "326.5"
+          ],
+          "computed_result": "331.6",
+          "proposed_result": "331.6",
+          "proposed_within_0_02": true,
+          "unit": "source_units",
+          "citations": [
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_853291358e342310379d894a",
+              "source_page": "LMT/2013/page_74.pdf",
+              "value": "339.9",
+              "quote_utf8_sha256": "f75352dd756cab1a22db5738b1bc59f44aa44b6987cd94bcb5e0af66e26ffd3c"
+            },
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_853291358e342310379d894a",
+              "source_page": "LMT/2013/page_74.pdf",
+              "value": "328.4",
+              "quote_utf8_sha256": "43fa79a6f144405ade8b084a6ba55e2bff4ec7c56d5ee007a7d04252eadd7d5e"
+            },
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_853291358e342310379d894a",
+              "source_page": "LMT/2013/page_74.pdf",
+              "value": "326.5",
+              "quote_utf8_sha256": "2cec4974ad372a5678354a857b615d00fb4453f005f4ebc655b6a1f70d8ac86d"
+            }
+          ]
+        },
+        {
+          "id": "finqa_q_755042b37beb5aafac3c97ce",
+          "status": "inputs_and_arithmetic_verified",
+          "semantics_verified": false,
+          "operation": "sum",
+          "operands": [
+            "448859",
+            "4087587"
+          ],
+          "computed_result": "4536446",
+          "proposed_result": "4536446",
+          "proposed_within_0_02": true,
+          "unit": "source_units",
+          "citations": [
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_2d3782a93e11b721ea5866fc",
+              "source_page": "HII/2017/page_124.pdf",
+              "value": "448859",
+              "quote_utf8_sha256": "2e5336797d0e8627508dfdb4f0d921447c562175b8cf5c86d02a2738a892c00f"
+            },
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_2d3782a93e11b721ea5866fc",
+              "source_page": "HII/2017/page_124.pdf",
+              "value": "4087587",
+              "quote_utf8_sha256": "42e49de4aec3a97ac0d39b160d26a2607d40627319a8daebd2ca733107a6be3c"
+            }
+          ]
+        },
+        {
+          "id": "finqa_q_870c48d83470bcc9308477e0",
+          "status": "inputs_and_arithmetic_verified",
+          "semantics_verified": false,
+          "operation": "difference",
+          "operands": [
+            "13777",
+            "15915"
+          ],
+          "computed_result": "-2138",
+          "proposed_result": "-2138",
+          "proposed_within_0_02": true,
+          "unit": "source_units",
+          "citations": [
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_47e187842a98682566a450b3",
+              "source_page": "HIG/2008/page_318.pdf",
+              "value": "13777",
+              "quote_utf8_sha256": "ea22aee87dc754fd39c048e2b7061f4ef0dea536651422e66bf223a4df18f2a7"
+            },
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_47e187842a98682566a450b3",
+              "source_page": "HIG/2008/page_318.pdf",
+              "value": "15915",
+              "quote_utf8_sha256": "8bbaf2e11f0a5703b1f24ec1ee235f688afa11d678fe4126460058b5985acca6"
+            }
+          ]
+        },
+        {
+          "id": "finqa_q_833034b1915641cf4ac95b83",
+          "status": "inputs_and_arithmetic_verified",
+          "semantics_verified": false,
+          "operation": "mean",
+          "operands": [
+            "6305",
+            "6197",
+            "5918"
+          ],
+          "computed_result": "6140",
+          "proposed_result": "6140",
+          "proposed_within_0_02": true,
+          "unit": "source_units",
+          "citations": [
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_5008507d0a6826f13ecf044c",
+              "source_page": "AON/2009/page_46.pdf",
+              "value": "6305",
+              "quote_utf8_sha256": "a2ffa464f549f6611c9c555630bb85ff2640d0d8947eee9d8f8339a86fffca3b"
+            },
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_5008507d0a6826f13ecf044c",
+              "source_page": "AON/2009/page_46.pdf",
+              "value": "6197",
+              "quote_utf8_sha256": "50ce336072c1bafcc6b60c7566ccf3a019f6bd741a2fe6ce8b1a3845a04a98ca"
+            },
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_5008507d0a6826f13ecf044c",
+              "source_page": "AON/2009/page_46.pdf",
+              "value": "5918",
+              "quote_utf8_sha256": "e33df9d1a8a133143570cfc502bbe56be45ff43de2d6cf7be975bb66c09dfeed"
+            }
+          ]
+        },
+        {
+          "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+          "status": "inputs_and_arithmetic_verified",
+          "semantics_verified": false,
+          "operation": "percent_ratio",
+          "operands": [
+            "60",
+            "243"
+          ],
+          "computed_result": "24.691358024691358024691358024691",
+          "proposed_result": "24.69135802469136",
+          "proposed_within_0_02": true,
+          "unit": "percent",
+          "citations": [
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_a52debe334f1cabce87badd0",
+              "source_page": "DVN/2007/page_58.pdf",
+              "value": "60",
+              "quote_utf8_sha256": "53697efdcdb19bdd0f6ee79e8b458c68353ea8fd405780dcb00a98c27225f764"
+            },
+            {
+              "source": "E2",
+              "answer_id": "finqa_a_5e334b80833da76c68fde197",
+              "source_page": "DVN/2007/page_58.pdf",
+              "value": "243",
+              "quote_utf8_sha256": "11e50d2b8feff46fc649dfc4446096733c87a213132f6251cb70cc9bbcd389cc"
+            }
+          ]
+        },
+        {
+          "id": "finqa_q_15f51889cacb0a48c5809a10",
+          "status": "rejected",
+          "reason": "Wrong operand count for the selected operation",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_97179e8731b01ec937e0b9e2",
+          "status": "inputs_and_arithmetic_verified",
+          "semantics_verified": false,
+          "operation": "percent_change",
+          "operands": [
+            "196152",
+            "172945"
+          ],
+          "computed_result": "13.418716933129029460233022059036",
+          "proposed_result": "13.41",
+          "proposed_within_0_02": true,
+          "unit": "percent",
+          "citations": [
+            {
+              "source": "E5",
+              "answer_id": "finqa_a_4db48c685a317f64697fcbf5",
+              "source_page": "ADBE/2018/page_86.pdf",
+              "value": "196152",
+              "quote_utf8_sha256": "f0af03e7a525df06cf5ee497c49c16852d7a9088e5e5391a85312c3b4b03df68"
+            },
+            {
+              "source": "E5",
+              "answer_id": "finqa_a_4db48c685a317f64697fcbf5",
+              "source_page": "ADBE/2018/page_86.pdf",
+              "value": "172945",
+              "quote_utf8_sha256": "309d06f9cb5ab91188931a7989428efef4d841d27a3b919368dc5bdaa2109ae8"
+            }
+          ]
+        }
+      ]
+    },
+    "arithmetic_v2_9b": {
+      "runtime": {
+        "n": 12,
+        "first_request_seconds": 8.217284000013024,
+        "warm_median_seconds": 4.852651100140065,
+        "warm_p95_seconds": 6.322732999920845,
+        "median_decode_tokens_per_second": 42.17924817918476,
+        "maximum_observed_gpu_used_mib": 7620,
+        "continuous_peak_measured": false,
+        "minimum_observed_gpu_free_mib": 329,
+        "maximum_ollama_resident_bytes": 5490081790,
+        "all_postrequest_snapshots_fully_gpu_resident": true,
+        "max_prompt_tokens": 1041,
+        "truncated_outputs": 0,
+        "single_pass_latency_not_a_production_SLA": true
+      },
+      "public_questions": 8,
+      "statuses": {
+        "model_abstained": 1,
+        "inputs_and_arithmetic_verified": 6,
+        "rejected": 1
+      },
+      "computed_reference_agreement": 4,
+      "verified_arithmetic_with_wrong_reference_count": 2,
+      "synthetic_abstentions": 4,
+      "n_synthetic": 4,
+      "semantics_verified": false,
+      "details": [
+        {
+          "id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+          "status": "model_abstained",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_192479754710591042476c97",
+          "status": "inputs_and_arithmetic_verified",
+          "semantics_verified": false,
+          "operation": "mean",
+          "operands": [
+            "339.9",
+            "328.4",
+            "326.5"
+          ],
+          "computed_result": "331.6",
+          "proposed_result": "331.6",
+          "proposed_within_0_02": true,
+          "unit": "source_units",
+          "citations": [
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_853291358e342310379d894a",
+              "source_page": "LMT/2013/page_74.pdf",
+              "value": "339.9",
+              "quote_utf8_sha256": "f75352dd756cab1a22db5738b1bc59f44aa44b6987cd94bcb5e0af66e26ffd3c"
+            },
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_853291358e342310379d894a",
+              "source_page": "LMT/2013/page_74.pdf",
+              "value": "328.4",
+              "quote_utf8_sha256": "43fa79a6f144405ade8b084a6ba55e2bff4ec7c56d5ee007a7d04252eadd7d5e"
+            },
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_853291358e342310379d894a",
+              "source_page": "LMT/2013/page_74.pdf",
+              "value": "326.5",
+              "quote_utf8_sha256": "2cec4974ad372a5678354a857b615d00fb4453f005f4ebc655b6a1f70d8ac86d"
+            }
+          ]
+        },
+        {
+          "id": "finqa_q_755042b37beb5aafac3c97ce",
+          "status": "inputs_and_arithmetic_verified",
+          "semantics_verified": false,
+          "operation": "sum",
+          "operands": [
+            "448859"
+          ],
+          "computed_result": "448859",
+          "proposed_result": "448859",
+          "proposed_within_0_02": true,
+          "unit": "source_units",
+          "citations": [
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_2d3782a93e11b721ea5866fc",
+              "source_page": "HII/2017/page_124.pdf",
+              "value": "448859",
+              "quote_utf8_sha256": "495947b1b523d579cfcbfb789359b00790e2589d181d99e76d06b22d67c92bde"
+            }
+          ]
+        },
+        {
+          "id": "finqa_q_870c48d83470bcc9308477e0",
+          "status": "inputs_and_arithmetic_verified",
+          "semantics_verified": false,
+          "operation": "difference",
+          "operands": [
+            "13777",
+            "15915"
+          ],
+          "computed_result": "-2138",
+          "proposed_result": "-2138",
+          "proposed_within_0_02": true,
+          "unit": "source_units",
+          "citations": [
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_47e187842a98682566a450b3",
+              "source_page": "HIG/2008/page_318.pdf",
+              "value": "13777",
+              "quote_utf8_sha256": "ea22aee87dc754fd39c048e2b7061f4ef0dea536651422e66bf223a4df18f2a7"
+            },
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_47e187842a98682566a450b3",
+              "source_page": "HIG/2008/page_318.pdf",
+              "value": "15915",
+              "quote_utf8_sha256": "8bbaf2e11f0a5703b1f24ec1ee235f688afa11d678fe4126460058b5985acca6"
+            }
+          ]
+        },
+        {
+          "id": "finqa_q_833034b1915641cf4ac95b83",
+          "status": "inputs_and_arithmetic_verified",
+          "semantics_verified": false,
+          "operation": "mean",
+          "operands": [
+            "6305",
+            "1267"
+          ],
+          "computed_result": "3786",
+          "proposed_result": "3786",
+          "proposed_within_0_02": true,
+          "unit": "source_units",
+          "citations": [
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_5008507d0a6826f13ecf044c",
+              "source_page": "AON/2009/page_46.pdf",
+              "value": "6305",
+              "quote_utf8_sha256": "a2ffa464f549f6611c9c555630bb85ff2640d0d8947eee9d8f8339a86fffca3b"
+            },
+            {
+              "source": "E2",
+              "answer_id": "finqa_a_899790917a6a6a5058beecb3",
+              "source_page": "AON/2009/page_48.pdf",
+              "value": "1267",
+              "quote_utf8_sha256": "f3e0aeef2a3019b78b46d17c9f6f254dba7ba2ff17f651b7526b9607753101bb"
+            }
+          ]
+        },
+        {
+          "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+          "status": "inputs_and_arithmetic_verified",
+          "semantics_verified": false,
+          "operation": "percent_ratio",
+          "operands": [
+            "60",
+            "243"
+          ],
+          "computed_result": "24.691358024691358024691358024691",
+          "proposed_result": "24.69",
+          "proposed_within_0_02": true,
+          "unit": "percent",
+          "citations": [
+            {
+              "source": "E1",
+              "answer_id": "finqa_a_a52debe334f1cabce87badd0",
+              "source_page": "DVN/2007/page_58.pdf",
+              "value": "60",
+              "quote_utf8_sha256": "e4194c4ed44e336b3946589be4b6033b24379e1fc1cb29e95219b2f74d2f4078"
+            },
+            {
+              "source": "E2",
+              "answer_id": "finqa_a_5e334b80833da76c68fde197",
+              "source_page": "DVN/2007/page_58.pdf",
+              "value": "243",
+              "quote_utf8_sha256": "582f2c32899bb84f1523f0f86765f566018278468fb862e591dc3d5f1d9d2254"
+            }
+          ]
+        },
+        {
+          "id": "finqa_q_15f51889cacb0a48c5809a10",
+          "status": "rejected",
+          "reason": "Invalid operation or operand count",
+          "semantics_verified": false
+        },
+        {
+          "id": "finqa_q_97179e8731b01ec937e0b9e2",
+          "status": "inputs_and_arithmetic_verified",
+          "semantics_verified": false,
+          "operation": "percent_change",
+          "operands": [
+            "196152",
+            "172945"
+          ],
+          "computed_result": "13.418716933129029460233022059036",
+          "proposed_result": "13.43",
+          "proposed_within_0_02": true,
+          "unit": "percent",
+          "citations": [
+            {
+              "source": "E5",
+              "answer_id": "finqa_a_4db48c685a317f64697fcbf5",
+              "source_page": "ADBE/2018/page_86.pdf",
+              "value": "196152",
+              "quote_utf8_sha256": "f0af03e7a525df06cf5ee497c49c16852d7a9088e5e5391a85312c3b4b03df68"
+            },
+            {
+              "source": "E5",
+              "answer_id": "finqa_a_4db48c685a317f64697fcbf5",
+              "source_page": "ADBE/2018/page_86.pdf",
+              "value": "172945",
+              "quote_utf8_sha256": "309d06f9cb5ab91188931a7989428efef4d841d27a3b919368dc5bdaa2109ae8"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "reviewer": "Codex inspection of raw model outputs; not independent domain-expert adjudication",
+  "metric": "Exposed-dev numeric reference agreement: primary result within0.1 percentage point for percentages,0.01 for decimal counts, exact integers. Contradictory or absent primary answers count as failures. This is not official FinQA execution accuracy, source entailment or real-world answer accuracy.",
+  "arms": {
+    "baseline_4b": [
+      {
+        "id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+        "primary_numeric_answer": null,
+        "reference_answer": "43.9%",
+        "note": "Abstained despite retrieving both labeled supporting rows."
+      },
+      {
+        "id": "finqa_q_192479754710591042476c97",
+        "primary_numeric_answer": null,
+        "reference_answer": "331.6",
+        "note": "Lists annual values without computing requested mean."
+      },
+      {
+        "id": "finqa_q_755042b37beb5aafac3c97ce",
+        "primary_numeric_answer": 448859,
+        "reference_answer": "4536446",
+        "note": "Returns outstanding securities only, omitting remaining available securities in same row."
+      },
+      {
+        "id": "finqa_q_870c48d83470bcc9308477e0",
+        "primary_numeric_answer": null,
+        "reference_answer": "-2138",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_833034b1915641cf4ac95b83",
+        "primary_numeric_answer": 1267,
+        "reference_answer": "6140",
+        "note": "Selects one segment/year and incorrectly calls other same-report rows other companies."
+      },
+      {
+        "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+        "primary_numeric_answer": 25,
+        "reference_answer": "24.69%",
+        "note": "Primary answer is 25%; intermediate 24.7% is rounded to 25 by the model."
+      },
+      {
+        "id": "finqa_q_15f51889cacb0a48c5809a10",
+        "primary_numeric_answer": 6.51,
+        "reference_answer": "7%",
+        "note": "Output truncated; uses a different denominator from the benchmark reference."
+      },
+      {
+        "id": "finqa_q_97179e8731b01ec937e0b9e2",
+        "primary_numeric_answer": 13.4,
+        "reference_answer": "13.4%",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      }
+    ],
+    "baseline_9b": [
+      {
+        "id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+        "primary_numeric_answer": null,
+        "reference_answer": "43.9%",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_192479754710591042476c97",
+        "primary_numeric_answer": 331.6,
+        "reference_answer": "331.6",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_755042b37beb5aafac3c97ce",
+        "primary_numeric_answer": 448859,
+        "reference_answer": "4536446",
+        "note": "Returns only one component rather than the benchmark combined total."
+      },
+      {
+        "id": "finqa_q_870c48d83470bcc9308477e0",
+        "primary_numeric_answer": null,
+        "reference_answer": "-2138",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_833034b1915641cf4ac95b83",
+        "primary_numeric_answer": null,
+        "reference_answer": "6140",
+        "note": "Abstains on ambiguous segment scope."
+      },
+      {
+        "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+        "primary_numeric_answer": 24.7,
+        "reference_answer": "24.69%",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_15f51889cacb0a48c5809a10",
+        "primary_numeric_answer": 8.56,
+        "reference_answer": "7%",
+        "note": "Truncated; reports 136+1953=1589, an arithmetic error."
+      },
+      {
+        "id": "finqa_q_97179e8731b01ec937e0b9e2",
+        "primary_numeric_answer": 13.4,
+        "reference_answer": "13.4%",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      }
+    ],
+    "revised_4b": [
+      {
+        "id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+        "primary_numeric_answer": 44.04,
+        "reference_answer": "43.9%",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_192479754710591042476c97",
+        "primary_numeric_answer": 331.6,
+        "reference_answer": "331.6",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_755042b37beb5aafac3c97ce",
+        "primary_numeric_answer": 448859,
+        "reference_answer": "4536446",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_870c48d83470bcc9308477e0",
+        "primary_numeric_answer": null,
+        "reference_answer": "-2138",
+        "note": "Contradictory final values: -2.14 billion, -2.115 billion and -2.12 billion; no unambiguous primary value."
+      },
+      {
+        "id": "finqa_q_833034b1915641cf4ac95b83",
+        "primary_numeric_answer": null,
+        "reference_answer": "6140",
+        "note": "Contradictory 6213 versus 3398; mixes segments and misadds six values."
+      },
+      {
+        "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+        "primary_numeric_answer": 24.68,
+        "reference_answer": "24.69%",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_15f51889cacb0a48c5809a10",
+        "primary_numeric_answer": null,
+        "reference_answer": "7%",
+        "note": "Contradictory 10.44% versus 6.47%; expression 136/(136+1953) is about 6.51%."
+      },
+      {
+        "id": "finqa_q_97179e8731b01ec937e0b9e2",
+        "primary_numeric_answer": 13.41,
+        "reference_answer": "13.4%",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      }
+    ],
+    "revised_9b": [
+      {
+        "id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+        "primary_numeric_answer": null,
+        "reference_answer": "43.9%",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_192479754710591042476c97",
+        "primary_numeric_answer": 331.6,
+        "reference_answer": "331.6",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_755042b37beb5aafac3c97ce",
+        "primary_numeric_answer": 448859,
+        "reference_answer": "4536446",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_870c48d83470bcc9308477e0",
+        "primary_numeric_answer": null,
+        "reference_answer": "-2138",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_833034b1915641cf4ac95b83",
+        "primary_numeric_answer": 4354.67,
+        "reference_answer": "6140",
+        "note": "Claims mean of 6305 and1267 is4354.67; correct arithmetic for those operands is3786, also not the benchmark scope."
+      },
+      {
+        "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+        "primary_numeric_answer": 24.69,
+        "reference_answer": "24.69%",
+        "note": "Primary result transcribed from raw output; inspect original sources for semantics."
+      },
+      {
+        "id": "finqa_q_15f51889cacb0a48c5809a10",
+        "primary_numeric_answer": 6.51,
+        "reference_answer": "7%",
+        "note": "Uses lease plus purchase denominator; reference differs, and one labeled evidence row is outside top5."
+      },
+      {
+        "id": "finqa_q_97179e8731b01ec937e0b9e2",
+        "primary_numeric_answer": 13.44,
+        "reference_answer": "13.4%",
+        "note": "13.44% matches coarse reference tolerance but exact displayed operands yield13.4187%; this is not exact arithmetic accuracy."
+      }
+    ]
+  }
+}

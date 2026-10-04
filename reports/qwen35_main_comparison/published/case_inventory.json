@@ -1,0 +1,542 @@
+[
+  {
+    "id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+    "cohort": "finqa",
+    "corpus": "finqa",
+    "report": "HIG/2008",
+    "gold_answer_ids": [
+      "finqa_a_3ff14739a2836bbd5b198091",
+      "finqa_a_47e187842a98682566a450b3"
+    ],
+    "annotation_origin": "FinQA original gold supporting-fact indices; not synthetic labels",
+    "expected_abstain": false,
+    "question_utf8_sha256": "c3e8049f65a43f31c8b3d3c431d86738b2b5a6b7d2e0346160b46f2c647411ff",
+    "top5_answer_ids": [
+      "finqa_a_3ff14739a2836bbd5b198091",
+      "finqa_a_e6f7d46cadbe56b087e3bf48",
+      "finqa_a_47e187842a98682566a450b3",
+      "finqa_a_e6de0a5ffbcc863fd77c7c7d",
+      "finqa_a_a38477b436b93da44591bfd9"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "finqa_q_192479754710591042476c97",
+    "cohort": "finqa",
+    "corpus": "finqa",
+    "report": "LMT/2013",
+    "gold_answer_ids": [
+      "finqa_a_853291358e342310379d894a"
+    ],
+    "annotation_origin": "FinQA original gold supporting-fact indices; not synthetic labels",
+    "expected_abstain": false,
+    "question_utf8_sha256": "6a092a1fc87062177146b6621b153fdf8f513499b56913bbfdac7bbd84537b85",
+    "top5_answer_ids": [
+      "finqa_a_853291358e342310379d894a",
+      "finqa_a_9f087fa411a3fc6e5eb7e65c",
+      "finqa_a_675db9038a84814a60278121",
+      "finqa_a_23af8456b3b7952e6d283f3b",
+      "finqa_a_5b93669414899d44b7e3fb29"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "finqa_q_755042b37beb5aafac3c97ce",
+    "cohort": "finqa",
+    "corpus": "finqa",
+    "report": "HII/2017",
+    "gold_answer_ids": [
+      "finqa_a_b7c7373d84b3c960252bfea2"
+    ],
+    "annotation_origin": "FinQA original gold supporting-fact indices; not synthetic labels",
+    "expected_abstain": false,
+    "question_utf8_sha256": "b6b917ff4b12efa80344428847938d8a99779b595635f7489ef7aeb331a7c4cd",
+    "top5_answer_ids": [
+      "finqa_a_2d3782a93e11b721ea5866fc",
+      "finqa_a_221ee5d1061b1babec1dbd27",
+      "finqa_a_73c2c8d1f812d3791d9fd0ea",
+      "finqa_a_b7c7373d84b3c960252bfea2",
+      "finqa_a_dbf3424024b15163eb21bfd3"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "finqa_q_870c48d83470bcc9308477e0",
+    "cohort": "finqa",
+    "corpus": "finqa",
+    "report": "HIG/2008",
+    "gold_answer_ids": [
+      "finqa_a_47e187842a98682566a450b3"
+    ],
+    "annotation_origin": "FinQA original gold supporting-fact indices; not synthetic labels",
+    "expected_abstain": false,
+    "question_utf8_sha256": "9f77fadf395ef82fd3c3880069c9065e4f54f491a5f3869ab72bbb50c9d7582e",
+    "top5_answer_ids": [
+      "finqa_a_47e187842a98682566a450b3",
+      "finqa_a_e6f7d46cadbe56b087e3bf48",
+      "finqa_a_0dfbd7ce4f3eafaa8ae9824a",
+      "finqa_a_51d1a7c2cc0b2c9ba84b8b3e",
+      "finqa_a_db78d734496ba0dd34b3f9fc"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "finqa_q_833034b1915641cf4ac95b83",
+    "cohort": "finqa",
+    "corpus": "finqa",
+    "report": "AON/2009",
+    "gold_answer_ids": [
+      "finqa_a_5008507d0a6826f13ecf044c"
+    ],
+    "annotation_origin": "FinQA original gold supporting-fact indices; not synthetic labels",
+    "expected_abstain": false,
+    "question_utf8_sha256": "8116c7ed47969a7785637644eb1c9b65a36ee9cf60c80c8447ce9274628ae786",
+    "top5_answer_ids": [
+      "finqa_a_5008507d0a6826f13ecf044c",
+      "finqa_a_899790917a6a6a5058beecb3",
+      "finqa_a_11671edc603e0e2691b803f4",
+      "finqa_a_0fb9ff8225439dde193a21ca",
+      "finqa_a_ae0eee416308500e3cf90436"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "finqa_q_5cc6e3adb6fc49d7d03f4088",
+    "cohort": "finqa",
+    "corpus": "finqa",
+    "report": "DVN/2007",
+    "gold_answer_ids": [
+      "finqa_a_a52debe334f1cabce87badd0",
+      "finqa_a_5e334b80833da76c68fde197",
+      "finqa_a_9f55bb19e06154796baf3fd9"
+    ],
+    "annotation_origin": "FinQA original gold supporting-fact indices; not synthetic labels",
+    "expected_abstain": false,
+    "question_utf8_sha256": "38864f5ea568f94d5a4f83ba829fe71d33b9ec3c81ebbc1242e28fea3563b334",
+    "top5_answer_ids": [
+      "finqa_a_a52debe334f1cabce87badd0",
+      "finqa_a_5e334b80833da76c68fde197",
+      "finqa_a_077cd99c29cf0520ad1d671c",
+      "finqa_a_532432ccb9987e661f07d246",
+      "finqa_a_7a80813e98d4ac55f657f66b"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "finqa_q_15f51889cacb0a48c5809a10",
+    "cohort": "finqa",
+    "corpus": "finqa",
+    "report": "IP/2007",
+    "gold_answer_ids": [
+      "finqa_a_810991fc06bd02269ea48bb6",
+      "finqa_a_9de9e449817a6c9864c12ebe"
+    ],
+    "annotation_origin": "FinQA original gold supporting-fact indices; not synthetic labels",
+    "expected_abstain": false,
+    "question_utf8_sha256": "5ac7e7c5800e111a13d0b1c18daea11d8bcbdc941d67840a6c36ed625d2a201e",
+    "top5_answer_ids": [
+      "finqa_a_cc8f1c3322e70d32bb871627",
+      "finqa_a_c61004508fa8bd96f3e43ce2",
+      "finqa_a_a63690fd3c2452c7ad453bb5",
+      "finqa_a_810991fc06bd02269ea48bb6",
+      "finqa_a_90d383fe60c9c163a5c87720"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "finqa_q_97179e8731b01ec937e0b9e2",
+    "cohort": "finqa",
+    "corpus": "finqa",
+    "report": "ADBE/2018",
+    "gold_answer_ids": [
+      "finqa_a_4db48c685a317f64697fcbf5"
+    ],
+    "annotation_origin": "FinQA original gold supporting-fact indices; not synthetic labels",
+    "expected_abstain": false,
+    "question_utf8_sha256": "b095a0ee000afa19d648423bf8ba44ca2e5b868967d7123717bf8ff75c77b4c5",
+    "top5_answer_ids": [
+      "finqa_a_aeb836f1b46dc35eadd584f9",
+      "finqa_a_668d490f47cb303e491e7229",
+      "finqa_a_47231afd2db81d982085711d",
+      "finqa_a_3d5565f0ae120651cbefbc4d",
+      "finqa_a_4db48c685a317f64697fcbf5"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "iqa_v2_valid_01343",
+    "cohort": "insuranceqa",
+    "corpus": "insuranceqa",
+    "report": null,
+    "gold_answer_ids": [
+      "13841",
+      "17904",
+      "48"
+    ],
+    "annotation_origin": "InsuranceQA V2 authors; unchanged answer IDs",
+    "expected_abstain": false,
+    "question_utf8_sha256": "9a7f5addfc75433852f04ab1eef8495276cc0bad997fa939cd4f85daf8558664",
+    "top5_answer_ids": [
+      "19273",
+      "3617",
+      "22368",
+      "6642",
+      "11684"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "iqa_v2_valid_01252",
+    "cohort": "insuranceqa",
+    "corpus": "insuranceqa",
+    "report": null,
+    "gold_answer_ids": [
+      "5001"
+    ],
+    "annotation_origin": "InsuranceQA V2 authors; unchanged answer IDs",
+    "expected_abstain": false,
+    "question_utf8_sha256": "9498bf93c05c0d087ed4b5b3f2921de6ccb8488ea09e89f51724a4ec5f4b9c71",
+    "top5_answer_ids": [
+      "13685",
+      "16843",
+      "7497",
+      "12058",
+      "4237"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "iqa_v2_valid_01180",
+    "cohort": "insuranceqa",
+    "corpus": "insuranceqa",
+    "report": null,
+    "gold_answer_ids": [
+      "12060",
+      "13008"
+    ],
+    "annotation_origin": "InsuranceQA V2 authors; unchanged answer IDs",
+    "expected_abstain": false,
+    "question_utf8_sha256": "90690fcd9545469088f601dc27b206d5b5c1ad0c171cc82e88f3a9048d673dea",
+    "top5_answer_ids": [
+      "3689",
+      "21140",
+      "13008",
+      "26748",
+      "7348"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "iqa_v2_valid_00248",
+    "cohort": "insuranceqa",
+    "corpus": "insuranceqa",
+    "report": null,
+    "gold_answer_ids": [
+      "16271"
+    ],
+    "annotation_origin": "InsuranceQA V2 authors; unchanged answer IDs",
+    "expected_abstain": false,
+    "question_utf8_sha256": "72df74458194169898bdd3ac4252faff539e8a37565ff8ce2e8071cbf2da44e2",
+    "top5_answer_ids": [
+      "23962",
+      "15213",
+      "6792",
+      "5385",
+      "19763"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "condgov_q_bbebabf3ad7a371e",
+    "cohort": "condition",
+    "corpus": "condition",
+    "report": null,
+    "gold_answer_ids": [
+      "condgov_a_78579ba3a66b41f8"
+    ],
+    "annotation_origin": "Publisher-written Q/A, mechanical source-span extraction",
+    "expected_abstain": false,
+    "question_utf8_sha256": "5caca809ffcdcb27307e289f9087228f1d52943fbc70b60337e3ce284467b81f",
+    "top5_answer_ids": [
+      "condgov_a_78579ba3a66b41f8",
+      "gov2_a_20317151750101ae",
+      "gov2_a_a28b0ce2b26aec22",
+      "gov2_a_6f629e1ced1596e9",
+      "gov2_a_140f8265d82a89a0"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "condgov_q_bdecaf3c2dce58f2",
+    "cohort": "condition",
+    "corpus": "condition",
+    "report": null,
+    "gold_answer_ids": [
+      "condgov_a_994d978ac2d70c87"
+    ],
+    "annotation_origin": "Publisher-written Q/A, mechanical source-span extraction",
+    "expected_abstain": false,
+    "question_utf8_sha256": "9c2dfa92f1aae37318b11af26386b1f58aeb9fb31f59757ac78a8c1beb02b2e4",
+    "top5_answer_ids": [
+      "condgov_a_994d978ac2d70c87",
+      "condgov_a_948d57b57110a9e3",
+      "condgov_a_d1f3c308a3720f1b",
+      "condgov_a_155be3f1d6e5b46b",
+      "gov2_a_b2ca40c873e66bf6"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "condgov_q_219ed0cf5e65379a",
+    "cohort": "condition",
+    "corpus": "condition",
+    "report": null,
+    "gold_answer_ids": [
+      "condgov_a_5da27cf6672bce2c"
+    ],
+    "annotation_origin": "Publisher-written Q/A, mechanical source-span extraction",
+    "expected_abstain": false,
+    "question_utf8_sha256": "ced035561db0317d9ccc4c5d71111f57c88867acfd1c2dafbfb541998f583cec",
+    "top5_answer_ids": [
+      "condgov_a_5da27cf6672bce2c",
+      "condgov_a_fdc85f2db3dc5618",
+      "gov2_a_ed0557f3eccd53fb",
+      "gov2_a_b24554b845d1300a",
+      "condgov_a_93a1d5518752e585"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "condgov_q_1d3550b801f1e3bf",
+    "cohort": "condition",
+    "corpus": "condition",
+    "report": null,
+    "gold_answer_ids": [
+      "condgov_a_f8ea40271bf326ec"
+    ],
+    "annotation_origin": "Publisher-written Q/A, mechanical source-span extraction",
+    "expected_abstain": false,
+    "question_utf8_sha256": "609a3da0f2b038c4d12e505e1b51924345882268c775d1dfbbc57e8924d89e9d",
+    "top5_answer_ids": [
+      "condgov_a_f8ea40271bf326ec",
+      "condgov_a_69a45e8e4e767e0d",
+      "7160",
+      "12416",
+      "5239"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "fiqa_q_1753",
+    "cohort": "fiqa",
+    "corpus": "fiqa",
+    "report": null,
+    "gold_answer_ids": [
+      "fiqa_a_72131",
+      "fiqa_a_97233"
+    ],
+    "annotation_origin": "Original FiQA/BEIR relevance labels; unchanged IDs",
+    "expected_abstain": false,
+    "question_utf8_sha256": "56dc2481bce36172f1d558b5588aa9bab6bb969308044c1b9c2b7c3bd41ed9f8",
+    "top5_answer_ids": [
+      "fiqa_a_559522",
+      "fiqa_a_81599",
+      "fiqa_a_535340",
+      "fiqa_a_524525",
+      "fiqa_a_314056"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "fiqa_q_2814",
+    "cohort": "fiqa",
+    "corpus": "fiqa",
+    "report": null,
+    "gold_answer_ids": [
+      "fiqa_a_57263",
+      "fiqa_a_59000"
+    ],
+    "annotation_origin": "Original FiQA/BEIR relevance labels; unchanged IDs",
+    "expected_abstain": false,
+    "question_utf8_sha256": "ca4b3a9a45e08c67a19c5c2e4e59d8d12d19da19e6836da966aea5a4223d0b8e",
+    "top5_answer_ids": [
+      "fiqa_a_176123",
+      "fiqa_a_57263",
+      "fiqa_a_553332",
+      "fiqa_a_212312",
+      "fiqa_a_192516"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "fiqa_q_5501",
+    "cohort": "fiqa",
+    "corpus": "fiqa",
+    "report": null,
+    "gold_answer_ids": [
+      "fiqa_a_454842"
+    ],
+    "annotation_origin": "Original FiQA/BEIR relevance labels; unchanged IDs",
+    "expected_abstain": false,
+    "question_utf8_sha256": "e4f6de2ca303c04e3e1873d0ee4abccb92ddbcf96129ccb7cdf038f49ad22c43",
+    "top5_answer_ids": [
+      "fiqa_a_41115",
+      "fiqa_a_379170",
+      "fiqa_a_361341",
+      "fiqa_a_49690",
+      "fiqa_a_562793"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "fiqa_q_662",
+    "cohort": "fiqa",
+    "corpus": "fiqa",
+    "report": null,
+    "gold_answer_ids": [
+      "fiqa_a_24308"
+    ],
+    "annotation_origin": "Original FiQA/BEIR relevance labels; unchanged IDs",
+    "expected_abstain": false,
+    "question_utf8_sha256": "dfca83324a617cbf537f7044ce9d3bd345fff164c52f9aac58e33d950b6ca9bd",
+    "top5_answer_ids": [
+      "fiqa_a_24308",
+      "fiqa_a_227334",
+      "fiqa_a_459119",
+      "fiqa_a_454068",
+      "fiqa_a_196295"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "finqa_q_c3ae8c35dbce7052777a3ab3__empty",
+    "cohort": "synthetic_empty",
+    "corpus": "finqa",
+    "report": "HIG/2008",
+    "gold_answer_ids": [
+      "finqa_a_3ff14739a2836bbd5b198091",
+      "finqa_a_47e187842a98682566a450b3"
+    ],
+    "annotation_origin": "synthetic missing-evidence diagnostic, not real-world labels",
+    "expected_abstain": true,
+    "question_utf8_sha256": "c3e8049f65a43f31c8b3d3c431d86738b2b5a6b7d2e0346160b46f2c647411ff",
+    "top5_answer_ids": [],
+    "intervention_base_id": "finqa_q_c3ae8c35dbce7052777a3ab3",
+    "intervention_donor_id": null
+  },
+  {
+    "id": "finqa_q_192479754710591042476c97__empty",
+    "cohort": "synthetic_empty",
+    "corpus": "finqa",
+    "report": "LMT/2013",
+    "gold_answer_ids": [
+      "finqa_a_853291358e342310379d894a"
+    ],
+    "annotation_origin": "synthetic missing-evidence diagnostic, not real-world labels",
+    "expected_abstain": true,
+    "question_utf8_sha256": "6a092a1fc87062177146b6621b153fdf8f513499b56913bbfdac7bbd84537b85",
+    "top5_answer_ids": [],
+    "intervention_base_id": "finqa_q_192479754710591042476c97",
+    "intervention_donor_id": null
+  },
+  {
+    "id": "finqa_q_755042b37beb5aafac3c97ce__wrong_report",
+    "cohort": "synthetic_wrong_report",
+    "corpus": "finqa",
+    "report": "HII/2017",
+    "gold_answer_ids": [
+      "finqa_a_b7c7373d84b3c960252bfea2"
+    ],
+    "annotation_origin": "synthetic missing-evidence diagnostic, not real-world labels",
+    "expected_abstain": true,
+    "question_utf8_sha256": "b6b917ff4b12efa80344428847938d8a99779b595635f7489ef7aeb331a7c4cd",
+    "top5_answer_ids": [
+      "finqa_a_3ff14739a2836bbd5b198091",
+      "finqa_a_e6f7d46cadbe56b087e3bf48",
+      "finqa_a_47e187842a98682566a450b3",
+      "finqa_a_e6de0a5ffbcc863fd77c7c7d",
+      "finqa_a_a38477b436b93da44591bfd9"
+    ],
+    "intervention_base_id": "finqa_q_755042b37beb5aafac3c97ce",
+    "intervention_donor_id": "finqa_q_c3ae8c35dbce7052777a3ab3"
+  },
+  {
+    "id": "finqa_q_870c48d83470bcc9308477e0__wrong_report",
+    "cohort": "synthetic_wrong_report",
+    "corpus": "finqa",
+    "report": "HIG/2008",
+    "gold_answer_ids": [
+      "finqa_a_47e187842a98682566a450b3"
+    ],
+    "annotation_origin": "synthetic missing-evidence diagnostic, not real-world labels",
+    "expected_abstain": true,
+    "question_utf8_sha256": "9f77fadf395ef82fd3c3880069c9065e4f54f491a5f3869ab72bbb50c9d7582e",
+    "top5_answer_ids": [
+      "finqa_a_853291358e342310379d894a",
+      "finqa_a_9f087fa411a3fc6e5eb7e65c",
+      "finqa_a_675db9038a84814a60278121",
+      "finqa_a_23af8456b3b7952e6d283f3b",
+      "finqa_a_5b93669414899d44b7e3fb29"
+    ],
+    "intervention_base_id": "finqa_q_870c48d83470bcc9308477e0",
+    "intervention_donor_id": "finqa_q_192479754710591042476c97"
+  },
+  {
+    "id": "personal_deductible",
+    "cohort": "synthetic_personal",
+    "corpus": "insuranceqa",
+    "report": null,
+    "gold_answer_ids": [],
+    "annotation_origin": "synthetic personal-policy question against public FAQ only",
+    "expected_abstain": true,
+    "question_utf8_sha256": "e138b32e2a88b24ae168181797bba2d9a2fed9a74a5757f37593b4c292624118",
+    "top5_answer_ids": [
+      "17790",
+      "16986",
+      "18881",
+      "9400",
+      "15602"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  },
+  {
+    "id": "personal_limit",
+    "cohort": "synthetic_personal",
+    "corpus": "insuranceqa",
+    "report": null,
+    "gold_answer_ids": [],
+    "annotation_origin": "synthetic personal-policy question against public FAQ only",
+    "expected_abstain": true,
+    "question_utf8_sha256": "362624a2dbb57dd5fff04b2c75cd1731fede3985132b5cb0199b3a168084c14e",
+    "top5_answer_ids": [
+      "3442",
+      "15297",
+      "13766",
+      "1610",
+      "21796"
+    ],
+    "intervention_base_id": null,
+    "intervention_donor_id": null
+  }
+]

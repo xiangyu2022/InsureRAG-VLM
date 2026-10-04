@@ -1,0 +1,544 @@
+{
+  "arithmetic_4b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:4b",
+      "resolved_model": "qwen3.5:4b",
+      "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "4.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2560
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 768,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "purpose": "exploratory arithmetic diagnostic after observing exposed dev failures; not answer accuracy",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "b3ca5fecace200581822f107deb497352f1db61e93eb980c2afc3aa5c992713e",
+    "validator_sha256": "84b8e72a1dce78e731c6ea58d503d6f43e2fecb32c388c134f99428fe409b2a6"
+  },
+  "arithmetic_9b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:9b",
+      "resolved_model": "qwen3.5:9b",
+      "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "9.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 4096
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 768,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "purpose": "exploratory arithmetic diagnostic after observing exposed dev failures; not answer accuracy",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "b3ca5fecace200581822f107deb497352f1db61e93eb980c2afc3aa5c992713e",
+    "validator_sha256": "84b8e72a1dce78e731c6ea58d503d6f43e2fecb32c388c134f99428fe409b2a6"
+  },
+  "arithmetic_v2_4b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:4b",
+      "resolved_model": "qwen3.5:4b",
+      "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "4.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2560
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 768,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "purpose": "exploratory arithmetic diagnostic after observing exposed dev failures; not answer accuracy",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "b2e73964e0b10210029ddd3a80447e647c2320d7f06ae29d80e905aa38f2456b",
+    "validator_sha256": "2dff05af71c27c55a0f0a3d9343c0284b5fd956258a5b320fd9796d49c4dfe21"
+  },
+  "arithmetic_v2_9b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:9b",
+      "resolved_model": "qwen3.5:9b",
+      "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "9.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 4096
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 768,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "purpose": "exploratory arithmetic diagnostic after observing exposed dev failures; not answer accuracy",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "b2e73964e0b10210029ddd3a80447e647c2320d7f06ae29d80e905aa38f2456b",
+    "validator_sha256": "2dff05af71c27c55a0f0a3d9343c0284b5fd956258a5b320fd9796d49c4dfe21"
+  },
+  "baseline_4b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:4b",
+      "resolved_model": "qwen3.5:4b",
+      "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "4.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2560
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 384,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "started_utc": "2026-10-04T03:46:15.412031+00:00",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "944f14cace625ab9e0e472fef3602f9a4e5c671179b0ea7b579619f36639c614",
+    "answer_integration_sha256": "a5cb8dfe027a192fef88d0580fcdd06827dc3170ff84eec0ad2bd4132e0e8ade"
+  },
+  "baseline_9b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:9b",
+      "resolved_model": "qwen3.5:9b",
+      "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "9.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 4096
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 384,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "started_utc": "2026-10-04T03:47:35.721089+00:00",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "944f14cace625ab9e0e472fef3602f9a4e5c671179b0ea7b579619f36639c614",
+    "answer_integration_sha256": "a5cb8dfe027a192fef88d0580fcdd06827dc3170ff84eec0ad2bd4132e0e8ade"
+  },
+  "revised_4b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:4b",
+      "resolved_model": "qwen3.5:4b",
+      "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "4.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2560
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 384,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "started_utc": "2026-10-04T03:52:35.090436+00:00",
+    "prompt_mode": "research",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "f2fad10decd54b183efa3e41d0a5aecf76bf3b755ab5c29decea6d457799c599",
+    "answer_integration_sha256": "14cda56f2ee4e5a367363b01abf07d71f3b5a776d792e32bd63c52d370dba8f3"
+  },
+  "revised_9b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:9b",
+      "resolved_model": "qwen3.5:9b",
+      "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "9.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 4096
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 384,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "started_utc": "2026-10-04T03:51:13.420369+00:00",
+    "prompt_mode": "research",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "f2fad10decd54b183efa3e41d0a5aecf76bf3b755ab5c29decea6d457799c599",
+    "answer_integration_sha256": "14cda56f2ee4e5a367363b01abf07d71f3b5a776d792e32bd63c52d370dba8f3"
+  },
+  "smoke_4b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:4b",
+      "resolved_model": "qwen3.5:4b",
+      "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "4.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2560
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 384,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "started_utc": "2026-10-04T03:44:02.636310+00:00",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "944f14cace625ab9e0e472fef3602f9a4e5c671179b0ea7b579619f36639c614",
+    "answer_integration_sha256": "a5cb8dfe027a192fef88d0580fcdd06827dc3170ff84eec0ad2bd4132e0e8ade"
+  },
+  "smoke_9b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:9b",
+      "resolved_model": "qwen3.5:9b",
+      "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "9.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 4096
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 384,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "started_utc": "2026-10-04T03:44:56.453571+00:00",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "944f14cace625ab9e0e472fef3602f9a4e5c671179b0ea7b579619f36639c614",
+    "answer_integration_sha256": "a5cb8dfe027a192fef88d0580fcdd06827dc3170ff84eec0ad2bd4132e0e8ade"
+  },
+  "utf8_baseline_4b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:4b",
+      "resolved_model": "qwen3.5:4b",
+      "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "4.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2560
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 384,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "started_utc": "2026-10-04T04:18:11.331990+00:00",
+    "prompt_mode": "main",
+    "json_input_encoding": "utf-8",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "fe977b80f59972c211ea877e1de94010a74911c0e9ae13748bfa72d6af0b5863",
+    "answer_integration_sha256": "14cda56f2ee4e5a367363b01abf07d71f3b5a776d792e32bd63c52d370dba8f3"
+  },
+  "utf8_baseline_9b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:9b",
+      "resolved_model": "qwen3.5:9b",
+      "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "9.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 4096
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 384,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "started_utc": "2026-10-04T04:19:23.528249+00:00",
+    "prompt_mode": "main",
+    "json_input_encoding": "utf-8",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "fe977b80f59972c211ea877e1de94010a74911c0e9ae13748bfa72d6af0b5863",
+    "answer_integration_sha256": "14cda56f2ee4e5a367363b01abf07d71f3b5a776d792e32bd63c52d370dba8f3"
+  },
+  "utf8_revised_4b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:4b",
+      "resolved_model": "qwen3.5:4b",
+      "model_digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "4.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2560
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 384,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "started_utc": "2026-10-04T04:21:35.145055+00:00",
+    "prompt_mode": "research",
+    "json_input_encoding": "utf-8",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "fe977b80f59972c211ea877e1de94010a74911c0e9ae13748bfa72d6af0b5863",
+    "answer_integration_sha256": "14cda56f2ee4e5a367363b01abf07d71f3b5a776d792e32bd63c52d370dba8f3"
+  },
+  "utf8_revised_9b": {
+    "model": {
+      "provider": "ollama",
+      "requested_model": "ollama:qwen3.5:9b",
+      "resolved_model": "qwen3.5:9b",
+      "model_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "model_details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "9.7B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 4096
+      },
+      "ollama_version": "0.34.2",
+      "base_url": "http://127.0.0.1:11436",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 384,
+        "num_ctx": 4096,
+        "top_k": 40,
+        "top_p": 1.0,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0
+      },
+      "thinking": false,
+      "last_generation": {}
+    },
+    "started_utc": "2026-10-04T04:22:23.525825+00:00",
+    "prompt_mode": "research",
+    "json_input_encoding": "utf-8",
+    "diagnostic_protocol_sha256": "71bc4e9d918dc63d2f71ad50ff727aa408e8ffefb14715a2277bcc88c516d969",
+    "script_sha256": "fe977b80f59972c211ea877e1de94010a74911c0e9ae13748bfa72d6af0b5863",
+    "answer_integration_sha256": "14cda56f2ee4e5a367363b01abf07d71f3b5a776d792e32bd63c52d370dba8f3"
+  }
+}

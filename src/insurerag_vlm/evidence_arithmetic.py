@@ -10,7 +10,7 @@ OPERATIONS = ('identity', 'sum', 'mean', 'difference', 'ratio', 'percent_ratio',
 
 
 def decimal_value(value):
-    if not isinstance(value, str) or not re.fullmatch(r'[+-]?\d[\d,]*(?:\.\d+)?', value.strip()):
+    if not isinstance(value, str) or not re.fullmatch(r'[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?', value.strip()):
         raise ValueError('Expected a plain decimal string')
     try: number = Decimal(value.replace(',', '').strip())
     except InvalidOperation as exc: raise ValueError('Invalid numeric input') from exc
@@ -47,7 +47,7 @@ def verify_calculation(payload, sources, report_scope):
         if len(quote) < 12 or quote not in normalized(source['text']):
             raise ValueError('Operand quotation is not in the supplied evidence')
         value = decimal_value(operand.get('value'))
-        printed = {decimal_value(token) for token in re.findall(r'(?<![\w.])[+-]?\d[\d,]*(?:\.\d+)?(?![\w.])', quote)}
+        printed = {decimal_value(token.rstrip(',')) for token in re.findall(r'(?<![\w.])[+-]?\d[\d,]*(?:\.\d+)?(?![\w.])', quote)}
         if value not in printed:
             raise ValueError('Operand value is not printed in its quotation')
         values.append(value)
@@ -79,9 +79,10 @@ CALCULATION_SCHEMA = {
         'operation': {'type': 'string', 'enum': list(OPERATIONS)},
         'operands': {'type': 'array', 'maxItems': 8, 'items': {
             'type': 'object', 'additionalProperties': False,
-            'properties': {k: {'type': 'string'} for k in ('value', 'source', 'quote')},
+            'properties': {'value': {'type': 'string', 'pattern': r'^-?[0-9]+(\.[0-9]+)?$'},
+                           'source': {'type': 'string'}, 'quote': {'type': 'string'}},
             'required': ['value', 'source', 'quote']}},
-        'proposed_result': {'type': 'string'},
+        'proposed_result': {'type': 'string', 'pattern': r'^-?[0-9]+(\.[0-9]+)?$'},
     },
     'required': ['abstain', 'reason', 'operation', 'operands', 'proposed_result'],
 }

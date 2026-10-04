@@ -24,7 +24,7 @@ def test_reports_model_math_error_without_rewriting_its_proposal():
     assert not result['proposed_within_0_02']
 
 
-@pytest.mark.parametrize('value', ['nan', 'inf', '1e3', '__import__("os")', '10000000000000000000'])
+@pytest.mark.parametrize('value', ['nan', 'inf', '1e3', '__import__("os")', '10000000000000000000', '{120}', '1,2'])
 def test_rejects_nonliteral_or_unbounded_values(value):
     with pytest.raises(ValueError): decimal_value(value)
 

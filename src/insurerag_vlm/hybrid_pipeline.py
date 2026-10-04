@@ -1733,6 +1733,17 @@ class DocumentRetrievalPipeline:
     @staticmethod
     def _question_requires_numeric_evidence(question: str) -> bool:
         lowered = question.lower()
+        # A complete, unqualified definition request does not ask for a policy
+        # amount. Otherwise the numeric repair step replaces a valid definition
+        # with an arbitrary dollar example from the cited FAQ. Full matching
+        # keeps personal-policy and mixed definition/amount requests numeric.
+        term = r"(?:deductible|premium|sublimit|coinsurance|retention|coverage limit|policy limit)"
+        concept = rf"(?:(?:insurance|health insurance|auto insurance)\s+)?{term}"
+        if re.fullmatch(
+            rf"\s*(?:what\s+is\s+(?:a|an)\s+{concept}|what\s+does\s+(?:a\s+|an\s+)?{concept}\s+mean|define\s+(?:a\s+|an\s+)?{concept})\s*[?.!]?\s*",
+            lowered,
+        ):
+            return False
         numeric_intents = {
             "amount", "limit", "limits", "deductible", "premium", "sublimit",
             "coinsurance", "retention", "per person", "per accident", "per day",

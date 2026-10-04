@@ -1,0 +1,28 @@
+{
+  "hybrid_pipeline_sha256": "bccfd0ef8d9d102bbde3910def0dc70cd9d4bae689aabaf5a28dbe2abfe37db3",
+  "input_read_encoding": "utf-8",
+  "arm_prefix": "utf8_",
+  "all_104_served_outputs_unchanged": true,
+  "arms": {
+    "baseline_4b": {
+      "count": 26,
+      "changed_served_outputs": [],
+      "generation_calls": 0
+    },
+    "baseline_9b": {
+      "count": 26,
+      "changed_served_outputs": [],
+      "generation_calls": 0
+    },
+    "revised_4b": {
+      "count": 26,
+      "changed_served_outputs": [],
+      "generation_calls": 0
+    },
+    "revised_9b": {
+      "count": 26,
+      "changed_served_outputs": [],
+      "generation_calls": 0
+    }
+  }
+}

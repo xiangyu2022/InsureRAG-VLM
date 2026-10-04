@@ -108,11 +108,11 @@ def resources(base_url):
 def run(args):
     import requests
     from src.insurerag_vlm.vlm import VLMClient
-    protocol = json.loads((args.data / 'protocol.json').read_text())
+    protocol = json.loads((args.data / 'protocol.json').read_text(encoding='utf8'))
     for name in ('cases', 'retrieval'):
         if digest(args.data / (name + '.json')) != protocol[name + '_sha256']: raise ValueError('Frozen diagnostic inputs changed')
-    cases = json.loads((args.data / 'cases.json').read_text())
-    retrieval = json.loads((args.data / 'retrieval.json').read_text())
+    cases = json.loads((args.data / 'cases.json').read_text(encoding='utf8'))
+    retrieval = json.loads((args.data / 'retrieval.json').read_text(encoding='utf8'))
     if args.ids: cases = [c for c in cases if c['id'] in args.ids.split(',')]
     if not cases: raise ValueError('No selected cases')
     if args.output.exists(): raise ValueError('Output directory already exists')
@@ -128,6 +128,7 @@ def run(args):
     write(args.output / 'environment.json', {'started_utc': datetime.now(timezone.utc).isoformat(),
           'model': client.backend_metadata(), 'before': baseline, 'diagnostic_protocol_sha256': digest(args.data / 'protocol.json'),
           'prompt_mode': args.prompt_mode,
+          'json_input_encoding': 'utf-8',
           'script_sha256': digest(Path(__file__)), 'answer_integration_sha256': digest(ROOT / 'scripts/answer_evidence_reranker.py')})
     for i, case in enumerate(cases):
         started = time.perf_counter()
