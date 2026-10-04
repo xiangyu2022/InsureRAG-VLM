@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-10-04T01:48:42.1698202Z",
+  "affected_scope": "Supplemental retrieved-context diagnostic and CLI only; primary prompt, checkpoint and data unchanged",
+  "reason": "V1 required exact copying of a Source field that contained an instruction, not a source identifier",
+  "v1_system_source_instruction": "end with 'Source: ' followed by the supplied source exactly",
+  "v1_user_source_field": "Source: Use only the SOURCE identifiers present in the evidence above.",
+  "v2_system_source_instruction": "end with 'Source: ' followed by one SOURCE identifier from the evidence exactly",
+  "v2_user_source_field": null,
+  "paired_rerun": [
+    "base",
+    "step-300"
+  ],
+  "primary_unchanged": true,
+  "tuning_performed": false,
+  "preserved_v1_prefix": "prompt_v1_",
+  "retrieved_context_sha256": "87519c4d011b1891e2967ada93dcf7cd1c6d3b5d04b5948b4f5fce7d18921e20",
+  "selected_adapter_sha256": "09f09cedc638e3748c4c5705cfaa8a799626a977e8068d1cac6547ed7e7ee8a4",
+  "corrected_prompt_module_sha256": "dce23d2f8580056e9da23fa6f0d7dd9ae66c5fd262b1e5129a8a09bf60df31e0"
+}

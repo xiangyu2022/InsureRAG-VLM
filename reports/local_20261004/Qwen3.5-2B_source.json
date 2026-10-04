@@ -1,0 +1,8 @@
+{
+  "model_id": "Qwen/Qwen3.5-2B",
+  "revision": "15852e8c16360a2fea060d615a32b45270f8a8fc",
+  "source": "https://huggingface.co/Qwen/Qwen3.5-2B",
+  "license": "apache-2.0",
+  "local_dir": "models\\Qwen3.5-2B",
+  "download_status": "complete"
+}

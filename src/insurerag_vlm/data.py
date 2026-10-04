@@ -1,3 +1,4 @@
+import hashlib
 import json
 from dataclasses import dataclass
 from pathlib import Path
@@ -119,15 +120,16 @@ def _split_text_documents(
     return documents
 
 
-def _render_pdf_pages(path: Path, output_dir: Path, dpi: int = 150) -> List[Path]:
+def _render_pdf_pages(path: Path, output_dir: Path, dpi: int = 150, document_key: Optional[str] = None) -> List[Path]:
     from .pdf import render_pdf_pages
 
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     images = render_pdf_pages(path, dpi=dpi)
     rendered_paths: List[Path] = []
+    path_hash = hashlib.sha256((document_key or path.as_posix()).encode("utf-8")).hexdigest()[:12]
     for page_number, image_bytes in enumerate(images, start=1):
-        output_path = output_dir / f"{path.stem}_page_{page_number:03}.png"
+        output_path = output_dir / f"{path.stem}_{path_hash}_page_{page_number:03}.png"
         output_path.write_bytes(image_bytes)
         rendered_paths.append(output_path)
     return rendered_paths
@@ -141,10 +143,10 @@ def load_pdf_documents(
     extra_metadata: Optional[Dict[str, Any]] = None,
 ) -> List[PageDocument]:
     texts = extract_text_by_page(path)
+    relative_path = relative_path or path.name
     rendered_paths = []
     if render_images and render_dir is not None:
-        rendered_paths = _render_pdf_pages(path, render_dir)
-    relative_path = relative_path or path.name
+        rendered_paths = _render_pdf_pages(path, render_dir, document_key=relative_path)
     extra_metadata = dict(extra_metadata or {})
 
     pages: List[PageDocument] = []

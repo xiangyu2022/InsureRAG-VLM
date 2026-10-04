@@ -1,0 +1,35 @@
+{
+  "model": "models/Qwen3.5-2B",
+  "seed": 20261004,
+  "dtype": "bfloat16",
+  "quantization": null,
+  "training_modality": "text_only_vision_encoder_frozen",
+  "config": {
+    "stage": "preflight",
+    "model": "models/Qwen3.5-2B",
+    "adapter": null,
+    "max_steps": 300,
+    "epochs": 2,
+    "accumulation": 4,
+    "learning_rate": 0.0001,
+    "checkpoint_steps": 150,
+    "max_train_seconds": 5400,
+    "max_new_tokens": 128
+  },
+  "selection_rule": "minimum dev token NLL, including base; no test-based tuning",
+  "prompt": "Answer the insurance question using ONLY the supplied evidence. Give a concise supported answer and end with 'Source: ' followed by the supplied source exactly. If the evidence does not support the question, output only INSUFFICIENT_EVIDENCE. Do not infer coverage from general knowledge.",
+  "decode": "greedy, thinking disabled, max_new_tokens=128",
+  "data_hashes": {
+    "train": "5e3551a18ec8099efa16e0afcaa864e35705087d4fd0cd13f8bdf4602295fb0a",
+    "dev": "798f483f1c118b27edea456bf43f05e65ac240ddc3f61032c0dd8e4119a655cd",
+    "test": "bc5da7be9cc5b952fbb012dde5fe80a73e150bf421bd8d6eed1eb03f5930a3fc"
+  },
+  "max_total_tokens": {
+    "train": 443,
+    "dev": 370,
+    "test": 345
+  },
+  "scope": "Given-evidence answer adaptation, not end-to-end RAG or production quality",
+  "metrics": "answerable content F1; exact source citation; lexical support proxy; abstention precision/recall; latency",
+  "created_utc": "2026-10-04T01:12:05.585396+00:00"
+}

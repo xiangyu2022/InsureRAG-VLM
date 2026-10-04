@@ -195,7 +195,11 @@ def _render_pdf_to_page_records(
             "render_dpi": config.render_dpi,
             "policy_family_id": document_record["policy_family_id"],
             "version_id": document_record["version_id"],
-            "source": str(pdf_path),
+            # Use the same corpus-relative document identity as load_documents.
+            # Never match basenames globally: nested policy packets can reuse names.
+            "source": f"{pdf_path.relative_to(config.input_dir).as_posix()}#page={page_number}",
+            "source_path": str(pdf_path),
+            "page_identity_version": "corpus_relative_v1",
             "source_type": config.source_type,
             "sha256": image_sha256,
             "text_layer_chars": len(text_layer),
@@ -289,6 +293,8 @@ def _build_page_manifest(pages: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
             "page_index": page["page_index"],
             "page_number": page["page_number"],
             "source": page.get("source"),
+            "source_path": page.get("source_path"),
+            "page_identity_version": page.get("page_identity_version"),
             "section_hint": page.get("section_hint"),
             "version_id": page["version_id"],
             "source_type": page["source_type"],
@@ -374,6 +380,9 @@ def preprocess_page_images(config: PageImagePreprocessConfig) -> PageImagePrepro
             raise ImportError("PyMuPDF is required for preprocessing.") from exc
 
         document_record = _build_document_record(pdf_path, raw_sha256, page_count)
+        relative_source = pdf_path.relative_to(input_dir).as_posix()
+        path_hash = hashlib.sha256(relative_source.encode("utf-8")).hexdigest()[:12]
+        document_record["doc_id"] = f"{_slugify(pdf_path.stem)}_{path_hash}_{raw_sha256[:8]}"
         doc_pages, doc_ocr = _render_pdf_to_page_records(
             pdf_path=pdf_path,
             config=config,

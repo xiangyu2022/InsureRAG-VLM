@@ -1,0 +1,15 @@
+{
+  "steps": 300,
+  "samples_seen": 1200,
+  "seconds": 588.218887090683,
+  "mean_train_loss": 0.03628128878026928,
+  "initial_dev_nll": 0.40275964696678074,
+  "best_dev_nll": 0.0590033659587129,
+  "selected_adapter": "models\\local_20261004_lora\\step-300",
+  "selection_rule": "minimum dev token NLL, including unmodified base as candidate",
+  "final_adapter": "models\\local_20261004_lora\\final",
+  "trainable_parameters": 5455872,
+  "peak_allocated_mb": 4684.64599609375,
+  "peak_reserved_mb": 5562.0,
+  "training_completed_planned_steps": true
+}

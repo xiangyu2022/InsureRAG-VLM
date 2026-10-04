@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "pdf_count": 20,
+  "page_count": 168,
+  "source_identity_check": "all_visual_pages_match_text_sources",
+  "prefix_check": "passed",
+  "identity_probe": {
+    "recall_at_1": 1.0,
+    "recall_at_5": 1.0,
+    "hit_at_5": 1.0,
+    "mrr_at_10": 1.0,
+    "ndcg_at_10": 1.0
+  },
+  "metrics": {
+    "text": {
+      "recall_at_1": 0.1328125,
+      "recall_at_5": 0.59375,
+      "mrr_at_10": 0.42552083333333335,
+      "ndcg_at_10": 0.49253912103431435,
+      "evaluated_count": 16,
+      "hit_at_5": 0.6875
+    },
+    "visual_stub": {
+      "evaluated_count": 16,
+      "recall_at_1": 0.0703125,
+      "recall_at_5": 0.6640625,
+      "hit_at_5": 0.75,
+      "mrr_at_10": 0.4328869047619048,
+      "ndcg_at_10": 0.5124751446651128,
+      "p50_latency_ms": 26.361200027167797,
+      "p95_latency_ms": 45.34849990159273
+    },
+    "local_image": {
+      "evaluated_count": 16,
+      "recall_at_1": 0.0703125,
+      "recall_at_5": 0.6640625,
+      "hit_at_5": 0.75,
+      "mrr_at_10": 0.4328869047619048,
+      "ndcg_at_10": 0.5124751446651128,
+      "p50_latency_ms": 26.60629991441965,
+      "p95_latency_ms": 40.35010002553463
+    }
+  },
+  "query_output": "The limits are the most your\n\nSOURCE: md_homeowners_declarations_page.pdf#page=1",
+  "scope": "functional smoke, rule labels, public source corpus; not held-out adaptation evaluation",
+  "pdf_hashes": {
+    "md_auto_insurance_guide.pdf": "18dae338ff5d6f46ce23491e393ea15d79d7ffe355554364d85ff0e06ba78065",
+    "md_college_bound_child_insurance_advisory.pdf": "9dd13853afaa0f1e3a7ee733c4b80955958aae00fe435df24ed548536870f4db",
+    "md_homeowners_declarations_page.pdf": "59539638d2565c01833ea92a892dc9401c6187f7980bfc09a168cfa3f7187939",
+    "md_homeowners_disclosure_notice.pdf": "c0945918ef3d464f1bc5d6defc727491e09d2de87c78fbb45fb5b6c7c1b9a444",
+    "md_homeowners_insurance_guide.pdf": "5678b1af4d818dfd0df57c731dd603f3f046602085ed363e818577cac5358f39",
+    "md_homeowners_still_important_advisory.pdf": "ea64c3c99bfed96b7f6a8bff28dd61f1eac84cd2b372e46c823bd01186351cda",
+    "md_insurance_coverage_tips_advisory.pdf": "db2e19f36afa924c63c58dc7c835a772a25e7259271319cb7f4c0fc6ada20786",
+    "md_licensed_drivers_household_advisory.pdf": "a0f6cc97e7216fcb149b7f44b49ead776a0a7d16ac0c0c2e4cf6657a3140196b",
+    "md_uninsured_motorist_claims_advisory.pdf": "6b3c61ed94a720d9d9de7a3b66fd594e18a7f1e9680f46aa641c706fa4003a83",
+    "nc_auto_guide.pdf": "eb4cb14f09d194499b7cc7d6ed3e7da9fb3f50d7b82de097c5572a9e859c2831",
+    "nc_business_guide.pdf": "9f5d5968fe1ada18c814743a3ffab698b7fa54dff53fda5f8499a8b1d6dec093",
+    "nc_disability_insurance_guide.pdf": "ba672ca1bba130b52b5d3b8c16a17f053817947b3c83709b902b70b7059d7d76",
+    "nc_flood_guide.pdf": "df37b01b1ef2355b0b71042123a39e1a82fd9e2153f5f57ab901c4ee2508bb61",
+    "nc_health_guide.pdf": "a1d69d3f74579035ce39b153d54b311792609cdc4c551de5b9932b2cf10f601b",
+    "nc_home_guide.pdf": "be67835c608772b8104060eca10a4bbfd66281861261c19213d4e7b967777b1c",
+    "nc_homeowners_guide.pdf": "91ea2c8bb855e751ad9a5c8060897bfe281816eade65f2593571b68059368ede",
+    "nc_homeowners_guide_archive.pdf": "dba6db91de92acd3cf2d414e8cad6d58ff04a76d32eca9f866bb96d26cc7950e",
+    "nc_life_guide.pdf": "fdba2678d58cd7b6e919a60a325c52e02679c9f84b4ca14868b6f6c142061d5e",
+    "nc_renters_guide.pdf": "465217fddb8b6e5011cdb2c63e2565e2a264bf19fedb2fa6b872d8ed52641913",
+    "nc_travel_insurance_guide.pdf": "944c3a5612f08340a730c33451e5f50f94006d2ab8e53c2376b929e9970d7e89"
+  }
+}

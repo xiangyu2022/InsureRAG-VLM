@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "checks": {
+    "base_dev": {
+      "saved_rows": 48,
+      "rescore_matches": true,
+      "at_output_token_cap": 4
+    },
+    "adapter_dev": {
+      "saved_rows": 48,
+      "rescore_matches": true,
+      "at_output_token_cap": 0
+    },
+    "base_test": {
+      "saved_rows": 96,
+      "rescore_matches": true,
+      "at_output_token_cap": 5
+    },
+    "adapter_test": {
+      "saved_rows": 96,
+      "rescore_matches": true,
+      "at_output_token_cap": 0
+    },
+    "base_retrieved_context_test": {
+      "saved_rows": 62,
+      "rescore_matches": true,
+      "at_output_token_cap": 11
+    },
+    "adapter_retrieved_context_test": {
+      "saved_rows": 62,
+      "rescore_matches": true,
+      "at_output_token_cap": 4
+    }
+  },
+  "retrieved_context": {
+    "rows": 62,
+    "gold_in_top5": 34,
+    "gold_source_in_packed_context": 12,
+    "note": "Source presence alone does not prove the reference span survives truncation."
+  },
+  "note": "Confirms saved scores match final pure metric implementation; does not certify semantic label correctness."
+}

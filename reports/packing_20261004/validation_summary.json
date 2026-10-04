@@ -1,0 +1,10 @@
+{
+  "command": "python -m unittest discover -s tests -v",
+  "tests": 53,
+  "status": "passed",
+  "seconds": 74.232,
+  "environment": "CPU-only Python 3.12.10",
+  "log_sha256": "f42e2a0419713fd950bcfcf38db71992aa8b87da08a226d03f88e88e0c935f6e",
+  "local_gpu_models_not_required_for_unit_tests": true,
+  "tokenizer_fixture": "Qwen3.5-2B actual tokenizer; 3 source identifiers; 370 / 400 prompt tokens"
+}
