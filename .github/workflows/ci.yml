@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
+    branches: [main, experiment/qwen35-main-20261004]
 
 jobs:
   smoke-test:

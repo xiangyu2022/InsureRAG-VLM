@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "stages": [
+    {
+      "command": [
+        "python",
+        "main.py",
+        "build-index",
+        "reports/source_holdout_v1/local/offline_smoke/documents",
+        "--index-dir",
+        "reports/source_holdout_v1/local/offline_smoke/index",
+        "--corpus-source",
+        "documents"
+      ],
+      "exit_code": 0,
+      "seconds": 1.624767400091514
+    },
+    {
+      "command": [
+        "python",
+        "main.py",
+        "generate-qa",
+        "reports/source_holdout_v1/local/offline_smoke/documents",
+        "--output-dir",
+        "reports/source_holdout_v1/local/offline_smoke/index",
+        "--target-count",
+        "50"
+      ],
+      "exit_code": 0,
+      "seconds": 0.501256899908185
+    },
+    {
+      "command": [
+        "python",
+        "main.py",
+        "retrieval-metrics",
+        "reports/source_holdout_v1/local/offline_smoke/documents",
+        "reports/source_holdout_v1/local/offline_smoke/index/qa_pairs.jsonl",
+        "--index-dir",
+        "reports/source_holdout_v1/local/offline_smoke/index",
+        "--top-k",
+        "10",
+        "--corpus-source",
+        "documents"
+      ],
+      "exit_code": 0,
+      "seconds": 2.7664399999193847
+    },
+    {
+      "command": [
+        "python",
+        "main.py",
+        "query",
+        "reports/source_holdout_v1/local/offline_smoke/documents",
+        "What coverage limits or deductibles are described in the documents?",
+        "--index-dir",
+        "reports/source_holdout_v1/local/offline_smoke/index",
+        "--corpus-source",
+        "documents",
+        "--json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.40293790004216135
+    }
+  ],
+  "input_existing_public_snapshots": [
+    {
+      "repository_path": "data/benchmarks/research_v2/sources/wi_renters_pi017.pdf",
+      "sha256": "6e134771e51f2714bab95f3920747896cbb6c8f3b6213d746a1ce65bc655e5d2"
+    },
+    {
+      "repository_path": "data/benchmarks/research_v2/sources/wi_auto_pi057.pdf",
+      "sha256": "2bb9e72bc5483210bc353982118f9988dfee3f7724f61ff5a531596d26610a59"
+    }
+  ],
+  "artifacts": {
+    "qa_pairs.jsonl": {
+      "rows": 100,
+      "sha256": "0bb714741a14371860d9aef2c6f436c7dc5681afe40337a50c073307a1159c44"
+    },
+    "hard_negatives.jsonl": {
+      "rows": 150,
+      "sha256": "32c97df9ac24345e3a446d4ce01e1dd62e7c1262d9da6c9955b459deccebbbc7"
+    }
+  },
+  "backends": {
+    "retrieval": "local-hashing",
+    "generation": "local-extractive"
+  },
+  "external_api_keys_removed": true,
+  "downloads": false,
+  "training": false,
+  "meaning": "CLI execution and nonempty artifact check only. Generated QA smoke labels do not establish retrieval or answer quality."
+}

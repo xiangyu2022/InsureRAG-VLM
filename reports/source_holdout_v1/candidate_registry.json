@@ -1,0 +1,13 @@
+{
+  "registered_after_development_baseline": true,
+  "test_status": "sealed, unopened for model selection",
+  "baseline": {"query_alpha":0.5,"cross_weight":0.5,"lexical_weight":0.2},
+  "candidates": [
+    {"id":"cross_only","query_alpha":0.5,"cross_weight":1.0,"lexical_weight":0.2,"diagnosis":"Test whether the trained cross encoder alone generalizes to new publisher FAQs. Development primary fell to 0.5388889; rejected."},
+    {"id":"original_query","query_alpha":0.0,"cross_weight":0.5,"lexical_weight":0.2,"diagnosis":"Test query-adaptation transfer. Development primary tied baseline at 0.7296296; fails the required improvement."},
+    {"id":"cross_quarter","query_alpha":0.5,"cross_weight":0.25,"lexical_weight":0.2,"diagnosis":"Pure cross ranking substantially degraded new-source retention while removing query adaptation did not help. Test lower cross weight with identical cached candidates and scores; no added retrieval depth, context or gold injection."}
+  ],
+  "maximum_candidates":3,
+  "common_budget":{"dense_candidates":100,"positive_bm25_candidates":100,"unique_reranked_max":200,"output_top_k":10,"packing_top_k":5,"context_chars":8000,"page_chars":2400},
+  "answer_validation":"Existing guards remain unchanged for candidate selection. Diagnostic bug fixes must be replayed uniformly and identified separately; they do not establish primary retrieval gains."
+}

@@ -1,0 +1,40 @@
+{
+  "review_type": "Non-blinded agent source inspection; exploratory diagnosis, not independent expert adjudication or a semantic accuracy benchmark.",
+  "scope": "All development raw positive answers were inspected for failure patterns. The 12 served outputs (six questions, two arms) were compared directly with their served citation and publisher answer. Selected rejected cases were also inspected. No inference rules were changed.",
+  "development_baseline": {
+    "questions": 47,
+    "retrieval_incomplete_top5": 11,
+    "packing_lost_complete_evidence": 0,
+    "served_answers": 6,
+    "served_refusals": 41,
+    "specific_question_term_guard_rejections": 33,
+    "positive_raw_unknown_citation_cases_after_parser_correction": 0,
+    "truncated_generations": 0,
+    "numeric_repairs": 0
+  },
+  "mechanical_diagnostic_findings": [
+    {"id":"efe47914eddcb752605b","finding":"The raw answer describes an insurer unable to locate its policyholder; the broad cannot-find wording heuristic classifies this third-party statement as model abstention. This is a false-positive diagnostic, not proof that the answer should pass every other guard."},
+    {"ids":["82f8907700f33d8b3bc7","12537fb8f1f5b10d27d5","afdc4c85dd84b835089c","adf81374397437079f12","c32a884dbe672df04b8a"],"finding":"Five rejections have only question-framing tokens missing from the citation (aren, also, when, where, have). These are candidates for a separately designed validator study. They were not accepted by removing checks."},
+    {"id":"dc6e412cd8c2179cfb54","finding":"The numeric guard does not recognize a euro-denominated answer range. Currency handling requires unit-aware validation; no global numeric relaxation was made."},
+    {"id":"c0b74094bc6ad3fc8596","arm":"cross_quarter","finding":"The model emits a malformed final source identifier while the first citation is valid. The evaluation counts every emitted identifier; the serving path mainly checks the first chosen citation. Candidate positive citation-ID precision is 97/98."}
+  ],
+  "served_source_review": [
+    {"id":"a7dd81c5e2bd889ba200","arms":["baseline","cross_quarter"],"finding":"No obvious source contradiction found in the subsidy definition and excluded loading portion; source-relative inspection only."},
+    {"id":"11a0f554106d6913b1b3","arms":["baseline","cross_quarter"],"finding":"The levy purpose is consistent with the cited publisher passage; no independent verification of current law was performed."},
+    {"id":"69a5a022b5978321a223","arms":["baseline","cross_quarter"],"finding":"The six-month definition follows the Irish source, but the answer omits explicit jurisdiction and the source's medical-advice qualifier. Do not interpret it as a universal definition."},
+    {"id":"cc600f418932a954bb7e","arms":["baseline","cross_quarter"],"finding":"The answer strengthens a limited statement about automatic discounts into an unsupported frequency claim. A valid source ID and matching percentage do not establish the whole claim."},
+    {"id":"cc6cfd50658f19975cd7","arms":["baseline","cross_quarter"],"finding":"The main fixed-benefit versus actual-cost distinction is source-grounded. Baseline wording about a fixed number of nights is less precise than the source's per-night benefit; no semantic-perfect label assigned."},
+    {"id":"75abeee8e43aaa91b3fe","arm":"baseline","finding":"The answer preserves the requirement to check the individual's policy and lists source-supported outpatient examples."},
+    {"id":"75abeee8e43aaa91b3fe","arm":"cross_quarter","finding":"The served answer introduces US Medicare Part B and coinsurance into an Irish HIA answer. Those additions are not established by the served citation. This is a concrete cross-jurisdiction failure despite valid citation ID."}
+  ],
+  "raw_missing_context": {
+    "development_controls_per_arm": 47,
+    "baseline_invalid_id_cases": 40,
+    "candidate_invalid_id_cases": 38,
+    "served_refusals_per_arm": 47,
+    "finding":"Raw empty-context outputs include unsupported factual claims and invented IDs. Some mix an answer with a later refusal. Heuristic refusal counts are not strict semantic refusal accuracy.",
+    "fixed_seed_repeatability":{"identical_prompts":47,"identical_raw_outputs":13,"comparison":"Paired development empty controls across arms, same model options/seed; not an additional model run."}
+  },
+  "changes": "No serving guard was relaxed. A separate metadata-only source_scope_audit module was added with synthetic unit tests; it emits warnings, is not integrated into frozen inference, and has no claimed heldout benefit.",
+  "next_unvalidated_work": "Explicit user/source jurisdiction and authority metadata, independently designed nonempty missing-evidence controls, claim-level semantic verification, and a separate conservative validator-correction protocol. Do not tune these on this now-exposed holdout."
+}

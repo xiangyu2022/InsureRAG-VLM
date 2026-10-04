@@ -437,3 +437,9 @@ The [next experiments](docs/NEXT_EXPERIMENTS.md) define prospective tests for se
 verification, representative documents/scans, and a properly controlled 4B training study.
 
 Code license: [MIT](LICENSE). Public-source content retains its own terms.
+
+The [2026-10-04 source-heldout exploratory audit](docs/SOURCE_HOLDOUT_EVAL_ZH.md)
+adds frozen publisher splits, historical overlap checks and raw-versus-served
+diagnostics. No candidate was promoted: test publisher-macro retention rose while
+both arms retained 20/37 complete answers, its two-publisher interval crossed zero,
+and served answer coverage declined. It does not establish an end-to-end gain.
