@@ -74,6 +74,21 @@
         "action": "Hold the full affected TDI rental-car page pending full review; review credit-card coordination claims in related strata.",
         "publication": "Counterexample metadata only; bank source is not bulk-acquired or included in benchmark corpus."
       }
+    },
+    {
+      "local_record": "critical_source_findings_wisconsin02.json",
+      "sha256": "359375e14606f8de6956c3eb900c7b457cf9a205c2ffb9c21b42d8cdb62a0739",
+      "summary": {
+        "created_utc": "2026-10-04T17:42:07.788327+00:00",
+        "source_title": "Fact Sheet on Continuation Rights in Health Insurance Policies",
+        "source_url": "https://oci.wi.gov/Pages/Consumers/PI-023.aspx",
+        "issue": "FAQ combines COBRA election and initial payment into one60-day deadline. Federal rule separately prevents required initial payment earlier than45days after election. A legal-separation paragraph also says No but then appears to permit the very termination being denied; do not infer a missing negation.",
+        "verification_url": "https://www.ecfr.gov/current/title-26/chapter-I/subchapter-D/part-54/section-54.4980B-8",
+        "verification": "Q&A5(b), current eCFR displayed up to2026-10-01, states the separate45-day initial-payment minimum measured from election.",
+        "action": "Hold the complete affected continuation page until current-rule and text-consistency review; correct-looking questions do not bypass the hold.",
+        "reviewer_type": "Codex source consistency review, not expert/legal adjudication"
+      }
     }
-  ]
+  ],
+  "updated_utc": "2026-10-04T18:04:49.618644+00:00"
 }

@@ -56,3 +56,16 @@ The audit covers accessible project history, not foundation-model pretraining.
 Source prose can be obsolete or internally inconsistent even on official sites.
 Outstanding source conflicts, licensing uncertainty or review gaps are grounds
 to hold a candidate, not to lower the protocol targets.
+
+The stage4 review found substantive historical overlap below automatic
+similarity thresholds, including evidence contained inside a much longer
+historical record. A prior provisional item was revoked after checking that
+passage. Whole-record cosine and question similarity must be supplemented by
+passage containment and source-family review; zero flags do not prove novelty.
+Invisible format characters inside source words also require repaired display
+text and audits of both original and repaired evidence, while preserving raw
+source offsets. The historical normalization/cache has not silently changed.
+
+The original12-24hour construction estimate is superseded by the estimate in
+`protocol.json`. The current review queue alone is smaller than the test target;
+additional suitable sources and substantive information needs remain necessary.

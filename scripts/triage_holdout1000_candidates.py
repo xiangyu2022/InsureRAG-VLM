@@ -1,5 +1,5 @@
 """Create a deterministic conservative review queue, never accepted records."""
-import argparse,hashlib,json,re,sys
+import argparse,hashlib,json,re,sys,unicodedata
 from collections import Counter,defaultdict
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
@@ -89,6 +89,9 @@ def main():
             if r['publisher']=='us_va' and re.search(r'(?:call(?:ing)?(?: us)? at|fax the form to)\s*\.',r['answer'],re.I):reasons.append('custom_component_contact_value_missing')
             if r['publisher']=='texas_tdi' and title=='Do I need to buy insurance when I rent a car?':reasons.append('credit_card_secondary_coverage_overgeneralization_requires_full_page_review')
             if re.search(r'Want to share more feedback\?|Complete our 3-question survey',r['answer'],re.I):reasons.append('website_feedback_leaks_into_answer')
+            if r['publisher']=='wisconsin_oci' and title=='Fact Sheet on Continuation Rights in Health Insurance Policies':reasons.append('cobra_initial_payment_deadline_conflict_requires_full_page_review')
+            if r['publisher']=='us_tricare' and title=='Pharmacy Costs':reasons.append('pharmacy_population_and_table_boundary_review_required')
+            if any(unicodedata.category(c)=='Cf' for c in r['question']+r['answer']):reasons.append('invisible_format_chars_require_context_repair_and_dual_audit')
             if '\u00bf' in r['question'] or re.search(r'gu[i\u00ed]a del seguro|seguros de|seguro de auto',title,re.I):reasons.append('non_english_requires_validated_multilingual_contamination_audit')
             record={'id':r['id'],'publisher':r['publisher'],'split':splits.get(r['publisher']),
               'document_family':families.find(r['document_group']),'duplicate_component':component,'component_size':len(members),
