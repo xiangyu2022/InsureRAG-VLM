@@ -2,6 +2,7 @@
 # Preserve recorded SHA-256 identities across Windows and Linux checkouts.
 * -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 *.sh text eol=lf
+*.sbatch text eol=lf
 # Override host-level PDF text-conversion diff drivers.
 *.pdf binary
 *.png binary
@@ -12,3 +13,4 @@ data/**/upstream/README.md -whitespace
 docs/assets/*.svg -whitespace
 reports/**/*.log -whitespace
 reports/**/*.diff -whitespace
+reports/retrieval_eval/external_official/corpus/** -whitespace
