@@ -1,6 +1,6 @@
 import pytest
 from src.insurerag_vlm.evidence_evaluation import (
-    retrieval_metrics, packing_metrics, aggregate_by_publisher, abstention_metrics,
+    retrieval_metrics, packing_metrics, aggregate_by_publisher, abstention_metrics, citation_markers,
 )
 
 
@@ -49,3 +49,15 @@ def test_all_abstain_is_not_successful_answerable_coverage():
     assert result['abstention_recall']==1
     assert result['abstention_precision']==.5
     assert result['answerable_coverage']==0
+
+
+def test_citation_parser_keeps_unknown_ids_and_handles_repeated_source_labels():
+    result=citation_markers('A supported claim. SOURCE: known, SOURCE: invented\nSOURCE: third')
+    assert result['ids']==['known','invented','third']
+    assert result['sentinels']==[]
+
+
+def test_no_source_sentinel_is_not_a_valid_citation_or_proof_of_refusal():
+    result=citation_markers('An unsupported factual assertion. SOURCE: N/A')
+    assert result['ids']==[] and result['sentinels']==['N/A']
+    assert citation_markers('SOURCE: none, unknown')['ids']==['unknown']

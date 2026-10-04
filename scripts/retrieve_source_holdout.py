@@ -12,6 +12,15 @@ def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def read(path):return json.loads(path.read_text(encoding='utf8'))
 def write(path,data):path.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n',encoding='utf8')
 
+def verify_test_lock(arm):
+    path=ROOT/'reports/source_holdout_v1/selection.lock.json'
+    if not path.exists():raise ValueError('Test remains sealed until strategy lock')
+    lock=read(path)
+    if arm not in lock['frozen_test_comparators']:raise ValueError('Arm not registered before test opening')
+    for relative,digest in lock['inference_files_sha256'].items():
+        if sha(ROOT/relative)!=digest:raise ValueError('Frozen inference code changed: '+relative)
+    if sha(LOCAL/'sealed/test.json')!=lock['sealed_test_sha256']:raise ValueError('Sealed test changed')
+
 def retrieve(requests, output, arm, device):
     import numpy as np
     import torch
@@ -76,7 +85,7 @@ def retrieve(requests, output, arm, device):
         model=DomainCrossEncoder(crosspath,device)
         packer=DocumentRetrievalPipeline(ModelConfig(vlm_model='local-extractive',retrieval_model='local-hashing',max_context_chars=8000,max_page_chars=2400,max_answer_pages=5))
         index_seconds=time.perf_counter()-start
-        config={'pool':'union200','lexical_weight':.2,'cross_weight':1.0 if arm=='cross_only' else .5}
+        config={'pool':'union200','lexical_weight':.2,'cross_weight':{'cross_only':1.0,'cross_quarter':.25}.get(arm,.5)}
         byid={r['id']:r for r in answers}
         protocol={'started_utc':datetime.now(timezone.utc).isoformat(),'arm':arm,'device':device,'historical_answers':len(old),'new_answer_chunks':len(new),
                   'historical_answers_sha256':sha(oldfile),'historical_embeddings_sha256':manifest['answer_embeddings_sha256'],
@@ -111,12 +120,14 @@ def retrieve(requests, output, arm, device):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--split',choices=['dev','test'],required=True)
-    p.add_argument('--arm',choices=['baseline','original_query','cross_only'],default='baseline')
+    p.add_argument('--arm',choices=['baseline','original_query','cross_only','cross_quarter'],default='baseline')
+    p.add_argument('--run-suffix',default='',help='Distinct artifact directory for timing/parity reruns; never overwrite prior evidence')
     p.add_argument('--device',choices=['cpu','cuda'],default='cuda');args=p.parse_args()
-    if args.split=='test' and not (ROOT/'reports/source_holdout_v1/selection.lock.json').exists():raise ValueError('Test remains sealed until strategy lock')
+    if args.split=='test':verify_test_lock(args.arm)
     manifest=read(LOCAL/'sealed/manifest.json');path=LOCAL/'sealed'/(args.split+'.json')
     if sha(path)!=manifest['files_sha256'][path.name]:raise ValueError('Sealed split changed')
     cases=read(path);requests=[{'id':r['id'],'question':r['question']} for r in cases]
-    out=LOCAL/(args.split+'_'+args.arm);out.mkdir(exist_ok=False)
+    if args.run_suffix and not args.run_suffix.replace('_','').isalnum():raise ValueError('Run suffix must contain only letters, numbers or underscores')
+    out=LOCAL/(args.split+'_'+args.arm+('_'+args.run_suffix if args.run_suffix else ''));out.mkdir(exist_ok=False)
     retrieve(requests,out,args.arm,args.device)
 if __name__=='__main__':main()

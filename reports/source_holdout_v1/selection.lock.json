@@ -1,0 +1,64 @@
+{
+  "locked_utc": "2026-10-04T08:05:00.032192+00:00",
+  "decision": "NO PROMOTION; retain existing default strategy",
+  "frozen_test_comparators": [
+    "baseline",
+    "cross_quarter"
+  ],
+  "candidate_count": 3,
+  "no_more_tuning": true,
+  "test_purpose": "Exploratory transfer estimate for one frozen retrieval comparison, not validation of a deployable winner.",
+  "test_status_at_lock": "No test question/label inspection or inference for strategy selection; source ingestion and overlap audit were mechanical.",
+  "guardrail_interpretation": "Preregistration did not specify raw versus served scope for citation-ID validity. Conservatively require both; do not narrow scope after observing failures. Candidate also fails raw positive-only ID validity.",
+  "development_guardrails": {
+    "primary_gain_at_least_0_03": true,
+    "recall_at_10_drop_at_most_0_01": true,
+    "served_coverage_drop_at_most_0_02": true,
+    "served_missing_context_refusal_recall_at_least_0_95": true,
+    "raw_citation_id_precision_1_across_both_cohorts": false,
+    "raw_positive_citation_id_precision_1": false,
+    "served_citation_id_precision_1": true,
+    "retrieval_p95_at_most_1_5x": true,
+    "generation_p95_at_most_1_5x": true
+  },
+  "default_runtime_changes": false,
+  "new_training": false,
+  "development_primary": {
+    "baseline": 0.7296296296296297,
+    "cross_only": 0.5388888888888889,
+    "original_query": 0.7296296296296297,
+    "cross_quarter": 0.7824074074074074
+  },
+  "development_retrieval_timing_parity": {
+    "questions": 47,
+    "all_rankings_equal": true,
+    "all_contexts_equal": true,
+    "independent_p95_seconds": 0.188819454101588,
+    "retrieval_sha256": "a7390256116dfe3fa8755a6997e1c7d5edde5cd4ebc692d23434910c79d1e0b6"
+  },
+  "data_status": "EXPLORATORY: preregistered minimum source/question counts not met",
+  "sealed_test_sha256": "93c339c3c547a8200c065d2e5ba3f03eb0d8aa57190c30ebc8589654d2710d05",
+  "protocol_sha256": "7135de19e7b3254eb01e891e36d23b0d29f4310f6e847572065c7cd12e437dfd",
+  "split_manifest_sha256": "6851da5b0d811092848f814aecd140d73c20850332daec843f3b393fd7abfd04",
+  "candidate_registry_sha256": "23638a1691c2bb543d28d87293755b2ef9cff7b879eaa7f2758f7ab8726835ac",
+  "inference_files_sha256": {
+    "scripts/retrieve_source_holdout.py": "d8717c23cf43f2cc41b39b47687eada7b0fddf1ce53beae2272c7d91cd488f8f",
+    "scripts/generate_source_holdout.py": "4cfa1b1d9714fd95889f95d7a7d534683d63ee7d265632944cecdff4091569cb",
+    "scripts/eval_insuranceqa_reranker.py": "9281ace09aa6400a4183a7f72a49fab3899c644b4de05c46bc4b558e1036d83e",
+    "scripts/eval_insuranceqa_scale.py": "6dfaf4b82fc1c1771172fab6b9f948f7c187abc45685117a42ba7bf25757a872",
+    "src/insurerag_vlm/hybrid_pipeline.py": "bccfd0ef8d9d102bbde3910def0dc70cd9d4bae689aabaf5a28dbe2abfe37db3",
+    "src/insurerag_vlm/config.py": "87fda93c37bfdceba41bca82a9cbf5ee992298db457118260d1980de70a2e82f",
+    "src/insurerag_vlm/answer_safety.py": "9ebe7c835714443fbef208410acf1f0c91e838c945181eb7c1437599b0a9d103",
+    "src/insurerag_vlm/vlm.py": "109f2555cc767d4ef8119296d3edb54433abe1306157974c740a5b6637cada75",
+    "src/insurerag_vlm/domain_reranker.py": "7f1904228435358bfeb14483f5f599e961e5759f9d2c94f8faaa8368a049aeb5",
+    "src/insurerag_vlm/query_adaptation.py": "dcc7d325050dbf871808900b239119c01b24e4d92766c239cdd25ac888402180"
+  },
+  "development_evidence_sha256": {
+    "dev_baseline/summary.json": "9375e99cea89cfb1895742097bf27edd25570b633c9be595e51c98d8e801f112",
+    "dev_cross_only/summary.json": "6c27e355b34e60205ec1553cb0be65998c273a7c07aaef2efc7cbc9ca99dd757",
+    "dev_original_query/summary.json": "294449d5a21541c010580321b31ccc27c3e8db99958e02252ea5eb0c0c7fb5dc",
+    "dev_cross_quarter/summary.json": "0ec57f0c731d36c6f2078fac0c09ebbc0c15c1258efae44b84fce5ee9bfff6e1",
+    "dev_baseline/generation/summary.json": "9ad1a513cfc6d1cd75deabd486913cfedcf68194d88511fb40138370f7a4cb59",
+    "dev_cross_quarter/generation/summary.json": "b8001dc9a49340243e3f58dd3b01fd1860757116f517e4da503243e4397e181e"
+  }
+}

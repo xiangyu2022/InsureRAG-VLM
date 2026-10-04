@@ -19,8 +19,8 @@ def main():
         evidence=P._packed_source_evidence(row['context'],source or '')
         terms={t for t in P._support_terms(row['question'])-P._generic_terms() if len(t)>=4 and t not in broad}
         clean=re.sub(r'(?im)^\s*SOURCE:.*$','',row['raw_answer']).strip()
-        m=re.search(r'(?im)^\s*SOURCE:\s*(.*)$',row['raw_answer'])
-        identifiers=[t.strip(' .`*[]') for t in m.group(1).split(',')] if m else []
+        m=re.search(r'(?i)\bSOURCES?:\s*([^\n]*)',row['raw_answer'])
+        identifiers=[re.sub(r'(?i)^\s*SOURCES?:\s*','',t).strip(' .`*[]') for t in m.group(1).split(',')] if m else []
         known={p['source'] for p in pages}
         output.append({'id':row['id'],'publisher':case['publisher'],'question':row['question'],'raw_answer':row['raw_answer'],
                        'reference_answer':case['answer'],'cited_evidence':evidence,'cited_source':source,

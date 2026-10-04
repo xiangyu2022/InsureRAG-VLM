@@ -3,7 +3,7 @@ import argparse,json,sys,time
 from datetime import datetime,timezone
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
-from scripts.retrieve_source_holdout import LOCAL,read,write,sha
+from scripts.retrieve_source_holdout import LOCAL,read,write,sha,verify_test_lock
 from scripts.compare_qwen35_grounding import resources
 
 SYSTEM=('Answer the question using only the supplied public research evidence. '
@@ -22,7 +22,7 @@ def main():
     from src.insurerag_vlm.config import ModelConfig
     p=argparse.ArgumentParser();p.add_argument('--split',choices=['dev','test'],required=True)
     p.add_argument('--arm',required=True);p.add_argument('--base-url',default='http://127.0.0.1:11437');a=p.parse_args()
-    if a.split=='test' and not (ROOT/'reports/source_holdout_v1/selection.lock.json').exists():raise ValueError('Test sealed')
+    if a.split=='test':verify_test_lock(a.arm)
     run=LOCAL/(a.split+'_'+a.arm)
     completed=read(run/'completion.json')
     if sha(run/'retrieval.jsonl')!=completed['retrieval_sha256']:raise ValueError('Retrieval checksum changed')

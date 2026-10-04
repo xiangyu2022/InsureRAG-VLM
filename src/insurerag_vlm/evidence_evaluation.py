@@ -80,6 +80,23 @@ def token_f1(answer, reference):
     return 2 * match / (sum(a.values()) + sum(b.values())) if a and b else 0.0
 
 
+def citation_markers(answer):
+    """Parse emitted SOURCE fields, preserving unknown IDs for evaluation.
+
+    A no-source sentinel is recorded separately, never credited as a valid ID
+    or as proof that the surrounding answer actually abstained.
+    """
+    values = []
+    for match in re.finditer(r'(?im)\bsources?\s*:\s*([^\n]+)', answer):
+        for value in match.group(1).split(','):
+            value = re.sub(r'(?i)^\s*sources?\s*:\s*', '', value).strip(' .`*[]')
+            if value:
+                values.append(value)
+    sentinels = {'none', 'n/a', 'na', 'insufficient_evidence', 'no sources', 'no source'}
+    return {'ids': [v for v in values if v.casefold() not in sentinels],
+            'sentinels': [v for v in values if v.casefold() in sentinels]}
+
+
 def abstention_metrics(rows):
     """Positive class is evidence-absent; all-refuse exposes zero coverage."""
     if not rows: raise ValueError('Empty abstention denominator')
