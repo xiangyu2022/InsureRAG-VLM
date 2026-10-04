@@ -1,0 +1,66 @@
+{
+  "prior_sft_source_identifiers": 47,
+  "prior_cli_document_also_excluded": "nc_travel_insurance_guide.pdf",
+  "candidate_document_identifiers": 8,
+  "candidates": [
+    {
+      "source": "de_auto_insurance_guide.pdf",
+      "pages": 12,
+      "max_jaccard_to_prior_sft": 0.05542168674698795,
+      "max_shorter_span_containment": 0.20535714285714285,
+      "duplicate_or_shared_clause_flag": false
+    },
+    {
+      "source": "de_homeowners_guide.pdf",
+      "pages": 11,
+      "max_jaccard_to_prior_sft": 0.4223826714801444,
+      "max_shorter_span_containment": 1.0,
+      "duplicate_or_shared_clause_flag": true
+    },
+    {
+      "source": "insurance.delaware.gov/divisions/consumerhp/flood",
+      "pages": 1,
+      "max_jaccard_to_prior_sft": 0.002008032128514056,
+      "max_shorter_span_containment": 0.01694915254237288,
+      "duplicate_or_shared_clause_flag": false
+    },
+    {
+      "source": "md_college_bound_child_insurance_advisory.pdf",
+      "pages": 2,
+      "max_jaccard_to_prior_sft": 0.16163141993957703,
+      "max_shorter_span_containment": 0.9224137931034483,
+      "duplicate_or_shared_clause_flag": true
+    },
+    {
+      "source": "md_homeowners_still_important_advisory.pdf",
+      "pages": 2,
+      "max_jaccard_to_prior_sft": 0.16451612903225807,
+      "max_shorter_span_containment": 0.8793103448275862,
+      "duplicate_or_shared_clause_flag": true
+    },
+    {
+      "source": "md_insurance_coverage_tips_advisory.pdf",
+      "pages": 4,
+      "max_jaccard_to_prior_sft": 0.09523809523809523,
+      "max_shorter_span_containment": 0.449438202247191,
+      "duplicate_or_shared_clause_flag": false
+    },
+    {
+      "source": "md_licensed_drivers_household_advisory.pdf",
+      "pages": 2,
+      "max_jaccard_to_prior_sft": 0.2203023758099352,
+      "max_shorter_span_containment": 0.8793103448275862,
+      "duplicate_or_shared_clause_flag": true
+    },
+    {
+      "source": "md_uninsured_motorist_claims_advisory.pdf",
+      "pages": 2,
+      "max_jaccard_to_prior_sft": 0.2045889101338432,
+      "max_shorter_span_containment": 0.9224137931034483,
+      "duplicate_or_shared_clause_flag": true
+    }
+  ],
+  "unflagged_document_identifiers": 3,
+  "decision": "No new confirmatory holdout created. Candidate sources have no independent held-out answerability/reference labels; unflagged lexical similarity is not proof of publication-version independence. This stage reports dev and explicitly exposed-test regression only.",
+  "limitations": "This is a conservative source feasibility screen, not semantic duplicate detection. No new labels were generated or selected from observed test errors."
+}

@@ -1,0 +1,11 @@
+{
+  "question": "What should I check before buying travel insurance?",
+  "model": "official Qwen3.5-2B base",
+  "adapter": null,
+  "output": "Before buying travel insurance, you should pay special attention to the fine print and ensure you are buying the coverage you want. Additionally, you must verify that you have taken a cruise or planned a trip through a travel agency, as these are common scenarios where unexpected expenses resulting from cancellation or interruption are covered.\n\nSource: nc_travel_insurance_guide.pdf#page=2\n",
+  "source": "nc_travel_insurance_guide.pdf#page=2",
+  "source_excerpt": "Have you ever taken a cruise or planned a trip through a travel agency?",
+  "review": "The output turns a rhetorical example into a supposed prerequisite. The packed source does not establish that requirement.",
+  "review_origin": "Assistant qualitative review of this single observed case; not independent human annotation",
+  "input_tokens": 672
+}

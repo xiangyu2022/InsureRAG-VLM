@@ -7,6 +7,7 @@ from typing import Any, Dict, List, Optional, Set
 import numpy as np
 
 from .config import ModelConfig
+from .context_packing import pack_evidence
 from .data import PageDocument, load_documents
 from .evaluation import evaluate_predictions, load_evaluation_examples
 from .graph import build_document_graph, build_graph_adjacency, expand_candidate_page_keys
@@ -600,7 +601,7 @@ class DocumentRetrievalPipeline:
         understanding: QueryUnderstanding,
         top_k: Optional[int] = None,
     ) -> Dict[str, List[Dict[str, Any]]]:
-        target_k = max(top_k or self.config.max_retrievals, self.config.page_top_k)
+        target_k = self.config.page_top_k
         indices = self._ensure_indices(data_folder)
         mode = self.config.retrieval_mode
         ranked_lists: Dict[str, List[Dict[str, Any]]] = {}
@@ -647,7 +648,7 @@ class DocumentRetrievalPipeline:
         top_k: Optional[int] = None,
     ) -> List[Dict[str, Any]]:
         top_k = top_k or self.config.max_retrievals
-        candidate_pool = max(top_k, self.config.candidate_pool_size)
+        candidate_pool = self.config.candidate_pool_size
         understanding = understand_query(question)
         ranked_lists = self._retrieve_ranked_lists(question, data_folder, understanding, top_k=top_k)
         text_only_lists = {
@@ -742,7 +743,7 @@ class DocumentRetrievalPipeline:
         top_k: Optional[int] = None,
     ) -> List[Dict[str, Any]]:
         top_k = top_k or self.config.max_retrievals
-        candidate_pool = max(top_k, self.config.candidate_pool_size)
+        candidate_pool = self.config.candidate_pool_size
         understanding = understand_query(question)
         indices = self._ensure_indices(data_folder)
         ranked_lists = self._retrieve_ranked_lists(question, data_folder, understanding, top_k=top_k)
@@ -996,6 +997,27 @@ class DocumentRetrievalPipeline:
         ranked_pages: List[Dict[str, object]],
         answer_top_k: int,
         understanding: Optional[QueryUnderstanding] = None,
+        prompt_token_counter=None,
+        max_prompt_tokens: Optional[int] = None,
+        question: str = "",
+    ) -> str:
+        return self.pack_context_with_audit(ranked_pages, answer_top_k, understanding,
+                                            prompt_token_counter, max_prompt_tokens, question)["context"]
+
+    def pack_context_with_audit(self, ranked_pages, answer_top_k, understanding=None,
+                                prompt_token_counter=None, max_prompt_tokens=None, question=""):
+        return pack_evidence(ranked_pages, answer_top_k,
+                             max_chars=self.config.max_context_chars,
+                             max_page_chars=self.config.max_page_chars,
+                             prompt_token_counter=prompt_token_counter,
+                             max_prompt_tokens=max_prompt_tokens,
+                             prefer_tables=bool(understanding and understanding.needs_table_lookup), question=question)
+
+    def pack_long_context_legacy(
+        self,
+        ranked_pages: List[Dict[str, object]],
+        answer_top_k: int,
+        understanding: Optional[QueryUnderstanding] = None,
     ) -> str:
         understanding = understanding or QueryUnderstanding(
             intent="document_qa",
@@ -1071,7 +1093,7 @@ class DocumentRetrievalPipeline:
         image_scores = self.retrieve_image_candidates(question, data_folder, page_sources=page_sources)
         reranked = self.rerank_multimodal_candidates(question, merged_candidates, understanding=understanding, image_scores=image_scores)
         ranked_pages = self.rollup_candidates_to_pages(question, reranked, top_k=top_k)
-        combined_context = self.pack_long_context(ranked_pages, answer_top_k, understanding=understanding)
+        combined_context = self.pack_long_context(ranked_pages, answer_top_k, understanding=understanding, question=question)
         prompt = format_prompt(combined_context, question, self.config.prompt_template)
         answer = self.vlm_client.generate_extractive(prompt) if force_extractive else self.vlm_client.generate(prompt)
         return {

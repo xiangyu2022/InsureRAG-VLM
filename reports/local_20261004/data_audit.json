@@ -1,0 +1,230 @@
+{
+  "seed": 20261004,
+  "input_sha256": "db1efee513b1f67084d89beb14567ad6652f80c7fd42db05ce71d69c25605f5a",
+  "input_rows": 3850,
+  "original_documents": 47,
+  "connected_document_groups": 43,
+  "near_duplicate_evidence_pairs_at_0.85": 16,
+  "rejected": {
+    "topic_missing_from_evidence": 112,
+    "duplicate_question_evidence": 138
+  },
+  "counts_before_cap": {
+    "train": 1135,
+    "dev": 1724,
+    "test": 741
+  },
+  "document_split": {
+    "md_homeowners_insurance_guide.pdf": "dev",
+    "md_auto_insurance_guide.pdf": "dev",
+    "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-auto/autoterms.cfm": "dev",
+    "nc_homeowners_guide_archive.pdf": "test",
+    "https://www.tdi.texas.gov/pubs/consumer/cb020.html": "train",
+    "https://www.insurance.wa.gov/consumers-insurance-glossary": "test",
+    "https://www.myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview": "train",
+    "nc_disability_insurance_guide.pdf": "train",
+    "https://doi.sc.gov/957/Understanding-Your-Insurance-Policy": "train",
+    "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-auto/auto101.cfm": "dev",
+    "https://www.myfloridacfo.com/division/ica/fullcoverage/homeowners/policyendorsements": "train",
+    "https://insurance.maryland.gov/Consumer/Pages/Home-Understanding-Declarations.aspx": "train",
+    "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/choosing_a_policy": "test",
+    "https://www.doi.sc.gov/1019/Understanding-Your-Deductible": "train",
+    "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/basic_coverage": "train",
+    "md_homeowners_declarations_page.pdf": "train",
+    "https://content.naic.org/consumer_glossary": "dev",
+    "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/problems_obtaining_insurance": "train",
+    "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/20-Glossary/": "dev",
+    "https://www.tdi.texas.gov/pubs/consumer/cb025.html": "train",
+    "https://doi.sc.gov/618/Purchasing-Home-Insurance-Knowledge": "train",
+    "https://oci.wi.gov/Pages/Consumers/PI-219.aspx": "test",
+    "https://oci.wi.gov/Pages/Consumers/PI-232.aspx": "train",
+    "https://insurance.delaware.gov/wp-content/uploads/sites/15/2022/09/Homeowners-Guide.pdf": "test",
+    "https://www.insurance.wa.gov/what-homeowner-insurance": "test",
+    "https://doi.sc.gov/auto": "train",
+    "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/determining_how_much_insurance_you_need": "train",
+    "https://insurance.maryland.gov/Consumer/Pages/Auto-Understanding-Declarations.aspx": "train",
+    "https://doi.nebraska.gov/policy-forms-what-you-need-know": "train",
+    "https://www.tdi.texas.gov/tips/deductibles.html": "train",
+    "https://www.insurance.wa.gov/insurance-resources/home-insurance/home-insurance-claims/filing-homeowner-insurance-claim": "dev",
+    "https://doi.sc.gov/615/Types-of-Coverage-in-Homeowners-Insuranc": "train",
+    "md_homeowners_disclosure_notice.pdf": "test",
+    "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/how-renter-insurance-works": "dev",
+    "https://www.insurance.wa.gov/insurance-resources/auto-insurance/auto-insurance-claims/what-happens-after-your-car-gets-totaled": "train",
+    "https://doi.nebraska.gov/important-auto-insurance-and-types-coverage": "train",
+    "https://doi.nebraska.gov/types-coverages-and-their-limits": "train",
+    "https://www.tdi.texas.gov/tips/home-insurance-policies-replacement-cost-or-actual-cash-value.html": "test",
+    "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works": "train",
+    "https://oci.wi.gov/Pages/Consumers/PI-015.aspx": "dev",
+    "https://myfloridacfo.com/division/ica/fullcoverage/auto": "train",
+    "https://doi.nebraska.gov/shopping-auto-insurance-where-go": "train",
+    "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/lender-placed-insurance": "train",
+    "https://doi.nebraska.gov/common-homeowners-insurance-terms": "test",
+    "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/03-res/Residential_Insurance.cfm": "dev",
+    "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/leaks-water-damage-and-mold": "train",
+    "https://www.insurance.pa.gov/Coverage/homeowners/Documents/Homeowners%20Insurance%20Guide.pdf": "train"
+  },
+  "group_members": {
+    "https://content.naic.org/consumer_glossary": [
+      "https://content.naic.org/consumer_glossary"
+    ],
+    "https://doi.nebraska.gov/common-homeowners-insurance-terms": [
+      "https://doi.nebraska.gov/common-homeowners-insurance-terms"
+    ],
+    "https://doi.nebraska.gov/important-auto-insurance-and-types-coverage": [
+      "https://doi.nebraska.gov/important-auto-insurance-and-types-coverage"
+    ],
+    "https://doi.nebraska.gov/policy-forms-what-you-need-know": [
+      "https://doi.nebraska.gov/policy-forms-what-you-need-know"
+    ],
+    "https://doi.nebraska.gov/shopping-auto-insurance-where-go": [
+      "https://doi.nebraska.gov/shopping-auto-insurance-where-go"
+    ],
+    "https://doi.nebraska.gov/types-coverages-and-their-limits": [
+      "https://doi.nebraska.gov/types-coverages-and-their-limits"
+    ],
+    "https://doi.sc.gov/615/Types-of-Coverage-in-Homeowners-Insuranc": [
+      "https://doi.sc.gov/615/Types-of-Coverage-in-Homeowners-Insuranc"
+    ],
+    "https://doi.sc.gov/618/Purchasing-Home-Insurance-Knowledge": [
+      "https://doi.sc.gov/618/Purchasing-Home-Insurance-Knowledge"
+    ],
+    "https://doi.sc.gov/957/Understanding-Your-Insurance-Policy": [
+      "https://doi.sc.gov/957/Understanding-Your-Insurance-Policy"
+    ],
+    "https://doi.sc.gov/auto": [
+      "https://doi.sc.gov/auto"
+    ],
+    "https://insurance.delaware.gov/wp-content/uploads/sites/15/2022/09/Homeowners-Guide.pdf": [
+      "https://insurance.delaware.gov/wp-content/uploads/sites/15/2022/09/Homeowners-Guide.pdf"
+    ],
+    "https://insurance.maryland.gov/Consumer/Pages/Auto-Understanding-Declarations.aspx": [
+      "https://insurance.maryland.gov/Consumer/Pages/Auto-Understanding-Declarations.aspx"
+    ],
+    "https://insurance.maryland.gov/Consumer/Pages/Home-Understanding-Declarations.aspx": [
+      "https://insurance.maryland.gov/Consumer/Pages/Home-Understanding-Declarations.aspx"
+    ],
+    "https://myfloridacfo.com/division/ica/fullcoverage/auto": [
+      "https://myfloridacfo.com/division/ica/fullcoverage/auto"
+    ],
+    "https://oci.wi.gov/Pages/Consumers/PI-015.aspx": [
+      "https://oci.wi.gov/Pages/Consumers/PI-015.aspx"
+    ],
+    "https://oci.wi.gov/Pages/Consumers/PI-219.aspx": [
+      "https://oci.wi.gov/Pages/Consumers/PI-219.aspx"
+    ],
+    "https://oci.wi.gov/Pages/Consumers/PI-232.aspx": [
+      "https://oci.wi.gov/Pages/Consumers/PI-232.aspx"
+    ],
+    "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/basic_coverage": [
+      "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/basic_coverage"
+    ],
+    "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/choosing_a_policy": [
+      "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/choosing_a_policy"
+    ],
+    "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/determining_how_much_insurance_you_need": [
+      "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/determining_how_much_insurance_you_need"
+    ],
+    "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/problems_obtaining_insurance": [
+      "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/problems_obtaining_insurance"
+    ],
+    "https://www.doi.sc.gov/1019/Understanding-Your-Deductible": [
+      "https://www.doi.sc.gov/1019/Understanding-Your-Deductible"
+    ],
+    "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-auto/auto101.cfm": [
+      "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-auto/auto101.cfm",
+      "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/01-auto/autoterms.cfm",
+      "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/03-res/Residential_Insurance.cfm",
+      "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/20-Glossary/"
+    ],
+    "https://www.insurance.pa.gov/Coverage/homeowners/Documents/Homeowners%20Insurance%20Guide.pdf": [
+      "https://www.insurance.pa.gov/Coverage/homeowners/Documents/Homeowners%20Insurance%20Guide.pdf"
+    ],
+    "https://www.insurance.wa.gov/consumers-insurance-glossary": [
+      "https://www.insurance.wa.gov/consumers-insurance-glossary"
+    ],
+    "https://www.insurance.wa.gov/insurance-resources/auto-insurance/auto-insurance-claims/what-happens-after-your-car-gets-totaled": [
+      "https://www.insurance.wa.gov/insurance-resources/auto-insurance/auto-insurance-claims/what-happens-after-your-car-gets-totaled"
+    ],
+    "https://www.insurance.wa.gov/insurance-resources/home-insurance/home-insurance-claims/filing-homeowner-insurance-claim": [
+      "https://www.insurance.wa.gov/insurance-resources/home-insurance/home-insurance-claims/filing-homeowner-insurance-claim"
+    ],
+    "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works": [
+      "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works"
+    ],
+    "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/how-renter-insurance-works": [
+      "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/how-renter-insurance-works"
+    ],
+    "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/leaks-water-damage-and-mold": [
+      "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/leaks-water-damage-and-mold"
+    ],
+    "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/lender-placed-insurance": [
+      "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/lender-placed-insurance"
+    ],
+    "https://www.insurance.wa.gov/what-homeowner-insurance": [
+      "https://www.insurance.wa.gov/what-homeowner-insurance"
+    ],
+    "https://www.myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview": [
+      "https://www.myfloridacfo.com/division/consumers/understanding-insurance/homeownersinsuranceoverview"
+    ],
+    "https://www.myfloridacfo.com/division/ica/fullcoverage/homeowners/policyendorsements": [
+      "https://www.myfloridacfo.com/division/ica/fullcoverage/homeowners/policyendorsements"
+    ],
+    "https://www.tdi.texas.gov/pubs/consumer/cb020.html": [
+      "https://www.tdi.texas.gov/pubs/consumer/cb020.html"
+    ],
+    "https://www.tdi.texas.gov/pubs/consumer/cb025.html": [
+      "https://www.tdi.texas.gov/pubs/consumer/cb025.html"
+    ],
+    "https://www.tdi.texas.gov/tips/deductibles.html": [
+      "https://www.tdi.texas.gov/tips/deductibles.html"
+    ],
+    "https://www.tdi.texas.gov/tips/home-insurance-policies-replacement-cost-or-actual-cash-value.html": [
+      "https://www.tdi.texas.gov/tips/home-insurance-policies-replacement-cost-or-actual-cash-value.html"
+    ],
+    "md_auto_insurance_guide.pdf": [
+      "md_auto_insurance_guide.pdf",
+      "md_homeowners_insurance_guide.pdf"
+    ],
+    "md_homeowners_declarations_page.pdf": [
+      "md_homeowners_declarations_page.pdf"
+    ],
+    "md_homeowners_disclosure_notice.pdf": [
+      "md_homeowners_disclosure_notice.pdf"
+    ],
+    "nc_disability_insurance_guide.pdf": [
+      "nc_disability_insurance_guide.pdf"
+    ],
+    "nc_homeowners_guide_archive.pdf": [
+      "nc_homeowners_guide_archive.pdf"
+    ]
+  },
+  "splits": {
+    "train": {
+      "rows": 600,
+      "answerable": 480,
+      "unsupported": 120,
+      "documents": 28,
+      "sha256": "5e3551a18ec8099efa16e0afcaa864e35705087d4fd0cd13f8bdf4602295fb0a"
+    },
+    "dev": {
+      "rows": 48,
+      "answerable": 25,
+      "unsupported": 23,
+      "documents": 9,
+      "sha256": "798f483f1c118b27edea456bf43f05e65ac240ddc3f61032c0dd8e4119a655cd"
+    },
+    "test": {
+      "rows": 96,
+      "answerable": 62,
+      "unsupported": 34,
+      "documents": 9,
+      "sha256": "bc5da7be9cc5b952fbb012dde5fe80a73e150bf421bd8d6eed1eb03f5930a3fc"
+    }
+  },
+  "scope": "Public real-source evidence; synthetic question/reference and unsupported labels. Not a human benchmark.",
+  "remaining_limitations": [
+    "Semantic duplicates below lexical Jaccard threshold may remain.",
+    "Topic and unsupported labels are heuristic, not independently verified.",
+    "Questions can share templates across documents; supplied evidence disambiguates them."
+  ]
+}

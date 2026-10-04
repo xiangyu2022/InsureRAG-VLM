@@ -1,0 +1,43 @@
+{
+  "encoder": "local-hashing",
+  "trained_bge_rerun": false,
+  "scope": "document-scoped synthetic queries; existing positives only",
+  "ranking_budget": {
+    "snippets": 24,
+    "pages": 12,
+    "merged_candidates": 40
+  },
+  "corpus_hashes": {
+    "rag_corpus.jsonl": "1379e4ec4fbee038ac7e4946114a7420bb5ccb05af489b7a1e993d4a2557373e",
+    "rag_pages.jsonl": "cd89222cbe79add5ac72a8f695ba15d42011f94206dc934b76c6436ce19c2b33",
+    "rag_snippets.jsonl": "5d844f3ddc63aefb954ded0ca073027e22942c39fa1ab48cf9d707cabd365cbd"
+  },
+  "splits": {
+    "dev": {
+      "queries": 23,
+      "recall_at_1": 0.2608695652173913,
+      "recall_at_5": 0.4782608695652174,
+      "hit_at_5": 0.4782608695652174,
+      "mrr_at_10": 0.38229813664596274,
+      "ndcg_at_10": 0.4638811149782901,
+      "mean_seconds": 0.13098450431235784,
+      "serving_prefix_check": "passed"
+    },
+    "test": {
+      "queries": 43,
+      "recall_at_1": 0.06976744186046512,
+      "recall_at_5": 0.45348837209302323,
+      "hit_at_5": 0.46511627906976744,
+      "mrr_at_10": 0.2183093392395718,
+      "ndcg_at_10": 0.30384216717939394,
+      "mean_seconds": 0.11428542093503787,
+      "serving_prefix_check": "passed"
+    }
+  },
+  "retrieved_context_diagnostic": {
+    "rows": 62,
+    "gold_in_top5": 34,
+    "unsupported_rows_excluded": true,
+    "gold_source_not_provided_in_prompt": true
+  }
+}

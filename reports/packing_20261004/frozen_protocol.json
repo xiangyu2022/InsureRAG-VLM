@@ -1,0 +1,188 @@
+{
+  "utc": "2026-10-04T02:20:30.308332+00:00",
+  "scope": "EXPLORATORY regression on previously observed test rows; no new independent holdout",
+  "decision": "Freeze rank-preserving, per-source bounded packing with query-only fragment selection after dev engineering checks. Do not change model checkpoints or tune on exposed test.",
+  "source_hashes": {
+    "src/insurerag_vlm/context_packing.py": "927af11397adce0b85f00237dffdb176242d9d1c1c3af8c366f4b36de38d837d",
+    "src/insurerag_vlm/hybrid_pipeline.py": "43501ebc1d2c319b326932fa50384156032646c51024aecb29b47e0a8e33731a",
+    "src/insurerag_vlm/local_answer_metrics.py": "dce23d2f8580056e9da23fa6f0d7dd9ae66c5fd262b1e5129a8a09bf60df31e0",
+    "scripts/prepare_packing_experiment.py": "980fd4394d50619a373abc3637d8a8bb71e25e571097bbd4bc0ec5474bee31d4",
+    "scripts/run_packing_evaluation.py": "796498ea37dea48a5d1083a7c841d795f72f6e8811acb91b9107d1bca203abc6",
+    "scripts/run_local_lora_experiment.py": "a3b1e959d544e968fa90ed345fbe7edb9a38be92abbaa45a095807ea731f69d7"
+  },
+  "dev_metrics_at_freeze": {
+    "base_dev_legacy_metrics.json": {
+      "n": 25,
+      "n_answerable": 25,
+      "n_unsupported": 0,
+      "answerable_content_f1": 0.14217317762191736,
+      "citation_precision_exact_source": 0.11764705882352941,
+      "answerable_citation_rate": 0.08,
+      "answerable_lexical_support_proxy": 0.0,
+      "abstention_precision": 0.0,
+      "abstention_recall": 0.0,
+      "abstention_counts": {
+        "tp": 0,
+        "fp": 19,
+        "fn": 0
+      },
+      "latency_p50_seconds": 3.8359447000548244,
+      "latency_p95_seconds": 4.90231874003075,
+      "generated_tokens": 2157
+    },
+    "base_dev_balanced_metrics.json": {
+      "n": 25,
+      "n_answerable": 25,
+      "n_unsupported": 0,
+      "answerable_content_f1": 0.1524030030205076,
+      "citation_precision_exact_source": 0.2727272727272727,
+      "answerable_citation_rate": 0.12,
+      "answerable_lexical_support_proxy": 0.0,
+      "abstention_precision": 0.0,
+      "abstention_recall": 0.0,
+      "abstention_counts": {
+        "tp": 0,
+        "fp": 17,
+        "fn": 0
+      },
+      "latency_p50_seconds": 5.035116999875754,
+      "latency_p95_seconds": 6.073223780049011,
+      "generated_tokens": 2468
+    },
+    "adapter_dev_legacy_metrics.json": {
+      "n": 25,
+      "n_answerable": 25,
+      "n_unsupported": 0,
+      "answerable_content_f1": 0.0347270464061306,
+      "citation_precision_exact_source": 0.4166666666666667,
+      "answerable_citation_rate": 0.2,
+      "answerable_lexical_support_proxy": 0.2,
+      "abstention_precision": 0.0,
+      "abstention_recall": 0.0,
+      "abstention_counts": {
+        "tp": 0,
+        "fp": 13,
+        "fn": 0
+      },
+      "latency_p50_seconds": 1.0342628001235425,
+      "latency_p95_seconds": 5.208395439898593,
+      "generated_tokens": 831
+    },
+    "adapter_dev_balanced_metrics.json": {
+      "n": 25,
+      "n_answerable": 25,
+      "n_unsupported": 0,
+      "answerable_content_f1": 0.10125246454431436,
+      "citation_precision_exact_source": 0.7692307692307693,
+      "answerable_citation_rate": 0.4,
+      "answerable_lexical_support_proxy": 0.4,
+      "abstention_precision": 0.0,
+      "abstention_recall": 0.0,
+      "abstention_counts": {
+        "tp": 0,
+        "fp": 11,
+        "fn": 0
+      },
+      "latency_p50_seconds": 2.5814088999759406,
+      "latency_p95_seconds": 5.016842040047049,
+      "generated_tokens": 1063
+    }
+  },
+  "test_input_sha256": "bc5da7be9cc5b952fbb012dde5fe80a73e150bf421bd8d6eed1eb03f5930a3fc",
+  "dev_context_hashes": {
+    "dev_legacy.jsonl": "978cc63fc3dea9c04df88948648cb8fe97cbe802ea09b04458fc87fa8c8a50cd",
+    "dev_balanced.jsonl": "a2f4ee502565107f6345bc4cae010da0064ba2bc8e24da956f2fd63802fb7c56"
+  },
+  "checkpoint_sha256": "09f09cedc638e3748c4c5705cfaa8a799626a977e8068d1cac6547ed7e7ee8a4",
+  "config": {
+    "retrieval_top_k": 5,
+    "answer_pages": 3,
+    "max_context_chars": 3200,
+    "max_page_chars": 900,
+    "max_prompt_tokens": 2048,
+    "max_new_tokens": 128,
+    "decode": "greedy, thinking disabled",
+    "model_selection": "none",
+    "training": "none"
+  },
+  "query_scope": "Same document-scoped queries as the first experiment; no gold page/answer/span supplied to packing.",
+  "measurements": [
+    "source retention and exact reference-span retention (proxies)",
+    "content F1 on all original 62 positives, no topic-based filtering",
+    "exact gold-source citation",
+    "citation resolves to packed source",
+    "lexical support proxy",
+    "no negative context labels inferred from reference absence"
+  ],
+  "not_measured": [
+    "semantic entailment",
+    "human correctness",
+    "context-level abstention precision/recall"
+  ],
+  "holdout_audit": {
+    "prior_sft_source_identifiers": 47,
+    "prior_cli_document_also_excluded": "nc_travel_insurance_guide.pdf",
+    "candidate_document_identifiers": 8,
+    "candidates": [
+      {
+        "source": "de_auto_insurance_guide.pdf",
+        "pages": 12,
+        "max_jaccard_to_prior_sft": 0.05542168674698795,
+        "max_shorter_span_containment": 0.20535714285714285,
+        "duplicate_or_shared_clause_flag": false
+      },
+      {
+        "source": "de_homeowners_guide.pdf",
+        "pages": 11,
+        "max_jaccard_to_prior_sft": 0.4223826714801444,
+        "max_shorter_span_containment": 1.0,
+        "duplicate_or_shared_clause_flag": true
+      },
+      {
+        "source": "insurance.delaware.gov/divisions/consumerhp/flood",
+        "pages": 1,
+        "max_jaccard_to_prior_sft": 0.002008032128514056,
+        "max_shorter_span_containment": 0.01694915254237288,
+        "duplicate_or_shared_clause_flag": false
+      },
+      {
+        "source": "md_college_bound_child_insurance_advisory.pdf",
+        "pages": 2,
+        "max_jaccard_to_prior_sft": 0.16163141993957703,
+        "max_shorter_span_containment": 0.9224137931034483,
+        "duplicate_or_shared_clause_flag": true
+      },
+      {
+        "source": "md_homeowners_still_important_advisory.pdf",
+        "pages": 2,
+        "max_jaccard_to_prior_sft": 0.16451612903225807,
+        "max_shorter_span_containment": 0.8793103448275862,
+        "duplicate_or_shared_clause_flag": true
+      },
+      {
+        "source": "md_insurance_coverage_tips_advisory.pdf",
+        "pages": 4,
+        "max_jaccard_to_prior_sft": 0.09523809523809523,
+        "max_shorter_span_containment": 0.449438202247191,
+        "duplicate_or_shared_clause_flag": false
+      },
+      {
+        "source": "md_licensed_drivers_household_advisory.pdf",
+        "pages": 2,
+        "max_jaccard_to_prior_sft": 0.2203023758099352,
+        "max_shorter_span_containment": 0.8793103448275862,
+        "duplicate_or_shared_clause_flag": true
+      },
+      {
+        "source": "md_uninsured_motorist_claims_advisory.pdf",
+        "pages": 2,
+        "max_jaccard_to_prior_sft": 0.2045889101338432,
+        "max_shorter_span_containment": 0.9224137931034483,
+        "duplicate_or_shared_clause_flag": true
+      }
+    ],
+    "unflagged_document_identifiers": 3,
+    "decision": "No new confirmatory holdout created. Candidate sources have no independent held-out answerability/reference labels; unflagged lexical similarity is not proof of publication-version independence. This stage reports dev and explicitly exposed-test regression only.",
+    "limitations": "This is a conservative source feasibility screen, not semantic duplicate detection. No new labels were generated or selected from observed test errors."
+  }
+}

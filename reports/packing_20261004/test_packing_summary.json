@@ -1,0 +1,26 @@
+{
+  "legacy": {
+    "rows": 62,
+    "gold_in_top5": 34,
+    "gold_source_in_context": 12,
+    "reference_span_in_context": 0,
+    "max_prompt_tokens": 887,
+    "sha256": "9c0fd7e0acf73fc6839ce1a069c3c713f82d5579b6c0934608af31ff1f09caae"
+  },
+  "balanced": {
+    "rows": 62,
+    "gold_in_top5": 34,
+    "gold_source_in_context": 20,
+    "reference_span_in_context": 6,
+    "max_prompt_tokens": 829,
+    "sha256": "dcdb590dc37eee7bf4ca42dab7e68bcb8500e673cbce3f67d13de1f5e92b4ab4"
+  },
+  "actual_tokenizer_fixture": {
+    "prompt_tokens": 370,
+    "sources": [
+      "packet/0/policy.pdf#page=17",
+      "packet/1/policy.pdf#page=17",
+      "packet/2/policy.pdf#page=17"
+    ]
+  }
+}

@@ -438,7 +438,10 @@ def visual_search(
     index_dir: Path,
     backend: str = "visual_stub",
     top_k: int = 5,
+    candidate_pool_size: int = 40,
 ) -> List[Dict[str, Any]]:
+    if top_k < 1 or candidate_pool_size < top_k:
+        raise ValueError("Require 1 <= top_k <= candidate_pool_size; set one fixed candidate budget for serving and evaluation.")
     if backend in HF_VISUAL_BACKENDS:
         return _hf_visual_search(query, Path(index_dir), backend, top_k)
 
@@ -459,7 +462,8 @@ def visual_search(
     similarities = (index @ query_embedding) / (
         np.linalg.norm(index, axis=1) * np.linalg.norm(query_embedding) + 1e-10
     )
-    candidate_pool = min(len(similarities), max(top_k, top_k * 4, 20))
+    # Output depth must not change the candidates being reranked.
+    candidate_pool = min(len(similarities), candidate_pool_size)
     top_indices = np.argsort(-similarities, kind="stable")[:candidate_pool]
 
     ranked_pages = []

@@ -1,0 +1,162 @@
+{
+  "status": "passed_under_frozen_criteria",
+  "split_integrity": {
+    "train": {
+      "rows": 600,
+      "integrity": "passed"
+    },
+    "dev": {
+      "rows": 48,
+      "integrity": "passed"
+    },
+    "test": {
+      "rows": 96,
+      "integrity": "passed"
+    }
+  },
+  "pair_checks": {
+    "train/dev": {
+      "forbidden_overlap": 0,
+      "shared_question_templates": 25
+    },
+    "train/test": {
+      "forbidden_overlap": 0,
+      "shared_question_templates": 33
+    },
+    "dev/test": {
+      "forbidden_overlap": 0,
+      "shared_question_templates": 17
+    }
+  },
+  "canonical_alias_crossings": [],
+  "cross_split_jaccard_at_least_0_85": 0,
+  "cross_split_shorter_span_containment_at_least_0_8": 0,
+  "highest_cross_split_similarities": [
+    {
+      "documents": [
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/home-insurance-claims/filing-homeowner-insurance-claim",
+        "https://www.insurance.wa.gov/consumers-insurance-glossary"
+      ],
+      "splits": [
+        "dev",
+        "test"
+      ],
+      "jaccard": 0.5083798882681564,
+      "shorter_span_containment": 0.7647058823529411
+    },
+    {
+      "documents": [
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/leaks-water-damage-and-mold",
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/home-insurance-claims/filing-homeowner-insurance-claim"
+      ],
+      "splits": [
+        "train",
+        "dev"
+      ],
+      "jaccard": 0.24719101123595505,
+      "shorter_span_containment": 0.4444444444444444
+    },
+    {
+      "documents": [
+        "md_homeowners_insurance_guide.pdf",
+        "nc_homeowners_guide_archive.pdf"
+      ],
+      "splits": [
+        "dev",
+        "test"
+      ],
+      "jaccard": 0.23979591836734693,
+      "shorter_span_containment": 0.4051724137931034
+    },
+    {
+      "documents": [
+        "https://www.insurance.wa.gov/insurance-resources/auto-insurance/auto-insurance-claims/what-happens-after-your-car-gets-totaled",
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/home-insurance-claims/filing-homeowner-insurance-claim"
+      ],
+      "splits": [
+        "train",
+        "dev"
+      ],
+      "jaccard": 0.20481927710843373,
+      "shorter_span_containment": 0.44155844155844154
+    },
+    {
+      "documents": [
+        "nc_homeowners_guide_archive.pdf",
+        "md_homeowners_insurance_guide.pdf"
+      ],
+      "splits": [
+        "test",
+        "dev"
+      ],
+      "jaccard": 0.18723404255319148,
+      "shorter_span_containment": 0.36065573770491804
+    },
+    {
+      "documents": [
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/home-insurance-claims/filing-homeowner-insurance-claim",
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works"
+      ],
+      "splits": [
+        "dev",
+        "train"
+      ],
+      "jaccard": 0.18681318681318682,
+      "shorter_span_containment": 0.35789473684210527
+    },
+    {
+      "documents": [
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/lender-placed-insurance",
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/home-insurance-claims/filing-homeowner-insurance-claim"
+      ],
+      "splits": [
+        "train",
+        "dev"
+      ],
+      "jaccard": 0.17708333333333334,
+      "shorter_span_containment": 0.3300970873786408
+    },
+    {
+      "documents": [
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/leaks-water-damage-and-mold",
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/home-insurance-claims/filing-homeowner-insurance-claim"
+      ],
+      "splits": [
+        "train",
+        "dev"
+      ],
+      "jaccard": 0.17575757575757575,
+      "shorter_span_containment": 0.30526315789473685
+    },
+    {
+      "documents": [
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/home-insurance-claims/filing-homeowner-insurance-claim",
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/lender-placed-insurance"
+      ],
+      "splits": [
+        "dev",
+        "train"
+      ],
+      "jaccard": 0.17159763313609466,
+      "shorter_span_containment": 0.30526315789473685
+    },
+    {
+      "documents": [
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/how-renter-insurance-works",
+        "https://www.insurance.wa.gov/insurance-resources/home-insurance/how-home-insurance-works/leaks-water-damage-and-mold"
+      ],
+      "splits": [
+        "dev",
+        "train"
+      ],
+      "jaccard": 0.16477272727272727,
+      "shorter_span_containment": 0.29292929292929293
+    }
+  ],
+  "containment_examples": [],
+  "limitations": [
+    "Canonical keys only cover URL scheme/www/query/fragment/case aliases; unrelated publication-version names are not proof of independent documents.",
+    "Shared question templates and shorter copied clauses can remain across document groups.",
+    "No semantic duplicate oracle or pretrained-model contamination audit was performed."
+  ]
+}
