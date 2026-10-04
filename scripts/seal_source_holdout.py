@@ -1,5 +1,5 @@
 """Freeze audited source groups and labels before development inference."""
-import hashlib,json,sys
+import argparse,hashlib,json,sys
 from collections import Counter
 from datetime import datetime,timezone
 from pathlib import Path
@@ -12,13 +12,20 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def key(s):return hashlib.sha256(s.encode()).hexdigest()
 def write(path,data):path.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n',encoding='utf8')
 
+def validate_history_audit(audit,history_dir):
+    inventory=json.loads((history_dir/'historical_inventory.json').read_text(encoding='utf8'))
+    if inventory['failures']:raise ValueError('Historical scan incomplete')
+    if audit['historical_file_sha256']!=sha(history_dir/'historical_texts.jsonl'):
+        raise ValueError('Historical strings differ from the audited input')
+    return inventory
+
 def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--history-dir',type=Path,default=LOCAL);args=parser.parse_args()
     target=LOCAL/'sealed'
-    target.mkdir(exist_ok=False)
+    if target.exists():raise ValueError('Sealed artifacts already exist; never overwrite a frozen split')
     audit=json.loads((LOCAL/'overlap_audit.json').read_text(encoding='utf8'))
     if audit['candidate_file_sha256']!=sha(LOCAL/'extracted_pairs.json'):raise ValueError('Audited pairs changed')
-    inventory=json.loads((LOCAL/'historical_inventory.json').read_text(encoding='utf8'))
-    if inventory['failures']:raise ValueError('Historical scan incomplete')
+    inventory=validate_history_audit(audit,args.history_dir)
     all_pairs=json.loads((LOCAL/'extracted_pairs.json').read_text(encoding='utf8'))
     excluded={r['id'] for r in audit['rows'] if r['excluded']}
     domains={'ccpc_ireland':['ccpc.ie'],'hia_ireland':['hia.ie'],
@@ -39,6 +46,7 @@ def main():
         cases[row['id']]={**row,'gold_answer_ids':gold,'label_kind':'publisher_heading_adjacent_answer',
                            'expert_adjudicated':False}
     split_cases={}
+    target.mkdir(exist_ok=False)
     for split in ['dev','test']:
         selected=[]
         for group in groups:
@@ -64,6 +72,9 @@ def main():
               'fixed_denominators':True,'selection_test_status':'sealed; no test inference or per-question inspection permitted until selection lock',
               'files_sha256':{p.name:sha(p) for p in target.glob('*.json')},
               'overlap_audit_sha256':sha(LOCAL/'overlap_audit.json'),'preregistration_sha256':sha(ROOT/'reports/source_holdout_v1/preregistration.json'),
+              'historical_inventory_sha256':sha(args.history_dir/'historical_inventory.json'),
+              'historical_strings_sha256':audit['historical_file_sha256'],
+              'historical_inventory_exclusions':inventory.get('exclusions',[]),
               'prepare_script_sha256':sha(ROOT/'scripts/prepare_source_faq.py'),'seal_script_sha256':sha(Path(__file__)),
               'limitations':['Original FAQ questions can omit document/jurisdiction context; other source answers may be semantically valid but unlabeled.',
                              'Full publisher-answer retention is stricter than sufficient semantic evidence and is not answer correctness.',

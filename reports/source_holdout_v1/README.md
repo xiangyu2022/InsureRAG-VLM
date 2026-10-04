@@ -21,6 +21,8 @@ was not met. See the [full Chinese report](../../docs/SOURCE_HOLDOUT_EVAL_ZH.md)
   complete evidence, packing losses, raw/served metrics and publisher-cluster CIs.
 - `diagnosis.json`: explicitly non-blinded source inspection, not expert labels.
 - `offline_smoke.json`: no-key CLI execution on existing public PDF snapshots.
+- `post_release_review.json`: later synthetic boundary tests, clean-environment
+  verification and reference checks; it does not replace the frozen results.
 
 `local/` is ignored. It contains source snapshots, extracted pairs, historical
 audit strings, sealed labels, raw prompts/outputs, cached vectors, timings and
@@ -61,8 +63,9 @@ For a **new, separately preregistered run in a fresh workspace**, the workflow i
 4. Run `audit_source_overlap.py --historical <historical_texts.jsonl> --output <fresh-audit.json>`.
    It scans all candidates against all supplied historical strings with bounded
    sparse batches. Existing audit outputs are never overwritten.
-5. `seal_source_holdout.py` expects the reviewed local audit/inventory at the documented
-   `local/` filenames, freezes publisher splits, and refuses an existing sealed
+5. `seal_source_holdout.py --history-dir <fresh-dir>` uses that inventory and
+   verifies its historical-text hash against the overlap audit. Put the overlap
+   output at `reports/source_holdout_v1/local/overlap_audit.json`. It freezes publisher splits and refuses an existing sealed
    directory. It is run **before** model development. It does not turn missing
    publisher counts into a valid confirmatory study.
 6. `retrieve_source_holdout.py --split dev --arm baseline` performs label-free
@@ -73,6 +76,9 @@ For a **new, separately preregistered run in a fresh workspace**, the workflow i
    postprocessed answers and paired empty-context controls. It refuses an existing
    generation directory. `summarize_source_generation.py` removes citation fields
    from content metrics and requires a fresh `--output-name` when correcting metrics.
+   New work defaults to metric version 3. `--metric-version 2` preserves the numeric
+   and citation parser behavior used in this frozen report. Never mix versions
+   across comparison arms or overwrite the published version-2 summaries.
 8. Freeze the decision before any test inspection. The included
    `freeze_source_selection.py` records this run's **failed-candidate rejection**;
    it is not a generic automatic selection policy. Test retrieval/generation verifies
@@ -83,8 +89,20 @@ For a **new, separately preregistered run in a fresh workspace**, the workflow i
 For offline verification without model downloads or keys:
 
 ```text
-python -m pytest -q -p no:cacheprovider
-python scripts/smoke_source_holdout_offline.py
+python -m venv .venv
+# Windows commands:
+.venv/Scripts/python -m pip install -r requirements-dev.txt
+.venv/Scripts/python -m pytest -q -p no:cacheprovider
+.venv/Scripts/python scripts/smoke_source_holdout_offline.py
+```
+
+On Unix, replace `.venv/Scripts/python` with `.venv/bin/python`.
+For acquisition and overlap-audit commands, additionally install
+`requirements-source-eval.txt`, which pins the run's NumPy version. A focused
+synthetic-only check needs no weights, corpus, Ollama or credentials:
+
+```text
+.venv/Scripts/python -m pytest -q tests/test_evidence_evaluation.py tests/test_source_generation_metrics.py tests/test_source_scope_audit.py tests/test_source_acquisition.py tests/test_source_history_inventory.py
 ```
 
 The smoke command requires a fresh local output directory and uses existing public
@@ -115,3 +133,49 @@ The fixed-seed GPU generator was not byte deterministic: 13/47 identical dev emp
 prompts returned identical strings across arms. No additional run was selected to
 improve the scores. The final summary corrects SOURCE-field contamination of served
 content/numeric metrics; original raw outputs and selection-lock evidence remain local.
+
+## Post-publication engineering review
+
+The review uses independent synthetic fixtures and does not rerun models, open a
+new candidate, alter the sealed split, or rewrite any of the 14 published JSON
+artifacts from commit `7302f172`. Frozen inference files still match their lock.
+
+New acquisition runs verify cached body bytes against size/SHA and reject a
+publisher reassignment for the same URL. Downloads stop at the byte limit while
+streaming; cached failures are retained and the CLI exits unsuccessfully if any
+source failed. Orphan snapshots and existing extraction outputs are preserved.
+Do not delete or overwrite a frozen cache to force a fresh download; use a fresh
+reviewed workspace. HEAD availability is not proof of unchanged source content.
+
+Extraction now records identical duplicate questions and rejects conflicting
+answers instead of choosing the first one silently. A definition-list question
+cannot borrow the next question's answer. A single oversized token fails the
+word-boundary chunk budget. The exact historical preprocessing code remains in
+commit `23d8e73`; these stricter checks apply to new runs, not a redefinition of
+the historical 218/84/219 counts.
+
+Metric input checks now reject blank gold text/IDs, ambiguous whitespace IDs,
+duplicate ranks, invalid cutoffs, nonfinite scores and truthy non-boolean labels.
+IDs remain opaque: aliases must be resolved upstream, and numeric-looking IDs
+such as `1` and `01` are not guessed equivalent. A one-publisher sample cannot
+produce a bootstrap interval. Literal context retention remains a lexical
+measure, not source-specific entailment or citation correctness.
+
+Synthetic review also exposed version-2 diagnostic parser limitations: a
+sentence-final period can drop a number or strip its percentage marker; an empty
+SOURCE field can consume following prose. Version 3 fixes those cases and gives
+failed requests neither answered-coverage nor successful-refusal credit while
+keeping their denominators. **Frozen version-2 numbers remain unchanged and
+should not be used as numeric-reasoning accuracy claims.** This run had zero
+request errors; the new failure behavior was tested only with synthetic rows.
+
+The source-scope checker rejects ill-typed metadata and reports missing publisher
+as well as jurisdiction fields. It remains warning-only and is not imported by
+the default runtime. Matching labels never establish semantic support.
+
+Final engineering validation: **398 tests + 58 subtests passed** in the existing
+environment. A fresh CPU environment installed from the documented research
+requirements passes **386 tests + 58 subtests**, with six optional torch skip
+markers and no torch/transformers installed. Ten documented CLI help entrypoints
+also succeed there. These 41 added synthetic cases do not add model-evaluation
+samples or modify the frozen 84-question/336-output study.

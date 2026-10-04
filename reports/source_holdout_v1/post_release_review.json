@@ -1,0 +1,402 @@
+{
+  "reviewed_utc": "2026-10-04T09:09:50.841495+00:00",
+  "reviewed_initial_commit": "7302f172c360626d593cb030caa2465edc48a213",
+  "scope": "Post-publication engineering reliability review using independent synthetic fixtures; no frozen-model rerun, new candidate, reselection, or result replacement.",
+  "findings_and_fixes": [
+    {
+      "area": "metric inputs",
+      "finding": "Blank gold text could match an empty context; loose input types/nonfinite values could corrupt denominators.",
+      "fix": "Reject empty/noncanonical IDs, duplicate ranks, blank gold chunks, invalid cutoffs, nonfinite values and non-boolean labels; never infer opaque-ID aliases."
+    },
+    {
+      "area": "uncertainty",
+      "finding": "One publisher yielded a spuriously precise cluster interval.",
+      "fix": "Require at least two clusters and positive integer draw count; retain the warning that two clusters are unstable."
+    },
+    {
+      "area": "versioned generation diagnostics",
+      "finding": "Version 2 could drop sentence-final numbers, lose percentage markers, consume prose after an empty SOURCE line, or credit failed requests as refusals.",
+      "fix": "Version 3 handles these synthetic boundaries; version 2 remains explicitly selectable for historical parser behavior. Mixed-version arm comparisons are rejected. Published version-2 values are not recomputed."
+    },
+    {
+      "area": "cached source provenance",
+      "finding": "A cached success was trusted without rechecking its bytes or publisher assignment.",
+      "fix": "Verify body size/SHA and publisher/URL identity; reject escaping artifact paths; preserve orphan snapshots and cached failures."
+    },
+    {
+      "area": "bounded acquisition",
+      "finding": "The previous byte limit was checked only after reading the full response.",
+      "fix": "Enforce the cap while streaming, close responses, reject duplicate registry URLs and return failure status for failed acquisitions. Unit tests use mocked HTTP only."
+    },
+    {
+      "area": "FAQ extraction",
+      "finding": "Conflicting duplicate questions silently kept the first answer; a missing dt answer could borrow the next question answer; a single long token could exceed the chunk cap.",
+      "fix": "Record identical duplicates, reject conflicting answers, require adjacent dd, reject oversized tokens, and refuse existing extraction artifacts."
+    },
+    {
+      "area": "sealing and reproduction",
+      "finding": "Historical input hash was not bound at seal time; failed preflight could leave an empty sealed directory.",
+      "fix": "Add explicit --history-dir, bind its historical strings to the overlap audit hash, and complete preflight before creating the sealed directory. Document exact commands and dependencies."
+    },
+    {
+      "area": "metadata warnings",
+      "finding": "Non-string or blank metadata could look like a declared scope; missing publisher was not reported.",
+      "fix": "Validate metadata types/IDs and warn for missing publisher/jurisdiction. No default runtime integration or serving action."
+    }
+  ],
+  "frozen_preservation": {
+    "inference_file_hashes_matched": 10,
+    "published_json_byte_identical": {
+      "acquisition_registry.json": "f25b2cbb216e99b942e9ca8ddf7da9c0f9755869e882cef0710e6384bb7824dd",
+      "candidate_registry.json": "23638a1691c2bb543d28d87293755b2ef9cff7b879eaa7f2758f7ab8726835ac",
+      "data_flow.json": "52a8c6a1c10566d1dd461727e2573eacb7f43a628241e91697b5324214b533ba",
+      "dev_comparison.json": "c68218265b97dd216bad715fdad91ae496c5e6f6b184c21f59dcd9fa3680326b",
+      "diagnosis.json": "ad6b6a884610920e1000aced6186d7bd2315150eda16f3f3c7f9835a189fdcee",
+      "history_audit.json": "6f86490c11fca473472434e2aad59fddf4edddcc4dfabdb531229bcd93d0b33e",
+      "offline_smoke.json": "94b492cc6ae8d172fdcdd5acc2ad7882f73610a134f5e37116518b3c9ebd0bf9",
+      "preregistration.json": "7135de19e7b3254eb01e891e36d23b0d29f4310f6e847572065c7cd12e437dfd",
+      "publisher_name_audit.json": "e4497af03d0093be72eb3c0025bc56226da7c01014f36269374514f4e5c04554",
+      "selection.lock.json": "260c41ab0bacbe4dc85c293326b971a80647e9db31911960a3b62238e384c7a0",
+      "sources.json": "403a38eecd2176373df31bf97914ae571f66b0bc534b76a1662956f9406b0e21",
+      "split_manifest.json": "6851da5b0d811092848f814aecd140d73c20850332daec843f3b393fd7abfd04",
+      "test_comparison.json": "6ccd4ab91f596c4a66d9e2932359effe886f93159dd13ed3966a51a8d205822a",
+      "verification.json": "156fda40ee21128a0676b62500952b9cb3e95a05689ceb19e5665721d9fc1520"
+    },
+    "sealed_file_hashes_unchanged": true,
+    "new_model_calls": 0,
+    "new_candidates": 0,
+    "original_decision": "NO PROMOTION",
+    "published_generation_metric_version": 2,
+    "new_run_generation_metric_version": 3,
+    "historical_preprocessing_commit": "23d8e73"
+  },
+  "final_tests": {
+    "existing_environment": {
+      "passed": 398,
+      "subtests_passed": 58,
+      "seconds": 7.05,
+      "log_sha256": "3b6f9648c8784b2d7da04d6210d82cc984406abefed0ca0cc0ac5249020756a7"
+    },
+    "clean_cpu_environment": {
+      "passed": 386,
+      "skipped": 6,
+      "subtests_passed": 58,
+      "seconds": 5.51,
+      "log_sha256": "4d05196da5d35ab6eac3b343602ab680891bedd2010c843f5cac75afaaaced34",
+      "skip_reason": "Optional torch-dependent module/tests; torch and transformers deliberately absent. Existing-environment suite covers those tests.",
+      "versions": {
+        "packages": {
+          "numpy": "2.5.2",
+          "pytest": "9.1.1",
+          "beautifulsoup4": "4.15.0",
+          "scikit-learn": "1.9.1",
+          "scipy": "1.18.1",
+          "requests": "2.34.2"
+        },
+        "torch_installed": false,
+        "transformers_installed": false
+      }
+    },
+    "new_passing_synthetic_cases_since_initial_publication": 41
+  },
+  "cli_help_checks": [
+    {
+      "stage": "help_acquire_source_holdout",
+      "exit_code": 0,
+      "seconds": 0.28004899993538857
+    },
+    {
+      "stage": "help_prepare_source_faq",
+      "exit_code": 0,
+      "seconds": 0.16091589978896081
+    },
+    {
+      "stage": "help_inventory_source_history",
+      "exit_code": 0,
+      "seconds": 0.093081200029701
+    },
+    {
+      "stage": "help_audit_source_overlap",
+      "exit_code": 0,
+      "seconds": 1.4168102000840008
+    },
+    {
+      "stage": "help_seal_source_holdout",
+      "exit_code": 0,
+      "seconds": 0.17461750004440546
+    },
+    {
+      "stage": "help_retrieve_source_holdout",
+      "exit_code": 0,
+      "seconds": 0.09547280007973313
+    },
+    {
+      "stage": "help_generate_source_holdout",
+      "exit_code": 0,
+      "seconds": 0.3743123998865485
+    },
+    {
+      "stage": "help_summarize_source_retrieval",
+      "exit_code": 0,
+      "seconds": 0.36341580003499985
+    },
+    {
+      "stage": "help_summarize_source_generation",
+      "exit_code": 0,
+      "seconds": 0.367587799904868
+    },
+    {
+      "stage": "help_summarize_source_comparison",
+      "exit_code": 0,
+      "seconds": 0.3658493999391794
+    }
+  ],
+  "default_runtime_imports_of_source_scope_audit": [],
+  "source_references": {
+    "snapshots_verified": 19,
+    "terms_snapshots_verified": 6,
+    "terms_provenance": [
+      {
+        "publisher": "ccpc_ireland",
+        "kind": "terms_url",
+        "url": "https://www.ccpc.ie/legal",
+        "snapshot_url": "https://www.ccpc.ie/legal",
+        "acquired_utc": "2026-10-04T07:20:15.366743+00:00",
+        "sha256": "9c0dcfaf487d46fc05e71b46e9607cf1a697c3ab31848a7d89e3aa78c4d51fc9",
+        "snapshot_valid": true
+      },
+      {
+        "publisher": "hia_ireland",
+        "kind": "terms_url",
+        "url": "https://www.hia.ie/legal",
+        "snapshot_url": "https://www.hia.ie/legal",
+        "acquired_utc": "2026-10-04T07:28:05.758021+00:00",
+        "sha256": "4c2c41c62d5bdaefd52c20f5472cf77f414ad4d881ba5a47b5075b11890466e7",
+        "snapshot_valid": true
+      },
+      {
+        "publisher": "australia_privatehealth",
+        "kind": "terms_url",
+        "url": "https://privatehealth.gov.au/footer/about/copyright.htm",
+        "snapshot_url": "https://privatehealth.gov.au/footer/about/copyright.htm",
+        "acquired_utc": "2026-10-04T07:30:22.202664+00:00",
+        "sha256": "6a944c7388ec291857b20ba5dda7392761d7c61adce59a637bc1143a74a51c0f",
+        "snapshot_valid": true
+      },
+      {
+        "publisher": "fsra_ontario",
+        "kind": "terms_url",
+        "url": "https://www.fsrao.ca/terms-use",
+        "snapshot_url": "https://www.fsrao.ca/terms-use",
+        "acquired_utc": "2026-10-04T07:18:37.818801+00:00",
+        "sha256": "bda5bcd4e2c96f9f3da0c4e81a4266a5ac1ff8931a76fd56e3f4856ad3b0bcbf",
+        "snapshot_valid": true
+      },
+      {
+        "publisher": "fsra_ontario",
+        "kind": "copyright_url",
+        "url": "https://www.ontario.ca/copyright",
+        "snapshot_url": "https://www.ontario.ca/copyright",
+        "acquired_utc": "2026-10-04T07:24:29.845216+00:00",
+        "sha256": "e2157fc6528999d991825bb29922ad761fd92cc2b1f1cecc11225f5f57fb17c4",
+        "snapshot_valid": true
+      },
+      {
+        "publisher": "oregon_dfr",
+        "kind": "terms_url",
+        "url": "https://www.oregon.gov/pages/terms-and-conditions.aspx",
+        "snapshot_url": "https://www.oregon.gov/pages/terms-and-conditions.aspx",
+        "acquired_utc": "2026-10-04T07:20:15.368135+00:00",
+        "sha256": "5f98749e078d8a66f855a23df07319286ed661f63b0edb4f8d23954c3f6f52b4",
+        "snapshot_valid": true
+      }
+    ],
+    "head_checks": [
+      {
+        "url": "https://dfr.oregon.gov/insure/auto/Pages/auto-insurance-faqs.aspx",
+        "checked_utc": "2026-10-04T08:54:40.236349+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://dfr.oregon.gov/insure/auto/Pages/auto-insurance-faqs.aspx"
+      },
+      {
+        "url": "https://privatehealth.gov.au/faq.htm",
+        "checked_utc": "2026-10-04T08:54:40.237349+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://privatehealth.gov.au/faq.htm"
+      },
+      {
+        "url": "https://privatehealth.gov.au/footer/about/copyright.htm",
+        "checked_utc": "2026-10-04T08:54:41.006965+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://privatehealth.gov.au/footer/about/copyright.htm"
+      },
+      {
+        "url": "https://www.ccpc.ie/legal",
+        "checked_utc": "2026-10-04T08:54:42.430285+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/legal"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/car-insurance",
+        "checked_utc": "2026-10-04T08:54:42.445854+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/car-insurance"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/gadget-insurance",
+        "checked_utc": "2026-10-04T08:54:43.672747+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/gadget-insurance"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/getting-insurance-quotes",
+        "checked_utc": "2026-10-04T08:54:45.075885+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/getting-insurance-quotes"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/health-insurance",
+        "checked_utc": "2026-10-04T08:54:46.272328+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/health-insurance"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/home-insurance",
+        "checked_utc": "2026-10-04T08:54:46.291150+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/home-insurance"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/income-protection-insurance",
+        "checked_utc": "2026-10-04T08:54:49.333743+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/income-protection-insurance"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/life-insurance",
+        "checked_utc": "2026-10-04T08:54:49.339252+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/life-insurance"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/making-an-insurance-claim",
+        "checked_utc": "2026-10-04T08:54:53.048331+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/making-an-insurance-claim"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/mortgage-protection-insurance",
+        "checked_utc": "2026-10-04T08:54:53.686248+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/mortgage-protection-insurance"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/payment-protection-insurance-ppi",
+        "checked_utc": "2026-10-04T08:54:55.880912+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/payment-protection-insurance-ppi"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/pet-insurance",
+        "checked_utc": "2026-10-04T08:54:56.202277+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/pet-insurance"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/serious-illness-insurance",
+        "checked_utc": "2026-10-04T08:54:58.502483+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/serious-illness-insurance"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/travel-insurance",
+        "checked_utc": "2026-10-04T08:54:59.320086+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/travel-insurance"
+      },
+      {
+        "url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/whole-of-life-insurance",
+        "checked_utc": "2026-10-04T08:54:59.682966+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ccpc.ie/manage-your-money/day-to-day-finances/insurance/whole-of-life-insurance"
+      },
+      {
+        "url": "https://www.fsrao.ca/consumers/auto-insurance",
+        "checked_utc": "2026-10-04T08:55:02.058476+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.fsrao.ca/consumers/auto-insurance"
+      },
+      {
+        "url": "https://www.fsrao.ca/consumers/auto-insurance/protect-yourself/claims-process-after-accident",
+        "checked_utc": "2026-10-04T08:55:02.451711+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.fsrao.ca/consumers/auto-insurance/protect-yourself/after-accident-understanding-claims-process"
+      },
+      {
+        "url": "https://www.fsrao.ca/terms-use",
+        "checked_utc": "2026-10-04T08:55:02.981216+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.fsrao.ca/terms-use"
+      },
+      {
+        "url": "https://www.hia.ie/consumer-information/faq",
+        "checked_utc": "2026-10-04T08:55:03.407929+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.hia.ie/consumer-information/faq"
+      },
+      {
+        "url": "https://www.hia.ie/legal",
+        "checked_utc": "2026-10-04T08:55:03.663495+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.hia.ie/legal"
+      },
+      {
+        "url": "https://www.ontario.ca/copyright",
+        "checked_utc": "2026-10-04T08:55:04.406808+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.ontario.ca/page/copyright-information?utm_source=keyword&utm_medium=keyword-url&utm_campaign=copyright"
+      },
+      {
+        "url": "https://www.oregon.gov/pages/terms-and-conditions.aspx",
+        "checked_utc": "2026-10-04T08:55:04.881358+00:00",
+        "method": "HEAD",
+        "status_code": 200,
+        "final_url": "https://www.oregon.gov/pages/terms-and-conditions.aspx"
+      }
+    ],
+    "no_source_body_redownloads_or_retries": true,
+    "excluded_publishers_not_requested": true,
+    "limit": "HEAD 200 means responsive at review time, not unchanged content or automatic licence clearance."
+  },
+  "remaining_limits": [
+    "Two heldout publishers remain below the preregistered minimum and the primary interval crosses zero.",
+    "Literal packed-text retention is not source-specific entailment; ID equivalences require an explicit upstream canonicalization policy.",
+    "Version-2 historical numeric diagnostics have the documented punctuation limitation and are not numeric-reasoning accuracy.",
+    "No inaccessible historical directory was read or bypassed; the previously recorded audit gaps remain.",
+    "No claim-level semantic verifier or jurisdiction-aware serving strategy was evaluated."
+  ]
+}

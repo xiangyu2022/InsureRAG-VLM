@@ -9,11 +9,22 @@ from scripts.retrieve_source_holdout import LOCAL,read,write,sha
 from src.insurerag_vlm.evidence_evaluation import token_f1,abstention_metrics,citation_markers
 
 def clean_answer(text):return re.split(r'(?i)\bsources?\s*:',text,maxsplit=1)[0].strip()
-def numbers(text):
-    return {str(Decimal(m.group(1).replace(',','')))+('%' if m.group(2) else '')
-            for m in re.finditer(r'(?<![\w.])(-?\d+(?:,\d{3})*(?:\.\d+)?)(%)?(?![\w.])',text)}
+def numbers(text,version=3):
+    if version==2:
+        # Preserve the published run's diagnostic implementation for exact replay.
+        return {str(Decimal(m.group(1).replace(',','')))+('%' if m.group(2) else '')
+                for m in re.finditer(r'(?<![\w.])(-?\d+(?:,\d{3})*(?:\.\d+)?)(%)?(?![\w.])',text)}
+    if version!=3:raise ValueError('Unsupported numeric metric version')
+    result=set()
+    for match in re.finditer(r'(?<![\w.])(-?\d+(?:,\d{3})*(?:\.\d+)?)(%)?',text):
+        suffix=text[match.end():]
+        # Validate the greedy token after matching, so percent and decimal
+        # groups cannot backtrack into a misleading partial number.
+        if suffix and (suffix[0].isalnum() or suffix[0]=='_' or re.match(r'\.\d',suffix)):continue
+        result.add(str(Decimal(match.group(1).replace(',','')))+('%' if match.group(2) else ''))
+    return result
 
-def summarize(split,arm,output_name='summary.json'):
+def summarize(split,arm,output_name='summary.json',metric_version=3):
     if split=='test' and not (ROOT/'reports/source_holdout_v1/selection.lock.json').exists():raise ValueError('Test sealed')
     cases=read(LOCAL/'sealed'/(split+'.json'));lookup={r['id']:r for r in cases}
     run=LOCAL/(split+'_'+arm)/'generation';completed=read(run/'completion.json')
@@ -26,10 +37,10 @@ def summarize(split,arm,output_name='summary.json'):
     metrics=[];served=[];raw=[]
     for r in rows:
         positive=r['cohort']=='retrieved';s=r.get('served',{});a=clean_answer(r.get('raw_answer',''));ref=lookup[r['id']]['answer']
-        markers=citation_markers(r.get('raw_answer',''));ids=markers['ids']
+        markers=citation_markers(r.get('raw_answer',''),version=metric_version);ids=markers['ids']
         known=set(re.findall(r'(?m)^SOURCE:\s*([^\n]+)',r['context']))
         served_content=clean_answer(s.get('answer',''))
-        pred_nums=numbers(a);ref_nums=numbers(ref);sn=numbers(served_content)
+        pred_nums=numbers(a,metric_version);ref_nums=numbers(ref,metric_version);sn=numbers(served_content,metric_version)
         row={'id':r['id'],'publisher':lookup[r['id']]['publisher'],'cohort':r['cohort'],'error':r.get('error'),
              'raw_token_f1':token_f1(a,ref) if positive else None,
              'served_token_f1':token_f1(served_content,ref) if positive else None,
@@ -46,8 +57,9 @@ def summarize(split,arm,output_name='summary.json'):
              'support_reason':s.get('citation_support_reason'),'wall_seconds':r['wall_seconds'],
              'truncated':bool(s.get('generation_truncated')),'repaired':bool(s.get('answer_repaired'))}
         metrics.append(row)
-        served.append({'answerable':positive,'abstained':row['served_abstained']})
-        raw.append({'answerable':positive,'abstained':row['raw_abstained_heuristic']})
+        failed=bool(row['error']) if metric_version>=3 else False
+        served.append({'answerable':positive,'abstained':row['served_abstained'],'failed':failed})
+        raw.append({'answerable':positive,'abstained':row['raw_abstained_heuristic'],'failed':failed})
     pos=[r for r in metrics if r['cohort']=='retrieved']
     answered=[r for r in pos if not r['served_abstained']]
     numeric=[r for r in pos if r['raw_all_literal_numbers_in_reference'] is not None]
@@ -73,7 +85,7 @@ def summarize(split,arm,output_name='summary.json'):
             except (ValueError,IndexError):pass
         g=r.get('generation',{}).get('last_generation',{})
         if g.get('eval_duration'):tps.append(g.get('eval_count',0)/(g['eval_duration']/1e9))
-    report={'schema_version':2,'metric_correction':'Remove emitted SOURCE fields consistently from both raw and served lexical/numeric metrics; numeric tokens exclude alphanumeric IDs.',
+    report={'schema_version':metric_version,'metric_correction':'Remove emitted SOURCE fields consistently from both raw and served lexical/numeric metrics; numeric tokens exclude alphanumeric IDs.'+(' Version 3 preserves sentence-final numbers/percentages, does not consume prose after an empty SOURCE line, and never credits failed requests as answers or refusals; published version 2 artifacts remain unchanged.' if metric_version==3 else ''),
             'split':split,'arm':arm,'original_answerable_questions':len(pos),'synthetic_empty_controls':len(rows)-len(pos),
             'errors':sum(bool(r['error']) for r in metrics),'raw_abstention_heuristic':abstention_metrics(raw),
             'served_abstention':abstention_metrics(served),'raw_content_token_f1':float(np.mean([r['raw_token_f1'] for r in pos])),
@@ -99,4 +111,5 @@ def summarize(split,arm,output_name='summary.json'):
     print(json.dumps({k:v for k,v in report.items() if k!='rows'},indent=2))
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--split',choices=['dev','test'],required=True);p.add_argument('--arm',required=True)
-    p.add_argument('--output-name',default='summary.json');a=p.parse_args();summarize(a.split,a.arm,a.output_name)
+    p.add_argument('--output-name',default='summary.json');p.add_argument('--metric-version',type=int,choices=[2,3],default=3)
+    a=p.parse_args();summarize(a.split,a.arm,a.output_name,a.metric_version)

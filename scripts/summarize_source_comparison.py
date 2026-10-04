@@ -15,8 +15,9 @@ def main():
         folder=LOCAL/(a.split+'_'+arm)/'generation';path=folder/'summary_v2.json'
         if not path.exists():path=folder/'summary.json'
         s=read(path)
-        if s.get('schema_version')!=2:raise ValueError('Use corrected citation-free content metrics')
+        if s.get('schema_version') not in {2,3}:raise ValueError('Use versioned citation-free content metrics')
         generations[arm]={k:v for k,v in s.items() if k!='rows'}
+    if len({g['schema_version'] for g in generations.values()})!=1:raise ValueError('Do not compare arms with different metric versions')
     contrast=[publisher_cluster_delta(scores['baseline']['rows'],scores['cross_quarter']['rows'],metric)
               for metric in ['complete_after_packing','recall_at_10','hit_at_10','ndcg_at_10']]
     report={'split':a.split,'interpretation':'EXPLORATORY; preregistered minimum of 3 publisher groups in each split not met',

@@ -1,5 +1,6 @@
 # Optional research acquisition/audit dependencies; not needed for default serving.
 -r requirements-dev.txt
+numpy==2.5.2
 beautifulsoup4==4.15.0
 scikit-learn==1.9.1
 scipy==1.18.1
