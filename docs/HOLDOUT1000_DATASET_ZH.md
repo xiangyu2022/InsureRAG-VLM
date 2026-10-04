@@ -1,0 +1,35 @@
+# 千题保险测试集建设：进行中，尚未达标
+
+目标为至少 **1,000 道通过质量验收的独立测试题**，开发集另计。当前尚未冻结或评测新测试集，不能把下载页面、提取候选或自动检查数量写成合格题数。此前 37 道已观察测试题只作为回归集，原有结果和不晋级决定保持不变。
+
+协议见 `reports/holdout1000_v1/protocol.json`。初步题型配额为普通问答 600、数值计算 150、多证据问答 150、证据不足拒答 100；至少八个独立发布机构、100 个文档组，单机构不超过 20%，单文档组不超过 20 题。配额是验收目标，不是已完成数量。开发集按发布机构及文档组独立隔离；历史来源暴露需单独报告，不能将重新下载当作未污染。
+
+## 采集与来源
+
+`source_candidates.json` 仅列候选机构；`source_approvals.json` 才记录通过条款检查、允许在本机非商业研究范围采集的来源。原始网页连同版权信息完整保存在忽略目录中，未重新许可为仓库 MIT。自动访问遭拒或存在明确禁止时停止，不切换地址绕过。
+
+每份文档保留 URL、标题、机构、地区、取得时间和字节 SHA256；提取文本另外保存哈希。每题引用精确文本位置及片段哈希。标为来源原生 FAQ 的问题与代理创作的问题分别记录。修订、拒绝、重复关系和审阅意见保留。
+
+目前识别出的限制包括：BCFSA 禁止机器人/数据提取；PIDM 禁止未经许可放入电子检索系统；ASIC 网页摘录需另获许可。这些来源不进入批量采集。Financial Rights 与 Insurance Law 的别名/重定向不算两家独立机构。已遭 403 或 robots 禁止的其他站点同样不绕过。
+
+## 质量门槛
+
+- 全部题目执行来源、证据、字段、类型、哈希、重复、历史污染检查。程序检查不是语义正确性的证明。
+- 对训练、开发、历史评测及报告中的可访问字符串进行精确与近重复检查；文档 URL、别名、版本和证据内容也纳入。保留先前禁止访问的目录排除项，不声称涵盖不可访问材料。基础模型预训练污染不能完全排除。
+- 所有计算、多证据、拒答题，以及至少 25% 普通题进行分层 **Codex 代理内容审阅**，不称为人工或专家审阅。发现关键错误时扩大到受影响机构/解析器/题型的全量审阅。
+- 计算题须列公式、操作数、单位、舍入及独立计算核验；多证据题逐一说明每段证据的必要性；拒答题须说明真实的信息缺口，保留相关但不充分的非空证据，不能只靠删除上下文制造捷径。
+- 未解决的对齐失败、上下文缺失、时效疑问、导航文字或证据污染均不得通过。重复 URL、来源原文同义改写和同一计算模板换数字不增加独立题数。
+
+`holdout_quality.py` 是拒绝未达标数据的结构门槛，不是语义裁判。通过门槛仍不能取代独立专家判断。最终冻结后才执行模型测试，固定模型与配置，不根据测试输出调参；按机构、文档及题型报告分母和区间。
+
+## 当前可运行入口
+
+```text
+python scripts/preflight_holdout1000_sources.py --publishers <explicit-reviewed-list>
+python scripts/acquire_holdout1000_documents.py --publishers <approved-list>
+python scripts/extract_holdout1000_candidates.py --output <fresh-extraction-directory>
+python scripts/screen_holdout1000_history.py --candidates <candidates.jsonl> --history <historical_texts.jsonl> --output <fresh-report.json>
+python -m pytest -q tests/test_holdout_quality.py tests/test_holdout_faq_extraction.py tests/test_holdout_acquisition.py
+```
+
+采用既有 `requirements-source-eval.txt`。所有 `reports/holdout1000_v1/local/` 内容保持本机，不上传原始文档、问题、答案、提示、模型输出或权重。发布代码、合成测试、协议、来源台账和汇总审计；尚未验收的候选不得被交付为完成测试集。

@@ -1,0 +1,258 @@
+[
+  {
+    "id": "texas_tdi",
+    "jurisdiction": "US-TX",
+    "seed": "https://www.tdi.texas.gov/consumer/index.html",
+    "terms": "https://www.tdi.texas.gov/commissioner/privacy.html"
+  },
+  {
+    "id": "newyork_dfs",
+    "jurisdiction": "US-NY",
+    "seed": "https://www.dfs.ny.gov/consumers"
+  },
+  {
+    "id": "california_cdi",
+    "jurisdiction": "US-CA",
+    "seed": "https://www.insurance.ca.gov/01-consumers/"
+  },
+  {
+    "id": "northcarolina_doi",
+    "jurisdiction": "US-NC",
+    "seed": "https://www.ncdoi.gov/consumers"
+  },
+  {
+    "id": "newjersey_dobi",
+    "jurisdiction": "US-NJ",
+    "seed": "https://www.nj.gov/dobi/consumer.htm"
+  },
+  {
+    "id": "wisconsin_oci",
+    "jurisdiction": "US-WI",
+    "seed": "https://oci.wi.gov/Pages/Consumers/ConsumerInformation.aspx"
+  },
+  {
+    "id": "maryland_mia",
+    "jurisdiction": "US-MD",
+    "seed": "https://insurance.maryland.gov/Consumer/Pages/default.aspx"
+  },
+  {
+    "id": "maine_boi",
+    "jurisdiction": "US-ME",
+    "seed": "https://www.maine.gov/pfr/insurance/consumers"
+  },
+  {
+    "id": "pennsylvania_pid",
+    "jurisdiction": "US-PA",
+    "seed": "https://www.pa.gov/agencies/insurance/consumer-resources.html"
+  },
+  {
+    "id": "newhampshire_nhid",
+    "jurisdiction": "US-NH",
+    "seed": "https://www.insurance.nh.gov/consumers"
+  },
+  {
+    "id": "vermont_dfr",
+    "jurisdiction": "US-VT",
+    "seed": "https://dfr.vermont.gov/consumers"
+  },
+  {
+    "id": "australia_asic",
+    "jurisdiction": "AU",
+    "seed": "https://moneysmart.gov.au/insurance",
+    "terms": "https://moneysmart.gov.au/copyright"
+  },
+  {
+    "id": "canada_fcac",
+    "jurisdiction": "CA",
+    "seed": "https://www.canada.ca/en/financial-consumer-agency/services/insurance.html",
+    "terms": "https://www.canada.ca/en/transparency/terms.html"
+  },
+  {
+    "id": "us_dol_ebsa",
+    "jurisdiction": "US",
+    "seed": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs",
+    "terms": "https://www.dol.gov/general/aboutdol/copyright"
+  },
+  {
+    "id": "us_cms",
+    "jurisdiction": "US",
+    "seed": "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs",
+    "terms": "https://www.cms.gov/about-cms/web-policies-important-links"
+  },
+  {
+    "id": "us_fema_nfip",
+    "jurisdiction": "US",
+    "seed": "https://www.floodsmart.gov/flood-insurance/why",
+    "terms": "https://www.fema.gov/about/website-information"
+  },
+  {
+    "id": "india_irdai",
+    "jurisdiction": "IN",
+    "seed": "https://irdai.gov.in/faqs"
+  },
+  {
+    "id": "singapore_moneysense",
+    "jurisdiction": "SG",
+    "seed": "https://www.moneysense.gov.sg/insurance/"
+  },
+  {
+    "id": "singapore_sdic",
+    "jurisdiction": "SG",
+    "seed": "https://www.sdic.org.sg/"
+  },
+  {
+    "id": "hongkong_ia",
+    "jurisdiction": "HK",
+    "seed": "https://www.ia.org.hk/en/consumer_corner/"
+  },
+  {
+    "id": "hongkong_ifec",
+    "jurisdiction": "HK",
+    "seed": "https://www.ifec.org.hk/web/en/financial-products/insurance/index.page"
+  },
+  {
+    "id": "newzealand_fma",
+    "jurisdiction": "NZ",
+    "seed": "https://www.fma.govt.nz/consumer/"
+  },
+  {
+    "id": "newzealand_icnz",
+    "jurisdiction": "NZ",
+    "seed": "https://www.icnz.org.nz/"
+  },
+  {
+    "id": "newzealand_ifso",
+    "jurisdiction": "NZ",
+    "seed": "https://www.ifso.nz/"
+  },
+  {
+    "id": "australia_financialrights",
+    "jurisdiction": "AU",
+    "seed": "https://financialrights.org.au/factsheets/"
+  },
+  {
+    "id": "australia_insurancelaw",
+    "jurisdiction": "AU",
+    "seed": "https://insurancelaw.org.au/factsheets/"
+  },
+  {
+    "id": "australia_apra",
+    "jurisdiction": "AU",
+    "seed": "https://www.apra.gov.au/frequently-asked-questions"
+  },
+  {
+    "id": "uk_moneyhelper",
+    "jurisdiction": "GB",
+    "seed": "https://www.moneyhelper.org.uk/en/everyday-money/insurance"
+  },
+  {
+    "id": "ireland_citizens",
+    "jurisdiction": "IE",
+    "seed": "https://www.citizensinformation.ie/en/consumer/insurance/"
+  },
+  {
+    "id": "quebec_amf",
+    "jurisdiction": "CA-QC",
+    "seed": "https://lautorite.qc.ca/en/general-public/insurance"
+  },
+  {
+    "id": "newbrunswick_fcnb",
+    "jurisdiction": "CA-NB",
+    "seed": "https://fcnb.ca/en/insurance"
+  },
+  {
+    "id": "uk_fca",
+    "jurisdiction": "GB",
+    "seed": "https://www.fca.org.uk/consumers/insurance"
+  },
+  {
+    "id": "ohio_odi",
+    "jurisdiction": "US-OH",
+    "seed": "https://insurance.ohio.gov/consumers"
+  },
+  {
+    "id": "illinois_idoi",
+    "jurisdiction": "US-IL",
+    "seed": "https://idoi.illinois.gov/consumers.html"
+  },
+  {
+    "id": "indiana_idoi",
+    "jurisdiction": "US-IN",
+    "seed": "https://www.in.gov/idoi/consumer-services/"
+  },
+  {
+    "id": "colorado_doi",
+    "jurisdiction": "US-CO",
+    "seed": "https://doi.colorado.gov/for-consumers"
+  },
+  {
+    "id": "connecticut_cid",
+    "jurisdiction": "US-CT",
+    "seed": "https://portal.ct.gov/cid"
+  },
+  {
+    "id": "virginia_scc",
+    "jurisdiction": "US-VA",
+    "seed": "https://www.scc.virginia.gov/pages/Insurance"
+  },
+  {
+    "id": "alaska_doi",
+    "jurisdiction": "US-AK",
+    "seed": "https://www.commerce.alaska.gov/web/ins/Consumers.aspx"
+  },
+  {
+    "id": "alabama_doi",
+    "jurisdiction": "US-AL",
+    "seed": "https://www.aldoi.gov/Consumers/"
+  },
+  {
+    "id": "missouri_dci",
+    "jurisdiction": "US-MO",
+    "seed": "https://insurance.mo.gov/consumers/"
+  },
+  {
+    "id": "kansas_kid",
+    "jurisdiction": "US-KS",
+    "seed": "https://insurance.kansas.gov/consumer-assistance/"
+  },
+  {
+    "id": "southcarolina_doi",
+    "jurisdiction": "US-SC",
+    "seed": "https://doi.sc.gov/150/Consumers"
+  },
+  {
+    "id": "utah_uid",
+    "jurisdiction": "US-UT",
+    "seed": "https://insurance.utah.gov/consumers/"
+  },
+  {
+    "id": "louisiana_ldi",
+    "jurisdiction": "US-LA",
+    "seed": "https://www.ldi.la.gov/consumers"
+  },
+  {
+    "id": "nebraska_ndoi",
+    "jurisdiction": "US-NE",
+    "seed": "https://doi.nebraska.gov/consumer"
+  },
+  {
+    "id": "alberta_goa",
+    "jurisdiction": "CA-AB",
+    "seed": "https://www.alberta.ca/insurance-consumer-complaints"
+  },
+  {
+    "id": "britishcolumbia_bcfsa",
+    "jurisdiction": "CA-BC",
+    "seed": "https://www.bcfsa.ca/public-resources/insurance"
+  },
+  {
+    "id": "malaysia_pidm",
+    "jurisdiction": "MY",
+    "seed": "https://www.pidm.gov.my/en/how-we-protect-you/takaful-and-insurance-benefits-protection-system"
+  },
+  {
+    "id": "malta_mfsa",
+    "jurisdiction": "MT",
+    "seed": "https://www.mfsa.mt/consumers/insurance/"
+  }
+]

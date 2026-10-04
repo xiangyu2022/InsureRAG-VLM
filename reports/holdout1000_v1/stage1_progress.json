@@ -1,0 +1,73 @@
+{
+  "checked_utc": "2026-10-04T14:55:16.740081+00:00",
+  "status": "IN_PROGRESS_NOT_FROZEN_NOT_1000_ACCEPTED",
+  "baseline_commit": "832a0fca0d82fabf9a0e759f414c9f52e3a6f541",
+  "branch": "dataset/insurance-holdout-1000-20261004",
+  "source_preflight_candidates": 50,
+  "sources_with_reviewed_local_research_terms": 10,
+  "extraction_snapshot": {
+    "created_utc": "2026-10-04T14:51:50.649708+00:00",
+    "documents": 894,
+    "candidates": 1435,
+    "accepted_test_items": 0,
+    "by_publisher": {
+      "alabama_doi": 10,
+      "california_cdi": 73,
+      "newjersey_dobi": 208,
+      "newyork_dfs": 163,
+      "northcarolina_doi": 128,
+      "texas_tdi": 288,
+      "utah_uid": 251,
+      "wisconsin_oci": 314
+    },
+    "flag_counts": {
+      "question_context_incomplete": 158,
+      "external_or_context_dependency": 44,
+      "evidence_alignment_failed": 78,
+      "answer_contains_subsections": 55,
+      "answer_boundary_or_excess_length": 5,
+      "possible_multiple_faq_boundary": 17
+    }
+  },
+  "exact_history_screen": {
+    "method": "Exact normalized question/answer match plus normalized document URL occurrence in all accessible historical strings; URL presence conservatively excludes the document, even a mere reference.",
+    "not_complete": "No near-duplicate/semantic clearance; source-family aliases, text containment and historical access gaps need further checks.",
+    "historical_sha256": "7c9abffe5784720560b36a1942991a6fa5b97b1bc8080ab577faf9391018fd33",
+    "historical_strings": 724751,
+    "candidate_file_sha256": "1fe91079e981d69c4506f71b6818ccb1efa3600adc9fc25f402b478f20ef0a84",
+    "candidates": 1435,
+    "excluded": 78,
+    "remaining_by_publisher": {
+      "alabama_doi": 10,
+      "california_cdi": 73,
+      "newjersey_dobi": 207,
+      "newyork_dfs": 163,
+      "northcarolina_doi": 127,
+      "texas_tdi": 255,
+      "utah_uid": 250,
+      "wisconsin_oci": 272
+    },
+    "seconds": 3.0411036999430507,
+    "accepted_test_items": 0
+  },
+  "accepted_test_items": 0,
+  "frozen_test_items": 0,
+  "new_model_evaluations": 0,
+  "engineering_validation": {
+    "passed": 419,
+    "subtests_passed": 58,
+    "seconds": 7.58,
+    "synthetic_cases_added": 21,
+    "test_log_sha256": "190ab8fcb7cb9eaa652829f9f8e339bc5a46de94ded36ca5bdee2497af4fe6d1",
+    "initial_test_invocation_failure": "New-worktree temp parent missing; corrected invocation passes full suite. No failing checks hidden."
+  },
+  "remaining_work": [
+    "Near-duplicate and evidence-containment audit against accessible history plus all prior 218 source FAQs.",
+    "Canonical source/document-family grouping and removal of duplicate pages, navigation questions and out-of-scope finance topics.",
+    "Content review and context repair; separate source/document dev/test assignment.",
+    "Source-grounded numeric, multi-evidence and realistic information-gap cases with recorded review; no template multiplication.",
+    "At least 1000 accepted independent test cases before freeze and final inference."
+  ],
+  "estimate": "12-24 hours equivalent curation/review effort plus inference; not a completion guarantee.",
+  "preserved": "Prior frozen 37-question test and all source_holdout_v1 artifacts remain unchanged; exposed test is regression-only."
+}

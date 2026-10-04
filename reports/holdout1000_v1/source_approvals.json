@@ -1,0 +1,143 @@
+[
+  {
+    "id": "texas_tdi",
+    "terms": "https://www.tdi.texas.gov/commissioner/privacy.html",
+    "decision": "local_noncommercial_research",
+    "basis": "Use of website information permits noncommercial copying/distribution of unaltered content except item-specific notices. Original snapshots preserved; authored questions kept separate.",
+    "prefixes": [
+      "/consumer/",
+      "/tips/",
+      "/pubs/consumer/"
+    ],
+    "seeds": [
+      "https://www.tdi.texas.gov/consumer/index.html"
+    ],
+    "max_pages": 150
+  },
+  {
+    "id": "newyork_dfs",
+    "terms": "https://www.dfs.ny.gov/disclaimer",
+    "decision": "local_noncommercial_research",
+    "basis": "Noncommercial unaltered reproduction with Department attribution except item-specific restrictions.",
+    "prefixes": [
+      "/consumers/"
+    ],
+    "seeds": [
+      "https://www.dfs.ny.gov/consumers"
+    ],
+    "max_pages": 150
+  },
+  {
+    "id": "california_cdi",
+    "terms": "https://www.insurance.ca.gov/privacy-policy/",
+    "decision": "local_noncommercial_research",
+    "basis": "Ownership section identifies CDI-created information as public domain unless indicated otherwise; exclude third-party materials, logos and submissions.",
+    "prefixes": [
+      "/01-consumers/"
+    ],
+    "seeds": [
+      "https://www.insurance.ca.gov/01-consumers/"
+    ],
+    "max_pages": 150
+  },
+  {
+    "id": "northcarolina_doi",
+    "terms": "https://www.nc.gov/disclaimer-terms-use",
+    "decision": "local_noncommercial_research",
+    "basis": "Permits noncommercial unaltered copying/distribution of non-image information with citation unless otherwise noted; no images or chatbot content.",
+    "prefixes": [
+      "/consumers/"
+    ],
+    "seeds": [
+      "https://www.ncdoi.gov/consumers"
+    ],
+    "max_pages": 150
+  },
+  {
+    "id": "newjersey_dobi",
+    "terms": "https://nj.gov/nj/legal.shtml",
+    "decision": "local_noncommercial_research",
+    "basis": "Section F permits viewing/copying/distributing State information subject to individual restrictions and third-party rights. Exclude external copyrighted publications.",
+    "prefixes": [
+      "/dobi/division_consumers/",
+      "/dobi/ins_"
+    ],
+    "seeds": [
+      "https://www.nj.gov/dobi/consumer.htm"
+    ],
+    "max_pages": 120
+  },
+  {
+    "id": "canada_fcac",
+    "terms": "https://www.canada.ca/en/transparency/terms.html",
+    "decision": "local_noncommercial_research",
+    "basis": "Noncommercial reproduction permitted with accuracy, full title/author/URL attribution; excludes third-party rights and official symbols.",
+    "prefixes": [
+      "/en/financial-consumer-agency/services/insurance"
+    ],
+    "seeds": [
+      "https://www.canada.ca/en/financial-consumer-agency/services/insurance.html"
+    ],
+    "max_pages": 70
+  },
+  {
+    "id": "wisconsin_oci",
+    "terms": "https://oci.wi.gov/Pages/AboutOCI/Disclaimer.aspx",
+    "decision": "local_noncommercial_research",
+    "basis": "Use of Information grants noncommercial unaltered copying/distribution except item-specific notices.",
+    "prefixes": [
+      "/Pages/Consumers/"
+    ],
+    "seeds": [
+      "https://oci.wi.gov/Pages/ConsumersHome.aspx"
+    ],
+    "max_pages": 120
+  },
+  {
+    "id": "alabama_doi",
+    "terms": "https://aldoi.gov/Disclaimer.aspx",
+    "decision": "local_noncommercial_research",
+    "basis": "Explicit noncommercial unaltered reproduction/distribution with Department attribution, except item-specific restrictions.",
+    "prefixes": [
+      "/Consumers/"
+    ],
+    "seeds": [
+      "https://www.aldoi.gov/Consumers/"
+    ],
+    "max_pages": 100,
+    "allowed_hosts": [
+      "www.aldoi.gov",
+      "aldoi.gov"
+    ]
+  },
+  {
+    "id": "utah_uid",
+    "terms": "https://www.utah.gov/disclaimer.html",
+    "decision": "local_noncommercial_research",
+    "basis": "Copyright limitations permit personal/informational copying of unmodified state information except item-specific restrictions; source originals retained.",
+    "prefixes": [
+      "/consumers/"
+    ],
+    "seeds": [
+      "https://insurance.utah.gov/consumers/"
+    ],
+    "max_pages": 150
+  },
+  {
+    "id": "alberta_goa",
+    "terms": "https://www.alberta.ca/disclaimer",
+    "decision": "local_noncommercial_research",
+    "basis": "Noncommercial copying/distribution permitted with accuracy, no modification, Government of Alberta attribution and no official-version or endorsement claim.",
+    "prefixes": [
+      "/insurance",
+      "/automobile-insurance",
+      "/auto-insurance",
+      "/home-insurance",
+      "/life-insurance"
+    ],
+    "seeds": [
+      "https://www.alberta.ca/insurance-consumer-complaints"
+    ],
+    "max_pages": 80
+  }
+]
