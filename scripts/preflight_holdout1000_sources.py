@@ -14,13 +14,27 @@ from scripts.source_snapshot_io import verified_metadata
 LOCAL=ROOT/'reports/holdout1000_v1/local'
 AGENT='InsureRAG-Research/1.0 (noncommercial local source quality audit)'
 
-def fetch(url,folder,allowed_hosts=None):
+class AccessGuardRejected(ValueError):
+    pass
+
+
+def fetch(url,folder,allowed_hosts=None,url_guard=None):
     allowed_hosts=set(allowed_hosts or [urlparse(url).hostname])
+    def check_url(target):
+        if url_guard:
+            try:url_guard(target)
+            except ValueError as exc:raise AccessGuardRejected(str(exc)) from exc
+    if url_guard:
+        try:check_url(url)
+        except AccessGuardRejected as exc:return {'url':url,'error':str(exc),'status':None,'error_kind':'access_guard_rejected'}
     key=hashlib.sha256(url.encode()).hexdigest()[:20];meta_path=folder/(key+'.json')
     if meta_path.exists():
         meta=verified_metadata(meta_path,expected_url=url)
         if urlparse(meta.get('final_url',url)).hostname not in allowed_hosts:
-            return {'url':url,'error':'cached_cross_host_redirect_requires_review','status':None}
+            return {'url':url,'error':'cached_cross_host_redirect_requires_review','status':None,'error_kind':'access_guard_rejected'}
+        if url_guard and meta.get('final_url',url)!=url:
+            try:check_url(meta['final_url'])
+            except AccessGuardRejected as exc:return {'url':url,'error':str(exc),'status':None,'error_kind':'access_guard_rejected'}
         return meta
     meta={'url':url,'acquired_utc':datetime.now(timezone.utc).isoformat()}
     try:
@@ -31,8 +45,9 @@ def fetch(url,folder,allowed_hosts=None):
             if response.status_code in {301,302,303,307,308}:
                 target=urljoin(current,response.headers.get('Location',''));parsed=urlparse(target)
                 if parsed.hostname not in allowed_hosts or parsed.scheme!='https' or parsed.username or parsed.password:
-                    raise ValueError('Redirect outside reviewed HTTPS host scope')
+                    raise AccessGuardRejected('Redirect outside reviewed HTTPS host scope')
                 if attempt==5:raise ValueError('Redirect limit exceeded')
+                check_url(target)
                 current=target;continue
             if response.status_code!=200:meta['error']='HTTP_'+str(response.status_code)
             else:
@@ -54,7 +69,11 @@ def fetch(url,folder,allowed_hosts=None):
                 meta.update(artifact=artifact,sha256=hashlib.sha256(raw).hexdigest(),bytes=total,
                             title=soup.title.get_text(' ',strip=True) if soup.title else '',links=links)
             break
-    except (requests.RequestException,ValueError) as exc:meta['error']=type(exc).__name__+': '+str(exc)[:180]
+    except Exception as exc:
+        meta['error']=type(exc).__name__+': '+str(exc)[:180]
+        meta['error_kind']='access_guard_rejected' if isinstance(exc,AccessGuardRejected) else 'acquisition_error'
+        # A denied redirect is not a reusable successful acquisition.
+        meta['status']=None
     meta_path.write_text(json.dumps(meta,ensure_ascii=False,indent=2),encoding='utf8')
     return meta
 

@@ -214,5 +214,70 @@
       "https://www.va.gov/life-insurance/"
     ],
     "max_pages": 120
+  },
+  {
+    "id": "au_privatehealth_ombudsman",
+    "terms": "https://privatehealth.gov.au/footer/about/copyright.htm",
+    "terms_sha256": "6a944c7388ec291857b20ba5dda7392761d7c61adce59a637bc1143a74a51c0f",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-04T20:14:08.076619+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "Observed source copyright grant and exact linked CC BY3.0Australia deed permit copying/adaptation with attribution. Restrict to clearly government-authored static consumer explanatory prose for local noncommercial research; preserve source disclaimer, titles and notices, mark authored modifications. Source labels licence International but links AU3.0: mismatch retained, no4.0 upgrade. Additional site commercial-promotion/framing limits respected. No third-party insurer/PHIS/product data, images, logos, dynamic tools or restricted robots routes.",
+    "reuse_basis_type": "source_copyright_grant_and_exact_linked_cc_by_3_au_under_restricted_local_scope",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "source_license_literal_label": "Creative Commons Attribution3.0International licence",
+    "license_label_link_discrepancy": true,
+    "attribution": "Commonwealth of Australia, Private Health Insurance Ombudsman; page title/source URL/acquisition UTC; source-linked CC BY3.0AU; adapted question, changes indicated; no endorsement implied.",
+    "disclaimer_url": "https://privatehealth.gov.au/footer/about/disclaimer.htm",
+    "disclaimer_sha256": "c587791e72d5f2b3dc3bbd49da0a4c0cc6afa5479322b533c10b2a1f0b860e0e",
+    "preflight_record": "agent_new_sources08_preflight.json",
+    "preflight_record_sha256": "c151a7e0d6ad51680feb45f08707e0d8bf6b7b6c46e41be7b56ddbf2731f4aa2",
+    "rights_completion_record": "agent_new_sources08_rights_completion.json",
+    "rights_completion_sha256": "7f6ccb49f086dc2fd7c5df7848c76c70dd28b3b12ce685b183a4ba00e71cd742",
+    "allowed_hosts": [
+      "privatehealth.gov.au"
+    ],
+    "prefixes": [
+      "/health_insurance/",
+      "/faq.htm",
+      "/footer/glossary.htm"
+    ],
+    "excluded_prefixes": [
+      "/dynamic/",
+      "/healthinsurers/",
+      "/health_insurers/",
+      "/comparepolicies/",
+      "/footer/consultation/"
+    ],
+    "excluded_path_keywords": [
+      "calculator",
+      "compare",
+      "search",
+      "feedback",
+      "download",
+      "funddetails",
+      "phis",
+      "policyproduct"
+    ],
+    "robots_agents": [
+      "GPTBot",
+      "OAI-SearchBot",
+      "ChatGPT-User",
+      "ClaudeBot",
+      "Claude-User",
+      "PerplexityBot",
+      "Perplexity-User",
+      "Scrapy",
+      "FirecrawlAgent"
+    ],
+    "minimum_interval_seconds": 1.2,
+    "seeds": [
+      "https://privatehealth.gov.au/health_insurance/index.htm",
+      "https://privatehealth.gov.au/faq.htm",
+      "https://privatehealth.gov.au/footer/glossary.htm"
+    ],
+    "max_pages": 60,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false
   }
 ]

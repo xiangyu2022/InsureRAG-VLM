@@ -17,7 +17,8 @@
     "australia_apra",
     "us_tricare",
     "us_opm",
-    "us_va"
+    "us_va",
+    "au_privatehealth_ombudsman"
   ],
   "rationale": "Reserve the largest sufficiently diverse single-publisher FAQ pool for independent development; retain nine other approved publisher groups for test construction, including source-grounded authored cases from Canada and Alberta. Allocation uses source yield only, with no model task-performance measurements.",
   "conditions": [

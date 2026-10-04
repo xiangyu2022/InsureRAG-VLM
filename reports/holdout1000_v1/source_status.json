@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-10-04T19:48:11.699421+00:00",
+  "checked_utc": "2026-10-04T20:14:08.103157+00:00",
   "sources": [
     {
       "publisher": "texas_tdi",
@@ -852,6 +852,33 @@
       "local_review_record": "agent_new_sources06_preflight.json",
       "review_record_sha256": "8f502310294d750de4af77c54c570fe04eb2cd5896c677bf573d5cdfc4b61a79",
       "new_approved_source": false
+    },
+    {
+      "publisher": "au_privatehealth_ombudsman",
+      "jurisdiction": "AU-FED",
+      "seed_url": "https://privatehealth.gov.au/health_insurance/index.htm",
+      "status": "acquired_pending_extraction_content_history_review",
+      "reason": "Approved bounded static prose acquisition completed without access denial. New canonical extraction and content/history/family audits are pending; no acquired page implies accepted QA.",
+      "terms": {
+        "url": "https://privatehealth.gov.au/footer/about/copyright.htm",
+        "sha256": "6a944c7388ec291857b20ba5dda7392761d7c61adce59a637bc1143a74a51c0f",
+        "basis": "Observed source copyright grant and exact linked CC BY3.0Australia deed permit copying/adaptation with attribution. Restrict to clearly government-authored static consumer explanatory prose for local noncommercial research; preserve source disclaimer, titles and notices, mark authored modifications. Source labels licence International but links AU3.0: mismatch retained, no4.0 upgrade. Additional site commercial-promotion/framing limits respected. No third-party insurer/PHIS/product data, images, logos, dynamic tools or restricted robots routes."
+      },
+      "preflight_record_sha256": "c151a7e0d6ad51680feb45f08707e0d8bf6b7b6c46e41be7b56ddbf2731f4aa2",
+      "rights_completion_sha256": "7f6ccb49f086dc2fd7c5df7848c76c70dd28b3b12ce685b183a4ba00e71cd742",
+      "raw_redistribution_in_this_task": false,
+      "acquired_pages": 25,
+      "accepted_items": 0,
+      "acquisition_report_sha256": "4df346bd4e0c6aae6f0c8387edaa8d8f49ef51212df994616f6e2c466b1cb65d"
+    },
+    {
+      "publisher": "au_services_australia",
+      "jurisdiction": "AU-FED",
+      "seed_url": "https://www.servicesaustralia.gov.au/",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Authorized robots request timed out before policy retrieval. HTTP status unknown; no retry, alternative channel, terms/content fetch or approval.",
+      "local_review_record": "agent_new_sources08_preflight.json",
+      "review_record_sha256": "c151a7e0d6ad51680feb45f08707e0d8bf6b7b6c46e41be7b56ddbf2731f4aa2"
     }
   ],
   "excluded_previously_known": [
@@ -859,5 +886,6 @@
     "Washington OIC403",
     "All previously denied local memory/demo-upload paths"
   ],
-  "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items."
+  "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
+  "updated_utc": "2026-10-04T20:25:21.953083+00:00"
 }

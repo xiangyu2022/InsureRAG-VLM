@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-04T19:47:52.373089+00:00",
+  "updated_utc": "2026-10-04T20:26:10.633701+00:00",
   "scope": "Additional document-level conservative holds; existing triage exclusions still apply. Holds are not claims every passage is false. No held page is cleared by low similarity or an individually plausible answer.",
   "documents": {
     "1056fbb935fe0e7ae00642b4": {
@@ -807,6 +807,116 @@
       "review_record_sha256": "79de7109f0a692332be89162271f203ca9716088376727a4f107b9028e47efb7",
       "primary_verification_urls": [
         "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/choosing_a_policy"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "5e53d38c3dd5648885ad03b3": {
+      "publisher": "utah_uid",
+      "reason": "Explicit NAIC authorship and copyright notice. Utah state-source permission does not establish NAIC redistribution/derivative permission. Hold the whole document, not only the copyright span.",
+      "local_review_record": "agent_utah06_source_findings.json",
+      "review_record_sha256": "116c2bf15a8f3e20b8f442d59b936013ae20efdaa633fc1a875d569ae3cb3446",
+      "primary_verification_urls": [
+        "https://insurance.utah.gov/consumers/life-annuity/life-buyers-guide/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "0adcbba09c373f08a932c51c": {
+      "publisher": "utah_uid",
+      "reason": "The full page includes a named Associated Press business writer article dated June5,2000, followed by state purchase guidance. The third-party article is not Utah-authored. Conservative whole-document hold pending rights/section provenance review; no claim every later state paragraph is false.",
+      "local_review_record": "agent_utah06_source_findings.json",
+      "review_record_sha256": "116c2bf15a8f3e20b8f442d59b936013ae20efdaa633fc1a875d569ae3cb3446",
+      "primary_verification_urls": [
+        "https://insurance.utah.gov/consumers/life-annuity/annuities/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "d5b5bb793bb9e05486811382": {
+      "publisher": "utah_uid",
+      "reason": "Mixed page includes a NAIC consumer-research/education section and generic passages shared with the explicitly copyrighted NAIC guide. Full section-level authorship/reuse permission is unresolved. This is a conservative provenance hold, not a verified legal error or claim that the whole page is copyrighted NAIC text.",
+      "local_review_record": "agent_utah06_source_findings.json",
+      "review_record_sha256": "116c2bf15a8f3e20b8f442d59b936013ae20efdaa633fc1a875d569ae3cb3446",
+      "primary_verification_urls": [
+        "https://insurance.utah.gov/consumers/life-annuity/life-insurance/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "0efa114bafec058799c164c2": {
+      "publisher": "utah_uid",
+      "reason": "Full extension/conversion page relies on1997HIPAA framing and pre-existing-condition conversion provisions. No current authoritative verification performed in this local-only task. Not asserted as a confirmed legal error.",
+      "local_review_record": "agent_utah06_source_findings.json",
+      "review_record_sha256": "116c2bf15a8f3e20b8f442d59b936013ae20efdaa633fc1a875d569ae3cb3446",
+      "primary_verification_urls": [
+        "https://insurance.utah.gov/consumers/health-insurance/extension-conversion-rights/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "d9ae83a26fdfe067f509445c": {
+      "publisher": "wisconsin_oci",
+      "reason": "Unqualified statement that neither flood nor homeowners insurance covers sewer backup/sump overflow omits a direct-flood-causation exception found in accessible historical NFIP explanatory text. Same page broadly says foundation seepage would be covered by separate flood insurance, while cache excludes seepage/leaks. Scope/source truth pending; historical text is a conflict lead, not independently verified current law.",
+      "local_review_record": "agent_wi05_source_findings_01.json",
+      "review_record_sha256": "111a4ab783c49c99f42d8dd79854aea2335650b4bd3b14ed5313f3b19fcaa98f",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-240.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "61ec700e21178e66c7f86ebc": {
+      "publisher": "wisconsin_oci",
+      "reason": "Generic foundation seepage grouped with flooding and described as requiring special NFIP flood policy. Accessible cached NFIP explanation says seepage/leaks are not covered. Missing cause/qualifier makes standalone coverage gold unsafe pending scope adjudication; not independently verified current law.",
+      "local_review_record": "agent_wi05_source_findings_01.json",
+      "review_record_sha256": "111a4ab783c49c99f42d8dd79854aea2335650b4bd3b14ed5313f3b19fcaa98f",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/Disasters.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "98d9408c3b3b75088426ebf4": {
+      "publisher": "texas_tdi",
+      "reason": "Full page held: $60,000 described as multiple-car repair limit; local TDI 30/60/25 descriptions instead assign $60,000 to total injury liability and $25,000 to property damage.",
+      "local_review_record": "agent_tx05_source_findings.json",
+      "review_record_sha256": "3e58ccf49475840246038520f268f9c5cd650e174638694d7f6d12f5aa204c09",
+      "primary_verification_urls": [
+        "https://www.tdi.texas.gov/tips/car-insurance.html"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "4876805eb407f602930bc157": {
+      "publisher": "texas_tdi",
+      "reason": "Full page conservative hold: unqualified absence-of-TDI/DOI marker implies self-funded classification and generic DOL jurisdiction over self-funded plans are not sufficiently scoped. Existing related whole-page hold6bfb51177e81e67b7d92c930 records ERISA/DOL population concerns. This is a scope concern, not a new externally verified legal finding.",
+      "local_review_record": "agent_tx05_source_findings.json",
+      "review_record_sha256": "3e58ccf49475840246038520f268f9c5cd650e174638694d7f6d12f5aa204c09",
+      "primary_verification_urls": [
+        "https://www.tdi.texas.gov/pubs/consumer/cb022.html"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "a5a06addfecb52dda7611f5c": {
+      "publisher": "alabama_doi",
+      "reason": "UNRESOLVED_RULE_SCOPE: General filing page expressly excludes assistance when the consumer has an attorney. Life & Health handling page requests retained-attorney details and broadly says it will intervene. Asking for attorney details may support intake/triage rather than permission to assist represented consumers, so this is not a proved logical contradiction or current-law error. Conservative temporary document-level hold pending reconciliation; not a claim every passage is false.",
+      "local_review_record": "agent_alabama06_independent_review.json",
+      "review_record_sha256": "881fce911c528ed00ff19f30a185743ee79d573b3d5da4470dfbc2cd7c4a29fc",
+      "primary_verification_urls": [
+        "https://aldoi.gov/Consumers/FileComplaint.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "c4fd014dde2d8e7aaa3faf88": {
+      "publisher": "alabama_doi",
+      "reason": "UNRESOLVED_RULE_SCOPE: General filing page expressly excludes assistance when the consumer has an attorney. Life & Health handling page requests retained-attorney details and broadly says it will intervene. Asking for attorney details may support intake/triage rather than permission to assist represented consumers, so this is not a proved logical contradiction or current-law error. Conservative temporary document-level hold pending reconciliation; not a claim every passage is false.",
+      "local_review_record": "agent_alabama06_independent_review.json",
+      "review_record_sha256": "881fce911c528ed00ff19f30a185743ee79d573b3d5da4470dfbc2cd7c4a29fc",
+      "primary_verification_urls": [
+        "https://aldoi.gov/Consumers/HandleProblems.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "9b768a2fc5c0f7544bbb7890": {
+      "publisher": "alabama_doi",
+      "reason": "UNRESOLVED_RULE_SCOPE: Annuity Costs uses unqualified deferred-annuity interest guarantees and immediate-annuity exact-payment language; it also mentions variable-annuity fees. Annuity Options explicitly distinguishes guaranteed fixed-dollar payments from market-linked variable payouts. The texts establish a material product-scope ambiguity for universal guarantees, but do not independently establish that the writer intended variable contracts in every guarantee sentence. Conservative temporary document-level hold pending reconciliation; not a claim every passage is false.",
+      "local_review_record": "agent_alabama06_independent_review.json",
+      "review_record_sha256": "881fce911c528ed00ff19f30a185743ee79d573b3d5da4470dfbc2cd7c4a29fc",
+      "primary_verification_urls": [
+        "https://aldoi.gov/Consumers/AnnuityCosts.aspx"
       ],
       "status": "hold_pending_explicit_resolution"
     }

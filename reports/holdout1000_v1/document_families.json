@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-04T18:41:01.418006+00:00",
+  "updated_utc": "2026-10-04T20:27:26.055882+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -411,9 +411,10 @@
       "family_id": "family01_ny_healthcare_rights_parent",
       "document_ids": [
         "cce1bf0c5fc2792d1d0f946b",
-        "75380ee0a360f0f6d6bff618"
+        "75380ee0a360f0f6d6bff618",
+        "f4e4cb1c394cde1a64141374"
       ],
-      "relation": "substantive_shared_source_family_proposal"
+      "relation": "substantive_shared_source_family_with_linked_standard_form"
     },
     {
       "family_id": "family01_ny_healthy_ny_county_rates_2026",
@@ -474,6 +475,15 @@
         "f6dbbaadcfd19ff7d6d1fd25"
       ],
       "relation": "publication_template_or_version_series"
+    },
+    {
+      "family_id": "family_opm_fehb_lwop_military_compensation_continuation",
+      "document_ids": [
+        "28c0f1754c505a7868ae308e",
+        "2913aef34a7f255cafbd604b",
+        "63019828c11a635e1e42eb17"
+      ],
+      "relation": "Substantive repeated continuation/premium rules: LWOP-to-military and LWOP-to-compensation; connected source family via LWOP."
     }
   ],
   "document_text_sha256": {
@@ -626,12 +636,32 @@
     "f900b2307a9f9a32dcf6e0a4": "3eec0d36753accf57b20ebc74ae9c8490e8ea071a92adfef3fb888dff88e5c9c",
     "f9d382e4898103e28568893c": "b564800d676c6be0e31208856a33d4f023322665c5c0e82dd43acabbd801a384",
     "fdd34178c90ede0814490ca7": "9de44ea96019872ded067271ed6a0697e1f1a1ca458dfd5106762a0c2702e24f",
-    "ff74a2cd4340e659159fde46": "2a033fc7de065841fdbe53acc6578de440fb59f42f9ca9bb0bdc2692d4041235"
+    "ff74a2cd4340e659159fde46": "2a033fc7de065841fdbe53acc6578de440fb59f42f9ca9bb0bdc2692d4041235",
+    "f4e4cb1c394cde1a64141374": "659970bed2b9e68de4a01733c9a0356db9ae603002c963c33d39d6e4bb4717f6",
+    "28c0f1754c505a7868ae308e": "01a6c83d11aacbd990f3f37083bb5ac88e27ec64b3a4261acdef3505929fdcad",
+    "2913aef34a7f255cafbd604b": "af7bfeef0ec68058e26bf5897ff7e737cae365103c751f1314c73355fd5e4496",
+    "63019828c11a635e1e42eb17": "4e17ea5b307c2d89842a3229e52c479b364c6dead1d95a20afa06d53c496f5ec"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
     "Common navigation/footer alone is insufficient to merge families.",
     "Shared rule reservations remain separate from document-family grouping.",
     "Future additions and revisions require updated family review."
+  ],
+  "additional_review_records": [
+    {
+      "local_review_record": "agent_pdf_form01_review.json",
+      "sha256": "9db5833a529257908beb73d6af738a6ba1ed3643421980c201e8ce87a6c77d67",
+      "new_document_id": "f4e4cb1c394cde1a64141374",
+      "split": "test",
+      "reason": "Linked detailed form shares existing healthcare-rights family; no new publisher or family."
+    },
+    {
+      "local_review_record": "agent_opm07_family_followup.json",
+      "sha256": "1b8b982ee489604c1b41c861f35d7cb7c7055a9a2dfe164b53811d78403d122c",
+      "family_id": "family_opm_fehb_lwop_military_compensation_continuation",
+      "split": "test",
+      "reason": "Substantive repeated continuation/premium rules: LWOP-to-military and LWOP-to-compensation; connected source family via LWOP."
+    }
   ]
 }
