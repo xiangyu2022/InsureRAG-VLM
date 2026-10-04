@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-10-04T17:02:45.668505+00:00",
+  "checked_utc": "2026-10-04T19:48:11.699421+00:00",
   "sources": [
     {
       "publisher": "texas_tdi",
@@ -793,12 +793,13 @@
       "publisher": "manitoba_insurance",
       "jurisdiction": "CA-MB",
       "seed_url": "https://www.gov.mb.ca/finance/cca/insurance/",
-      "status": "pending_source_or_terms_review",
-      "reason": null,
-      "terms": null,
-      "access_denial_urls": [],
-      "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+      "status": "robots_named_agent_disallowed",
+      "reason": "ChatGPT-User and GPTBot explicitly disallowed. Initial helper incorrectly checked only wildcard and made one seed request, redirected to resource-not-found page. No content adopted; stopped, preserved incident and corrected named-agent checks.",
+      "preflight_sha256": "1100e5dffd4873406d4d1f52b5d64abfe02c4fa79ab3a1b995e659d7ba3ba7c3",
+      "access_denial_urls": [
+        "https://www.gov.mb.ca/robots.txt"
+      ],
+      "previous_status": "pending_source_or_terms_review"
     },
     {
       "publisher": "novascotia_insurance",
@@ -810,6 +811,47 @@
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
       "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "us_ssa",
+      "jurisdiction": "US",
+      "seed_url": "https://www.ssa.gov/robots.txt",
+      "status": "blocked_http_403",
+      "reason": "Live robots request returned403; no source pages adopted, no retry or alternate access. Reuse permission unverified.",
+      "preflight_sha256": "da06f1bf118ee9a065cc134af64f96869fa43ab750626d120b73e160c928067d",
+      "access_denial_urls": [
+        "https://www.ssa.gov/robots.txt"
+      ]
+    },
+    {
+      "publisher": "ontario_fsra",
+      "jurisdiction": "CA-ON",
+      "seed_url": "https://www.fsrao.ca/consumers/auto-insurance",
+      "status": "held_conditional_terms_applicability",
+      "reason": "Consumer paths allowed by relevant robots groups and five bounded samples read. FSRA links Ontario noncommercial unaltered-copy terms but also asserts own copyright; applicability interpretation held for explicit resolution. No approval or bulk acquisition. Initial crawl-delay lapse preserved; subsequent requests respected delay. Claims page also has unresolved coverage/fault wording.",
+      "preflight_sha256": "1100e5dffd4873406d4d1f52b5d64abfe02c4fa79ab3a1b995e659d7ba3ba7c3",
+      "access_denial_urls": []
+    },
+    {
+      "publisher": "florida_dfs",
+      "jurisdiction": "US-FL",
+      "seed_url": "https://www.myfloridacfo.com/",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Robots URL inaccessible through authorized tool; HTTP status unknown. Stopped without retries or alternate channels.",
+      "local_review_record": "agent_new_sources06_preflight.json",
+      "review_record_sha256": "8f502310294d750de4af77c54c570fe04eb2cd5896c677bf573d5cdfc4b61a79",
+      "new_approved_source": false
+    },
+    {
+      "publisher": "michigan_difs",
+      "jurisdiction": "US-MI",
+      "seed_url": "https://www.michigan.gov/difs/consumers",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Official policies prohibit automated access and restrict copying/derivatives absent legal permission or written authorization. Stopped immediately after terms; no bulk acquisition.",
+      "terms_url": "https://www.michigan.gov/som/footer/policies",
+      "local_review_record": "agent_new_sources06_preflight.json",
+      "review_record_sha256": "8f502310294d750de4af77c54c570fe04eb2cd5896c677bf573d5cdfc4b61a79",
+      "new_approved_source": false
     }
   ],
   "excluded_previously_known": [

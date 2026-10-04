@@ -48,12 +48,13 @@ def evaluate_calculation(formula, operands):
     if not result.is_finite():raise ValueError('Non-finite result')
     return result
 
-def verify_item(item,documents,source_approvals):
+def verify_item(item,documents,source_approvals,held_documents=None):
     errors=[]
     for key in ['id','publisher','jurisdiction','insurance_type','question','answer','document_group','origin']:
         if not _text(item.get(key)):errors.append('missing_'+key)
     if item.get('task') not in TASKS:errors.append('invalid_task')
     if item.get('publisher') not in source_approvals:errors.append('unapproved_source')
+    if item.get('document_group') not in documents:errors.append('unknown_document_group')
     evidence=item.get('evidence',[])
     if not isinstance(evidence,list) or not evidence:errors.append('missing_evidence');evidence=[]
     texts=[];signatures=[]
@@ -61,6 +62,7 @@ def verify_item(item,documents,source_approvals):
         if not isinstance(span,dict):errors.append('invalid_evidence');continue
         document=documents.get(span.get('document_id'))
         if document is None:errors.append('unknown_evidence_document');continue
+        if span.get('document_id') in (held_documents or {}):errors.append('held_evidence_document')
         if not _text(document.get('source_title')) or not _text(document.get('acquired_utc')) or not str(document.get('source_url','')).startswith('https://'):
             errors.append('incomplete_document_provenance')
         if not re.fullmatch('[0-9a-f]{64}',str(document.get('source_sha256',''))):errors.append('missing_source_snapshot_hash')
@@ -72,6 +74,7 @@ def verify_item(item,documents,source_approvals):
         text=document['text'][start:end];texts.append(text);signatures.append((span['document_id'],start,end))
         if not text.strip() or digest(text)!=span.get('sha256'):errors.append('evidence_hash_mismatch')
     if len(signatures)!=len(set(signatures)):errors.append('duplicate_evidence')
+    if item.get('document_group') not in {signature[0] for signature in signatures}:errors.append('document_group_not_cited')
     for i,(doc,s,e) in enumerate(signatures):
         if any(doc==d and max(s,a)<min(e,b) for d,a,b in signatures[:i]):errors.append('overlapping_evidence')
     if any('\ufffd' in item.get(k,'') for k in ['question','answer']):errors.append('text_encoding_error')
@@ -90,6 +93,8 @@ def verify_item(item,documents,source_approvals):
         if review.get('each_evidence_necessary') is not True:errors.append('multi_evidence_necessity_unreviewed')
     if item.get('task')=='numerical_calculation':
         calculation=item.get('calculation',{})
+        if not _text(calculation.get('retrieval_required_rule')) or review.get('numeric_retrieval_necessary') is not True:
+            errors.append('calculation_retrieval_necessity_unreviewed')
         for key in ['formula','unit','rounding','independent_verification']:
             if not _text(calculation.get(key)):errors.append('calculation_missing_'+key)
         operands=calculation.get('operands',[])
@@ -118,30 +123,85 @@ def verify_item(item,documents,source_approvals):
         if missing.get('empty_context_only') is not False:errors.append('empty_context_shortcut')
     return sorted(set(errors))
 
-def verify_dataset(test,dev,documents,source_approvals,protocol):
+def reviewed_families(documents,registry):
+    """Resolve reviewed families from source hashes, never trust item labels."""
+    parent={key:key for key in documents}
+    def find(key):
+        while parent[key]!=key:
+            parent[key]=parent[parent[key]];key=parent[key]
+        return key
+    def merge(a,b):
+        a,b=find(a),find(b)
+        if a!=b:parent[max(a,b)]=min(a,b)
+    groups=registry['groups'];hashes=registry['document_text_sha256']
+    if not isinstance(groups,list) or not isinstance(hashes,dict):raise ValueError('Malformed family registry')
+    for group in groups:
+        members=group['document_ids']
+        if not isinstance(members,list) or not members:raise ValueError('Empty or malformed family')
+        for key in members:
+            if key not in documents or hashes.get(key)!=digest(documents[key]['text']):
+                raise ValueError('Family source absent or changed')
+        for key in members[1:]:merge(members[0],key)
+    # Identical source bodies must share a family even if the manual registry omitted an alias.
+    identical={}
+    for key,document in documents.items():
+        text_hash=digest(document['text'])
+        if text_hash in identical:merge(key,identical[text_hash])
+        else:identical[text_hash]=key
+    return {key:find(key) for key in parent}
+
+
+def verify_dataset(test,dev,documents,source_approvals,protocol,*,document_holds=None,document_families=None):
     errors=[];details={};combined=[('test',r) for r in test]+[('dev',r) for r in dev]
+    required=protocol.get('require_source_review_registries',False)
+    if required and (document_holds is None or document_families is None):errors.append('missing_source_review_registries')
+    held={};family_map=None
+    if document_holds is not None:
+        try:
+            held=document_holds['documents']
+            if not isinstance(held,dict) or any(not _text(v.get('reason')) for v in held.values()):raise ValueError('Malformed holds')
+        except (KeyError,TypeError,ValueError,AttributeError):
+            errors.append('invalid_document_hold_registry');held={}
+    if document_families is not None:
+        try:family_map=reviewed_families(documents,document_families)
+        except (KeyError,TypeError,ValueError,AttributeError):errors.append('invalid_document_family_registry')
     ids=[r.get('id') for _,r in combined]
     if len(set(ids))!=len(ids):errors.append('duplicate_or_cross_split_item_ids')
     for split,rows in [('test',test),('dev',dev)]:
         for row in rows:
-            issues=verify_item(row,documents,source_approvals)
+            issues=verify_item(row,documents,source_approvals,held)
+            if family_map is not None and row.get('document_family') not in {None,family_map.get(row.get('document_group'))}:
+                issues.append('document_family_assignment_mismatch')
             if issues:details[split+':'+str(row.get('id'))]=issues
     if details:errors.append('item_quality_gate_failed')
     for key in ['publisher','document_group']:
         if {r.get(key) for r in test}&{r.get(key) for r in dev}:errors.append('cross_split_'+key)
+    def family(row):
+        if family_map is not None:return family_map.get(row.get('document_group'),row.get('document_group'))
+        return row.get('document_family') or row.get('document_group')
+    if {family(r) for r in test}&{family(r) for r in dev}:errors.append('cross_split_document_family')
     split_evidence=[]
     for rows in [test,dev]:
         split_evidence.append({span.get('document_id') for row in rows for span in row.get('evidence',[])})
     if split_evidence[0]&split_evidence[1]:errors.append('cross_split_evidence_document')
+    if family_map is not None and {family_map.get(k,k) for k in split_evidence[0]}&{family_map.get(k,k) for k in split_evidence[1]}:
+        errors.append('cross_split_evidence_family')
     if {normalize(r['question']) for r in test}&{normalize(r['question']) for r in dev}:errors.append('cross_split_question_duplicate')
     if len(test)<protocol['target_test_accepted']:errors.append('test_count_below_target')
     if len(dev)<protocol['target_dev_accepted']:errors.append('dev_count_below_target')
-    publishers=Counter(r.get('publisher') for r in test);groups=Counter(r.get('document_group') for r in test)
+    publishers=Counter(r.get('publisher') for r in test);groups=Counter(family(r) for r in test)
     targets=protocol['source_targets']
     if len(publishers)<targets['minimum_independent_test_publishers']:errors.append('too_few_test_publishers')
     if publishers and max(publishers.values())/len(test)>targets['maximum_publisher_fraction']:errors.append('publisher_overrepresentation')
     if len(groups)<targets['minimum_test_document_groups']:errors.append('too_few_document_groups')
     if groups and max(groups.values())>targets['maximum_questions_per_document_group']:errors.append('document_overrepresentation')
+    dev_targets=protocol.get('dev_source_targets',{})
+    dev_groups=Counter(family(r) for r in dev)
+    if len(dev_groups)<dev_targets.get('minimum_document_groups',0):errors.append('too_few_dev_document_groups')
+    if dev_groups and max(dev_groups.values())>dev_targets.get('maximum_questions_per_document_group',float('inf')):errors.append('dev_document_overrepresentation')
+    dev_tasks=Counter(r.get('task') for r in dev)
+    for task,target in protocol.get('dev_task_minimums',{}).items():
+        if dev_tasks[task]<target:errors.append('dev_task_count_below_target:'+task)
     tasks=Counter(r.get('task') for r in test)
     for task,target in protocol['test_task_targets'].items():
         if tasks[task]<target:errors.append('task_count_below_target:'+task)
@@ -155,5 +215,6 @@ def verify_dataset(test,dev,documents,source_approvals,protocol):
         if reviewed/len(rows)<.25:errors.append('insufficient_ordinary_review:'+str(stratum))
     return {'passed':not errors,'errors':errors,'item_errors':details,'test_n':len(test),'dev_n':len(dev),
             'publishers':dict(publishers),'tasks':dict(tasks),'document_groups':len(groups),
+            'document_group_count_basis':'Hash-validated registry and exact-body aliases' if family_map is not None else 'Legacy item labels; production protocol requires source registries.',
             'accepted_test_items':len(test) if not errors else 0,
             'review_label':'Automated gates plus recorded agent content review; not human/expert adjudication.'}

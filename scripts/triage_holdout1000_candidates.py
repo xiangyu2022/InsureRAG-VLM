@@ -16,7 +16,8 @@ class Components:
         if a!=b:self.parent[max(a,b)]=min(a,b)
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--snapshot',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--semantic',type=Path);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--snapshot',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--semantic',type=Path)
+    p.add_argument('--document-holds',type=Path,default=ROOT/'reports/holdout1000_v1/document_holds.json');a=p.parse_args()
     if a.output.exists():raise ValueError('Use a fresh triage output directory')
     rows=[json.loads(l) for l in (a.snapshot/'candidates.jsonl').read_text(encoding='utf8').splitlines()]
     docs={r['id']:r for r in map(json.loads,(a.snapshot/'documents.jsonl').read_text(encoding='utf8').splitlines())}
@@ -24,6 +25,10 @@ def main():
     candidates_hash=hashlib.sha256((a.snapshot/'candidates.jsonl').read_bytes()).hexdigest()
     assert exact['candidate_file_sha256']==near['input_sha256']['candidates']==candidates_hash
     assignment=json.loads((ROOT/'reports/holdout1000_v1/split_assignment.json').read_text())
+    hold_registry=json.loads(a.document_holds.read_text(encoding='utf8'))
+    document_holds=hold_registry['documents']
+    if not isinstance(document_holds,dict) or any(not re.fullmatch('[0-9a-f]{24}',key) or not value.get('reason') for key,value in document_holds.items()):
+        raise ValueError('Invalid document hold registry')
     splits={pub:split for split in ['test','dev'] for pub in assignment[split+'_publishers']}
     history={r['id'] for r in exact['rows'] if r['excluded_from_independent_holdout']}|{r['id'] for r in near['rows'] if r['historical_flag']}
     semantic=json.loads(a.semantic.read_text()) if a.semantic else None
@@ -31,6 +36,14 @@ def main():
         assert candidates_hash in semantic['candidate_file_sha256'].values(),'Semantic audit uses different candidate snapshot'
         history.update(r['id'] for r in semantic['rows'] if r['flag_for_review'] or r['candidate_truncated'])
     families=Components(docs);by_text=defaultdict(list)
+    family_registry_path=ROOT/'reports/holdout1000_v1/document_families.json'
+    family_registry=json.loads(family_registry_path.read_text(encoding='utf8'))
+    for group in family_registry['groups']:
+        members=group['document_ids']
+        for key in members:
+            if key not in docs or docs[key]['normalized_text_sha256']!=family_registry['document_text_sha256'][key]:
+                raise ValueError('Reviewed family document absent or changed: '+key)
+        for key in members[1:]:families.merge(members[0],key)
     for d in docs.values():by_text[d['normalized_text_sha256']].append(d['id'])
     for group in by_text.values():
         for key in group[1:]:families.merge(group[0],key)
@@ -70,6 +83,7 @@ def main():
         representative=ranked[0]['id']
         for r in members:
             reasons=[];text=docs[r['document_group']]['text'];title=r['source_title'];url=r['source_url']
+            if r['document_group'] in document_holds:reasons.append('document_quality_or_reuse_hold_registry')
             if contaminated:reasons.append('history_flag_in_near_duplicate_component')
             if cross_split:reasons.append('duplicate_component_crosses_publisher_split')
             if families.find(r['document_group']) in historical_families:reasons.append('historical_source_url_in_document_family')
@@ -107,7 +121,9 @@ def main():
       'duplicate_components':len(groups),'evidence_overlap_edges':overlap_edges,'nonrepresentatives':nonrepresentatives,
       'queue_by_split':dict(Counter(r['split'] for r in queue)),'queue_by_publisher':dict(Counter(r['publisher'] for r in queue)),
       'hold_reason_counts':dict(Counter(reason for r in disposition for reason in r['reasons'])),
-      'candidate_file_sha256':candidates_hash,'semantic_audit_sha256':hashlib.sha256(a.semantic.read_bytes()).hexdigest() if a.semantic else None,'accepted_test_items':0,
+      'candidate_file_sha256':candidates_hash,'semantic_audit_sha256':hashlib.sha256(a.semantic.read_bytes()).hexdigest() if a.semantic else None,
+      'document_hold_registry_sha256':hashlib.sha256(a.document_holds.read_bytes()).hexdigest(),'accepted_test_items':0,
+      'document_family_registry_sha256':hashlib.sha256(family_registry_path.read_bytes()).hexdigest(),
       'limitations':['Queue membership is not source-currency, permission, semantic novelty or content clearance.','Threshold/component exclusions are intentionally conservative and may drop substantively different questions.','No document cap, publisher fraction or task quota is fulfilled merely by this queue.']}
     (a.output/'summary.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf8');print(json.dumps(result,indent=2))
 

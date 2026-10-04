@@ -4,12 +4,19 @@ This directory records dataset construction, **not a completed 1,000-question
 benchmark or a model-quality improvement result**. No final benchmark answer
 inference has run. Earlier exposed holdouts remain regression-only.
 
-`protocol.json` fixes the 1,000-test/150-dev goals, task coverage, source balance,
+`protocol.json` fixes the 1,000-test minimum and a source-separated dev minimum
+of 50 (150 preferred), task coverage, source balance,
 review requirements and freeze conditions. `stage1_progress.json` and later
 numbered progress files are timestamped checkpoints; do not sum their counts.
 Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
+
+The latest published construction checkpoint is `stage6_progress.json`:
+183 provisional test and 37 dev records, with **zero frozen/accepted test
+records**. It supersedes stage5 counts after additional source and scope
+revocations. Subsequent content reviews can revoke provisional items; consult
+the latest numbered checkpoint rather than adding counts across reports.
 
 Source access/reuse decisions are in `source_status.json` and
 `source_approvals.json`. An approval permits the stated local research scope,
@@ -29,12 +36,19 @@ remain excluded.
    URLs. `audit_holdout1000_near_duplicates.py` screens questions and evidence
    against accessible historical strings and all prior exposed source FAQs.
    Its character-cosine approximation is deliberately conservative.
+   `audit_holdout1000_containment.py` additionally scans every contiguous
+   normalized evidence window inside long historical records. Default evidence
+   mode requires `--documents` and source-span metadata; `--text-mode` is
+   explicitly unverified generic screening. Shared windows
+   require review and absence of matches does not prove independence.
 4. `audit_holdout1000_semantic_questions.py` uses a frozen local BGE model and
    verifies cached history/model hashes. It reports nearest historical and
    cross-document candidates, including neighbors below the flag threshold.
    Similarity scores are review aids, not proof of independence.
 5. `triage_holdout1000_candidates.py` preserves document/split/duplicate groups,
-   history exclusions and unresolved source defects. Its output is a review
+   history exclusions and unresolved source defects, including the hashed
+   `document_holds.json` registry and hash-bound `document_families.json`.
+   Its output is a review
    queue, never accepted data. Context repairs and authored cases need their
    own evidence/history/semantic audit after revision.
 6. Record individual content, source-currency, authorship and duplicate
@@ -42,8 +56,11 @@ remain excluded.
    full review. Enforce corpus-wide refusal gaps and necessary, nonredundant
    evidence for multi-evidence tasks. Recompute numeric formulas with the
    restricted Decimal evaluator and check the applicability of their rules.
+   A numerical item must require an identified rule or rate to be retrieved;
+   questions supplying all rules and inputs are held as arithmetic-only.
 7. `holdout_quality.verify_dataset` must pass all item, split, coverage and
-   review gates before freezing corpus/manifests/ledger/configuration hashes
+   review gates with explicit source registries before freezing
+   corpus/manifests/ledger/configuration hashes
    and running the fixed final benchmark. No test-directed tuning.
 
 `review_holdout1000_candidates_local.py` produces advisory source-FAQ screening

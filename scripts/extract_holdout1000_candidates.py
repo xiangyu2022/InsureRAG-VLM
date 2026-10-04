@@ -6,12 +6,28 @@ import argparse,hashlib,json,re,sys
 from collections import Counter,defaultdict
 from datetime import datetime,timezone
 from pathlib import Path
+from urllib.parse import urlsplit
 from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from scripts.prepare_source_faq import clean,norm
 from src.insurerag_vlm.source_faq_extraction import extract_original_faq,content_root
 LOCAL=ROOT/'reports/holdout1000_v1/local'
 def sha(raw):return hashlib.sha256(raw).hexdigest()
+
+def html_rejection_reason(raw,metadata):
+    """Reject non-HTML downloads before parsing; never guess spreadsheet text."""
+    if raw.lstrip().startswith(b'%PDF'):return 'pdf_not_html'
+    if raw.startswith((b'PK\x03\x04',b'PK\x05\x06',b'PK\x07\x08',b'\xd0\xcf\x11\xe0',b'\x89PNG',b'GIF87a',b'GIF89a',b'\xff\xd8\xff')):
+        return 'binary_signature_not_html'
+    suffix=Path(urlsplit(metadata.get('final_url') or metadata.get('url','')).path).suffix.lower()
+    if suffix in {'.xlsx','.xls','.xlsm','.doc','.docx','.ppt','.pptx','.zip','.csv','.json','.png','.jpg','.jpeg','.gif','.pdf'}:
+        return 'non_html_download_extension'
+    media=(metadata.get('content_type') or '').split(';',1)[0].strip().lower()
+    if media and media not in {'text/html','application/xhtml+xml'}:return 'non_html_content_type'
+    if b'\x00' in raw:return 'binary_nul_requires_dedicated_decoder'
+    if not re.search(br'<(?:!doctype\s+html|html\b|head\b|body\b|main\b|article\b|div\b|h[1-6]\b|p\b)',raw[:65536],re.I):
+        return 'html_markup_not_detected'
+    return None
 
 def extract(root=LOCAL):
     registry={r['id']:r for r in json.loads((ROOT/'reports/holdout1000_v1/source_candidates.json').read_text(encoding='utf8'))}
@@ -21,7 +37,8 @@ def extract(root=LOCAL):
         if m.get('status')!=200:continue
         raw=(path.parent/m['artifact']).read_bytes()
         if sha(raw)!=m['sha256']:raise ValueError('Source bytes changed: '+str(path))
-        if raw.startswith(b'%PDF'):errors.append({'url':m['url'],'reason':'pdf_not_html'});continue
+        rejection=html_rejection_reason(raw,m)
+        if rejection:errors.append({'url':m['url'],'final_url':m.get('final_url'),'source_sha256':m['sha256'],'reason':rejection});continue
         soup=BeautifulSoup(raw,'html.parser');main=content_root(soup)
         text=clean(main.get_text(' ',strip=True));url=m.get('final_url',m['url']);doc_id=sha(url.encode())[:24]
         title=m.get('title','');h1=main.find('h1')

@@ -55,6 +55,9 @@ def test_calculation_requires_independently_checked_result_and_operand_provenanc
       'result':'100','verified_result':'99'}
     assert 'calculation_result_mismatch' in verify_item(item,docs,sources)
     item['calculation']['verified_result']='100'
+    assert 'calculation_retrieval_necessity_unreviewed' in verify_item(item,docs,sources)
+    item['calculation']['retrieval_required_rule']='The deductible must be retrieved from the synthetic policy.'
+    item['content_review']['numeric_retrieval_necessary']=True
     assert verify_item(item,docs,sources)==[]
     item['calculation']['operands'][1]['value']='50'
     assert 'calculation_formula_mismatch' in verify_item(item,docs,sources)
@@ -94,3 +97,60 @@ def test_subthreshold_or_cross_split_rows_never_report_accepted_thousand():
     report=verify_dataset([item],[other],docs,sources,protocol)
     assert report['accepted_test_items']==0 and not report['passed']
     assert {'test_count_below_target','cross_split_publisher','cross_split_document_group','cross_split_evidence_document','cross_split_question_duplicate'}<=set(report['errors'])
+
+
+def test_dev_size_does_not_replace_document_and_task_coverage():
+    item,docs,sources=fixture()
+    dev=[{**deepcopy(item),'id':str(i)} for i in range(50)]
+    protocol={'target_test_accepted':0,'target_dev_accepted':50,'source_targets':{'minimum_independent_test_publishers':0,
+      'maximum_publisher_fraction':1,'minimum_test_document_groups':0,'maximum_questions_per_document_group':20},
+      'test_task_targets':{},'dev_source_targets':{'minimum_document_groups':10,'maximum_questions_per_document_group':20},
+      'dev_task_minimums':{'ordinary_qa':10,'numerical_calculation':10,'multi_evidence':10,'insufficient_evidence':10}}
+    report=verify_dataset([],dev,docs,sources,protocol)
+    assert 'dev_count_below_target' not in report['errors']
+    assert 'too_few_dev_document_groups' in report['errors']
+    assert 'dev_document_overrepresentation' in report['errors']
+    assert 'dev_task_count_below_target:numerical_calculation' in report['errors']
+    assert 'dev_task_count_below_target:ordinary_qa' not in report['errors']
+
+
+def test_alias_documents_do_not_hide_family_leakage_or_inflate_coverage():
+    item,docs,sources=fixture();item['document_family']='shared'
+    second=deepcopy(item);second.update(id='second',document_group='alias')
+    dev=deepcopy(item);dev.update(id='dev',publisher='other',document_group='different',question='A different synthetic question?')
+    dev['evidence']=[]
+    protocol={'target_test_accepted':0,'target_dev_accepted':0,'source_targets':{'minimum_independent_test_publishers':0,
+      'maximum_publisher_fraction':1,'minimum_test_document_groups':2,'maximum_questions_per_document_group':20},'test_task_targets':{}}
+    report=verify_dataset([item,second],[dev],docs,sources,protocol)
+    assert 'cross_split_document_family' in report['errors']
+    assert 'cross_split_document_group' not in report['errors']
+    assert 'too_few_document_groups' in report['errors']
+    assert report['document_groups']==1
+
+
+def test_final_registry_gates_cannot_be_bypassed_with_missing_or_forged_item_labels():
+    item,docs,sources=fixture()
+    protocol={'target_test_accepted':1,'target_dev_accepted':0,'source_targets':{'minimum_independent_test_publishers':1,
+      'maximum_publisher_fraction':1,'minimum_test_document_groups':1,'maximum_questions_per_document_group':20},
+      'test_task_targets':{},'require_source_review_registries':True}
+    families={'groups':[],'document_text_sha256':{}}
+    assert 'missing_source_review_registries' in verify_dataset([item],[],docs,sources,protocol)['errors']
+    result=verify_dataset([item],[],docs,sources,protocol,document_holds={'documents':{}},document_families=families)
+    assert result['passed']
+    blocked=verify_dataset([item],[],docs,sources,protocol,document_holds={'documents':{'doc':{'reason':'Synthetic unresolved source defect'}}},document_families=families)
+    assert 'held_evidence_document' in blocked['item_errors']['test:one']
+    item['document_family']='invented'
+    result=verify_dataset([item],[],docs,sources,protocol,document_holds={'documents':{}},document_families=families)
+    assert 'document_family_assignment_mismatch' in result['item_errors']['test:one']
+    assert result['accepted_test_items']==0
+
+
+def test_secondary_evidence_cannot_hide_a_held_source_or_alias_family():
+    from src.insurerag_vlm.holdout_quality import reviewed_families
+    item,docs,sources=fixture();docs['alias']={**docs['doc'],'id':'alias'}
+    item['evidence']=[{**item['evidence'][0],'document_id':'alias'}]
+    assert 'held_evidence_document' in verify_item(item,docs,sources,{'alias'})
+    assert 'document_group_not_cited' in verify_item(item,docs,sources)
+    mapping=reviewed_families(docs,{'groups':[],'document_text_sha256':{}})
+    assert mapping['doc']==mapping['alias']
+    with pytest.raises(ValueError):reviewed_families(docs,{'groups':[{'document_ids':['doc','alias']}],'document_text_sha256':{'doc':'wrong','alias':'wrong'}})

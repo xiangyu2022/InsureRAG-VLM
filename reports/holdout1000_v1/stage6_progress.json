@@ -1,0 +1,174 @@
+{
+  "created_utc": "2026-10-04T19:51:40.096783+00:00",
+  "status": "CONSTRUCTION_IN_PROGRESS_NOT_ACCEPTED_BENCHMARK",
+  "supersedes_current_counts_in": "stage5_progress.json (timestamped137test/26dev checkpoint; not latest clearance)",
+  "previous_published_commit": "2c50f9a6eeec5a947fd2e77e63891303c280f75b",
+  "previous_exact_commit_ci": {
+    "run_id": 37223063176,
+    "conclusion": "success"
+  },
+  "provisional_item_gate_counts": {
+    "test": 183,
+    "dev": 37,
+    "total": 220
+  },
+  "accepted_test_items": 0,
+  "frozen": false,
+  "training_runs_this_construction": 0,
+  "final_qa_inference_runs": 0,
+  "current_validation_errors": [
+    "test_count_below_target",
+    "dev_count_below_target",
+    "publisher_overrepresentation",
+    "too_few_document_groups",
+    "dev_task_count_below_target:numerical_calculation",
+    "dev_task_count_below_target:multi_evidence",
+    "dev_task_count_below_target:insufficient_evidence",
+    "task_count_below_target:ordinary_qa",
+    "task_count_below_target:numerical_calculation",
+    "task_count_below_target:multi_evidence",
+    "task_count_below_target:insufficient_evidence"
+  ],
+  "item_errors": {},
+  "test_task_counts": {
+    "ordinary_qa": 137,
+    "insufficient_evidence": 8,
+    "multi_evidence": 26,
+    "numerical_calculation": 12
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 18,
+    "insufficient_evidence": 9,
+    "multi_evidence": 7,
+    "numerical_calculation": 3
+  },
+  "test_publishers": {
+    "northcarolina_doi": 7,
+    "canada_fcac": 10,
+    "newyork_dfs": 37,
+    "california_cdi": 15,
+    "wisconsin_oci": 11,
+    "utah_uid": 6,
+    "us_opm": 16,
+    "us_va": 21,
+    "us_tricare": 20,
+    "newjersey_dobi": 26,
+    "alberta_goa": 12,
+    "australia_apra": 2
+  },
+  "test_document_families": 71,
+  "revocations_since_stage5": {
+    "source_hold_test_items": 8,
+    "consumer_scope_test_items": 6,
+    "note": "Immutable prior pools preserved; counters are recomputed, not cumulative claims."
+  },
+  "batch07_08_review": {
+    "input_records": 65,
+    "retained_after_content_scope_holds": 56,
+    "holds": 9
+  },
+  "batch09_review": {
+    "input_records": 18,
+    "retained": 15,
+    "holds": 3,
+    "same_id_evidence_repairs": 1,
+    "same_id_repairs_counted_as_new_questions": 0,
+    "hold_reasons": [
+      "Redundant multi-evidence citation",
+      "Independent subquestions joined without necessary integration",
+      "Historical semantic overlap missed by automatic thresholds"
+    ]
+  },
+  "registry_counts": {
+    "document_holds": 90,
+    "reviewed_family_groups": 53,
+    "legacy_holds_added_to_final_registry": 27,
+    "additional_unresolved_source_pages": 3,
+    "legacy_and_additional30_reference_current_pool": 0
+  },
+  "extraction": {
+    "active_snapshot": "extraction_batch_08",
+    "documents": 1276,
+    "source_faq_candidates": 2036,
+    "non_html_xlsx_removed": 9,
+    "pending_pdf_addition": {
+      "snapshot": "extraction_batch_09",
+      "documents": 1277,
+      "added_pages": 2,
+      "official_blank_form_only": true,
+      "not_yet_in_current_provisional_corpus": true,
+      "no_new_publisher_or_family": true
+    }
+  },
+  "verification": {
+    "full_unit_suite": {
+      "passed": 434,
+      "skipped": 6,
+      "subtests_passed": 58,
+      "seconds": 6.78
+    },
+    "independent_code_review": "All4 original findings closed;35focused tests passed.",
+    "all_current_item_gates": "pass; dataset gates fail",
+    "combined_pool06_verified_containment": {
+      "items": 211,
+      "source_spans": 255,
+      "unique_windows": 14999,
+      "historical_strings": 724751,
+      "matched_windows": 0,
+      "interpretation": "No match is not proof of semantic independence; pool07 adds separately audited batch09 and removes6scope items."
+    },
+    "batch09_verified_containment": {
+      "source_spans": 27,
+      "matched_windows": 0,
+      "evidence_projection_verified": true
+    },
+    "windows_test_execution": "Authorized offline elevated run after sandbox temporary-directory ACL failure. No QA inference/network workload."
+  },
+  "ongoing_work": [
+    "Independent re-review of existing multi-evidence necessity and consumer scope; later findings can revoke provisional counts.",
+    "Additional VA/OPM/TRICARE/NY source-content review; pending candidates not counted.",
+    "Detailed PDF form text/page provenance prepared locally pending independent history/content audit."
+  ],
+  "access_and_publication": {
+    "new_source_approvals": 0,
+    "florida": "robots inaccessible; HTTP status unknown; stopped",
+    "michigan": "explicit automated-access/reuse restrictions; stopped",
+    "minnesota": "prior hold preserved; no new requests",
+    "pr_description": "Existing GitHub integration403 remains blocked; no alternative write channel used.",
+    "destination": "Existing draft PR8; no merge. Only code/tests/aggregate reports, no raw source/Q&A/evidence/weights."
+  },
+  "limits": [
+    "At least1000test and50dev with all task/source/family quotas still unmet;183/37 is provisional, frozen0.",
+    "All content review by Codex agents, not human or insurance-expert adjudication.",
+    "Known denied paths, unextracted historical PDFs and foundation pretraining remain unverified.",
+    "Automatic thresholds, full-window containment and top3 neighbor review cannot exclude all historical semantic overlap."
+  ],
+  "evidence_sha256": {
+    "provisional_item_pool_07.jsonl": "1f8f601f1eb03e40af1922271ee58395c784b2f3f9a08022b4490ce894b35b70",
+    "provisional_item_pool_07_validation.json": "6c039ad8d4100f83315de5a46284008f9b76186c1ea888484cde8894793fc558",
+    "review_pool_07_clearance_ledger.json": "1928a365ec5be8a213ac34a441b7b21f8b3f178c27083eaf3c39ef0cc61664b5",
+    "review_pool_06_clearance_ledger.json": "371fe15fffa7dc78b1854963551c8c051063b137d16ded3ec844305bdf93ae56",
+    "provisional_item_pool_06_containment.json": "5fbcda7c824da5a581f4334a98173067002abd20ca8eaf10cd5f7c112b30392e",
+    "agent_sem07_summary.json": "a02d70a086e5e4fc6a022eea1d3abb1ec5797bfed692a3e9a05b2b288e718645",
+    "agent_sem08_summary.json": "1fd321bad9d24195ee6604d1a89c4845f85c6179553b4f6c1049f890f8bbf528",
+    "agent_sem09_summary.json": "6fb0eb8fab4bffa6b691f76d9339d08567018642c233c3ea20f89262ae263a6f",
+    "agent_sem09_near_dispositions.json": "9ebaa27cdce970b769bb5ed0af133c04ccfef7903a23845d9cfd0814a3bcbac9",
+    "agent_ny06_independent01.json": "428d5f0549822994d376ed31bdc1f72948222178586a9d4661ebb4bfaa2fc97f",
+    "agent_scope07_08.json": "35a498dd0cdacca56f271cfea8f7eb043e62fd982f20ba51c07fab45dc231b45",
+    "agent_ny08_prior_scope_findings.json": "9f21eb633096616c76e12e97def6bf84119aa9d37670ff036b0fb1a7cc257f33",
+    "agent_va05_legacy_registry_gaps.json": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+    "stage6_hold_registry_merge.json": "2094274745c8d4cec893143ed0436162bea774fd09e5810ba75bf80458a58c3c",
+    "agent_new_sources06_preflight.json": "8f502310294d750de4af77c54c570fe04eb2cd5896c677bf573d5cdfc4b61a79",
+    "agent_pdf_form01_review.json": "9db5833a529257908beb73d6af738a6ba1ed3643421980c201e8ce87a6c77d67",
+    "triage_12/summary.json": "c7fed82448046dba269c82b9a077e669ffd272d4ee2415965061264e68203dfb"
+  },
+  "public_registry_sha256": {
+    "document_holds.json": "05beb36f01e215d291b70549f713024208961901eb264903baee2360f46367ec",
+    "document_families.json": "1fd37fcffcc5a7cda8dc439b3c73f920a95900b028653898e848d683efeb8527",
+    "protocol.json": "0039135884ead8091d3b8be849ebb472c2295862d9a8280711cc51550587074e"
+  },
+  "review_queue_not_accepted": {
+    "test": 474,
+    "dev": 170
+  }
+}
