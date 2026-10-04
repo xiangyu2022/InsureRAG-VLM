@@ -127,10 +127,11 @@ def run(args):
                        generation_options={k: protocol[k] for k in ('num_ctx', 'num_predict', 'temperature', 'seed')})
     write(args.output / 'environment.json', {'started_utc': datetime.now(timezone.utc).isoformat(),
           'model': client.backend_metadata(), 'before': baseline, 'diagnostic_protocol_sha256': digest(args.data / 'protocol.json'),
+          'prompt_mode': args.prompt_mode,
           'script_sha256': digest(Path(__file__)), 'answer_integration_sha256': digest(ROOT / 'scripts/answer_evidence_reranker.py')})
     for i, case in enumerate(cases):
         started = time.perf_counter()
-        try: result = answer_retrieval(retrieval[case['id']], client)
+        try: result = answer_retrieval(retrieval[case['id']], client, prompt_mode=args.prompt_mode)
         except Exception as exc:
             result = {'error': type(exc).__name__, 'message': str(exc), 'generation': client.backend_metadata()}
         row = {'id': case['id'], 'cohort': case['cohort'], **result, 'observed_resources': resources(args.base_url),
@@ -151,6 +152,7 @@ def main():
     a = subs.add_parser('run'); a.add_argument('--data', type=Path, required=True); a.add_argument('--model', required=True)
     a.add_argument('--expected-digest', required=True); a.add_argument('--base-url', required=True)
     a.add_argument('--ids'); a.add_argument('--output', type=Path, required=True)
+    a.add_argument('--prompt-mode', choices=['main', 'research'], default='main')
     args = p.parse_args(); (prepare if args.command == 'prepare' else run)(args)
 
 
