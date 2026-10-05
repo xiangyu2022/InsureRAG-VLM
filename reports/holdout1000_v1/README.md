@@ -12,26 +12,33 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage13_progress.json`:
-264 provisional test and 42 dev records, with **zero frozen/accepted test
-records**. A six-question cached-source trial retained five: two calculations,
-two multi-evidence questions and one ordinary question, all in TEST. One student
-enrollment draft was held because its classification evidence was not clearly
-necessary after the question stipulated an approved eligibility record.
-TEST covers 99 document families, four more than stage12. A three-document
-TRICARE Plus family was consolidated before validation. All 306 retained item
-gates pass; dataset size, task balance and the 100-family minimum still fail.
+The latest construction checkpoint is `stage15_progress.json`:
+271 provisional test and 42 dev records, with **zero frozen/accepted test
+records**. Stage14 retained one of four pending drafts and held three for a
+temporal-applicability error, a refusal-task classification error and redundant
+multi-evidence. Stage15 retained six reviewed cached-source questions: one
+calculation, one multi-evidence question, two insufficient-evidence questions and
+two ordinary questions. Two are repaired successors; their defective predecessors
+stay excluded. The combined increase from stage13 is seven TEST questions.
 
-Only six new questions were encoded in one local model process and one forward
-batch. The 44,581 historical vectors and 2,554 previous candidate vectors/audit
-rows were reused. Thirteen affected existing-pool neighbor relations were
-reviewed without revocations. Source hashes and histories were checked against
-the unchanged 1,311-document snapshot. Both calculations received separate
-rational-arithmetic verification. A prior two-page source supplementation attempt
-stopped after one environment-proxy failure, with no HTTP response, source body,
-second-page request or retry. The retained questions use only existing sources.
-No training, paid service, additional agents or final QA inference occurred.
-Earlier checkpoints remain historical records; do not sum their counts.
+TEST still covers 99 document families. A newly used FCAC claim guide shares a
+substantive escalation rule with its complaint guide, so those pages were grouped
+conservatively rather than counted as two independent families. All 313 retained
+item gates pass. Dataset size, task quotas and the 100-family minimum still fail;
+729 further independent TEST questions are needed before the size gate alone can
+pass. No final benchmark inference or training has run.
+
+The resumption reused the already completed four-draft audits. Stage15 encoded
+only six new questions in one local model process and one forward batch, reusing
+44,581 history vectors and 2,564 existing candidate vectors/audit rows. Four
+affected existing-pool neighbor relations were reviewed without revocations.
+Raw/normalized source hashes, the full cached corpus for the two refusal gaps,
+and the original table alignment for the multi-evidence question were checked.
+Independent rational arithmetic confirmed the revised numeric result after its
+source-rule applicability was checked. The existing quality and containment
+tests passed (29 tests). No source network requests, paid services, additional
+agents, proxy changes or raw-data publication occurred. Earlier checkpoints are
+historical records; do not sum their counts.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
@@ -77,6 +84,13 @@ remain excluded.
    full review. Enforce corpus-wide refusal gaps and necessary, nonredundant
    evidence for multi-evidence tasks. Recompute numeric formulas with the
    restricted Decimal evaluator and check the applicability of their rules.
+   Check scenario ages/dates against a rule's effective date and transitional
+   provisions; correct arithmetic cannot repair an inapplicable rate.
+   A question asking whether a public rule guarantees an outcome can be ordinary
+   QA even when the actual private outcome is unknown. Refusal tasks must ask for
+   that unresolved outcome. For multi-evidence tasks, remove each claimed
+   necessary span in turn: if another span already settles the operative answer,
+   hold the task classification.
    A numerical item must require an identified rule or rate to be retrieved;
    questions supplying all rules and inputs are held as arithmetic-only.
 7. `holdout_quality.verify_dataset` must pass all item, split, coverage and

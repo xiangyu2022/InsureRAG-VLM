@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T17:17:55.268730+00:00",
+  "updated_utc": "2026-10-05T20:17:33.356293+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -624,6 +624,18 @@
         "stage13_source_family_review.json"
       ],
       "review_record_sha256": "8ddc49fbfe761fd9b683f54b3da199cda13ccd1cb409add71d1720b265c26b27"
+    },
+    {
+      "family_id": "family_fcac_claims_and_complaint_routing",
+      "document_ids": [
+        "3fc110d67d2aa9f632679a25",
+        "afb106b4ecec1eff1a61b8c6"
+      ],
+      "relation": "Shared substantive life/health claim escalation rule: dissatisfied claimants contact OLHI or provincial/territorial regulator after insurer response; explicit reciprocal guide links. Conservative family grouping despite no shared16word window.",
+      "local_review_records": [
+        "stage15_source_decisions.json"
+      ],
+      "review_record_sha256": "369213d16b8090d18021ee1401c431c9c49f7b26fbd26ec87894f78e010acb09"
     }
   ],
   "document_text_sha256": {
@@ -830,7 +842,9 @@
     "dc7f93bd4750731701287125": "b7e9b708a089516ce583ef4d441984c4bc166022314e3a34648c043b24bb001c",
     "86aac5ed684acffa0c820f59": "f7b30ac6c51e347800b401f1333a4a2097efbf791bd4abd5db811e69e72a84ab",
     "8bdd6825187bbb0cbfc049da": "bb8487118e09c1522a3d6203115fc7796db03d1887f03b6afe40c44851d42e8b",
-    "d8887b02e2933896d13bfcb6": "21489e2a42ca100014aa175c1f572b953d995ddf64c9c84521945f87eb40eb64"
+    "d8887b02e2933896d13bfcb6": "21489e2a42ca100014aa175c1f572b953d995ddf64c9c84521945f87eb40eb64",
+    "3fc110d67d2aa9f632679a25": "871b6d0ec8bb2ee482a0961e7529d6e18365223e3acb5d1a22a5d812fca617e7",
+    "afb106b4ecec1eff1a61b8c6": "e0624b3c8f8f393b0d9df92fcfe0d4071f8c66f72b55d3bcb40b9867c364f769"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
