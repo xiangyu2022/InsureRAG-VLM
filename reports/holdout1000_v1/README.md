@@ -12,34 +12,37 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage20_progress.json`:
-304 provisional TEST and 42 DEV records, with **zero frozen/accepted records**.
-Stage19's corporate-filing scope error was revoked first (304 to303); stage20
-then retained one of six new drafts (303 to304). These are distinct changes.
-The revoked question has not been restored.
+The latest construction checkpoint is `stage21_progress.json`:
+309 provisional TEST and 42 DEV records, with **zero frozen/accepted records**.
+Stage21 retained five of nine cached-source drafts. Four remain held for a
+historically exposed formulary-exception mechanism, an active-pool street-hail
+duplicate, a numeric question that supplies its own selection rule, and a
+multi-evidence question that pre-assumes the relevant eligibility.
 
-Stage20 retained a charter-dependent surplus-lines tax exemption refusal.
-Five drafts remain held: two belong to a confirmed historical NC residential
-guide family, two repeat exposed insurance mechanisms, and one fails strict
-multi-evidence necessity. All six exact shared historical passages were read;
-the broader1,066 alias/passage matches are not claimed entirely reviewed.
-The three related NC guides are now recorded in the source-hold registry.
-Earlier revocations and holds remain in force.
+The retained ordinary questions address mandatory-benefit boundaries and
+specific sharing-economy coverage distinctions. Existing NY healthcare-rights
+and infertility guides were conservatively joined; three WI sharing/transition
+guides form another shared-text family. The total remains 100 TEST families.
+The two college drafts require source-version and question repair before any
+fresh clearance. Earlier holds and revocations, including stage19's corporate
+filing question and the historically exposed NC residential family, remain.
 
-All 346 retained item gates pass across 100 TEST document families. Another
-696 independent TEST questions are needed, with DEV size and task deficits
-also unresolved. No freeze, final inference, training or test-directed tuning
-has occurred. Review is a single sequential Codex workflow, not expert or
-human adjudication. Six new candidate vectors were encoded in one local
-forward batch;44,581 history vectors and2,622 prior candidate rows were reused.
-All31 targeted historical texts and6changed active neighbors were reviewed.
-All29 targeted quality and containment tests passed. No new source requests,
+All 351 retained item gates pass. 691 independent TEST questions are still needed;
+DEV size and task quotas are also unmet. No freeze, final benchmark inference,
+training or test-directed tuning has occurred. Review is a single sequential
+Codex workflow, not expert or human adjudication.
+
+Only 9 new vectors were encoded in one local forward batch. 44,581 history vectors
+and 2,628 old candidate audit rows were reused. Review covered 40 targeted historical
+texts, 12 changed active neighbors and source-family relationships. The broader
+296-match focused search was selectively read, not claimed entirely reviewed.
+All 29 targeted quality and containment tests passed. No new source requests,
 paid services, additional agents or raw-data publication occurred.
 
-Commit `58ae73d` passed all five CI jobs in run37379746613. Subsequent commits
-require separate exact-head verification. Private local ledgers retain the
-prior records and hash links. The PR-description integration403 restriction
-remains binding.
+Commit `36de138` passed all five CI jobs in run37381957396. Subsequent commits
+require separate exact-head verification. Private ledgers preserve prior
+records and hash links. The PR-description integration403 restriction remains
+binding.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
