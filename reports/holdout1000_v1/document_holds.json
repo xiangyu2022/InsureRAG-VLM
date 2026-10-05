@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T14:47:23.510175+00:00",
+  "updated_utc": "2026-10-05T15:30:03.256873+00:00",
   "scope": "Additional document-level conservative holds; existing triage exclusions still apply. Holds are not claims every passage is false. No held page is cleared by low similarity or an individually plausible answer.",
   "documents": {
     "1056fbb935fe0e7ae00642b4": {
@@ -967,7 +967,7 @@
     },
     "2e2d21051c4130dd824266ad": {
       "publisher": "texas_tdi",
-      "reason": "Spanish text explicitly says incrementos de50000 hasta un m\u00e1ximo de400000 for the same active-duty scope. Fullpage adds no historical qualifier. It repeats the actual conflict, so hold is directly evidenced, not inherited from its English family member.",
+      "reason": "Spanish text explicitly says incrementos de50000 hasta un máximo de400000 for the same active-duty scope. Fullpage adds no historical qualifier. It repeats the actual conflict, so hold is directly evidenced, not inherited from its English family member.",
       "local_review_record": "agent_texas10_ny10_independent_source_family_review.json",
       "review_record_sha256": "2ea7afe7649a05a169f138a05163403aa74811d80b3f40400954f7ab0cdd153f",
       "status": "hold_pending_explicit_resolution",
@@ -979,6 +979,42 @@
       "reason": "The full page includes a substantial2025vehicle symbol table explicitly compiled from the ISO Rating Symbol programme. Agency prose and the derived table are mixed. Current DFS source approval permits noncommercial unaltered reproduction with attribution except item-specific restrictions, but no record here establishes whether that permission extends to the ISO-derived table. Preserve whole-page hold pending root permission adjudication rather than extract adjacent prose to evade it.",
       "local_review_record": "agent_texas10_ny10_independent_source_family_review.json",
       "review_record_sha256": "2ea7afe7649a05a169f138a05163403aa74811d80b3f40400954f7ab0cdd153f",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
+    },
+    "29d23c743edd9fa357f6d60c": {
+      "publisher": "us_usda_rma",
+      "reason": "Unresolved MCO coverage-band discrepancy between CLIP and MCO source pages; whole-document content hold.",
+      "local_review_record": "stage9_rma_final_review.json",
+      "review_record_sha256": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
+    },
+    "676d0c50e4b73f02a4b70059": {
+      "publisher": "us_usda_rma",
+      "reason": "Unresolved margin-trigger denominator inconsistency (expected margin versus expected revenue) and cross-source coverage-band discrepancy.",
+      "local_review_record": "stage9_rma_final_review.json",
+      "review_record_sha256": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
+    },
+    "ab17dc9e7eac9543630fc557": {
+      "publisher": "us_usda_rma",
+      "reason": "Unresolved TVS revision form identity: Nursery Value Report appears where application/valuation use Turfgrass Value Report; no silent form substitution.",
+      "local_review_record": "stage9_rma_final_review.json",
+      "review_record_sha256": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
+    },
+    "8dc7c0b0431e73885f8fca5b": {
+      "publisher": "us_usda_rma",
+      "reason": "Growing Interval II worked example has contradictory seed-purchase-year alignment between table, narrative and final expected-yield line; no selective acceptance pending resolution.",
+      "local_review_record": "stage9_rma_final_review.json",
+      "review_record_sha256": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098",
       "status": "hold_pending_explicit_resolution",
       "scope": "direct_whole_document_only",
       "primary_verification_urls": []

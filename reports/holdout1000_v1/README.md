@@ -12,12 +12,16 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage8_progress.json`:
-221 provisional test and 40 dev records, with **zero frozen/accepted test
-records**. Completed batch13/14 reviews were recovered using unchanged hashes;
-three further source holds do not revoke current items. The239RMA candidates
-remain unaccepted pending full source/family/content review. Subsequent reviews
-can revoke provisional items. Consult the latest checkpoint rather than adding counts.
+The latest construction checkpoint is `stage9_progress.json`:
+249 provisional test and 40 dev records, with **zero frozen/accepted test
+records**. One reviewer read all nine cached RMA sources and retained 28 original
+FAQ items after source, family, content and historical-neighbor checks. Of the
+239 RMA candidates, 136 are held with four unresolved source pages and 75 remain
+reserved; these are not additional accepted questions. All eight affected old
+pool neighbors and 21 refusal-context deltas are resolved without revocations.
+Existing model audits were reused; no source acquisition or model run was added.
+Size, task-balance and document-family gates still fail. Subsequent reviews can
+revoke provisional items. Consult the latest checkpoint rather than adding counts.
 
 Source access/reuse decisions are in `source_status.json` and
 `source_approvals.json`. An approval permits the stated local research scope,

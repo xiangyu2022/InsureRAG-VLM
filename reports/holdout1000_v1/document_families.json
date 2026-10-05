@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T14:47:23.510175+00:00",
+  "updated_utc": "2026-10-05T15:30:03.256873+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -545,6 +545,35 @@
         "agent_texas10_ny10_independent_source_family_review.json"
       ],
       "review_record_sha256": "2ea7afe7649a05a169f138a05163403aa74811d80b3f40400954f7ab0cdd153f"
+    },
+    {
+      "family_id": "family_rma_deductible_inventory_contract_rules",
+      "document_ids": [
+        "29d23c743edd9fa357f6d60c",
+        "43d8a0f5e412251092f876cb",
+        "676d0c50e4b73f02a4b70059",
+        "8dc7c0b0431e73885f8fca5b",
+        "979a72b37ba4fcebbc3e0771",
+        "ab17dc9e7eac9543630fc557",
+        "df05e5ac0f8f4bd935546708"
+      ],
+      "relation": "Transitive explicit HIP-WI/STAX/CLIP/MCO deductible clauses, HIP-WI/OLO exclusivity and inventory loss/valuation rules; see bound local edge evidence.",
+      "local_review_records": [
+        "stage9_rma_final_review.json"
+      ],
+      "review_record_sha256": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098"
+    },
+    {
+      "family_id": "family_rma_prevented_planting_period",
+      "document_ids": [
+        "7f6ca9cbc95ab0a862a0d85d",
+        "869a066a4e605280475f0e25"
+      ],
+      "relation": "Explicit new/carryover sales-closing-date period rule repeated across prevented-planting and drought FAQs.",
+      "local_review_records": [
+        "stage9_rma_final_review.json"
+      ],
+      "review_record_sha256": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098"
     }
   ],
   "document_text_sha256": {
@@ -732,7 +761,16 @@
     "e2f1fdec937c0934a038f6a2": "c8090696b1576d52500ff36708b0ddfda98550d0e93c450722f3330bfd88ee96",
     "2e2d21051c4130dd824266ad": "ba59b9f7a84448d1ad43729f1f92b7fdecb69a1cfd8b07dcabc54902c106f21b",
     "7b1e9892aadeea719a76acca": "5c7cd43e8cc9753f113fc6fbc42ba057fbd6c6718acf4d300919114997048718",
-    "aa51567a6730653c4174a1d3": "054ffaaba6410380a6c8d10c9ca22719a813e40013bd73f27488f24d9e90865b"
+    "aa51567a6730653c4174a1d3": "054ffaaba6410380a6c8d10c9ca22719a813e40013bd73f27488f24d9e90865b",
+    "29d23c743edd9fa357f6d60c": "0c4f0d8ba452eac1e3bac4443869e709fe570e56f736ddd0c74b0c4d160f2bf1",
+    "43d8a0f5e412251092f876cb": "c2d8c09aacba1f5ddcc84bc1fc29451ffb40caa7280f75756794c86c19d79018",
+    "676d0c50e4b73f02a4b70059": "1553bcc406e4e22de541a9e6d20615a89067f69096d1397f95e676dcb474c501",
+    "7f6ca9cbc95ab0a862a0d85d": "237220abcb41b6b14b576c8738a63a2c38c448b1f46a7634fba982cfc01ef567",
+    "869a066a4e605280475f0e25": "25ad821dc843707a178250e3098afdceb7d5d30508d86c9a7799446eec24ab68",
+    "8dc7c0b0431e73885f8fca5b": "8ded4f28387db9ec82bdbdf24f601c37aaa2c6ea8be32ad4459a52953fe11fde",
+    "979a72b37ba4fcebbc3e0771": "ebab805f323f4243f6f2fff4b18f9adf5d64d39bd8d60556c96c102f3b6bea89",
+    "ab17dc9e7eac9543630fc557": "26fa2f97a6c7fa156925ca7d1640dde4bdcbe370939a9f87668092b8b707fa76",
+    "df05e5ac0f8f4bd935546708": "54919c148c638e3beb48d2628a068d426c76572f5f2f3dd4bb93dc0c47817523"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
