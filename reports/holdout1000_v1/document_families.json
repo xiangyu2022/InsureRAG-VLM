@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T21:14:31.214917+00:00",
+  "updated_utc": "2026-10-05T21:38:21.614328+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -625,19 +625,6 @@
       "review_record_sha256": "369213d16b8090d18021ee1401c431c9c49f7b26fbd26ec87894f78e010acb09"
     },
     {
-      "family_id": "family_tricare_deductible_cost_tables",
-      "document_ids": [
-        "47a580525e5fa02e51941055",
-        "13f20e198c0f2a53073a578d",
-        "d3612e6796c419cf2f917690"
-      ],
-      "relation": "Conservative grouping of deductible FAQ, POSdeductible explanation and CHCBPcost table: repeated300/600POSrule and same2026GroupBnetwork/nonnetwork deductible schedule; no extra family counted for shared cost-rule derivations.",
-      "local_review_records": [
-        "stage16_source_decisions.json"
-      ],
-      "review_record_sha256": "47f81836623a61a578cd679edb8105dda7b00bf15f0f67884c50fcb3a198eb9c"
-    },
-    {
       "family_id": "family_tricare_prime_remote_eligibility",
       "document_ids": [
         "110327eb7d2cf51114a6ad59",
@@ -677,6 +664,29 @@
         "stage17_source_decisions.json"
       ],
       "review_record_sha256": "6add7246d45e01d71404fbeec4018bea837ac0488ae0f74387fc1914f7a6047d"
+    },
+    {
+      "family_id": "family_tricare_medicare_enrollment_cost_rules",
+      "document_ids": [
+        "13f20e198c0f2a53073a578d",
+        "22ea5b12f2a9b6e6c702c0b3",
+        "22f5b037eabf0a40f4f7a09c",
+        "23824e5f976eb73f44af8e6d",
+        "2f453fe7066318a95555a979",
+        "47a580525e5fa02e51941055",
+        "63a436307cfebb02b13f9dcc",
+        "ad597857c8621ad38df9d0b5",
+        "c4dd70600857d4b7a4a94414",
+        "cf0169f30be0269f9a544acc",
+        "d3612e6796c419cf2f917690",
+        "ed043048703cf7d745d4d31d",
+        "ef05413fd4ea1cdc5d959f88"
+      ],
+      "relation": "Conservative closure of linked USFHP/TFL Medicare transition and payer guides, repeated Prime fee-waiver provisions, and shared comparison/cap/deductible tables. Comparison guide repeats substantive tables in prior deductible and cap guides. Existing deductible/POS/CHCBP links preserved transitively. Common publisher alone is not the grouping basis.",
+      "local_review_records": [
+        "stage18_source_decisions.json"
+      ],
+      "review_record_sha256": "a182afca6ee4116571d3db295f0dc9b3ad9fa08d32dc6b4ba3b8d1048acabeba"
     }
   ],
   "document_text_sha256": {
@@ -896,7 +906,17 @@
     "c67274b4f3deeb46ceedde8d": "5e511ea58ce64b8bde147634a4b4a1e7c354975dad24267d677aff9b6057273a",
     "1319da1cca4cb857930b06a4": "0a9a426aff622404914251190743e8d5f2bb15502cb1b3eff0b724d5632d4614",
     "8902ab10b793d9b78e61927a": "9d795c9b034bb37e50b6fe2fe1cad7246a13db2a6c568415d85264c455c8d241",
-    "e7bfc345bcd30d3936982dad": "f1e1d8d899e7baae7e3f007a3c03ebce7168c8fafc526017af320278f355fff4"
+    "e7bfc345bcd30d3936982dad": "f1e1d8d899e7baae7e3f007a3c03ebce7168c8fafc526017af320278f355fff4",
+    "22ea5b12f2a9b6e6c702c0b3": "181fbd750313c450ddc837d879faf75c9e9148660dcc3f3ef27f77be02473029",
+    "22f5b037eabf0a40f4f7a09c": "dc1652ce67494511be9b9dcefbb709cbe249fc7550859732299c9300e59ea7a6",
+    "23824e5f976eb73f44af8e6d": "4553038d0c0203621e970bc3ae2f9a913e154f5f40ea5bb3ac3771f29dae0a0a",
+    "2f453fe7066318a95555a979": "91e8c3aba802d557e1a01ad4af36c6c9627448de78d09626fc9c60b567294a14",
+    "63a436307cfebb02b13f9dcc": "c8a697062b2d5bbbba9538350044a1f3f2464c6a3f3077b0ee0d6e743f68308f",
+    "ad597857c8621ad38df9d0b5": "d96e83b8e238ed6fe9e8c51c15a8c02b33a3be815509c278c686430bdda720af",
+    "c4dd70600857d4b7a4a94414": "eff7b82f7d7aa9956fbbfc7f40fe59b0debd7a8c24b007d61e6d80d6fcd3473f",
+    "cf0169f30be0269f9a544acc": "9932fe36d929436b8e1f2a099f8b9acd50ee543af44b8d4f87fff0fa79a4fb3b",
+    "ed043048703cf7d745d4d31d": "ee0fdd1a475266d77f09011af38457ec9d5f78d6416fb11e9233ab1b314e59c5",
+    "ef05413fd4ea1cdc5d959f88": "dd2231f5b18b85f28a33c6eb26f13e3486b4c25addf39f0b446fdc20b9956596"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

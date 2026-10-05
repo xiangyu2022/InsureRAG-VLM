@@ -12,37 +12,36 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage17_progress.json`:
-291 provisional test and 42 dev records, with **zero frozen/accepted test
-records**. Stage17 retained eleven of thirteen cached-source drafts: two
-calculations, three multi-evidence questions, one insufficient-evidence question
-and five ordinary questions. Two drafts remain held because their information
-needs overlap existing or historical questions. The repaired location-condition
-question was independently audited; its withdrawn predecessor remains held.
+The latest construction checkpoint is `stage18_progress.json`:
+297 provisional TEST and 42 DEV records, with **zero frozen/accepted records**.
+Stage18 retained six of sixteen cached-source drafts: four ordinary questions,
+one calculation and one multi-evidence question. Six drafts remain held for an
+unresolved historical document-family/alias relationship; four others remain
+held for exposed or insufficiently independent information needs. Automated
+screening produced no new flags, demonstrating why content review remains
+necessary.
 
-All 333 retained item gates pass. TEST covers 99 document families after
-conservatively joining related VA service-life guides and preserving their
-existing bilingual TDI linkage. The previous 101-family count is superseded;
-family, dataset-size and task-quota gates still fail. Another 709 independent
-TEST questions are needed to reach the size minimum. No final benchmark
-inference, training or test-directed tuning has run.
+All 339 retained item gates pass. TEST covers 97 document families after
+conservative closure of linked TRICARE Medicare, enrollment and repeated cost
+table guides, preserving the existing deductible/POS/CHCBP relationship.
+Another 703 independent TEST questions are needed for the size minimum;
+task quotas, DEV size and the 100-family minimum also remain unmet. No final
+benchmark inference, training or test-directed tuning has run.
 
-Stage17 encoded thirteen new questions in one local process and one forward
-batch, reusing 44,581 history vectors and 2,581 existing candidate audit rows.
-Review covered 56 targeted historical texts, 29 focused history matches,
-13 changed active-pool neighbor relations, seven source-body hashes, source
-aliases, license records and refusal information gaps. Independent arithmetic
-also found and corrected stale verification metadata before item clearance.
-The lexical flag belongs to an excluded draft; the semantic pair is the repaired
-question and its excluded predecessor. Source requests, paid services,
-additional agents and raw-data publication remained zero.
+Sixteen new question vectors were encoded in one local process and one forward
+batch. All 44,581 history vectors and 2,594 previous candidate audit rows were
+reused. Review covered 76 targeted historical texts, ten changed active-pool
+neighbor records, source licenses, original table alignment and derivation
+relationships. The broader focused search was used selectively: it is not
+reported as entirely read. Source requests, paid services, additional agents
+and raw-data publication remained zero. Targeted quality and containment
+tests passed: 29 tests.
 
-The prior published commit `12a6154` has a terminal CI failure: two test jobs
-passed and three jobs were cancelled before execution. The cancellation cause
-is unavailable. An earlier failed-job rerun request returned integration
-permission 403; it was not bypassed. This is not an all-green result. Meaningful
-subsequent commits require their own exact-head CI. Earlier checkpoints are
-historical; do not sum their counts.
+The previous published commit `728e40d` passed all five CI jobs in run
+37374779493. This does not establish the status of a subsequent commit.
+Earlier CI cancellation failures and the rerun integration 403 remain in the
+historical records; no permission restriction was bypassed. Earlier construction
+counts are superseded, not additive.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
