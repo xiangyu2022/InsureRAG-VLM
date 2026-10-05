@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T21:38:21.614328+00:00",
+  "updated_utc": "2026-10-05T21:57:35.881802+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -687,6 +687,18 @@
         "stage18_source_decisions.json"
       ],
       "review_record_sha256": "a182afca6ee4116571d3db295f0dc9b3ad9fa08d32dc6b4ba3b8d1048acabeba"
+    },
+    {
+      "family_id": "family_nc_ut_title_search_ownership_guides",
+      "document_ids": [
+        "e2bd2d34476e4fcd0a09a138",
+        "ba4465d64673cd249321dba1"
+      ],
+      "relation": "Shared substantive title-search and ownership-protection explanations; conservatively one source family across NC and Utah. Utah page remains held for its own materially ambiguous exclusions lead; no Utah questions are released. NC guide separately reviewed and does not contain that broad erroneous lead.",
+      "local_review_records": [
+        "stage19_source_decisions.json"
+      ],
+      "review_record_sha256": "13764c140586bdce518d42b13917e95b90293545b9ad1d59cc31922c701718c3"
     }
   ],
   "document_text_sha256": {
@@ -916,7 +928,9 @@
     "c4dd70600857d4b7a4a94414": "eff7b82f7d7aa9956fbbfc7f40fe59b0debd7a8c24b007d61e6d80d6fcd3473f",
     "cf0169f30be0269f9a544acc": "9932fe36d929436b8e1f2a099f8b9acd50ee543af44b8d4f87fff0fa79a4fb3b",
     "ed043048703cf7d745d4d31d": "ee0fdd1a475266d77f09011af38457ec9d5f78d6416fb11e9233ab1b314e59c5",
-    "ef05413fd4ea1cdc5d959f88": "dd2231f5b18b85f28a33c6eb26f13e3486b4c25addf39f0b446fdc20b9956596"
+    "ef05413fd4ea1cdc5d959f88": "dd2231f5b18b85f28a33c6eb26f13e3486b4c25addf39f0b446fdc20b9956596",
+    "e2bd2d34476e4fcd0a09a138": "17bc3c3d1d2600c9a518c1854b0eebb9c2d577418f11fb57824ff4e671a42adf",
+    "ba4465d64673cd249321dba1": "8088badf816abdfda1137fb1d629a24514a08390e4058027c4df0c3a6405bfb7"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

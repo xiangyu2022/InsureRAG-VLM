@@ -12,36 +12,35 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage18_progress.json`:
-297 provisional TEST and 42 DEV records, with **zero frozen/accepted records**.
-Stage18 retained six of sixteen cached-source drafts: four ordinary questions,
-one calculation and one multi-evidence question. Six drafts remain held for an
-unresolved historical document-family/alias relationship; four others remain
-held for exposed or insufficiently independent information needs. Automated
-screening produced no new flags, demonstrating why content review remains
-necessary.
+The latest construction checkpoint is `stage19_progress.json`:
+304 provisional TEST and 42 DEV records, with **zero frozen/accepted records**.
+Stage19 retained seven of twelve cached-source drafts: three ordinary questions,
+two calculations, one multi-evidence question and one insufficient-evidence
+question. Five remain held for historical or active-pool overlap, or unresolved
+source-family authorship. Earlier source holds and the fifteen historical
+revocations remain in force.
 
-All 339 retained item gates pass. TEST covers 97 document families after
-conservative closure of linked TRICARE Medicare, enrollment and repeated cost
-table guides, preserving the existing deductible/POS/CHCBP relationship.
-Another 703 independent TEST questions are needed for the size minimum;
-task quotas, DEV size and the 100-family minimum also remain unmet. No final
-benchmark inference, training or test-directed tuning has run.
+All 346 retained item gates pass. Four additional TEST families bring the total
+to 101 after grouping shared NC/Utah title-guide explanations. The held Utah
+counterpart is not released or used as question evidence. NC's separate source
+review establishes that the counterpart's contradictory exclusion lead is absent
+from the NC guide. Another 696 independent TEST questions are needed; DEV size
+and task quotas also remain unmet. No freeze, final benchmark inference,
+training or test-directed tuning has occurred.
 
-Sixteen new question vectors were encoded in one local process and one forward
-batch. All 44,581 history vectors and 2,594 previous candidate audit rows were
-reused. Review covered 76 targeted historical texts, ten changed active-pool
-neighbor records, source licenses, original table alignment and derivation
-relationships. The broader focused search was used selectively: it is not
-reported as entirely read. Source requests, paid services, additional agents
-and raw-data publication remained zero. Targeted quality and containment
-tests passed: 29 tests.
+Only twelve new vectors were encoded, in one local process and one forward
+batch. All 44,581 history vectors and 2,610 old candidate audit rows were reused.
+Review covered 58 targeted historical texts, one changed active-pool neighbor,
+source-hash and license checks, and the relevant source-family and refusal-gap
+evidence. Broader focused searches were used selectively and are not claimed
+entirely read. All 29 targeted quality and containment tests passed.
+Source requests, paid services, additional agents and raw-data publication
+remained zero.
 
-The previous published commit `728e40d` passed all five CI jobs in run
-37374779493. This does not establish the status of a subsequent commit.
-Earlier CI cancellation failures and the rerun integration 403 remain in the
-historical records; no permission restriction was bypassed. Earlier construction
-counts are superseded, not additive.
+The previous published commit `2549511` passed all five CI jobs in run
+37377580101. Subsequent commits require separate exact-head verification.
+Earlier counts are superseded, not additive; the historical integration403
+restriction remains binding.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
