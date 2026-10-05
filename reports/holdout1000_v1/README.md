@@ -12,27 +12,29 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage24_progress.json`:
-321 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
-Stage24 retained four TEST drafts: one ordinary, two numerical and one
-multi-evidence task. These test retirement referral validity, same-year expense
-carryover, deactivation-related child coverage and resumed dental commitments.
-Two substantive source-version families were grouped conservatively.
+The latest construction checkpoint is `stage26_progress.json`:
+327 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
+Stage25 preselection added no questions after finding exposed source rules.
+Stage26 retained six of seven TEST drafts: two ordinary, one numerical,
+one multi-evidence and two insufficient-evidence tasks. Content review held
+the remaining disclosure question because its rule was already in historical
+development material, although automatic screening did not flag it.
 
-All 366 retained item gates pass across 103 TEST families. Another 679 independent
+All 372 retained item gates pass across 104 TEST families. Another 673 independent
 TEST questions are needed; DEV numerical, multi-evidence and size gates remain
-unmet. Prior source holds and item revocations remain. No freeze, final benchmark
-inference, training or test-directed tuning has occurred.
+unmet. Two substantive source families were grouped. Prior holds and revocations
+remain. No freeze, final benchmark inference, training or test-directed tuning
+has occurred.
 
-Four new vectors were encoded in one local batch; 44,581 history vectors and
-2,649 prior candidate rows were reused. Sequential Codex review covered 21 short
+Seven new vectors were encoded in one local batch; 44,581 history vectors and
+2,653 prior candidate rows were reused. Sequential Codex review covered 34 short
 historical texts in full, the relevant scope of one long unrelated letter,
-15 changed active records, all new nearest neighbors and source relationships.
+10 changed active records, new nearest neighbors and source relationships.
 This is not expert adjudication. All 29 targeted quality and containment tests
 passed. No new source requests, paid services, extra agents or raw-data
 publication occurred.
 
-Commit `b1f05fd` passed all five CI jobs in run37386934545. Subsequent commits
+Commit `a8280e1` passed all five CI jobs in run37388848217. Subsequent commits
 require separate exact-head verification. Private ledgers preserve prior records
 and hash links. The PR-description integration403 restriction remains binding.
 

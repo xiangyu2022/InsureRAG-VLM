@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T23:29:11.056527+00:00",
+  "updated_utc": "2026-10-05T23:45:43.369666+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -754,6 +754,30 @@
         "stage24_source_decisions.json"
       ],
       "review_record_sha256": "a76b65a71061bb44b3355f72f88974389a7db2a5e9739b1bba5b3aa66b92255c"
+    },
+    {
+      "family_id": "family_wi_mental_substance_mandates",
+      "document_ids": [
+        "ddd02e4db4c303ef2701f786",
+        "2d67584ec3c3bb5de04a5b63"
+      ],
+      "relation": "Shared substantive scope, treatment categories, parity limitations and conditional prescription coverage in mental-health and opioid/substance-use mandate guides.",
+      "local_review_records": [
+        "stage26_source_decisions.json"
+      ],
+      "review_record_sha256": "b82d7c59bcbf19878ff77fb408144b9e285b9fb283679c2989de6b5bbdee657d"
+    },
+    {
+      "family_id": "family_va_tsgli_overview_appeal",
+      "document_ids": [
+        "24da2efcf2e4ce12f2cffc5f",
+        "4edd300aed8081ae477cb935"
+      ],
+      "relation": "Overview and dedicated appeal page repeat the denial-letter-dependent appeal form and filing instructions; conservative same-program family.",
+      "local_review_records": [
+        "stage26_source_decisions.json"
+      ],
+      "review_record_sha256": "b82d7c59bcbf19878ff77fb408144b9e285b9fb283679c2989de6b5bbdee657d"
     }
   ],
   "document_text_sha256": {
@@ -1002,7 +1026,13 @@
     "cb39a916736289e894a44290": "c2de379fba7bc4eb49215fe229d997fc3d5d01a9c0089e19d32572695ea4657c",
     "a6c22196495fec67e0d6af80": "cf06576ee7c35e2dba794bbc9b16762d0b8c10e3ae8835086c12d33e7f6e0a40",
     "4320bcbd46b31d8e63c6398d": "513cba4ef1e1ecfc0b6b7250a3ee95936408b3d46eea9865c5dc83183f575cf9",
-    "629f187ac13306fe68d5f126": "6d45370538bcfe588d082847c63963eb5b2580219d0708a14ee796d9a98864cf"
+    "629f187ac13306fe68d5f126": "6d45370538bcfe588d082847c63963eb5b2580219d0708a14ee796d9a98864cf",
+    "ddaaa4ed53afdae1a3b070a0": "63943170939cc95c64c49aeca08241379a9105931adab0e54abadc17fe15406d",
+    "bd4797097d5c60f2f3f59941": "25a78c238d23c5b657852a6eb3a7f7bef2ec432c0e13ca7d8d7d7914767df110",
+    "24da2efcf2e4ce12f2cffc5f": "abae4742a82559657894e872615f3882a8069a62fa7ef83f508e823b600a9ed5",
+    "ddd02e4db4c303ef2701f786": "7caba8f467ab7f974c14d56c8777b45d77c334b6f351c0e47bfc12bf2b3e84ae",
+    "2d67584ec3c3bb5de04a5b63": "3c59e5917dfd88828494b487204581f999de15e785f2ff827dc5b7d23b1a11b6",
+    "4edd300aed8081ae477cb935": "c9de53569de08a2428a51351100ab4dba332eaf77e26d2a637424f6cd46ed860"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
