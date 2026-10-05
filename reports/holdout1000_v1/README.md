@@ -12,35 +12,34 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage19_progress.json`:
+The latest construction checkpoint is `stage20_progress.json`:
 304 provisional TEST and 42 DEV records, with **zero frozen/accepted records**.
-Stage19 retained seven of twelve cached-source drafts: three ordinary questions,
-two calculations, one multi-evidence question and one insufficient-evidence
-question. Five remain held for historical or active-pool overlap, or unresolved
-source-family authorship. Earlier source holds and the fifteen historical
-revocations remain in force.
+Stage19's corporate-filing scope error was revoked first (304 to303); stage20
+then retained one of six new drafts (303 to304). These are distinct changes.
+The revoked question has not been restored.
 
-All 346 retained item gates pass. Four additional TEST families bring the total
-to 101 after grouping shared NC/Utah title-guide explanations. The held Utah
-counterpart is not released or used as question evidence. NC's separate source
-review establishes that the counterpart's contradictory exclusion lead is absent
-from the NC guide. Another 696 independent TEST questions are needed; DEV size
-and task quotas also remain unmet. No freeze, final benchmark inference,
-training or test-directed tuning has occurred.
+Stage20 retained a charter-dependent surplus-lines tax exemption refusal.
+Five drafts remain held: two belong to a confirmed historical NC residential
+guide family, two repeat exposed insurance mechanisms, and one fails strict
+multi-evidence necessity. All six exact shared historical passages were read;
+the broader1,066 alias/passage matches are not claimed entirely reviewed.
+The three related NC guides are now recorded in the source-hold registry.
+Earlier revocations and holds remain in force.
 
-Only twelve new vectors were encoded, in one local process and one forward
-batch. All 44,581 history vectors and 2,610 old candidate audit rows were reused.
-Review covered 58 targeted historical texts, one changed active-pool neighbor,
-source-hash and license checks, and the relevant source-family and refusal-gap
-evidence. Broader focused searches were used selectively and are not claimed
-entirely read. All 29 targeted quality and containment tests passed.
-Source requests, paid services, additional agents and raw-data publication
-remained zero.
+All 346 retained item gates pass across 100 TEST document families. Another
+696 independent TEST questions are needed, with DEV size and task deficits
+also unresolved. No freeze, final inference, training or test-directed tuning
+has occurred. Review is a single sequential Codex workflow, not expert or
+human adjudication. Six new candidate vectors were encoded in one local
+forward batch;44,581 history vectors and2,622 prior candidate rows were reused.
+All31 targeted historical texts and6changed active neighbors were reviewed.
+All29 targeted quality and containment tests passed. No new source requests,
+paid services, additional agents or raw-data publication occurred.
 
-The previous published commit `2549511` passed all five CI jobs in run
-37377580101. Subsequent commits require separate exact-head verification.
-Earlier counts are superseded, not additive; the historical integration403
-restriction remains binding.
+Commit `58ae73d` passed all five CI jobs in run37379746613. Subsequent commits
+require separate exact-head verification. Private local ledgers retain the
+prior records and hash links. The PR-description integration403 restriction
+remains binding.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

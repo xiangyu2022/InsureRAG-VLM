@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T21:57:35.881802+00:00",
+  "updated_utc": "2026-10-05T22:20:12.094943+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -699,6 +699,19 @@
         "stage19_source_decisions.json"
       ],
       "review_record_sha256": "13764c140586bdce518d42b13917e95b90293545b9ad1d59cc31922c701718c3"
+    },
+    {
+      "family_id": "family_nc_residential_property_liability_guides",
+      "document_ids": [
+        "960ada919cc2a7b2f6511b59",
+        "1d83f5310d08905df3e773fb",
+        "39eacfbd826b7d382e5bcaf0"
+      ],
+      "relation": "Shared substantive personal-property, liability and medical-payments explanations across NC manufactured, basic homeowners and renters guides; conservative one-family assignment.",
+      "local_review_records": [
+        "stage20_source_decisions.json"
+      ],
+      "review_record_sha256": "263fd7e8b60881979c38c07ea194bda7db19803785c105b4ad7d4e6194c000f7"
     }
   ],
   "document_text_sha256": {
@@ -930,7 +943,10 @@
     "ed043048703cf7d745d4d31d": "ee0fdd1a475266d77f09011af38457ec9d5f78d6416fb11e9233ab1b314e59c5",
     "ef05413fd4ea1cdc5d959f88": "dd2231f5b18b85f28a33c6eb26f13e3486b4c25addf39f0b446fdc20b9956596",
     "e2bd2d34476e4fcd0a09a138": "17bc3c3d1d2600c9a518c1854b0eebb9c2d577418f11fb57824ff4e671a42adf",
-    "ba4465d64673cd249321dba1": "8088badf816abdfda1137fb1d629a24514a08390e4058027c4df0c3a6405bfb7"
+    "ba4465d64673cd249321dba1": "8088badf816abdfda1137fb1d629a24514a08390e4058027c4df0c3a6405bfb7",
+    "960ada919cc2a7b2f6511b59": "7338d5416aa3b30bb68fbb6a8f4e1b36d0972aba871007fa9460a198c18cd10c",
+    "1d83f5310d08905df3e773fb": "50bd76b99dd6d1eefee1c0ee135e04cbd983328a6ac53bff91cad72245d0c73a",
+    "39eacfbd826b7d382e5bcaf0": "cd2d189b0d115aad9baccbd6c19aeb0bcef7fea7fe10639282f32d3164d28eba"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

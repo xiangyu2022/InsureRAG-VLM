@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T15:30:03.256873+00:00",
+  "updated_utc": "2026-10-05T22:20:12.094943+00:00",
   "scope": "Additional document-level conservative holds; existing triage exclusions still apply. Holds are not claims every passage is false. No held page is cleared by low similarity or an individually plausible answer.",
   "documents": {
     "1056fbb935fe0e7ae00642b4": {
@@ -967,7 +967,7 @@
     },
     "2e2d21051c4130dd824266ad": {
       "publisher": "texas_tdi",
-      "reason": "Spanish text explicitly says incrementos de50000 hasta un máximo de400000 for the same active-duty scope. Fullpage adds no historical qualifier. It repeats the actual conflict, so hold is directly evidenced, not inherited from its English family member.",
+      "reason": "Spanish text explicitly says incrementos de50000 hasta un m\u00e1ximo de400000 for the same active-duty scope. Fullpage adds no historical qualifier. It repeats the actual conflict, so hold is directly evidenced, not inherited from its English family member.",
       "local_review_record": "agent_texas10_ny10_independent_source_family_review.json",
       "review_record_sha256": "2ea7afe7649a05a169f138a05163403aa74811d80b3f40400954f7ab0cdd153f",
       "status": "hold_pending_explicit_resolution",
@@ -1018,6 +1018,30 @@
       "status": "hold_pending_explicit_resolution",
       "scope": "direct_whole_document_only",
       "primary_verification_urls": []
+    },
+    "960ada919cc2a7b2f6511b59": {
+      "publisher": "northcarolina_doi",
+      "reason": "HISTORICAL_DERIVATIVE_FAMILY: basic-homeowners substantive text already exposed in NCarchive history; this guide belongs to the same conservatively grouped residential family. No clearance based only on changed URL or different candidate passage.",
+      "local_review_record": "stage20_source_decisions.json",
+      "review_record_sha256": "263fd7e8b60881979c38c07ea194bda7db19803785c105b4ad7d4e6194c000f7",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "1d83f5310d08905df3e773fb": {
+      "publisher": "northcarolina_doi",
+      "reason": "HISTORICAL_DERIVATIVE_FAMILY: basic-homeowners substantive text already exposed in NCarchive history; this guide belongs to the same conservatively grouped residential family. No clearance based only on changed URL or different candidate passage.",
+      "local_review_record": "stage20_source_decisions.json",
+      "review_record_sha256": "263fd7e8b60881979c38c07ea194bda7db19803785c105b4ad7d4e6194c000f7",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "39eacfbd826b7d382e5bcaf0": {
+      "publisher": "northcarolina_doi",
+      "reason": "HISTORICAL_DERIVATIVE_FAMILY: basic-homeowners substantive text already exposed in NCarchive history; this guide belongs to the same conservatively grouped residential family. No clearance based only on changed URL or different candidate passage.",
+      "local_review_record": "stage20_source_decisions.json",
+      "review_record_sha256": "263fd7e8b60881979c38c07ea194bda7db19803785c105b4ad7d4e6194c000f7",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
     }
   },
   "proposal_metadata": {
