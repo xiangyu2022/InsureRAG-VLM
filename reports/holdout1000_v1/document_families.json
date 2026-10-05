@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T23:08:52.791298+00:00",
+  "updated_utc": "2026-10-05T23:29:11.056527+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -730,6 +730,30 @@
         "stage21_source_decisions.json"
       ],
       "review_record_sha256": "716c6e50ede2afbd2a6aa8576128d299554bbb3ffc87062cb526cb578d54d15c"
+    },
+    {
+      "family_id": "family_tricare_retirement_enrollment",
+      "document_ids": [
+        "52f27a7b6e1be3e9ad43854d",
+        "4320bcbd46b31d8e63c6398d"
+      ],
+      "relation": "Shared substantive90day enrollment and12month retroactive coverage explanation; conservative retirement-guide family.",
+      "local_review_records": [
+        "stage24_source_decisions.json"
+      ],
+      "review_record_sha256": "a76b65a71061bb44b3355f72f88974389a7db2a5e9739b1bba5b3aa66b92255c"
+    },
+    {
+      "family_id": "family_tricare_deactivation_benefits",
+      "document_ids": [
+        "cb39a916736289e894a44290",
+        "629f187ac13306fe68d5f126"
+      ],
+      "relation": "Substantive same-program versions covering TAMP, TYA and resumed dental benefits; conservative family.",
+      "local_review_records": [
+        "stage24_source_decisions.json"
+      ],
+      "review_record_sha256": "a76b65a71061bb44b3355f72f88974389a7db2a5e9739b1bba5b3aa66b92255c"
     }
   ],
   "document_text_sha256": {
@@ -973,7 +997,12 @@
     "82583926145f7f6f0da1db58": "3dd89ed3c442cf1f982d18da3bc1cb16272f2b00900b24c41eeab708ce991e4a",
     "15e327b1a3dc1b2ff839a1f5": "1429c3647b7e5ce6e93ef0ad1b80b74edfb002bdb3a20d267206ea895b760605",
     "7681e290d1d4ce3694bddc4b": "1504221d477f775743dfe670140fa8e3886be7d3a83436b20e6a9f3639e5d570",
-    "0d0d5d0c545a843c935d3d64": "f84e4fbb17d0a98b0672a810821836da1c74cfe559dde03aac4fc16ef54b5a24"
+    "0d0d5d0c545a843c935d3d64": "f84e4fbb17d0a98b0672a810821836da1c74cfe559dde03aac4fc16ef54b5a24",
+    "52f27a7b6e1be3e9ad43854d": "ce54478ace3c916dc6f1fd5e4322e711dac6fc47c8b96b4cc97ac624a30b02f6",
+    "cb39a916736289e894a44290": "c2de379fba7bc4eb49215fe229d997fc3d5d01a9c0089e19d32572695ea4657c",
+    "a6c22196495fec67e0d6af80": "cf06576ee7c35e2dba794bbc9b16762d0b8c10e3ae8835086c12d33e7f6e0a40",
+    "4320bcbd46b31d8e63c6398d": "513cba4ef1e1ecfc0b6b7250a3ee95936408b3d46eea9865c5dc83183f575cf9",
+    "629f187ac13306fe68d5f126": "6d45370538bcfe588d082847c63963eb5b2580219d0708a14ee796d9a98864cf"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

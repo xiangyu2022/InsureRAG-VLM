@@ -12,29 +12,27 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage23_progress.json`:
-317 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
-Stage23 retained eight TEST drafts: five ordinary, one numerical, one
-multi-evidence and one insufficient-evidence task. The questions cover dated
-TRICARE support-benefit distinctions and Wisconsin life-insurance applicant
-rights. No general NY continuation draft was added while its related guide's
-known inconsistencies remain unresolved.
+The latest construction checkpoint is `stage24_progress.json`:
+321 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
+Stage24 retained four TEST drafts: one ordinary, two numerical and one
+multi-evidence task. These test retirement referral validity, same-year expense
+carryover, deactivation-related child coverage and resumed dental commitments.
+Two substantive source-version families were grouped conservatively.
 
-All 362 retained item gates pass across 101 TEST families. Another 683 independent
+All 366 retained item gates pass across 103 TEST families. Another 679 independent
 TEST questions are needed; DEV numerical, multi-evidence and size gates remain
-unmet. All prior source holds and item revocations, including stage22's exposed
-aggregate stop-loss mechanism, remain. No freeze, final benchmark inference,
-training or test-directed tuning has occurred.
+unmet. Prior source holds and item revocations remain. No freeze, final benchmark
+inference, training or test-directed tuning has occurred.
 
-Eight new vectors were encoded in one local forward batch; 44,581 history vectors
-and 2,641 prior candidate rows were reused. The sequential Codex review covered
-31 targeted historical texts, 13 changed active records and source relationships.
-A broader 98-match thematic search was selectively inspected, including 49 refined
-life/HIV snippets; it was not all read in full. This is not expert adjudication.
-All 29 targeted quality and containment tests passed. No new source requests,
-paid services, extra agents or raw-data publication occurred.
+Four new vectors were encoded in one local batch; 44,581 history vectors and
+2,649 prior candidate rows were reused. Sequential Codex review covered 21 short
+historical texts in full, the relevant scope of one long unrelated letter,
+15 changed active records, all new nearest neighbors and source relationships.
+This is not expert adjudication. All 29 targeted quality and containment tests
+passed. No new source requests, paid services, extra agents or raw-data
+publication occurred.
 
-Commit `b486fdd` passed all five CI jobs in run37386365792. Subsequent commits
+Commit `b1f05fd` passed all five CI jobs in run37386934545. Subsequent commits
 require separate exact-head verification. Private ledgers preserve prior records
 and hash links. The PR-description integration403 restriction remains binding.
 
