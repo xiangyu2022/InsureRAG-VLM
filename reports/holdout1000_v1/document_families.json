@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T16:30:30.369850+00:00",
+  "updated_utc": "2026-10-05T17:17:55.268730+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -611,6 +611,19 @@
         "stage11_final_review.json"
       ],
       "review_record_sha256": "378bbb998203330a280e7f43c974aac7084cd8b470bc190ed7d3e07fa02ae446"
+    },
+    {
+      "family_id": "family_tricare_plus_facility_enrollment",
+      "document_ids": [
+        "86aac5ed684acffa0c820f59",
+        "8bdd6825187bbb0cbfc049da",
+        "d8887b02e2933896d13bfcb6"
+      ],
+      "relation": "TRICARE Plus program guide, dedicated Medicare FAQ reiterating care at the enrolled facility, and dependent-parent guide establishing the specific Plus enrollment route. Conservative linked product family; generic program-navigation lists excluded.",
+      "local_review_records": [
+        "stage13_source_family_review.json"
+      ],
+      "review_record_sha256": "8ddc49fbfe761fd9b683f54b3da199cda13ccd1cb409add71d1720b265c26b27"
     }
   ],
   "document_text_sha256": {
@@ -814,7 +827,10 @@
     "7324d17d02258e442dc1c927": "e044a36d0196252ec2acff0cfcee4f8a2c791560c724c717a20fffe328235440",
     "edd5d96da90891b9d863fb8b": "072fc5f814c759304ba00958f0e27b4ab422b4a9067d923ee5735132ed4b92bd",
     "c47261ee09f87107dba642a9": "785ca17ffe84464251b3bbab07eb68c5ca275501f2915c7d55684d5dbdd5f471",
-    "dc7f93bd4750731701287125": "b7e9b708a089516ce583ef4d441984c4bc166022314e3a34648c043b24bb001c"
+    "dc7f93bd4750731701287125": "b7e9b708a089516ce583ef4d441984c4bc166022314e3a34648c043b24bb001c",
+    "86aac5ed684acffa0c820f59": "f7b30ac6c51e347800b401f1333a4a2097efbf791bd4abd5db811e69e72a84ab",
+    "8bdd6825187bbb0cbfc049da": "bb8487118e09c1522a3d6203115fc7796db03d1887f03b6afe40c44851d42e8b",
+    "d8887b02e2933896d13bfcb6": "21489e2a42ca100014aa175c1f572b953d995ddf64c9c84521945f87eb40eb64"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

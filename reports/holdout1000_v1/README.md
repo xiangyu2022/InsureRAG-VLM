@@ -12,24 +12,26 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage12_progress.json`:
-259 provisional test and 42 dev records, with **zero frozen/accepted test
-records**. A sequential eight-question trial retained six: two substantive
-information-gap refusals and four ordinary questions, all in TEST. Two daycare
-product/rating drafts were held for historical mechanism overlap despite zero
-automatic flags. TEST now covers 95 document families, a net increase of two.
-All 301 retained item gates pass; dataset size, family minimum and task-balance
-gates still fail. The first RMA family has reached its 20-item cap.
+The latest construction checkpoint is `stage13_progress.json`:
+264 provisional test and 42 dev records, with **zero frozen/accepted test
+records**. A six-question cached-source trial retained five: two calculations,
+two multi-evidence questions and one ordinary question, all in TEST. One student
+enrollment draft was held because its classification evidence was not clearly
+necessary after the question stipulated an approved eligibility record.
+TEST covers 99 document families, four more than stage12. A three-document
+TRICARE Plus family was consolidated before validation. All 306 retained item
+gates pass; dataset size, task balance and the 100-family minimum still fail.
 
-This trial reused 44,581 historical vectors, 2,546 previous candidate vectors
-and their historical audit rows. Only eight new questions were encoded in one
-local model process and one forward batch; no old vectors were bootstrapped
-again. Three affected existing-pool neighbor changes were reviewed without
-revocation. Source/evidence hashes and realistic gaps were checked against the
-unchanged 1,311-document corpus. A projection-schema rejection was corrected
-without changing question/evidence text or repeating model inference. No source
-acquisition, final QA inference, training, paid service or additional agents were
-used. Earlier checkpoints remain historical records; do not sum their counts.
+Only six new questions were encoded in one local model process and one forward
+batch. The 44,581 historical vectors and 2,554 previous candidate vectors/audit
+rows were reused. Thirteen affected existing-pool neighbor relations were
+reviewed without revocations. Source hashes and histories were checked against
+the unchanged 1,311-document snapshot. Both calculations received separate
+rational-arithmetic verification. A prior two-page source supplementation attempt
+stopped after one environment-proxy failure, with no HTTP response, source body,
+second-page request or retry. The retained questions use only existing sources.
+No training, paid service, additional agents or final QA inference occurred.
+Earlier checkpoints remain historical records; do not sum their counts.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
