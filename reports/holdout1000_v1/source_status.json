@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-10-04T20:14:08.103157+00:00",
+  "checked_utc": "2026-10-04T21:00:03.168271+00:00",
   "sources": [
     {
       "publisher": "texas_tdi",
@@ -879,6 +879,20 @@
       "reason": "Authorized robots request timed out before policy retrieval. HTTP status unknown; no retry, alternative channel, terms/content fetch or approval.",
       "local_review_record": "agent_new_sources08_preflight.json",
       "review_record_sha256": "c151a7e0d6ad51680feb45f08707e0d8bf6b7b6c46e41be7b56ddbf2731f4aa2"
+    },
+    {
+      "publisher": "us_usda_rma",
+      "jurisdiction": "US-FED",
+      "seed_url": "https://www.rma.usda.gov/about-crop-insurance/frequently-asked-questions",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": "Explicit RMA public-information copying/distribution permission, independently reviewed with copyright and linking policies. Limited to government-authored static explanatory HTML for crop/livestock insurance policyholders. Preserve attribution and crop-year/version. Exclude third-party/uncertain-authorship works, all image/media assets, PDFs, external sites, dynamic tools, general farm relief and corporate regulation. Per-page authorship and restrictions must be reviewed before QA use. No assertion that all RMA content is public domain.",
+      "terms": {
+        "url": "https://www.rma.usda.gov/about-rma/website-policies-important-links/privacy-policy",
+        "sha256": "0e62c7f8b8a00aa93e4790fa6cb31053f846e04d41b5d179057ca65bb84c94e7"
+      },
+      "local_review_record": "agent_usda_rma_preflight_independent01.json",
+      "review_record_sha256": "6b5a73f602cf0ef5d7377b6496ec37631c5b05fb6b3b828d6ad63a221847dddf",
+      "raw_redistribution_in_this_task": false
     }
   ],
   "excluded_previously_known": [

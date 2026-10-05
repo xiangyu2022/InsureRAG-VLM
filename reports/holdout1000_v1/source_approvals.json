@@ -279,5 +279,39 @@
     "max_pages": 60,
     "per_document_review_required": true,
     "raw_redistribution_in_this_task": false
+  },
+  {
+    "id": "us_usda_rma",
+    "terms": "https://www.rma.usda.gov/about-rma/website-policies-important-links/privacy-policy",
+    "terms_sha256": "0e62c7f8b8a00aa93e4790fa6cb31053f846e04d41b5d179057ca65bb84c94e7",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-04T21:00:03.168271+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "Explicit RMA public-information copying/distribution permission, independently reviewed with copyright and linking policies. Limited to government-authored static explanatory HTML for crop/livestock insurance policyholders. Preserve attribution and crop-year/version. Exclude third-party/uncertain-authorship works, all image/media assets, PDFs, external sites, dynamic tools, general farm relief and corporate regulation. Per-page authorship and restrictions must be reviewed before QA use. No assertion that all RMA content is public domain.",
+    "attribution": "USDA Risk Management Agency; page title, original URL, acquisition UTC and policy/crop year; authored QA marked as adaptation; no endorsement.",
+    "preflight_record": "agent_usda_rma_preflight_independent01.json",
+    "preflight_record_sha256": "6b5a73f602cf0ef5d7377b6496ec37631c5b05fb6b3b828d6ad63a221847dddf",
+    "allowed_hosts": [
+      "www.rma.usda.gov"
+    ],
+    "prefixes": [
+      "/about-crop-insurance/frequently-asked-questions"
+    ],
+    "excluded_prefixes": [],
+    "excluded_path_keywords": [
+      "supplemental-disaster-relief",
+      "rebating-violations",
+      "calculator",
+      "search",
+      "download",
+      "/media/"
+    ],
+    "minimum_interval_seconds": 1.2,
+    "seeds": [
+      "https://www.rma.usda.gov/about-crop-insurance/frequently-asked-questions"
+    ],
+    "max_pages": 60,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false
   }
 ]

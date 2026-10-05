@@ -18,7 +18,8 @@
     "us_tricare",
     "us_opm",
     "us_va",
-    "au_privatehealth_ombudsman"
+    "au_privatehealth_ombudsman",
+    "us_usda_rma"
   ],
   "rationale": "Reserve the largest sufficiently diverse single-publisher FAQ pool for independent development; retain nine other approved publisher groups for test construction, including source-grounded authored cases from Canada and Alberta. Allocation uses source yield only, with no model task-performance measurements.",
   "conditions": [
@@ -50,6 +51,12 @@
       "split": "test",
       "assigned_utc": "2026-10-04T16:28:13.104851+00:00",
       "reason": "Independent VA life-insurance agency source approved before benchmark model evaluation; dev remains Texas-only."
+    },
+    {
+      "publisher": "us_usda_rma",
+      "split": "test",
+      "assigned_utc": "2026-10-04T21:00:03.168271+00:00",
+      "reason": "Government crop/livestock policyholder insurance scope, assigned before any candidate or task-model performance inspection. Dev remains Texas."
     }
   ]
 }

@@ -1,0 +1,126 @@
+{
+  "created_utc": "2026-10-05T14:49:15.418555+00:00",
+  "status": "CONSTRUCTION_IN_PROGRESS_NOT_ACCEPTED_BENCHMARK",
+  "supersedes_current_counts_in": "stage7_progress.json; checkpoints are not additive",
+  "provisional_item_gate_counts": {
+    "test": 221,
+    "dev": 40,
+    "total": 261
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "item_errors": {},
+  "dataset_gate_errors": [
+    "test_count_below_target",
+    "dev_count_below_target",
+    "too_few_document_groups",
+    "dev_task_count_below_target:numerical_calculation",
+    "dev_task_count_below_target:multi_evidence",
+    "dev_task_count_below_target:insufficient_evidence",
+    "task_count_below_target:ordinary_qa",
+    "task_count_below_target:numerical_calculation",
+    "task_count_below_target:multi_evidence",
+    "task_count_below_target:insufficient_evidence"
+  ],
+  "test_task_counts": {
+    "ordinary_qa": 168,
+    "insufficient_evidence": 12,
+    "multi_evidence": 22,
+    "numerical_calculation": 19
+  },
+  "test_publishers": {
+    "northcarolina_doi": 7,
+    "canada_fcac": 10,
+    "newyork_dfs": 40,
+    "california_cdi": 15,
+    "wisconsin_oci": 10,
+    "utah_uid": 6,
+    "us_opm": 32,
+    "us_va": 24,
+    "us_tricare": 35,
+    "newjersey_dobi": 25,
+    "alberta_goa": 11,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 2
+  },
+  "test_document_families": 90,
+  "recovered_completed_work": {
+    "batch13_retained": 5,
+    "batch14_retained": 6,
+    "prior_pool10": 250,
+    "notes": "Completed before prior usage interruption; immutable audits and24ledger inputs/registries verified on recovery. No new QA authored or inferred in recovery. Original15 disputed test items remain revoked/held and excluded."
+  },
+  "source_review": {
+    "direct_document_holds": 108,
+    "family_registry_group_records": 57,
+    "notes": "Seven additional direct holds since stage7; rule-backed PH/OPM and TDI/VA family relations. Group record count is not independent family count. Whole-document holds do not automatically propagate to every family member."
+  },
+  "pending_rma": {
+    "acquired_pages": 10,
+    "article_documents": 9,
+    "source_faq_candidates": 239,
+    "accepted": 0,
+    "automatic_audits_complete": true,
+    "exact_excluded": 0,
+    "near_historical_flags": 0,
+    "near_candidate_pair_edges": 17,
+    "containment_matched_windows": 0,
+    "semantic_candidate_pair_edges": 19,
+    "old_global_neighbor_changes": 82,
+    "status": "Full source/content/family and changed-neighbor review pending; source canonical-URL alias and7 omitted-panel leads remain unresolved. No239question acceptance claim."
+  },
+  "validation_this_recovery": {
+    "ledger_bindings_verified": 24,
+    "raw_source_documents_rehashed": 4,
+    "evidence_spans_verified": 29,
+    "current_pool_item_validation": "261 rows pass item gates; dataset gates fail",
+    "new_tests_or_model_benchmarks": false,
+    "last_completed_full_suite": {
+      "commit": "cc1a66244b13c808c1e92ad7f681e06aa9304093",
+      "passed": 460,
+      "skipped": 6,
+      "subtests_passed": 58,
+      "ci_run_id": 37232903645,
+      "ci_result": "success"
+    }
+  },
+  "usage_proxy_this_recovery": {
+    "source_hold_decisions_reviewed": 3,
+    "new_qa_semantic_reviews": 0,
+    "new_subagent_tasks": 0,
+    "new_training_runs": 0,
+    "new_qa_or_embedding_model_runs": 0,
+    "new_source_network_requests": 0,
+    "remaining_quota": "not observable; no token or monetary estimate"
+  },
+  "publication": {
+    "destination": "Existing draft PR8; no merge",
+    "contents": "Source registries and aggregate report only; no raw source, item-level QA/evidence or weights",
+    "pr_description": "Prior integration403 remains; no alternate write route"
+  },
+  "evidence_sha256": {
+    "provisional_item_pool_11.jsonl": "424a24fb8b2fa3b74dfb278bf31afce452ca5e1f6044210beedcf842e79bb510",
+    "review_pool_11_clearance_ledger.json": "8c0c533dc172d7438e8bc3a9f6df839765eef24072d15b727ff8779a37f471c1",
+    "provisional_item_pool_12.jsonl": "6ed0786759817b8a40ebca70f00e9357cf1a0dcddb0fddbc1704ef52eab7d6a4",
+    "provisional_item_pool_12_validation.json": "33d2416da03bb79a0f75c7cd9625814fd55beab8799b690d8e95f35faa5be9d0",
+    "review_pool_12_clearance_ledger.json": "3a12f1821ee7360c73f811d9a7e3061aa87498cfc146c2761b1c29c284a6eefa",
+    "stage8_recovery_budget01.json": "7215eec521b9b4aec0d5c116f74d430e816a41c351af114736c0cab6193dd670",
+    "agent_texas10_ny10_independent_source_family_review.json": "2ea7afe7649a05a169f138a05163403aa74811d80b3f40400954f7ab0cdd153f",
+    "agent_rma11_structural_audit.json": "ce17ad4f21f6bd5e4c81842496f7ab5b375210d5f1d46ab342559c4c06e5c3ca",
+    "extraction_batch_11/audit_new239/summary.json": "4d6b89cfabab6b848a2fb6e6137eec6f941ed010bb4af5ec8a62f96952e31da5"
+  },
+  "public_registry_sha256": {
+    "document_holds.json": "1e600f1c1771ac41931a75e66d00dec104b6a38e4986f15db2a6327b00a334f0",
+    "document_families.json": "345cfd8bd8ad93776d18c2708896a2af6e41f2aa4be8568ae656c4e853a9be34",
+    "source_approvals.json": "c2086c7167e01fcfd25d0fb9b44819ba513142448dafc42bb609defb006d57cc",
+    "split_assignment.json": "dea48c687812cc4132786aa032ddbb9e1aa18ecffcb15064c2745267ac52a228"
+  },
+  "limits": [
+    "At least1000test/50dev and all task/source/family gates remain unmet.",
+    "Agent reviews are not human or insurance-expert adjudication.",
+    "Known inaccessible history and foundation-model pretraining remain outside audit.",
+    "No final QA inference, training or model-quality gain established."
+  ]
+}

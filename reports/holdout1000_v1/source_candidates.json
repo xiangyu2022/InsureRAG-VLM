@@ -330,5 +330,11 @@
     "jurisdiction": "AU-FED",
     "seed": "https://privatehealth.gov.au/health_insurance/index.htm",
     "terms": "https://privatehealth.gov.au/footer/about/copyright.htm"
+  },
+  {
+    "id": "us_usda_rma",
+    "jurisdiction": "US-FED",
+    "seed": "https://www.rma.usda.gov/about-crop-insurance/frequently-asked-questions",
+    "terms": "https://www.rma.usda.gov/about-rma/website-policies-important-links/privacy-policy"
   }
 ]

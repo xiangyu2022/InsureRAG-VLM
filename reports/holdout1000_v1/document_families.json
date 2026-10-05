@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-04T20:27:26.055882+00:00",
+  "updated_utc": "2026-10-05T14:47:23.510175+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -484,6 +484,67 @@
         "63019828c11a635e1e42eb17"
       ],
       "relation": "Substantive repeated continuation/premium rules: LWOP-to-military and LWOP-to-compensation; connected source family via LWOP."
+    },
+    {
+      "family_id": "family_privatehealth10_shared_rules",
+      "document_ids": [
+        "1276e1f7f182efe9804e926f",
+        "15e5823dab8dd2e97eefe0e8",
+        "1e0a1712b1d8e1a2e56c5970",
+        "23c1c80c4614076d208b6e53",
+        "2820c2089810dc38cf67023d",
+        "31f08a6340a3b70698d66a6e",
+        "367d765bc3189064d324295b",
+        "3940159b60bb109415dc127f",
+        "4ebdb73f0b18d6e5f64fba36",
+        "50851ff281b489bbf3d07e73",
+        "62e15ebc43f39d0ac3793b8d",
+        "64461d77c7218708de324cc1",
+        "6d655f67d2228d1238727674",
+        "777e59f79b62e21dd334fb8a",
+        "841b3a1992fd3b5cadb79b19",
+        "8712ca49fc3bc11542c1a5d3",
+        "aad6189306b78e0f12c290c7",
+        "bba61794dbd70f99f231571d",
+        "bc138ba9c9881da2f7bc5894",
+        "c92fb58b9797980ee81157d2",
+        "cbae89b3ebc1857487dba8d8",
+        "d6face6c5e63308c10ad66b1",
+        "dd02be0babf57f9b43b44404",
+        "f2b303ce376c34e3a1662f70",
+        "fa71afb6f3a7b68873f7b76b"
+      ],
+      "relation": "25 independently evidenced substantive-rule edges; transitive family, not publisher identity.",
+      "local_review_records": [
+        "agent_privatehealth10_independent_source_family_review.json",
+        "agent_privatehealth10_independent_source_family_review_supplement.json"
+      ]
+    },
+    {
+      "family_id": "family_opm08_cost_premium_conversion_lwop",
+      "document_ids": [
+        "0859407de46f408b7f2885b6",
+        "2913aef34a7f255cafbd604b",
+        "5f9ade10c7ef86c59ae303d9",
+        "e2f1fdec937c0934a038f6a2"
+      ],
+      "relation": "Three independently reviewed FEHB premium-conversion/LWOP shared rules; overlaps existing LWOP continuation family.",
+      "local_review_records": [
+        "agent_opm08_independent_review.json"
+      ]
+    },
+    {
+      "family_id": "family_tdi_bilingual_va_sgli_conversion",
+      "document_ids": [
+        "2e2d21051c4130dd824266ad",
+        "7b1e9892aadeea719a76acca",
+        "aa51567a6730653c4174a1d3"
+      ],
+      "relation": "Bilingual TDI guide equivalence plus independently evidenced named SGLI post-service conversion choices shared with VA; not a military-topic-only grouping.",
+      "local_review_records": [
+        "agent_texas10_ny10_independent_source_family_review.json"
+      ],
+      "review_record_sha256": "2ea7afe7649a05a169f138a05163403aa74811d80b3f40400954f7ab0cdd153f"
     }
   ],
   "document_text_sha256": {
@@ -640,7 +701,38 @@
     "f4e4cb1c394cde1a64141374": "659970bed2b9e68de4a01733c9a0356db9ae603002c963c33d39d6e4bb4717f6",
     "28c0f1754c505a7868ae308e": "01a6c83d11aacbd990f3f37083bb5ac88e27ec64b3a4261acdef3505929fdcad",
     "2913aef34a7f255cafbd604b": "af7bfeef0ec68058e26bf5897ff7e737cae365103c751f1314c73355fd5e4496",
-    "63019828c11a635e1e42eb17": "4e17ea5b307c2d89842a3229e52c479b364c6dead1d95a20afa06d53c496f5ec"
+    "63019828c11a635e1e42eb17": "4e17ea5b307c2d89842a3229e52c479b364c6dead1d95a20afa06d53c496f5ec",
+    "1276e1f7f182efe9804e926f": "c140164e50ee86342d70fd19b99c83cd6e25a788f0f71a89dc3634e8673369ad",
+    "15e5823dab8dd2e97eefe0e8": "169ec8b8541d0f62bb38a6847faef8915e4748a58521b8c6c7c784bc891b87d1",
+    "1e0a1712b1d8e1a2e56c5970": "6037c86072c009a42027a644211037caea61a6d3d1013a87527c4ea4293a9e25",
+    "23c1c80c4614076d208b6e53": "c5c061e208eeb1a9603f7b38b7b90daea76dc88a9fc27c010c5621e4f75f56e6",
+    "2820c2089810dc38cf67023d": "22fc24bec7d64ab9b1cdfe0d1b0d7304063696277af87eeb453b77f1e74539f6",
+    "31f08a6340a3b70698d66a6e": "9c1e3d32a6614e1974fb66a937d5acdf4728697c042a7e85da44fd56b9c134d2",
+    "367d765bc3189064d324295b": "d65fdfaee320fda74c95862fd18b3df7969360895e13e9169ad1be05e9f10b1b",
+    "3940159b60bb109415dc127f": "229e60cb4f963f708ef6c447835f1d8a39f23b380a890b066c8e394736815bb2",
+    "4ebdb73f0b18d6e5f64fba36": "dd66df42e0d1ce5709826671170dd998046e9739c68ac58a19ef5a41e3c814a0",
+    "50851ff281b489bbf3d07e73": "dbb1d78d966aaa334773a29d7d573a6f7fc494f3cebcb1801b6b32a00aefcd4b",
+    "62e15ebc43f39d0ac3793b8d": "3a9652f9176f2f567c628e95040745f30032fb8632961a49c511affd35dd8daa",
+    "64461d77c7218708de324cc1": "40b2d1bf6a46bd7502126b6c3db869173fe7a651831f4f2724c4d9b1b26a1e4e",
+    "6d655f67d2228d1238727674": "6d14cbe45d5e9e802be62361c7767d6cfe9c261ad79f06c05fd1023ebeb6a214",
+    "777e59f79b62e21dd334fb8a": "ec1e7b77778ea301cd647f33a0c74cc8c91e2db08eb1033f5eb14797fbb9c8e7",
+    "841b3a1992fd3b5cadb79b19": "bc506e4b01cf162ded596867045d64bfef62a01b38bbcb1d00ea464b4989021f",
+    "8712ca49fc3bc11542c1a5d3": "8619ff9147ada4a85fb8ef5dcd94f585023769c6fff50173da875affdcd6917d",
+    "aad6189306b78e0f12c290c7": "0de92887425b192434e5287ea2951774feff3c87aa1456948a3a3e2267e69e24",
+    "bba61794dbd70f99f231571d": "611506673671fa715bfb33a416965de934f4b6ff15d131c621515843a3f11f33",
+    "bc138ba9c9881da2f7bc5894": "877cd33136eb88cda79b7ae6a50dae8843e169ba674ff13cb3fd011c00d87239",
+    "c92fb58b9797980ee81157d2": "adb63b0f2aa27d5de0af8972f09e72bc2880b6fd98f93646c6a065496f8ece8b",
+    "cbae89b3ebc1857487dba8d8": "dde46897a60c16e3d17e52d0b5183e1d852f3e732dda0283bd3e6794ef7feaf4",
+    "d6face6c5e63308c10ad66b1": "7384ca37aff0335b681ef7e16383e8ed17ceef51ab67b21351868f712586b132",
+    "dd02be0babf57f9b43b44404": "9a08e72360c8bb17c4c113838f42e3bdf322ecf9e8502d31856185fc383fe483",
+    "f2b303ce376c34e3a1662f70": "66369d897417b53e143df4dee1db01918fdfb327616a1f177f25fcdfeac79eff",
+    "fa71afb6f3a7b68873f7b76b": "4d976908f0b848574cceec7cafaf64af8374452759164a7db0eb6ae9c71534fd",
+    "0859407de46f408b7f2885b6": "a2ad9f36084efb2ac89326d6ecaeb482cbbf38698d4731f760f755940855fd27",
+    "5f9ade10c7ef86c59ae303d9": "6aaf762eb38eb310eec8bdf74bd26c2294b5fdba1b9c011d1a627184c838b6af",
+    "e2f1fdec937c0934a038f6a2": "c8090696b1576d52500ff36708b0ddfda98550d0e93c450722f3330bfd88ee96",
+    "2e2d21051c4130dd824266ad": "ba59b9f7a84448d1ad43729f1f92b7fdecb69a1cfd8b07dcabc54902c106f21b",
+    "7b1e9892aadeea719a76acca": "5c7cd43e8cc9753f113fc6fbc42ba057fbd6c6718acf4d300919114997048718",
+    "aa51567a6730653c4174a1d3": "054ffaaba6410380a6c8d10c9ca22719a813e40013bd73f27488f24d9e90865b"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
@@ -663,5 +755,11 @@
       "split": "test",
       "reason": "Substantive repeated continuation/premium rules: LWOP-to-military and LWOP-to-compensation; connected source family via LWOP."
     }
-  ]
+  ],
+  "proposal_metadata": {
+    "status": "NOT_APPLIED_PENDING_ROOT_REVIEW",
+    "base_registry_sha256": "0eb608e13889d7fcad8141bc71535cbbae1fb55be3b7095c95bce34a7212db6d",
+    "preserves_all54_old_group_records_exactly": true,
+    "local_proposal": "agent_source_family_merge11_proposal.json"
+  }
 }

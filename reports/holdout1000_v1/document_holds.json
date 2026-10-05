@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-04T20:26:10.633701+00:00",
+  "updated_utc": "2026-10-05T14:47:23.510175+00:00",
   "scope": "Additional document-level conservative holds; existing triage exclusions still apply. Holds are not claims every passage is false. No held page is cleared by low similarity or an individually plausible answer.",
   "documents": {
     "1056fbb935fe0e7ae00642b4": {
@@ -919,6 +919,75 @@
         "https://aldoi.gov/Consumers/AnnuityCosts.aspx"
       ],
       "status": "hold_pending_explicit_resolution"
+    },
+    "64461d77c7218708de324cc1": {
+      "publisher": "au_privatehealth_ombudsman",
+      "local_review_record": "agent_privatehealth10_independent_source_family_review.json",
+      "review_record_sha256": "935ddc1873f3b07859e6f88b8a7a3b8e626869490b7f2ead78cb9e769c988d43",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": [],
+      "reason": "Local source has unresolved exact-90-day overseas counting boundary and inconsistent Norfolk Island jurisdiction guidance; whole document held pending authoritative clarification."
+    },
+    "50851ff281b489bbf3d07e73": {
+      "publisher": "au_privatehealth_ombudsman",
+      "local_review_record": "agent_privatehealth10_independent_source_family_review.json",
+      "review_record_sha256": "935ddc1873f3b07859e6f88b8a7a3b8e626869490b7f2ead78cb9e769c988d43",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": [],
+      "reason": "Local glossary conflicts with the LHC source on Norfolk Island policy jurisdiction; whole document held without choosing which rule is current."
+    },
+    "823d6ef6fe721e7f3c1363e7": {
+      "publisher": "us_opm",
+      "local_review_record": "agent_opm08_independent_review.json",
+      "review_record_sha256": "c84de271453504bd1522658a20df91ed548c3e1f101a53a84770f61b28ff913a",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": [],
+      "reason": "Local health-plan handbook conflates distinct Medicare prescription-plan and Medicare Advantage enrollment prerequisites; whole document held pending source clarification."
+    },
+    "e2f1fdec937c0934a038f6a2": {
+      "publisher": "us_opm",
+      "local_review_record": "agent_opm08_independent_review.json",
+      "review_record_sha256": "c84de271453504bd1522658a20df91ed548c3e1f101a53a84770f61b28ff913a",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": [],
+      "reason": "Local enrollment-change table has unresolved child-marriage qualification and cancellation-versus-suspension terminology; conservative whole-document hold, not an assertion all table rules are false."
+    },
+    "aa51567a6730653c4174a1d3": {
+      "publisher": "texas_tdi",
+      "reason": "English TDI presents400000 as SGLI maximum for active-duty members including called-up Guard/reservists. No historical-date or individual-elected-limit qualification resolves it. VA presents500000 and independently includes500000/450000 rows;400000 remains a lower selectable tier, not the ceiling.",
+      "local_review_record": "agent_texas10_ny10_independent_source_family_review.json",
+      "review_record_sha256": "2ea7afe7649a05a169f138a05163403aa74811d80b3f40400954f7ab0cdd153f",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
+    },
+    "2e2d21051c4130dd824266ad": {
+      "publisher": "texas_tdi",
+      "reason": "Spanish text explicitly says incrementos de50000 hasta un m\u00e1ximo de400000 for the same active-duty scope. Fullpage adds no historical qualifier. It repeats the actual conflict, so hold is directly evidenced, not inherited from its English family member.",
+      "local_review_record": "agent_texas10_ny10_independent_source_family_review.json",
+      "review_record_sha256": "2ea7afe7649a05a169f138a05163403aa74811d80b3f40400954f7ab0cdd153f",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
+    },
+    "91d88ed35713ed3ff895985b": {
+      "publisher": "newyork_dfs",
+      "reason": "The full page includes a substantial2025vehicle symbol table explicitly compiled from the ISO Rating Symbol programme. Agency prose and the derived table are mixed. Current DFS source approval permits noncommercial unaltered reproduction with attribution except item-specific restrictions, but no record here establishes whether that permission extends to the ISO-derived table. Preserve whole-page hold pending root permission adjudication rather than extract adjacent prose to evade it.",
+      "local_review_record": "agent_texas10_ny10_independent_source_family_review.json",
+      "review_record_sha256": "2ea7afe7649a05a169f138a05163403aa74811d80b3f40400954f7ab0cdd153f",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
     }
+  },
+  "proposal_metadata": {
+    "status": "NOT_APPLIED_PENDING_ROOT_REVIEW",
+    "base_registry_sha256": "bc2f6e346d68222086dbfef53b82f695f34ef4cf1e35ae88148cd815b95a62f7",
+    "local_proposal": "agent_source_family_merge11_proposal.json",
+    "family_hold_propagation": false
   }
 }
