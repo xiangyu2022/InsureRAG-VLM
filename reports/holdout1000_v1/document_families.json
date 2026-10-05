@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T20:17:33.356293+00:00",
+  "updated_utc": "2026-10-05T20:52:21.709518+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -636,6 +636,44 @@
         "stage15_source_decisions.json"
       ],
       "review_record_sha256": "369213d16b8090d18021ee1401c431c9c49f7b26fbd26ec87894f78e010acb09"
+    },
+    {
+      "family_id": "family_tricare_deductible_cost_tables",
+      "document_ids": [
+        "47a580525e5fa02e51941055",
+        "13f20e198c0f2a53073a578d",
+        "d3612e6796c419cf2f917690"
+      ],
+      "relation": "Conservative grouping of deductible FAQ, POSdeductible explanation and CHCBPcost table: repeated300/600POSrule and same2026GroupBnetwork/nonnetwork deductible schedule; no extra family counted for shared cost-rule derivations.",
+      "local_review_records": [
+        "stage16_source_decisions.json"
+      ],
+      "review_record_sha256": "47f81836623a61a578cd679edb8105dda7b00bf15f0f67884c50fcb3a198eb9c"
+    },
+    {
+      "family_id": "family_tricare_prime_remote_eligibility",
+      "document_ids": [
+        "110327eb7d2cf51114a6ad59",
+        "ab1910e8b446726fb35434e6"
+      ],
+      "relation": "TPRoverview and eligibility-determination counterpart repeat activation and distance eligibility rules; same domesticTPR eligibility family. Moving/disenrollment pages were read and address separate administrative events.",
+      "local_review_records": [
+        "stage16_source_decisions.json"
+      ],
+      "review_record_sha256": "47f81836623a61a578cd679edb8105dda7b00bf15f0f67884c50fcb3a198eb9c"
+    },
+    {
+      "family_id": "family_tricare_chcbp_program_claims",
+      "document_ids": [
+        "e9de2156adfc9f399218ebbc",
+        "8307d3d5741e40b38397576b",
+        "c67274b4f3deeb46ceedde8d"
+      ],
+      "relation": "Conservative CHCBPprogram/claim-administration family grouping. Shared claims-system alert and complementary claim processing/care procedures; not counted as three independent families. Dedicated price tables grouped with deductible derivations separately.",
+      "local_review_records": [
+        "stage16_source_decisions.json"
+      ],
+      "review_record_sha256": "47f81836623a61a578cd679edb8105dda7b00bf15f0f67884c50fcb3a198eb9c"
     }
   ],
   "document_text_sha256": {
@@ -844,7 +882,15 @@
     "8bdd6825187bbb0cbfc049da": "bb8487118e09c1522a3d6203115fc7796db03d1887f03b6afe40c44851d42e8b",
     "d8887b02e2933896d13bfcb6": "21489e2a42ca100014aa175c1f572b953d995ddf64c9c84521945f87eb40eb64",
     "3fc110d67d2aa9f632679a25": "871b6d0ec8bb2ee482a0961e7529d6e18365223e3acb5d1a22a5d812fca617e7",
-    "afb106b4ecec1eff1a61b8c6": "e0624b3c8f8f393b0d9df92fcfe0d4071f8c66f72b55d3bcb40b9867c364f769"
+    "afb106b4ecec1eff1a61b8c6": "e0624b3c8f8f393b0d9df92fcfe0d4071f8c66f72b55d3bcb40b9867c364f769",
+    "47a580525e5fa02e51941055": "9ed3d131fbca8e49d0a9a2b61ac405d7ec22937aa3b9054acff27c5c861c56a1",
+    "13f20e198c0f2a53073a578d": "94dfae5f45ccdfeaea94975bf8f44c3ac74e020efd2d056beb73f1ff9b8a2569",
+    "d3612e6796c419cf2f917690": "d4204a098244a6b3df66e3a67af0b841f88c6a2a3a891b3d89e8b7f84c262550",
+    "110327eb7d2cf51114a6ad59": "e67f46bfa3729bcbd85ac5544dd56ae9d7e554a0b9917fa822f0bf4e9b7c3618",
+    "ab1910e8b446726fb35434e6": "413478a513e6d2537ce51b863130e46ab953580fe78fe86fa691e4f86486298e",
+    "e9de2156adfc9f399218ebbc": "8b867b3ce121e7765d6eeb5bdfb4b60a827da6a0f790ac1c17cf0d54032c62f7",
+    "8307d3d5741e40b38397576b": "58ad18ab5152a9279d8c6781c053c9de2af63ee5bbfd9c5408f4e88932b5aa22",
+    "c67274b4f3deeb46ceedde8d": "5e511ea58ce64b8bde147634a4b4a1e7c354975dad24267d677aff9b6057273a"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

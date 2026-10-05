@@ -12,33 +12,34 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage15_progress.json`:
-271 provisional test and 42 dev records, with **zero frozen/accepted test
-records**. Stage14 retained one of four pending drafts and held three for a
-temporal-applicability error, a refusal-task classification error and redundant
-multi-evidence. Stage15 retained six reviewed cached-source questions: one
-calculation, one multi-evidence question, two insufficient-evidence questions and
-two ordinary questions. Two are repaired successors; their defective predecessors
-stay excluded. The combined increase from stage13 is seven TEST questions.
+The latest construction checkpoint is `stage16_progress.json`:
+280 provisional test and 42 dev records, with **zero frozen/accepted test
+records**. Stage16 retained nine of eleven cached-source drafts: four calculations,
+one multi-evidence question, two insufficient-evidence questions and two ordinary
+questions. Content review held two drafts despite no automated flags: one reused
+an existing deductible information need and omitted a coverage exception; another
+did not establish the full location condition needed by its reference answer.
 
-TEST still covers 99 document families. A newly used FCAC claim guide shares a
-substantive escalation rule with its complaint guide, so those pages were grouped
-conservatively rather than counted as two independent families. All 313 retained
-item gates pass. Dataset size, task quotas and the 100-family minimum still fail;
-729 further independent TEST questions are needed before the size gate alone can
-pass. No final benchmark inference or training has run.
+TEST covers 101 document families after conservative grouping of related cost,
+eligibility and claim guides. All 322 retained item gates pass. The family-count
+minimum now passes, while dataset size and task quotas still fail. Another 720
+independent TEST questions are required to reach the size minimum. No final
+benchmark inference, tuning or training has run.
 
-The resumption reused the already completed four-draft audits. Stage15 encoded
-only six new questions in one local model process and one forward batch, reusing
-44,581 history vectors and 2,564 existing candidate vectors/audit rows. Four
-affected existing-pool neighbor relations were reviewed without revocations.
-Raw/normalized source hashes, the full cached corpus for the two refusal gaps,
-and the original table alignment for the multi-evidence question were checked.
-Independent rational arithmetic confirmed the revised numeric result after its
-source-rule applicability was checked. The existing quality and containment
-tests passed (29 tests). No source network requests, paid services, additional
-agents, proxy changes or raw-data publication occurred. Earlier checkpoints are
-historical records; do not sum their counts.
+Stage16 encoded only eleven new questions in one local process and one forward
+batch, reusing 44,581 history vectors and 2,570 existing candidate vectors/audit
+rows. Ten affected existing-pool neighbor relations were reviewed without
+revocations. Review covered 48 unique historical texts, source table alignment,
+12 source-body hashes, source-family aliases, license records and 40 corpus
+excerpts for the refusal gaps. Separate rational arithmetic checked all four
+numeric results. Source requests, paid services, additional agents and raw-data
+publication remained zero. Earlier checkpoints are historical; do not sum them.
+
+The prior published commit `dfa65c0` has a terminal CI failure: its smoke test and
+two Windows test jobs passed, but both Ubuntu test jobs were cancelled before
+steps ran. No logs or cancellation cause were available. One failed-job rerun
+request returned integration permission 403; it was not bypassed. This is not an
+all-green result. Subsequent meaningful commits require their own exact-head CI.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
