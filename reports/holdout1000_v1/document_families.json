@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T15:30:03.256873+00:00",
+  "updated_utc": "2026-10-05T16:30:30.369850+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -574,6 +574,43 @@
         "stage9_rma_final_review.json"
       ],
       "review_record_sha256": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098"
+    },
+    {
+      "family_id": "family_ny_ltc_four_policy_classifications",
+      "document_ids": [
+        "401545df0d4ff8ecd80e8eff",
+        "45da4997122c5627d8a1cc65"
+      ],
+      "relation": "Named four-classification explanation and its detailed minimum-standards page; common substantive product taxonomy, not navigation alone.",
+      "local_review_records": [
+        "stage11_final_review.json"
+      ],
+      "review_record_sha256": "378bbb998203330a280e7f43c974aac7084cd8b470bc190ed7d3e07fa02ae446"
+    },
+    {
+      "family_id": "family_tdi_water_damage_faq_derivatives",
+      "document_ids": [
+        "bd2e1e7fdbd34adafa5a399d",
+        "7324d17d02258e442dc1c927",
+        "edd5d96da90891b9d863fb8b"
+      ],
+      "relation": "Repeated substantive sudden accidental water versus gradual leak and mold coverage passages in TDI explainer and two FAQ compilations.",
+      "local_review_records": [
+        "stage11_final_review.json"
+      ],
+      "review_record_sha256": "378bbb998203330a280e7f43c974aac7084cd8b470bc190ed7d3e07fa02ae446"
+    },
+    {
+      "family_id": "family_nj_nc_life_locator_request_eligibility",
+      "document_ids": [
+        "c47261ee09f87107dba642a9",
+        "dc7f93bd4750731701287125"
+      ],
+      "relation": "Shared substantive eligibility language for missing-policy inquiries: believed beneficiaries, executors and representatives; conservative family, no assertion that state service platforms are identical.",
+      "local_review_records": [
+        "stage11_final_review.json"
+      ],
+      "review_record_sha256": "378bbb998203330a280e7f43c974aac7084cd8b470bc190ed7d3e07fa02ae446"
     }
   ],
   "document_text_sha256": {
@@ -770,7 +807,14 @@
     "8dc7c0b0431e73885f8fca5b": "8ded4f28387db9ec82bdbdf24f601c37aaa2c6ea8be32ad4459a52953fe11fde",
     "979a72b37ba4fcebbc3e0771": "ebab805f323f4243f6f2fff4b18f9adf5d64d39bd8d60556c96c102f3b6bea89",
     "ab17dc9e7eac9543630fc557": "26fa2f97a6c7fa156925ca7d1640dde4bdcbe370939a9f87668092b8b707fa76",
-    "df05e5ac0f8f4bd935546708": "54919c148c638e3beb48d2628a068d426c76572f5f2f3dd4bb93dc0c47817523"
+    "df05e5ac0f8f4bd935546708": "54919c148c638e3beb48d2628a068d426c76572f5f2f3dd4bb93dc0c47817523",
+    "401545df0d4ff8ecd80e8eff": "82d7e2148e54692f777df3a36f630f86bb72a635e6a9fd6fe2d1cb2a57b659d4",
+    "45da4997122c5627d8a1cc65": "0faec6bc7e4038733b65c5ee037c8aa70193e500b29a9a0aba7831a9c28447b2",
+    "bd2e1e7fdbd34adafa5a399d": "b497d3232acee9a8ac80f6c780c6b93b4d1bea8261a8114423bc857386cdc3ed",
+    "7324d17d02258e442dc1c927": "e044a36d0196252ec2acff0cfcee4f8a2c791560c724c717a20fffe328235440",
+    "edd5d96da90891b9d863fb8b": "072fc5f814c759304ba00958f0e27b4ab422b4a9067d923ee5735132ed4b92bd",
+    "c47261ee09f87107dba642a9": "785ca17ffe84464251b3bbab07eb68c5ca275501f2915c7d55684d5dbdd5f471",
+    "dc7f93bd4750731701287125": "b7e9b708a089516ce583ef4d441984c4bc166022314e3a34648c043b24bb001c"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

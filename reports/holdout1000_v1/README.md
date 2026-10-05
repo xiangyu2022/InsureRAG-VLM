@@ -12,22 +12,25 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage10_progress.json`:
-249 provisional test and 40 dev records, with **zero frozen/accepted test
-records**. Reconciliation verified all 13 hash-linked review ledgers and preserved
-three explicitly audited repairs. All 18 apparently available complex candidates
-were already held or excluded in earlier ledgers; none was in the current pool.
-The remaining queue contains 1,163 ordinary candidates before other review gates,
-and no unheld, unreserved complex candidates. These are not accepted questions.
-TEST still needs 131 numerical, 128 multi-evidence and 88 refusal items, plus
-404 ordinary items and at least eight additional document families. DEV needs
-six numerical, four multi-evidence and one refusal item to meet its task minima.
-New questions need fresh semantic audits, which the current no-new-model-run
-constraint prevents. A proposed 12-item batch prioritizes cached approved sources;
-this inventory does not establish a need for additional source acquisition.
-No models, source requests or agents were added. All 289 retained item gates were
-rechecked; dataset gates still fail. Consult the latest checkpoint rather than
-adding counts.
+The latest construction checkpoint is `stage11_progress.json`:
+253 provisional test and 42 dev records, with **zero frozen/accepted test
+records**. A single-reviewer trial retained six of twelve newly authored complex
+questions: four calculations and two multi-evidence items. Four were added to
+TEST and two to DEV. Six drafts were held for historical rule overlap or evidence
+that was unnecessary to answer the question. None of the three proposed refusal
+questions was retained. The test set now covers 93 reviewed document families,
+a net increase of one; three substantive source-family groups were recorded.
+All 295 retained item gates pass; dataset size and task-balance gates still fail.
+The targeted quality/extraction checks passed (42 tests).
+
+The stage10 no-new-model restriction was clarified as a temporary budget strategy.
+This trial used one necessary local frozen-BGE process: 44,581 cached historical
+vectors and 2,534 old historical audit rows were reused. Candidate vectors were
+stored once for future reuse, and 12 new questions were encoded. All 16 affected
+existing-pool neighbor changes were reviewed without revocations. No source
+acquisition, QA inference, training or additional agents were used. Zero automatic
+flags did not prevent the six substantive holds. Consult the latest checkpoint
+rather than adding counts.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

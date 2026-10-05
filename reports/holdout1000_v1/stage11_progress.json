@@ -1,0 +1,110 @@
+{
+  "created_utc": "2026-10-05T16:30:30.369850+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 253,
+    "dev": 42
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 12,
+    "retained": 6,
+    "pass_rate": 0.5,
+    "new_test": 4,
+    "new_dev": 2,
+    "held": 6,
+    "held_history_overlap": 4,
+    "held_multi_necessity": 1,
+    "held_history_and_multi_necessity": 1,
+    "retained_task_counts": {
+      "numerical_calculation": 4,
+      "multi_evidence": 2
+    },
+    "refusals_retained": 0,
+    "single_reviewer": true
+  },
+  "test_task_counts": {
+    "ordinary_qa": 196,
+    "insufficient_evidence": 12,
+    "multi_evidence": 24,
+    "numerical_calculation": 21
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 9,
+    "multi_evidence": 6,
+    "numerical_calculation": 6
+  },
+  "test_document_families": 93,
+  "net_new_test_document_families": 1,
+  "family_registry_groups_added": 3,
+  "source_holds": 112,
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "too_few_document_groups",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "dev_task_count_below_target:insufficient_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "old_active_neighbor_changes_reviewed": 16,
+    "prior_items_revoked": 0,
+    "candidate_exact_flags": 0,
+    "candidate_lexical_history_flags": 0,
+    "evidence_containment_flags": 0,
+    "semantic_new_history_flags": 0,
+    "same_parent_evidence_edges": 5,
+    "test_status": "42 targeted tests passed in0.34seconds",
+    "targeted_tests": {
+      "passed": 42,
+      "seconds": 0.34,
+      "command": "python -B -m pytest tests/test_holdout_quality.py tests/test_holdout_containment.py tests/test_holdout_faq_extraction.py tests/test_holdout_html_formats.py -q -p no:cacheprovider"
+    }
+  },
+  "usage": {
+    "base_report_sha256": "523028e9c4af68bcb042c38733dad05fe1c445a5cc6fa446ff2eedd6fa0c8624",
+    "base_candidates_sha256": "f80d3a23c9354d6fbd2b98602b3174a171103fd4425bfae07c4f158de685d3cf",
+    "new_candidates_sha256": "a93243e906f5824984a634d322f2d92fb4f0aa4818521e5bac604e0182000aa8",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2534,
+    "old_old_pairs_reused": 657,
+    "candidate_vectors_bootstrapped_once": 2534,
+    "new_candidate_vectors_encoded": 12,
+    "local_model_processes": 1,
+    "forward_batches": 160,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "58fd5899e060e57a22eb48bf26bf3926fc273e3775549e57a0f7bb42acd55ff2",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "new_qa_inference_runs": 0,
+    "quota_remaining": "not observable"
+  },
+  "evidence_sha256": {
+    "stage11_final_review.json": "378bbb998203330a280e7f43c974aac7084cd8b470bc190ed7d3e07fa02ae446",
+    "provisional_item_pool_14.jsonl": "6d4ee87f8d66d2a400b181d2d7fd66211b0a122bc7ce9788d729ce4258daff75",
+    "review_pool_14_clearance_ledger.json": "cfb1180963c562214feb0c8466311fba1d91bd89ae059752c9f0d666bfd3b516",
+    "provisional_item_pool_14_validation.json": "247b976546fed183a213a7e698f9347e63c7210853a763bd614512b10072cebd",
+    "stage11_mortgage_history_followup.json": "015571fa4f054e4cf4b82db40e6c7a6deb24112c20be4e735bfc7022ec47a750"
+  },
+  "next_batch": "Prioritize new substantive refusal needs on cached, unheld crop-insurance sources and ordinary questions from unused document families. The zero-refusal trial yield argues against generic missing-policy or guarantee templates. Keep existing task targets unchanged while collecting evidence about feasibility.",
+  "limits": [
+    "Six held drafts are not accepted or quietly rewritten.",
+    "Required source-dependent calculations and necessary evidence interactions preserved; no acceptance based on zero scores.",
+    "Stage10 model-run limitation was a temporary budget strategy, clarified to allow necessary small local frozen-model audits.",
+    "One-time candidate-vector cache setup encodes old questions without repeating old historical audits; subsequent small batches can reuse these vectors.",
+    "No training, paid service, new source acquisition, raw-data upload or merge."
+  ],
+  "assembly_recovery": "Initial local assembly stopped before pool/registry writes on prospective LF versus actual Windows CRLF ledger hash. Preserved the identical ledger and its timestamp, rebound actual immutable byte hash, then completed validation; no model or history audit repeated."
+}
