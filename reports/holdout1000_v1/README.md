@@ -12,16 +12,28 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage9_progress.json`:
+The latest construction checkpoint is `stage10_progress.json`:
 249 provisional test and 40 dev records, with **zero frozen/accepted test
-records**. One reviewer read all nine cached RMA sources and retained 28 original
-FAQ items after source, family, content and historical-neighbor checks. Of the
-239 RMA candidates, 136 are held with four unresolved source pages and 75 remain
-reserved; these are not additional accepted questions. All eight affected old
-pool neighbors and 21 refusal-context deltas are resolved without revocations.
-Existing model audits were reused; no source acquisition or model run was added.
-Size, task-balance and document-family gates still fail. Subsequent reviews can
-revoke provisional items. Consult the latest checkpoint rather than adding counts.
+records**. Reconciliation verified all 13 hash-linked review ledgers and preserved
+three explicitly audited repairs. All 18 apparently available complex candidates
+were already held or excluded in earlier ledgers; none was in the current pool.
+The remaining queue contains 1,163 ordinary candidates before other review gates,
+and no unheld, unreserved complex candidates. These are not accepted questions.
+TEST still needs 131 numerical, 128 multi-evidence and 88 refusal items, plus
+404 ordinary items and at least eight additional document families. DEV needs
+six numerical, four multi-evidence and one refusal item to meet its task minima.
+New questions need fresh semantic audits, which the current no-new-model-run
+constraint prevents. A proposed 12-item batch prioritizes cached approved sources;
+this inventory does not establish a need for additional source acquisition.
+No models, source requests or agents were added. All 289 retained item gates were
+rechecked; dataset gates still fail. Consult the latest checkpoint rather than
+adding counts.
+
+Review ledgers are deltas: absence from the latest ledger does not release an
+earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
+explicit repair and completed re-audit resolve them. The stage10 local record
+binds all inherited decisions and the three unchanged repaired records; it adds
+no new clearance and makes no change to the pool or source registries.
 
 Source access/reuse decisions are in `source_status.json` and
 `source_approvals.json`. An approval permits the stated local research scope,
