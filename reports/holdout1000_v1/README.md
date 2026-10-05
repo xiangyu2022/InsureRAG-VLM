@@ -12,37 +12,27 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage21_progress.json`:
-309 provisional TEST and 42 DEV records, with **zero frozen/accepted records**.
-Stage21 retained five of nine cached-source drafts. Four remain held for a
-historically exposed formulary-exception mechanism, an active-pool street-hail
-duplicate, a numeric question that supplies its own selection rule, and a
-multi-evidence question that pre-assumes the relevant eligibility.
+The latest construction checkpoint is `stage22_progress.json`:
+309 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
+Stage22 retained two DEV multi-evidence tasks and one DEV refusal. One numeric
+candidate remains held: nearest-history content review found the identical
+aggregate stop-loss mechanism and threshold despite zero automatic flags.
 
-The retained ordinary questions address mandatory-benefit boundaries and
-specific sharing-economy coverage distinctions. Existing NY healthcare-rights
-and infertility guides were conservatively joined; three WI sharing/transition
-guides form another shared-text family. The total remains 100 TEST families.
-The two college drafts require source-version and question repair before any
-fresh clearance. Earlier holds and revocations, including stage19's corporate
-filing question and the historically exposed NC residential family, remain.
+All 354 retained item gates pass. The 100 TEST families remain unchanged;
+691 independent TEST questions are still needed. DEV numerical and multi-evidence
+quotas and total size remain unmet. All prior revocations and source holds are
+preserved. No freeze, final inference, training or test-directed tuning occurred.
 
-All 351 retained item gates pass. 691 independent TEST questions are still needed;
-DEV size and task quotas are also unmet. No freeze, final benchmark inference,
-training or test-directed tuning has occurred. Review is a single sequential
-Codex workflow, not expert or human adjudication.
-
-Only 9 new vectors were encoded in one local forward batch. 44,581 history vectors
-and 2,628 old candidate audit rows were reused. Review covered 40 targeted historical
-texts, 12 changed active neighbors and source-family relationships. The broader
-296-match focused search was selectively read, not claimed entirely reviewed.
+Only four new vectors were encoded in one local forward batch; 44,581 history
+vectors and 2,637 prior candidate rows were reused. Review covered both source
+guides, 21 targeted historical texts and four changed active neighbors. Review
+is a single sequential Codex workflow, not human or expert adjudication.
 All 29 targeted quality and containment tests passed. No new source requests,
 paid services, additional agents or raw-data publication occurred.
 
-Commit `36de138` passed all five CI jobs in run37381957396. Subsequent commits
-require separate exact-head verification. Private ledgers preserve prior
-records and hash links. The PR-description integration403 restriction remains
-binding.
+Commit `19c26b4` passed all five CI jobs in run37383846137. Subsequent commits
+require separate exact-head verification. Private ledgers preserve prior records
+and hash links. The PR-description integration403 restriction remains binding.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
