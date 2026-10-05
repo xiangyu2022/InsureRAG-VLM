@@ -12,34 +12,37 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage16_progress.json`:
-280 provisional test and 42 dev records, with **zero frozen/accepted test
-records**. Stage16 retained nine of eleven cached-source drafts: four calculations,
-one multi-evidence question, two insufficient-evidence questions and two ordinary
-questions. Content review held two drafts despite no automated flags: one reused
-an existing deductible information need and omitted a coverage exception; another
-did not establish the full location condition needed by its reference answer.
+The latest construction checkpoint is `stage17_progress.json`:
+291 provisional test and 42 dev records, with **zero frozen/accepted test
+records**. Stage17 retained eleven of thirteen cached-source drafts: two
+calculations, three multi-evidence questions, one insufficient-evidence question
+and five ordinary questions. Two drafts remain held because their information
+needs overlap existing or historical questions. The repaired location-condition
+question was independently audited; its withdrawn predecessor remains held.
 
-TEST covers 101 document families after conservative grouping of related cost,
-eligibility and claim guides. All 322 retained item gates pass. The family-count
-minimum now passes, while dataset size and task quotas still fail. Another 720
-independent TEST questions are required to reach the size minimum. No final
-benchmark inference, tuning or training has run.
+All 333 retained item gates pass. TEST covers 99 document families after
+conservatively joining related VA service-life guides and preserving their
+existing bilingual TDI linkage. The previous 101-family count is superseded;
+family, dataset-size and task-quota gates still fail. Another 709 independent
+TEST questions are needed to reach the size minimum. No final benchmark
+inference, training or test-directed tuning has run.
 
-Stage16 encoded only eleven new questions in one local process and one forward
-batch, reusing 44,581 history vectors and 2,570 existing candidate vectors/audit
-rows. Ten affected existing-pool neighbor relations were reviewed without
-revocations. Review covered 48 unique historical texts, source table alignment,
-12 source-body hashes, source-family aliases, license records and 40 corpus
-excerpts for the refusal gaps. Separate rational arithmetic checked all four
-numeric results. Source requests, paid services, additional agents and raw-data
-publication remained zero. Earlier checkpoints are historical; do not sum them.
+Stage17 encoded thirteen new questions in one local process and one forward
+batch, reusing 44,581 history vectors and 2,581 existing candidate audit rows.
+Review covered 56 targeted historical texts, 29 focused history matches,
+13 changed active-pool neighbor relations, seven source-body hashes, source
+aliases, license records and refusal information gaps. Independent arithmetic
+also found and corrected stale verification metadata before item clearance.
+The lexical flag belongs to an excluded draft; the semantic pair is the repaired
+question and its excluded predecessor. Source requests, paid services,
+additional agents and raw-data publication remained zero.
 
-The prior published commit `dfa65c0` has a terminal CI failure: its smoke test and
-two Windows test jobs passed, but both Ubuntu test jobs were cancelled before
-steps ran. No logs or cancellation cause were available. One failed-job rerun
-request returned integration permission 403; it was not bypassed. This is not an
-all-green result. Subsequent meaningful commits require their own exact-head CI.
+The prior published commit `12a6154` has a terminal CI failure: two test jobs
+passed and three jobs were cancelled before execution. The cancellation cause
+is unavailable. An earlier failed-job rerun request returned integration
+permission 403; it was not bypassed. This is not an all-green result. Meaningful
+subsequent commits require their own exact-head CI. Earlier checkpoints are
+historical; do not sum their counts.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

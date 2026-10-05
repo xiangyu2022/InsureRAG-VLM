@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T20:52:21.709518+00:00",
+  "updated_utc": "2026-10-05T21:14:31.214917+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -534,19 +534,6 @@
       ]
     },
     {
-      "family_id": "family_tdi_bilingual_va_sgli_conversion",
-      "document_ids": [
-        "2e2d21051c4130dd824266ad",
-        "7b1e9892aadeea719a76acca",
-        "aa51567a6730653c4174a1d3"
-      ],
-      "relation": "Bilingual TDI guide equivalence plus independently evidenced named SGLI post-service conversion choices shared with VA; not a military-topic-only grouping.",
-      "local_review_records": [
-        "agent_texas10_ny10_independent_source_family_review.json"
-      ],
-      "review_record_sha256": "2ea7afe7649a05a169f138a05163403aa74811d80b3f40400954f7ab0cdd153f"
-    },
-    {
       "family_id": "family_rma_deductible_inventory_contract_rules",
       "document_ids": [
         "29d23c743edd9fa357f6d60c",
@@ -674,6 +661,22 @@
         "stage16_source_decisions.json"
       ],
       "review_record_sha256": "47f81836623a61a578cd679edb8105dda7b00bf15f0f67884c50fcb3a198eb9c"
+    },
+    {
+      "family_id": "family_va_service_group_life_transition",
+      "document_ids": [
+        "1319da1cca4cb857930b06a4",
+        "2e2d21051c4130dd824266ad",
+        "7b1e9892aadeea719a76acca",
+        "8902ab10b793d9b78e61927a",
+        "aa51567a6730653c4174a1d3",
+        "e7bfc345bcd30d3936982dad"
+      ],
+      "relation": "Conservative grouping of SGLI,FSGLI,VGLI and VGLI comparison guides: shared service-to-postservice transitions,8283/8284claim procedures and permanent-policy conversion restrictions. Comparison is linked derivative. Three formerly counted active families become one; common publisher alone is not the basis. Existing TDI bilingual/SGLI conversion linkage is preserved transitively, including both TDI documents and its earlier review record.",
+      "local_review_records": [
+        "stage17_source_decisions.json"
+      ],
+      "review_record_sha256": "6add7246d45e01d71404fbeec4018bea837ac0488ae0f74387fc1914f7a6047d"
     }
   ],
   "document_text_sha256": {
@@ -890,7 +893,10 @@
     "ab1910e8b446726fb35434e6": "413478a513e6d2537ce51b863130e46ab953580fe78fe86fa691e4f86486298e",
     "e9de2156adfc9f399218ebbc": "8b867b3ce121e7765d6eeb5bdfb4b60a827da6a0f790ac1c17cf0d54032c62f7",
     "8307d3d5741e40b38397576b": "58ad18ab5152a9279d8c6781c053c9de2af63ee5bbfd9c5408f4e88932b5aa22",
-    "c67274b4f3deeb46ceedde8d": "5e511ea58ce64b8bde147634a4b4a1e7c354975dad24267d677aff9b6057273a"
+    "c67274b4f3deeb46ceedde8d": "5e511ea58ce64b8bde147634a4b4a1e7c354975dad24267d677aff9b6057273a",
+    "1319da1cca4cb857930b06a4": "0a9a426aff622404914251190743e8d5f2bb15502cb1b3eff0b724d5632d4614",
+    "8902ab10b793d9b78e61927a": "9d795c9b034bb37e50b6fe2fe1cad7246a13db2a6c568415d85264c455c8d241",
+    "e7bfc345bcd30d3936982dad": "f1e1d8d899e7baae7e3f007a3c03ebce7168c8fafc526017af320278f355fff4"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
