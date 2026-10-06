@@ -12,42 +12,37 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage45_progress.json`:
-414 provisional TEST and 45 DEV records across 115 TEST document families,
-with **zero frozen/accepted records**. All 459 retained item gates pass.
-Another 586 independent TEST questions are needed. TEST type targets and
-DEV count/numerical/multi-evidence minima remain unmet. TRICARE accounts for
-85/414 TEST questions, exceeding the unchanged 20% publisher ceiling.
-The dataset cannot be accepted or frozen in this state.
+The latest construction checkpoint is `stage47_progress.json`:
+428 provisional TEST and 45 DEV records across 117 TEST document families,
+with **zero frozen/accepted records**. All 473 retained item gates pass.
+Another 572 independent TEST questions are needed. TEST type targets and
+DEV count/numerical/multi-evidence minima remain unmet. The publisher-share
+gate now passes: TRICARE has 85/428 TEST records, below the unchanged20% ceiling.
+The dataset still cannot be accepted or frozen in this state.
 
-Stages43-45 retained 22 TEST tasks and held four new drafts. A full scope review
-of all 51 then-active DEV questions revoked six: four professional licensing/
-continuing-education tasks and two standalone legal-service procedures.
-Their evidence was supported, but their information needs fell outside the
-established consumer policy, benefit and claim scope. This explicitly supersedes
-the stage38/stage42 DEV counts and the prior claim that DEV minima were met.
-Historical reports remain preserved; the effective pool is now45.
+Stages46-47 retained14 TEST tasks:9ordinary,3numerical and2multi-evidence.
+OPM enrollment conditions and non-Postal FEHB former-spouse rules were checked
+against accessible history, source families and changed active neighbors.
+The former-spouse handbook's contradictory PSHB note was excluded. Numeric
+answers were independently recomputed. Enrollment/channel pages were grouped
+conservatively, as were former-spouse/TCC/annuitant continuation chapters.
 
-TRICARE moving guides were conservatively joined to the existing Medicare
-family through the TFL moving guide, preserving prior family membership and
-review bindings. New calculations and multi-source necessity were checked;
-overlapping evidence did not by itself establish independent information needs.
-Five California questions distinguish published liability maxima, survey scope,
-individual premium information gaps and explicitly historical CLCA changes.
-Original HTML table columns were verified; historical eligibility figures are
-not presented as current rules. Changed active neighbors and targeted historical
-texts were reviewed. All earlier
-holds, scope revocations and original15 revocations remain in force.
+Stage43 revoked six formerly provisional DEV questions whose information
+needs fell outside consumer policy, benefit and claim scope. This supersedes
+stage38/stage42 DEV counts and the prior claim that DEV minima were met.
+The effective DEV count remains45. All original15 revocations, inherited holds,
+family caps and six DEV scope revocations remain in force.
 
-Twenty-six new vectors across three local batches reused unchanged vectors.
+Fourteen new vectors in two sequential local batches reused unchanged vectors.
 No new source requests, paid services, extra agents, training, final evaluation,
 test-driven tuning or raw-data publication occurred. Codex review is not expert
-or human adjudication. Next construction should prioritize other publishers and
-consumer-scope DEV numerical and multi-evidence tasks.
+or human adjudication. Continue independent TEST construction and consumer-scope
+DEV numerical and multi-evidence tasks without lowering the quality gates.
 
-Commit `652a6f5` passed all five CI jobs in run37407884762. Subsequent commits
-require separate exact-head verification. Private ledgers preserve prior records
-and hash links. The PR-description integration403 restriction remains binding.
+Prior commit `a4a9797` passed all five CI jobs in run37408825804. Subsequent
+commits require separate exact-head verification. Private ledgers preserve
+prior records and hash links. The PR-description integration403 restriction
+remains binding.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-06T03:22:48.238755+00:00",
+  "updated_utc": "2026-10-06T04:00:23.229266+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -862,6 +862,35 @@
         "stage44_source_decisions.json"
       ],
       "review_record_sha256": "5894b17d354718d0850edb57d3f4d7cce7dd05dbbef890b5d44d4512fa7e45b4"
+    },
+    {
+      "family_id": "family46_opm_health_enrollment_channels",
+      "document_ids": [
+        "77ac25decf25b3af8a790a06",
+        "bfd35fd5bce3676f60be997d",
+        "c6f8becf86f4abbe159e6300",
+        "69641a256dbd4ddf8a573ce3",
+        "1f8e123aa284cbc742cb20e5",
+        "5f860c4698ead7c2bdb3f356"
+      ],
+      "relation": "Conservative enrollment workflow family: overview, instructions, agency enrollment channels and premium-type disclaimer linked by substantial shared enrollment text.",
+      "local_review_records": [
+        "stage46_source_decisions.json"
+      ],
+      "review_record_sha256": "5f191e951f3d3da71e7c69bec6d73424f5d36b7f8e8d526086831736e30dcb4c"
+    },
+    {
+      "family_id": "family47_opm_former_spouse_annuitant_tcc",
+      "document_ids": [
+        "ba0a9e0bde3709be01c4997c",
+        "515df02fb6319df46bb02869",
+        "c4d73f895bf153985cfad1e6"
+      ],
+      "relation": "Conservative FEHB handbook continuation family: former-spouse, annuitant and TCC chapters share premium-nonpayment and reinstatement/reenrollment rules; previously active annuitant item joins same family.",
+      "local_review_records": [
+        "stage47_source_decisions.json"
+      ],
+      "review_record_sha256": "a988f2006bfbd3b33d750f28cc41a7b46156d751c706135fc079aa01f25476e4"
     }
   ],
   "document_text_sha256": {
@@ -1163,7 +1192,18 @@
     "87ee8a780b5fc1cb8bb07a28": "18e1974ef9d2a39062bf5551028999fb7c372f78a3aa391d569175dc9fefa011",
     "8c55b63580a76befc83a4e54": "f53c882f5e245743109408e859670211c8693cd3968acad3f8de6bccf6ed63d7",
     "5dfee8cabf7865664e4c7a98": "194d19f31523a1da8b98d0091ff6ce6a22ee5f86d49befe5f9f331da3b6a8cad",
-    "ec17dd2732d8c2622a74014f": "edf0b78e8fc2df05b7fbc8c0a4fcf741719bb8312a35d4292a21de7073fa756b"
+    "ec17dd2732d8c2622a74014f": "edf0b78e8fc2df05b7fbc8c0a4fcf741719bb8312a35d4292a21de7073fa756b",
+    "77ac25decf25b3af8a790a06": "a396a2dd6fd2e32ed5febd1c23f6254d995e0795188814a4156c4cc5d712bebe",
+    "bfd35fd5bce3676f60be997d": "17b3af1946a5966b91740ed06bd2964664b7ad087557d525ddcaa951b755f6b8",
+    "c6f8becf86f4abbe159e6300": "0533001d8042c44d09d3059e96e385c5302ce6f41ba1342320a99a436edabbc1",
+    "69641a256dbd4ddf8a573ce3": "baf2c46612d187f0beb67cfebe97f95bdd4765ec8df3b1fb04487b5736e9a546",
+    "1f8e123aa284cbc742cb20e5": "6fc736aefab9a77b739cda636e0e2e040f8b5a8a34c947bbf8a09c07d989334d",
+    "5f860c4698ead7c2bdb3f356": "668ed394ee84abc510cf0d676b2ed27326998092f6c60acea369c7365da17fb8",
+    "e7368e60941bf2ebb7cc0aeb": "f6f9aa49c6d047781c1fe603fef620c8fa668d23052bb1ef1984a7209c39cbaa",
+    "ba0a9e0bde3709be01c4997c": "b06a221d9397a902639fa35a03ca4f2290632901c1e9c0d90bc941c8c69a2b91",
+    "515df02fb6319df46bb02869": "240c922551eb26259b5f28bdea92713858aca09cf9644ac923e36059362dc633",
+    "c4d73f895bf153985cfad1e6": "84376c8dc665134513872f34481dc37ae4859bc47b00c97c1a989eeda76bee39",
+    "c43cdf393141f9fe9a802022": "253cd5243d48a37e13259fb77ce6ab92ab2ed60ca470a88d01a05022ef579b3f"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
