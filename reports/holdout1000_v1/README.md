@@ -12,26 +12,27 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage35_progress.json`:
-354 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
-Stage35 retained six tasks and held one historical overlap. All 399 retained
-item gates pass across 108 TEST families. Another 646 independent TEST
-questions are needed; DEV numerical, multi-evidence and size gates remain
-unmet. All earlier holds remain. No final evaluation or test tuning occurred.
+The latest construction checkpoint is `stage36_progress.json`:
+363 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
+Stage36 retained nine tasks and held three historical or prior-FAQ overlaps.
+All 408 retained item gates pass across 108 TEST families. Another 637
+independent TEST questions are needed; DEV numerical, multi-evidence and size
+gates remain unmet. All earlier holds remain. No final evaluation or test
+tuning occurred.
 
-One retained task explicitly repairs the construction of a previously uncounted
-multi-evidence draft: a positive joint-condition decision now requires each of
-three spans. The original negative draft remains held. Their high semantic
-similarity is recorded with lineage; only the revised version is counted.
-No model answers were used to construct or revise it. Agency proposals remain
-identified as proposals, and quoted third-party material is excluded.
+The batch adds two numerical tasks, six ordinary questions and one realistic
+information-gap refusal from cached Australian explanatory sources. The
+existing 25-document family remains intact at 17 retained questions, below
+the 20-item cap. Explicit source prose supports the 2026–27 calculation.
+The held dependent-coverage item also has a confirmed historical containment
+match; a multi-span construction does not cure that prior exposure.
 
-Seven new vectors were encoded in one local batch, reusing unchanged vectors.
-Thirty-seven targeted historical texts and two changed active-neighbor records
+Twelve new vectors were encoded in one local batch, reusing unchanged vectors.
+Fifty-five targeted historical texts and nine changed active-neighbor records
 were reviewed. No new source requests, paid services, extra agents, training
 or raw-data publication occurred. Codex review is not expert adjudication.
 
-Commit `e023843` passed all five CI jobs in run37398830993. Subsequent commits
+Commit `d65d7c8` passed all five CI jobs in run37399697817. Subsequent commits
 require separate exact-head verification. Private ledgers preserve prior records
 and hash links. The PR-description integration403 restriction remains binding.
 
