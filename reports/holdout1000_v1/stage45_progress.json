@@ -1,0 +1,110 @@
+{
+  "created_utc": "2026-10-06T03:22:48.238755+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 414,
+    "dev": 45
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 5,
+    "retained": 5,
+    "held": 0,
+    "retained_tasks": {
+      "numerical_calculation": 2,
+      "ordinary_qa": 2,
+      "insufficient_evidence": 1
+    }
+  },
+  "prior_checkpoint": "stage44_progress.json:409TEST/45DEV/113families; all earlier holds and six DEV scope revocations retained",
+  "test_task_counts": {
+    "ordinary_qa": 283,
+    "insufficient_evidence": 31,
+    "multi_evidence": 42,
+    "numerical_calculation": 58
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 10,
+    "multi_evidence": 8,
+    "numerical_calculation": 6
+  },
+  "test_document_families": 115,
+  "publisher_counts": {
+    "northcarolina_doi": 10,
+    "canada_fcac": 12,
+    "newyork_dfs": 49,
+    "california_cdi": 32,
+    "wisconsin_oci": 37,
+    "utah_uid": 10,
+    "us_opm": 37,
+    "us_va": 33,
+    "us_tricare": 85,
+    "newjersey_dobi": 30,
+    "alberta_goa": 18,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 17,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "publisher_overrepresentation",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 2
+  },
+  "usage": {
+    "base_report_sha256": "c59fce6f5801b06e9fdea224ab68a42d434f01c0f947ad5ccc985782cfcee05b",
+    "base_candidates_sha256": "ed673b29b2be345ff959ca8061ccdf528eef76d1c33dfa31314578b7e48c7de1",
+    "new_candidates_sha256": "8686df268ee307861450b4a013dadab6419f68e94883080d93fe618cb5c51bab",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2773,
+    "old_old_pairs_reused": 666,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 5,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "4f42f7cf85e76c464bf67d4efb2d5b19026cd69076c2baf977a85f1ea1c870bd",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 279.26651399978437,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage45_source_decisions.json": "b8fbfe9d8e01d8256348855f013fef52ad7bd1bf61ccb36c26b0cb7700d7154a",
+    "stage45_final_review.json": "c2fd0dc701235d18b091c18f03879d64efd042416eac7bbda85d420d8f8b35c1",
+    "review_pool_46_clearance_ledger.json": "bb88dd6895e9424da24a68fb9ea96d7b60b9dadd22d392f3e665c8bed72e5882",
+    "provisional_item_pool_46.jsonl": "0d5569ac602ac3796206138c1d21050effb5ecc5bea7c95fd2fb7b6f4746c026",
+    "provisional_item_pool_46_validation.json": "9d16d7841418ce511e94526d9265c278f6c2691acaa9bcb08f38bd2a32ab72f7"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 317,
+    "numerical_calculation": 92,
+    "multi_evidence": 108,
+    "insufficient_evidence": 69
+  },
+  "limits": [
+    "586 independent TEST still needed; DEV count, numerical and multi-evidence minima remain unmet.",
+    "TRICARE concentration85/414 exceeds unchanged20% ceiling; prioritize other publishers.",
+    "Five California TEST retained; raw table checked; historical dates explicit and individualized premium refused.",
+    "Single Codex review; no claim of human/expert adjudication or absence of inaccessible pretraining contamination.",
+    "Original15 revocations, inherited holds, family cap and six DEV scope revocations preserved."
+  ]
+}

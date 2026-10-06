@@ -12,15 +12,15 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage44_progress.json`:
-409 provisional TEST and 45 DEV records across 113 TEST document families,
-with **zero frozen/accepted records**. All 454 retained item gates pass.
-Another 591 independent TEST questions are needed. TEST type targets and
+The latest construction checkpoint is `stage45_progress.json`:
+414 provisional TEST and 45 DEV records across 115 TEST document families,
+with **zero frozen/accepted records**. All 459 retained item gates pass.
+Another 586 independent TEST questions are needed. TEST type targets and
 DEV count/numerical/multi-evidence minima remain unmet. TRICARE accounts for
-85/409 TEST questions, exceeding the unchanged 20% publisher ceiling.
+85/414 TEST questions, exceeding the unchanged 20% publisher ceiling.
 The dataset cannot be accepted or frozen in this state.
 
-Stages43-44 retained 17 TEST tasks and held four new drafts. A full scope review
+Stages43-45 retained 22 TEST tasks and held four new drafts. A full scope review
 of all 51 then-active DEV questions revoked six: four professional licensing/
 continuing-education tasks and two standalone legal-service procedures.
 Their evidence was supported, but their information needs fell outside the
@@ -32,16 +32,20 @@ TRICARE moving guides were conservatively joined to the existing Medicare
 family through the TFL moving guide, preserving prior family membership and
 review bindings. New calculations and multi-source necessity were checked;
 overlapping evidence did not by itself establish independent information needs.
-Changed active neighbors and targeted historical texts were reviewed. All earlier
+Five California questions distinguish published liability maxima, survey scope,
+individual premium information gaps and explicitly historical CLCA changes.
+Original HTML table columns were verified; historical eligibility figures are
+not presented as current rules. Changed active neighbors and targeted historical
+texts were reviewed. All earlier
 holds, scope revocations and original15 revocations remain in force.
 
-Twenty-one new vectors across two local batches reused unchanged vectors.
+Twenty-six new vectors across three local batches reused unchanged vectors.
 No new source requests, paid services, extra agents, training, final evaluation,
 test-driven tuning or raw-data publication occurred. Codex review is not expert
 or human adjudication. Next construction should prioritize other publishers and
 consumer-scope DEV numerical and multi-evidence tasks.
 
-Commit `db7788e` passed all five CI jobs in run37406170536. Subsequent commits
+Commit `652a6f5` passed all five CI jobs in run37407884762. Subsequent commits
 require separate exact-head verification. Private ledgers preserve prior records
 and hash links. The PR-description integration403 restriction remains binding.
 
