@@ -12,25 +12,25 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage33_progress.json`:
-341 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
-Stage33 retained five tasks and held three. All 386 retained item gates pass
-across 105 TEST families. Another 659 independent TEST questions are needed;
-DEV numerical, multi-evidence and size gates remain unmet. All earlier holds
-and revocations remain. No final evaluation, training or test tuning occurred.
+The latest construction checkpoint is `stage34_progress.json`:
+348 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
+Stage34 retained seven tasks and held one historically exposed usage-based
+insurance rule. All 393 retained item gates pass across 106 TEST families.
+Another 652 independent TEST questions are needed; DEV numerical,
+multi-evidence and size gates remain unmet. All earlier holds remain.
 
-Supplementary historical review caught an employer-premium calculation already
-present in older material, despite automatic audits not flagging it. Two proposed
-multi-evidence tasks were also excluded because one span already determined
-the requested verdict. Citation count does not establish evidence necessity.
+Alberta's cached 2026 rate-cap rules and proposed 2027 rules are kept distinct.
+A shared evidence span contains both current and future income formulas;
+the known current calculation and future missing-ceiling refusal use different
+clauses and information needs. Thirty-seven targeted historical texts and
+five changed active-neighbor records were reviewed. Broad historical prechecks
+were reviewed as matched excerpts, with that limited scope recorded locally.
 
-Eight new candidate vectors were encoded in one local batch, reusing unchanged
-history and candidate vectors. Forty-four targeted historical texts and five
-changed active-neighbor records were reviewed. A conservative parent/detail
-document family was added. Codex review is not expert adjudication. No source
-requests, paid services, extra agents or raw-data publication occurred.
+Eight new vectors were encoded in one local batch, reusing unchanged vectors.
+No new source requests, paid services, extra agents, training, final evaluation
+or test tuning occurred. Codex content review is not expert adjudication.
 
-Commit `e819351` passed all five CI jobs in run37395816390. Subsequent commits
+Commit `4499fcb` passed all five CI jobs in run37397426281. Subsequent commits
 require separate exact-head verification. Private ledgers preserve prior records
 and hash links. The PR-description integration403 restriction remains binding.
 
