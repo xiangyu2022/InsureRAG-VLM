@@ -1,0 +1,94 @@
+{
+  "created_utc": "2026-10-06T00:05:36.274555+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 330,
+    "dev": 45
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 8,
+    "retained": 4,
+    "held": 4,
+    "retained_tasks": {
+      "ordinary_qa": 3,
+      "numerical_calculation": 1
+    }
+  },
+  "prior_checkpoint": "stage27a_progress.json:326TEST/45DEV/103families after1capacity revocation",
+  "test_task_counts": {
+    "ordinary_qa": 232,
+    "insufficient_evidence": 24,
+    "multi_evidence": 36,
+    "numerical_calculation": 38
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 10,
+    "multi_evidence": 8,
+    "numerical_calculation": 6
+  },
+  "test_document_families": 103,
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 7
+  },
+  "usage": {
+    "base_report_sha256": "94c35decb6392994f18fdcec2393e798a31c165e790dddc56bb3c00a4ad97fef",
+    "base_candidates_sha256": "1fcbd08c5b6815f18e8c48bcc5f11f588ec1549f79d83bca4a9021bd0cde470a",
+    "new_candidates_sha256": "aa3e9f89680f00de6655d0b9aacba45d89a0eda2c2f2be7933b906b244425642",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2660,
+    "old_old_pairs_reused": 660,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 8,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "4c59aa1963ce375d882f538fd6285107237436f9afe86fdbdd630bb20f48f9af",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 284.4237431001384,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage27_source_decisions.json": "44f07b8ed0e1a9a1fb2b385da67f07797de52c7e5f3560faaea4a88c77a32f17",
+    "stage27_final_review.json": "af7f9b169b7137fe4134da7572491f7d183069b829526f8c21715bbefa2e15ce",
+    "review_pool_31_clearance_ledger.json": "55ad99f84d688a8e9f562e05137d2e7b09b8bc8490ddf525b9b247cfa396661a",
+    "provisional_item_pool_31.jsonl": "fc66380e03fdc682100423b28dc891528be4ddfd21d1860392bcc1ee30f9a4af",
+    "provisional_item_pool_31_validation.json": "66389f211becc2db6aa2a68c8af78b5067f08af45753e603e1333fdc65d4649a"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 368,
+    "numerical_calculation": 112,
+    "multi_evidence": 114,
+    "insufficient_evidence": 76
+  },
+  "limits": [
+    "670 independent TEST still needed; DEV size/numeric/multi gates unmet.",
+    "Source-scoped and targeted-neighbor review does not prove unknown foundation pretraining absence.",
+    "Original15 revocations and later scope correction remain excluded.",
+    "Previous7b2b00c exact-head CI run37390471508 all5passed; stage27a family-capacity revocation remains excluded."
+  ],
+  "targeted_tests": {
+    "passed": 29,
+    "seconds": 0.26
+  }
+}
