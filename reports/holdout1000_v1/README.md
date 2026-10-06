@@ -12,28 +12,29 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage27_progress.json`:
-330 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
-Stage27a conservatively joined a dyslexia guide to its substantive parent family
-and revoked one excess-capacity item. Stage27 then retained four of eight drafts:
-three ordinary questions and one numerical task. Three drafts were held for
-historical information overlap and one for joining independently answerable
-subquestions instead of requiring interacting evidence.
-
-All 375 retained item gates pass across 103 TEST families. Another 670 independent
+The latest construction checkpoint is `stage28_progress.json`:
+333 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
+Stage28 retained three source-scoped OPM tasks: two numerical and one ordinary.
+All 378 retained item gates pass across 104 TEST families. Another 667 independent
 TEST questions are needed; DEV numerical, multi-evidence and size gates remain
-unmet. All earlier holds remain. No freeze, final benchmark inference, training
-or test-directed tuning has occurred.
+unmet. All earlier holds and revocations remain. No freeze, final benchmark
+inference, training or test-directed tuning has occurred.
 
-Eight new vectors were encoded in one local batch; 44,581 history vectors and
-2,660 prior candidate rows were reused. Sequential Codex review covered 36
-targeted historical texts, deduplicated excerpts from an additional focused
-39-record history scan, seven changed active records and source relationships.
-This is not expert adjudication. All 29 targeted quality and containment tests
-passed. No new source requests, paid services, extra agents or raw-data
-publication occurred.
+Final validation caught a blank title caused by an empty first H1. Extraction now
+uses the first nonempty content H1, retaining metadata or HTML-title fallbacks.
+A new metadata-only snapshot corrects that one document title; old snapshots,
+all source bodies, evidence offsets and questions remain unchanged. Five synthetic
+regression cases cover the bug and fallback behavior; all 47 relevant tests passed.
 
-Commit `7b2b00c` passed all five CI jobs in run37390471508. Subsequent commits
+Only three new vectors were encoded in one local batch. The interrupted lexical
+pass was restarted after confirming the worker had stopped and no result existed;
+completed exact/containment checks were preserved. Sixteen targeted historical
+texts and two changed active records were reviewed. Codex review is not expert
+adjudication. Cached-source preselection continues; third-party cancer materials
+and unresolved related pages are paused. No new source requests, paid services,
+extra agents or raw-data publication occurred.
+
+Commit `2e67c0f` passed all five CI jobs in run37392244877. Subsequent commits
 require separate exact-head verification. Private ledgers preserve prior records
 and hash links. The PR-description integration403 restriction remains binding.
 

@@ -14,6 +14,16 @@ from src.insurerag_vlm.source_faq_extraction import extract_original_faq,content
 LOCAL=ROOT/'reports/holdout1000_v1/local'
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 
+def source_title(soup,main,metadata):
+    """Prefer a nonempty content heading without erasing a usable fallback."""
+    for heading in main.find_all('h1'):
+        title=clean(heading.get_text(' ',strip=True))
+        if title:return title
+    title=clean(metadata.get('title') or '')
+    if title:return title
+    return clean(soup.title.get_text(' ',strip=True)) if soup.title else ''
+
+
 def html_rejection_reason(raw,metadata):
     """Reject non-HTML downloads before parsing; never guess spreadsheet text."""
     if raw.lstrip().startswith(b'%PDF'):return 'pdf_not_html'
@@ -41,8 +51,7 @@ def extract(root=LOCAL):
         if rejection:errors.append({'url':m['url'],'final_url':m.get('final_url'),'source_sha256':m['sha256'],'reason':rejection});continue
         soup=BeautifulSoup(raw,'html.parser');main=content_root(soup)
         text=clean(main.get_text(' ',strip=True));url=m.get('final_url',m['url']);doc_id=sha(url.encode())[:24]
-        title=m.get('title','');h1=main.find('h1')
-        if h1:title=clean(h1.get_text(' ',strip=True))
+        title=source_title(soup,main,m)
         doc={'id':doc_id,'publisher':publisher,'jurisdiction':registry[publisher]['jurisdiction'],'source_url':url,
              'source_title':title,'source_sha256':m['sha256'],'acquired_utc':m['acquired_utc'],
              'normalized_text_sha256':sha(text.encode()),'text':text,'source_artifact':str(path.relative_to(root)).replace('\\','/')}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-06T00:05:36.274555+00:00",
+  "updated_utc": "2026-10-06T00:23:42.846091+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1036,7 +1036,8 @@
     "2d67584ec3c3bb5de04a5b63": "3c59e5917dfd88828494b487204581f999de15e785f2ff827dc5b7d23b1a11b6",
     "4edd300aed8081ae477cb935": "c9de53569de08a2428a51351100ab4dba332eaf77e26d2a637424f6cd46ed860",
     "6eef69d5d74bba92fa7a8993": "c6b8ac787c7adfd698b65bd6dec032cbacec4f4b97270e9f09927a0b56fa4d79",
-    "e3ddc5805b0cf8a6bd5a9a1b": "022e7b35e2c4158891fcca428260a921a72dc7f1303707ae0c3e37b29e0f235c"
+    "e3ddc5805b0cf8a6bd5a9a1b": "022e7b35e2c4158891fcca428260a921a72dc7f1303707ae0c3e37b29e0f235c",
+    "e92b3db1965b6346824a0351": "4d54f5b7b8022a29624f0c718a7d2fdffc2f4afdf14fb0f5b046ded8aa4b2321"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
