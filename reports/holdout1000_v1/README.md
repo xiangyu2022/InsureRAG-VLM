@@ -12,27 +12,36 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage42_progress.json`:
-392 provisional TEST and 51 DEV records, with **zero frozen/accepted records**.
-Stages40-42 retained 15 TEST and four DEV tasks; one new FEDVIP question was
-held because its information need duplicates an existing OPM question.
-All 443 retained item gates pass across 110 TEST families. Another 608
-independent TEST questions are needed. DEV count and task minimums are now met;
-TEST size and all four task targets remain unmet. No final evaluation or test
-tuning occurred.
+The latest construction checkpoint is `stage44_progress.json`:
+409 provisional TEST and 45 DEV records across 113 TEST document families,
+with **zero frozen/accepted records**. All 454 retained item gates pass.
+Another 591 independent TEST questions are needed. TEST type targets and
+DEV count/numerical/multi-evidence minima remain unmet. TRICARE accounts for
+85/409 TEST questions, exceeding the unchanged 20% publisher ceiling.
+The dataset cannot be accepted or frozen in this state.
 
-The batches cover cumulative reinsurance payments, VA administrative rules,
-TRICARE retirement distinctions and Texas agent licensing/continuing education.
-Numerical rules were independently recomputed. Source tables were checked
-against cached HTML for year/quarter and dental/vision column alignment.
-Changed active neighbors and targeted historical records were reviewed even
-when automatic flags were zero. All previous holds remain in force.
+Stages43-44 retained 17 TEST tasks and held four new drafts. A full scope review
+of all 51 then-active DEV questions revoked six: four professional licensing/
+continuing-education tasks and two standalone legal-service procedures.
+Their evidence was supported, but their information needs fell outside the
+established consumer policy, benefit and claim scope. This explicitly supersedes
+the stage38/stage42 DEV counts and the prior claim that DEV minima were met.
+Historical reports remain preserved; the effective pool is now45.
 
-Twenty new vectors across three local batches reused unchanged vectors.
-No new source requests, paid services, extra agents, training or raw-data
-publication occurred. Codex review is not expert adjudication.
+TRICARE moving guides were conservatively joined to the existing Medicare
+family through the TFL moving guide, preserving prior family membership and
+review bindings. New calculations and multi-source necessity were checked;
+overlapping evidence did not by itself establish independent information needs.
+Changed active neighbors and targeted historical texts were reviewed. All earlier
+holds, scope revocations and original15 revocations remain in force.
 
-Commit `8d7b51c` passed all five CI jobs in run37403913494. Subsequent commits
+Twenty-one new vectors across two local batches reused unchanged vectors.
+No new source requests, paid services, extra agents, training, final evaluation,
+test-driven tuning or raw-data publication occurred. Codex review is not expert
+or human adjudication. Next construction should prioritize other publishers and
+consumer-scope DEV numerical and multi-evidence tasks.
+
+Commit `db7788e` passed all five CI jobs in run37406170536. Subsequent commits
 require separate exact-head verification. Private ledgers preserve prior records
 and hash links. The PR-description integration403 restriction remains binding.
 

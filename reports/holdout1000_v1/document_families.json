@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-06T02:50:26.159862+00:00",
+  "updated_utc": "2026-10-06T03:09:57.922028+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -657,29 +657,6 @@
       "review_record_sha256": "6add7246d45e01d71404fbeec4018bea837ac0488ae0f74387fc1914f7a6047d"
     },
     {
-      "family_id": "family_tricare_medicare_enrollment_cost_rules",
-      "document_ids": [
-        "13f20e198c0f2a53073a578d",
-        "22ea5b12f2a9b6e6c702c0b3",
-        "22f5b037eabf0a40f4f7a09c",
-        "23824e5f976eb73f44af8e6d",
-        "2f453fe7066318a95555a979",
-        "47a580525e5fa02e51941055",
-        "63a436307cfebb02b13f9dcc",
-        "ad597857c8621ad38df9d0b5",
-        "c4dd70600857d4b7a4a94414",
-        "cf0169f30be0269f9a544acc",
-        "d3612e6796c419cf2f917690",
-        "ed043048703cf7d745d4d31d",
-        "ef05413fd4ea1cdc5d959f88"
-      ],
-      "relation": "Conservative closure of linked USFHP/TFL Medicare transition and payer guides, repeated Prime fee-waiver provisions, and shared comparison/cap/deductible tables. Comparison guide repeats substantive tables in prior deductible and cap guides. Existing deductible/POS/CHCBP links preserved transitively. Common publisher alone is not the grouping basis.",
-      "local_review_records": [
-        "stage18_source_decisions.json"
-      ],
-      "review_record_sha256": "a182afca6ee4116571d3db295f0dc9b3ad9fa08d32dc6b4ba3b8d1048acabeba"
-    },
-    {
       "family_id": "family_nc_ut_title_search_ownership_guides",
       "document_ids": [
         "e2bd2d34476e4fcd0a09a138",
@@ -816,6 +793,75 @@
         "stage38_source_decisions.json"
       ],
       "review_record_sha256": "903213c6015d516f8741dbe5ef8551bc53ca91dd51b9e352f0455d73386b90b9"
+    },
+    {
+      "family_id": "family_tricare_prime_disenrollment",
+      "document_ids": [
+        "496345b39ff09310e8a3b642",
+        "b98c2925be9ecf499b4c27a2"
+      ],
+      "relation": "Prime andPrimeRemoteparallelstatus-change/voluntarydisenrollmentprocedures, includingadvancecontinuity; plan-specificlimits retained.",
+      "local_review_records": [
+        "stage43_source_decisions.json"
+      ],
+      "review_record_sha256": "2cc03d149693718c77ab234749c120b635974207b2c4028168e895d3a69fd28b"
+    },
+    {
+      "family_id": "family_tricare_survivor_death_notification",
+      "document_ids": [
+        "7198207b53f7d3a7b6d294ee",
+        "5953b3f5069a52807d5d5f0f"
+      ],
+      "relation": "Parallel survivorguides sharedeathnotificationchannels and coveragecontinuation; detailedremarriageexception noterased byshorteroverview.",
+      "local_review_records": [
+        "stage43_source_decisions.json"
+      ],
+      "review_record_sha256": "2cc03d149693718c77ab234749c120b635974207b2c4028168e895d3a69fd28b"
+    },
+    {
+      "family_id": "family_tricare_medicare_enrollment_cost_rules",
+      "document_ids": [
+        "13f20e198c0f2a53073a578d",
+        "22ea5b12f2a9b6e6c702c0b3",
+        "22f5b037eabf0a40f4f7a09c",
+        "23824e5f976eb73f44af8e6d",
+        "2f453fe7066318a95555a979",
+        "47a580525e5fa02e51941055",
+        "49a3f12a5eed76d9471bd89b",
+        "5ca7b2fa1ab11ff4a2a8f06d",
+        "63a436307cfebb02b13f9dcc",
+        "6876401336a0848ae803113c",
+        "78418c9e8b98ff776fda5b73",
+        "9b15d56ee8c2143890383df5",
+        "a1babdf544a194aaf9c186b0",
+        "ad597857c8621ad38df9d0b5",
+        "b081aa60ec7ecbdbcadfecc9",
+        "b0a26618de7bb44320cdf6bd",
+        "c1a2b1c09f9e0c707f6e5c31",
+        "c4dd70600857d4b7a4a94414",
+        "cf0169f30be0269f9a544acc",
+        "d3612e6796c419cf2f917690",
+        "ed043048703cf7d745d4d31d",
+        "ef05413fd4ea1cdc5d959f88"
+      ],
+      "relation": "Conservative closure of linked USFHP/TFL Medicare transition and payer guides, repeated Prime fee-waiver provisions, and shared comparison/cap/deductible tables. Comparison guide repeats substantive tables in prior deductible and cap guides. Existing deductible/POS/CHCBP links preserved transitively. Common publisher alone is not the grouping basis. Extended transitively through the TFL moving guide to ten plan-specific moving guides sharing substantive QLE and coverage-transfer procedures. Plan-specific timing differences remain explicit; generic displaced-return footer alone is excluded.",
+      "local_review_records": [
+        "stage18_source_decisions.json",
+        "stage44_source_decisions.json"
+      ],
+      "review_record_sha256": "5894b17d354718d0850edb57d3f4d7cce7dd05dbbef890b5d44d4512fa7e45b4"
+    },
+    {
+      "family_id": "family_tricare_reserve_plan_eligibility",
+      "document_ids": [
+        "5707cac18fbea116de56b09a",
+        "fe3e4e5bb314c83def921f79"
+      ],
+      "relation": "Parallel Reserve Select and Retired Reserve eligibility, FEHB exceptions and coverage definitions; comparative task requires both program guides. Common OHI footer does not merge unrelated plans.",
+      "local_review_records": [
+        "stage44_source_decisions.json"
+      ],
+      "review_record_sha256": "5894b17d354718d0850edb57d3f4d7cce7dd05dbbef890b5d44d4512fa7e45b4"
     }
   ],
   "document_text_sha256": {
@@ -1096,7 +1142,23 @@
     "f070de6e14b63e1ccb94422d": "ea85eaa074c8a8678026e9a185234fa8f8bec6a6a0b18598123ad14eda3d2b6b",
     "ddc2273727e6938dec0f8db3": "b97d69a4ace0f6d8f7ec7b58097675e4215a010e58aebffdbd028ec0c2b6af81",
     "b70815ff438c0fc2904868c6": "911a941e7f507bdd7da24644a4075de0dc390c11908626d1af07663f3bd96b9e",
-    "e16a655a6365a17dcd361729": "e3f9427b0428df948bdbf14e159dbec21f26e2c48834405a6722c6565339687b"
+    "e16a655a6365a17dcd361729": "e3f9427b0428df948bdbf14e159dbec21f26e2c48834405a6722c6565339687b",
+    "496345b39ff09310e8a3b642": "912274bd254a9bf8f84a092d444f28fe2316665417f7639a7b02a8ff442c19ed",
+    "7198207b53f7d3a7b6d294ee": "7854bee0800344e419de9c5d0c77a7837bf684739306309c896419065fa1197d",
+    "c688937823174aef5833e182": "46b0cf48b87b34fec34e9abd1e9bce66e8c3657cfc2ccca9f62ab58cd89b1e85",
+    "b98c2925be9ecf499b4c27a2": "d4d50ae738411e96fd00291612770b3dd81aca02f0afe5aca9af241aa75e013f",
+    "5953b3f5069a52807d5d5f0f": "060d02ca2bf43784e1a00614a1f205d7525d8927ad691254c8fb1b6f11da76ac",
+    "5707cac18fbea116de56b09a": "2f26807fe5c0728fdb1fe297a9dea85183125e16c4eabdba7e13136ad0410467",
+    "fe3e4e5bb314c83def921f79": "0bc681c3a1b86e2e9a45cc56095173c9b5e7c2e2bb55774242f35bfe38739b6a",
+    "6876401336a0848ae803113c": "bf2243591ffecf9b471c55079433cc2d92c11f0fdd8b613f0dc4d1710440cce0",
+    "49a3f12a5eed76d9471bd89b": "c22b531b29599192ebc6c53b03df35120bbf761405cf1a6bf2fcd9a5549ebcc2",
+    "5ca7b2fa1ab11ff4a2a8f06d": "90300a89488783839e0bfb5eae34ec8a9cd4409cd1941c42f274df63530a7162",
+    "78418c9e8b98ff776fda5b73": "195cb32dfcc97ac895620d6253ad320a7d1fd1c4e5ee223365d37fb88a0fe5d8",
+    "9b15d56ee8c2143890383df5": "2d69fe8e7faeaa5f6369a6c4924cb2e4f2c9d8ce343c3664250e396fb156ed43",
+    "a1babdf544a194aaf9c186b0": "0a24e85cfffb2427f4bc645237ccdc82972180b84f87a4f2e5ed73da1ad60c1d",
+    "b081aa60ec7ecbdbcadfecc9": "a499ec844f752547cf3cd5b154cf93f171c3788aa9b589533b32baf1b85bbde7",
+    "b0a26618de7bb44320cdf6bd": "3b047e96fe170d56680a92b59b79dd15407eb0ab65d51320a41e97b18e54bdde",
+    "c1a2b1c09f9e0c707f6e5c31": "9eac7857600a0986a480cab72f398bef3ec33e0f1549b0d0e85da37135049b9a"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
