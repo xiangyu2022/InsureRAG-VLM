@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-06T01:45:13.171104+00:00",
+  "updated_utc": "2026-10-06T02:01:38.560408+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -792,6 +792,18 @@
         "stage33_source_decisions.json"
       ],
       "review_record_sha256": "9408112aa744088ae7a24dd226a389cd95393eaa4b706d0ad03a339abcca4655"
+    },
+    {
+      "family_id": "family_ca_workerscomp_policy_appeal",
+      "document_ids": [
+        "84da46164616e4e11d2d463f",
+        "95ba2205426932d63e7b1415"
+      ],
+      "relation": "Detailed policy-appeal process expands the same insurer/WCIRBComplaint-and-Request-for-Action escalation explained in the comprehensive workers-compensation guide; semantic procedural family, although no exact16word window.",
+      "local_review_records": [
+        "stage37_source_decisions.json"
+      ],
+      "review_record_sha256": "d2f63087cb6dd56a6159145133c157f50cdd7709d9143333f05d27eb2ad8624e"
     }
   ],
   "document_text_sha256": {
@@ -1062,7 +1074,9 @@
     "bedc671721b74ed88523e241": "c2b7208205b7607f2d418827c802399ab9267b287843181db5630bcb0c5daca1",
     "375ad54b530ef65edc85ac91": "2c8fc52deaf92db5ca5c02522b1452a6fb886552baf18703b401e48b1b3afbf9",
     "ea353addb8fec3a11b6c33dc": "f4ce5e8256f2ba8012ae3e33939efa779db0d2f95febc48f6db0a7fb78f3eb9c",
-    "36e32c0a343a42f99e52bd5a": "442e65cad1d21bb000676c5bddcaf310aef1c62771766f9a4c97df3f98faff09"
+    "36e32c0a343a42f99e52bd5a": "442e65cad1d21bb000676c5bddcaf310aef1c62771766f9a4c97df3f98faff09",
+    "84da46164616e4e11d2d463f": "65a73a8d3143bdf3d34986a8cc8143e3f6f21c4ba9d002af713574951614819e",
+    "95ba2205426932d63e7b1415": "7806d269d05ccc2c23ea6df7fb95e0e1d849ef781dc34d3b065b86ecc736e711"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
