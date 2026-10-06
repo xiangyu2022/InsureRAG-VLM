@@ -12,26 +12,28 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage37_progress.json`:
-372 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
-Stage37 retained nine tasks and held two possible historical rule-core overlaps.
-All 417 retained item gates pass across 109 TEST families. Another 628
+The latest construction checkpoint is `stage39_progress.json`:
+377 provisional TEST and 47 DEV records, with **zero frozen/accepted records**.
+Stage38 retained two DEV tasks; stage39 retained five TEST tasks and held three.
+All 424 retained item gates pass across 109 TEST families. Another 623
 independent TEST questions are needed; DEV numerical, multi-evidence and size
 gates remain unmet. All earlier holds remain. No final evaluation or test
 tuning occurred.
 
-The batch adds two numerical tasks, five ordinary questions, one multi-evidence
-task and one realistic information-gap refusal from cached California sources.
-The workers-compensation policy appeal guide shares a family with its existing
-overview; duplicate bail-source bodies remain grouped. Generic fee negotiation
-and nonlawyer representation questions were held pending stronger novelty.
+The Texas service-process translations now share one DEV family, preserving
+their wording differences. The new TEST tasks concern rate publication,
+dependent rating, minor consent and mental-health coverage. Historical review
+held three rule overlaps. A targeted scan beyond the initial matched excerpts
+found the exact first/subsequent-year parity thresholds inside a long historical
+record; arithmetic on those exposed thresholds was not counted as a new task.
 
-Eleven new vectors were encoded in one local batch, reusing unchanged vectors.
-Forty-nine targeted historical texts and eleven changed active-neighbor records
-were reviewed. No new source requests, paid services, extra agents, training
-or raw-data publication occurred. Codex review is not expert adjudication.
+Ten new vectors across two local batches reused unchanged vectors. Batch38
+reviewed eight targeted historical texts and four changed active-neighbor
+records; batch39 reviewed 37 and three, respectively. No new source requests,
+paid services, extra agents, training or raw-data publication occurred.
+Codex review is not expert adjudication.
 
-Commit `1831198` passed all five CI jobs in run37400845785. Subsequent commits
+Commit `ecb273b` passed all five CI jobs in run37402561872. Subsequent commits
 require separate exact-head verification. Private ledgers preserve prior records
 and hash links. The PR-description integration403 restriction remains binding.
 
