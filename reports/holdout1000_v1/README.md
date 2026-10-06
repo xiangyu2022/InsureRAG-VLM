@@ -12,26 +12,25 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage31_progress.json`:
-336 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
-Stage31 retained three tasks and held two. All 381 retained item gates pass
-across 104 TEST families. Another 664 independent TEST questions are needed;
+The latest construction checkpoint is `stage33_progress.json`:
+341 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
+Stage33 retained five tasks and held three. All 386 retained item gates pass
+across 105 TEST families. Another 659 independent TEST questions are needed;
 DEV numerical, multi-evidence and size gates remain unmet. All earlier holds
 and revocations remain. No final evaluation, training or test tuning occurred.
 
-One rejected draft repeated a previously held long-term-care ratio rule.
-The new state framing and different operands did not make it independent.
-A response-versus-payment deadline draft was also held after historical-text
-review. The retained tasks concern a separate agreed property-damage payment,
-the total-loss loss-of-use cutoff, and permanent disability versus benefit duration.
+Supplementary historical review caught an employer-premium calculation already
+present in older material, despite automatic audits not flagging it. Two proposed
+multi-evidence tasks were also excluded because one span already determined
+the requested verdict. Citation count does not establish evidence necessity.
 
-Five new candidate vectors were encoded in one local batch, reusing unchanged
-history and candidate vectors. Twenty-five targeted historical texts and four
-changed active-neighbor records were reviewed. Codex review is not expert
-adjudication. No source requests, paid services, extra agents or raw-data
-publication occurred. Local preselection continues for further TEST/DEV coverage.
+Eight new candidate vectors were encoded in one local batch, reusing unchanged
+history and candidate vectors. Forty-four targeted historical texts and five
+changed active-neighbor records were reviewed. A conservative parent/detail
+document family was added. Codex review is not expert adjudication. No source
+requests, paid services, extra agents or raw-data publication occurred.
 
-Commit `bcad78b` passed all five CI jobs in run37393916050. Subsequent commits
+Commit `e819351` passed all five CI jobs in run37395816390. Subsequent commits
 require separate exact-head verification. Private ledgers preserve prior records
 and hash links. The PR-description integration403 restriction remains binding.
 
