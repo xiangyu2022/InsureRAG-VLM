@@ -12,28 +12,27 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage39_progress.json`:
-377 provisional TEST and 47 DEV records, with **zero frozen/accepted records**.
-Stage38 retained two DEV tasks; stage39 retained five TEST tasks and held three.
-All 424 retained item gates pass across 109 TEST families. Another 623
-independent TEST questions are needed; DEV numerical, multi-evidence and size
-gates remain unmet. All earlier holds remain. No final evaluation or test
+The latest construction checkpoint is `stage42_progress.json`:
+392 provisional TEST and 51 DEV records, with **zero frozen/accepted records**.
+Stages40-42 retained 15 TEST and four DEV tasks; one new FEDVIP question was
+held because its information need duplicates an existing OPM question.
+All 443 retained item gates pass across 110 TEST families. Another 608
+independent TEST questions are needed. DEV count and task minimums are now met;
+TEST size and all four task targets remain unmet. No final evaluation or test
 tuning occurred.
 
-The Texas service-process translations now share one DEV family, preserving
-their wording differences. The new TEST tasks concern rate publication,
-dependent rating, minor consent and mental-health coverage. Historical review
-held three rule overlaps. A targeted scan beyond the initial matched excerpts
-found the exact first/subsequent-year parity thresholds inside a long historical
-record; arithmetic on those exposed thresholds was not counted as a new task.
+The batches cover cumulative reinsurance payments, VA administrative rules,
+TRICARE retirement distinctions and Texas agent licensing/continuing education.
+Numerical rules were independently recomputed. Source tables were checked
+against cached HTML for year/quarter and dental/vision column alignment.
+Changed active neighbors and targeted historical records were reviewed even
+when automatic flags were zero. All previous holds remain in force.
 
-Ten new vectors across two local batches reused unchanged vectors. Batch38
-reviewed eight targeted historical texts and four changed active-neighbor
-records; batch39 reviewed 37 and three, respectively. No new source requests,
-paid services, extra agents, training or raw-data publication occurred.
-Codex review is not expert adjudication.
+Twenty new vectors across three local batches reused unchanged vectors.
+No new source requests, paid services, extra agents, training or raw-data
+publication occurred. Codex review is not expert adjudication.
 
-Commit `ecb273b` passed all five CI jobs in run37402561872. Subsequent commits
+Commit `8d7b51c` passed all five CI jobs in run37403913494. Subsequent commits
 require separate exact-head verification. Private ledgers preserve prior records
 and hash links. The PR-description integration403 restriction remains binding.
 
