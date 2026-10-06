@@ -12,29 +12,26 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage28_progress.json`:
-333 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
-Stage28 retained three source-scoped OPM tasks: two numerical and one ordinary.
-All 378 retained item gates pass across 104 TEST families. Another 667 independent
-TEST questions are needed; DEV numerical, multi-evidence and size gates remain
-unmet. All earlier holds and revocations remain. No freeze, final benchmark
-inference, training or test-directed tuning has occurred.
+The latest construction checkpoint is `stage31_progress.json`:
+336 provisional TEST and 45 DEV records, with **zero frozen/accepted records**.
+Stage31 retained three tasks and held two. All 381 retained item gates pass
+across 104 TEST families. Another 664 independent TEST questions are needed;
+DEV numerical, multi-evidence and size gates remain unmet. All earlier holds
+and revocations remain. No final evaluation, training or test tuning occurred.
 
-Final validation caught a blank title caused by an empty first H1. Extraction now
-uses the first nonempty content H1, retaining metadata or HTML-title fallbacks.
-A new metadata-only snapshot corrects that one document title; old snapshots,
-all source bodies, evidence offsets and questions remain unchanged. Five synthetic
-regression cases cover the bug and fallback behavior; all 47 relevant tests passed.
+One rejected draft repeated a previously held long-term-care ratio rule.
+The new state framing and different operands did not make it independent.
+A response-versus-payment deadline draft was also held after historical-text
+review. The retained tasks concern a separate agreed property-damage payment,
+the total-loss loss-of-use cutoff, and permanent disability versus benefit duration.
 
-Only three new vectors were encoded in one local batch. The interrupted lexical
-pass was restarted after confirming the worker had stopped and no result existed;
-completed exact/containment checks were preserved. Sixteen targeted historical
-texts and two changed active records were reviewed. Codex review is not expert
-adjudication. Cached-source preselection continues; third-party cancer materials
-and unresolved related pages are paused. No new source requests, paid services,
-extra agents or raw-data publication occurred.
+Five new candidate vectors were encoded in one local batch, reusing unchanged
+history and candidate vectors. Twenty-five targeted historical texts and four
+changed active-neighbor records were reviewed. Codex review is not expert
+adjudication. No source requests, paid services, extra agents or raw-data
+publication occurred. Local preselection continues for further TEST/DEV coverage.
 
-Commit `2e67c0f` passed all five CI jobs in run37392244877. Subsequent commits
+Commit `bcad78b` passed all five CI jobs in run37393916050. Subsequent commits
 require separate exact-head verification. Private ledgers preserve prior records
 and hash links. The PR-description integration403 restriction remains binding.
 
