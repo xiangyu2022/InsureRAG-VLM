@@ -1,0 +1,113 @@
+{
+  "created_utc": "2026-10-07T19:06:24.478302+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 600,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 20,
+    "retained": 20,
+    "held": 0,
+    "retained_tasks": {
+      "numerical_calculation": 5,
+      "multi_evidence": 6,
+      "insufficient_evidence": 4,
+      "ordinary_qa": 5
+    }
+  },
+  "prior_checkpoint": "stage89_progress.json:580TEST/58DEV/140families",
+  "test_task_counts": {
+    "ordinary_qa": 389,
+    "insufficient_evidence": 48,
+    "multi_evidence": 73,
+    "numerical_calculation": 90
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 141,
+  "publisher_counts": {
+    "northcarolina_doi": 23,
+    "canada_fcac": 18,
+    "newyork_dfs": 54,
+    "california_cdi": 42,
+    "wisconsin_oci": 52,
+    "utah_uid": 12,
+    "us_opm": 100,
+    "us_va": 41,
+    "us_tricare": 102,
+    "newjersey_dobi": 36,
+    "alberta_goa": 36,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 20
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 2
+  },
+  "usage": {
+    "base_report_sha256": "43ecfe5aab9213b7107c7731f6755d1c71ef1730b0d679991c245c4cd6e5c968",
+    "base_candidates_sha256": "3c15309e0f0a318ca2174e6a24dd0d7a5f13e1e173b19bd5fc3f0df3e52cdab0",
+    "new_candidates_sha256": "2c779e17abe69925846a7a645707fff13c1eaf12759341293613ecf675e3da94",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2987,
+    "old_old_pairs_reused": 679,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 20,
+    "local_model_processes": 1,
+    "forward_batches": 2,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "87fac16a0ef01c1d13301c9bc726c172b4439e73d7231883215dea24c08d1541",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 3,
+    "new_source_bytes": 211159,
+    "new_html_documents": 1,
+    "new_pdf_documents": 0,
+    "browser_discovery_calls": 5,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 308.8910597998183,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage91_source_decisions.json": "41a24074afa3085623d1c5f1e482c113e8831a213d91f60ca6cbabe71a31539b",
+    "stage91_final_review.json": "0210f59111bdf49f82a89db5a4513025c3d59b4db4667e02a767f0800dfb765d",
+    "review_pool_83_clearance_ledger.json": "e92d3e098a086ee76c2b549fc5544dae1175fa61317ccd2ca1d58bae4e7e04ef",
+    "provisional_item_pool_83.jsonl": "4609f912ff9ffa6f0813f580224aef241daf0af0324d17c35d62af85c3b3af12",
+    "provisional_item_pool_83_validation.json": "cfc46e30a26590eba12bdb4dede31671bd94871b9a23a95daa551e05901afe68"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 211,
+    "numerical_calculation": 60,
+    "multi_evidence": 77,
+    "insufficient_evidence": 52
+  },
+  "limits": [
+    "400 independent TEST still needed;DEVminima provisionallymet.",
+    "One newlicensedofficialHTML; old1314documents and2317FAQbytes unchanged.",
+    "Whole NHCpublisher TEST and oneoverviewfamily; maximum20items unchanged.",
+    "All88nearesthistoricalfulltexts and37unique neighboringQAs read;2activechangedrelations reviewed.",
+    "Later7HTMLacquisitions pendingstage93 reviews andfamilyextension;notpart ofsnapshot15.",
+    "Single sequentialCodexcontentreview, nothuman/expertreview."
+  ]
+}

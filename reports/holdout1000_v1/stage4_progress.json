@@ -1,0 +1,122 @@
+{
+  "recorded_utc": "2026-10-04T18:04:49.618644+00:00",
+  "checkpoint": "stage4",
+  "status": "IN_PROGRESS_NOT_FROZEN_NOT_1000_ACCEPTED",
+  "source_registry_count": 64,
+  "approved_local_research_publishers": 14,
+  "canonical_documents": 1285,
+  "source_faq_candidates": 2036,
+  "extraction_snapshot": "extraction_batch_07",
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "final_benchmark_inference_runs": 0,
+  "training_runs": 0,
+  "provisional_pool_snapshot": "pool04/snapshot07/global-semantic10, with sampled containment diagnostic01; final family/component assembly pending",
+  "provisional_test_passing_item_gates": 91,
+  "provisional_dev_passing_item_gates": 1,
+  "provisional_test_tasks": {
+    "ordinary_qa": 62,
+    "insufficient_evidence": 8,
+    "multi_evidence": 11,
+    "numerical_calculation": 10
+  },
+  "provisional_test_publishers": 11,
+  "provisional_test_document_groups": 41,
+  "provisional_validation_errors": [
+    "test_count_below_target",
+    "dev_count_below_target",
+    "publisher_overrepresentation",
+    "too_few_document_groups",
+    "task_count_below_target:ordinary_qa",
+    "task_count_below_target:numerical_calculation",
+    "task_count_below_target:multi_evidence",
+    "task_count_below_target:insufficient_evidence"
+  ],
+  "provisional_item_errors": {},
+  "clearance_ledger_sha256": "4bc573a4c0064c3a645e6e4382f35d5ed3f562ab9c75783810a122ddff6a1a20",
+  "provisional_pool_sha256": "e549206d21ff66f5f05e59248eacc8444d2afe7caa84f597732c2c963e528e4d",
+  "review_label": "Codex agent source/content/history review plus automatic checks; not human or insurance-expert adjudication.",
+  "review_queue_not_accepted": {
+    "test": 732,
+    "dev": 207
+  },
+  "queue_by_publisher": {
+    "alabama_doi": 8,
+    "australia_apra": 3,
+    "california_cdi": 26,
+    "newjersey_dobi": 129,
+    "utah_uid": 133,
+    "wisconsin_oci": 136,
+    "newyork_dfs": 128,
+    "us_tricare": 69,
+    "northcarolina_doi": 47,
+    "texas_tdi": 207,
+    "us_opm": 16,
+    "us_va": 37
+  },
+  "since_stage3": {
+    "tricare_new_item_gates_passed": 22,
+    "wisconsin_new_item_gates_passed": 6,
+    "previous_nc_clearance_revoked": 1,
+    "net_test_increase": 27,
+    "wisconsin_source_faq_content_reviewed": 20,
+    "wisconsin_revised_or_authored_audit_pool": 13,
+    "wisconsin_pool_excluded_or_held": 7,
+    "texas_dev_source_faq_content_reviewed": 18,
+    "texas_dev_content_only_pass_pending_audits": 3
+  },
+  "audit_evidence": {
+    "tricare_clearance_ledger_sha256": "f6572dafa07d1ad661b107bbe173e28e2b50df768b6427afc094b1fe9009b922",
+    "wisconsin_exact_history_flags": 0,
+    "wisconsin_lexical_history_flags": 0,
+    "wisconsin_semantic_history_flags": 0,
+    "wisconsin_exact_sha256": "aa47b59a14e8a3b544209ccc9f5f2f3b07934fee422b5619f6cbc0e22df75e52",
+    "wisconsin_near_sha256": "4cd86a8294a30b41da85b7e48370cda31c549d78b1f493b3c85ac99705a72a6a",
+    "global_semantic_sha256": "84cbfd55b6ac94fcc5cea3e40488837321ad510f3195a8b57438dc6be29a058d",
+    "containment_diagnostic_sha256": "0320eadd504d0860a1d2d2986b46ee81a5758dcd70ac3f4b376b696e2bda372a",
+    "containment_scope_items": 100,
+    "containment_unique_windows": 434,
+    "containment_matched_windows": 2,
+    "containment_previous_items_revoked": 1,
+    "accessible_historical_strings": 724751,
+    "accessible_historical_questions": 44581,
+    "previous_exposed_faqs": 218,
+    "interpretation": "Zero threshold flags did not establish independence. Manual review excluded repeated retention-period, prospective-buyer access and fee-inclusive tax-base information needs; NSA cases remain held. Sampled containment exposed a previously missed long-record match."
+  },
+  "new_holds": [
+    "Wisconsin continuation page: COBRA first-payment deadline conflict and contradictory legal-separation wording.",
+    "TRICARE pharmacy population/table-boundary ambiguity.",
+    "Source question/answer Unicode format characters pending repair and dual evidence audits."
+  ],
+  "engineering_validation": {
+    "prior_full_suite": "417 passed,6 skipped,58 subtests in6.81s at stage2d",
+    "prior_full_suite_log_sha256": "7ddd780e4402c10498691e41d91c577ec3f64c1fd0c66fe4e5cd5bc8736d0ed8",
+    "current_change_validation": "Fresh snapshot07 triage09 executed successfully after new source/format holds;61 format-character candidates,22 continuation-page candidates and1 pharmacy candidate flagged.",
+    "triage09_sha256": "843fc9342f85c5a103b0df272912e0df1d0b406dd9ad5a699f12c2ebd47d1114",
+    "model_quality_improvement_claimed": false
+  },
+  "published_draft_pr": "https://github.com/xiangyu2022/InsureRAG-VLM/pull/8",
+  "last_confirmed_published_head": "c8129bf40588c2aed346b110de2b745009d205ff",
+  "last_confirmed_published_ci": "37220347024 success for c8129bf",
+  "publication_note": "This checkpoint is prepared for the existing draft branch. Use actual branch HEAD/workflow result for its publication status. No merge or raw-data publication.",
+  "pr_description_update": {
+    "status": "blocked",
+    "reason": "GitHub connector403 Resource not accessible by integration",
+    "fallback_attempted": false
+  },
+  "updated_effort_estimate": "Earlier12-24h unsupported. Rough50-70hours additional construction/review at cumulative current yield, with source expansion and family/containment audits potentially extending this; no completion deadline or final-inference estimate.",
+  "remaining_work": [
+    "At least1000 independent test plus150 dev; current91/1 provisional items remain far below goals.",
+    "Expand eligible sources and substantive tasks; current test review queue732 is itself below target and is not accepted data.",
+    "Complete dev history/duplicate audits; expand numeric/multi-evidence/refusal tasks to150/150/100.",
+    "Resolve document-family and duplicate-component reservations, publisher balance and all source conflicts before freeze.",
+    "Strengthen long-record containment and manual historical answer review; preserve earlier revocations rather than restoring counts.",
+    "Freeze only after dataset gates pass, then run fixed baseline with separate Recall/Hit and task-specific quality metrics."
+  ],
+  "limits": [
+    "No foundation-pretraining independence claim.",
+    "No denied-path or blocked-source bypass.",
+    "No final test tuning, training, merge, deployment, resume edit, raw-source/Q&A or model-weight upload."
+  ]
+}

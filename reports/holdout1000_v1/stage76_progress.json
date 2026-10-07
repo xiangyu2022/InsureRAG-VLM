@@ -1,0 +1,106 @@
+{
+  "created_utc": "2026-10-07T13:20:43.334386+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 546,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 6,
+    "retained": 5,
+    "held": 1,
+    "retained_tasks": {
+      "numerical_calculation": 2,
+      "ordinary_qa": 2,
+      "multi_evidence": 1
+    }
+  },
+  "prior_checkpoint": "stage75_progress.json:541TEST/58DEV/139families",
+  "test_task_counts": {
+    "ordinary_qa": 367,
+    "insufficient_evidence": 40,
+    "multi_evidence": 60,
+    "numerical_calculation": 79
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 140,
+  "publisher_counts": {
+    "northcarolina_doi": 21,
+    "canada_fcac": 18,
+    "newyork_dfs": 55,
+    "california_cdi": 37,
+    "wisconsin_oci": 46,
+    "utah_uid": 10,
+    "us_opm": 98,
+    "us_va": 41,
+    "us_tricare": 102,
+    "newjersey_dobi": 33,
+    "alberta_goa": 21,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 8
+  },
+  "usage": {
+    "base_report_sha256": "84f574559bc57001633254b9524b36c5b52aa03ed3f30ecd8f8a8c6f27d63f4e",
+    "base_candidates_sha256": "b3e616b7190b910f9bf2e08458759ad776cb6c1e98711df15fa49b9d92d5b9c2",
+    "new_candidates_sha256": "15b29c443d3aedd2fc036fe24c4e0d6e1427c2e414d3f7507e23017cdbc0c01b",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2944,
+    "old_old_pairs_reused": 672,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 6,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "7fe48b3669c81d01b2d0535533290f820fcfda4e64de32492147eac4e1d4232e",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 300.47982190013863,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage76_source_decisions.json": "3878f0fe044361b3af48b6d471c8ca0170d0b3b65652bf79f4f2ca228e42b8ce",
+    "stage76_final_review.json": "a7438be5f33d3a99cd5b91983fef20b0d64fff31f83412238a64adea1e5a3dbc",
+    "review_pool_74_clearance_ledger.json": "c0864c265936fce8700dcf703bfe8279d09fdca251c2801519d67f9b6580ff47",
+    "provisional_item_pool_74.jsonl": "be02155e781d087b790436f9b58a020fac2a53247231f34d986e4af0395b82d7",
+    "provisional_item_pool_74_validation.json": "3423116a81cc6352498eaffc2908ae409c412163a321a0478e46b136fe43828d"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 233,
+    "numerical_calculation": 71,
+    "multi_evidence": 90,
+    "insufficient_evidence": 60
+  },
+  "limits": [
+    "454 independent TEST still needed;DEVtask minima provisionally met.",
+    "Five TEST retained:2ordinary,2numerical,1multi. VGLI supplementary-benefit draft held as same need as retainedFSGLI; prior equivalent hold not bypassed.",
+    "All26 nearest historical fulltexts and30neighbor QAs read;8active changed relations reviewed. Equivalent heldVGLIdraft and retainedFSGLIfullQA inspected.",
+    "Broad topic scans selectively reviewed as precisely recorded; no claim of exhaustive content review.",
+    "Prior scope corrections,holds and split isolation preserved; single sequential Codex content review."
+  ]
+}

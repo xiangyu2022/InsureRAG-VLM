@@ -1,0 +1,94 @@
+{
+  "created_utc": "2026-10-04T17:18:50.726106+00:00",
+  "reviewer_type": "Codex agent consistency/currency review, not expert adjudication",
+  "findings": [
+    {
+      "local_record": "critical_source_findings_round3.json",
+      "sha256": "ab66e9a1815712004dbe291eb6a597934a53e0d740f3db7b5e72501e565e1db1",
+      "summary": {
+        "reviewed_utc": "2026-10-04T16:13:24.590897+00:00",
+        "findings": [
+          {
+            "source": "Utah HIPAA-Health Insurance Portability",
+            "issue": "superseded certificate rules",
+            "verification_url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-B/part-146/subpart-B/section-146.115",
+            "verification": "Current section (a) supersedes certificate rules; (b) applies beginning 2014-12-31."
+          },
+          {
+            "source": "California CDI Long Term Care Insurance",
+            "issue": "daily-skilled-home-care statement",
+            "verification_url": "https://www.medicare.gov/coverage/home-health-services",
+            "verification": "Eligibility and aide coverage permit part-time/intermittent skilled services; daily skilled services not a universal requirement."
+          }
+        ],
+        "action": "Hold complete affected pages; local curator plausible decisions do not override these findings."
+      }
+    },
+    {
+      "local_record": "critical_source_findings_opm01.json",
+      "sha256": "7c75da8566598a73594c99f63daf919208e2f9c30acbb7191c4639096906e06d",
+      "summary": {
+        "reviewed_utc": "2026-10-04T16:26:38.168839+00:00",
+        "findings": [
+          {
+            "source_title": "Health Savings Accounts",
+            "issue": "Blanket three-month HSA contribution ban after VA medical use omits service-connected-disability exception. Other Medicare-eligibility versus enrollment wording also requires full review.",
+            "verification_url": "https://www.irs.gov/publications/p969",
+            "verification": "IRS Publication 969 (2025), Qualifying for an HSA Contribution, explicitly permits eligibility despite VA hospital/medical care for a service-connected disability."
+          },
+          {
+            "source_title": "Temporary Continuation of Coverage",
+            "issue": "Source definition retains historical HIPAA guaranteed-individual-access framing. Do not present as verified current access rule.",
+            "verification_url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-B/part-146/subpart-B/section-146.115",
+            "verification": "Certificate regime is superseded; individual-access passage requires independent current-law verification."
+          }
+        ],
+        "action": "Full currency/scope review of affected OPM pages required before any item on them can be accepted; correct items may be retained only after explicit review, not blanket auto-acceptance."
+      }
+    },
+    {
+      "local_record": "critical_source_findings_va02.json",
+      "sha256": "c65e827278a4b967e999db7efb418ea3c831dc8cc5e1989dd015bc58a2023b01",
+      "summary": {
+        "created_utc": "2026-10-04T17:06:46.974863+00:00",
+        "source_title": "Totally disabled or terminally ill policyholders",
+        "finding": "Same page says only insured can apply for accelerated benefits and no one may apply on their behalf, but next answer permits power-of-attorney/guardian/conservator/VA-fiduciary applications. Do not choose one as verified law.",
+        "action": "Hold full affected page until authoritative current resolution; expand review to neighboring VA eligibility/representation rules.",
+        "secondary_findings": [
+          "Custom va-telephone values missing in some flattened contact instructions: affected records held.",
+          "Older DS Logon instructions require current access-method verification before using enrollment procedural answers."
+        ],
+        "scope": "Codex source consistency review, not expert/legal validation."
+      }
+    },
+    {
+      "local_record": "critical_source_findings_texas01.json",
+      "sha256": "476c3963fff086ae2cd9d4efc2cfa48c0f85f4b3d9546641516d0d5d32e7be3c",
+      "summary": {
+        "created_utc": "2026-10-04T17:14:17.981596+00:00",
+        "source_title": "Do I need to buy insurance when I rent a car?",
+        "candidate_id": "0b2c46de3d97201ca7fe343e",
+        "issue": "TDI answer categorically describes credit-card rental coverage as secondary. Issuer primary source provides a concrete counterexample; do not universalize.",
+        "verification_url": "https://www.chase.com/sapphire-cards/personal/preferred",
+        "verification": "Issuer Auto Rental Coverage section explicitly describes primary coverage, subject to its terms. No claim about exact benefit limits needed for this contradiction.",
+        "action": "Hold the full affected TDI rental-car page pending full review; review credit-card coordination claims in related strata.",
+        "publication": "Counterexample metadata only; bank source is not bulk-acquired or included in benchmark corpus."
+      }
+    },
+    {
+      "local_record": "critical_source_findings_wisconsin02.json",
+      "sha256": "359375e14606f8de6956c3eb900c7b457cf9a205c2ffb9c21b42d8cdb62a0739",
+      "summary": {
+        "created_utc": "2026-10-04T17:42:07.788327+00:00",
+        "source_title": "Fact Sheet on Continuation Rights in Health Insurance Policies",
+        "source_url": "https://oci.wi.gov/Pages/Consumers/PI-023.aspx",
+        "issue": "FAQ combines COBRA election and initial payment into one60-day deadline. Federal rule separately prevents required initial payment earlier than45days after election. A legal-separation paragraph also says No but then appears to permit the very termination being denied; do not infer a missing negation.",
+        "verification_url": "https://www.ecfr.gov/current/title-26/chapter-I/subchapter-D/part-54/section-54.4980B-8",
+        "verification": "Q&A5(b), current eCFR displayed up to2026-10-01, states the separate45-day initial-payment minimum measured from election.",
+        "action": "Hold the complete affected continuation page until current-rule and text-consistency review; correct-looking questions do not bypass the hold.",
+        "reviewer_type": "Codex source consistency review, not expert/legal adjudication"
+      }
+    }
+  ],
+  "updated_utc": "2026-10-04T18:04:49.618644+00:00"
+}

@@ -1,0 +1,107 @@
+{
+  "created_utc": "2026-10-07T11:19:39.506699+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 534,
+    "dev": 50
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 5,
+    "retained": 5,
+    "held": 0,
+    "retained_tasks": {
+      "numerical_calculation": 2,
+      "multi_evidence": 1,
+      "ordinary_qa": 2
+    }
+  },
+  "prior_checkpoint": "stage62_progress.json:529TEST/50DEV/134families",
+  "test_task_counts": {
+    "ordinary_qa": 359,
+    "insufficient_evidence": 39,
+    "multi_evidence": 60,
+    "numerical_calculation": 76
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 22,
+    "insufficient_evidence": 10,
+    "multi_evidence": 10,
+    "numerical_calculation": 8
+  },
+  "test_document_families": 136,
+  "publisher_counts": {
+    "northcarolina_doi": 21,
+    "canada_fcac": 16,
+    "newyork_dfs": 54,
+    "california_cdi": 35,
+    "wisconsin_oci": 51,
+    "utah_uid": 10,
+    "us_opm": 98,
+    "us_va": 33,
+    "us_tricare": 102,
+    "newjersey_dobi": 32,
+    "alberta_goa": 18,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_task_count_below_target:numerical_calculation",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 4
+  },
+  "usage": {
+    "base_report_sha256": "e25632dc7f3fae9f53a50daf5cf0a2198d8e3588b1ae6c89c45098229ecb6ce9",
+    "base_candidates_sha256": "75c873d8787f64c27efda7fa0962918719b0829edb2249d854719e427481f6c1",
+    "new_candidates_sha256": "57fd359cffb07da9154e0723bb253cf631de7566e57439a88d6235a807ddaaa2",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2905,
+    "old_old_pairs_reused": 669,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 5,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "de99802f4a8a9e63c948f8100d78d1769c2e1e0d468a55590eae070c30cd9a98",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 273.6848448999226,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage63_source_decisions.json": "6e0bb81c189b634402f8df932eca8774846514a85f0d5558b3e68aeaeaaaed9c",
+    "stage63_final_review.json": "22a6d8267e8bfe848de5ca4770f86a48f5f57cd445afc82f814d38ff401e2e33",
+    "review_pool_64_clearance_ledger.json": "fb586593ff575f0310f29724895c7faf7b70e3746be850e5bb22146d46b2c2fe",
+    "provisional_item_pool_64.jsonl": "5b5a9c6aee3d9b2c28fcdd361ac2f413d9e413c246711e9dc4560266c4f2742d",
+    "provisional_item_pool_64_validation.json": "810fe991490766f029140f21eb50f294dcf4a7f90a41d62aede26aeb407097cc"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 241,
+    "numerical_calculation": 74,
+    "multi_evidence": 90,
+    "insufficient_evidence": 61
+  },
+  "limits": [
+    "466 independent TEST still needed; DEV numerical minimum short by2.",
+    "Five TEST retained:two numerical,one multi-evidence,two ordinary.",
+    "All24 historical fulltexts and26 neighboring QAs read;4 active changed relations reviewed.",
+    "One semantic pair at0.92093 reviewed as distinct protection eligibility versus post-refusal administrative remedy.",
+    "Single sequential Codex content review, not human/expert review; source and item holds preserved."
+  ]
+}

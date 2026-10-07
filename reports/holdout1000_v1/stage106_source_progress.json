@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-10-07T21:06:27.861550+00:00",
+  "status": "HOLD_EXPRESS_WRITTEN_PERMISSION_REQUIRED",
+  "publisher": "us_pbgc",
+  "terms_url": "https://www.pbgc.gov/about/policies/website",
+  "terms_last_updated": "2026-03-18",
+  "reason": "Terms require express written PBGC permission to copy, modify, distribute, display or otherwise use website content. Permission absent; no consumer pages/tables/QA acquired and no source approval. No alternate source or route attempted.",
+  "robots": "Crawl-delay10; prohibited searches/forms/login not accessed; exact public homepage/terms only.",
+  "new_source_requests": 3,
+  "new_source_bytes": 154662,
+  "browser_discovery_calls": 2,
+  "new_candidates": 0,
+  "source_selection_sha256": "244aacc896e22efc87a745e9d217dd4e276b51a3ba30110ac19cd7aa53af9b87",
+  "local_model_processes": 0,
+  "accepted_test_items": 0,
+  "frozen": false
+}

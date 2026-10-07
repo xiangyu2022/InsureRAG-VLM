@@ -1,0 +1,1643 @@
+{
+  "version": 1,
+  "updated_utc": "2026-10-07T22:36:41.488186+00:00",
+  "reviewer": "Codex source-family review, not complete proof of semantic independence",
+  "local_review_record": "agent_family01_findings.json",
+  "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
+  "groups": [
+    {
+      "family_id": "family01_exact_018a6c9c778676452df038f5",
+      "document_ids": [
+        "018a6c9c778676452df038f5",
+        "97da0a46b8f1b3334bfbb53b"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_702216e8e8bc56fb51d7e4d4",
+      "document_ids": [
+        "b18710350ad4e79ba87a0ef2",
+        "702216e8e8bc56fb51d7e4d4"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_3997c50a5966717e10a1636c",
+      "document_ids": [
+        "e9c38a14f967d3db606e8335",
+        "3997c50a5966717e10a1636c"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_b52065e940688c588c2d0061",
+      "document_ids": [
+        "f3e2ffe42632023a5dbd9c16",
+        "b52065e940688c588c2d0061"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_28a0a2545ff88e3611e7ecd2",
+      "document_ids": [
+        "28a0a2545ff88e3611e7ecd2",
+        "f3a78d77a836c637ca03be80"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_2a8295f57626d549d548b000",
+      "document_ids": [
+        "2a8295f57626d549d548b000",
+        "9a31585b6c0ca9e9d5d09b86"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_2c3ceebbb622e5ad4eac13b0",
+      "document_ids": [
+        "2c3ceebbb622e5ad4eac13b0",
+        "a8c706b8593a4fb21db9f336"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_047ac450e10b060a7c47e019",
+      "document_ids": [
+        "2fab06a9753164b65358b1b7",
+        "047ac450e10b060a7c47e019",
+        "ee525a99d97d35a28aa78cad"
+      ],
+      "relation": "normalised_complete_body_duplicate",
+      "local_review_records": [
+        "stage67_source_decisions.json"
+      ],
+      "extension_review_sha256": [
+        "1934d33271a34151e91d5550f7ac54b9f8bbf3eb0761569d5c90030b518ac898"
+      ]
+    },
+    {
+      "family_id": "family01_exact_3166797dab7aa03bc753d7f5",
+      "document_ids": [
+        "3166797dab7aa03bc753d7f5",
+        "a20e2c2b7afd07ccc4e9d1d2"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_27a256a25d4112c61e10bd9b",
+      "document_ids": [
+        "3338d443ce0f0623e1938c17",
+        "27a256a25d4112c61e10bd9b"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_369c0cb817146a2917e8710f",
+      "document_ids": [
+        "369c0cb817146a2917e8710f",
+        "9e3a0816e4bb9f4503e3f922"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_3ecace7bb895b1c2b7b2cc53",
+      "document_ids": [
+        "3ecace7bb895b1c2b7b2cc53",
+        "c764ea5914d8b699a1f9e87e"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_4d29602f7a434c7826a3deae",
+      "document_ids": [
+        "4d29602f7a434c7826a3deae",
+        "8a5d70713bcc2b0365f744d2"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_4e208451fa9e654e2cca2dd6",
+      "document_ids": [
+        "4e208451fa9e654e2cca2dd6",
+        "8fc60f0b61f7365a3cb353f9"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_53e3a2f6aebbfbf70a09ce13",
+      "document_ids": [
+        "53e3a2f6aebbfbf70a09ce13",
+        "d485509be9e5056ed7dec7f4"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_833aa8de301411859d589747",
+      "document_ids": [
+        "833aa8de301411859d589747",
+        "b018dcb498006f4c03e37d63"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_65b2b51b2b7bbb6076252fd4",
+      "document_ids": [
+        "65b2b51b2b7bbb6076252fd4",
+        "7c3ee71a5e049eb4ddbf9759"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_6a061f5161d14b14994156d5",
+      "document_ids": [
+        "6a061f5161d14b14994156d5",
+        "ff74a2cd4340e659159fde46"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_bed1b25240f7b5c0e13331f8",
+      "document_ids": [
+        "de66bd9de7faacbdc53c7a42",
+        "bed1b25240f7b5c0e13331f8"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_7f4f82cd13b0763d02037fca",
+      "document_ids": [
+        "7f4f82cd13b0763d02037fca",
+        "8a935ca5ee8075f01def78d8"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_080dc16b2783ace524010faa",
+      "document_ids": [
+        "81b169737e514146ebda17fa",
+        "080dc16b2783ace524010faa"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_878bf47e2f3e7d6f6e94eb8a",
+      "document_ids": [
+        "878bf47e2f3e7d6f6e94eb8a",
+        "f77286e7bee9330966d7ac20"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_9ee44012df69fc2538a067bf",
+      "document_ids": [
+        "9ee44012df69fc2538a067bf",
+        "cb231c9dd3dfe29d203648dc"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_4a0c11b9b8a82fad55c0eef6",
+      "document_ids": [
+        "4a0c11b9b8a82fad55c0eef6",
+        "f8c3ca14906a4a25053cfb4a"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_96be6e3aeeb072719d74c15a",
+      "document_ids": [
+        "998f202b0bb624936b97ad0a",
+        "96be6e3aeeb072719d74c15a"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_679b65b075cfb62289ec5486",
+      "document_ids": [
+        "679b65b075cfb62289ec5486",
+        "df3f7a948667c5d31ee6fa37"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_c1c18c447ec948d170a8dd78",
+      "document_ids": [
+        "c1c18c447ec948d170a8dd78",
+        "cb38ab308f808597c48f2a45"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_b185c1a5cdb4f7126fd0186d",
+      "document_ids": [
+        "b185c1a5cdb4f7126fd0186d",
+        "f542f1a41bee64f133ed4587"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_666ea2ce1d7971869b484df9",
+      "document_ids": [
+        "b54197d275031a3455c08800",
+        "666ea2ce1d7971869b484df9"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_797c63eeb1fbeed82039373b",
+      "document_ids": [
+        "797c63eeb1fbeed82039373b",
+        "f5a1d5aee63b3733bb191977"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_5c9a766231bb1de0bd7f524b",
+      "document_ids": [
+        "f5062b0b796e1ff13aa4607a",
+        "5c9a766231bb1de0bd7f524b",
+        "a761d115e47adeab865b8b34"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_5c2caffa4837ff67078fbba4",
+      "document_ids": [
+        "b058ee419c889e370be34ef1",
+        "d8d68426ca8f84411dfb0076",
+        "5c2caffa4837ff67078fbba4",
+        "b41e204c61a782c1440f6b03"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_2363c2e25a92f86c942e99e1",
+      "document_ids": [
+        "2363c2e25a92f86c942e99e1",
+        "a033c48ba1e9fa8a7b337953"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_078f0efba910d0edc7c0c9da",
+      "document_ids": [
+        "078f0efba910d0edc7c0c9da",
+        "fdd34178c90ede0814490ca7"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_5fee4fc65cd25d2095084578",
+      "document_ids": [
+        "5fee4fc65cd25d2095084578",
+        "d8ba165f8ee195a4cce48ac5"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_b38fd13b6860351d3593224f",
+      "document_ids": [
+        "cf47273af1872c57f1882f8e",
+        "b38fd13b6860351d3593224f",
+        "d659da61b357406362c4ba58"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_9f85fa1f501a607bc6814723",
+      "document_ids": [
+        "9f85fa1f501a607bc6814723",
+        "db1c6e64b1e92764eabce84c"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_04942a2271a837926a20d9cb",
+      "document_ids": [
+        "04942a2271a837926a20d9cb",
+        "a4266e848c63eb52133c3b8a"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_exact_4f091a0a6dc102053ac1ca84",
+      "document_ids": [
+        "4f091a0a6dc102053ac1ca84",
+        "aad70b3ec77b311ac5f38fd0"
+      ],
+      "relation": "normalised_complete_body_duplicate"
+    },
+    {
+      "family_id": "family01_nj_auto_claim_siblings",
+      "document_ids": [
+        "24f1bbe32f3cfb8280ba94ed",
+        "61152dd010de28005424f8f0",
+        "650319676565ee81ba9cda58",
+        "46cd9ef011d632d3fdd3615e"
+      ],
+      "relation": "substantive_shared_source_family_proposal",
+      "local_review_records": [
+        "stage77_source_decisions.json"
+      ],
+      "extension_review_sha256": [
+        "999b48e947e76efce5277d2cbfdb3a72910b35aba9a0433ea97212d9b5492ced"
+      ]
+    },
+    {
+      "family_id": "family01_wi_ut_clue",
+      "document_ids": [
+        "23cd971dc3c7594740cf6919",
+        "6b81331d0db38b2dd0bbebbc"
+      ],
+      "relation": "substantive_shared_source_family_proposal"
+    },
+    {
+      "family_id": "family01_va_valife_sdvi_transition",
+      "document_ids": [
+        "68746b5d4bc16922af4583f3",
+        "62622a9e45d6c1463e7e36a7"
+      ],
+      "relation": "substantive_shared_source_family_proposal"
+    },
+    {
+      "family_id": "family01_tricare_monthly_payment_template",
+      "document_ids": [
+        "bc3bc12d6fc85af3d5ff05eb",
+        "e7a5e021e96717c63f6ab1eb"
+      ],
+      "relation": "substantive_shared_source_family_proposal"
+    },
+    {
+      "family_id": "family01_tricare_reserve_use_template",
+      "document_ids": [
+        "12ad0a35e06fe94e6ae595e0",
+        "e95a32e58b4ea52d208788ba"
+      ],
+      "relation": "substantive_shared_source_family_proposal"
+    },
+    {
+      "family_id": "family01_alabama_department_help_template",
+      "document_ids": [
+        "3a11d7a9a1c624e7034988f4",
+        "7225fda7ff7d5aa3e5bc734b"
+      ],
+      "relation": "substantive_shared_source_family_proposal"
+    },
+    {
+      "family_id": "family01_opm_patient_rights_parent",
+      "document_ids": [
+        "1a2895bf6a9322116700fdbd",
+        "5fee4fc65cd25d2095084578",
+        "d8ba165f8ee195a4cce48ac5"
+      ],
+      "relation": "substantive_shared_source_family_proposal"
+    },
+    {
+      "family_id": "family01_ny_healthy_ny_county_rates_2026",
+      "document_ids": [
+        "0aa5d064b9ed7173e2c22aeb",
+        "264e64cd0c705c40c564fb4d",
+        "2816d4931d12db85204281f2",
+        "29274b48d71cf84ef5c50fbe",
+        "292e98159cd06850b0553a6d",
+        "3c48779cdb2de9ef1c44556b",
+        "4e9d224d640f4b1dfef7356e",
+        "6150ca6f35317e51728915b3",
+        "6b4bcf5dfd5fd1eed9aab684",
+        "6f359b2e1e3ec62e2ce125e0",
+        "737d75618553ddcb010f81fe",
+        "91e784604d2b91bfd73ebcd3",
+        "979255e6645b0ea116f98be1",
+        "9c5a6d1b215c96d4499fd885",
+        "aa7ab24c941e4ba682a7dd25",
+        "aea4af81fd24d1d31a33c51a",
+        "afa6f5fe657d9c5930d37ff1",
+        "afce00a38a4ca9be4cbfb426",
+        "b415e348b3f185a33437072a",
+        "b5d361f3d1f4ea37d37d581a",
+        "b6f5f842974445f6e637c729",
+        "d684f79f8a0ff53aeb9303da",
+        "dec23aedd09311b7c2202219",
+        "e8a4a7dca70a537ed36f0611",
+        "ef79735fcaed292e356b92ac",
+        "f49b169d7c041bf0ccdf5a3a",
+        "f900b2307a9f9a32dcf6e0a4",
+        "f9d382e4898103e28568893c"
+      ],
+      "relation": "publication_template_or_version_series"
+    },
+    {
+      "family_id": "family01_opm_premium_hmo_version_series",
+      "document_ids": [
+        "0ad07f83fdecc639b541fb9f",
+        "4e7d7a2748cae1072d8ba9bd",
+        "6c2d0de720f03d0fdac51551",
+        "6eebb7994eb5a56465fe1d5f",
+        "9567373b97957bf50609d90e",
+        "b2157efb7a46a8b9c09e2ec6",
+        "e2752813240e84d51a481824"
+      ],
+      "relation": "publication_template_or_version_series"
+    },
+    {
+      "family_id": "family01_opm_premium_ffs_version_series",
+      "document_ids": [
+        "19989b045c150017af7dddf1",
+        "3dbbb909cb634bc164f4d953",
+        "644a7e599e9f87b732bc6833",
+        "b5a795796ccb7e3e3dfac707",
+        "ced558654066e6e52ffc6fa7",
+        "dd1bb2177dde12c9f3e232ba",
+        "f6dbbaadcfd19ff7d6d1fd25"
+      ],
+      "relation": "publication_template_or_version_series"
+    },
+    {
+      "family_id": "family_opm_fehb_lwop_military_compensation_continuation",
+      "document_ids": [
+        "28c0f1754c505a7868ae308e",
+        "2913aef34a7f255cafbd604b",
+        "63019828c11a635e1e42eb17"
+      ],
+      "relation": "Substantive repeated continuation/premium rules: LWOP-to-military and LWOP-to-compensation; connected source family via LWOP."
+    },
+    {
+      "family_id": "family_privatehealth10_shared_rules",
+      "document_ids": [
+        "1276e1f7f182efe9804e926f",
+        "15e5823dab8dd2e97eefe0e8",
+        "1e0a1712b1d8e1a2e56c5970",
+        "23c1c80c4614076d208b6e53",
+        "2820c2089810dc38cf67023d",
+        "31f08a6340a3b70698d66a6e",
+        "367d765bc3189064d324295b",
+        "3940159b60bb109415dc127f",
+        "4ebdb73f0b18d6e5f64fba36",
+        "50851ff281b489bbf3d07e73",
+        "62e15ebc43f39d0ac3793b8d",
+        "64461d77c7218708de324cc1",
+        "6d655f67d2228d1238727674",
+        "777e59f79b62e21dd334fb8a",
+        "841b3a1992fd3b5cadb79b19",
+        "8712ca49fc3bc11542c1a5d3",
+        "aad6189306b78e0f12c290c7",
+        "bba61794dbd70f99f231571d",
+        "bc138ba9c9881da2f7bc5894",
+        "c92fb58b9797980ee81157d2",
+        "cbae89b3ebc1857487dba8d8",
+        "d6face6c5e63308c10ad66b1",
+        "dd02be0babf57f9b43b44404",
+        "f2b303ce376c34e3a1662f70",
+        "fa71afb6f3a7b68873f7b76b"
+      ],
+      "relation": "25 independently evidenced substantive-rule edges; transitive family, not publisher identity.",
+      "local_review_records": [
+        "agent_privatehealth10_independent_source_family_review.json",
+        "agent_privatehealth10_independent_source_family_review_supplement.json"
+      ]
+    },
+    {
+      "family_id": "family_opm08_cost_premium_conversion_lwop",
+      "document_ids": [
+        "0859407de46f408b7f2885b6",
+        "2913aef34a7f255cafbd604b",
+        "5f9ade10c7ef86c59ae303d9",
+        "e2f1fdec937c0934a038f6a2"
+      ],
+      "relation": "Three independently reviewed FEHB premium-conversion/LWOP shared rules; overlaps existing LWOP continuation family.",
+      "local_review_records": [
+        "agent_opm08_independent_review.json"
+      ]
+    },
+    {
+      "family_id": "family_rma_deductible_inventory_contract_rules",
+      "document_ids": [
+        "29d23c743edd9fa357f6d60c",
+        "43d8a0f5e412251092f876cb",
+        "676d0c50e4b73f02a4b70059",
+        "8dc7c0b0431e73885f8fca5b",
+        "979a72b37ba4fcebbc3e0771",
+        "ab17dc9e7eac9543630fc557",
+        "df05e5ac0f8f4bd935546708"
+      ],
+      "relation": "Transitive explicit HIP-WI/STAX/CLIP/MCO deductible clauses, HIP-WI/OLO exclusivity and inventory loss/valuation rules; see bound local edge evidence.",
+      "local_review_records": [
+        "stage9_rma_final_review.json"
+      ],
+      "review_record_sha256": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098"
+    },
+    {
+      "family_id": "family_rma_prevented_planting_period",
+      "document_ids": [
+        "7f6ca9cbc95ab0a862a0d85d",
+        "869a066a4e605280475f0e25"
+      ],
+      "relation": "Explicit new/carryover sales-closing-date period rule repeated across prevented-planting and drought FAQs.",
+      "local_review_records": [
+        "stage9_rma_final_review.json"
+      ],
+      "review_record_sha256": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098"
+    },
+    {
+      "family_id": "family_ny_ltc_four_policy_classifications",
+      "document_ids": [
+        "401545df0d4ff8ecd80e8eff",
+        "45da4997122c5627d8a1cc65",
+        "fffca1e076dcfd15226b46f1"
+      ],
+      "relation": "Named four-classification explanation and its detailed minimum-standards page; common substantive product taxonomy, not navigation alone.",
+      "local_review_records": [
+        "stage11_final_review.json",
+        "stage53_source_decisions.json"
+      ],
+      "review_record_sha256": "378bbb998203330a280e7f43c974aac7084cd8b470bc190ed7d3e07fa02ae446",
+      "extension_review_sha256": [
+        "569d27a05affaeb980947c23ddae71b5373078a43ac29b87f0301254389c7d05"
+      ]
+    },
+    {
+      "family_id": "family_tdi_water_damage_faq_derivatives",
+      "document_ids": [
+        "bd2e1e7fdbd34adafa5a399d",
+        "7324d17d02258e442dc1c927",
+        "edd5d96da90891b9d863fb8b"
+      ],
+      "relation": "Repeated substantive sudden accidental water versus gradual leak and mold coverage passages in TDI explainer and two FAQ compilations.",
+      "local_review_records": [
+        "stage11_final_review.json"
+      ],
+      "review_record_sha256": "378bbb998203330a280e7f43c974aac7084cd8b470bc190ed7d3e07fa02ae446"
+    },
+    {
+      "family_id": "family_nj_nc_life_locator_request_eligibility",
+      "document_ids": [
+        "c47261ee09f87107dba642a9",
+        "dc7f93bd4750731701287125"
+      ],
+      "relation": "Shared substantive eligibility language for missing-policy inquiries: believed beneficiaries, executors and representatives; conservative family, no assertion that state service platforms are identical.",
+      "local_review_records": [
+        "stage11_final_review.json"
+      ],
+      "review_record_sha256": "378bbb998203330a280e7f43c974aac7084cd8b470bc190ed7d3e07fa02ae446"
+    },
+    {
+      "family_id": "family_tricare_plus_facility_enrollment",
+      "document_ids": [
+        "86aac5ed684acffa0c820f59",
+        "8bdd6825187bbb0cbfc049da",
+        "d8887b02e2933896d13bfcb6"
+      ],
+      "relation": "TRICARE Plus program guide, dedicated Medicare FAQ reiterating care at the enrolled facility, and dependent-parent guide establishing the specific Plus enrollment route. Conservative linked product family; generic program-navigation lists excluded.",
+      "local_review_records": [
+        "stage13_source_family_review.json"
+      ],
+      "review_record_sha256": "8ddc49fbfe761fd9b683f54b3da199cda13ccd1cb409add71d1720b265c26b27"
+    },
+    {
+      "family_id": "family_fcac_claims_and_complaint_routing",
+      "document_ids": [
+        "3fc110d67d2aa9f632679a25",
+        "afb106b4ecec1eff1a61b8c6"
+      ],
+      "relation": "Shared substantive life/health claim escalation rule: dissatisfied claimants contact OLHI or provincial/territorial regulator after insurer response; explicit reciprocal guide links. Conservative family grouping despite no shared16word window.",
+      "local_review_records": [
+        "stage15_source_decisions.json"
+      ],
+      "review_record_sha256": "369213d16b8090d18021ee1401c431c9c49f7b26fbd26ec87894f78e010acb09"
+    },
+    {
+      "family_id": "family_tricare_prime_remote_eligibility",
+      "document_ids": [
+        "110327eb7d2cf51114a6ad59",
+        "ab1910e8b446726fb35434e6"
+      ],
+      "relation": "TPRoverview and eligibility-determination counterpart repeat activation and distance eligibility rules; same domesticTPR eligibility family. Moving/disenrollment pages were read and address separate administrative events.",
+      "local_review_records": [
+        "stage16_source_decisions.json"
+      ],
+      "review_record_sha256": "47f81836623a61a578cd679edb8105dda7b00bf15f0f67884c50fcb3a198eb9c"
+    },
+    {
+      "family_id": "family_tricare_chcbp_program_claims",
+      "document_ids": [
+        "e9de2156adfc9f399218ebbc",
+        "8307d3d5741e40b38397576b",
+        "c67274b4f3deeb46ceedde8d"
+      ],
+      "relation": "Conservative CHCBPprogram/claim-administration family grouping. Shared claims-system alert and complementary claim processing/care procedures; not counted as three independent families. Dedicated price tables grouped with deductible derivations separately.",
+      "local_review_records": [
+        "stage16_source_decisions.json"
+      ],
+      "review_record_sha256": "47f81836623a61a578cd679edb8105dda7b00bf15f0f67884c50fcb3a198eb9c"
+    },
+    {
+      "family_id": "family_va_service_group_life_transition",
+      "document_ids": [
+        "1319da1cca4cb857930b06a4",
+        "2e2d21051c4130dd824266ad",
+        "7b1e9892aadeea719a76acca",
+        "8902ab10b793d9b78e61927a",
+        "aa51567a6730653c4174a1d3",
+        "e7bfc345bcd30d3936982dad",
+        "3d9363c54a0c93b23fa2dcfb"
+      ],
+      "relation": "Conservative grouping of SGLI,FSGLI,VGLI and VGLI comparison guides: shared service-to-postservice transitions,8283/8284claim procedures and permanent-policy conversion restrictions. Comparison is linked derivative. Three formerly counted active families become one; common publisher alone is not the basis. Existing TDI bilingual/SGLI conversion linkage is preserved transitively, including both TDI documents and its earlier review record.",
+      "local_review_records": [
+        "stage17_source_decisions.json",
+        "stage76_source_decisions.json"
+      ],
+      "review_record_sha256": "6add7246d45e01d71404fbeec4018bea837ac0488ae0f74387fc1914f7a6047d",
+      "extension_review_sha256": [
+        "3878f0fe044361b3af48b6d471c8ca0170d0b3b65652bf79f4f2ca228e42b8ce"
+      ]
+    },
+    {
+      "family_id": "family_nc_ut_title_search_ownership_guides",
+      "document_ids": [
+        "e2bd2d34476e4fcd0a09a138",
+        "ba4465d64673cd249321dba1"
+      ],
+      "relation": "Shared substantive title-search and ownership-protection explanations; conservatively one source family across NC and Utah. Utah page remains held for its own materially ambiguous exclusions lead; no Utah questions are released. NC guide separately reviewed and does not contain that broad erroneous lead.",
+      "local_review_records": [
+        "stage19_source_decisions.json"
+      ],
+      "review_record_sha256": "13764c140586bdce518d42b13917e95b90293545b9ad1d59cc31922c701718c3"
+    },
+    {
+      "family_id": "family_nc_residential_property_liability_guides",
+      "document_ids": [
+        "960ada919cc2a7b2f6511b59",
+        "1d83f5310d08905df3e773fb",
+        "39eacfbd826b7d382e5bcaf0"
+      ],
+      "relation": "Shared substantive personal-property, liability and medical-payments explanations across NC manufactured, basic homeowners and renters guides; conservative one-family assignment.",
+      "local_review_records": [
+        "stage20_source_decisions.json"
+      ],
+      "review_record_sha256": "263fd7e8b60881979c38c07ea194bda7db19803785c105b4ad7d4e6194c000f7"
+    },
+    {
+      "family_id": "family_ny_healthcare_rights_infertility",
+      "document_ids": [
+        "75380ee0a360f0f6d6bff618",
+        "b74c36ed7273e76c2dfed22b",
+        "cce1bf0c5fc2792d1d0f946b",
+        "f4e4cb1c394cde1a64141374",
+        "6eef69d5d74bba92fa7a8993",
+        "eda721de69fd279fd33d22c9",
+        "f74f6d7240dd8912ae3ad0a5",
+        "032c8ea3118480d2ca5c0b38",
+        "69319913cd6a881d8401e712"
+      ],
+      "relation": "Conservative closure of existing healthcare-rights parent/form family and infertility FAQ. Parent infertility sections repeat substantive benefit and nondiscrimination explanations; inherited links preserved. Parent also reproduces the dyslexia mandate and links to its dedicated guide; conservative closure includes that guide. Includes surprise-bill guide after shared consumer protection/disclosure and recourse prose closure.",
+      "local_review_records": [
+        "stage21_source_decisions.json",
+        "stage27a_family_decision.json",
+        "stage57_source_decisions.json",
+        "stage84_source_decisions.json",
+        "stage107_source_decisions.json"
+      ],
+      "review_record_sha256": "6c5b1f8e927797a653e453d478149bdd5281d37b1c3ef2d541c90d952e5c67c0",
+      "extension_review_sha256": [
+        "0845c64ff99ec3c27021d69f6f3570c69a52ead2d0c4453552a944cee7eb4be7",
+        "9c125c2fa3e7d3dd8595ef492173fddeccd2b787a571d5933ba6b629b3cd1d18",
+        "9339deb72b17282f45e0a7c85bd45b3b54318d168d2c419d3099c8cd07f531b9"
+      ]
+    },
+    {
+      "family_id": "family_wi_sharing_tnc_guides",
+      "document_ids": [
+        "880b50006339cedd321c9cfb",
+        "68cf6a74e7840e137d8cd127",
+        "caa5326ad768f8912e2fcc41"
+      ],
+      "relation": "Large shared substantive TNC liability, physical damage, app-status and delivery-driver explanations across sharing, adulthood and job-change guides.",
+      "local_review_records": [
+        "stage21_source_decisions.json"
+      ],
+      "review_record_sha256": "716c6e50ede2afbd2a6aa8576128d299554bbb3ffc87062cb526cb578d54d15c"
+    },
+    {
+      "family_id": "family_tricare_retirement_enrollment",
+      "document_ids": [
+        "52f27a7b6e1be3e9ad43854d",
+        "4320bcbd46b31d8e63c6398d"
+      ],
+      "relation": "Shared substantive90day enrollment and12month retroactive coverage explanation; conservative retirement-guide family.",
+      "local_review_records": [
+        "stage24_source_decisions.json"
+      ],
+      "review_record_sha256": "a76b65a71061bb44b3355f72f88974389a7db2a5e9739b1bba5b3aa66b92255c"
+    },
+    {
+      "family_id": "family_tricare_deactivation_benefits",
+      "document_ids": [
+        "cb39a916736289e894a44290",
+        "629f187ac13306fe68d5f126"
+      ],
+      "relation": "Substantive same-program versions covering TAMP, TYA and resumed dental benefits; conservative family.",
+      "local_review_records": [
+        "stage24_source_decisions.json"
+      ],
+      "review_record_sha256": "a76b65a71061bb44b3355f72f88974389a7db2a5e9739b1bba5b3aa66b92255c"
+    },
+    {
+      "family_id": "family_wi_mental_substance_mandates",
+      "document_ids": [
+        "ddd02e4db4c303ef2701f786",
+        "2d67584ec3c3bb5de04a5b63"
+      ],
+      "relation": "Shared substantive scope, treatment categories, parity limitations and conditional prescription coverage in mental-health and opioid/substance-use mandate guides.",
+      "local_review_records": [
+        "stage26_source_decisions.json"
+      ],
+      "review_record_sha256": "b82d7c59bcbf19878ff77fb408144b9e285b9fb283679c2989de6b5bbdee657d"
+    },
+    {
+      "family_id": "family_va_tsgli_overview_appeal",
+      "document_ids": [
+        "24da2efcf2e4ce12f2cffc5f",
+        "4edd300aed8081ae477cb935"
+      ],
+      "relation": "Overview and dedicated appeal page repeat the denial-letter-dependent appeal form and filing instructions; conservative same-program family.",
+      "local_review_records": [
+        "stage26_source_decisions.json"
+      ],
+      "review_record_sha256": "b82d7c59bcbf19878ff77fb408144b9e285b9fb283679c2989de6b5bbdee657d"
+    },
+    {
+      "family_id": "family_ny_healthy_ny_smallbusiness",
+      "document_ids": [
+        "7f5ac798338d5d434a2fcab9",
+        "18527a5846930027df22ee35"
+      ],
+      "relation": "Conservative same-program parent/detail grouping: parent repeats Healthy NY program description and points to detail page. No active parent items; no TEST/DEV family crossover.",
+      "local_review_records": [
+        "stage33_source_decisions.json"
+      ],
+      "review_record_sha256": "9408112aa744088ae7a24dd226a389cd95393eaa4b706d0ad03a339abcca4655"
+    },
+    {
+      "family_id": "family_ca_workerscomp_policy_appeal",
+      "document_ids": [
+        "84da46164616e4e11d2d463f",
+        "95ba2205426932d63e7b1415"
+      ],
+      "relation": "Detailed policy-appeal process expands the same insurer/WCIRBComplaint-and-Request-for-Action escalation explained in the comprehensive workers-compensation guide; semantic procedural family, although no exact16word window.",
+      "local_review_records": [
+        "stage37_source_decisions.json"
+      ],
+      "review_record_sha256": "d2f63087cb6dd56a6159145133c157f50cdd7709d9143333f05d27eb2ad8624e"
+    },
+    {
+      "family_id": "family_tdi_service_process_en_es",
+      "document_ids": [
+        "66e9be6bf456ba2fde73bfa7",
+        "02c86dab37fba6e7d1394187"
+      ],
+      "relation": "English and Spanish versions of the same TDIservice-of-process guidance, both datedSeptember16,2024.",
+      "local_review_records": [
+        "stage38_source_decisions.json"
+      ],
+      "review_record_sha256": "903213c6015d516f8741dbe5ef8551bc53ca91dd51b9e352f0455d73386b90b9"
+    },
+    {
+      "family_id": "family_tricare_prime_disenrollment",
+      "document_ids": [
+        "496345b39ff09310e8a3b642",
+        "b98c2925be9ecf499b4c27a2"
+      ],
+      "relation": "Prime andPrimeRemoteparallelstatus-change/voluntarydisenrollmentprocedures, includingadvancecontinuity; plan-specificlimits retained.",
+      "local_review_records": [
+        "stage43_source_decisions.json"
+      ],
+      "review_record_sha256": "2cc03d149693718c77ab234749c120b635974207b2c4028168e895d3a69fd28b"
+    },
+    {
+      "family_id": "family_tricare_survivor_death_notification",
+      "document_ids": [
+        "7198207b53f7d3a7b6d294ee",
+        "5953b3f5069a52807d5d5f0f"
+      ],
+      "relation": "Parallel survivorguides sharedeathnotificationchannels and coveragecontinuation; detailedremarriageexception noterased byshorteroverview.",
+      "local_review_records": [
+        "stage43_source_decisions.json"
+      ],
+      "review_record_sha256": "2cc03d149693718c77ab234749c120b635974207b2c4028168e895d3a69fd28b"
+    },
+    {
+      "family_id": "family_tricare_medicare_enrollment_cost_rules",
+      "document_ids": [
+        "13f20e198c0f2a53073a578d",
+        "22ea5b12f2a9b6e6c702c0b3",
+        "22f5b037eabf0a40f4f7a09c",
+        "23824e5f976eb73f44af8e6d",
+        "2f453fe7066318a95555a979",
+        "47a580525e5fa02e51941055",
+        "49a3f12a5eed76d9471bd89b",
+        "5ca7b2fa1ab11ff4a2a8f06d",
+        "63a436307cfebb02b13f9dcc",
+        "6876401336a0848ae803113c",
+        "78418c9e8b98ff776fda5b73",
+        "9b15d56ee8c2143890383df5",
+        "a1babdf544a194aaf9c186b0",
+        "ad597857c8621ad38df9d0b5",
+        "b081aa60ec7ecbdbcadfecc9",
+        "b0a26618de7bb44320cdf6bd",
+        "c1a2b1c09f9e0c707f6e5c31",
+        "c4dd70600857d4b7a4a94414",
+        "cf0169f30be0269f9a544acc",
+        "d3612e6796c419cf2f917690",
+        "ed043048703cf7d745d4d31d",
+        "ef05413fd4ea1cdc5d959f88"
+      ],
+      "relation": "Conservative closure of linked USFHP/TFL Medicare transition and payer guides, repeated Prime fee-waiver provisions, and shared comparison/cap/deductible tables. Comparison guide repeats substantive tables in prior deductible and cap guides. Existing deductible/POS/CHCBP links preserved transitively. Common publisher alone is not the grouping basis. Extended transitively through the TFL moving guide to ten plan-specific moving guides sharing substantive QLE and coverage-transfer procedures. Plan-specific timing differences remain explicit; generic displaced-return footer alone is excluded.",
+      "local_review_records": [
+        "stage18_source_decisions.json",
+        "stage44_source_decisions.json"
+      ],
+      "review_record_sha256": "5894b17d354718d0850edb57d3f4d7cce7dd05dbbef890b5d44d4512fa7e45b4"
+    },
+    {
+      "family_id": "family_tricare_reserve_plan_eligibility",
+      "document_ids": [
+        "5707cac18fbea116de56b09a",
+        "fe3e4e5bb314c83def921f79"
+      ],
+      "relation": "Parallel Reserve Select and Retired Reserve eligibility, FEHB exceptions and coverage definitions; comparative task requires both program guides. Common OHI footer does not merge unrelated plans.",
+      "local_review_records": [
+        "stage44_source_decisions.json"
+      ],
+      "review_record_sha256": "5894b17d354718d0850edb57d3f4d7cce7dd05dbbef890b5d44d4512fa7e45b4"
+    },
+    {
+      "family_id": "family46_opm_health_enrollment_channels",
+      "document_ids": [
+        "77ac25decf25b3af8a790a06",
+        "bfd35fd5bce3676f60be997d",
+        "c6f8becf86f4abbe159e6300",
+        "69641a256dbd4ddf8a573ce3",
+        "1f8e123aa284cbc742cb20e5",
+        "5f860c4698ead7c2bdb3f356"
+      ],
+      "relation": "Conservative enrollment workflow family: overview, instructions, agency enrollment channels and premium-type disclaimer linked by substantial shared enrollment text.",
+      "local_review_records": [
+        "stage46_source_decisions.json"
+      ],
+      "review_record_sha256": "5f191e951f3d3da71e7c69bec6d73424f5d36b7f8e8d526086831736e30dcb4c"
+    },
+    {
+      "family_id": "family47_opm_former_spouse_annuitant_tcc",
+      "document_ids": [
+        "ba0a9e0bde3709be01c4997c",
+        "515df02fb6319df46bb02869",
+        "c4d73f895bf153985cfad1e6"
+      ],
+      "relation": "Conservative FEHB handbook continuation family: former-spouse, annuitant and TCC chapters share premium-nonpayment and reinstatement/reenrollment rules; previously active annuitant item joins same family.",
+      "local_review_records": [
+        "stage47_source_decisions.json"
+      ],
+      "review_record_sha256": "a988f2006bfbd3b33d750f28cc41a7b46156d751c706135fc079aa01f25476e4"
+    },
+    {
+      "family_id": "family48_tdi_self_funding_english_spanish",
+      "document_ids": [
+        "82583926145f7f6f0da1db58",
+        "edf9d5250cefb6363c3ee921"
+      ],
+      "relation": "Full English and Spanish self-funded employee health-plan guides are language versions of the same explanatory content; both DEV only.",
+      "local_review_records": [
+        "stage48_source_decisions.json"
+      ],
+      "review_record_sha256": "dc0e9a695757ff4141544d78e02213e900bd39d6ff38ec108f9d252f489ec18e"
+    },
+    {
+      "family_id": "family49_opm_family_members_eligibility_overview",
+      "document_ids": [
+        "714712980a413f7f437e1772",
+        "c43cdf393141f9fe9a802022"
+      ],
+      "relation": "OPM eligibility overview reproduces substantial family-member verification table and common-law/foster documentation from Family Members handbook; conservatively one TEST family.",
+      "local_review_records": [
+        "stage49_source_decisions.json"
+      ],
+      "review_record_sha256": "ca192cc45afe720964b729186d7f81466993fe3e83a80f64e4c28dcee4ae970c"
+    },
+    {
+      "family_id": "family56_nc_wind_disaster_claims",
+      "document_ids": [
+        "2f63b362ce2d902b84ca7845",
+        "f7a3d2bdeddf7e843c8c865c"
+      ],
+      "relation": "shared substantive primary insurer investigation/adjustment and disaster claim instructions",
+      "local_review_records": [
+        "stage56_source_decisions.json"
+      ],
+      "review_record_sha256": "c4d837cc870b63ff822f94baaa236b99fa3a2c80d79f4fa6e6fd55fd9b7d934e"
+    },
+    {
+      "family_id": "family57_ny_ltc_terms_comparison_tax",
+      "document_ids": [
+        "b051032d15aff43f414d50c7",
+        "220b639c0c239c2c00d66676",
+        "a4dd2e9e2601825f731b3c92",
+        "db60476ffdbdcf0ae2f9cb7b",
+        "81b4e91e08feada200058170"
+      ],
+      "relation": "Tax and policy comparison text reproduced in LTC glossary; glossary repeats care definitions; LTC index repeats tax credit instructions",
+      "local_review_records": [
+        "stage57_source_decisions.json"
+      ],
+      "review_record_sha256": "0845c64ff99ec3c27021d69f6f3570c69a52ead2d0c4453552a944cee7eb4be7"
+    },
+    {
+      "family_id": "family59_tricare_id_documents",
+      "document_ids": [
+        "128cc16a53e7fb94b6cb3cc0",
+        "1555840deb8dfab341377ad4",
+        "9a3e1a2e3abb54e017fceff2"
+      ],
+      "relation": "Conservative same ID-card documentation workflow; overlapping TYA enrollment-before-card sequence in narrative and document table; Secondary Dependents shares court-ward one-year placement criterion with Required Documents",
+      "local_review_records": [
+        "stage59_source_decisions.json"
+      ],
+      "review_record_sha256": "fe82454196eb6234ada7896558222ca927c013f6b9fcd12341da69254343f400"
+    },
+    {
+      "family_id": "family60_tdi_guaranty_bilingual",
+      "document_ids": [
+        "45b1c1d26be24ae2f56fea2b",
+        "6608e67b03b11b6b90190a00"
+      ],
+      "relation": "English and Spanish versions of the same insurer-failure guaranty guide; both full bodies read",
+      "local_review_records": [
+        "stage60_source_decisions.json"
+      ],
+      "review_record_sha256": "5de78bc5a5360f31b887ac361df1c06ca2f81426751f689adf149b2bb72f64a6"
+    },
+    {
+      "family_id": "family67_public_wildfire_model",
+      "document_ids": [
+        "240956e39d9e66184d5b90d4",
+        "44d22b9bc128969b1bb2f6df"
+      ],
+      "relation": "same public wildfire model project and derivative strategy/development descriptions",
+      "local_review_records": [
+        "stage67_source_decisions.json"
+      ],
+      "review_record_sha256": "1934d33271a34151e91d5550f7ac54b9f8bbf3eb0761569d5c90030b518ac898"
+    },
+    {
+      "family_id": "family69_texas_workers_bilingual",
+      "document_ids": [
+        "1d871ac850c80dc0a2f7827e",
+        "835332295704165c31025f3c"
+      ],
+      "relation": "English and Spanish versions of same November19,2024 TDI workers compensation guide",
+      "local_review_records": [
+        "stage69_source_decisions.json"
+      ],
+      "review_record_sha256": "5a7a7b6d2048216108239a980dc1f47688c068e1c1c059f10e03064833746949"
+    },
+    {
+      "family_id": "family74_alberta_auto_notice_reprints",
+      "document_ids": [
+        "a97d50108ef38d5c863ecc62",
+        "27356cdab50d6ff066a76b82",
+        "8ebb1f450518a4b85222506b",
+        "e085bf6be1f6e2acaae6c92c",
+        "70b469e3957fdd8778deab22",
+        "2687d2ddc856122ac61e4e63"
+      ],
+      "relation": "Official Alberta autoform catalog, notice reprints and linked SEF20/27/43R operative forms, conservatively grouped.",
+      "local_review_records": [
+        "stage74_source_decisions.json",
+        "stage85_source_decisions.json",
+        "stage88_source_decisions.json"
+      ],
+      "review_record_sha256": "a2dd8c76c46d4f9127ef954c461a245be674cfe3f76eb45160dba0a009c9d866",
+      "extension_review_sha256": [
+        "dd1d8bf4b0430d34ca8a842f42759a9df1dfda8ddcea24789c62c8f34588ab9b",
+        "b38669482574fe5619f301b535a9d3c1c682c83ff7bfe82521701a3562641860"
+      ]
+    },
+    {
+      "family_id": "family75_tdi_children_bilingual",
+      "document_ids": [
+        "46be4ad405fbe96e0daebab0",
+        "de81801ef78079ba6622d101"
+      ],
+      "relation": "English and Spanish versions of December3,2024 child health coverage consumer guide; both complete bodies read.",
+      "local_review_records": [
+        "stage75_source_decisions.json"
+      ],
+      "review_record_sha256": "3486d19a6dc313be3b21156d10fbadafcaf793157312646344e6f46b6bcf9c81"
+    },
+    {
+      "family_id": "family87_nj_ut_consumer_purchase_guidance",
+      "document_ids": [
+        "e0039127c25354382716ea81",
+        "ebb0f3db263274d67756ed6b",
+        "3972502ab7f5add6e90a2193",
+        "44fc5a673eb8156d6933d0ed",
+        "52aab58b3bbbeba11e6e4e0f",
+        "cc0d31951daadacd4ce8395a",
+        "ecc25764a562a23588082b1c"
+      ],
+      "relation": "Shared consumer purchase receipt/application/coverage-check guidance and substantially similar30daynonreceipt instructions; conservative crosspublisher TESTfamily.",
+      "local_review_records": [
+        "stage87_source_decisions.json"
+      ],
+      "review_record_sha256": "fc649cccdacd498d8a8cb2b60616ff217c4063f5d21301d1091d3995a8492ce6"
+    },
+    {
+      "family_id": "family91_nz_nhc_natural_hazards_cover",
+      "document_ids": [
+        "99b09b65777f3cf2f8fa1b9f",
+        "816d2523ef39e80ddaa13621"
+      ],
+      "relation": "Overview andnewclaimroutingpage shareoperativebrokerauthorisation/routingtext;onefamilycap20. No newquestionfromaddedroutingpage.",
+      "local_review_records": [
+        "stage91_source_decisions.json",
+        "stage93_source_decisions.json"
+      ],
+      "review_record_sha256": "41a24074afa3085623d1c5f1e482c113e8831a213d91f60ca6cbabe71a31539b",
+      "extension_review_sha256": [
+        "40e3c37ed27fe65be28b0b753846da25a8f27bf691f92afa1b51489f7e7b8a1c"
+      ]
+    },
+    {
+      "family_id": "family93_nz_nhc_complaints_disputes_rights",
+      "document_ids": [
+        "f2b0d01f032dd0c4d7577d78",
+        "451d4320b99df92755459500",
+        "7563590d2fa4c9a6a77695d4",
+        "04afd1adc88383c4df5ccddb"
+      ],
+      "relation": "Complaint/dispute/insured-rights explanations andnavigationlanding; substantiallysharedcomplainttimelines andCoderecourse, conservativelyonefamily.",
+      "local_review_records": [
+        "stage93_source_decisions.json"
+      ],
+      "review_record_sha256": "40e3c37ed27fe65be28b0b753846da25a8f27bf691f92afa1b51489f7e7b8a1c"
+    },
+    {
+      "family_id": "family93_nz_nhc_home_claim_assignment",
+      "document_ids": [
+        "3ab52c1c3fd2481acdc06a7a",
+        "747f5eb23ce02e64ab99a82a"
+      ],
+      "relation": "Homebuyerlanding andoperativepreviousclaimassignment/diligencechapter; oneconsumerclaimtransferfamily.",
+      "local_review_records": [
+        "stage93_source_decisions.json"
+      ],
+      "review_record_sha256": "40e3c37ed27fe65be28b0b753846da25a8f27bf691f92afa1b51489f7e7b8a1c"
+    },
+    {
+      "family_id": "family101_nz_mbie_consumer_insurance",
+      "document_ids": [
+        "d53634ff0ad9fc0a638d6234",
+        "de12c155bf0690271a103952",
+        "c995ff78e684e242c4417c53",
+        "5b35f4ae1b7201bba80e85a8",
+        "bb031861358eec53a7c95a2b"
+      ],
+      "relation": "Insurance/car/travelguidesandcomplaintprocedure pluscardirectory; sharedrights/disclosure/recourse core andexplicitlinkedconsumerchapter, conservativelyonefamily,cap20,whollyTEST.",
+      "local_review_records": [
+        "stage101_source_decisions.json"
+      ],
+      "review_record_sha256": "b7592313544580ff78ab6044b231585922860d031146329eaabd75da31e88810"
+    },
+    {
+      "family_id": "family111_fegli_booklet_and_program_pages",
+      "document_ids": [
+        "196350caa2925189bd0f489c",
+        "228b62927d08f866fa48ad28",
+        "464d340e647aeb42c6f4280c",
+        "4684ea7cd1b3f80e06e9f684",
+        "4b0b32ae50ab7a909706f044",
+        "628b12fcff04027c8dc3432c",
+        "7abe835580bd022d3e30e6b9",
+        "7bc009211fcced0dad739fae",
+        "7bea96af2653b74c363536ca",
+        "90d2f609f7dda62a8dc34b56",
+        "a54e0a96fc262c1b7761837b",
+        "c7378c28a0e72e259e7d8726",
+        "de7661e25cea1486a34010d0",
+        "f59bd409b2be6ea2f92f1ff9"
+      ],
+      "relation": "2016 comprehensive FEGLI program booklet, substantive program-information reproduction, linked claims/beneficiary/conversion explanations and exact aliases; conservatively treated as one source family across editions.",
+      "merged_prior_groups": [
+        {
+          "family_id": "family01_exact_4684ea7cd1b3f80e06e9f684",
+          "document_ids": [
+            "90d2f609f7dda62a8dc34b56",
+            "7bc009211fcced0dad739fae",
+            "4684ea7cd1b3f80e06e9f684",
+            "7abe835580bd022d3e30e6b9"
+          ],
+          "relation": "normalised_complete_body_duplicate"
+        },
+        {
+          "family_id": "family01_exact_628b12fcff04027c8dc3432c",
+          "document_ids": [
+            "628b12fcff04027c8dc3432c",
+            "c7378c28a0e72e259e7d8726",
+            "de7661e25cea1486a34010d0",
+            "a54e0a96fc262c1b7761837b"
+          ],
+          "relation": "normalised_complete_body_duplicate"
+        },
+        {
+          "family_id": "family01_exact_196350caa2925189bd0f489c",
+          "document_ids": [
+            "196350caa2925189bd0f489c",
+            "4b0b32ae50ab7a909706f044",
+            "f59bd409b2be6ea2f92f1ff9"
+          ],
+          "relation": "normalised_complete_body_duplicate"
+        }
+      ],
+      "local_review_records": [
+        "stage111_source_decisions.json"
+      ],
+      "review_record_sha256": "a8eba39218b67924a23779083d7243914be98bc02b6502ddf32719fa1f31a879"
+    },
+    {
+      "family_id": "family113_youreurope_car_insurance",
+      "document_ids": [
+        "2fbee0fd02b4d0b0ce2d0db5",
+        "8040cda6ef4fd6210d9d8b75"
+      ],
+      "relation": "Two complementary chapters of the same EU cross-border motor-insurance guide; conservative common family despite only navigation exact overlap.",
+      "local_review_records": [
+        "stage113_source_decisions.json"
+      ],
+      "review_record_sha256": "8bafcba7b03c6157bd426431f1b5f4c17ea90cb76a5c5af4490a51f5e60a511a"
+    },
+    {
+      "family_id": "family113_youreurope_health_cover",
+      "document_ids": [
+        "9cd3597f5179948a3f173135",
+        "fd10b909593cd90b9081e8db"
+      ],
+      "relation": "EU cross-border health cover guide chapters share EHIC and residence/temporary-stay regime; treated conservatively as one family. No per-page multiplication of families.",
+      "local_review_records": [
+        "stage113_source_decisions.json"
+      ],
+      "review_record_sha256": "8bafcba7b03c6157bd426431f1b5f4c17ea90cb76a5c5af4490a51f5e60a511a"
+    }
+  ],
+  "document_text_sha256": {
+    "018a6c9c778676452df038f5": "a5f83c528480163e03d3fe181637fbc645485785e6aceb5b3d58a099b5cf5632",
+    "047ac450e10b060a7c47e019": "746e3bb4dfd06d44b27aed1c6eac05f4ce1b859522cb2190b56f4eee0739caeb",
+    "04942a2271a837926a20d9cb": "b1a8e5ac7480b745e1efc66ade49b3b4d1edf71da49b8bb7c77be0ad59c396f8",
+    "078f0efba910d0edc7c0c9da": "9de44ea96019872ded067271ed6a0697e1f1a1ca458dfd5106762a0c2702e24f",
+    "080dc16b2783ace524010faa": "72cbb13fcc9c640da38f768bf9558432454a5edec3f78dd4bedc525c22661b89",
+    "0aa5d064b9ed7173e2c22aeb": "6a627ef9c3740822d5098099cb71e2ea5afab7e7a848d8ffe942f41ba308bdfd",
+    "0ad07f83fdecc639b541fb9f": "ca922a7f364adaecf57ab5f65e9987f0dfd25a10c00153f927ae3374ce27bd67",
+    "12ad0a35e06fe94e6ae595e0": "dbc76597fbdf29d9f3de625e5c8a619d243cbe399c1467a448e054a0aa633f3b",
+    "196350caa2925189bd0f489c": "92f9657949e1f9e62e71d7a8b77801e1f852678877cab387b6553df110ee1f0a",
+    "19989b045c150017af7dddf1": "8a58f2587b9ec3c030b32bfbe478f784770f67890c7e24dc8245a39131663627",
+    "1a2895bf6a9322116700fdbd": "8aad2ecd88027a1f57dc302b767eafed914e2a672a05e10ce09b57da2fc8fd71",
+    "2363c2e25a92f86c942e99e1": "e995c33aa33aae2a305a11cdb33ea05fa3f0bea0784d8f0ef0095d057b463171",
+    "23cd971dc3c7594740cf6919": "aa0f3cf2f4e6920b20c6d27d2d57a17df548e7b17cec09914470595fe2198680",
+    "24f1bbe32f3cfb8280ba94ed": "ad94bc1d625717b775e6a0df0163133536cde3526869e20f8062afd304a2363c",
+    "264e64cd0c705c40c564fb4d": "cd83cb03ec389134fdb0c6af0ed1e772cfbf6b3717c72af55cb11ebbbd6e69b5",
+    "27a256a25d4112c61e10bd9b": "81357e55eaf6cd18feb02efa25b6573c0b70527a41939784d7e5e6c56697a979",
+    "2816d4931d12db85204281f2": "acc97ed0b868eff06853874133babed6fd554737466728d7d8adba2771352d23",
+    "28a0a2545ff88e3611e7ecd2": "22fec96d27d040963999a0f62ef59e94596314716019f4187af033a5953cbadd",
+    "29274b48d71cf84ef5c50fbe": "30f84eda0a0088d5b445344f1edbb4596eeb31c9994db80ab9d25e3082ec41a9",
+    "292e98159cd06850b0553a6d": "321517a49c0bad119a415fb3c29c9ddf3f2b9406fcc40ca69f3526d3a34be15d",
+    "2a8295f57626d549d548b000": "6cc5b495f432012025f06e2d9b2b8f2f58dcd9cda065fed81c2d2890fa66833f",
+    "2c3ceebbb622e5ad4eac13b0": "bf7326e2128f761b27502352899410f006774f16dbcee0c5dba6aa9574a7f3fc",
+    "2fab06a9753164b65358b1b7": "746e3bb4dfd06d44b27aed1c6eac05f4ce1b859522cb2190b56f4eee0739caeb",
+    "3166797dab7aa03bc753d7f5": "d3924febf51f968a865796484e28b7ed282cf079e2a8deb6986ae7897cf6b6dd",
+    "3338d443ce0f0623e1938c17": "81357e55eaf6cd18feb02efa25b6573c0b70527a41939784d7e5e6c56697a979",
+    "369c0cb817146a2917e8710f": "f17e0e83cea3bb42bc52ec51fdce051151366747ff24ef7ef592ed8f07c25cc5",
+    "3997c50a5966717e10a1636c": "c1361467f7a1a686a11ca21d00e3d7073458aa09b8b24e1e143afe140ca0213a",
+    "3a11d7a9a1c624e7034988f4": "6bd362847e3f8f01ae351fe8cd606fb33ff80d083e33b581eb50e88dc91993cd",
+    "3c48779cdb2de9ef1c44556b": "45293b33a4a7e7bf4eaafc21414a5741d2817ac418b3c7997bea0ccc7fece753",
+    "3dbbb909cb634bc164f4d953": "1bba5cd3f9737c031552a572db84ea750b861ec2925fd16e7b2512bfd4f8b391",
+    "3ecace7bb895b1c2b7b2cc53": "c5a0bef01c786ccfdf6f0c174bb98c3cf3744f9371963a53d99d0fd60fe8a65e",
+    "4684ea7cd1b3f80e06e9f684": "05596cb1197d8d663093742c698cd75d636a05de40f537717463fe2e81f86144",
+    "4a0c11b9b8a82fad55c0eef6": "075a78d22f2355fad013e414d730eaa62f7ce022fdac85e4d8adf0989e2239f6",
+    "4b0b32ae50ab7a909706f044": "92f9657949e1f9e62e71d7a8b77801e1f852678877cab387b6553df110ee1f0a",
+    "4d29602f7a434c7826a3deae": "8df58de10a9efae3a9e0b7c3791a5c6902a5b3e3e41121737306633305688182",
+    "4e208451fa9e654e2cca2dd6": "fe7abaf4588674a9e180e593f2611a09a315178148f7ae549c7ea60f8cd96289",
+    "4e7d7a2748cae1072d8ba9bd": "96fd0b8aef696c947ebf67beb1a94aabcddca1422361edc37fc92c46d6f4ae77",
+    "4e9d224d640f4b1dfef7356e": "9e858907591919df7b65706150d816f30d44771b40bb615ffb24566202e90943",
+    "4f091a0a6dc102053ac1ca84": "c01b2eeae22cbd88ef94b7eff83cb539e35f5350d358fe2732d03eb1cb5e823f",
+    "53e3a2f6aebbfbf70a09ce13": "b2afd8f80b6df2f7a6f9537ba501b5a25c67a2ed4b91fcee7aa2096880c0bf9c",
+    "5c2caffa4837ff67078fbba4": "df010dc93ca662099454af6c4a6c90388c88f0d2eec5e82bdb13ce6c602dc8a9",
+    "5c9a766231bb1de0bd7f524b": "910884a2bc0f24c1731218f18d282a3dd2692708df1f4510c7696e75cf4fd0f0",
+    "5fee4fc65cd25d2095084578": "528e87212b2a647491bb211196a32212836cc0d4967574a49e3602e8297b5dfb",
+    "61152dd010de28005424f8f0": "b5bc60d8c8c64f6c4beb424e480aa8559c477fb54a945a5fb4c2b962b5f18eb6",
+    "6150ca6f35317e51728915b3": "66fdf02c438f0147108e72d7a2cf46b6c48088e140a2fdb306a2aa63a671e741",
+    "62622a9e45d6c1463e7e36a7": "9e8fcc24465cca120d00ad94710ab6df98499dea93b0fadbe4b88a96df23d22e",
+    "628b12fcff04027c8dc3432c": "31316ef8e96c25c79c48d129defee2eba9a867b435200018f0afdf7e10ffe290",
+    "644a7e599e9f87b732bc6833": "1d6083328d8ccbce7d2db56def7ca4a8fa583ff0172dcb44348bb1c82b6003a3",
+    "65b2b51b2b7bbb6076252fd4": "878723fbebcdc683eb38e101159ec1f80a5761921e62aa21a34c7caa61410ede",
+    "666ea2ce1d7971869b484df9": "3dac477bfaaa7c2066fd5042d446fa3e7faeca3e7f6a3d50498b5dd387370296",
+    "679b65b075cfb62289ec5486": "fc67a3b6b9909ecf9d5fcfea3566b47aa47811d79a2019fcad49e4c36d3f15cc",
+    "68746b5d4bc16922af4583f3": "4c87c088111a2b9dc2b0cbbbc38f8d0c6d802f1f082235b43b33c34ca5a0a5e4",
+    "6a061f5161d14b14994156d5": "2a033fc7de065841fdbe53acc6578de440fb59f42f9ca9bb0bdc2692d4041235",
+    "6b4bcf5dfd5fd1eed9aab684": "d25a91953d9379d5d25cb951968de4e17ee8aea3c56750b74482107e12e56a3d",
+    "6b81331d0db38b2dd0bbebbc": "4c62fc9c9698043580723245b4000563f53699f9242003dc896a64bbbb1be7a9",
+    "6c2d0de720f03d0fdac51551": "00388001d0fba2b0f93e766dda738a8123151f7f31bbf9c823e2b221768b7ad5",
+    "6eebb7994eb5a56465fe1d5f": "d9bbc08234cbb49605b8f10cf07d71fc96bffb2de138d73cf01742b8e4e61e8c",
+    "6f359b2e1e3ec62e2ce125e0": "322875183f4812405cab162133fcdf7086e09878bc3ef13f782a5220acc840b4",
+    "702216e8e8bc56fb51d7e4d4": "9bf24790adc6d5beaa842295d008722a61f2bc6dad95c49c2925118355dd8cf8",
+    "7225fda7ff7d5aa3e5bc734b": "1ea4841ba42f8787269b2d8c60f6330fd69fa55182911a824dabd21bb00c419c",
+    "737d75618553ddcb010f81fe": "cee9a8846f896996270ab00d8407ae08782d61ea42a5b992603f44a46ce1411d",
+    "75380ee0a360f0f6d6bff618": "ab2808f3b06154ea748b0a7200405dac379ddc6d0fd5e069e39046ffd9046d7e",
+    "797c63eeb1fbeed82039373b": "9392a68bb739c33fc61b593c6feff9bb147c9696e40a725af209a447b9672e2c",
+    "7abe835580bd022d3e30e6b9": "05596cb1197d8d663093742c698cd75d636a05de40f537717463fe2e81f86144",
+    "7bc009211fcced0dad739fae": "05596cb1197d8d663093742c698cd75d636a05de40f537717463fe2e81f86144",
+    "7c3ee71a5e049eb4ddbf9759": "878723fbebcdc683eb38e101159ec1f80a5761921e62aa21a34c7caa61410ede",
+    "7f4f82cd13b0763d02037fca": "09eba73580f3df332411d2cc90df425fb1e9d0c640e9f39d3f7881f191a7e848",
+    "81b169737e514146ebda17fa": "72cbb13fcc9c640da38f768bf9558432454a5edec3f78dd4bedc525c22661b89",
+    "833aa8de301411859d589747": "0d486f1822f5595bac5af815e5fff8b7266d065619009a5233fd03b7ab0c74f7",
+    "878bf47e2f3e7d6f6e94eb8a": "f15dc3f233fb4bcb818fccbc18ed3e16dbef8c2f49b7eada6a9204e58afb8e62",
+    "8a5d70713bcc2b0365f744d2": "8df58de10a9efae3a9e0b7c3791a5c6902a5b3e3e41121737306633305688182",
+    "8a935ca5ee8075f01def78d8": "09eba73580f3df332411d2cc90df425fb1e9d0c640e9f39d3f7881f191a7e848",
+    "8fc60f0b61f7365a3cb353f9": "fe7abaf4588674a9e180e593f2611a09a315178148f7ae549c7ea60f8cd96289",
+    "90d2f609f7dda62a8dc34b56": "05596cb1197d8d663093742c698cd75d636a05de40f537717463fe2e81f86144",
+    "91e784604d2b91bfd73ebcd3": "217453741cfca7d6eb0d7752593e1882b4791a037f52d16a6952bf5629d3c585",
+    "9567373b97957bf50609d90e": "5fe596f8030dbe8b4a8ee7386f115cfac2ead167125614ffbbf423bccb823498",
+    "96be6e3aeeb072719d74c15a": "425d3ea8ddd33738dee2a5e3baa5036d3658d177af1032ff9986cf655d274ed2",
+    "979255e6645b0ea116f98be1": "54cc7e38b1dc768459b53a3d2fd1c45af0c0c91c4e23a4d2033bc311ac09e9fb",
+    "97da0a46b8f1b3334bfbb53b": "a5f83c528480163e03d3fe181637fbc645485785e6aceb5b3d58a099b5cf5632",
+    "998f202b0bb624936b97ad0a": "425d3ea8ddd33738dee2a5e3baa5036d3658d177af1032ff9986cf655d274ed2",
+    "9a31585b6c0ca9e9d5d09b86": "6cc5b495f432012025f06e2d9b2b8f2f58dcd9cda065fed81c2d2890fa66833f",
+    "9c5a6d1b215c96d4499fd885": "87cc3f9f6bf8bc01b2470164b4b22bdd689a0921917e759bf543f43cb897133f",
+    "9e3a0816e4bb9f4503e3f922": "f17e0e83cea3bb42bc52ec51fdce051151366747ff24ef7ef592ed8f07c25cc5",
+    "9ee44012df69fc2538a067bf": "b62e3e8d6bf672577fa3be371da829283b737f05fc904a42599730a8002beed7",
+    "9f85fa1f501a607bc6814723": "e2a18b5f057148867f51f873e80da382be5338b1ce998f26c1fca2586a8b6a8f",
+    "a033c48ba1e9fa8a7b337953": "e995c33aa33aae2a305a11cdb33ea05fa3f0bea0784d8f0ef0095d057b463171",
+    "a20e2c2b7afd07ccc4e9d1d2": "d3924febf51f968a865796484e28b7ed282cf079e2a8deb6986ae7897cf6b6dd",
+    "a4266e848c63eb52133c3b8a": "b1a8e5ac7480b745e1efc66ade49b3b4d1edf71da49b8bb7c77be0ad59c396f8",
+    "a54e0a96fc262c1b7761837b": "31316ef8e96c25c79c48d129defee2eba9a867b435200018f0afdf7e10ffe290",
+    "a761d115e47adeab865b8b34": "910884a2bc0f24c1731218f18d282a3dd2692708df1f4510c7696e75cf4fd0f0",
+    "a8c706b8593a4fb21db9f336": "bf7326e2128f761b27502352899410f006774f16dbcee0c5dba6aa9574a7f3fc",
+    "aa7ab24c941e4ba682a7dd25": "b864461f8af03c8ba2bf42c2b839d1c46dcc0df006927276361bfdcdf96bffd6",
+    "aad70b3ec77b311ac5f38fd0": "c01b2eeae22cbd88ef94b7eff83cb539e35f5350d358fe2732d03eb1cb5e823f",
+    "aea4af81fd24d1d31a33c51a": "b181e1932f5337bbe77c862fc6a9e1f7179f992e725677f9b380ac97d312d3f0",
+    "afa6f5fe657d9c5930d37ff1": "3d18e5de19ab0a3cb55482a92813f26ff88cdf93acac33019851cbe76a287c82",
+    "afce00a38a4ca9be4cbfb426": "50cb7476507b5e8b61a885d2cfac1e957ec03146c730ddc3f5031e767ca6597d",
+    "b018dcb498006f4c03e37d63": "0d486f1822f5595bac5af815e5fff8b7266d065619009a5233fd03b7ab0c74f7",
+    "b058ee419c889e370be34ef1": "df010dc93ca662099454af6c4a6c90388c88f0d2eec5e82bdb13ce6c602dc8a9",
+    "b185c1a5cdb4f7126fd0186d": "aa9d180873a6ad9368ff6f5cd6069d6aa245839040044db62740060a915712a9",
+    "b18710350ad4e79ba87a0ef2": "9bf24790adc6d5beaa842295d008722a61f2bc6dad95c49c2925118355dd8cf8",
+    "b2157efb7a46a8b9c09e2ec6": "ac793850f5b78a8c01610accf740e7a10af993cea51f315e36f36bd5fc2307ae",
+    "b38fd13b6860351d3593224f": "f641c9192d53a355608475b47731450db5f76b3c98eb9df4b92532cc825ce0e1",
+    "b415e348b3f185a33437072a": "048ccbc6cb6efab8a1531edc2ab8326382e05a78966019a689d9a2c75c60da93",
+    "b41e204c61a782c1440f6b03": "df010dc93ca662099454af6c4a6c90388c88f0d2eec5e82bdb13ce6c602dc8a9",
+    "b52065e940688c588c2d0061": "f6e57c12dfeeece8ea3983013c70e966a63c4a28c0a349dd8a4694b4fa6223c2",
+    "b54197d275031a3455c08800": "3dac477bfaaa7c2066fd5042d446fa3e7faeca3e7f6a3d50498b5dd387370296",
+    "b5a795796ccb7e3e3dfac707": "40726f30877000cbb3482a5a632d966efe135f4737608d1493515137d639c708",
+    "b5d361f3d1f4ea37d37d581a": "82701cc0f3a982598e26fb39d706c01ac772bdf41a3ba71bf59bca99dada3548",
+    "b6f5f842974445f6e637c729": "febf629240ba0a6e74398d4ff49472b3492e0b5d1152712e6f4193a8b155ce0f",
+    "bc3bc12d6fc85af3d5ff05eb": "39f3dc0ded12e84ad0c8274c3c0afc7f84254ffd11f38635a873ebd665d8a689",
+    "bed1b25240f7b5c0e13331f8": "e05a564a01b9ecc45b88bbcf02b70688c8a0f861d22309a3f3899d4552ddcd37",
+    "c1c18c447ec948d170a8dd78": "ac21c5dbebbe75dcc90bf8e8fda5d88538c7748de8457d429b5895ded605e294",
+    "c7378c28a0e72e259e7d8726": "31316ef8e96c25c79c48d129defee2eba9a867b435200018f0afdf7e10ffe290",
+    "c764ea5914d8b699a1f9e87e": "c5a0bef01c786ccfdf6f0c174bb98c3cf3744f9371963a53d99d0fd60fe8a65e",
+    "cb231c9dd3dfe29d203648dc": "b62e3e8d6bf672577fa3be371da829283b737f05fc904a42599730a8002beed7",
+    "cb38ab308f808597c48f2a45": "ac21c5dbebbe75dcc90bf8e8fda5d88538c7748de8457d429b5895ded605e294",
+    "cce1bf0c5fc2792d1d0f946b": "f0d3e3c971e906eef2dbe554b12bd476594b47e5405e66c92b680972f3cc790a",
+    "ced558654066e6e52ffc6fa7": "bd180508f3ce59e1f81d0f4e886b0b5733de5509223de121e555f334cf61bb9d",
+    "cf47273af1872c57f1882f8e": "f641c9192d53a355608475b47731450db5f76b3c98eb9df4b92532cc825ce0e1",
+    "d485509be9e5056ed7dec7f4": "b2afd8f80b6df2f7a6f9537ba501b5a25c67a2ed4b91fcee7aa2096880c0bf9c",
+    "d659da61b357406362c4ba58": "f641c9192d53a355608475b47731450db5f76b3c98eb9df4b92532cc825ce0e1",
+    "d684f79f8a0ff53aeb9303da": "e8ab941f3f38033a6f680ab63e25857530c2e9cd565978ace47a27d7e1d88796",
+    "d8ba165f8ee195a4cce48ac5": "528e87212b2a647491bb211196a32212836cc0d4967574a49e3602e8297b5dfb",
+    "d8d68426ca8f84411dfb0076": "df010dc93ca662099454af6c4a6c90388c88f0d2eec5e82bdb13ce6c602dc8a9",
+    "db1c6e64b1e92764eabce84c": "e2a18b5f057148867f51f873e80da382be5338b1ce998f26c1fca2586a8b6a8f",
+    "dd1bb2177dde12c9f3e232ba": "51a294612048a49a85d899312f1bd046288e02843f28512b1d5fe9f3cefafa58",
+    "de66bd9de7faacbdc53c7a42": "e05a564a01b9ecc45b88bbcf02b70688c8a0f861d22309a3f3899d4552ddcd37",
+    "de7661e25cea1486a34010d0": "31316ef8e96c25c79c48d129defee2eba9a867b435200018f0afdf7e10ffe290",
+    "dec23aedd09311b7c2202219": "87f67525e653a302f824dd7957a841b5f070f841af26af024ef3f80f3f107f34",
+    "df3f7a948667c5d31ee6fa37": "fc67a3b6b9909ecf9d5fcfea3566b47aa47811d79a2019fcad49e4c36d3f15cc",
+    "e2752813240e84d51a481824": "eef3a599d3d5371a8df70fcaf2f71a29f3ee2fc2fdb4e82e441043a2ace5edee",
+    "e7a5e021e96717c63f6ab1eb": "ce4ba12372b9d74762f2047a5f5b7e4179a7dc0f11e5846620d54ece5380ab18",
+    "e8a4a7dca70a537ed36f0611": "f4b4e2479dc2db67a0769fcd53826c2fc29c21039fdf1517470f8d6c67e29eb2",
+    "e95a32e58b4ea52d208788ba": "ab38bcdbafc5f380a4fee302b44b830a890c5987d1d8573861e927f30b0bb656",
+    "e9c38a14f967d3db606e8335": "c1361467f7a1a686a11ca21d00e3d7073458aa09b8b24e1e143afe140ca0213a",
+    "ef79735fcaed292e356b92ac": "a9fde5ee91ae4382a441ab09893cadbf9c87939e9a54e3336f8ee0beed76be71",
+    "f3a78d77a836c637ca03be80": "22fec96d27d040963999a0f62ef59e94596314716019f4187af033a5953cbadd",
+    "f3e2ffe42632023a5dbd9c16": "f6e57c12dfeeece8ea3983013c70e966a63c4a28c0a349dd8a4694b4fa6223c2",
+    "f49b169d7c041bf0ccdf5a3a": "42dcf0551b0b250950062bf30fa7c5afdc7911735fc848c64094282846dcdc4a",
+    "f5062b0b796e1ff13aa4607a": "910884a2bc0f24c1731218f18d282a3dd2692708df1f4510c7696e75cf4fd0f0",
+    "f542f1a41bee64f133ed4587": "aa9d180873a6ad9368ff6f5cd6069d6aa245839040044db62740060a915712a9",
+    "f59bd409b2be6ea2f92f1ff9": "92f9657949e1f9e62e71d7a8b77801e1f852678877cab387b6553df110ee1f0a",
+    "f5a1d5aee63b3733bb191977": "9392a68bb739c33fc61b593c6feff9bb147c9696e40a725af209a447b9672e2c",
+    "f6dbbaadcfd19ff7d6d1fd25": "f7a932662dce5fc09e6f3081e762d52e8aa2cbf2740282f3fd819250b3bc1060",
+    "f77286e7bee9330966d7ac20": "f15dc3f233fb4bcb818fccbc18ed3e16dbef8c2f49b7eada6a9204e58afb8e62",
+    "f8c3ca14906a4a25053cfb4a": "075a78d22f2355fad013e414d730eaa62f7ce022fdac85e4d8adf0989e2239f6",
+    "f900b2307a9f9a32dcf6e0a4": "3eec0d36753accf57b20ebc74ae9c8490e8ea071a92adfef3fb888dff88e5c9c",
+    "f9d382e4898103e28568893c": "b564800d676c6be0e31208856a33d4f023322665c5c0e82dd43acabbd801a384",
+    "fdd34178c90ede0814490ca7": "9de44ea96019872ded067271ed6a0697e1f1a1ca458dfd5106762a0c2702e24f",
+    "ff74a2cd4340e659159fde46": "2a033fc7de065841fdbe53acc6578de440fb59f42f9ca9bb0bdc2692d4041235",
+    "f4e4cb1c394cde1a64141374": "659970bed2b9e68de4a01733c9a0356db9ae603002c963c33d39d6e4bb4717f6",
+    "28c0f1754c505a7868ae308e": "01a6c83d11aacbd990f3f37083bb5ac88e27ec64b3a4261acdef3505929fdcad",
+    "2913aef34a7f255cafbd604b": "af7bfeef0ec68058e26bf5897ff7e737cae365103c751f1314c73355fd5e4496",
+    "63019828c11a635e1e42eb17": "4e17ea5b307c2d89842a3229e52c479b364c6dead1d95a20afa06d53c496f5ec",
+    "1276e1f7f182efe9804e926f": "c140164e50ee86342d70fd19b99c83cd6e25a788f0f71a89dc3634e8673369ad",
+    "15e5823dab8dd2e97eefe0e8": "169ec8b8541d0f62bb38a6847faef8915e4748a58521b8c6c7c784bc891b87d1",
+    "1e0a1712b1d8e1a2e56c5970": "6037c86072c009a42027a644211037caea61a6d3d1013a87527c4ea4293a9e25",
+    "23c1c80c4614076d208b6e53": "c5c061e208eeb1a9603f7b38b7b90daea76dc88a9fc27c010c5621e4f75f56e6",
+    "2820c2089810dc38cf67023d": "22fc24bec7d64ab9b1cdfe0d1b0d7304063696277af87eeb453b77f1e74539f6",
+    "31f08a6340a3b70698d66a6e": "9c1e3d32a6614e1974fb66a937d5acdf4728697c042a7e85da44fd56b9c134d2",
+    "367d765bc3189064d324295b": "d65fdfaee320fda74c95862fd18b3df7969360895e13e9169ad1be05e9f10b1b",
+    "3940159b60bb109415dc127f": "229e60cb4f963f708ef6c447835f1d8a39f23b380a890b066c8e394736815bb2",
+    "4ebdb73f0b18d6e5f64fba36": "dd66df42e0d1ce5709826671170dd998046e9739c68ac58a19ef5a41e3c814a0",
+    "50851ff281b489bbf3d07e73": "dbb1d78d966aaa334773a29d7d573a6f7fc494f3cebcb1801b6b32a00aefcd4b",
+    "62e15ebc43f39d0ac3793b8d": "3a9652f9176f2f567c628e95040745f30032fb8632961a49c511affd35dd8daa",
+    "64461d77c7218708de324cc1": "40b2d1bf6a46bd7502126b6c3db869173fe7a651831f4f2724c4d9b1b26a1e4e",
+    "6d655f67d2228d1238727674": "6d14cbe45d5e9e802be62361c7767d6cfe9c261ad79f06c05fd1023ebeb6a214",
+    "777e59f79b62e21dd334fb8a": "ec1e7b77778ea301cd647f33a0c74cc8c91e2db08eb1033f5eb14797fbb9c8e7",
+    "841b3a1992fd3b5cadb79b19": "bc506e4b01cf162ded596867045d64bfef62a01b38bbcb1d00ea464b4989021f",
+    "8712ca49fc3bc11542c1a5d3": "8619ff9147ada4a85fb8ef5dcd94f585023769c6fff50173da875affdcd6917d",
+    "aad6189306b78e0f12c290c7": "0de92887425b192434e5287ea2951774feff3c87aa1456948a3a3e2267e69e24",
+    "bba61794dbd70f99f231571d": "611506673671fa715bfb33a416965de934f4b6ff15d131c621515843a3f11f33",
+    "bc138ba9c9881da2f7bc5894": "877cd33136eb88cda79b7ae6a50dae8843e169ba674ff13cb3fd011c00d87239",
+    "c92fb58b9797980ee81157d2": "adb63b0f2aa27d5de0af8972f09e72bc2880b6fd98f93646c6a065496f8ece8b",
+    "cbae89b3ebc1857487dba8d8": "dde46897a60c16e3d17e52d0b5183e1d852f3e732dda0283bd3e6794ef7feaf4",
+    "d6face6c5e63308c10ad66b1": "7384ca37aff0335b681ef7e16383e8ed17ceef51ab67b21351868f712586b132",
+    "dd02be0babf57f9b43b44404": "9a08e72360c8bb17c4c113838f42e3bdf322ecf9e8502d31856185fc383fe483",
+    "f2b303ce376c34e3a1662f70": "66369d897417b53e143df4dee1db01918fdfb327616a1f177f25fcdfeac79eff",
+    "fa71afb6f3a7b68873f7b76b": "4d976908f0b848574cceec7cafaf64af8374452759164a7db0eb6ae9c71534fd",
+    "0859407de46f408b7f2885b6": "a2ad9f36084efb2ac89326d6ecaeb482cbbf38698d4731f760f755940855fd27",
+    "5f9ade10c7ef86c59ae303d9": "6aaf762eb38eb310eec8bdf74bd26c2294b5fdba1b9c011d1a627184c838b6af",
+    "e2f1fdec937c0934a038f6a2": "c8090696b1576d52500ff36708b0ddfda98550d0e93c450722f3330bfd88ee96",
+    "2e2d21051c4130dd824266ad": "ba59b9f7a84448d1ad43729f1f92b7fdecb69a1cfd8b07dcabc54902c106f21b",
+    "7b1e9892aadeea719a76acca": "5c7cd43e8cc9753f113fc6fbc42ba057fbd6c6718acf4d300919114997048718",
+    "aa51567a6730653c4174a1d3": "054ffaaba6410380a6c8d10c9ca22719a813e40013bd73f27488f24d9e90865b",
+    "29d23c743edd9fa357f6d60c": "0c4f0d8ba452eac1e3bac4443869e709fe570e56f736ddd0c74b0c4d160f2bf1",
+    "43d8a0f5e412251092f876cb": "c2d8c09aacba1f5ddcc84bc1fc29451ffb40caa7280f75756794c86c19d79018",
+    "676d0c50e4b73f02a4b70059": "1553bcc406e4e22de541a9e6d20615a89067f69096d1397f95e676dcb474c501",
+    "7f6ca9cbc95ab0a862a0d85d": "237220abcb41b6b14b576c8738a63a2c38c448b1f46a7634fba982cfc01ef567",
+    "869a066a4e605280475f0e25": "25ad821dc843707a178250e3098afdceb7d5d30508d86c9a7799446eec24ab68",
+    "8dc7c0b0431e73885f8fca5b": "8ded4f28387db9ec82bdbdf24f601c37aaa2c6ea8be32ad4459a52953fe11fde",
+    "979a72b37ba4fcebbc3e0771": "ebab805f323f4243f6f2fff4b18f9adf5d64d39bd8d60556c96c102f3b6bea89",
+    "ab17dc9e7eac9543630fc557": "26fa2f97a6c7fa156925ca7d1640dde4bdcbe370939a9f87668092b8b707fa76",
+    "df05e5ac0f8f4bd935546708": "54919c148c638e3beb48d2628a068d426c76572f5f2f3dd4bb93dc0c47817523",
+    "401545df0d4ff8ecd80e8eff": "82d7e2148e54692f777df3a36f630f86bb72a635e6a9fd6fe2d1cb2a57b659d4",
+    "45da4997122c5627d8a1cc65": "0faec6bc7e4038733b65c5ee037c8aa70193e500b29a9a0aba7831a9c28447b2",
+    "bd2e1e7fdbd34adafa5a399d": "b497d3232acee9a8ac80f6c780c6b93b4d1bea8261a8114423bc857386cdc3ed",
+    "7324d17d02258e442dc1c927": "e044a36d0196252ec2acff0cfcee4f8a2c791560c724c717a20fffe328235440",
+    "edd5d96da90891b9d863fb8b": "072fc5f814c759304ba00958f0e27b4ab422b4a9067d923ee5735132ed4b92bd",
+    "c47261ee09f87107dba642a9": "785ca17ffe84464251b3bbab07eb68c5ca275501f2915c7d55684d5dbdd5f471",
+    "dc7f93bd4750731701287125": "b7e9b708a089516ce583ef4d441984c4bc166022314e3a34648c043b24bb001c",
+    "86aac5ed684acffa0c820f59": "f7b30ac6c51e347800b401f1333a4a2097efbf791bd4abd5db811e69e72a84ab",
+    "8bdd6825187bbb0cbfc049da": "bb8487118e09c1522a3d6203115fc7796db03d1887f03b6afe40c44851d42e8b",
+    "d8887b02e2933896d13bfcb6": "21489e2a42ca100014aa175c1f572b953d995ddf64c9c84521945f87eb40eb64",
+    "3fc110d67d2aa9f632679a25": "871b6d0ec8bb2ee482a0961e7529d6e18365223e3acb5d1a22a5d812fca617e7",
+    "afb106b4ecec1eff1a61b8c6": "e0624b3c8f8f393b0d9df92fcfe0d4071f8c66f72b55d3bcb40b9867c364f769",
+    "47a580525e5fa02e51941055": "9ed3d131fbca8e49d0a9a2b61ac405d7ec22937aa3b9054acff27c5c861c56a1",
+    "13f20e198c0f2a53073a578d": "94dfae5f45ccdfeaea94975bf8f44c3ac74e020efd2d056beb73f1ff9b8a2569",
+    "d3612e6796c419cf2f917690": "d4204a098244a6b3df66e3a67af0b841f88c6a2a3a891b3d89e8b7f84c262550",
+    "110327eb7d2cf51114a6ad59": "e67f46bfa3729bcbd85ac5544dd56ae9d7e554a0b9917fa822f0bf4e9b7c3618",
+    "ab1910e8b446726fb35434e6": "413478a513e6d2537ce51b863130e46ab953580fe78fe86fa691e4f86486298e",
+    "e9de2156adfc9f399218ebbc": "8b867b3ce121e7765d6eeb5bdfb4b60a827da6a0f790ac1c17cf0d54032c62f7",
+    "8307d3d5741e40b38397576b": "58ad18ab5152a9279d8c6781c053c9de2af63ee5bbfd9c5408f4e88932b5aa22",
+    "c67274b4f3deeb46ceedde8d": "5e511ea58ce64b8bde147634a4b4a1e7c354975dad24267d677aff9b6057273a",
+    "1319da1cca4cb857930b06a4": "0a9a426aff622404914251190743e8d5f2bb15502cb1b3eff0b724d5632d4614",
+    "8902ab10b793d9b78e61927a": "9d795c9b034bb37e50b6fe2fe1cad7246a13db2a6c568415d85264c455c8d241",
+    "e7bfc345bcd30d3936982dad": "f1e1d8d899e7baae7e3f007a3c03ebce7168c8fafc526017af320278f355fff4",
+    "22ea5b12f2a9b6e6c702c0b3": "181fbd750313c450ddc837d879faf75c9e9148660dcc3f3ef27f77be02473029",
+    "22f5b037eabf0a40f4f7a09c": "dc1652ce67494511be9b9dcefbb709cbe249fc7550859732299c9300e59ea7a6",
+    "23824e5f976eb73f44af8e6d": "4553038d0c0203621e970bc3ae2f9a913e154f5f40ea5bb3ac3771f29dae0a0a",
+    "2f453fe7066318a95555a979": "91e8c3aba802d557e1a01ad4af36c6c9627448de78d09626fc9c60b567294a14",
+    "63a436307cfebb02b13f9dcc": "c8a697062b2d5bbbba9538350044a1f3f2464c6a3f3077b0ee0d6e743f68308f",
+    "ad597857c8621ad38df9d0b5": "d96e83b8e238ed6fe9e8c51c15a8c02b33a3be815509c278c686430bdda720af",
+    "c4dd70600857d4b7a4a94414": "eff7b82f7d7aa9956fbbfc7f40fe59b0debd7a8c24b007d61e6d80d6fcd3473f",
+    "cf0169f30be0269f9a544acc": "9932fe36d929436b8e1f2a099f8b9acd50ee543af44b8d4f87fff0fa79a4fb3b",
+    "ed043048703cf7d745d4d31d": "ee0fdd1a475266d77f09011af38457ec9d5f78d6416fb11e9233ab1b314e59c5",
+    "ef05413fd4ea1cdc5d959f88": "dd2231f5b18b85f28a33c6eb26f13e3486b4c25addf39f0b446fdc20b9956596",
+    "e2bd2d34476e4fcd0a09a138": "17bc3c3d1d2600c9a518c1854b0eebb9c2d577418f11fb57824ff4e671a42adf",
+    "ba4465d64673cd249321dba1": "8088badf816abdfda1137fb1d629a24514a08390e4058027c4df0c3a6405bfb7",
+    "960ada919cc2a7b2f6511b59": "7338d5416aa3b30bb68fbb6a8f4e1b36d0972aba871007fa9460a198c18cd10c",
+    "1d83f5310d08905df3e773fb": "50bd76b99dd6d1eefee1c0ee135e04cbd983328a6ac53bff91cad72245d0c73a",
+    "39eacfbd826b7d382e5bcaf0": "cd2d189b0d115aad9baccbd6c19aeb0bcef7fea7fe10639282f32d3164d28eba",
+    "b74c36ed7273e76c2dfed22b": "5e0aaf03613bd7d3cea81c121f376cd1e8058faa19f79287d885fb0ecf029f48",
+    "880b50006339cedd321c9cfb": "f0148af96ac32e6b15c8f5291d8dd1949e750cdd7608d9df57010a3e412bb972",
+    "68cf6a74e7840e137d8cd127": "953534cfa0658a75632e06d70f9328f518043d0c32881a57b15562b9c63c9549",
+    "caa5326ad768f8912e2fcc41": "a28fd61b70a87b1e5945a16627a80c6c3bc07867a32b1c8af641d3babc5a11a0",
+    "1d871ac850c80dc0a2f7827e": "6b15554cc9e881fb9b10ecc4767a437400cca9e38890a3f9cb05a84f88e940c7",
+    "82583926145f7f6f0da1db58": "3dd89ed3c442cf1f982d18da3bc1cb16272f2b00900b24c41eeab708ce991e4a",
+    "15e327b1a3dc1b2ff839a1f5": "1429c3647b7e5ce6e93ef0ad1b80b74edfb002bdb3a20d267206ea895b760605",
+    "7681e290d1d4ce3694bddc4b": "1504221d477f775743dfe670140fa8e3886be7d3a83436b20e6a9f3639e5d570",
+    "0d0d5d0c545a843c935d3d64": "f84e4fbb17d0a98b0672a810821836da1c74cfe559dde03aac4fc16ef54b5a24",
+    "52f27a7b6e1be3e9ad43854d": "ce54478ace3c916dc6f1fd5e4322e711dac6fc47c8b96b4cc97ac624a30b02f6",
+    "cb39a916736289e894a44290": "c2de379fba7bc4eb49215fe229d997fc3d5d01a9c0089e19d32572695ea4657c",
+    "a6c22196495fec67e0d6af80": "cf06576ee7c35e2dba794bbc9b16762d0b8c10e3ae8835086c12d33e7f6e0a40",
+    "4320bcbd46b31d8e63c6398d": "513cba4ef1e1ecfc0b6b7250a3ee95936408b3d46eea9865c5dc83183f575cf9",
+    "629f187ac13306fe68d5f126": "6d45370538bcfe588d082847c63963eb5b2580219d0708a14ee796d9a98864cf",
+    "ddaaa4ed53afdae1a3b070a0": "63943170939cc95c64c49aeca08241379a9105931adab0e54abadc17fe15406d",
+    "bd4797097d5c60f2f3f59941": "25a78c238d23c5b657852a6eb3a7f7bef2ec432c0e13ca7d8d7d7914767df110",
+    "24da2efcf2e4ce12f2cffc5f": "abae4742a82559657894e872615f3882a8069a62fa7ef83f508e823b600a9ed5",
+    "ddd02e4db4c303ef2701f786": "7caba8f467ab7f974c14d56c8777b45d77c334b6f351c0e47bfc12bf2b3e84ae",
+    "2d67584ec3c3bb5de04a5b63": "3c59e5917dfd88828494b487204581f999de15e785f2ff827dc5b7d23b1a11b6",
+    "4edd300aed8081ae477cb935": "c9de53569de08a2428a51351100ab4dba332eaf77e26d2a637424f6cd46ed860",
+    "6eef69d5d74bba92fa7a8993": "c6b8ac787c7adfd698b65bd6dec032cbacec4f4b97270e9f09927a0b56fa4d79",
+    "e3ddc5805b0cf8a6bd5a9a1b": "022e7b35e2c4158891fcca428260a921a72dc7f1303707ae0c3e37b29e0f235c",
+    "e92b3db1965b6346824a0351": "4d54f5b7b8022a29624f0c718a7d2fdffc2f4afdf14fb0f5b046ded8aa4b2321",
+    "46cd9ef011d632d3fdd3615e": "20ab7a26491e1c3420662071c112f3d7733290faf47977ce2bcdce7bf32ae354",
+    "2aa173e518185cc740524da3": "b956370506210339347bd145b905a9f76243fbc9b8edb64ea80aa7986e284903",
+    "de8c910beadc613e710d77f3": "c4facf61ce1c8f7d43fdc8f35d530a0768b5998e3372f48dc5fc56f80ccc4a30",
+    "7f5ac798338d5d434a2fcab9": "d84ffde568cecf3500e627f28b51c48af48db6d0766df5a49abc8014e3e543d0",
+    "d5e29237f41e26c27ded3fd4": "c05acbaba23abb27bb157e4046b81761f6858a17a6bc3acb5807c06ce61c44ad",
+    "18527a5846930027df22ee35": "b4f455df7baa545b7894cd4cea05c6226e320a8dd040843aac4e28fccbab62d5",
+    "432e099b7a2b2f56bf83a881": "959bdaea681d12cb777bcdcdd8806bc510ca302524eebfceae620d9a717b326e",
+    "359dd20eafa8c8eccf4a4035": "c8c9851d0482ebffef49be369557d0081f486a0122cf97770e3661af4afd2aef",
+    "4c5066be998b0024389629ab": "9197b308b7deca56fc180923fbf7e5a1777fa95b66df88d465ddeff3d3fd9d25",
+    "bedc671721b74ed88523e241": "c2b7208205b7607f2d418827c802399ab9267b287843181db5630bcb0c5daca1",
+    "375ad54b530ef65edc85ac91": "2c8fc52deaf92db5ca5c02522b1452a6fb886552baf18703b401e48b1b3afbf9",
+    "ea353addb8fec3a11b6c33dc": "f4ce5e8256f2ba8012ae3e33939efa779db0d2f95febc48f6db0a7fb78f3eb9c",
+    "36e32c0a343a42f99e52bd5a": "442e65cad1d21bb000676c5bddcaf310aef1c62771766f9a4c97df3f98faff09",
+    "84da46164616e4e11d2d463f": "65a73a8d3143bdf3d34986a8cc8143e3f6f21c4ba9d002af713574951614819e",
+    "95ba2205426932d63e7b1415": "7806d269d05ccc2c23ea6df7fb95e0e1d849ef781dc34d3b065b86ecc736e711",
+    "66e9be6bf456ba2fde73bfa7": "80ac63e471223153c1fda0d7b747029e13ddd18f90105b62d2b3ba30001a7eb1",
+    "02c86dab37fba6e7d1394187": "060219335d65a1849824e307579bc23d48dd25400a29492ff6a18042e4496233",
+    "081e15237219a87adc8ce9c8": "cc126a0454c45407faa1fad1a5a11e511d1a483f9c08391dceeafc4b24b6f3ad",
+    "b5ccff4e82a604ab415a0d48": "a332146f2c82ba6de7cdd3419fead447f99c05978983924fa3cd4d1c2be4569b",
+    "f070de6e14b63e1ccb94422d": "ea85eaa074c8a8678026e9a185234fa8f8bec6a6a0b18598123ad14eda3d2b6b",
+    "ddc2273727e6938dec0f8db3": "b97d69a4ace0f6d8f7ec7b58097675e4215a010e58aebffdbd028ec0c2b6af81",
+    "b70815ff438c0fc2904868c6": "911a941e7f507bdd7da24644a4075de0dc390c11908626d1af07663f3bd96b9e",
+    "e16a655a6365a17dcd361729": "e3f9427b0428df948bdbf14e159dbec21f26e2c48834405a6722c6565339687b",
+    "496345b39ff09310e8a3b642": "912274bd254a9bf8f84a092d444f28fe2316665417f7639a7b02a8ff442c19ed",
+    "7198207b53f7d3a7b6d294ee": "7854bee0800344e419de9c5d0c77a7837bf684739306309c896419065fa1197d",
+    "c688937823174aef5833e182": "46b0cf48b87b34fec34e9abd1e9bce66e8c3657cfc2ccca9f62ab58cd89b1e85",
+    "b98c2925be9ecf499b4c27a2": "d4d50ae738411e96fd00291612770b3dd81aca02f0afe5aca9af241aa75e013f",
+    "5953b3f5069a52807d5d5f0f": "060d02ca2bf43784e1a00614a1f205d7525d8927ad691254c8fb1b6f11da76ac",
+    "5707cac18fbea116de56b09a": "2f26807fe5c0728fdb1fe297a9dea85183125e16c4eabdba7e13136ad0410467",
+    "fe3e4e5bb314c83def921f79": "0bc681c3a1b86e2e9a45cc56095173c9b5e7c2e2bb55774242f35bfe38739b6a",
+    "6876401336a0848ae803113c": "bf2243591ffecf9b471c55079433cc2d92c11f0fdd8b613f0dc4d1710440cce0",
+    "49a3f12a5eed76d9471bd89b": "c22b531b29599192ebc6c53b03df35120bbf761405cf1a6bf2fcd9a5549ebcc2",
+    "5ca7b2fa1ab11ff4a2a8f06d": "90300a89488783839e0bfb5eae34ec8a9cd4409cd1941c42f274df63530a7162",
+    "78418c9e8b98ff776fda5b73": "195cb32dfcc97ac895620d6253ad320a7d1fd1c4e5ee223365d37fb88a0fe5d8",
+    "9b15d56ee8c2143890383df5": "2d69fe8e7faeaa5f6369a6c4924cb2e4f2c9d8ce343c3664250e396fb156ed43",
+    "a1babdf544a194aaf9c186b0": "0a24e85cfffb2427f4bc645237ccdc82972180b84f87a4f2e5ed73da1ad60c1d",
+    "b081aa60ec7ecbdbcadfecc9": "a499ec844f752547cf3cd5b154cf93f171c3788aa9b589533b32baf1b85bbde7",
+    "b0a26618de7bb44320cdf6bd": "3b047e96fe170d56680a92b59b79dd15407eb0ab65d51320a41e97b18e54bdde",
+    "c1a2b1c09f9e0c707f6e5c31": "9eac7857600a0986a480cab72f398bef3ec33e0f1549b0d0e85da37135049b9a",
+    "9a1d20b830b0382c00a1670f": "d11b68cf1ca18c1a38bc83c3b0c8875d6a1de463c274817114364cbea0bcfe61",
+    "87ee8a780b5fc1cb8bb07a28": "18e1974ef9d2a39062bf5551028999fb7c372f78a3aa391d569175dc9fefa011",
+    "8c55b63580a76befc83a4e54": "f53c882f5e245743109408e859670211c8693cd3968acad3f8de6bccf6ed63d7",
+    "5dfee8cabf7865664e4c7a98": "194d19f31523a1da8b98d0091ff6ce6a22ee5f86d49befe5f9f331da3b6a8cad",
+    "ec17dd2732d8c2622a74014f": "edf0b78e8fc2df05b7fbc8c0a4fcf741719bb8312a35d4292a21de7073fa756b",
+    "77ac25decf25b3af8a790a06": "a396a2dd6fd2e32ed5febd1c23f6254d995e0795188814a4156c4cc5d712bebe",
+    "bfd35fd5bce3676f60be997d": "17b3af1946a5966b91740ed06bd2964664b7ad087557d525ddcaa951b755f6b8",
+    "c6f8becf86f4abbe159e6300": "0533001d8042c44d09d3059e96e385c5302ce6f41ba1342320a99a436edabbc1",
+    "69641a256dbd4ddf8a573ce3": "baf2c46612d187f0beb67cfebe97f95bdd4765ec8df3b1fb04487b5736e9a546",
+    "1f8e123aa284cbc742cb20e5": "6fc736aefab9a77b739cda636e0e2e040f8b5a8a34c947bbf8a09c07d989334d",
+    "5f860c4698ead7c2bdb3f356": "668ed394ee84abc510cf0d676b2ed27326998092f6c60acea369c7365da17fb8",
+    "e7368e60941bf2ebb7cc0aeb": "f6f9aa49c6d047781c1fe603fef620c8fa668d23052bb1ef1984a7209c39cbaa",
+    "ba0a9e0bde3709be01c4997c": "b06a221d9397a902639fa35a03ca4f2290632901c1e9c0d90bc941c8c69a2b91",
+    "515df02fb6319df46bb02869": "240c922551eb26259b5f28bdea92713858aca09cf9644ac923e36059362dc633",
+    "c4d73f895bf153985cfad1e6": "84376c8dc665134513872f34481dc37ae4859bc47b00c97c1a989eeda76bee39",
+    "c43cdf393141f9fe9a802022": "253cd5243d48a37e13259fb77ce6ab92ab2ed60ca470a88d01a05022ef579b3f",
+    "edf9d5250cefb6363c3ee921": "eb3b2f9fc7a06cb41c6de0a9561320feee3d6850410a4a8fdfff39364934440c",
+    "0ed0181d2b9a84ec5a861db6": "fbf7f6745b73d32ec2b1ad4d612526e0d2aa75373ea063d91745311b6e0d9447",
+    "714712980a413f7f437e1772": "625d1375f32ffce1f5e14000b4d63b8c62f8def7bb289723f7ed8dc39d7fdd6d",
+    "8125d121babd1000acbdac8e": "f9c581f7509cce8a4ea649ace2c152df05799b242334859b51364bc80f0ae35a",
+    "679e26481bbe3a064e9bd064": "961848faf559319f80f17137bcd2824455826c8b82525d03f51e984abc60827e",
+    "5dc9af2c179643d58aa49543": "96960bc9ccce1a96c8f1a68a78865c372b85db3aa9308023f93fe9278dad0805",
+    "fadace07a2bae064e57ba1a1": "5b1787de65ff0036d8653cf5431b1f21b57ac96e38b71c3c0923c3ad00152258",
+    "53b9a48dc78356dfa67f3a19": "49d289c68f45fc8137ba9dee50877697bde1914cdf939ec4c254393ef296b2c8",
+    "70048d9dd13b8e0895edd9a7": "b8d170a98089a803f71772cf0eac2b1b114e3cf6be10425f43ce507492c46f22",
+    "fffca1e076dcfd15226b46f1": "a9caf00677bde1722fd6afce8f82f91969c06c477c85bd245d8f0cdbd4d5e3e1",
+    "2696fccd93ce769bbe52e71a": "b625870a228ef3c5f96240c8b681f46b5266173b7106f97b32c6b5db6cce1119",
+    "a9b0b45732d3ee0e0aa0314e": "2f7984ead1e1fd25197728807a89eb8868e88330405dc85a01c5a90ac7167155",
+    "01909444fc350efcb3206151": "31fc718f14ce3034408b6252eec43fc0f2501b4e9d15ae8fb5c709cda598e191",
+    "6624bc1ff8a23a43b23d3bd2": "c437d46c27bb404131eee776b73aed251675550697a459a164bfc7c58c72761d",
+    "780c5a91b0a79c14d340d7f4": "0639bb5ec0b0c685f902efc9ffedd6392442e4ce17c5613a5b137cd0ff02a059",
+    "dd60b1e8b2736e3b654722d1": "af7d5b7bafd6a8001bb0ec596e0d9908306acc06c3de625246b9942e881b940c",
+    "b1f11456bdb9941bd7ff0ec1": "8bc47fb7b39700d0c833069538be9cc146ac2688cfddc8c082064a7ed331b15e",
+    "da687d51dacbd8b360940968": "3decf9f25795680684dfe052bd02f81923880fec70a11576f78df18cda2ae750",
+    "79191f0a61f1104f796ecdc1": "ac92eea49b2c13d2af080448493022df8a88e81604b24969609da00f1706dff0",
+    "2f63b362ce2d902b84ca7845": "6affcff6216cc3841a90dd35173e7de6eb038910f9d2fa33451282cfb9662af0",
+    "c5e2525caf551c4b0e09689a": "1e46681de18e8a70922e23f8799ed242a02bdf99035a050a07705c538ca11551",
+    "f7a3d2bdeddf7e843c8c865c": "eeb925e2cabc36842082fe0d3d238681b6cdfecaca58698ff3ebce61e6d29e2f",
+    "b051032d15aff43f414d50c7": "f7ae58e9796e2692a79bec462ba837b94cb7f65004dd83ab0052821fcd12837e",
+    "220b639c0c239c2c00d66676": "cae628ca6bcadd757ee3ecdbf4cd0498af44e0fbbae7273dd24d6a86527f99dd",
+    "a4dd2e9e2601825f731b3c92": "61c0d9a1902d19391bdf06083d85ba7082c0648c4604072f4ff31780e583c9db",
+    "db60476ffdbdcf0ae2f9cb7b": "65305ba740643869ad26a272d284368782901b230fe5353b3de14ae9837fcf7e",
+    "81b4e91e08feada200058170": "1106165333824bcfc07f3fa76db3c526e76aca3112c356b6e024b374ddc5ae48",
+    "eda721de69fd279fd33d22c9": "1807782626eff590548369f8d6de5f5efae5fd8add9069d4622a8f831406e6d2",
+    "f74f6d7240dd8912ae3ad0a5": "1a361ec992b35cbcc7d35e20c857cda1ec64b50ef73abf9856a7222a2a44546a",
+    "128cc16a53e7fb94b6cb3cc0": "4d8e57c213c0729540384f654111a2abf9f73f92506325ea8313abe01d6706cc",
+    "1555840deb8dfab341377ad4": "229561cfef9d4a13e66a5b1a9a003f69b722795bc227fd02157b7fb3272a2d5c",
+    "788fd904a90be37a1e4f16da": "4795f26e6f01ddd0b60905d0690d8aad47b59e25aeb61e47c3a84e8daade24a0",
+    "2f0640c24b2c225ab8d1d80c": "0746c448cc778b8dc4ce7a415434d1784612d9e59cba37865b360d6891d3d55c",
+    "9a3e1a2e3abb54e017fceff2": "d07d3c12bbe5a2d6287f74dc8f376e340f03fbca3e9bb9dc3c19dc98768feb99",
+    "f3ce493ee04bfb5d9c292b57": "96488f7e50990ffbc5188770260b0356878c39eca4e5b5b7b0571c948beb7158",
+    "7093b22206fb377606a0e725": "134516afae03242c4c92dafed3be8881ce777bc0dd8869fc271a2480b0da3dce",
+    "45b1c1d26be24ae2f56fea2b": "dad9a359234b11db77cc5dea4d237bf3dfb7152b50812c5315c0e6f369787b69",
+    "9b6a3faeacfa6fa32d9111c4": "8af9aceac9927b611e434b3a69e4dd6fb6e9d7e914aeb3e5d368d90542eb466b",
+    "6608e67b03b11b6b90190a00": "6b7b535d0900fa882965bb2bc5596e3f48d9c7ad308eec510d9499f3fc1fe82c",
+    "925eba34a88aaa8f24da1ae0": "7fa9eea8d7490a822d0fcce643bfe260ff3adf0459be63a2c530d61c44febbfa",
+    "5de604fb68ef50329262b7de": "3be15394480de2e888d877962cb7159788bdab7ff751ca621d5d2c115ed02a31",
+    "b8d4d7d494dfe5c5763b930c": "799683a797f15073f460d2d20b925205e32e57b6d3f69786709e392834776b43",
+    "9d59abf9d4467928bdaafd06": "a27ead79528d8feca6a9b84c91372ba0aa8aba427e3fa6ea06e112605da0a536",
+    "99a47839575d4dfada524b67": "0f0cf50fb8ea3026ee6729e03f51fdc1e12f352975af07ef7726d76607c9a662",
+    "839e9a4858c069c160524cef": "ea453e3f847a01aa2e9834e7d8c220d04ea1447be851a8fe10d36db35fcded66",
+    "ee525a99d97d35a28aa78cad": "16bcf64751dd596e2dcaf459ef1aa1c7b2025369c12116ca7d4215798eefadbd",
+    "240956e39d9e66184d5b90d4": "e781669fcc590a6d5a65053fe13ad2573f83a2f69e108aad6400956587d0d4c5",
+    "f06e24bbceb554e65cec8545": "7e7bb0fc92ed71181d3d830765785ecc7390b8ca0552e2087fdfee4932f44864",
+    "44d22b9bc128969b1bb2f6df": "1b91b613e88225ccc13702db6a4f2f75529d626803d12a393b6944eda7cffacc",
+    "fc0eeb0bf73c4c5b0c3541c6": "75a7c853d4819c560967d86af48fee6c8cdcdd5f5e11465a59a06648e9ddae7f",
+    "835332295704165c31025f3c": "ece0757ee3c9b70858741835eef0af4a888a93f5f8dc98f1eee2e8593471266e",
+    "0239083d69cc884cf53c8104": "f37ed2e18e475b38beb37d860afe33c9cc6d1f12cad0c7c42c682d0af8d19414",
+    "6911c121d7e4a5c9edc9b200": "ebde5bcd9a5611a2c284fbb73d59b985523de41fbfd4068c782a1d081aaabec8",
+    "f1c2471ac8112e179ea2c190": "2ecc9090ae551b2eff7dd0b8233b9bcfbc943e5dd2534338d84fb69df85e6d0a",
+    "a97d50108ef38d5c863ecc62": "452bab429577f731679de0c5aaf516b49fd65771049d5c48a68d9fd65c3edc41",
+    "828a8eb129e8f6e00ffc3c11": "83ed2a9e9a04f23fb3ba60edcfdcb48ecda3f2b85ceeb20d02ad12af7e511c52",
+    "27356cdab50d6ff066a76b82": "960f832f13681719519c793bad01cc9b7abf6802f3751c48bef4a1aa51256038",
+    "8ebb1f450518a4b85222506b": "0804e08a1b066d32c08965d0814c83fbc73170c5f01cbad731fd67a4a642f540",
+    "46be4ad405fbe96e0daebab0": "f252cdeee1a632df6f01eb472090ce52d476ffe909893d14edfd3fa231c0515c",
+    "de81801ef78079ba6622d101": "15515c1d91257c2b9aee1b43aa23c842b34e3e8942f8428289634402c4888ab6",
+    "3d9363c54a0c93b23fa2dcfb": "bfd30e467b8b3cf419008f138dd9687a00839164b261d6036d0410ea7febaec6",
+    "48ca021e38cf674e777c8f9b": "0c5b150e22c5d3bf1a2b2af7d0c32fdd37d35257f0c991008608e93a28c8cb56",
+    "cc0d31951daadacd4ce8395a": "9495886310e2f57e84a41d79f559f67ec960082b90ac7bbc19c242f2331a9fef",
+    "650319676565ee81ba9cda58": "e7fe0e77054ef9a4ad7004938933e38529c427261b1a6dd3eef26ce4f74b7c2d",
+    "c8dd0011b686b514bbcacff6": "2757f5eada073acf6362dbd1aae230df27173d62ea7646638dedcfb7f846490b",
+    "999e8e16458ab6d09fd8b8b0": "e882559da8ae5cfc163d9296808c3c73a0e934ecd8664cd73f3896401099742f",
+    "032c8ea3118480d2ca5c0b38": "f4d3e4686a1c5f613d8019fcc7e110d877e1882b140d7b345cc4f67f4e5a7900",
+    "e085bf6be1f6e2acaae6c92c": "f0cb154f3eda591f9bcf7ae01553b357056d931ef64ec9dc1d61690f3034d821",
+    "70b469e3957fdd8778deab22": "961af2b9deed25d0e6688fccb684e6279e6f734879f386490d54ebfcd33b0315",
+    "12c19bfdf672692bdc75ac95": "791f0dad4236c705bdac5fb1e5ed0516da9d923035ee815dc87ed77b9d24253f",
+    "336abca6388e5ff9bfd1be4c": "a4a9677a5a02a140168a4646f2678c8441d15aabf3faab96b4dc70cb9a7744d2",
+    "3972502ab7f5add6e90a2193": "c0dd05484c99dc19f88bec8b17710a09cbddeb131883efc653b3a305005e00bf",
+    "44fc5a673eb8156d6933d0ed": "b4c330ed6310ee8dc5bddd60ace2b8156867a5c152655b4ee665370acbc99336",
+    "52aab58b3bbbeba11e6e4e0f": "22ce4a125767b1d341b1a42b541968a0c13cb19e366559b2b4fe6cf138c2e2d1",
+    "87a1f7ae96421a2f751d7dfc": "5e9212087db8b6479c31c0f62a81f732c6f769419490c0bc7532c77b200dc0b6",
+    "a714096951e39f0264a93fcb": "006089634934f505dd3c3c369f946c41be85330da7e8fc0596d8adb3447e974d",
+    "db6b462f3a4031e233276790": "dbf57f7e8112d759e28e00747355d932afeabeffa717da7e3082558721a38709",
+    "e0039127c25354382716ea81": "ba6454c5ad3b38019196e8f0f7b9e4ac36e5ef7153ac4f41f2810e9a8f93a7d8",
+    "ebb0f3db263274d67756ed6b": "94138d02b3294fa30a79aa7a62a668f9f2ecc49c6e41606f60db2a9f4ca224de",
+    "ecc25764a562a23588082b1c": "247f6dc0ebd5c91a64caa6e5cbcdc9fef6f39a6fd299cabc8a38f65e30930626",
+    "2687d2ddc856122ac61e4e63": "e026c1f6d31d3e25fad7055dba735975b7fbd1bf8add90b004ea4076e60fa08e",
+    "99b09b65777f3cf2f8fa1b9f": "2df6e7da7efa5ceafb6e77d849e735eba18e8cfbf8e449226a4d3643f90122d2",
+    "f2b0d01f032dd0c4d7577d78": "89e6ad198f610078c67119a2019b8872d78dd4b815efe3895330d253814ef325",
+    "816d2523ef39e80ddaa13621": "67062f823b1a7c1e11cc80527116aa3218355d97e9ca012162db4c74b725a080",
+    "3ab52c1c3fd2481acdc06a7a": "5e92ea4c25718820c23fc1ff5344c86807f2023ec904be1ab582e70b493ee781",
+    "451d4320b99df92755459500": "021d09b8f29de35889fd3b39091280391c89b8224045d8201ac59669593b17c9",
+    "7563590d2fa4c9a6a77695d4": "b8fd42bd7f54010a02945d178f9e19144686f3524440e795fe78ca5da33fa053",
+    "04afd1adc88383c4df5ccddb": "a3ba3fb768dbcf6d9e72542df5d510b8d152b46f5167a67b75abceb02269562e",
+    "747f5eb23ce02e64ab99a82a": "0af389bc80690313caf04137daf97ca770b921321f83f51b25071548f019159d",
+    "bb9dc3df05124f704c93fc71": "7eb0946b0796d31a46fbeb745f39060ac0f95e9181ba11052dda9a7132aa2f90",
+    "d53634ff0ad9fc0a638d6234": "204080bf5f657f432468f19a656b046dcb6d42fa1912699971e95d88e1b59fd8",
+    "de12c155bf0690271a103952": "629c7239577464b9a4707fed4645b6dc11c0a16efcd850b8de2df640b2f4878f",
+    "c995ff78e684e242c4417c53": "601654237801ad0e76ee838455cd8c0c7750cf4d9e2375a1b06e18e40cff3dfd",
+    "5b35f4ae1b7201bba80e85a8": "9f5c477aa9535257a642f68eda98c9ea97739aac2028a603c303e26e2cac4c4a",
+    "bb031861358eec53a7c95a2b": "4fc94b5b74067337ddf886cb3452cb3dac6aef9f9144f8610f072f09b6187695",
+    "2abeebfb665580ecf0de635c": "a82b454ebfaf72bebaf4dfebb10dfe91b0ee086cb8459ac32d87a51342992dfe",
+    "5af52850ea43879db1f2f029": "34011b71bb228b4d5ab69fad053c42be8992068b214aaafc9ceb41b572dfc1db",
+    "afb91db94841e3e069556221": "0dd733336f39a1562af8db0119af2027a3d90b363ee1059d42887ab476f482c7",
+    "fa72ceec7a18e0d95a50aeb6": "984e7d110f44e6738d366c0348b2cb963086c7b6832eb94857cb4db39789d5c3",
+    "ff188ee8626a38eb465b8e33": "bd39eaddda6fb0fdabc450c3006d66093e6e794f9177564df958b2f7ce6be36f",
+    "69319913cd6a881d8401e712": "7bf64aee338d50e9ce0581c6d29788ff9619d6711d901d05ffe8f3d6663b68e4",
+    "98cc8123c255f2acfc82b5d5": "c7a219e725a756814ef010fed4572869c1be74a8c6c62f02d8021f86fa52680e",
+    "228b62927d08f866fa48ad28": "6567d7e00bc0b2bddd73c0f39a216f0aaeb34112febb8c91b8ba202677de512c",
+    "464d340e647aeb42c6f4280c": "f0768ef8cc8ae95d4444a74f59b07089a136d0509f003d0414745b51e55b633b",
+    "7bea96af2653b74c363536ca": "3edaeaa9235dabba7af3334ca6e7040aa9f4a9ad6a82bcd11c8913ad13f4dc6e",
+    "245b3fa7ecca6b6ac0499e9c": "72da260132cd2b8804360f148c785b88b9f6d2faf23fd6a9d12aea5bc19d6347",
+    "2fbee0fd02b4d0b0ce2d0db5": "d5dfdbb1a5c109721060c9efff0e9a4908effd485b9b6ee22de80bdd381c8fac",
+    "8040cda6ef4fd6210d9d8b75": "dffb0128ceb3fe20ba673634729eab7900746f116d3268245f594ed09b4afa84",
+    "9cd3597f5179948a3f173135": "0c788c1b3e1bdf3192f934ff5814507959884360fc9e3056ef1696df9882110f",
+    "fd10b909593cd90b9081e8db": "f8dd471e906365e5137c82f0e81e259cced11bbc8883d2f9219271f749e757f4",
+    "3059f50d1b4f534013ecb7cd": "2bb7b1d28bbe3e589e2e2645cf97e1ce656ce5ae7a65b5219b9fae327c7f975d",
+    "b020269c9b74158a28073e1f": "64fc0429ae59002fb8825f9ec007d5bff25baf0e101cfd871ebcda2499b6420a"
+  },
+  "limitations": [
+    "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
+    "Common navigation/footer alone is insufficient to merge families.",
+    "Shared rule reservations remain separate from document-family grouping.",
+    "Future additions and revisions require updated family review."
+  ],
+  "additional_review_records": [
+    {
+      "local_review_record": "agent_pdf_form01_review.json",
+      "sha256": "9db5833a529257908beb73d6af738a6ba1ed3643421980c201e8ce87a6c77d67",
+      "new_document_id": "f4e4cb1c394cde1a64141374",
+      "split": "test",
+      "reason": "Linked detailed form shares existing healthcare-rights family; no new publisher or family."
+    },
+    {
+      "local_review_record": "agent_opm07_family_followup.json",
+      "sha256": "1b8b982ee489604c1b41c861f35d7cb7c7055a9a2dfe164b53811d78403d122c",
+      "family_id": "family_opm_fehb_lwop_military_compensation_continuation",
+      "split": "test",
+      "reason": "Substantive repeated continuation/premium rules: LWOP-to-military and LWOP-to-compensation; connected source family via LWOP."
+    }
+  ],
+  "proposal_metadata": {
+    "status": "NOT_APPLIED_PENDING_ROOT_REVIEW",
+    "base_registry_sha256": "0eb608e13889d7fcad8141bc71535cbbae1fb55be3b7095c95bce34a7212db6d",
+    "preserves_all54_old_group_records_exactly": true,
+    "local_proposal": "agent_source_family_merge11_proposal.json"
+  }
+}

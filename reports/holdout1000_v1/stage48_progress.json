@@ -1,0 +1,113 @@
+{
+  "created_utc": "2026-10-07T07:30:30.113577+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 433,
+    "dev": 46
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 6,
+    "retained": 6,
+    "held": 0,
+    "retained_tasks": {
+      "ordinary_qa": 4,
+      "insufficient_evidence": 1,
+      "multi_evidence": 1
+    },
+    "classification_corrections": {
+      "multi_evidence_to_ordinary_qa": 1
+    }
+  },
+  "prior_checkpoint": "stage47_progress.json:428TEST/45DEV/117families; all earlier holds and six DEV scope revocations retained",
+  "test_task_counts": {
+    "ordinary_qa": 296,
+    "insufficient_evidence": 32,
+    "multi_evidence": 44,
+    "numerical_calculation": 61
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 10,
+    "multi_evidence": 9,
+    "numerical_calculation": 6
+  },
+  "test_document_families": 118,
+  "publisher_counts": {
+    "northcarolina_doi": 15,
+    "canada_fcac": 12,
+    "newyork_dfs": 49,
+    "california_cdi": 32,
+    "wisconsin_oci": 37,
+    "utah_uid": 10,
+    "us_opm": 51,
+    "us_va": 33,
+    "us_tricare": 85,
+    "newjersey_dobi": 30,
+    "alberta_goa": 18,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 17,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 3
+  },
+  "usage": {
+    "base_report_sha256": "434dc3f1ff7504ac2a2419092b235d6eee31a2c6d9870a6a680f310bd1957e03",
+    "base_candidates_sha256": "be607dad52ad38814b59e0175082d0d59fc38e85ccc0b192b03b0745d3b0997d",
+    "new_candidates_sha256": "d12c34f6892d3b4e33507d4e89d9d549b5c9f07f3f3ace73e8c90131d98f4852",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2792,
+    "old_old_pairs_reused": 666,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 6,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "0ab6cab069b0bc9bb7e745b079de3becc39b785319e75a9931879022535c2a73",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 249.83051920006983,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage48_source_decisions.json": "dc0e9a695757ff4141544d78e02213e900bd39d6ff38ec108f9d252f489ec18e",
+    "stage48_final_review.json": "de0fe48679290c57a4961171ff7c846e9a306a19f7a90f08b123840d8aec8392",
+    "review_pool_49_clearance_ledger.json": "d15f58659ce510e92da3440e10ffa494d28c5c9aac342d5aa0367e21f4ce57c0",
+    "provisional_item_pool_49.jsonl": "e85997694209a97651b0bb1423a35e123646739af74c152c7ffe3796331e2811",
+    "provisional_item_pool_49_validation.json": "cb50955463e317c99b2417cda0e75813640459e01cadc42476105255b24adaab"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 304,
+    "numerical_calculation": 89,
+    "multi_evidence": 106,
+    "insufficient_evidence": 68
+  },
+  "limits": [
+    "567 independent TEST still needed; DEV count,numerical andmulti minima remain unmet.",
+    "Five TEST retained:4ordinary1refusal; one DEV multi-evidence retained.",
+    "One planned multi-evidence task corrected to ordinary because a source span was redundant.",
+    "English/Spanish TDI self-funding guides conservatively grouped; existing whole-page holds preserved.",
+    "Single Codex review; no claim of human/expert adjudication or absence of inaccessible pretraining contamination.",
+    "Original15 revocations, inheritedholds, familycap andsixDEV scope revocations preserved."
+  ]
+}

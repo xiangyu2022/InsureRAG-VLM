@@ -1,0 +1,514 @@
+[
+  {
+    "id": "texas_tdi",
+    "terms": "https://www.tdi.texas.gov/commissioner/privacy.html",
+    "decision": "local_noncommercial_research",
+    "basis": "Use of website information permits noncommercial copying/distribution of unaltered content except item-specific notices. Original snapshots preserved; authored questions kept separate.",
+    "prefixes": [
+      "/consumer/",
+      "/tips/",
+      "/pubs/consumer/"
+    ],
+    "seeds": [
+      "https://www.tdi.texas.gov/consumer/index.html"
+    ],
+    "max_pages": 300,
+    "expansion_reason": "Existing screened dev FAQ queue has only 133 candidates before content review; expand unique source discovery rather than reusing test publishers."
+  },
+  {
+    "id": "newyork_dfs",
+    "terms": "https://www.dfs.ny.gov/disclaimer",
+    "decision": "local_noncommercial_research",
+    "basis": "Noncommercial unaltered reproduction with Department attribution except item-specific restrictions.",
+    "prefixes": [
+      "/consumers/"
+    ],
+    "seeds": [
+      "https://www.dfs.ny.gov/consumers"
+    ],
+    "max_pages": 150
+  },
+  {
+    "id": "california_cdi",
+    "terms": "https://www.insurance.ca.gov/privacy-policy/",
+    "decision": "local_noncommercial_research",
+    "basis": "Ownership section identifies CDI-created information as public domain unless indicated otherwise; exclude third-party materials, logos and submissions.",
+    "prefixes": [
+      "/01-consumers/"
+    ],
+    "seeds": [
+      "https://www.insurance.ca.gov/01-consumers/"
+    ],
+    "max_pages": 150
+  },
+  {
+    "id": "northcarolina_doi",
+    "terms": "https://www.nc.gov/disclaimer-terms-use",
+    "decision": "local_noncommercial_research",
+    "basis": "Permits noncommercial unaltered copying/distribution of non-image information with citation unless otherwise noted; no images or chatbot content.",
+    "prefixes": [
+      "/consumers/"
+    ],
+    "seeds": [
+      "https://www.ncdoi.gov/consumers"
+    ],
+    "max_pages": 150
+  },
+  {
+    "id": "newjersey_dobi",
+    "terms": "https://nj.gov/nj/legal.shtml",
+    "decision": "local_noncommercial_research",
+    "basis": "Section F permits viewing/copying/distributing State information subject to individual restrictions and third-party rights. Exclude external copyrighted publications.",
+    "prefixes": [
+      "/dobi/division_consumers/",
+      "/dobi/ins_"
+    ],
+    "seeds": [
+      "https://www.nj.gov/dobi/consumer.htm"
+    ],
+    "max_pages": 120
+  },
+  {
+    "id": "canada_fcac",
+    "terms": "https://www.canada.ca/en/transparency/terms.html",
+    "decision": "local_noncommercial_research",
+    "basis": "Noncommercial reproduction permitted with accuracy, full title/author/URL attribution; excludes third-party rights and official symbols.",
+    "prefixes": [
+      "/en/financial-consumer-agency/services/insurance"
+    ],
+    "seeds": [
+      "https://www.canada.ca/en/financial-consumer-agency/services/insurance.html"
+    ],
+    "max_pages": 70
+  },
+  {
+    "id": "wisconsin_oci",
+    "terms": "https://oci.wi.gov/Pages/AboutOCI/Disclaimer.aspx",
+    "decision": "local_noncommercial_research",
+    "basis": "Use of Information grants noncommercial unaltered copying/distribution except item-specific notices.",
+    "prefixes": [
+      "/Pages/Consumers/"
+    ],
+    "seeds": [
+      "https://oci.wi.gov/Pages/ConsumersHome.aspx"
+    ],
+    "max_pages": 120
+  },
+  {
+    "id": "alabama_doi",
+    "terms": "https://aldoi.gov/Disclaimer.aspx",
+    "decision": "local_noncommercial_research",
+    "basis": "Explicit noncommercial unaltered reproduction/distribution with Department attribution, except item-specific restrictions.",
+    "prefixes": [
+      "/Consumers/"
+    ],
+    "seeds": [
+      "https://www.aldoi.gov/Consumers/"
+    ],
+    "max_pages": 100,
+    "allowed_hosts": [
+      "www.aldoi.gov",
+      "aldoi.gov"
+    ]
+  },
+  {
+    "id": "utah_uid",
+    "terms": "https://www.utah.gov/disclaimer.html",
+    "decision": "local_noncommercial_research",
+    "basis": "Copyright limitations permit personal/informational copying of unmodified state information except item-specific restrictions; source originals retained.",
+    "prefixes": [
+      "/consumers/"
+    ],
+    "seeds": [
+      "https://insurance.utah.gov/consumers/"
+    ],
+    "max_pages": 150
+  },
+  {
+    "id": "alberta_goa",
+    "terms": "https://www.alberta.ca/disclaimer",
+    "decision": "local_noncommercial_research",
+    "basis": "Noncommercial copying/distribution permitted with accuracy, no modification, Government of Alberta attribution and no official-version or endorsement claim.",
+    "prefixes": [
+      "/insurance",
+      "/automobile-insurance",
+      "/auto-insurance",
+      "/home-insurance",
+      "/life-insurance"
+    ],
+    "seeds": [
+      "https://www.alberta.ca/insurance-consumer-complaints"
+    ],
+    "max_pages": 80
+  },
+  {
+    "id": "australia_apra",
+    "terms": "https://www.apra.gov.au/copyright",
+    "decision": "local_noncommercial_research",
+    "basis": "APRA website material is CC BY 4.0 except Commonwealth coat of arms, APRA logos and third-party intellectual property. Preserve attribution; use only APRA-authored insurance guidance.",
+    "prefixes": [
+      "/financial-claims-scheme"
+    ],
+    "seeds": [
+      "https://www.apra.gov.au/financial-claims-scheme/financial-claims-scheme-general-insurers",
+      "https://www.apra.gov.au/financial-claims-scheme/frequently-asked-questions-about-financial-claims-scheme"
+    ],
+    "max_pages": 35,
+    "exclude_patterns": [
+      "banks-building-societies",
+      "deposit-checker"
+    ]
+  },
+  {
+    "id": "us_tricare",
+    "terms": "https://www.tricare.mil/Privacy",
+    "decision": "local_noncommercial_research",
+    "basis": "TRICARE privacy/website notice section2 explicitly permits copying/distribution of information not identified as copyright-protected, with attribution. Use only official insurance-benefit/eligibility/cost guidance; exclude third-party copyrighted material and medical treatment advice.",
+    "prefixes": [
+      "/FAQs",
+      "/Costs",
+      "/Plans",
+      "/LifeEvents"
+    ],
+    "seeds": [
+      "https://www.tricare.mil/FAQs",
+      "https://www.tricare.mil/Costs",
+      "https://www.tricare.mil/Plans",
+      "https://www.tricare.mil/LifeEvents"
+    ],
+    "max_pages": 180
+  },
+  {
+    "id": "us_opm",
+    "terms": "https://www.opm.gov/information-management/privacy-policy/",
+    "decision": "local_noncommercial_research",
+    "basis": "Limited to official OPM-authored explanatory FAQs for federal insurance programs. Authorship/program scope is reviewed per document; U.S. government employee works are excluded from domestic copyright by17USC101/105. This is not a blanket license for everything hosted on a government domain. Exclude third-party carrier plan brochures, contractor publications, photos/logos, and any unclear authorship. Raw text remains local.",
+    "legal_basis_url": "https://www.copyright.gov/title17/92chap1.html#105",
+    "reuse_basis_type": "government_authored_material_with_per_document_authorship_review",
+    "prefixes": [
+      "/frequently-asked-questions/insure-faq/",
+      "/healthcare-insurance/life-insurance/",
+      "/healthcare-insurance/healthcare/",
+      "/healthcare-insurance/dental-vision/"
+    ],
+    "seeds": [
+      "https://www.opm.gov/frequently-asked-questions/insure-faq/health/",
+      "https://www.opm.gov/frequently-asked-questions/insure-faq/life/",
+      "https://www.opm.gov/frequently-asked-questions/insure-faq/dental-vision/"
+    ],
+    "max_pages": 240,
+    "reviewed_pdf_exceptions": [
+      {
+        "url": "https://www.opm.gov/healthcare-insurance/life-insurance/reference-materials/federalbooklet.pdf",
+        "source_sha256": "30d63cc6948cacd226b80263c473b0a206607577ff95d38bf49afa949ae2aaa9",
+        "review_record": "stage111_pdf_content_review.json",
+        "review_record_sha256": "1214d73cb4d3405f8a7fe8a5982cdd80803bf0b359b9e028518623c827c9e032",
+        "scope": "Existing government-authored material basis applies to original program explanatory passages only; no blanket OPM domain license. Exclude externally sourced financial-planning recommendations on physicalpage5, proprietary TCA discussion onpage28, logos/photos and sample personal fields from evidence. Raw/source/images remain private.",
+        "date_scope": "Revised March2016; ratechanges effectiveJanuary2016. All questions explicitly use2016guide; no current benefits/rate claim."
+      }
+    ]
+  },
+  {
+    "id": "us_va",
+    "terms": "https://department.va.gov/copyright-policy/",
+    "terms_sha256": "35b976b2d2b3939cf3b3b1fe9c1a57a4d31bd24db15de6fd71522ecb68de7684",
+    "reviewed_utc": "2026-10-04T16:28:13.104851+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "VA copyright policy explicitly states government-produced material on this and other VA websites is not copyright protected, while assigned copyrights may exist. Restrict to official agency-authored insurance explanations; exclude logos, images, third-party carrier publications and assigned-rights material pending per-document review.",
+    "reuse_basis_type": "explicit_agency_copyright_policy_with_per_document_authorship_review",
+    "prefixes": [
+      "/life-insurance/",
+      "/resources/"
+    ],
+    "seeds": [
+      "https://www.va.gov/life-insurance/"
+    ],
+    "max_pages": 120
+  },
+  {
+    "id": "au_privatehealth_ombudsman",
+    "terms": "https://privatehealth.gov.au/footer/about/copyright.htm",
+    "terms_sha256": "6a944c7388ec291857b20ba5dda7392761d7c61adce59a637bc1143a74a51c0f",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-04T20:14:08.076619+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "Observed source copyright grant and exact linked CC BY3.0Australia deed permit copying/adaptation with attribution. Restrict to clearly government-authored static consumer explanatory prose for local noncommercial research; preserve source disclaimer, titles and notices, mark authored modifications. Source labels licence International but links AU3.0: mismatch retained, no4.0 upgrade. Additional site commercial-promotion/framing limits respected. No third-party insurer/PHIS/product data, images, logos, dynamic tools or restricted robots routes.",
+    "reuse_basis_type": "source_copyright_grant_and_exact_linked_cc_by_3_au_under_restricted_local_scope",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/au/",
+    "source_license_literal_label": "Creative Commons Attribution3.0International licence",
+    "license_label_link_discrepancy": true,
+    "attribution": "Commonwealth of Australia, Private Health Insurance Ombudsman; page title/source URL/acquisition UTC; source-linked CC BY3.0AU; adapted question, changes indicated; no endorsement implied.",
+    "disclaimer_url": "https://privatehealth.gov.au/footer/about/disclaimer.htm",
+    "disclaimer_sha256": "c587791e72d5f2b3dc3bbd49da0a4c0cc6afa5479322b533c10b2a1f0b860e0e",
+    "preflight_record": "agent_new_sources08_preflight.json",
+    "preflight_record_sha256": "c151a7e0d6ad51680feb45f08707e0d8bf6b7b6c46e41be7b56ddbf2731f4aa2",
+    "rights_completion_record": "agent_new_sources08_rights_completion.json",
+    "rights_completion_sha256": "7f6ccb49f086dc2fd7c5df7848c76c70dd28b3b12ce685b183a4ba00e71cd742",
+    "allowed_hosts": [
+      "privatehealth.gov.au"
+    ],
+    "prefixes": [
+      "/health_insurance/",
+      "/faq.htm",
+      "/footer/glossary.htm"
+    ],
+    "excluded_prefixes": [
+      "/dynamic/",
+      "/healthinsurers/",
+      "/health_insurers/",
+      "/comparepolicies/",
+      "/footer/consultation/"
+    ],
+    "excluded_path_keywords": [
+      "calculator",
+      "compare",
+      "search",
+      "feedback",
+      "download",
+      "funddetails",
+      "phis",
+      "policyproduct"
+    ],
+    "robots_agents": [
+      "GPTBot",
+      "OAI-SearchBot",
+      "ChatGPT-User",
+      "ClaudeBot",
+      "Claude-User",
+      "PerplexityBot",
+      "Perplexity-User",
+      "Scrapy",
+      "FirecrawlAgent"
+    ],
+    "minimum_interval_seconds": 1.2,
+    "seeds": [
+      "https://privatehealth.gov.au/health_insurance/index.htm",
+      "https://privatehealth.gov.au/faq.htm",
+      "https://privatehealth.gov.au/footer/glossary.htm"
+    ],
+    "max_pages": 60,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false
+  },
+  {
+    "id": "us_usda_rma",
+    "terms": "https://www.rma.usda.gov/about-rma/website-policies-important-links/privacy-policy",
+    "terms_sha256": "0e62c7f8b8a00aa93e4790fa6cb31053f846e04d41b5d179057ca65bb84c94e7",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-04T21:00:03.168271+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "Explicit RMA public-information copying/distribution permission, independently reviewed with copyright and linking policies. Limited to government-authored static explanatory HTML for crop/livestock insurance policyholders. Preserve attribution and crop-year/version. Exclude third-party/uncertain-authorship works, all image/media assets, PDFs, external sites, dynamic tools, general farm relief and corporate regulation. Per-page authorship and restrictions must be reviewed before QA use. No assertion that all RMA content is public domain.",
+    "attribution": "USDA Risk Management Agency; page title, original URL, acquisition UTC and policy/crop year; authored QA marked as adaptation; no endorsement.",
+    "preflight_record": "agent_usda_rma_preflight_independent01.json",
+    "preflight_record_sha256": "6b5a73f602cf0ef5d7377b6496ec37631c5b05fb6b3b828d6ad63a221847dddf",
+    "allowed_hosts": [
+      "www.rma.usda.gov"
+    ],
+    "prefixes": [
+      "/about-crop-insurance/frequently-asked-questions"
+    ],
+    "excluded_prefixes": [],
+    "excluded_path_keywords": [
+      "supplemental-disaster-relief",
+      "rebating-violations",
+      "calculator",
+      "search",
+      "download",
+      "/media/"
+    ],
+    "minimum_interval_seconds": 1.2,
+    "seeds": [
+      "https://www.rma.usda.gov/about-crop-insurance/frequently-asked-questions"
+    ],
+    "max_pages": 60,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false
+  },
+  {
+    "id": "nz_nhc",
+    "jurisdiction": "NZ",
+    "terms": "https://www.naturalhazards.govt.nz/disclaimer/",
+    "terms_sha256": "c3ee1ecbc9210f6eae2d53d1517a2ecd4c7559287531496e500ce905f8c60a14",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-07T18:58:38.381896+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "Entire disclaimer/copyright body read. Unless indicated otherwise text is CC BY-NC 4.0; attribution NHC Toka Tu Ake with source and license URLs, retain disclaimer and distinguish authored derivatives. Noncommercial local research only. Exclude photographs, logos, icons, trademarks, third-party assets and contrary item notices. No raw or per-question uploads. Statute prevails over plain-language overview.",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/legalcode",
+    "attribution": "Natural Hazards Commission Toka Tu Ake; original page title, URL, acquisition time and CC BY-NC4.0 link. Authored QA separate and marked as adaptation; source disclaimer retained; no endorsement.",
+    "preflight_record": "stage91_exact_html_preflight.json",
+    "preflight_record_sha256": "23fa5954e98d88c9c1377b314c94bc98bf095074a1084aba5a3fceaf72a340ef",
+    "allowed_hosts": [
+      "www.naturalhazards.govt.nz"
+    ],
+    "prefixes": [
+      "/insurance-and-claims/about-nhcover/",
+      "/insurance-and-claims/complaints-and-disputes/",
+      "/insurance-and-claims/claims/make-a-new-claim/",
+      "/be-prepared/home-buyers/",
+      "/insurance-and-claims/complaints-and-disputes/make-a-complaint/",
+      "/insurance-and-claims/complaints-and-disputes/dispute-a-claim-decision/",
+      "/insurance-and-claims/complaints-and-disputes/code-of-insured-persons-rights/",
+      "/insurance-and-claims/claims/buying-or-selling-a-home-with-previous-claims/"
+    ],
+    "excluded_prefixes": [
+      "/admin",
+      "/Security/"
+    ],
+    "excluded_path_keywords": [
+      ".pdf",
+      "/assets/",
+      "search",
+      "form"
+    ],
+    "minimum_interval_seconds": 1.2,
+    "seeds": [
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/about-nhcover/",
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/complaints-and-disputes/",
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/claims/make-a-new-claim/",
+      "https://www.naturalhazards.govt.nz/be-prepared/home-buyers/",
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/complaints-and-disputes/make-a-complaint/",
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/complaints-and-disputes/dispute-a-claim-decision/",
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/complaints-and-disputes/code-of-insured-persons-rights/",
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/claims/buying-or-selling-a-home-with-previous-claims/"
+    ],
+    "max_pages": 8,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false,
+    "assigned_split": "test",
+    "assignment_reason": "New independently sourced publisher assigned wholly TEST before any training, tuning or finalQA inference. No existing devpublisher overlap.",
+    "extension_records": {
+      "stage93_exact_html_preflight.json": "75647eebe6582f02dae665ddab99ded08ab9b57e5482890a938f657b31443f1e",
+      "stage93b_exact_html_preflight.json": "aeaeb8755fce9bb6a465cea2e9f1387321e8b7f92ea4a996e6019d4c72c84c30",
+      "stage93_html_content_review.json": "5c58406d69a88c2988bca9cac009d6402ac5e46f78c67af99186742d5e70dd3f"
+    },
+    "extension_reason": "Seven directly linked official consumer HTMLpages individually read; exactURLguards, cachedrobots/terms reused; sameCC-BY-NC4.0exclusions. No automaticapprovalofchildlinks."
+  },
+  {
+    "id": "nz_mbie_consumer",
+    "jurisdiction": "NZ",
+    "terms": "https://www.consumerprotection.govt.nz/copyright",
+    "terms_sha256": "2cb7293ab1c5a3ed6529bd779e45ae5571cd098cfb818d421432de5965a30cbe",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-07T20:19:52.209132+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "Crown-authored explanatory prose under full-read CC-BY-NC4.0copyrightterms. OriginalauthoredQAadaptations attributed, noncommerciallocalonly. Excludephotographs/logos/thirdpartyassets andexplicitlyattributedInsuranceCouncilstatistics/codewording; noexternalclaimcase content. Generalconsumerlaw notcurrentlegaladvice.",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "attribution": "MBIEConsumerProtection;originaltitle URL acquisitionUTC andCC-BY-NC4.0link;identifyauthoredderivatives,retain disclaimer,noendorsement.",
+    "preflight_record": "stage99_exact_html_preflight.json",
+    "preflight_record_sha256": "8916f391fb066800f73b0b3fd8cd8d4f143f4d5acfa435866918abcf7d09ba30",
+    "allowed_hosts": [
+      "www.consumerprotection.govt.nz"
+    ],
+    "prefixes": [
+      "/help-product-service/managing-money/insurance",
+      "/help-product-service/managing-money/how-to-complain-about-your-financial-service-provider",
+      "/help-product-service/travel-and-events/travel-insurance",
+      "/help-product-service/cars/paying-registering-insuring-car",
+      "/help-product-service/cars/paying-registering-insuring-car/car-insurance"
+    ],
+    "excluded_prefixes": [
+      "/admin",
+      "/security",
+      "/search"
+    ],
+    "excluded_path_keywords": [
+      ".pdf",
+      "/assets/",
+      "downloadpdf",
+      "email-share"
+    ],
+    "minimum_interval_seconds": 1.2,
+    "seeds": [
+      "https://www.consumerprotection.govt.nz/help-product-service/managing-money/insurance",
+      "https://www.consumerprotection.govt.nz/help-product-service/managing-money/how-to-complain-about-your-financial-service-provider",
+      "https://www.consumerprotection.govt.nz/help-product-service/travel-and-events/travel-insurance",
+      "https://www.consumerprotection.govt.nz/help-product-service/cars/paying-registering-insuring-car",
+      "https://www.consumerprotection.govt.nz/help-product-service/cars/paying-registering-insuring-car/car-insurance"
+    ],
+    "max_pages": 5,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false,
+    "assigned_split": "test",
+    "assignment_reason": "NewpublisherassignedwhollyTESTbeforeanydraftmodel/training/QAevaluation; noDEV overlap."
+  },
+  {
+    "id": "eu_youreurope",
+    "jurisdiction": "EU",
+    "terms": "https://european-union.europa.eu/legal-notice_en",
+    "terms_sha256": "326f3606cd6277f974af5f52991123325453f3eb59a6a4150494ef4f1f005b30",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-07T22:12:11.259324+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "CC BY4.0 for EU-owned prose only; keep attribution and identify authored QA as adaptation, no endorsement. Raw material stays local. Each exact page reviewed, no blanket domain or child-link approval.",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "European Union / European Commission, Your Europe; title, original URL, acquisition date and CC BY4.0 link; label authored QA as adaptation, no endorsement.",
+    "preflight_record": "stage113_html_content_review.json",
+    "preflight_record_sha256": "6d8230ace6492b62d8a990c421ac70eff96dc9b0ebea19dc2bf85ae2be0bf8c6",
+    "allowed_hosts": [
+      "europa.eu"
+    ],
+    "prefixes": [
+      "/youreurope/citizens/vehicles/insurance/accident/index_en.htm",
+      "/youreurope/citizens/vehicles/insurance/validity/index_en.htm",
+      "/youreurope/citizens/health/when-living-abroad/health-insurance-cover/index_en.htm",
+      "/youreurope/citizens/health/unplanned-healthcare/temporary-stays/index_en.htm"
+    ],
+    "excluded_path_keywords": [
+      ".pdf",
+      "/assets/",
+      "search"
+    ],
+    "excluded_prefixes": [
+      "/youreurope/citizens/acc/",
+      "/youreurope/citizens/dev/"
+    ],
+    "minimum_interval_seconds": 10,
+    "seeds": [
+      "https://europa.eu/youreurope/citizens/vehicles/insurance/accident/index_en.htm",
+      "https://europa.eu/youreurope/citizens/vehicles/insurance/validity/index_en.htm",
+      "https://europa.eu/youreurope/citizens/health/when-living-abroad/health-insurance-cover/index_en.htm",
+      "https://europa.eu/youreurope/citizens/health/unplanned-healthcare/temporary-stays/index_en.htm"
+    ],
+    "max_pages": 4,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false,
+    "assigned_split": "test",
+    "assignment_reason": "Whole newly sourced EU publisher assigned TEST before any model audit/training/final QA inference; no existing DEV overlap."
+  },
+  {
+    "id": "us_rrb",
+    "jurisdiction": "US",
+    "terms": "https://www.rrb.gov/Policy",
+    "terms_sha256": "c49297c3eb950b93ac57c597021a27cb2fd0eb6cd0a97dea21abfd83a5ad098c",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-07T22:25:14.662301+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "RRB Digital Rights Policy explicitly permits educational/informational use with RRB.gov attribution; copyright/trademark notices require additionalpermission and endorsements/misleadinguse prohibited. Both original agency prose bodies reviewed; images/logos/thirdparty materials excluded, raw sources local only.",
+    "attribution": "U.S. Railroad Retirement Board / RRB.gov; original title, URL, acquisition time; identify original authored QA adaptation, no endorsement.",
+    "preflight_record": "stage114_html_content_review.json",
+    "preflight_record_sha256": "06448cfb06d42fc44ccee814f9373ace6b1e0b3b3fff59c177285ef9a4d2a245",
+    "allowed_hosts": [
+      "www.rrb.gov"
+    ],
+    "prefixes": [
+      "/Benefits/AB-31",
+      "/Benefits/Unemployment/GeneralInfoUnemployment/UB9"
+    ],
+    "excluded_path_keywords": [
+      ".pdf",
+      "/search/",
+      "/user/",
+      "/admin/"
+    ],
+    "minimum_interval_seconds": 2,
+    "seeds": [
+      "https://www.rrb.gov/Benefits/AB-31",
+      "https://www.rrb.gov/Benefits/Unemployment/GeneralInfoUnemployment/UB9"
+    ],
+    "max_pages": 2,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false,
+    "assigned_split": "test",
+    "assignment_reason": "Whole new publisher assigned TEST before candidate authoring and local-model audit. No training, DEV or final-QA evaluation."
+  }
+]

@@ -1,0 +1,88 @@
+{
+  "created_utc": "2026-10-06T02:50:26.159862+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 392,
+    "dev": 51
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 7,
+    "retained": 6,
+    "held": 1,
+    "retained_tasks": {
+      "numerical_calculation": 3,
+      "multi_evidence": 1,
+      "ordinary_qa": 2
+    }
+  },
+  "prior_checkpoint": "stage41_progress.json:390TEST/47DEV/110families; all earlier holds retained",
+  "test_task_counts": {
+    "ordinary_qa": 269,
+    "insufficient_evidence": 30,
+    "multi_evidence": 40,
+    "numerical_calculation": 53
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 10,
+    "multi_evidence": 10,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 110,
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 9
+  },
+  "usage": {
+    "base_report_sha256": "cdc2fb5dcd379152548215167cbf00de418614a8dfe616d36d8c7beaa95e51f0",
+    "base_candidates_sha256": "6c954e5941ea640ffa8eda8ea7d1fced244fc5663618cd66c6a850fa2f59fd88",
+    "new_candidates_sha256": "2dd9f3fb7872b4707a60067624ca9ecf0bbbadb548811c13682848879c788556",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2745,
+    "old_old_pairs_reused": 665,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 7,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "bf3c2dee17f11497a6c126147b43bd40816a789a89af13cf621010cad06f40b3",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 286.11334989988245,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage42_source_decisions.json": "396a6b002b2a4178807b26340360eac624c97f665c0a913e2a1e4fc5ead2812f",
+    "stage42_final_review.json": "8511e27ce6e261bd39417727e89d3ef999d4695b4075e5bc8410e0dd773c3db5",
+    "review_pool_43_clearance_ledger.json": "1e08450ac090fd4c859115fc1d4725c19a107809817be3d768a4c5b1d39e0eca",
+    "provisional_item_pool_43.jsonl": "cc8e3f6912c257db000ed8f76b5b244f190f0459a182722ddd31512a94d3c0ce",
+    "provisional_item_pool_43_validation.json": "2328bbe33087d0017cdf3441d29830b52fa4688cd8814541464ca6ffbbf274bf"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 331,
+    "numerical_calculation": 97,
+    "multi_evidence": 110,
+    "insufficient_evidence": 70
+  },
+  "limits": [
+    "608 independent TEST still needed; DEV size/task minima now satisfied.",
+    "Two TEST andfourDEV tasks retained; onecross-sourceFEDVIPduplicate held. No previously held draft restored.",
+    "Single Codex review; no claim of unknown pretraining absence.",
+    "Prior holds, original15revocations and family-capacity correction preserved."
+  ]
+}

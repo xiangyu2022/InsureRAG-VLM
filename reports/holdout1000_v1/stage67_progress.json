@@ -1,0 +1,106 @@
+{
+  "created_utc": "2026-10-07T11:48:38.241130+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 542,
+    "dev": 52
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 7,
+    "retained": 5,
+    "held": 2,
+    "retained_tasks": {
+      "ordinary_qa": 3,
+      "multi_evidence": 2
+    }
+  },
+  "prior_checkpoint": "stage65_progress.json:537TEST/52DEV/136families",
+  "test_task_counts": {
+    "ordinary_qa": 365,
+    "insufficient_evidence": 39,
+    "multi_evidence": 61,
+    "numerical_calculation": 77
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 22,
+    "insufficient_evidence": 10,
+    "multi_evidence": 10,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 139,
+  "publisher_counts": {
+    "northcarolina_doi": 21,
+    "canada_fcac": 16,
+    "newyork_dfs": 54,
+    "california_cdi": 40,
+    "wisconsin_oci": 51,
+    "utah_uid": 10,
+    "us_opm": 98,
+    "us_va": 36,
+    "us_tricare": 102,
+    "newjersey_dobi": 32,
+    "alberta_goa": 18,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 8
+  },
+  "usage": {
+    "base_report_sha256": "751bcec11776104244813f4086ce15636680b6511a693da3491adc52fb583d69",
+    "base_candidates_sha256": "f3fdcf2b2bb148590c2924a02de815d84a6e9905dc193857c0d118d312d5397e",
+    "new_candidates_sha256": "4ddcea497c8841f4d1e5776488b5ac6a9a3ac00b79498cf9a75a68c42fff22ad",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2915,
+    "old_old_pairs_reused": 671,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 7,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "fd2ac1741457e7d16420f9c99c8e246f820b22d34f103c19a6eaf35db3207333",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 283.24796109995805,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage67_source_decisions.json": "1934d33271a34151e91d5550f7ac54b9f8bbf3eb0761569d5c90030b518ac898",
+    "stage67_final_review.json": "13d5ddd87f0ca1fb7f3fd67480fec21af434d2d65211ca1478054ff2d18f4e84",
+    "review_pool_67_clearance_ledger.json": "7e34212fe38c88cc154800ccab307cf83b13fbe63bd7365759a58130abdfd6d3",
+    "provisional_item_pool_67.jsonl": "eafeb57a33493f03432b079e54296cdf46bd0fe6ec337e4ec9dd91d114426902",
+    "provisional_item_pool_67_validation.json": "11e49bd7250941fced667eeb08430ce42fe48cbf630fd65c1fa5d49ca7227bf9"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 235,
+    "numerical_calculation": 73,
+    "multi_evidence": 89,
+    "insufficient_evidence": 61
+  },
+  "limits": [
+    "458 independent TEST still needed; DEV minima provisionally met.",
+    "Seven drafts:five retained,two held after manual historical-content review despite no automatic flag.",
+    "Property annual-loss refusal repeats historical research_v2DEV; catastrophe-model simulation core repeats historical SFT. Neither counted.",
+    "All36 historical fulltexts and34 neighboring QAs read;8 changed active relations reviewed.",
+    "Two multi-evidence tasks require distinct substantive/procedural clauses or eligibility/rating clauses.",
+    "Single sequential Codex review, not expert/human adjudication."
+  ]
+}

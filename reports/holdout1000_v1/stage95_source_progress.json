@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-07T19:47:37.711821+00:00",
+  "status": "SOURCE_ONLY_NO_NEW_ITEMS",
+  "source_review_record_sha256": "da89c3de25d0c4fb86b1ba04d5ea0ee0791baa2c86d37c2592516541a4d56bff",
+  "prospective_publishers": 2,
+  "new_candidates": 0,
+  "new_source_requests": 3,
+  "new_source_bytes": 225877,
+  "browser_discovery_calls": 5,
+  "local_model_processes": 0,
+  "accepted_test_items": 0,
+  "frozen": false,
+  "note": "HIAreusegrant/territorial-personaluse applicability unresolved; HKIAhomepage403 respected. No approval orquestioncreation. ThreeboundedHIArobots/home/legalrequests; nosecuritychanges."
+}

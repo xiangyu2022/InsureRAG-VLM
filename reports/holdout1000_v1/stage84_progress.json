@@ -1,0 +1,89 @@
+{
+  "created_utc": "2026-10-07T14:57:50.166731+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 558,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 0,
+    "retained": 0,
+    "held": 0,
+    "previous_items_revoked": 1
+  },
+  "prior_checkpoint": "stage82_progress.json:559TEST/58DEV/140families",
+  "test_task_counts": {
+    "ordinary_qa": 373,
+    "insufficient_evidence": 41,
+    "multi_evidence": 64,
+    "numerical_calculation": 80
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 139,
+  "publisher_counts": {
+    "northcarolina_doi": 23,
+    "canada_fcac": 18,
+    "newyork_dfs": 54,
+    "california_cdi": 42,
+    "wisconsin_oci": 52,
+    "utah_uid": 10,
+    "us_opm": 98,
+    "us_va": 41,
+    "us_tricare": 102,
+    "newjersey_dobi": 33,
+    "alberta_goa": 21,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ]
+  },
+  "usage": {
+    "new_candidate_vectors_encoded": 0,
+    "local_model_processes": 0,
+    "forward_batches": 0,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0
+  },
+  "evidence_sha256": {
+    "stage84_source_decisions.json": "9c125c2fa3e7d3dd8595ef492173fddeccd2b787a571d5933ba6b629b3cd1d18",
+    "stage84_final_review.json": "f6d74e99a91be7902d2a3db59ea51803ef48d9d0f0742f2c2bce50a09f5194ed",
+    "review_pool_78_clearance_ledger.json": "f9fa850b5ab97d36e264aa1d871d57738e82c7a665a0f1f027bd102ebed0eba5",
+    "provisional_item_pool_78.jsonl": "2f58d5075a2f38d37a1048a05a2d2b91da1f2dd6b84c54fc97b8202de805b7c1",
+    "provisional_item_pool_78_validation.json": "9b92f07b10c1733093816d00e30a000a2c93773d1a52a8c399f1f56982c2cede"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 227,
+    "numerical_calculation": 70,
+    "multi_evidence": 86,
+    "insufficient_evidence": 59
+  },
+  "limits": [
+    "442 independent TEST still needed; DEV minima met, accepted0/not frozen.",
+    "One prior TEST held to preserve unchanged20-item cap after substantive NY premium/healthcare source-family consolidation; all21 affected QAs reviewed.",
+    "No new drafts or model calls. Historical RAA-rate refusal and child-support insurance-control needs rejected before drafting; several prospective family/contamination reviews remain unresolved.",
+    "Source registry holds, older revocations and publisher split assignment unchanged. Codex content review, not expert/human adjudication."
+  ]
+}

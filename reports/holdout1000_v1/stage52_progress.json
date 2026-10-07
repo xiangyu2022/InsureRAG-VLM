@@ -1,0 +1,108 @@
+{
+  "created_utc": "2026-10-07T08:37:01.827500+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 477,
+    "dev": 46
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 5,
+    "retained": 5,
+    "held": 0,
+    "retained_tasks": {
+      "numerical_calculation": 4,
+      "ordinary_qa": 1
+    }
+  },
+  "prior_checkpoint": "stage51_progress.json:472TEST/46DEV/122families",
+  "test_task_counts": {
+    "ordinary_qa": 327,
+    "insufficient_evidence": 34,
+    "multi_evidence": 49,
+    "numerical_calculation": 67
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 10,
+    "multi_evidence": 9,
+    "numerical_calculation": 6
+  },
+  "test_document_families": 123,
+  "publisher_counts": {
+    "northcarolina_doi": 15,
+    "canada_fcac": 12,
+    "newyork_dfs": 49,
+    "california_cdi": 32,
+    "wisconsin_oci": 37,
+    "utah_uid": 10,
+    "us_opm": 89,
+    "us_va": 33,
+    "us_tricare": 91,
+    "newjersey_dobi": 30,
+    "alberta_goa": 18,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 17,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 5
+  },
+  "usage": {
+    "base_report_sha256": "aac093e8fd002f9ff1d135ab4c2e0689b1f76f871f401eed20e8e22ccfed8b32",
+    "base_candidates_sha256": "c2c60bc37c25f43ebe6caea2be6c3222ef138fca3e7752c06107b6424a93c3a6",
+    "new_candidates_sha256": "d368572b3adf683e2c456a6ae4bd27df6b6927675fda2c8fbe630351bce62b2a",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2840,
+    "old_old_pairs_reused": 667,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 5,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "d675a0b12cf1e39807a7ec7019f738538803fe38ee42b624cd486a6795e3ad7a",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 246.9922585999593,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage52_source_decisions.json": "39ec410cc1f123f301fdb1641122c399826966429759442a82edf240ed5cfcef",
+    "stage52_final_review.json": "97462da5fdff561f487f8b5511b5992477addb0206ebc13b8d1abcae69e51276",
+    "review_pool_53_clearance_ledger.json": "386e6a89ce8808016bbc11ed072f2e3c83c51e57338284189df7cc5e0cc1a5f1",
+    "provisional_item_pool_53.jsonl": "c2575cf63a2723b7316da1674ea466afc73b461fd842adaf24b15f3f1e4739f1",
+    "provisional_item_pool_53_validation.json": "4e860298d067c82babc930081fe9aacee9d53337b526ef4c33169cd04a274b62"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 273,
+    "numerical_calculation": 83,
+    "multi_evidence": 101,
+    "insufficient_evidence": 66
+  },
+  "limits": [
+    "523 independent TEST still needed; DEV count,numerical andmulti minima unmet.",
+    "Four numerical andone ordinary task retained; original HTML rate tables verified.",
+    "All25 nearest history texts and22 deduplicated candidate-neighbor QAs read; high-similarity pair explicitly reviewed as distinct mechanisms.",
+    "Four identical fullbody aliases grouped; no salary-BIA formula or cost-sharing variants added.",
+    "Single sequential Codex content review, not human/expert review. Prior holds and original15 revocations preserved."
+  ]
+}

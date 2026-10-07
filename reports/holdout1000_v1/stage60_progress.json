@@ -1,0 +1,106 @@
+{
+  "created_utc": "2026-10-07T10:49:54.358455+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 520,
+    "dev": 50
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 2,
+    "retained": 2,
+    "held": 0,
+    "retained_tasks": {
+      "numerical_calculation": 1,
+      "multi_evidence": 1
+    }
+  },
+  "prior_checkpoint": "stage59_progress.json:520TEST/48DEV/134families",
+  "test_task_counts": {
+    "ordinary_qa": 353,
+    "insufficient_evidence": 37,
+    "multi_evidence": 57,
+    "numerical_calculation": 73
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 22,
+    "insufficient_evidence": 10,
+    "multi_evidence": 10,
+    "numerical_calculation": 8
+  },
+  "test_document_families": 134,
+  "publisher_counts": {
+    "northcarolina_doi": 21,
+    "canada_fcac": 16,
+    "newyork_dfs": 52,
+    "california_cdi": 32,
+    "wisconsin_oci": 45,
+    "utah_uid": 10,
+    "us_opm": 98,
+    "us_va": 33,
+    "us_tricare": 102,
+    "newjersey_dobi": 32,
+    "alberta_goa": 18,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 17,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_task_count_below_target:numerical_calculation",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 3
+  },
+  "usage": {
+    "base_report_sha256": "bfdff9fa33f8f4f0c94c22850d9e6f6fa7031b28a122fa89f416c76a32ce5af8",
+    "base_candidates_sha256": "3caa527709eac945842490c5918e6bd3138929fe13e02bb4ca617ae85e5d2d18",
+    "new_candidates_sha256": "c95c18105eb7e5144d316961ab0ef8271bfd3b6fc960879d5e9cc7da54f589de",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2894,
+    "old_old_pairs_reused": 669,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 2,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "b7b6acae2fe735aff5f44d4bb8d89017b76a6b66bb8a8271829059cfb0aee385",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 281.490029099863,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage60_source_decisions.json": "5de78bc5a5360f31b887ac361df1c06ca2f81426751f689adf149b2bb72f64a6",
+    "stage60_final_review.json": "906158c3094869c6d418aff42ff3d1086ba6ff5280e1aa1d143ba2e7313c0b32",
+    "review_pool_61_clearance_ledger.json": "d52cc0483edc9150203b2cd1c714c609241cb08ce561550abbfd5636193a1247",
+    "provisional_item_pool_61.jsonl": "380485ffd0effd51ba0f155acaa6f56468e512ae4909ecf7031141620795fa61",
+    "provisional_item_pool_61_validation.json": "65c890328ed39ce9b517e297d8c5542cf32c88cd1998605cca2684eecc120f6d"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 247,
+    "numerical_calculation": 77,
+    "multi_evidence": 93,
+    "insufficient_evidence": 63
+  },
+  "limits": [
+    "480 independent TEST still needed; DEV numerical minimum still short by2, requiring at least52DEV under current composition.",
+    "Two DEV retained:one numerical andone multi-evidence.",
+    "All12 historical fulltexts and14 neighbor QAs read;partial conceptual exposure recorded, not described as zero overlap.",
+    "TWIA source with unresolved held counterpart not used; no metadata row-count or dated LTC arithmetic to fill quotas.",
+    "Single sequential Codex content review, not human/expert review. Prior holds and original15 revocations preserved."
+  ]
+}

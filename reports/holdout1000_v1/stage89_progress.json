@@ -1,0 +1,108 @@
+{
+  "created_utc": "2026-10-07T18:48:53.565537+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 580,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 3,
+    "retained": 2,
+    "held": 1,
+    "retained_tasks": {
+      "ordinary_qa": 1,
+      "multi_evidence": 1
+    }
+  },
+  "prior_checkpoint": "stage88_progress.json:578TEST/58DEV/139families",
+  "test_task_counts": {
+    "ordinary_qa": 384,
+    "insufficient_evidence": 44,
+    "multi_evidence": 67,
+    "numerical_calculation": 85
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 140,
+  "publisher_counts": {
+    "northcarolina_doi": 23,
+    "canada_fcac": 18,
+    "newyork_dfs": 54,
+    "california_cdi": 42,
+    "wisconsin_oci": 52,
+    "utah_uid": 12,
+    "us_opm": 100,
+    "us_va": 41,
+    "us_tricare": 102,
+    "newjersey_dobi": 36,
+    "alberta_goa": 36,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 1
+  },
+  "usage": {
+    "base_report_sha256": "8fedbbe6e458194baf0ca59859d33f189d90679f2b878429bacc8bbe59fa18c7",
+    "base_candidates_sha256": "02af5404c699c936b3c9f95bf8be2e26bd51c262660644279e922d18106688af",
+    "new_candidates_sha256": "f6082a639197b514411a2b51de9a164925f55004f1104f9a76a0831acdf369d0",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2984,
+    "old_old_pairs_reused": 677,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 3,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "564998dcf425058e3e4bae594ad74ed3d75f3df4ef26a524f407649870a17dec",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_source_bytes": 0,
+    "new_pdf_documents": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 285.49752899981104,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage89_source_decisions.json": "38e45a947e700ffda00d2c9fd4fbbcfe26dc2a9f920d5757f25e3c8d92db6985",
+    "stage89_final_review.json": "333cbe94da4b04fe54aff1a2d8bb982589d477e1a84441ba26aedaf516c626ff",
+    "review_pool_82_clearance_ledger.json": "8d5b0b7d670561a8a6b0d93040dd1a0d46052ac69d9786a7cf5234644f1789b5",
+    "provisional_item_pool_82.jsonl": "e1709cd2823a12ebbd8ab0f5af289c06b63594f68e85a2a87a0d513e7b365c3c",
+    "provisional_item_pool_82_validation.json": "760812ea51e664a44e02e7d9341e330516f834c3399961f270bb17258e6e9221"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 216,
+    "numerical_calculation": 65,
+    "multi_evidence": 83,
+    "insufficient_evidence": 56
+  },
+  "limits": [
+    "420 independent TEST still needed;DEVminimums provisionallymet.",
+    "Existing snapshot14 reused unchanged; no new source acquisition.",
+    "Full uniqueOPMprimarybodies and substantiveBillofRightscounterpart read; identicalaliases reused byverifiedhash.",
+    "ExistingFEGLI andFEHBconsumerprotection families unchanged; publisher/familycaps retained.",
+    "All14nearesthistoricalfulltexts and allcandidate neighbors read;1active changed relations reviewed.",
+    "Single sequential Codexcontent review, not human/expert adjudication."
+  ]
+}

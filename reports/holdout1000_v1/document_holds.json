@@ -1,0 +1,1053 @@
+{
+  "version": 1,
+  "updated_utc": "2026-10-05T22:20:12.094943+00:00",
+  "scope": "Additional document-level conservative holds; existing triage exclusions still apply. Holds are not claims every passage is false. No held page is cleared by low similarity or an individually plausible answer.",
+  "documents": {
+    "1056fbb935fe0e7ae00642b4": {
+      "publisher": "newyork_dfs",
+      "reason": "SOURCE_CURRENCY_CONFLICT: prior-approval FAQ defines small groups as 2-50; same DFS small-group-expansion FAQ states 1-100 effective January2016. Full page held, not silently repaired.",
+      "local_review_record": "agent_ny01_source_findings.json",
+      "review_record_sha256": "b42ce2168e07ed11bee99fe544ee3b8cd8fe5a0ff6025e298c0149efbf523598",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "243f100797ae2542a33678c0": {
+      "publisher": "newyork_dfs",
+      "reason": "SOURCE_CURRENCY_REVIEW_REQUIRED: age29 young-adult page carries undated Child Health Plus 400% FPL=$58,280 for two and obsolete initial2009 enrollment instructions. Full page held pending authoritative currency review; no replacement income figure asserted.",
+      "local_review_record": "agent_ny01_source_findings.json",
+      "review_record_sha256": "b42ce2168e07ed11bee99fe544ee3b8cd8fe5a0ff6025e298c0149efbf523598",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "e5186ea0b7d8237ae13b3545": {
+      "publisher": "newyork_dfs",
+      "reason": "SOURCE_CURRENCY_AND_PRODUCT_CONTEXT_REVIEW: same undated old Child Health Plus dollar example; make-available page also uses young-adult-option wording for benefit selection. Hold entire page pending program-specific crosscheck.",
+      "local_review_record": "agent_ny01_source_findings.json",
+      "review_record_sha256": "b42ce2168e07ed11bee99fe544ee3b8cd8fe5a0ff6025e298c0149efbf523598",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "0b843a3dc1c89949b87b7bd3": {
+      "publisher": "newyork_dfs",
+      "reason": "Any-period102% premium maximum contradicts disability extension150% explanation in other same-agency document15e327b1a3dc1b2ff839a1f5.; Early-termination FAQ answers election period, not conditions for early termination.; Medicare-eligible blanket qualified-beneficiary exclusion is unresolved and not accepted.",
+      "local_review_record": "agent_ny02_source_findings.json",
+      "review_record_sha256": "d928af5127693fc578e646206657422d0873b670bab928e0cdd3cdf5a59b7aa1",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "01142111ae9340ecfbfc74e7": {
+      "publisher": "newyork_dfs",
+      "reason": "Snapshot lists COVID quarantine/isolation as current PFL qualifying event, despite its own2026 carrier count. WCB official guidance says quarantine leave law expired/repealed2025-07-31 with no benefits available.",
+      "local_review_record": "agent_ny03_source_findings.json",
+      "review_record_sha256": "a33af0bd247f81d4f4e0ef796e22662b7d309749bfb4895333bb8fba91d46dcf",
+      "primary_verification_urls": [
+        "https://www.wcb.ny.gov/covid-19/information-employers-payers.jsp"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "be8b63d2e33db42bce40c0b9": {
+      "publisher": "newyork_dfs",
+      "reason": "Earlier section lists six reasons permitting cancellation during protected three-year period; later section purports to permit cancellation only for premium nonpayment or fraud and gives unqualified expiration nonrenewal. Scope inconsistent without further legal reconciliation.",
+      "local_review_record": "agent_ny03_source_findings.json",
+      "review_record_sha256": "a33af0bd247f81d4f4e0ef796e22662b7d309749bfb4895333bb8fba91d46dcf",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "275da05da320f6cc589d5d32": {
+      "publisher": "newyork_dfs",
+      "reason": "DFS section says mandatory no-cost preventive screenings derive from USPSTF A/B recommendations, then includes adult suicide-risk screening. USPSTF primary recommendation distinguishes depression B from asymptomatic adult suicide-risk I. This finding does NOT establish suicide-risk services cannot be covered under other NY rules; only A/B attribution is not supported. No medical advice or service-denial rule inferred.",
+      "local_review_record": "agent_ny05_source_findings.json",
+      "review_record_sha256": "33c3a13b337ea1ec3f6354ed35805363029db0727fff1fb01d74f5bd64d07490",
+      "primary_verification_urls": [
+        "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/screening-depression-suicide-risk-adults"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "eedd6e455e72766b1020475b": {
+      "publisher": "texas_tdi",
+      "reason": "Whole-page hold: fence depreciation incorrectly tied to home age/condition; evidence object mismatch unresolved.",
+      "local_review_record": "agent_tx02_source_findings.json",
+      "review_record_sha256": "5e58d6c89fb77c9564f820c7e17175444422065ef9fc07b8caac07089b7cd8b1",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "6bfb51177e81e67b7d92c930": {
+      "publisher": "texas_tdi",
+      "reason": "Whole-page hold: self-funded ERISA/DOL and emergency no-bill wording omit important population/cost-sharing qualifiers.",
+      "local_review_record": "agent_tx02_source_findings.json",
+      "review_record_sha256": "5e58d6c89fb77c9564f820c7e17175444422065ef9fc07b8caac07089b7cd8b1",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "e4c9e0b94df68e371090a3ff": {
+      "publisher": "texas_tdi",
+      "reason": "Whole-page hold: appraisal deadline starts from receipt of notice, not date TWIA accepted claim; independently verified TWIA official claims page.",
+      "local_review_record": "agent_tx02_source_findings.json",
+      "review_record_sha256": "5e58d6c89fb77c9564f820c7e17175444422065ef9fc07b8caac07089b7cd8b1",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "38005049ce2da54c6da02cf5": {
+      "publisher": "texas_tdi",
+      "reason": "Confirmed overbroad public-road prohibition for golf carts/ATVs; TxDMV official source lists permitted road use. Whole page held.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "49ece6b2019e074527187c2a": {
+      "publisher": "texas_tdi",
+      "reason": "Agency naming/currency concern:2024 page refers to Department of Aging and Disability Services. Current complaint destination not independently resolved; whole page held.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "4bdc01b1b6ce259f50c3a00d": {
+      "publisher": "texas_tdi",
+      "reason": "Nonrenewal notice table refers only to policies bought/renewed2024 and2023-or-earlier despite2026 update;2025/2026 applicability not explicitly resolved. Historical Texas homeowner guide also exposed.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "b1ef15dc88b4f9b75e1c8695": {
+      "publisher": "texas_tdi",
+      "reason": "Sewer/drain endorsement described as general appliance/toilet overflow and flood as any outside water; material cause-of-loss definitions require primary policy-scope verification. No silent correction.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "997319ef45402d374244f9e8": {
+      "publisher": "texas_tdi",
+      "reason": "Underinsurance example uses insured/rebuild60% directly as repair payment without clarifying coinsurance denominator; do not author calculations from ambiguous rule.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "793e5e17974474ae6da56821": {
+      "publisher": "texas_tdi",
+      "reason": "Confirmed overbroad all-health-insurance-except-Medicare statement. CMS lists short-term, fixed-indemnity and other exceptions. Whole page held.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "57ad4fd6104de1ffda39fcd3": {
+      "publisher": "texas_tdi",
+      "reason": "Historical Texas homeowner guide and previous regression question43865 already expose CLUE information; same publisher source family cannot be treated independent.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "6885bf00556ab25c54126372": {
+      "publisher": "texas_tdi",
+      "reason": "Generic disability coverage/duration overlaps historical InsuranceQA; waiting-period maximum wording and SSDI population scope not sufficiently resolved for precise cases.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "5978c98f4519ef47ba799597": {
+      "publisher": "texas_tdi",
+      "reason": "Learner-permit statement and unconditional out-of-state college policy advice need regulatory/policy scope review; do not infer a blanket legal exception.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "35628ea655f23d79d09d6d2d": {
+      "publisher": "texas_tdi",
+      "reason": "Participation shortfall enrollment window Nov1-Jan15 conflicts with official SHOP Nov15-Dec15; hold whole page pending federal/state reconciliation.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "7cc25336f97f05cb54cec5a1": {
+      "publisher": "texas_tdi",
+      "reason": "Deployment guide still cites automaticSGLI400000despite2025update; currentVAcorpus500000. Whole page held.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "0a0a47c7dacba180f49d2abe": {
+      "publisher": "texas_tdi",
+      "reason": "HMO guide retains2020out-of-pocket maximum despite2025update and generic cost-sharing language; no current numerical questions authored.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "0b911ee93ef54c1ca7282387": {
+      "publisher": "texas_tdi",
+      "reason": "New-child60day2026rule stated without sufficient insured/self-funded plan scope; held for scoped legal review.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "ac184e03e9f3407f4f998ea5": {
+      "publisher": "texas_tdi",
+      "reason": "Generic30dayflood-waiting statement across private/NFIP policy types omits distinctions; held for scope review.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "b36f7ca566f77845564072ed": {
+      "publisher": "texas_tdi",
+      "reason": "Insurance-license incentives are outside policyholder benchmark focus; no cases drafted.",
+      "local_review_record": "agent_tx03_source_findings.json",
+      "review_record_sha256": "9e935cc943bd9a0caaec5432206c947fb765ab68f0c85ba9445c7d8020df67f0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "c2a2ad0081f4cff46f9dc8b6": {
+      "publisher": "utah_uid",
+      "reason": "Ordinary June7 65th-birthday initial Medicare enrollment example ends October31 rather than September30; source describes an eight-month window. CMS describes birthday month plus three months before/after.",
+      "local_review_record": "agent_ut01_source_findings.json",
+      "review_record_sha256": "73206838fd6cf1589ad43d7aea3a7c22da9a89545dbbff3d280809a72f6bf7a2",
+      "primary_verification_urls": [
+        "https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-can-i-sign-up-for-medicare"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "6b81331d0db38b2dd0bbebbc": {
+      "publisher": "utah_uid",
+      "reason": "Source says claims history is retained up to5years, while current CFPB official directory states up to7years for both auto and home/personal property. Full source currency review needed, not selective acceptance.",
+      "local_review_record": "agent_ut01_source_findings.json",
+      "review_record_sha256": "73206838fd6cf1589ad43d7aea3a7c22da9a89545dbbff3d280809a72f6bf7a2",
+      "primary_verification_urls": [
+        "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/consumer-reporting-companies/companies-list/comprehensive-loss-underwriting-exchange/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "ba4465d64673cd249321dba1": {
+      "publisher": "utah_uid",
+      "reason": "The exclusions answer starts by broadly saying a title policy generally does not cover mistakes or defects, while earlier coverage explanations include hidden title defects. The following enumerated exclusions are narrower, so the lead is materially ambiguous. Do not present the broad sentence as a supported gold answer or cherry-pick other same-page items before scope review.",
+      "local_review_record": "agent_ut01_source_findings.json",
+      "review_record_sha256": "73206838fd6cf1589ad43d7aea3a7c22da9a89545dbbff3d280809a72f6bf7a2",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "6e5d253653e9e53a685bf46a": {
+      "publisher": "utah_uid",
+      "reason": "Internal contradictory Marketplace enrollment deadlines: upper summaryJanuary15, later FAQJanuary31/March1coverage. Also cancellation tax-penalty language not safely current. No specific2027deadline inferred.",
+      "local_review_record": "agent_ut02_source_findings.json",
+      "review_record_sha256": "382d2334ef66211925a1c3307941827e925317f30b040f6ff410fe0e0a700a55",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "704cb69c536c6e436ab31fae": {
+      "publisher": "utah_uid",
+      "reason": "Benefit trigger says inability to perform2or3ADLs AND cognitive impairment. IRS Pub502 qualifiedLTC definition has alternative ADL-limitation or severe-cognitive-impairment routes. Generic conjunctive explanation unsafe; policy-type scope unresolved.",
+      "local_review_record": "agent_ut02_source_findings.json",
+      "review_record_sha256": "382d2334ef66211925a1c3307941827e925317f30b040f6ff410fe0e0a700a55",
+      "primary_verification_urls": [
+        "https://www.irs.gov/publications/p502"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "d9b5b6b1b39451afbcaea666": {
+      "publisher": "utah_uid",
+      "reason": "Page explicitly identifies tips as NAIC work; state information permission does not establish third-party reuse clearance. Historical teen mortality statistics also unanchored.",
+      "local_review_record": "agent_ut02_source_findings.json",
+      "review_record_sha256": "382d2334ef66211925a1c3307941827e925317f30b040f6ff410fe0e0a700a55",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "579ab8bf8c8afc150b4c2be7": {
+      "publisher": "utah_uid",
+      "reason": "Closing note explicitly credits NAIC-produced alert; do not classify as state-authored explanatory text.",
+      "local_review_record": "agent_ut02_source_findings.json",
+      "review_record_sha256": "382d2334ef66211925a1c3307941827e925317f30b040f6ff410fe0e0a700a55",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "b201122f22dd2be52ae71290": {
+      "publisher": "utah_uid",
+      "reason": "Mixed long page includes explicitly NAIC-authored disaster claims section and other agency/third-party material with unclear section attribution. Earthquake43percent-next50years lacks a start-year anchor. Candidate earthquake guidance not cleared until section authorship/currency resolved.",
+      "local_review_record": "agent_ut02_source_findings.json",
+      "review_record_sha256": "382d2334ef66211925a1c3307941827e925317f30b040f6ff410fe0e0a700a55",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "6999614b606c9533f9959e77": {
+      "publisher": "newjersey_dobi",
+      "reason": "Stale grandfathered-plan exception allowing under26 exclusion based on own/spouse employer coverage eligibility. Exception ended for plan years beginning2014; current page presents no expiration.",
+      "local_review_record": "agent_nj01_critical_source_review.json",
+      "review_record_sha256": "6b9d47703e529a45d32d12b12406c02eaeecbb22d254801343b89a868ccc6c50",
+      "primary_verification_urls": [
+        "https://www.ecfr.gov/current/title-26/chapter-I/subchapter-D/part-54/section-54.9815-1251",
+        "https://www.ecfr.gov/current/title-26/chapter-I/subchapter-D/part-54/section-54.9815-2714"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "24e7820bae7b887ce3d6fa78": {
+      "publisher": "newjersey_dobi",
+      "reason": "Historical2004 domestic partnership summary needs2007 registration-amendment applicability review; no blanket claim that all2004 provisions are invalid.",
+      "local_review_record": "agent_nj01_critical_source_review.json",
+      "review_record_sha256": "6b9d47703e529a45d32d12b12406c02eaeecbb22d254801343b89a868ccc6c50",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "d1cc432945d69b60392aead2": {
+      "publisher": "newjersey_dobi",
+      "reason": "Home-health eligibility overstatement, undated historical SNF cost and ambiguous flattened LTC eligibility table; current SNF price not independently confirmed.",
+      "local_review_record": "agent_nj01_critical_ltc_review.json",
+      "review_record_sha256": "99f4e289cffbc1d707784264948a17a52b9a128ce0c22f305b5e29c17e163993",
+      "primary_verification_urls": [
+        "https://www.medicare.gov/coverage/home-health-services"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "4edd300aed8081ae477cb935": {
+      "publisher": "us_va",
+      "reason": "Exclusion introduction negates statements which are already negated. Prior gold copied the double negation; removal of initial Yes did not repair it. No silent legal inference. Read current section9.20(c),(d),(e),(f), displayed through2026-09-30. Regulation positively excludes intentional self-injury and related specified causes, with explicit disease/procedure exceptions; it does not support the literal double-negative gold. Medical-professional scope and treatment exceptions also need reconciliation before revising reference answers.",
+      "local_review_record": "critical_source_findings_tsgli01.json",
+      "review_record_sha256": "d6c0392dc454a06aea753264fd926f009215ac7d975f2163d4326791832f3813",
+      "primary_verification_urls": [
+        "https://www.ecfr.gov/current/title-38/chapter-I/part-9/section-9.20"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "a3f6338b83b8628ac292c936": {
+      "publisher": "alabama_doi",
+      "reason": "Same page says some inflation protection required for ages 61-76, then says 61-75 and no requirement for 76+. Directly inconsistent at age 76.",
+      "local_review_record": "agent_ca01_source_findings.json",
+      "review_record_sha256": "93cbe3e6d953ca88523914dee2ec8a4f69743f5c98278f0930f230d8257968d2",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "913f3fdc5d97404cbcbfd8a4": {
+      "publisher": "newyork_dfs",
+      "reason": "Financial Stability says the guaranty fund applies only to insurers organized as life insurance companies. The same DFS snapshot main life-insurance page explicitly includes health insurers and P/C insurers writing health insurance. Conflicting scope requires currency reconciliation; no general legal conclusion is inferred from this conflict.",
+      "local_review_record": "agent_ny06_source_findings.json",
+      "review_record_sha256": "9063a0eff56d782b6644c264452eac01a6524909ff46515de057ab82cf1f40bf",
+      "primary_verification_urls": [
+        "https://www.dfs.ny.gov/consumers/life_insurance"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "d7c85051ee74473e383fc13b": {
+      "publisher": "newyork_dfs",
+      "reason": "Transgender guidance conditions surprise-bill protection on the patient signing and returning assignment of benefits, without distinguishing hospital/ASC cases. The DFS surprise-bill page states certification is not required for these services and that the provider may sign. Hold the entire page pending reconciliation rather than silently excising obsolete procedure.",
+      "local_review_record": "agent_ny06_source_findings.json",
+      "review_record_sha256": "9063a0eff56d782b6644c264452eac01a6524909ff46515de057ab82cf1f40bf",
+      "primary_verification_urls": [
+        "https://www.dfs.ny.gov/consumers/health_insurance/surprise_medical_bills"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "2fdd643f4fd16d4605bb5c7c": {
+      "publisher": "texas_tdi",
+      "reason": "Hold whole page pending scope review: named drivers described as people covered if the car is stolen/damaged; categorical separate house/contents deductibles is not established for every policy.",
+      "local_review_record": "agent_tx04_source_findings.json",
+      "review_record_sha256": "c6c3db9361febb53fd730c5600335e6675eb3e0e580a97a44a6a526c4af8c284",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "6e179d2f618e82a907aa3e0d": {
+      "publisher": "texas_tdi",
+      "reason": "Hold whole page pending currency/scope review: legacy ACA tax-penalty disclosure and absolute HCSM no-legal-protection language; do not derive current deadlines or benefits.",
+      "local_review_record": "agent_tx04_source_findings.json",
+      "review_record_sha256": "c6c3db9361febb53fd730c5600335e6675eb3e0e580a97a44a6a526c4af8c284",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "f3c7a48c9568a8a7a7908a30": {
+      "publisher": "texas_tdi",
+      "reason": "Hold whole page pending TWIA scope reconciliation:545day repair period not given an explicit starting trigger here; no inferred calendar computation.",
+      "local_review_record": "agent_tx04_source_findings.json",
+      "review_record_sha256": "c6c3db9361febb53fd730c5600335e6675eb3e0e580a97a44a6a526c4af8c284",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "cfd7eea4d8fc062bb97919fc": {
+      "publisher": "texas_tdi",
+      "reason": "Hold whole page pending scope review: broad health-plan guaranteed-issue language and disabled-under65 Medigap enrollment phrased as Medicare rather than verifiedPartB trigger.",
+      "local_review_record": "agent_tx04_source_findings.json",
+      "review_record_sha256": "c6c3db9361febb53fd730c5600335e6675eb3e0e580a97a44a6a526c4af8c284",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "59426ca562be094d4737514e": {
+      "publisher": "texas_tdi",
+      "reason": "Hold for scoped annuity product and tax review before quantitative use; index-linked return description and product distinctions must not become a guaranteed-return calculation.",
+      "local_review_record": "agent_tx04_source_findings.json",
+      "review_record_sha256": "c6c3db9361febb53fd730c5600335e6675eb3e0e580a97a44a6a526c4af8c284",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "336abca6388e5ff9bfd1be4c": {
+      "publisher": "texas_tdi",
+      "reason": "Hold for legal-scope review of blanket duty to report within30days and ERISA/outside-provider descriptions; no enforcement deadline authored.",
+      "local_review_record": "agent_tx04_source_findings.json",
+      "review_record_sha256": "c6c3db9361febb53fd730c5600335e6675eb3e0e580a97a44a6a526c4af8c284",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "3bf72897991d9a379f7f46c1": {
+      "publisher": "texas_tdi",
+      "reason": "Hold surprise-billing section pending plan/population scope reconciliation with previously held surprise-bill article;24page upload arithmetic not used to pad numeric quota.",
+      "local_review_record": "agent_tx04_source_findings.json",
+      "review_record_sha256": "c6c3db9361febb53fd730c5600335e6675eb3e0e580a97a44a6a526c4af8c284",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "6a80484c614ec9f2906a2107": {
+      "publisher": "australia_apra",
+      "reason": "APRA_5000_BOUNDARY_CONFLICT: Exactly AUD 5,000 falls on different sides of the eligibility boundary. No legal reconciliation or current-rule correction inferred from local pages.",
+      "local_review_record": "agent_nj03_source_findings_v1.json",
+      "review_record_sha256": "1579839472f53dff0a5a18ea8b7871958aa13aa8d8c1061d4d50320648a7e31f",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "43ff861bded2e46818237316": {
+      "publisher": "australia_apra",
+      "reason": "APRA_5000_BOUNDARY_CONFLICT: Exactly AUD 5,000 falls on different sides of the eligibility boundary. No legal reconciliation or current-rule correction inferred from local pages.",
+      "local_review_record": "agent_nj03_source_findings_v1.json",
+      "review_record_sha256": "1579839472f53dff0a5a18ea8b7871958aa13aa8d8c1061d4d50320648a7e31f",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "80f0947cb062625b2703fcff": {
+      "publisher": "australia_apra",
+      "reason": "APRA_5000_BOUNDARY_CONFLICT: Exactly AUD 5,000 falls on different sides of the eligibility boundary. No legal reconciliation or current-rule correction inferred from local pages.",
+      "local_review_record": "agent_nj03_source_findings_v1.json",
+      "review_record_sha256": "1579839472f53dff0a5a18ea8b7871958aa13aa8d8c1061d4d50320648a7e31f",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "425e5737cfd1289179ee6230": {
+      "publisher": "canada_fcac",
+      "reason": "FCAC_HOME_BUSINESS_EQUIPMENT_CONFLICT: Potential coverage and absolute exclusion overlap in equipment/location/use; source does not reconcile. Personal-property section additionally lists your car under home insurance, risking further overgeneralization.",
+      "local_review_record": "agent_nj03_source_findings_v1.json",
+      "review_record_sha256": "1579839472f53dff0a5a18ea8b7871958aa13aa8d8c1061d4d50320648a7e31f",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "dad8c919d56365533ed5d553": {
+      "publisher": "canada_fcac",
+      "reason": "FCAC_LIFE_POSTISSUE_DISCLOSURE_SCOPE: Unqualified ongoing notification statement in maintaining-coverage section is not sufficient to establish a universal continuing disclosure duty for every existing life policy. No external verification authorized for this batch.",
+      "local_review_record": "agent_nj03_source_findings_v1.json",
+      "review_record_sha256": "1579839472f53dff0a5a18ea8b7871958aa13aa8d8c1061d4d50320648a7e31f",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "547db867fd0090f960678b19": {
+      "publisher": "wisconsin_oci",
+      "reason": "SOURCE_INTERNAL_DEFINITION_EXAMPLE_CONFLICT: Credit Property Insurance paragraph excludes motor vehicles, mobile homes and real estate, then immediately exemplifies bank insurance on a home. The stated product category and example do not align; do not silently repair or select apparently correct FAQs from page.",
+      "local_review_record": "agent_wi04_source_findings_01.json",
+      "review_record_sha256": "a78f49e455647f4fb525de4ca193b5031d25070492c4827396e07b906ec32ebe",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "93c4ab32ebd163562e8e0f85": {
+      "publisher": "wisconsin_oci",
+      "reason": "SOURCE_CURRENCY_ERROR: Page last updated 2021 presents SURE as a current alternative for uninsured farmers. USDA FSA January2011 official fact sheet limits SURE to natural disasters through September30,2011. Whole page held; potential additional ambiguities in crop payout denominator and FCIC direct purchase wording not adjudicated.",
+      "local_review_record": "agent_wi04_source_findings_01.json",
+      "review_record_sha256": "a78f49e455647f4fb525de4ca193b5031d25070492c4827396e07b906ec32ebe",
+      "primary_verification_urls": [
+        "https://www.fsa.usda.gov/Internet/FSA_File/sure_2011.pdf"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "e4ae077575a1e6413b08a8ec": {
+      "publisher": "wisconsin_oci",
+      "reason": "SOURCE_AGE_SCOPE_AMBIGUITY: age FAQ says intensive services covered from second birthday until ninth birthday, while summary table describes a requirement to begin before ninth birthday and cumulative four years. Need determine initiation versus termination age before any continued-treatment/remaining-years case; no silent assumption. This is an unresolved source-scope finding, not a confirmed statement that a particular rule is false.",
+      "local_review_record": "agent_wi04_source_findings_02.json",
+      "review_record_sha256": "e40e72ca8aa7493cb5a2315eb132018535f625cb1d34376abc4ec1a29abce0e0",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "b2b893cbd937bde3883cb0cd": {
+      "publisher": "newyork_dfs",
+      "reason": "The annuity source says the RMD age increases to 74 in 2029. Current 26 CFR 1.401(a)(9)-2(b)(2)(iv) instead specifies age 73 for birth years 1951 through 1958; subsection (vi) specifies age 75 for persons born after 1959. A person born in 1956 turns 73 in 2029, contradicting the source timeline. No candidate is drawn from any section of this held page.",
+      "local_review_record": "agent_ny07_source_findings.json",
+      "review_record_sha256": "40f420f43f3de169bfb825afc0492f77e82f57cb370117a901eb86242a5bab6d",
+      "primary_verification_urls": [
+        "https://www.ecfr.gov/current/title-26/section-1.401(a)(9)-2"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "eded853ffe067ed7e1a67189": {
+      "publisher": "northcarolina_doi",
+      "reason": "SOURCE_INTERNAL_EXPEDITED_TIMELINE_CONFLICT: opening explanation says expedited decision within three days after request; detailed process says Smart NC eligibility notification within three business days and IRO decision within four business days. Different units and total decision limits are not reconciled on page; no correct-looking paragraph can bypass whole-page hold.",
+      "local_review_record": "agent_nc05_source_findings_01.json",
+      "review_record_sha256": "58e89a037bbb57f11bff2c1bc01571c8e451d8ae33885420015372c3dfeafc97",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "9c7edc9ff06c68d380e7c29b": {
+      "publisher": "northcarolina_doi",
+      "reason": "UNRESOLVED_CURRENCY: list says large self-funded non-Federal governmental plans can opt out of federal parity. Current applicability and transition rules not yet authoritatively verified. No assertion of current law or that all listed exemptions are false. Hold page while resolving.",
+      "local_review_record": "agent_nc05_source_findings_01.json",
+      "review_record_sha256": "58e89a037bbb57f11bff2c1bc01571c8e451d8ae33885420015372c3dfeafc97",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "e6c20e4ce84f2577494020e8": {
+      "publisher": "northcarolina_doi",
+      "reason": "SOURCE_UIM_CURRENCY_CONFLICT: FAQ describes UIM medical protection as the difference between other-driver liability coverage and own UIM limits. Current G.S.20-279.21(b)(4) applies UIM above exhausted liability payments without reducing UIM coverage by liability setoff (workers compensation exception separately stated). Undated old difference-of-limits description cannot serve as general current reference. No replacement rule authored from web.",
+      "local_review_record": "agent_nc05_source_findings_02.json",
+      "review_record_sha256": "05feeb255a5e264e888a56d94dee9c92b5d3a3ac392bd3dd9ab6d9604dda1c87",
+      "primary_verification_urls": [
+        "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_20/GS_20-279.21.html"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "2a6014fdf7991ec7dbbf5b81": {
+      "publisher": "northcarolina_doi",
+      "reason": "SOURCE_DEFINITION_ERROR: FAQ defines depreciation as repair cost minus decrease for age/use; its own separate ACV/RCV page labels the same formula Actual Cash Value, not depreciation. This materially confuses the deduction with the remaining value. No silent correction or correct-looking paragraph bypass.",
+      "local_review_record": "agent_nc05_source_findings_02.json",
+      "review_record_sha256": "05feeb255a5e264e888a56d94dee9c92b5d3a3ac392bd3dd9ab6d9604dda1c87",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "11cd4b682241c1f82fa02b0d": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/senior-medicare-patrol-program-ncsmp"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "68da28e541fbb389fdd54aba": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/medicare-and-seniors-health-insurance-information-program-shiip/medicare-prescription-drug-plan-part-d"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "2a1395b9733e5611e6cf6fbb": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/medicare-and-seniors-health-insurance-information-program-shiip/medicare-disability"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "30745851d6305f5fa80bfdd8": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/medicare-and-seniors-health-insurance-information-program-shiip/long-term-care-insurance-information"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "80f27b1ec8be60bfa84d393f": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/get-help-paying-your-medicare-costs"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "4620cf4c077655fd365298d5": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/medicare-and-seniors-health-insurance-information-program-shiip/basics-medicare-parts-b-c-d"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "61602d5a8e5ddbb27522e84e": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/medicare-and-seniors-health-insurance-information-program-shiip/medicare-advantage-medicare-health-plans-part-c"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "62315544ae2316038d546ee3": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/new-medicare"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "6979a28d6edc4b48addcb03d": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/medicare-prescription-drug-plan-part-d/low-income-subsidy-part-d"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "e59ff1bbaf6c569adffccf4f": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/medicare-and-seniors-health-insurance-information-program-shiip/contact-seniors-health-insurance-information-program-shiip"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "880e15edecd4196aad18c2ab": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/medicare-and-seniors-health-insurance-information-program-shiip/shiip-monthly-awareness"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "b02b8046e837f18ac85777ea": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/medicare-and-seniors-health-insurance-information-program-shiip/medicare-supplement-medigap-plans"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "b6c1198f0bde2d0658c9ba26": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/medicare-and-seniors-health-insurance-information-program-shiip/become-shiip-volunteer"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "ee9a51aad48d908c531442af": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_sample_error_requires_full_currency_review. Critical escalation: obsolete Medicare enrollment schedule missed by local curator; reconciliation required for every item in stratum.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/medicare-and-seniors-health-insurance-information-program-shiip"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "33e5b980500befbf48d623f9": {
+      "publisher": "northcarolina_doi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: obsolete_hipaa_fallback_requires_full_page_review. Items1a6903c67d2aa495f259999a/2e6953a2598c42085eacf7ee require full-page currency hold due preACA HIPAA fallback.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/health-insurance/health-insurance-continuation-rights"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "ba4243137f94aff62487cccf": {
+      "publisher": "utah_uid",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: superseded_hipaa_certificate_rule_requires_full_page_review. Hold complete affected pages: superseded HIPAA certificate rules.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://insurance.utah.gov/consumers/health-insurance/hipaa/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "fa00d437f6a94390c8bf08da": {
+      "publisher": "california_cdi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: medicare_home_health_daily_care_error_requires_full_page_review. Hold complete affected CDI LTC page: daily skilled home-health care assertion.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.insurance.ca.gov/01-consumers/105-type/95-guides/05-health/01-ltc/ltc-insurance.cfm"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "f5062b0b796e1ff13aa4607a": {
+      "publisher": "us_opm",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_opm_currency_error_requires_full_page_review. All items require full currency/scope review; HSA blanket VA-care restriction and TCC historical HIPAA framing.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.opm.gov/healthcare-insurance/healthcare/temporary-continuation-of-coverage/#url=Eligibility"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "5c9a766231bb1de0bd7f524b": {
+      "publisher": "us_opm",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_opm_currency_error_requires_full_page_review. All items require full currency/scope review; HSA blanket VA-care restriction and TCC historical HIPAA framing.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.opm.gov/healthcare-insurance/healthcare/temporary-continuation-of-coverage/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "a761d115e47adeab865b8b34": {
+      "publisher": "us_opm",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_opm_currency_error_requires_full_page_review. All items require full currency/scope review; HSA blanket VA-care restriction and TCC historical HIPAA framing.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.opm.gov/healthcare-insurance/healthcare/temporary-continuation-of-coverage/#url=Pamphlet"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "9f85fa1f501a607bc6814723": {
+      "publisher": "us_opm",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_opm_currency_error_requires_full_page_review. All items require full currency/scope review; HSA blanket VA-care restriction and TCC historical HIPAA framing.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.opm.gov/healthcare-insurance/healthcare/health-savings-accounts/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "db1c6e64b1e92764eabce84c": {
+      "publisher": "us_opm",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: critical_opm_currency_error_requires_full_page_review. All items require full currency/scope review; HSA blanket VA-care restriction and TCC historical HIPAA framing.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.opm.gov/healthcare-insurance/healthcare/health-savings-accounts/#url=Comparison-Chart"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "f0d33edab758a075c69fc7ff": {
+      "publisher": "us_opm",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: carrier_procurement_scope_and_merged_faq_review_required. Existing carrier-page scope and merged-answer extraction hold; items8e8cd18ce8d749729248b4f6/479e8eb4fa8c7e8d81da76ac/f636afa67bede0fb0dc563c8; stage2/3 also record hold.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.opm.gov/healthcare-insurance/carriers/fehb/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "6a6363442a88913b1be35668": {
+      "publisher": "us_va",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: contradictory_accelerated_benefit_proxy_rules_require_full_page_review. Existing full-page hold for contradictory insured-only versus representative accelerated-benefit application rules.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.va.gov/life-insurance/totally-disabled-or-terminally-ill/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "1458cf386739d1310cac3ef0": {
+      "publisher": "texas_tdi",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: credit_card_secondary_coverage_overgeneralization_requires_full_page_review. Existing whole-page hold for universal secondary credit-card rental coverage statement.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.tdi.texas.gov/tips/rental-car-insurance.html"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "570f2e641f1dcd75eba2d292": {
+      "publisher": "wisconsin_oci",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: cobra_initial_payment_deadline_conflict_requires_full_page_review. Existing whole-page hold for merged election/initial-payment deadline and contradictory legal-separation wording.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-023.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "1701b1e84a48db8604b73a27": {
+      "publisher": "us_tricare",
+      "reason": "Previously active triage page/stratum hold, now also enforced at final assembly: pharmacy_population_and_table_boundary_review_required. Item55e36e8b9d9cee3b7a5857a8 rejects merged zero-cost population note and general pharmacy table; stage4 records page hold.",
+      "local_review_record": "agent_va05_legacy_registry_gaps.json",
+      "review_record_sha256": "1ffa782647caff84c2cff810109ef3d5eff423340c6e40006f35c9e772b9cf96",
+      "primary_verification_urls": [
+        "https://www.tricare.mil/Costs/PharmacyCosts"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "cd5020b88086ff95cf2f4ae4": {
+      "publisher": "us_tricare",
+      "reason": "UNVERIFIED_CURRENCY_LEAD: voluntary disenrollment subsection ties repurchase to next open enrollment season. Downloaded local sources do not establish whether a season-based restriction applies to this premium-based plan or reconcile it with the separate one-year nonpayment lockout. This is not a verified legal error; hold new authoring from this page pending primary rule adjudication.",
+      "local_review_record": "agent_tricare05_source_findings.json",
+      "review_record_sha256": "803f1777fa9165b83e91351b8649cea6226f3ada83f2c855459d7fd343a3991f",
+      "primary_verification_urls": [
+        "https://www.tricare.mil/Plans/Enroll/TRR/EndingCoverage"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "712a2060078342dd5b8edb94": {
+      "publisher": "us_tricare",
+      "reason": "UNRESOLVED_ELIGIBILITY_SCOPE: civilian outpatient section refers to SOFA/PfP eligibility and separately states that civilian care is not covered absent RHCA. The relationship among agreements and affected member/family categories is insufficiently explicit for a standalone eligibility gold answer. Not a proven contradiction: the conditions could be cumulative. Hold new authoring from this page pending scope adjudication.",
+      "local_review_record": "agent_tricare05_source_findings.json",
+      "review_record_sha256": "803f1777fa9165b83e91351b8649cea6226f3ada83f2c855459d7fd343a3991f",
+      "primary_verification_urls": [
+        "https://www.tricare.mil/Plans/Eligibility/FFMandFamilies"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "6fa146cd4e54f5c28ec70d67": {
+      "publisher": "newyork_dfs",
+      "reason": "Categorical federal-program-only flood-insurance availability claim is a source-currency concern requiring authoritative verification. This local-only review has not established a verified replacement rule and does not assert a confirmed legal error. Do not author from this page pending resolution.",
+      "local_review_record": "agent_ny08_source_findings.json",
+      "review_record_sha256": "79de7109f0a692332be89162271f203ca9716088376727a4f107b9028e47efb7",
+      "primary_verification_urls": [
+        "https://www.dfs.ny.gov/consumers/help_for_homeowners/insurance/choosing_a_policy"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "5e53d38c3dd5648885ad03b3": {
+      "publisher": "utah_uid",
+      "reason": "Explicit NAIC authorship and copyright notice. Utah state-source permission does not establish NAIC redistribution/derivative permission. Hold the whole document, not only the copyright span.",
+      "local_review_record": "agent_utah06_source_findings.json",
+      "review_record_sha256": "116c2bf15a8f3e20b8f442d59b936013ae20efdaa633fc1a875d569ae3cb3446",
+      "primary_verification_urls": [
+        "https://insurance.utah.gov/consumers/life-annuity/life-buyers-guide/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "0adcbba09c373f08a932c51c": {
+      "publisher": "utah_uid",
+      "reason": "The full page includes a named Associated Press business writer article dated June5,2000, followed by state purchase guidance. The third-party article is not Utah-authored. Conservative whole-document hold pending rights/section provenance review; no claim every later state paragraph is false.",
+      "local_review_record": "agent_utah06_source_findings.json",
+      "review_record_sha256": "116c2bf15a8f3e20b8f442d59b936013ae20efdaa633fc1a875d569ae3cb3446",
+      "primary_verification_urls": [
+        "https://insurance.utah.gov/consumers/life-annuity/annuities/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "d5b5bb793bb9e05486811382": {
+      "publisher": "utah_uid",
+      "reason": "Mixed page includes a NAIC consumer-research/education section and generic passages shared with the explicitly copyrighted NAIC guide. Full section-level authorship/reuse permission is unresolved. This is a conservative provenance hold, not a verified legal error or claim that the whole page is copyrighted NAIC text.",
+      "local_review_record": "agent_utah06_source_findings.json",
+      "review_record_sha256": "116c2bf15a8f3e20b8f442d59b936013ae20efdaa633fc1a875d569ae3cb3446",
+      "primary_verification_urls": [
+        "https://insurance.utah.gov/consumers/life-annuity/life-insurance/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "0efa114bafec058799c164c2": {
+      "publisher": "utah_uid",
+      "reason": "Full extension/conversion page relies on1997HIPAA framing and pre-existing-condition conversion provisions. No current authoritative verification performed in this local-only task. Not asserted as a confirmed legal error.",
+      "local_review_record": "agent_utah06_source_findings.json",
+      "review_record_sha256": "116c2bf15a8f3e20b8f442d59b936013ae20efdaa633fc1a875d569ae3cb3446",
+      "primary_verification_urls": [
+        "https://insurance.utah.gov/consumers/health-insurance/extension-conversion-rights/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "d9ae83a26fdfe067f509445c": {
+      "publisher": "wisconsin_oci",
+      "reason": "Unqualified statement that neither flood nor homeowners insurance covers sewer backup/sump overflow omits a direct-flood-causation exception found in accessible historical NFIP explanatory text. Same page broadly says foundation seepage would be covered by separate flood insurance, while cache excludes seepage/leaks. Scope/source truth pending; historical text is a conflict lead, not independently verified current law.",
+      "local_review_record": "agent_wi05_source_findings_01.json",
+      "review_record_sha256": "111a4ab783c49c99f42d8dd79854aea2335650b4bd3b14ed5313f3b19fcaa98f",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-240.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "61ec700e21178e66c7f86ebc": {
+      "publisher": "wisconsin_oci",
+      "reason": "Generic foundation seepage grouped with flooding and described as requiring special NFIP flood policy. Accessible cached NFIP explanation says seepage/leaks are not covered. Missing cause/qualifier makes standalone coverage gold unsafe pending scope adjudication; not independently verified current law.",
+      "local_review_record": "agent_wi05_source_findings_01.json",
+      "review_record_sha256": "111a4ab783c49c99f42d8dd79854aea2335650b4bd3b14ed5313f3b19fcaa98f",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/Disasters.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "98d9408c3b3b75088426ebf4": {
+      "publisher": "texas_tdi",
+      "reason": "Full page held: $60,000 described as multiple-car repair limit; local TDI 30/60/25 descriptions instead assign $60,000 to total injury liability and $25,000 to property damage.",
+      "local_review_record": "agent_tx05_source_findings.json",
+      "review_record_sha256": "3e58ccf49475840246038520f268f9c5cd650e174638694d7f6d12f5aa204c09",
+      "primary_verification_urls": [
+        "https://www.tdi.texas.gov/tips/car-insurance.html"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "4876805eb407f602930bc157": {
+      "publisher": "texas_tdi",
+      "reason": "Full page conservative hold: unqualified absence-of-TDI/DOI marker implies self-funded classification and generic DOL jurisdiction over self-funded plans are not sufficiently scoped. Existing related whole-page hold6bfb51177e81e67b7d92c930 records ERISA/DOL population concerns. This is a scope concern, not a new externally verified legal finding.",
+      "local_review_record": "agent_tx05_source_findings.json",
+      "review_record_sha256": "3e58ccf49475840246038520f268f9c5cd650e174638694d7f6d12f5aa204c09",
+      "primary_verification_urls": [
+        "https://www.tdi.texas.gov/pubs/consumer/cb022.html"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "a5a06addfecb52dda7611f5c": {
+      "publisher": "alabama_doi",
+      "reason": "UNRESOLVED_RULE_SCOPE: General filing page expressly excludes assistance when the consumer has an attorney. Life & Health handling page requests retained-attorney details and broadly says it will intervene. Asking for attorney details may support intake/triage rather than permission to assist represented consumers, so this is not a proved logical contradiction or current-law error. Conservative temporary document-level hold pending reconciliation; not a claim every passage is false.",
+      "local_review_record": "agent_alabama06_independent_review.json",
+      "review_record_sha256": "881fce911c528ed00ff19f30a185743ee79d573b3d5da4470dfbc2cd7c4a29fc",
+      "primary_verification_urls": [
+        "https://aldoi.gov/Consumers/FileComplaint.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "c4fd014dde2d8e7aaa3faf88": {
+      "publisher": "alabama_doi",
+      "reason": "UNRESOLVED_RULE_SCOPE: General filing page expressly excludes assistance when the consumer has an attorney. Life & Health handling page requests retained-attorney details and broadly says it will intervene. Asking for attorney details may support intake/triage rather than permission to assist represented consumers, so this is not a proved logical contradiction or current-law error. Conservative temporary document-level hold pending reconciliation; not a claim every passage is false.",
+      "local_review_record": "agent_alabama06_independent_review.json",
+      "review_record_sha256": "881fce911c528ed00ff19f30a185743ee79d573b3d5da4470dfbc2cd7c4a29fc",
+      "primary_verification_urls": [
+        "https://aldoi.gov/Consumers/HandleProblems.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "9b768a2fc5c0f7544bbb7890": {
+      "publisher": "alabama_doi",
+      "reason": "UNRESOLVED_RULE_SCOPE: Annuity Costs uses unqualified deferred-annuity interest guarantees and immediate-annuity exact-payment language; it also mentions variable-annuity fees. Annuity Options explicitly distinguishes guaranteed fixed-dollar payments from market-linked variable payouts. The texts establish a material product-scope ambiguity for universal guarantees, but do not independently establish that the writer intended variable contracts in every guarantee sentence. Conservative temporary document-level hold pending reconciliation; not a claim every passage is false.",
+      "local_review_record": "agent_alabama06_independent_review.json",
+      "review_record_sha256": "881fce911c528ed00ff19f30a185743ee79d573b3d5da4470dfbc2cd7c4a29fc",
+      "primary_verification_urls": [
+        "https://aldoi.gov/Consumers/AnnuityCosts.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "64461d77c7218708de324cc1": {
+      "publisher": "au_privatehealth_ombudsman",
+      "local_review_record": "agent_privatehealth10_independent_source_family_review.json",
+      "review_record_sha256": "935ddc1873f3b07859e6f88b8a7a3b8e626869490b7f2ead78cb9e769c988d43",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": [],
+      "reason": "Local source has unresolved exact-90-day overseas counting boundary and inconsistent Norfolk Island jurisdiction guidance; whole document held pending authoritative clarification."
+    },
+    "50851ff281b489bbf3d07e73": {
+      "publisher": "au_privatehealth_ombudsman",
+      "local_review_record": "agent_privatehealth10_independent_source_family_review.json",
+      "review_record_sha256": "935ddc1873f3b07859e6f88b8a7a3b8e626869490b7f2ead78cb9e769c988d43",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": [],
+      "reason": "Local glossary conflicts with the LHC source on Norfolk Island policy jurisdiction; whole document held without choosing which rule is current."
+    },
+    "823d6ef6fe721e7f3c1363e7": {
+      "publisher": "us_opm",
+      "local_review_record": "agent_opm08_independent_review.json",
+      "review_record_sha256": "c84de271453504bd1522658a20df91ed548c3e1f101a53a84770f61b28ff913a",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": [],
+      "reason": "Local health-plan handbook conflates distinct Medicare prescription-plan and Medicare Advantage enrollment prerequisites; whole document held pending source clarification."
+    },
+    "e2f1fdec937c0934a038f6a2": {
+      "publisher": "us_opm",
+      "local_review_record": "agent_opm08_independent_review.json",
+      "review_record_sha256": "c84de271453504bd1522658a20df91ed548c3e1f101a53a84770f61b28ff913a",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": [],
+      "reason": "Local enrollment-change table has unresolved child-marriage qualification and cancellation-versus-suspension terminology; conservative whole-document hold, not an assertion all table rules are false."
+    },
+    "aa51567a6730653c4174a1d3": {
+      "publisher": "texas_tdi",
+      "reason": "English TDI presents400000 as SGLI maximum for active-duty members including called-up Guard/reservists. No historical-date or individual-elected-limit qualification resolves it. VA presents500000 and independently includes500000/450000 rows;400000 remains a lower selectable tier, not the ceiling.",
+      "local_review_record": "agent_texas10_ny10_independent_source_family_review.json",
+      "review_record_sha256": "2ea7afe7649a05a169f138a05163403aa74811d80b3f40400954f7ab0cdd153f",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
+    },
+    "2e2d21051c4130dd824266ad": {
+      "publisher": "texas_tdi",
+      "reason": "Spanish text explicitly says incrementos de50000 hasta un m\u00e1ximo de400000 for the same active-duty scope. Fullpage adds no historical qualifier. It repeats the actual conflict, so hold is directly evidenced, not inherited from its English family member.",
+      "local_review_record": "agent_texas10_ny10_independent_source_family_review.json",
+      "review_record_sha256": "2ea7afe7649a05a169f138a05163403aa74811d80b3f40400954f7ab0cdd153f",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
+    },
+    "91d88ed35713ed3ff895985b": {
+      "publisher": "newyork_dfs",
+      "reason": "The full page includes a substantial2025vehicle symbol table explicitly compiled from the ISO Rating Symbol programme. Agency prose and the derived table are mixed. Current DFS source approval permits noncommercial unaltered reproduction with attribution except item-specific restrictions, but no record here establishes whether that permission extends to the ISO-derived table. Preserve whole-page hold pending root permission adjudication rather than extract adjacent prose to evade it.",
+      "local_review_record": "agent_texas10_ny10_independent_source_family_review.json",
+      "review_record_sha256": "2ea7afe7649a05a169f138a05163403aa74811d80b3f40400954f7ab0cdd153f",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
+    },
+    "29d23c743edd9fa357f6d60c": {
+      "publisher": "us_usda_rma",
+      "reason": "Unresolved MCO coverage-band discrepancy between CLIP and MCO source pages; whole-document content hold.",
+      "local_review_record": "stage9_rma_final_review.json",
+      "review_record_sha256": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
+    },
+    "676d0c50e4b73f02a4b70059": {
+      "publisher": "us_usda_rma",
+      "reason": "Unresolved margin-trigger denominator inconsistency (expected margin versus expected revenue) and cross-source coverage-band discrepancy.",
+      "local_review_record": "stage9_rma_final_review.json",
+      "review_record_sha256": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
+    },
+    "ab17dc9e7eac9543630fc557": {
+      "publisher": "us_usda_rma",
+      "reason": "Unresolved TVS revision form identity: Nursery Value Report appears where application/valuation use Turfgrass Value Report; no silent form substitution.",
+      "local_review_record": "stage9_rma_final_review.json",
+      "review_record_sha256": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
+    },
+    "8dc7c0b0431e73885f8fca5b": {
+      "publisher": "us_usda_rma",
+      "reason": "Growing Interval II worked example has contradictory seed-purchase-year alignment between table, narrative and final expected-yield line; no selective acceptance pending resolution.",
+      "local_review_record": "stage9_rma_final_review.json",
+      "review_record_sha256": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098",
+      "status": "hold_pending_explicit_resolution",
+      "scope": "direct_whole_document_only",
+      "primary_verification_urls": []
+    },
+    "960ada919cc2a7b2f6511b59": {
+      "publisher": "northcarolina_doi",
+      "reason": "HISTORICAL_DERIVATIVE_FAMILY: basic-homeowners substantive text already exposed in NCarchive history; this guide belongs to the same conservatively grouped residential family. No clearance based only on changed URL or different candidate passage.",
+      "local_review_record": "stage20_source_decisions.json",
+      "review_record_sha256": "263fd7e8b60881979c38c07ea194bda7db19803785c105b4ad7d4e6194c000f7",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "1d83f5310d08905df3e773fb": {
+      "publisher": "northcarolina_doi",
+      "reason": "HISTORICAL_DERIVATIVE_FAMILY: basic-homeowners substantive text already exposed in NCarchive history; this guide belongs to the same conservatively grouped residential family. No clearance based only on changed URL or different candidate passage.",
+      "local_review_record": "stage20_source_decisions.json",
+      "review_record_sha256": "263fd7e8b60881979c38c07ea194bda7db19803785c105b4ad7d4e6194c000f7",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "39eacfbd826b7d382e5bcaf0": {
+      "publisher": "northcarolina_doi",
+      "reason": "HISTORICAL_DERIVATIVE_FAMILY: basic-homeowners substantive text already exposed in NCarchive history; this guide belongs to the same conservatively grouped residential family. No clearance based only on changed URL or different candidate passage.",
+      "local_review_record": "stage20_source_decisions.json",
+      "review_record_sha256": "263fd7e8b60881979c38c07ea194bda7db19803785c105b4ad7d4e6194c000f7",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution"
+    }
+  },
+  "proposal_metadata": {
+    "status": "NOT_APPLIED_PENDING_ROOT_REVIEW",
+    "base_registry_sha256": "bc2f6e346d68222086dbfef53b82f695f34ef4cf1e35ae88148cd815b95a62f7",
+    "local_proposal": "agent_source_family_merge11_proposal.json",
+    "family_hold_propagation": false
+  }
+}

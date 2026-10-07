@@ -1,0 +1,99 @@
+{
+  "created_utc": "2026-10-05T16:51:19.698899+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 259,
+    "dev": 42
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 8,
+    "retained": 6,
+    "held": 2,
+    "pass_rate": 0.75,
+    "new_test": 6,
+    "new_dev": 0,
+    "refusals_retained": 2,
+    "ordinary_retained": 4,
+    "held_reason": "historical information-need/mechanism overlap",
+    "prior_revocations": 0
+  },
+  "test_task_counts": {
+    "ordinary_qa": 200,
+    "insufficient_evidence": 14,
+    "multi_evidence": 24,
+    "numerical_calculation": 21
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 9,
+    "multi_evidence": 6,
+    "numerical_calculation": 6
+  },
+  "test_document_families": 95,
+  "net_new_test_document_families": 2,
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "too_few_document_groups",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "dev_task_count_below_target:insufficient_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "old_active_neighbor_changes_reviewed": 3,
+    "exact_flags": 0,
+    "lexical_flags": 0,
+    "evidence_containment_flags": 0,
+    "semantic_new_history_flags": 0,
+    "corpus_gap_documents_searched": 1311,
+    "targeted_tests": {
+      "passed": 42,
+      "seconds": 0.28
+    }
+  },
+  "usage": {
+    "base_report_sha256": "08d19e548b36501d355ef4456e8db41af75e21397efcdd7d7ba8083f4310bfaf",
+    "base_candidates_sha256": "3f6eee6e034eaa916b6701e1367ee24500841f3647ccdeb640847f4bed471808",
+    "new_candidates_sha256": "77275f1944edc258bb3ab96743d3b5c7c0263c152c5ca906d1c2766405d7fe15",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2546,
+    "old_old_pairs_reused": 657,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 8,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "0bb71bd2a1a4ec681dbad582c55e8d1aacf456131825c046a8e84e442d88be4c",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "new_qa_inference_runs": 0,
+    "lexical_audit_seconds": 303.3103581001051,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage12_final_review.json": "6eb7a06989df6282b965d51d24ba4f579122b4f5cffbeb13752940edd05a8c77",
+    "review_pool_15_clearance_ledger.json": "a0dde957c28bd7b387d1e4d268b0b30969a61becd3fbacfefa656b2fda7b1a71",
+    "provisional_item_pool_15.jsonl": "563ab5b4949253a72bf137780e1ecf1376fb82350fe49fbba8629e47cc4fb941",
+    "provisional_item_pool_15_validation.json": "6ab7cb7e1dfc16e497e9f5b1ec3b3bd9d05ff76c4657163570be35fdc86d6e9e"
+  },
+  "limits": [
+    "Still provisional: task counts, TEST/DEV size and family minimum remain unmet.",
+    "Only8new questions encoded; no old-model bootstrap or historical semantic rerun.",
+    "First RMA family has reached20item cap. No source-family or quality gate was relaxed.",
+    "An initial evidence projection schema rejection was corrected without changing question/answer/evidence text or repeating model inference.",
+    "Historical task exposure excluded2drafts despite zero automatic flags.",
+    "No training, paid service, raw-source/QA upload or merge."
+  ]
+}

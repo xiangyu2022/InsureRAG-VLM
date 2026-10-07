@@ -1,0 +1,14 @@
+{
+  "status": "SOURCE_REVIEW_COMPLETE_QUESTIONS_PENDING_STAGE101",
+  "new_candidates": 0,
+  "new_source_requests": 0,
+  "new_source_bytes": 0,
+  "new_model_calls": 0,
+  "provisional_test_items": 638,
+  "provisional_dev_items": 58,
+  "accepted_items": 0,
+  "frozen": false,
+  "notes": [
+    "CacheonlyFCACpreselection; disabilitytaxhistoricalcoreheld, otherdraftneedsawaitsequentialglobalreview."
+  ]
+}

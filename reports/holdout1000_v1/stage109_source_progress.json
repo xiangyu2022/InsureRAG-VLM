@@ -1,0 +1,20 @@
+{
+  "created_utc": "2026-10-07T21:27:37.921239+00:00",
+  "status": "SOURCE_ONLY_NO_PERMISSION_CLEARANCE",
+  "new_candidates": 0,
+  "local_model_processes": 0,
+  "browser_discovery_calls": 0,
+  "counts_unchanged": {
+    "test": 664,
+    "dev": 58
+  },
+  "new_source_requests": 1,
+  "new_source_bytes": 551,
+  "guard_denials_before_network": 1,
+  "notes": [
+    "IRDAIrobots forbidsallpaths forstar andChatGPT-User. Homepage blockedbyguard beforeHTTP. No policy/contentpage,alternatehostorapproval. Noquestion."
+  ],
+  "source_selection_sha256": "341fc62059f39d723513f5e7427eb2bc0403c64dfdcb0ff61a222cb0b6f91995",
+  "accepted_test_items": 0,
+  "frozen": false
+}

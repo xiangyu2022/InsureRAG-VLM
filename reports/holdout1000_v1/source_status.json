@@ -1,0 +1,1005 @@
+{
+  "checked_utc": "2026-10-04T21:00:03.168271+00:00",
+  "sources": [
+    {
+      "publisher": "texas_tdi",
+      "jurisdiction": "US-TX",
+      "seed_url": "https://www.tdi.texas.gov/consumer/index.html",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://www.tdi.texas.gov/commissioner/privacy.html",
+        "sha256": "50221e3f8c7a7b16961db393b9117b17c4f9e792f188f94ca6946f2fae47bc9f",
+        "acquired_utc": "2026-10-04T14:30:40.175446+00:00",
+        "basis": "Use of website information permits noncommercial copying/distribution of unaltered content except item-specific notices. Original snapshots preserved; authored questions kept separate."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 5972,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "newyork_dfs",
+      "jurisdiction": "US-NY",
+      "seed_url": "https://www.dfs.ny.gov/consumers",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://www.dfs.ny.gov/disclaimer",
+        "sha256": "33064043dbbaafc8823cb2409cbd250b876dd9659e7f7fcb020322c67ac18216",
+        "acquired_utc": "2026-10-04T14:32:02.325854+00:00",
+        "basis": "Noncommercial unaltered reproduction with Department attribution except item-specific restrictions."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 5681,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "california_cdi",
+      "jurisdiction": "US-CA",
+      "seed_url": "https://www.insurance.ca.gov/01-consumers/",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://www.insurance.ca.gov/privacy-policy/",
+        "sha256": "7538bd37b8c1b35080233ed755d0c1989a2197ddf453319bb9aefb42d9165304",
+        "acquired_utc": "2026-10-04T14:32:02.626740+00:00",
+        "basis": "Ownership section identifies CDI-created information as public domain unless indicated otherwise; exclude third-party materials, logos and submissions."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 5789,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "northcarolina_doi",
+      "jurisdiction": "US-NC",
+      "seed_url": "https://www.ncdoi.gov/consumers",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://www.nc.gov/disclaimer-terms-use",
+        "sha256": "cb1a386b4e308f431edd42bdc12241af17252eaeef7c5bccec407395bdecb6f0",
+        "acquired_utc": "2026-10-04T14:32:02.325854+00:00",
+        "basis": "Permits noncommercial unaltered copying/distribution of non-image information with citation unless otherwise noted; no images or chatbot content."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 28,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "newjersey_dobi",
+      "jurisdiction": "US-NJ",
+      "seed_url": "https://www.nj.gov/dobi/consumer.htm",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://nj.gov/nj/legal.shtml",
+        "sha256": "d254fd2613564fa5eb375d544d44bd55383cfb4a0bec8d306c6c1f20a09f23a7",
+        "acquired_utc": "2026-10-04T14:32:02.325854+00:00",
+        "basis": "Section F permits viewing/copying/distributing State information subject to individual restrictions and third-party rights. Exclude external copyrighted publications."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 209,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "wisconsin_oci",
+      "jurisdiction": "US-WI",
+      "seed_url": "https://oci.wi.gov/Pages/Consumers/ConsumerInformation.aspx",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://oci.wi.gov/Pages/AboutOCI/Disclaimer.aspx",
+        "sha256": "9ceee51cd906f3e7fc6d2c4dd477418e219f14c1114536270f5eb73fd26bdecf",
+        "acquired_utc": "2026-10-04T14:43:15.296663+00:00",
+        "basis": "Use of Information grants noncommercial unaltered copying/distribution except item-specific notices."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 4343,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "maryland_mia",
+      "jurisdiction": "US-MD",
+      "seed_url": "https://insurance.maryland.gov/Consumer/Pages/default.aspx",
+      "status": "pending_source_or_terms_review",
+      "reason": "Robots/homepage reviewed; applicable content reuse grant not located. Archive/tourism policies not applicable. No consumer acquisition orapproval.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 1601,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen.",
+      "local_review_record": "stage108_source_selection.json",
+      "review_record_sha256": "8343b43d630c9ee84b405c78d717240f5fbeecf065ff9bdf42c1de84bedffb4a"
+    },
+    {
+      "publisher": "maine_boi",
+      "jurisdiction": "US-ME",
+      "seed_url": "https://www.maine.gov/pfr/insurance/consumers",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 633,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "pennsylvania_pid",
+      "jurisdiction": "US-PA",
+      "seed_url": "https://www.pa.gov/agencies/insurance/consumer-resources.html",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "newhampshire_nhid",
+      "jurisdiction": "US-NH",
+      "seed_url": "https://www.insurance.nh.gov/consumers",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.insurance.nh.gov/consumers"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "vermont_dfr",
+      "jurisdiction": "US-VT",
+      "seed_url": "https://dfr.vermont.gov/consumers",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 1,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "australia_asic",
+      "jurisdiction": "AU",
+      "seed_url": "https://moneysmart.gov.au/insurance",
+      "status": "excluded_or_held_for_terms_or_alias",
+      "reason": "Web extracts require separate permission; teaching-resource licence does not cover the selected general web pages.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 5,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "canada_fcac",
+      "jurisdiction": "CA",
+      "seed_url": "https://www.canada.ca/en/financial-consumer-agency/services/insurance.html",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://www.canada.ca/en/transparency/terms.html",
+        "sha256": "1eb0f848fc9c120ebb2d2636f919bb9efc2d3b2ced1516797117cce46acaf9c1",
+        "acquired_utc": "2026-10-04T14:30:47.260043+00:00",
+        "basis": "Noncommercial reproduction permitted with accuracy, full title/author/URL attribution; excludes third-party rights and official symbols."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 3,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "us_dol_ebsa",
+      "jurisdiction": "US",
+      "seed_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.dol.gov/general/aboutdol/copyright"
+      ],
+      "historical_host_url_mentions": 6889,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "us_cms",
+      "jurisdiction": "US",
+      "seed_url": "https://www.cms.gov/cciio/resources/fact-sheets-and-faqs",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 5274,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "us_fema_nfip",
+      "jurisdiction": "US",
+      "seed_url": "https://www.floodsmart.gov/flood-insurance/why",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.fema.gov/about/website-information"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "india_irdai",
+      "jurisdiction": "IN",
+      "seed_url": "https://irdai.gov.in/faqs",
+      "status": "excluded_or_held_for_access",
+      "reason": "Robots disallows all paths, including ChatGPT-User. Homepageguardblocked beforeHTTP; no alternate retrieval.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen.",
+      "local_review_record": "stage109_source_selection.json",
+      "review_record_sha256": "341fc62059f39d723513f5e7427eb2bc0403c64dfdcb0ff61a222cb0b6f91995"
+    },
+    {
+      "publisher": "singapore_moneysense",
+      "jurisdiction": "SG",
+      "seed_url": "https://www.moneysense.gov.sg/insurance/",
+      "status": "excluded_or_held_for_terms_or_alias",
+      "reason": "Single personal-use copy permission does not establish wider benchmark reuse; held pending clearer permission.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "singapore_sdic",
+      "jurisdiction": "SG",
+      "seed_url": "https://www.sdic.org.sg/",
+      "status": "excluded_or_held_for_terms_or_alias",
+      "reason": "Use restricted to supporting SDIC functions/protection-scheme awareness; benchmark reuse not established.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "hongkong_ia",
+      "jurisdiction": "HK",
+      "seed_url": "https://www.ia.org.hk/en/consumer_corner/",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.ia.org.hk/robots.txt"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "hongkong_ifec",
+      "jurisdiction": "HK",
+      "seed_url": "https://www.ifec.org.hk/web/en/financial-products/insurance/index.page",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "newzealand_fma",
+      "jurisdiction": "NZ",
+      "seed_url": "https://www.fma.govt.nz/consumer/",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.fma.govt.nz/robots.txt"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "newzealand_icnz",
+      "jurisdiction": "NZ",
+      "seed_url": "https://www.icnz.org.nz/",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "newzealand_ifso",
+      "jurisdiction": "NZ",
+      "seed_url": "https://www.ifso.nz/",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.ifso.nz/robots.txt"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "australia_financialrights",
+      "jurisdiction": "AU",
+      "seed_url": "https://financialrights.org.au/factsheets/",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "australia_insurancelaw",
+      "jurisdiction": "AU",
+      "seed_url": "https://insurancelaw.org.au/factsheets/",
+      "status": "excluded_or_held_for_terms_or_alias",
+      "reason": "Redirects to Financial Rights; never count aliases as independent publishers.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "australia_apra",
+      "jurisdiction": "AU",
+      "seed_url": "https://www.apra.gov.au/frequently-asked-questions",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://www.apra.gov.au/copyright",
+        "sha256": "61a285ec18338dcd4d92c9e545952f7ceff6e4c14c85dd76aa07222b89abf9d5",
+        "acquired_utc": "2026-10-04T15:27:24.277435+00:00",
+        "basis": "APRA website material is CC BY 4.0 except Commonwealth coat of arms, APRA logos and third-party intellectual property. Preserve attribution; use only APRA-authored insurance guidance."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "uk_moneyhelper",
+      "jurisdiction": "GB",
+      "seed_url": "https://www.moneyhelper.org.uk/en/everyday-money/insurance",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.moneyhelper.org.uk/robots.txt"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "ireland_citizens",
+      "jurisdiction": "IE",
+      "seed_url": "https://www.citizensinformation.ie/en/consumer/insurance/",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.citizensinformation.ie/robots.txt"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "quebec_amf",
+      "jurisdiction": "CA-QC",
+      "seed_url": "https://lautorite.qc.ca/en/general-public/insurance",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://lautorite.qc.ca/robots.txt"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "newbrunswick_fcnb",
+      "jurisdiction": "CA-NB",
+      "seed_url": "https://fcnb.ca/en/insurance",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://fcnb.ca/en/insurance"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "uk_fca",
+      "jurisdiction": "GB",
+      "seed_url": "https://www.fca.org.uk/consumers/insurance",
+      "status": "pending_source_or_terms_review",
+      "reason": "Copyrightpage inaccessible viawebtool; no alternate retrieval; licence unresolved.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen.",
+      "local_review_record": "stage108_source_selection.json",
+      "review_record_sha256": "8343b43d630c9ee84b405c78d717240f5fbeecf065ff9bdf42c1de84bedffb4a"
+    },
+    {
+      "publisher": "ohio_odi",
+      "jurisdiction": "US-OH",
+      "seed_url": "https://insurance.ohio.gov/consumers",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "illinois_idoi",
+      "jurisdiction": "US-IL",
+      "seed_url": "https://idoi.illinois.gov/consumers.html",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "indiana_idoi",
+      "jurisdiction": "US-IN",
+      "seed_url": "https://www.in.gov/idoi/consumer-services/",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 4,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "colorado_doi",
+      "jurisdiction": "US-CO",
+      "seed_url": "https://doi.colorado.gov/for-consumers",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://doi.colorado.gov/robots.txt"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "connecticut_cid",
+      "jurisdiction": "US-CT",
+      "seed_url": "https://portal.ct.gov/cid",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 6,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "virginia_scc",
+      "jurisdiction": "US-VA",
+      "seed_url": "https://www.scc.virginia.gov/pages/Insurance",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "alaska_doi",
+      "jurisdiction": "US-AK",
+      "seed_url": "https://www.commerce.alaska.gov/web/ins/Consumers.aspx",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.commerce.alaska.gov/robots.txt"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "alabama_doi",
+      "jurisdiction": "US-AL",
+      "seed_url": "https://www.aldoi.gov/Consumers/",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://aldoi.gov/Disclaimer.aspx",
+        "sha256": "c7307a993ad0223a2bd71a0d0ead005025a56a38b9ffb5c151f505a5b5aa09a5",
+        "acquired_utc": "2026-10-04T14:41:55.584392+00:00",
+        "basis": "Explicit noncommercial unaltered reproduction/distribution with Department attribution, except item-specific restrictions."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "missouri_dci",
+      "jurisdiction": "US-MO",
+      "seed_url": "https://insurance.mo.gov/consumers/",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://insurance.mo.gov/robots.txt"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "kansas_kid",
+      "jurisdiction": "US-KS",
+      "seed_url": "https://insurance.kansas.gov/consumer-assistance/",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://insurance.kansas.gov/consumer-assistance/"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "southcarolina_doi",
+      "jurisdiction": "US-SC",
+      "seed_url": "https://doi.sc.gov/150/Consumers",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 1869,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "utah_uid",
+      "jurisdiction": "US-UT",
+      "seed_url": "https://insurance.utah.gov/consumers/",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://www.utah.gov/disclaimer.html",
+        "sha256": "f5398d246c620dac06185cc32e14e837982be931f9d17e62259f631056828d29",
+        "acquired_utc": "2026-10-04T14:41:55.593902+00:00",
+        "basis": "Copyright limitations permit personal/informational copying of unmodified state information except item-specific restrictions; source originals retained."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "louisiana_ldi",
+      "jurisdiction": "US-LA",
+      "seed_url": "https://www.ldi.la.gov/consumers",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.ldi.la.gov/consumers"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "nebraska_ndoi",
+      "jurisdiction": "US-NE",
+      "seed_url": "https://doi.nebraska.gov/consumer",
+      "status": "pending_source_or_terms_review",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 1423,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "alberta_goa",
+      "jurisdiction": "CA-AB",
+      "seed_url": "https://www.alberta.ca/insurance-consumer-complaints",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://www.alberta.ca/disclaimer",
+        "sha256": "56e96c84610851cb80879d13ce5bba9ef9dc5bc7bd6f177a456aac29242931c9",
+        "acquired_utc": "2026-10-04T14:41:55.954879+00:00",
+        "basis": "Noncommercial copying/distribution permitted with accuracy, no modification, Government of Alberta attribution and no official-version or endorsement claim."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "britishcolumbia_bcfsa",
+      "jurisdiction": "CA-BC",
+      "seed_url": "https://www.bcfsa.ca/public-resources/insurance",
+      "status": "excluded_or_held_for_terms_or_alias",
+      "reason": "Terms prohibit data mining/robots/extraction; no bulk collection.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "malaysia_pidm",
+      "jurisdiction": "MY",
+      "seed_url": "https://www.pidm.gov.my/en/how-we-protect-you/takaful-and-insurance-benefits-protection-system",
+      "status": "excluded_or_held_for_terms_or_alias",
+      "reason": "Terms prohibit inclusion in public/private electronic retrieval systems without permission.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "malta_mfsa",
+      "jurisdiction": "MT",
+      "seed_url": "https://www.mfsa.mt/consumers/insurance/",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.mfsa.mt/consumers/insurance/"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "uk_financial_ombudsman",
+      "jurisdiction": "UK",
+      "seed_url": "https://www.financial-ombudsman.org.uk/consumers/complaints-can-help/insurance",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Terms prohibit electronic retrieval-system storage without permission; excluded.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 3,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "ireland_fspo",
+      "jurisdiction": "IE",
+      "seed_url": "https://www.fspo.ie/decisions/",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Privacy policy does not establish benchmark reuse permission.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "massachusetts_doi",
+      "jurisdiction": "US-MA",
+      "seed_url": "https://www.mass.gov/orgs/division-of-insurance",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.mass.gov/orgs/division-of-insurance"
+      ],
+      "historical_host_url_mentions": 35,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "georgia_oci",
+      "jurisdiction": "US-GA",
+      "seed_url": "https://oci.georgia.gov/insurance-resources",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Reuse permission unresolved.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "delaware_doi",
+      "jurisdiction": "US-DE",
+      "seed_url": "https://insurance.delaware.gov/divisions/consumerhp/",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Reuse permission unresolved.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 1829,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "minnesota_commerce",
+      "jurisdiction": "US-MN",
+      "seed_url": "https://mn.gov/commerce/insurance/",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Redirect outside reviewed host; held.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 8,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "australia_afca",
+      "jurisdiction": "AU",
+      "seed_url": "https://www.afca.org.au/make-a-complaint/insurance",
+      "status": "excluded_access_denial",
+      "reason": null,
+      "terms": null,
+      "access_denial_urls": [
+        "https://www.afca.org.au/robots.txt"
+      ],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "canada_osfi",
+      "jurisdiction": "CA",
+      "seed_url": "https://www.osfi-bsif.gc.ca/en/supervision/insurance",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Seed returned404; valid public navigation unresolved.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "us_opm",
+      "jurisdiction": "US-FED",
+      "seed_url": "https://www.opm.gov/healthcare-insurance/insurance-faqs/",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://www.opm.gov/information-management/privacy-policy/",
+        "sha256": "243e5263ce17f5842b8b8f83887ba60937e83cce158aa73b4d3e55cfeaf1384b",
+        "acquired_utc": "2026-10-04T15:32:04.350479+00:00",
+        "basis": "Limited to official OPM-authored explanatory FAQs for federal insurance programs. Authorship/program scope is reviewed per document; U.S. government employee works are excluded from domestic copyright by17USC101/105. This is not a blanket license for everything hosted on a government domain. Exclude third-party carrier plan brochures, contractor publications, photos/logos, and any unclear authorship. Raw text remains local."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 19280,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "us_va",
+      "jurisdiction": "US-FED",
+      "seed_url": "https://www.va.gov/life-insurance/",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://department.va.gov/copyright-policy/",
+        "sha256": "35b976b2d2b3939cf3b3b1fe9c1a57a4d31bd24db15de6fd71522ecb68de7684",
+        "acquired_utc": "2026-10-04T16:26:45.302931+00:00",
+        "basis": "VA copyright policy explicitly states government-produced material on this and other VA websites is not copyright protected, while assigned copyrights may exist. Restrict to official agency-authored insurance explanations; exclude logos, images, third-party carrier publications and assigned-rights material pending per-document review."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 3,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "us_tricare",
+      "jurisdiction": "US-FED",
+      "seed_url": "https://www.tricare.mil/FAQs",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": null,
+      "terms": {
+        "url": "https://www.tricare.mil/Privacy",
+        "sha256": "3eb2c8a93a357a0cd9d19c03abb17ab57a19ba2a7dd145953dc4788daae5da29",
+        "acquired_utc": "2026-10-04T15:32:08.070887+00:00",
+        "basis": "TRICARE privacy/website notice section2 explicitly permits copying/distribution of information not identified as copyright-protected, with attribution. Use only official insurance-benefit/eligibility/cost guidance; exclude third-party copyrighted material and medical treatment advice."
+      },
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "saskatchewan_fcaa",
+      "jurisdiction": "CA-SK",
+      "seed_url": "https://fcaa.gov.sk.ca/consumers-investors-pension-plan-members/consumers/purchasing-and-using-insurance",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Provincial copyright permission scope on FCAA host unresolved.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "manitoba_insurance",
+      "jurisdiction": "CA-MB",
+      "seed_url": "https://www.gov.mb.ca/finance/cca/insurance/",
+      "status": "robots_named_agent_disallowed",
+      "reason": "ChatGPT-User and GPTBot explicitly disallowed. Initial helper incorrectly checked only wildcard and made one seed request, redirected to resource-not-found page. No content adopted; stopped, preserved incident and corrected named-agent checks.",
+      "preflight_sha256": "1100e5dffd4873406d4d1f52b5d64abfe02c4fa79ab3a1b995e659d7ba3ba7c3",
+      "access_denial_urls": [
+        "https://www.gov.mb.ca/robots.txt"
+      ],
+      "previous_status": "pending_source_or_terms_review"
+    },
+    {
+      "publisher": "novascotia_insurance",
+      "jurisdiction": "CA-NS",
+      "seed_url": "https://novascotia.ca/finance/en/home/insurance/default.aspx",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Canonical-host redirect requires review.",
+      "terms": null,
+      "access_denial_urls": [],
+      "historical_host_url_mentions": 0,
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+    },
+    {
+      "publisher": "us_ssa",
+      "jurisdiction": "US",
+      "seed_url": "https://www.ssa.gov/robots.txt",
+      "status": "blocked_http_403",
+      "reason": "Live robots request returned403; no source pages adopted, no retry or alternate access. Reuse permission unverified.",
+      "preflight_sha256": "da06f1bf118ee9a065cc134af64f96869fa43ab750626d120b73e160c928067d",
+      "access_denial_urls": [
+        "https://www.ssa.gov/robots.txt"
+      ]
+    },
+    {
+      "publisher": "ontario_fsra",
+      "jurisdiction": "CA-ON",
+      "seed_url": "https://www.fsrao.ca/consumers/auto-insurance",
+      "status": "held_conditional_terms_applicability",
+      "reason": "Consumer paths allowed by relevant robots groups and five bounded samples read. FSRA links Ontario noncommercial unaltered-copy terms but also asserts own copyright; applicability interpretation held for explicit resolution. No approval or bulk acquisition. Initial crawl-delay lapse preserved; subsequent requests respected delay. Claims page also has unresolved coverage/fault wording.",
+      "preflight_sha256": "1100e5dffd4873406d4d1f52b5d64abfe02c4fa79ab3a1b995e659d7ba3ba7c3",
+      "access_denial_urls": []
+    },
+    {
+      "publisher": "florida_dfs",
+      "jurisdiction": "US-FL",
+      "seed_url": "https://www.myfloridacfo.com/",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Robots URL inaccessible through authorized tool; HTTP status unknown. Stopped without retries or alternate channels.",
+      "local_review_record": "agent_new_sources06_preflight.json",
+      "review_record_sha256": "8f502310294d750de4af77c54c570fe04eb2cd5896c677bf573d5cdfc4b61a79",
+      "new_approved_source": false
+    },
+    {
+      "publisher": "michigan_difs",
+      "jurisdiction": "US-MI",
+      "seed_url": "https://www.michigan.gov/difs/consumers",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Official policies prohibit automated access and restrict copying/derivatives absent legal permission or written authorization. Stopped immediately after terms; no bulk acquisition.",
+      "terms_url": "https://www.michigan.gov/som/footer/policies",
+      "local_review_record": "agent_new_sources06_preflight.json",
+      "review_record_sha256": "8f502310294d750de4af77c54c570fe04eb2cd5896c677bf573d5cdfc4b61a79",
+      "new_approved_source": false
+    },
+    {
+      "publisher": "au_privatehealth_ombudsman",
+      "jurisdiction": "AU-FED",
+      "seed_url": "https://privatehealth.gov.au/health_insurance/index.htm",
+      "status": "acquired_pending_extraction_content_history_review",
+      "reason": "Approved bounded static prose acquisition completed without access denial. New canonical extraction and content/history/family audits are pending; no acquired page implies accepted QA.",
+      "terms": {
+        "url": "https://privatehealth.gov.au/footer/about/copyright.htm",
+        "sha256": "6a944c7388ec291857b20ba5dda7392761d7c61adce59a637bc1143a74a51c0f",
+        "basis": "Observed source copyright grant and exact linked CC BY3.0Australia deed permit copying/adaptation with attribution. Restrict to clearly government-authored static consumer explanatory prose for local noncommercial research; preserve source disclaimer, titles and notices, mark authored modifications. Source labels licence International but links AU3.0: mismatch retained, no4.0 upgrade. Additional site commercial-promotion/framing limits respected. No third-party insurer/PHIS/product data, images, logos, dynamic tools or restricted robots routes."
+      },
+      "preflight_record_sha256": "c151a7e0d6ad51680feb45f08707e0d8bf6b7b6c46e41be7b56ddbf2731f4aa2",
+      "rights_completion_sha256": "7f6ccb49f086dc2fd7c5df7848c76c70dd28b3b12ce685b183a4ba00e71cd742",
+      "raw_redistribution_in_this_task": false,
+      "acquired_pages": 25,
+      "accepted_items": 0,
+      "acquisition_report_sha256": "4df346bd4e0c6aae6f0c8387edaa8d8f49ef51212df994616f6e2c466b1cb65d"
+    },
+    {
+      "publisher": "au_services_australia",
+      "jurisdiction": "AU-FED",
+      "seed_url": "https://www.servicesaustralia.gov.au/",
+      "status": "excluded_or_held_for_terms_or_scope",
+      "reason": "Authorized robots request timed out before policy retrieval. HTTP status unknown; no retry, alternative channel, terms/content fetch or approval.",
+      "local_review_record": "agent_new_sources08_preflight.json",
+      "review_record_sha256": "c151a7e0d6ad51680feb45f08707e0d8bf6b7b6c46e41be7b56ddbf2731f4aa2"
+    },
+    {
+      "publisher": "us_usda_rma",
+      "jurisdiction": "US-FED",
+      "seed_url": "https://www.rma.usda.gov/about-crop-insurance/frequently-asked-questions",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": "Explicit RMA public-information copying/distribution permission, independently reviewed with copyright and linking policies. Limited to government-authored static explanatory HTML for crop/livestock insurance policyholders. Preserve attribution and crop-year/version. Exclude third-party/uncertain-authorship works, all image/media assets, PDFs, external sites, dynamic tools, general farm relief and corporate regulation. Per-page authorship and restrictions must be reviewed before QA use. No assertion that all RMA content is public domain.",
+      "terms": {
+        "url": "https://www.rma.usda.gov/about-rma/website-policies-important-links/privacy-policy",
+        "sha256": "0e62c7f8b8a00aa93e4790fa6cb31053f846e04d41b5d179057ca65bb84c94e7"
+      },
+      "local_review_record": "agent_usda_rma_preflight_independent01.json",
+      "review_record_sha256": "6b5a73f602cf0ef5d7377b6496ec37631c5b05fb6b3b828d6ad63a221847dddf",
+      "raw_redistribution_in_this_task": false
+    },
+    {
+      "publisher": "nz_nhc",
+      "jurisdiction": "NZ",
+      "seed_url": "https://www.naturalhazards.govt.nz/insurance-and-claims/about-nhcover/",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": "Entire disclaimer/copyright body read. Unless indicated otherwise text is CC BY-NC 4.0; attribution NHC Toka Tu Ake with source and license URLs, retain disclaimer and distinguish authored derivatives. Noncommercial local research only. Exclude photographs, logos, icons, trademarks, third-party assets and contrary item notices. No raw or per-question uploads. Statute prevails over plain-language overview.",
+      "terms": {
+        "url": "https://www.naturalhazards.govt.nz/disclaimer/",
+        "sha256": "c3ee1ecbc9210f6eae2d53d1517a2ecd4c7559287531496e500ce905f8c60a14"
+      },
+      "local_review_record": "stage91_exact_html_preflight.json",
+      "review_record_sha256": "23fa5954e98d88c9c1377b314c94bc98bf095074a1084aba5a3fceaf72a340ef",
+      "access_denial_urls": [],
+      "raw_redistribution_in_this_task": false,
+      "approved_static_html_documents": 8,
+      "latest_content_review_record": "stage93_html_content_review.json",
+      "latest_content_review_sha256": "5c58406d69a88c2988bca9cac009d6402ac5e46f78c67af99186742d5e70dd3f"
+    },
+    {
+      "publisher": "nz_mbie_consumer",
+      "jurisdiction": "NZ",
+      "seed_url": "https://www.consumerprotection.govt.nz/help-product-service/managing-money/insurance",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": "Crown-authored explanatory prose under full-read CC-BY-NC4.0copyrightterms. OriginalauthoredQAadaptations attributed, noncommerciallocalonly. Excludephotographs/logos/thirdpartyassets andexplicitlyattributedInsuranceCouncilstatistics/codewording; noexternalclaimcase content. Generalconsumerlaw notcurrentlegaladvice.",
+      "terms": {
+        "url": "https://www.consumerprotection.govt.nz/copyright",
+        "sha256": "2cb7293ab1c5a3ed6529bd779e45ae5571cd098cfb818d421432de5965a30cbe",
+        "acquired_utc": "2026-10-07T20:19:52.209132+00:00",
+        "basis": "Crown-authored explanatory prose under full-read CC-BY-NC4.0copyrightterms. OriginalauthoredQAadaptations attributed, noncommerciallocalonly. Excludephotographs/logos/thirdpartyassets andexplicitlyattributedInsuranceCouncilstatistics/codewording; noexternalclaimcase content. Generalconsumerlaw notcurrentlegaladvice."
+      },
+      "access_denial_urls": [],
+      "approved_static_html_documents": 5,
+      "latest_content_review_record": "stage99_html_content_review.json",
+      "latest_content_review_sha256": "b810012eccd5b5ec01d8e0601ae9878750b8ed7b0da051e1e7c656a879b3336f"
+    },
+    {
+      "publisher": "us_pbgc",
+      "jurisdiction": "US",
+      "seed_url": "https://www.pbgc.gov/",
+      "status": "excluded_or_held_for_terms_or_alias",
+      "reason": "Terms require express written PBGC permission to copy, modify, distribute, display or otherwise use website content. Permission absent; no consumer pages/tables/QA acquired and no source approval. No alternate source or route attempted.",
+      "terms": "https://www.pbgc.gov/about/policies/website",
+      "access_denial_urls": [],
+      "local_review_record": "stage106_source_selection.json",
+      "review_record_sha256": "244aacc896e22efc87a745e9d217dd4e276b51a3ba30110ac19cd7aa53af9b87"
+    },
+    {
+      "publisher": "eu_youreurope",
+      "jurisdiction": "EU",
+      "seed_url": "https://europa.eu/youreurope/citizens/vehicles/insurance/accident/index_en.htm",
+      "status": "approved_exact_pages_local_research",
+      "reason": "CC BY4.0 for EU-owned prose only; keep attribution and identify authored QA as adaptation, no endorsement. Raw material stays local. Each exact page reviewed, no blanket domain or child-link approval.",
+      "terms": {
+        "url": "https://european-union.europa.eu/legal-notice_en",
+        "sha256": "326f3606cd6277f974af5f52991123325453f3eb59a6a4150494ef4f1f005b30"
+      },
+      "local_review_record": "stage113_html_content_review.json",
+      "review_record_sha256": "6d8230ace6492b62d8a990c421ac70eff96dc9b0ebea19dc2bf85ae2be0bf8c6",
+      "held_exact_urls": [
+        {
+          "document_id": "81b50f1f134082e4627c7f9c",
+          "url": "https://europa.eu/youreurope/citizens/health/planned-healthcare/right-to-treatment/index_en.htm",
+          "raw_sha256": "6718206426dcd84dcce401fc27df1d0e4a928357d9965a0e5c840fa4a5860a77",
+          "reason": "Planned-treatment page combines broad cheaper-price rule and EHIC-only proof assertion. Those statements need regime-specific corroboration and may mislead across S2/directive routes. No questions and not admitted to active corpus; no follow-up acquisition in this batch."
+        }
+      ],
+      "access_denial_urls": [],
+      "raw_redistribution_in_this_task": false
+    },
+    {
+      "publisher": "us_rrb",
+      "jurisdiction": "US",
+      "seed_url": "https://www.rrb.gov/Benefits/AB-31",
+      "status": "approved_exact_two_booklets_local_research",
+      "reason": "RRB Digital Rights Policy explicitly permits educational/informational use with RRB.gov attribution; copyright/trademark notices require additionalpermission and endorsements/misleadinguse prohibited. Both original agency prose bodies reviewed; images/logos/thirdparty materials excluded, raw sources local only.",
+      "terms": {
+        "url": "https://www.rrb.gov/Policy",
+        "sha256": "c49297c3eb950b93ac57c597021a27cb2fd0eb6cd0a97dea21abfd83a5ad098c"
+      },
+      "local_review_record": "stage114_html_content_review.json",
+      "review_record_sha256": "06448cfb06d42fc44ccee814f9373ace6b1e0b3b3fff59c177285ef9a4d2a245",
+      "held_exact_urls": [
+        {
+          "url": "https://www.rrb.gov/Benefits/Medicare/GeneralInfoMedicare/RB20",
+          "reason": "PartD says musthavePartA rather than identifying any PartB-only route; broader enrollment scope unresolved. Partial full-body review plus focused gap slices, no item authored and not admitted."
+        },
+        {
+          "url": "https://www.rrb.gov/UB-11/Sickness_Benefits_for_Railroad_Employees",
+          "reason": "2023 booklet tableofcontents only; no child chapters or PDF acquired. Prefer2026UB9 for updatednumbers."
+        }
+      ],
+      "access_denial_urls": [],
+      "raw_redistribution_in_this_task": false
+    }
+  ],
+  "excluded_previously_known": [
+    "Hawaii DCCA automated-access prohibition",
+    "Washington OIC403",
+    "All previously denied local memory/demo-upload paths"
+  ],
+  "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
+  "updated_utc": "2026-10-07T22:25:14.662301+00:00"
+}
