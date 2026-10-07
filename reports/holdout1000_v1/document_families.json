@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-07T16:05:57.439762+00:00",
+  "updated_utc": "2026-10-07T19:23:27.787941+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1076,6 +1076,48 @@
         "stage87_source_decisions.json"
       ],
       "review_record_sha256": "fc649cccdacd498d8a8cb2b60616ff217c4063f5d21301d1091d3995a8492ce6"
+    },
+    {
+      "family_id": "family91_nz_nhc_natural_hazards_cover",
+      "document_ids": [
+        "99b09b65777f3cf2f8fa1b9f",
+        "816d2523ef39e80ddaa13621"
+      ],
+      "relation": "Overview andnewclaimroutingpage shareoperativebrokerauthorisation/routingtext;onefamilycap20. No newquestionfromaddedroutingpage.",
+      "local_review_records": [
+        "stage91_source_decisions.json",
+        "stage93_source_decisions.json"
+      ],
+      "review_record_sha256": "41a24074afa3085623d1c5f1e482c113e8831a213d91f60ca6cbabe71a31539b",
+      "extension_review_sha256": [
+        "40e3c37ed27fe65be28b0b753846da25a8f27bf691f92afa1b51489f7e7b8a1c"
+      ]
+    },
+    {
+      "family_id": "family93_nz_nhc_complaints_disputes_rights",
+      "document_ids": [
+        "f2b0d01f032dd0c4d7577d78",
+        "451d4320b99df92755459500",
+        "7563590d2fa4c9a6a77695d4",
+        "04afd1adc88383c4df5ccddb"
+      ],
+      "relation": "Complaint/dispute/insured-rights explanations andnavigationlanding; substantiallysharedcomplainttimelines andCoderecourse, conservativelyonefamily.",
+      "local_review_records": [
+        "stage93_source_decisions.json"
+      ],
+      "review_record_sha256": "40e3c37ed27fe65be28b0b753846da25a8f27bf691f92afa1b51489f7e7b8a1c"
+    },
+    {
+      "family_id": "family93_nz_nhc_home_claim_assignment",
+      "document_ids": [
+        "3ab52c1c3fd2481acdc06a7a",
+        "747f5eb23ce02e64ab99a82a"
+      ],
+      "relation": "Homebuyerlanding andoperativepreviousclaimassignment/diligencechapter; oneconsumerclaimtransferfamily.",
+      "local_review_records": [
+        "stage93_source_decisions.json"
+      ],
+      "review_record_sha256": "40e3c37ed27fe65be28b0b753846da25a8f27bf691f92afa1b51489f7e7b8a1c"
     }
   ],
   "document_text_sha256": {
@@ -1469,7 +1511,15 @@
     "e0039127c25354382716ea81": "ba6454c5ad3b38019196e8f0f7b9e4ac36e5ef7153ac4f41f2810e9a8f93a7d8",
     "ebb0f3db263274d67756ed6b": "94138d02b3294fa30a79aa7a62a668f9f2ecc49c6e41606f60db2a9f4ca224de",
     "ecc25764a562a23588082b1c": "247f6dc0ebd5c91a64caa6e5cbcdc9fef6f39a6fd299cabc8a38f65e30930626",
-    "2687d2ddc856122ac61e4e63": "e026c1f6d31d3e25fad7055dba735975b7fbd1bf8add90b004ea4076e60fa08e"
+    "2687d2ddc856122ac61e4e63": "e026c1f6d31d3e25fad7055dba735975b7fbd1bf8add90b004ea4076e60fa08e",
+    "99b09b65777f3cf2f8fa1b9f": "2df6e7da7efa5ceafb6e77d849e735eba18e8cfbf8e449226a4d3643f90122d2",
+    "f2b0d01f032dd0c4d7577d78": "89e6ad198f610078c67119a2019b8872d78dd4b815efe3895330d253814ef325",
+    "816d2523ef39e80ddaa13621": "67062f823b1a7c1e11cc80527116aa3218355d97e9ca012162db4c74b725a080",
+    "3ab52c1c3fd2481acdc06a7a": "5e92ea4c25718820c23fc1ff5344c86807f2023ec904be1ab582e70b493ee781",
+    "451d4320b99df92755459500": "021d09b8f29de35889fd3b39091280391c89b8224045d8201ac59669593b17c9",
+    "7563590d2fa4c9a6a77695d4": "b8fd42bd7f54010a02945d178f9e19144686f3524440e795fe78ca5da33fa053",
+    "04afd1adc88383c4df5ccddb": "a3ba3fb768dbcf6d9e72542df5d510b8d152b46f5167a67b75abceb02269562e",
+    "747f5eb23ce02e64ab99a82a": "0af389bc80690313caf04137daf97ca770b921321f83f51b25071548f019159d"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

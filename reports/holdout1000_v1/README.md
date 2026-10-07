@@ -12,49 +12,53 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is stage88_progress.json: **578 provisional
-TEST and 58 DEV records across 139 TEST document families**, with **zero
-frozen/accepted records**. All 636 retained item gates pass. Another 422 independent
-TEST questions are needed; all four TEST type targets remain unmet. DEV minimums
-are provisionally met. Publisher concentration stays within 20% and each family
-at most 20. Earlier reports are historical snapshots and must not be summed.
+The latest construction checkpoint is stage93_progress.json: **631 provisional
+TEST and 58 DEV records across 143 TEST document families**;
+**accepted/frozen counts remain zero**. All 689 retained item gates pass.
+Another 369 independent TEST questions are needed. All four TEST type
+targets remain unmet; DEV minimums are provisionally met. Publisher concentration
+stays within 20% and each document family at most 20. Earlier reports are historical
+snapshots and must not be added together.
 
-Stages 82-88 reviewed 27 new drafts, retained 26 TEST and held one historical
-information-need repeat. One prior TEST was revoked to preserve the 20-item cap
-after substantive NY premium/healthcare source-family consolidation. Net growth
-from stage81's 553 TEST/58 DEV is 25 TEST. TEST now comprises 383 ordinary,
-85 numerical, 66 multi-evidence and 44 insufficient-evidence tasks; remaining
-targets are respectively 217, 65, 84 and 56. DEV remains 25/10/12/11.
+Stages89–93 reviewed 54 new drafts, retained 53 TEST and held 1; net
+TEST growth from stage88's 578/58 is 53. TEST tasks are 407 ordinary,
+91 numerical, 82 multi-evidence and 51 insufficient-evidence;
+remaining targets are 193, 59, 68 and 49. DEV remains 25/10/12/11.
+A proposed FEGLI assignment question was held for repeating an existing core need.
+Cached OPM enrollment material remains deferred because held-source family overlap
+is unresolved. Prospective ACC source terms timed out; no retry, alternative
+retrieval or approval followed. Source-only stages90 and92 add no questions.
 
-Evidence-heading repairs in stages82 and87 preserved the original questions and
-answers; their changed projections were rechecked without re-encoding vectors.
-Selected numerical answers were independently recomputed; multi-evidence tasks
-require each distinct fact and refusals preserve missing issued-contract facts.
-New candidates, accessible historical nearest texts and changed old-item
-relations received sequential Codex content review, not human/expert adjudication.
-Exact/near duplicates, source permissions, dates, jurisdictions and evidence
-correspondence were checked. Unknown pretraining contamination remains unresolved.
+NHC official explanatory HTML was acquired under verified CC BY-NC4.0 terms,
+robots restrictions and exact linked URL guards. Sources retain written attribution,
+license and disclaimer references; images, external forms and third-party content
+were excluded. Whole-publisher TEST assignment preceded any development. The NHC
+coverage overview and its substantively overlapping new-claim page share one family
+at its unchanged 20-item cap. Complaint/dispute/rights pages and home claim-assignment
+pages form two further reviewed families; common navigation does not create a
+substantive family link. Immutable snapshots15 and16 preserve all earlier document
+and original FAQ bytes. Source text and individual questions remain local.
 
-The NJ/Utah consumer-purchase family conservatively groups seven related documents.
-Three Alberta government auto-endorsement PDFs were acquired through their exact
-catalog links after current robots/terms checks; these extend the existing auto
-family to its unchanged 20-item cap. Immutable snapshots13 and14 preserve old
-document and FAQ bytes. Blank issued-form selections/durations and unretrieved
-underlying policy terms were not guessed. WI credit guidance remains deferred
-because its canonical URL occurs in the historical research corpus. Source-only
-stages83 and86 add no questions. All original15 revocations, scope holds, the CA
-task correction, unchanged same-ID repairs and TDI's all-DEV assignment persist.
+Selected dates distinguish 2022 cap phase-in, damage-based 2024 statutory regimes,
+and interaction-based insured-person rights. Numerical results were independently
+recomputed; multi-evidence tasks require each cited rule; refusals preserve missing
+personal facts or unavailable applicable procedures. Candidate/history neighbors,
+changed active relations, evidence correspondence, source permission and family
+isolation received sequential Codex content review, not human/expert adjudication.
+All earlier holds/revocations, same-ID repairs, CA task correction and TDI DEV
+assignment remain. A copied private ledger display label was corrected by an
+append-only erratum; the actual vector counts and public totals were already correct.
 
-27 new vectors used four sequential local model processes and four small forward
-batches; unchanged history and old candidate vectors were reused. Source access
-used five bounded HTTP requests totaling 1,812,236 response bytes, including
-robots/terms and three PDFs. There were no paid services, extra agents, training,
-final QA inference, test-driven tuning or raw-data publication. Offline CPU
-verification passed 480 tests and 58 subtests. Count/type gates still block freezing.
+54 new vectors used 3 sequential local model processes and
+5 small forward batches; old candidate/history vectors were reused.
+Local source acquisition used 10 bounded HTTP requests and 777,695 response bytes.
+There were no paid services, subagents, model downloads, training, final QA inference,
+test-directed tuning or raw-data publication. Offline CPU verification passed
+480 tests and 58 subtests. Global count/type gates still block freezing.
 
-Prior commit b7fc44b passed all five CI jobs in run37634049067. This checkpoint's
-exact-commit terminal CI status is recorded separately in the local receipt.
-PR8 remains draft and unmerged; the PR-description API403 restriction is binding.
+Prior commit1e28a0f passed all five CI jobs in run37649728442. This checkpoint's
+exact-commit terminal CI receipt is recorded separately. PR8 stays draft/unmerged;
+the PR-description API403 restriction remains binding.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

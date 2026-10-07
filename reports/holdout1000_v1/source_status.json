@@ -893,6 +893,24 @@
       "local_review_record": "agent_usda_rma_preflight_independent01.json",
       "review_record_sha256": "6b5a73f602cf0ef5d7377b6496ec37631c5b05fb6b3b828d6ad63a221847dddf",
       "raw_redistribution_in_this_task": false
+    },
+    {
+      "publisher": "nz_nhc",
+      "jurisdiction": "NZ",
+      "seed_url": "https://www.naturalhazards.govt.nz/insurance-and-claims/about-nhcover/",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": "Entire disclaimer/copyright body read. Unless indicated otherwise text is CC BY-NC 4.0; attribution NHC Toka Tu Ake with source and license URLs, retain disclaimer and distinguish authored derivatives. Noncommercial local research only. Exclude photographs, logos, icons, trademarks, third-party assets and contrary item notices. No raw or per-question uploads. Statute prevails over plain-language overview.",
+      "terms": {
+        "url": "https://www.naturalhazards.govt.nz/disclaimer/",
+        "sha256": "c3ee1ecbc9210f6eae2d53d1517a2ecd4c7559287531496e500ce905f8c60a14"
+      },
+      "local_review_record": "stage91_exact_html_preflight.json",
+      "review_record_sha256": "23fa5954e98d88c9c1377b314c94bc98bf095074a1084aba5a3fceaf72a340ef",
+      "access_denial_urls": [],
+      "raw_redistribution_in_this_task": false,
+      "approved_static_html_documents": 8,
+      "latest_content_review_record": "stage93_html_content_review.json",
+      "latest_content_review_sha256": "5c58406d69a88c2988bca9cac009d6402ac5e46f78c67af99186742d5e70dd3f"
     }
   ],
   "excluded_previously_known": [
@@ -901,5 +919,5 @@
     "All previously denied local memory/demo-upload paths"
   ],
   "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
-  "updated_utc": "2026-10-04T20:25:21.953083+00:00"
+  "updated_utc": "2026-10-07T19:12:29.804887+00:00"
 }

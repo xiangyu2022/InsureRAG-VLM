@@ -313,5 +313,64 @@
     "max_pages": 60,
     "per_document_review_required": true,
     "raw_redistribution_in_this_task": false
+  },
+  {
+    "id": "nz_nhc",
+    "jurisdiction": "NZ",
+    "terms": "https://www.naturalhazards.govt.nz/disclaimer/",
+    "terms_sha256": "c3ee1ecbc9210f6eae2d53d1517a2ecd4c7559287531496e500ce905f8c60a14",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-07T18:58:38.381896+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "Entire disclaimer/copyright body read. Unless indicated otherwise text is CC BY-NC 4.0; attribution NHC Toka Tu Ake with source and license URLs, retain disclaimer and distinguish authored derivatives. Noncommercial local research only. Exclude photographs, logos, icons, trademarks, third-party assets and contrary item notices. No raw or per-question uploads. Statute prevails over plain-language overview.",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/legalcode",
+    "attribution": "Natural Hazards Commission Toka Tu Ake; original page title, URL, acquisition time and CC BY-NC4.0 link. Authored QA separate and marked as adaptation; source disclaimer retained; no endorsement.",
+    "preflight_record": "stage91_exact_html_preflight.json",
+    "preflight_record_sha256": "23fa5954e98d88c9c1377b314c94bc98bf095074a1084aba5a3fceaf72a340ef",
+    "allowed_hosts": [
+      "www.naturalhazards.govt.nz"
+    ],
+    "prefixes": [
+      "/insurance-and-claims/about-nhcover/",
+      "/insurance-and-claims/complaints-and-disputes/",
+      "/insurance-and-claims/claims/make-a-new-claim/",
+      "/be-prepared/home-buyers/",
+      "/insurance-and-claims/complaints-and-disputes/make-a-complaint/",
+      "/insurance-and-claims/complaints-and-disputes/dispute-a-claim-decision/",
+      "/insurance-and-claims/complaints-and-disputes/code-of-insured-persons-rights/",
+      "/insurance-and-claims/claims/buying-or-selling-a-home-with-previous-claims/"
+    ],
+    "excluded_prefixes": [
+      "/admin",
+      "/Security/"
+    ],
+    "excluded_path_keywords": [
+      ".pdf",
+      "/assets/",
+      "search",
+      "form"
+    ],
+    "minimum_interval_seconds": 1.2,
+    "seeds": [
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/about-nhcover/",
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/complaints-and-disputes/",
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/claims/make-a-new-claim/",
+      "https://www.naturalhazards.govt.nz/be-prepared/home-buyers/",
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/complaints-and-disputes/make-a-complaint/",
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/complaints-and-disputes/dispute-a-claim-decision/",
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/complaints-and-disputes/code-of-insured-persons-rights/",
+      "https://www.naturalhazards.govt.nz/insurance-and-claims/claims/buying-or-selling-a-home-with-previous-claims/"
+    ],
+    "max_pages": 8,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false,
+    "assigned_split": "test",
+    "assignment_reason": "New independently sourced publisher assigned wholly TEST before any training, tuning or finalQA inference. No existing devpublisher overlap.",
+    "extension_records": {
+      "stage93_exact_html_preflight.json": "75647eebe6582f02dae665ddab99ded08ab9b57e5482890a938f657b31443f1e",
+      "stage93b_exact_html_preflight.json": "aeaeb8755fce9bb6a465cea2e9f1387321e8b7f92ea4a996e6019d4c72c84c30",
+      "stage93_html_content_review.json": "5c58406d69a88c2988bca9cac009d6402ac5e46f78c67af99186742d5e70dd3f"
+    },
+    "extension_reason": "Seven directly linked official consumer HTMLpages individually read; exactURLguards, cachedrobots/terms reused; sameCC-BY-NC4.0exclusions. No automaticapprovalofchildlinks."
   }
 ]
