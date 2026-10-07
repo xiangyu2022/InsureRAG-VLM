@@ -12,46 +12,47 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is stage71_progress.json:
-541 provisional TEST and 56 DEV records across 139 TEST document families,
-with **zero frozen/accepted records**. All 597 retained item gates pass.
-Another 459 independent TEST questions are needed. TEST type targets and
-the DEV numerical minimum remain unmet (8 numerical DEV; 10 required).
+The latest item construction checkpoint is stage80_progress.json; stage81 is
+a source-only review. There are 553 provisional TEST and 58 DEV records across
+138 TEST document families, with **zero frozen/accepted records**. All 611
+retained item gates pass. Another 447 independent TEST questions are needed.
+All four TEST type targets remain unmet; DEV minimum coverage is now met.
 Publisher concentration remains within 20%; each family remains at most 20.
 
-Stages 60-71 processed 42 new drafts. Eight new candidates were held:
-two historical semantic duplicates, one same-gap candidate duplicate, and five
-regulatory-administration questions outside the established consumer scope.
-Five temporarily retained items were subsequently revoked: two DEV professional
-continuing-education questions and three TEST representative-compensation or
-project-milestone questions. Net growth from 520 TEST/48 DEV is 21 TEST+8 DEV.
-All 34 items retained earlier in this interval, all 58 pre-correction DEV records,
-and matching administrative-topic records were reviewed for scope. The scope is
-now explicit in protocol.json; this records existing stage19/stage43 restrictions.
-Earlier numbered reports remain historical snapshots, superseded by stage71.
+Stages 72-81 processed 21 new drafts: 17 TEST and two DEV were retained, while
+two historical/candidate semantic repeats were held. Five previously retained
+Wisconsin program-administration TEST items were revoked after scope review of
+all 51 active Wisconsin records. Net growth from 541 TEST/56 DEV is 12 TEST+2 DEV.
+These exclusions concern scope, not an assertion that their arithmetic was wrong.
+Earlier numbered reports remain historical snapshots and must not be summed.
 
-TEST has 364 ordinary, 78 numerical, 60 multi-evidence and 39 refusal tasks.
-DEV has 25 ordinary, 8 numerical, 12 multi-evidence and 11 refusal tasks.
-One wildfire nonrenewal task was reclassified from multi-evidence to ordinary:
-its second span was corroborative rather than necessary. Six TDI drafts were
-corrected to DEV during assembly, preserving publisher-wide split isolation;
-none increased TEST. Original 15 revocations, six stage43 scope revocations,
-inherited holds and three unchanged repaired records remain effective.
+TEST has 370 ordinary, 80 numerical, 62 multi-evidence and 41 refusal tasks.
+DEV has 25 ordinary, 10 numerical, 12 multi-evidence and 11 refusal tasks.
+Related Alberta auto forms, bilingual TDI child coverage, VA transition guidance
+and shared NJ/Utah auto claims bodies were conservatively grouped. The latter
+family and the CA workers-compensation family each reach the unchanged 20 cap.
+Original 15 revocations, stage43 and stage71 scope revocations, inherited holds,
+the CA task correction and three unchanged repaired records remain effective.
+TDI remains entirely DEV. No previously held source was released.
 
-Source and evidence checks reused cached original bodies and hashes, reviewed
-jurisdiction/date applicability and source permissions, and conservatively joined
-related document families. No NC held-source restriction was released. A mixed-year
-HCFSA source was deferred. Codex content review is not human or expert adjudication.
-Automatic similarity scores do not establish independence; two historical repeats
-were found by content review despite no threshold flag.
+Cached source hashes, permissions, evidence, jurisdiction and dates were checked.
+Selected calculations used independent exact arithmetic; multi-evidence tasks
+require distinct necessary facts and refusal tasks preserve a real information gap.
+Historical/candidate neighbors and changed old-item relationships were reviewed.
+NC template markup and WI termination-source prechecks repeated some earlier
+deferred-source work. The new read-only inspect_holdout1000_source_state.py
+looks up prior review records and current family counts before another batch;
+its output is explicitly not clearance. Source-only stages add no questions.
+Codex content review is not human or expert adjudication. Unknown pretraining
+contamination is not resolved.
 
-42 new vectors used 10 sequential local model processes and
-10 small forward batches. Unchanged history and old candidate vectors were reused.
-No new source requests, paid services, extra agents, training, final evaluation,
-test-driven tuning or raw-data publication occurred. Offline CPU verification:
-477 tests and 58 subtests passed. Unknown pretraining contamination is not resolved.
+21 new vectors used six sequential local model processes and six small forward
+batches. Unchanged history and old candidate vectors were reused. No new source
+requests, paid services, extra agents, training, final evaluation, test-driven
+tuning or raw-data publication occurred. Offline CPU verification: 480 tests and
+58 subtests passed. Global count/type gates remain unmet, so freezing is blocked.
 
-Prior commit 7f1df67 passed all five CI jobs in run37607861445. This checkpoint's
+Prior commit d9cf5c6 passed all five CI jobs in run37620082647. This checkpoint's
 exact-commit terminal CI status is recorded separately in the local receipt.
 The PR-description integration403 restriction remains binding.
 

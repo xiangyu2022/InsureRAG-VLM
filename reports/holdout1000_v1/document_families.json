@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-07T12:09:21.756552+00:00",
+  "updated_utc": "2026-10-07T13:50:20.880383+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -361,9 +361,17 @@
       "family_id": "family01_nj_auto_claim_siblings",
       "document_ids": [
         "24f1bbe32f3cfb8280ba94ed",
-        "61152dd010de28005424f8f0"
+        "61152dd010de28005424f8f0",
+        "650319676565ee81ba9cda58",
+        "46cd9ef011d632d3fdd3615e"
       ],
-      "relation": "substantive_shared_source_family_proposal"
+      "relation": "substantive_shared_source_family_proposal",
+      "local_review_records": [
+        "stage77_source_decisions.json"
+      ],
+      "extension_review_sha256": [
+        "999b48e947e76efce5277d2cbfdb3a72910b35aba9a0433ea97212d9b5492ced"
+      ]
     },
     {
       "family_id": "family01_wi_ut_clue",
@@ -660,13 +668,18 @@
         "7b1e9892aadeea719a76acca",
         "8902ab10b793d9b78e61927a",
         "aa51567a6730653c4174a1d3",
-        "e7bfc345bcd30d3936982dad"
+        "e7bfc345bcd30d3936982dad",
+        "3d9363c54a0c93b23fa2dcfb"
       ],
       "relation": "Conservative grouping of SGLI,FSGLI,VGLI and VGLI comparison guides: shared service-to-postservice transitions,8283/8284claim procedures and permanent-policy conversion restrictions. Comparison is linked derivative. Three formerly counted active families become one; common publisher alone is not the basis. Existing TDI bilingual/SGLI conversion linkage is preserved transitively, including both TDI documents and its earlier review record.",
       "local_review_records": [
-        "stage17_source_decisions.json"
+        "stage17_source_decisions.json",
+        "stage76_source_decisions.json"
       ],
-      "review_record_sha256": "6add7246d45e01d71404fbeec4018bea837ac0488ae0f74387fc1914f7a6047d"
+      "review_record_sha256": "6add7246d45e01d71404fbeec4018bea837ac0488ae0f74387fc1914f7a6047d",
+      "extension_review_sha256": [
+        "3878f0fe044361b3af48b6d471c8ca0170d0b3b65652bf79f4f2ca228e42b8ce"
+      ]
     },
     {
       "family_id": "family_nc_ut_title_search_ownership_guides",
@@ -1009,6 +1022,31 @@
         "stage69_source_decisions.json"
       ],
       "review_record_sha256": "5a7a7b6d2048216108239a980dc1f47688c068e1c1c059f10e03064833746949"
+    },
+    {
+      "family_id": "family74_alberta_auto_notice_reprints",
+      "document_ids": [
+        "a97d50108ef38d5c863ecc62",
+        "27356cdab50d6ff066a76b82",
+        "8ebb1f450518a4b85222506b"
+      ],
+      "relation": "Auto form catalog and two official pages reprint the same2023 SEF26B/45A/45B notices; conservatively isolate as one family.",
+      "local_review_records": [
+        "stage74_source_decisions.json"
+      ],
+      "review_record_sha256": "a2dd8c76c46d4f9127ef954c461a245be674cfe3f76eb45160dba0a009c9d866"
+    },
+    {
+      "family_id": "family75_tdi_children_bilingual",
+      "document_ids": [
+        "46be4ad405fbe96e0daebab0",
+        "de81801ef78079ba6622d101"
+      ],
+      "relation": "English and Spanish versions of December3,2024 child health coverage consumer guide; both complete bodies read.",
+      "local_review_records": [
+        "stage75_source_decisions.json"
+      ],
+      "review_record_sha256": "3486d19a6dc313be3b21156d10fbadafcaf793157312646344e6f46b6bcf9c81"
     }
   ],
   "document_text_sha256": {
@@ -1372,7 +1410,20 @@
     "f06e24bbceb554e65cec8545": "7e7bb0fc92ed71181d3d830765785ecc7390b8ca0552e2087fdfee4932f44864",
     "44d22b9bc128969b1bb2f6df": "1b91b613e88225ccc13702db6a4f2f75529d626803d12a393b6944eda7cffacc",
     "fc0eeb0bf73c4c5b0c3541c6": "75a7c853d4819c560967d86af48fee6c8cdcdd5f5e11465a59a06648e9ddae7f",
-    "835332295704165c31025f3c": "ece0757ee3c9b70858741835eef0af4a888a93f5f8dc98f1eee2e8593471266e"
+    "835332295704165c31025f3c": "ece0757ee3c9b70858741835eef0af4a888a93f5f8dc98f1eee2e8593471266e",
+    "0239083d69cc884cf53c8104": "f37ed2e18e475b38beb37d860afe33c9cc6d1f12cad0c7c42c682d0af8d19414",
+    "6911c121d7e4a5c9edc9b200": "ebde5bcd9a5611a2c284fbb73d59b985523de41fbfd4068c782a1d081aaabec8",
+    "f1c2471ac8112e179ea2c190": "2ecc9090ae551b2eff7dd0b8233b9bcfbc943e5dd2534338d84fb69df85e6d0a",
+    "a97d50108ef38d5c863ecc62": "452bab429577f731679de0c5aaf516b49fd65771049d5c48a68d9fd65c3edc41",
+    "828a8eb129e8f6e00ffc3c11": "83ed2a9e9a04f23fb3ba60edcfdcb48ecda3f2b85ceeb20d02ad12af7e511c52",
+    "27356cdab50d6ff066a76b82": "960f832f13681719519c793bad01cc9b7abf6802f3751c48bef4a1aa51256038",
+    "8ebb1f450518a4b85222506b": "0804e08a1b066d32c08965d0814c83fbc73170c5f01cbad731fd67a4a642f540",
+    "46be4ad405fbe96e0daebab0": "f252cdeee1a632df6f01eb472090ce52d476ffe909893d14edfd3fa231c0515c",
+    "de81801ef78079ba6622d101": "15515c1d91257c2b9aee1b43aa23c842b34e3e8942f8428289634402c4888ab6",
+    "3d9363c54a0c93b23fa2dcfb": "bfd30e467b8b3cf419008f138dd9687a00839164b261d6036d0410ea7febaec6",
+    "48ca021e38cf674e777c8f9b": "0c5b150e22c5d3bf1a2b2af7d0c32fdd37d35257f0c991008608e93a28c8cb56",
+    "cc0d31951daadacd4ce8395a": "9495886310e2f57e84a41d79f559f67ec960082b90ac7bbc19c242f2331a9fef",
+    "650319676565ee81ba9cda58": "e7fe0e77054ef9a4ad7004938933e38529c427261b1a6dd3eef26ce4f74b7c2d"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
