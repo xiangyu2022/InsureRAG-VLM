@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-06T04:00:23.229266+00:00",
+  "updated_utc": "2026-10-07T07:48:41.228815+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -891,6 +891,30 @@
         "stage47_source_decisions.json"
       ],
       "review_record_sha256": "a988f2006bfbd3b33d750f28cc41a7b46156d751c706135fc079aa01f25476e4"
+    },
+    {
+      "family_id": "family48_tdi_self_funding_english_spanish",
+      "document_ids": [
+        "82583926145f7f6f0da1db58",
+        "edf9d5250cefb6363c3ee921"
+      ],
+      "relation": "Full English and Spanish self-funded employee health-plan guides are language versions of the same explanatory content; both DEV only.",
+      "local_review_records": [
+        "stage48_source_decisions.json"
+      ],
+      "review_record_sha256": "dc0e9a695757ff4141544d78e02213e900bd39d6ff38ec108f9d252f489ec18e"
+    },
+    {
+      "family_id": "family49_opm_family_members_eligibility_overview",
+      "document_ids": [
+        "714712980a413f7f437e1772",
+        "c43cdf393141f9fe9a802022"
+      ],
+      "relation": "OPM eligibility overview reproduces substantial family-member verification table and common-law/foster documentation from Family Members handbook; conservatively one TEST family.",
+      "local_review_records": [
+        "stage49_source_decisions.json"
+      ],
+      "review_record_sha256": "ca192cc45afe720964b729186d7f81466993fe3e83a80f64e4c28dcee4ae970c"
     }
   ],
   "document_text_sha256": {
@@ -1203,7 +1227,10 @@
     "ba0a9e0bde3709be01c4997c": "b06a221d9397a902639fa35a03ca4f2290632901c1e9c0d90bc941c8c69a2b91",
     "515df02fb6319df46bb02869": "240c922551eb26259b5f28bdea92713858aca09cf9644ac923e36059362dc633",
     "c4d73f895bf153985cfad1e6": "84376c8dc665134513872f34481dc37ae4859bc47b00c97c1a989eeda76bee39",
-    "c43cdf393141f9fe9a802022": "253cd5243d48a37e13259fb77ce6ab92ab2ed60ca470a88d01a05022ef579b3f"
+    "c43cdf393141f9fe9a802022": "253cd5243d48a37e13259fb77ce6ab92ab2ed60ca470a88d01a05022ef579b3f",
+    "edf9d5250cefb6363c3ee921": "eb3b2f9fc7a06cb41c6de0a9561320feee3d6850410a4a8fdfff39364934440c",
+    "0ed0181d2b9a84ec5a861db6": "fbf7f6745b73d32ec2b1ad4d612526e0d2aa75373ea063d91745311b6e0d9447",
+    "714712980a413f7f437e1772": "625d1375f32ffce1f5e14000b4d63b8c62f8def7bb289723f7ed8dc39d7fdd6d"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

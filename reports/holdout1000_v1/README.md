@@ -12,34 +12,33 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage47_progress.json`:
-428 provisional TEST and 45 DEV records across 117 TEST document families,
-with **zero frozen/accepted records**. All 473 retained item gates pass.
-Another 572 independent TEST questions are needed. TEST type targets and
-DEV count/numerical/multi-evidence minima remain unmet. The publisher-share
-gate now passes: TRICARE has 85/428 TEST records, below the unchanged20% ceiling.
-The dataset still cannot be accepted or frozen in this state.
+The latest construction checkpoint is `stage49_progress.json`:
+450 provisional TEST and 46 DEV records across 119 TEST document families,
+with **zero frozen/accepted records**. All 496 retained item gates pass.
+Another 550 independent TEST questions are needed. TEST type targets and
+DEV count/numerical/multi-evidence minima remain unmet. Publisher concentration
+remains within the unchanged 20% ceiling. The dataset cannot yet be frozen.
 
-Stages46-47 retained14 TEST tasks:9ordinary,3numerical and2multi-evidence.
-OPM enrollment conditions and non-Postal FEHB former-spouse rules were checked
-against accessible history, source families and changed active neighbors.
-The former-spouse handbook's contradictory PSHB note was excluded. Numeric
-answers were independently recomputed. Enrollment/channel pages were grouped
-conservatively, as were former-spouse/TCC/annuitant continuation chapters.
+Stages48-49 retained22 TEST tasks (15ordinary,5multi-evidence,2refusal) and
+one DEV multi-evidence task. Source permissions, evidence alignment, accessible
+history and changed active neighbors were reviewed. One proposed multi-evidence
+task was classified as ordinary because one span was redundant. One additional
+draft was held for historical-rule overlap despite clear automated screening.
+English/Spanish TDI self-funding guides and OPM family-member/eligibility pages
+were conservatively grouped into their respective document families.
 
-Stage43 revoked six formerly provisional DEV questions whose information
-needs fell outside consumer policy, benefit and claim scope. This supersedes
-stage38/stage42 DEV counts and the prior claim that DEV minima were met.
-The effective DEV count remains45. All original15 revocations, inherited holds,
-family caps and six DEV scope revocations remain in force.
+The current TEST distribution is307ordinary,61numerical,49multi-evidence,
+and33insufficient-evidence. DEV still needs at least4numerical and1multi-evidence
+task. All original15 revocations, inherited holds, family caps and six stage43
+DEV scope revocations remain in force. Previously held sources were excluded.
 
-Fourteen new vectors in two sequential local batches reused unchanged vectors.
-No new source requests, paid services, extra agents, training, final evaluation,
-test-driven tuning or raw-data publication occurred. Codex review is not expert
-or human adjudication. Continue independent TEST construction and consumer-scope
-DEV numerical and multi-evidence tasks without lowering the quality gates.
+Twenty-four new vectors in two sequential local model processes reused unchanged
+history and candidate vectors; there were three small forward batches. No new
+source requests, paid services, extra agents, training, final evaluation,
+test-driven tuning or raw-data publication occurred. Codex review is not human
+or expert adjudication, and inaccessible pretraining contamination is unknown.
 
-Prior commit `a4a9797` passed all five CI jobs in run37408825804. Subsequent
+Prior commit `56d19d2` passed all five CI jobs in run37411807152. Subsequent
 commits require separate exact-head verification. Private ledgers preserve
 prior records and hash links. The PR-description integration403 restriction
 remains binding.
