@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-07T10:28:23.427258+00:00",
+  "updated_utc": "2026-10-07T12:09:21.756552+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -65,9 +65,16 @@
       "family_id": "family01_exact_047ac450e10b060a7c47e019",
       "document_ids": [
         "2fab06a9753164b65358b1b7",
-        "047ac450e10b060a7c47e019"
+        "047ac450e10b060a7c47e019",
+        "ee525a99d97d35a28aa78cad"
       ],
-      "relation": "normalised_complete_body_duplicate"
+      "relation": "normalised_complete_body_duplicate",
+      "local_review_records": [
+        "stage67_source_decisions.json"
+      ],
+      "extension_review_sha256": [
+        "1934d33271a34151e91d5550f7ac54b9f8bbf3eb0761569d5c90030b518ac898"
+      ]
     },
     {
       "family_id": "family01_exact_3166797dab7aa03bc753d7f5",
@@ -966,6 +973,42 @@
         "stage59_source_decisions.json"
       ],
       "review_record_sha256": "fe82454196eb6234ada7896558222ca927c013f6b9fcd12341da69254343f400"
+    },
+    {
+      "family_id": "family60_tdi_guaranty_bilingual",
+      "document_ids": [
+        "45b1c1d26be24ae2f56fea2b",
+        "6608e67b03b11b6b90190a00"
+      ],
+      "relation": "English and Spanish versions of the same insurer-failure guaranty guide; both full bodies read",
+      "local_review_records": [
+        "stage60_source_decisions.json"
+      ],
+      "review_record_sha256": "5de78bc5a5360f31b887ac361df1c06ca2f81426751f689adf149b2bb72f64a6"
+    },
+    {
+      "family_id": "family67_public_wildfire_model",
+      "document_ids": [
+        "240956e39d9e66184d5b90d4",
+        "44d22b9bc128969b1bb2f6df"
+      ],
+      "relation": "same public wildfire model project and derivative strategy/development descriptions",
+      "local_review_records": [
+        "stage67_source_decisions.json"
+      ],
+      "review_record_sha256": "1934d33271a34151e91d5550f7ac54b9f8bbf3eb0761569d5c90030b518ac898"
+    },
+    {
+      "family_id": "family69_texas_workers_bilingual",
+      "document_ids": [
+        "1d871ac850c80dc0a2f7827e",
+        "835332295704165c31025f3c"
+      ],
+      "relation": "English and Spanish versions of same November19,2024 TDI workers compensation guide",
+      "local_review_records": [
+        "stage69_source_decisions.json"
+      ],
+      "review_record_sha256": "5a7a7b6d2048216108239a980dc1f47688c068e1c1c059f10e03064833746949"
     }
   ],
   "document_text_sha256": {
@@ -1312,7 +1355,24 @@
     "1555840deb8dfab341377ad4": "229561cfef9d4a13e66a5b1a9a003f69b722795bc227fd02157b7fb3272a2d5c",
     "788fd904a90be37a1e4f16da": "4795f26e6f01ddd0b60905d0690d8aad47b59e25aeb61e47c3a84e8daade24a0",
     "2f0640c24b2c225ab8d1d80c": "0746c448cc778b8dc4ce7a415434d1784612d9e59cba37865b360d6891d3d55c",
-    "9a3e1a2e3abb54e017fceff2": "d07d3c12bbe5a2d6287f74dc8f376e340f03fbca3e9bb9dc3c19dc98768feb99"
+    "9a3e1a2e3abb54e017fceff2": "d07d3c12bbe5a2d6287f74dc8f376e340f03fbca3e9bb9dc3c19dc98768feb99",
+    "f3ce493ee04bfb5d9c292b57": "96488f7e50990ffbc5188770260b0356878c39eca4e5b5b7b0571c948beb7158",
+    "7093b22206fb377606a0e725": "134516afae03242c4c92dafed3be8881ce777bc0dd8869fc271a2480b0da3dce",
+    "45b1c1d26be24ae2f56fea2b": "dad9a359234b11db77cc5dea4d237bf3dfb7152b50812c5315c0e6f369787b69",
+    "9b6a3faeacfa6fa32d9111c4": "8af9aceac9927b611e434b3a69e4dd6fb6e9d7e914aeb3e5d368d90542eb466b",
+    "6608e67b03b11b6b90190a00": "6b7b535d0900fa882965bb2bc5596e3f48d9c7ad308eec510d9499f3fc1fe82c",
+    "925eba34a88aaa8f24da1ae0": "7fa9eea8d7490a822d0fcce643bfe260ff3adf0459be63a2c530d61c44febbfa",
+    "5de604fb68ef50329262b7de": "3be15394480de2e888d877962cb7159788bdab7ff751ca621d5d2c115ed02a31",
+    "b8d4d7d494dfe5c5763b930c": "799683a797f15073f460d2d20b925205e32e57b6d3f69786709e392834776b43",
+    "9d59abf9d4467928bdaafd06": "a27ead79528d8feca6a9b84c91372ba0aa8aba427e3fa6ea06e112605da0a536",
+    "99a47839575d4dfada524b67": "0f0cf50fb8ea3026ee6729e03f51fdc1e12f352975af07ef7726d76607c9a662",
+    "839e9a4858c069c160524cef": "ea453e3f847a01aa2e9834e7d8c220d04ea1447be851a8fe10d36db35fcded66",
+    "ee525a99d97d35a28aa78cad": "16bcf64751dd596e2dcaf459ef1aa1c7b2025369c12116ca7d4215798eefadbd",
+    "240956e39d9e66184d5b90d4": "e781669fcc590a6d5a65053fe13ad2573f83a2f69e108aad6400956587d0d4c5",
+    "f06e24bbceb554e65cec8545": "7e7bb0fc92ed71181d3d830765785ecc7390b8ca0552e2087fdfee4932f44864",
+    "44d22b9bc128969b1bb2f6df": "1b91b613e88225ccc13702db6a4f2f75529d626803d12a393b6944eda7cffacc",
+    "fc0eeb0bf73c4c5b0c3541c6": "75a7c853d4819c560967d86af48fee6c8cdcdd5f5e11465a59a06648e9ddae7f",
+    "835332295704165c31025f3c": "ece0757ee3c9b70858741835eef0af4a888a93f5f8dc98f1eee2e8593471266e"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

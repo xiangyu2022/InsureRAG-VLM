@@ -71,5 +71,6 @@
     "reason": "The user-required minimum remains1000quality independent TEST records.150dev was an assistant-proposed construction target, not a user constraint; retain minimum50source-separated dev records covering allfour tasks and10document groups, with150preferred. Changed before any final QA inference or test-directed tuning.",
     "test_requirements_unchanged": true
   },
-  "require_source_review_registries": true
+  "require_source_review_registries": true,
+  "task_scope": "Consumer insurance coverage, benefits, policy cost, claims, purchaser requirements and specific policy-related recourse. Exclude standalone professional licensing/continuing education, corporate regulatory administration, representative compensation applications and project/grant milestones without a consumer policy/benefit/claim need. Applies to TEST and DEV; codifies stage19/stage43 scope decisions, not a relaxation."
 }

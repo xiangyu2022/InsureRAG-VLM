@@ -12,42 +12,48 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is stage59_progress.json:
-520 provisional TEST and 48 DEV records across 134 TEST document families,
-with **zero frozen/accepted records**. All 568 retained item gates pass.
-Another 480 independent TEST questions are needed. TEST type targets and
-DEV count/numerical/multi-evidence minima remain unmet. Publisher concentration
-remains within the unchanged 20% ceiling; each document family remains at most 20.
+The latest construction checkpoint is stage71_progress.json:
+541 provisional TEST and 56 DEV records across 139 TEST document families,
+with **zero frozen/accepted records**. All 597 retained item gates pass.
+Another 459 independent TEST questions are needed. TEST type targets and
+the DEV numerical minimum remain unmet (8 numerical DEV; 10 required).
+Publisher concentration remains within 20%; each family remains at most 20.
 
-Stages 53-59 processed 49 new drafts, retained 46, and held 3 new semantic duplicates.
-One existing TEST item was also held after the NY women's/breast guidance pages
-were joined to the existing healthcare-rights family: 21 items would exceed its
-unchanged 20-item cap. Net growth from the 477 TEST/46 DEV checkpoint is 43 TEST+2 DEV.
-An IRO/stop-loss draft was reclassified as ordinary QA because its second evidence
-already repeated the employer's payment obligation. It receives no multi-evidence
-credit. The TEST distribution is 353 ordinary, 73 numerical, 57 multi-evidence and
-37 insufficient-evidence. DEV is 22 ordinary, 7 numerical, 9 multi-evidence and 10 refusals;
-it still needs 3 numerical and 1 multi-evidence task, hence at least 52 under these counts.
+Stages 60-71 processed 42 new drafts. Eight new candidates were held:
+two historical semantic duplicates, one same-gap candidate duplicate, and five
+regulatory-administration questions outside the established consumer scope.
+Five temporarily retained items were subsequently revoked: two DEV professional
+continuing-education questions and three TEST representative-compensation or
+project-milestone questions. Net growth from 520 TEST/48 DEV is 21 TEST+8 DEV.
+All 34 items retained earlier in this interval, all 58 pre-correction DEV records,
+and matching administrative-topic records were reviewed for scope. The scope is
+now explicit in protocol.json; this records existing stage19/stage43 restrictions.
+Earlier numbered reports remain historical snapshots, superseded by stage71.
 
-All new retained questions received sequential Codex content review, including
-exact support, nearest accessible historical text, active neighbor relationships,
-source scope/permissions, and document-family checks. Required-document table
-rows were verified against the original cached HTML. A new nine-month ward
-document question was held as a duplicate of an existing numerical task;
-Secondary Dependents was conservatively grouped with ID Cards and Required Documents.
-Exposed travel, general surplus-lines and ALE rules were not reused to fill quotas. The original 15
-revocations, six stage 43 DEV scope revocations and inherited holds remain effective.
+TEST has 364 ordinary, 78 numerical, 60 multi-evidence and 39 refusal tasks.
+DEV has 25 ordinary, 8 numerical, 12 multi-evidence and 11 refusal tasks.
+One wildfire nonrenewal task was reclassified from multi-evidence to ordinary:
+its second span was corroborative rather than necessary. Six TDI drafts were
+corrected to DEV during assembly, preserving publisher-wide split isolation;
+none increased TEST. Original 15 revocations, six stage43 scope revocations,
+inherited holds and three unchanged repaired records remain effective.
 
-Forty-nine new vectors used seven sequential local model processes and seven
-small forward batches. Unchanged history and old candidate vectors were reused.
+Source and evidence checks reused cached original bodies and hashes, reviewed
+jurisdiction/date applicability and source permissions, and conservatively joined
+related document families. No NC held-source restriction was released. A mixed-year
+HCFSA source was deferred. Codex content review is not human or expert adjudication.
+Automatic similarity scores do not establish independence; two historical repeats
+were found by content review despite no threshold flag.
+
+42 new vectors used 10 sequential local model processes and
+10 small forward batches. Unchanged history and old candidate vectors were reused.
 No new source requests, paid services, extra agents, training, final evaluation,
-test-driven tuning or raw-data publication occurred. Local offline CPU tests passed:
-477 tests and 58 subtests. Codex review is not human or expert adjudication;
-inaccessible pretraining contamination remains unknown.
+test-driven tuning or raw-data publication occurred. Offline CPU verification:
+477 tests and 58 subtests passed. Unknown pretraining contamination is not resolved.
 
-Prior commit f4fc836 passed all five CI jobs in run 37595083997. The new checkpoint
-requires separate exact-commit CI verification, recorded in the local receipt.
-The PR-description integration 403 restriction remains binding.
+Prior commit 7f1df67 passed all five CI jobs in run37607861445. This checkpoint's
+exact-commit terminal CI status is recorded separately in the local receipt.
+The PR-description integration403 restriction remains binding.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

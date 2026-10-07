@@ -1,0 +1,112 @@
+{
+  "created_utc": "2026-10-07T11:27:26.917469+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 534,
+    "dev": 52
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 2,
+    "retained": 2,
+    "held": 0,
+    "retained_tasks": {
+      "numerical_calculation": 2
+    }
+  },
+  "prior_checkpoint": "stage63_progress.json:534TEST/50DEV/136families",
+  "test_task_counts": {
+    "ordinary_qa": 360,
+    "insufficient_evidence": 39,
+    "multi_evidence": 59,
+    "numerical_calculation": 76
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 22,
+    "insufficient_evidence": 10,
+    "multi_evidence": 10,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 136,
+  "publisher_counts": {
+    "northcarolina_doi": 21,
+    "canada_fcac": 16,
+    "newyork_dfs": 54,
+    "california_cdi": 35,
+    "wisconsin_oci": 51,
+    "utah_uid": 10,
+    "us_opm": 98,
+    "us_va": 33,
+    "us_tricare": 102,
+    "newjersey_dobi": 32,
+    "alberta_goa": 18,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 1
+  },
+  "usage": {
+    "base_report_sha256": "5eaa1de6c8cb68bc751d04c15b627cac9dcde0c259b7f6d9359ab4f4877179ad",
+    "base_candidates_sha256": "7f8deb4a28e046e1e18cbebe0946095e0fbf8f427cbc895dd09b242c0f8a2785",
+    "new_candidates_sha256": "a535243a781f36874821583f2d92aa8685f1868acf957832aa1d80045ec79967",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2910,
+    "old_old_pairs_reused": 670,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 2,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "2be2f1c4311add0861734b8463178564c1fc4573a77213395e533b8fdd98627f",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 265.9909232999198,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage64_source_decisions.json": "e108f6fb3032fc0fadd3f495ad4d1fb69a9bf76607c03f4c07b13c97f2b739c7",
+    "stage64_final_review.json": "47600d703c1e5b003e97a4875747e624d40a64b2e9c3ff31bc9590b35af0d7a5",
+    "review_pool_65_clearance_ledger.json": "c5040568329c19319f81e2793f8e98bad2df30b99bd2ece932194dd09c860a35",
+    "provisional_item_pool_65.jsonl": "2ca61bb4fb0923c0fb8ade30ccc090887b1416a5526c5af285d81cf8eb8b2c53",
+    "provisional_item_pool_65_validation.json": "d4244bac7162b1c3b5eae7217d2c411df603102eab11d8ea975e51027717987b"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 240,
+    "numerical_calculation": 74,
+    "multi_evidence": 91,
+    "insufficient_evidence": 61
+  },
+  "limits": [
+    "466 independent TEST still needed; all DEV count and task minimums now met provisionally.",
+    "Two DEV numerical items retained; no new TEST.",
+    "One existing CA task reclassified multi-evidence to ordinary: corroborative no-loss clause is not independently necessary. QAE unchanged; multi quota receives no credit.",
+    "All11 historical fulltexts and8 neighbor QAs read; one changed active relation reviewed.",
+    "Single sequential Codex content review, not human/expert review; not frozen or formally accepted."
+  ],
+  "existing_task_corrections": [
+    {
+      "id": "de9f5f56b47e49086e5c6db6",
+      "from_task": "multi_evidence",
+      "to_task": "ordinary_qa",
+      "reason": "The general covered-ZIP nonrenewal prohibition logically includes the no-loss case; the explicit no-loss span is corroborative rather than independently necessary. Preserve QAE and independent information need, remove multi-evidence credit."
+    }
+  ]
+}
