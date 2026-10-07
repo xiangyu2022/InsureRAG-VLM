@@ -12,33 +12,36 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is `stage49_progress.json`:
-450 provisional TEST and 46 DEV records across 119 TEST document families,
-with **zero frozen/accepted records**. All 496 retained item gates pass.
-Another 550 independent TEST questions are needed. TEST type targets and
+The latest construction checkpoint is stage52_progress.json:
+477 provisional TEST and 46 DEV records across 123 TEST document families,
+with **zero frozen/accepted records**. All 523 retained item gates pass.
+Another 523 independent TEST questions are needed. TEST type targets and
 DEV count/numerical/multi-evidence minima remain unmet. Publisher concentration
 remains within the unchanged 20% ceiling. The dataset cannot yet be frozen.
 
-Stages48-49 retained22 TEST tasks (15ordinary,5multi-evidence,2refusal) and
-one DEV multi-evidence task. Source permissions, evidence alignment, accessible
-history and changed active neighbors were reviewed. One proposed multi-evidence
-task was classified as ordinary because one span was redundant. One additional
-draft was held for historical-rule overlap despite clear automated screening.
-English/Spanish TDI self-funding guides and OPM family-member/eligibility pages
-were conservatively grouped into their respective document families.
+Stages50-52 retained27 TEST tasks (20ordinary,6numerical,1refusal).
+Two drafts were held: one supplied its own arithmetic rule, and another
+omitted a prerequisite for the alternative eligibility route.
+One apparent multi-evidence task became ordinary because its second evidence
+added no necessary information. The high-similarity temporary-employee pair
+was reviewed as distinct hours-counting and changed-duration enrollment tasks.
+TRICARE eligibility, registration, adopted-child and claim-reprocessing rules
+received separate content review. FEGLI rate calculations use the explicit
+October1,2021 schedule, with original HTML row/column verification and
+four identical-body source aliases grouped into one document family.
 
-The current TEST distribution is307ordinary,61numerical,49multi-evidence,
-and33insufficient-evidence. DEV still needs at least4numerical and1multi-evidence
+The current TEST distribution is327ordinary,67numerical,49multi-evidence,
+and34insufficient-evidence. DEV still needs at least4numerical and1multi-evidence
 task. All original15 revocations, inherited holds, family caps and six stage43
 DEV scope revocations remain in force. Previously held sources were excluded.
 
-Twenty-four new vectors in two sequential local model processes reused unchanged
-history and candidate vectors; there were three small forward batches. No new
-source requests, paid services, extra agents, training, final evaluation,
+Twenty-nine new vectors in three sequential local model processes reused
+unchanged history and candidate vectors; there were four small forward batches.
+No new source requests, paid services, extra agents, training, final evaluation,
 test-driven tuning or raw-data publication occurred. Codex review is not human
-or expert adjudication, and inaccessible pretraining contamination is unknown.
+or expert adjudication; inaccessible pretraining contamination remains unknown.
 
-Prior commit `56d19d2` passed all five CI jobs in run37411807152. Subsequent
+Prior commit7197aa7 passed all five CI jobs in run37589863500. Subsequent
 commits require separate exact-head verification. Private ledgers preserve
 prior records and hash links. The PR-description integration403 restriction
 remains binding.
