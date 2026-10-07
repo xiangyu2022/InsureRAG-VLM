@@ -1,0 +1,110 @@
+{
+  "created_utc": "2026-10-07T15:30:17.471905+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 568,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 10,
+    "retained": 10,
+    "held": 0,
+    "retained_tasks": {
+      "numerical_calculation": 3,
+      "ordinary_qa": 5,
+      "multi_evidence": 1,
+      "insufficient_evidence": 1
+    }
+  },
+  "prior_checkpoint": "stage84_progress.json:558TEST/58DEV/139families",
+  "test_task_counts": {
+    "ordinary_qa": 378,
+    "insufficient_evidence": 42,
+    "multi_evidence": 65,
+    "numerical_calculation": 83
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 139,
+  "publisher_counts": {
+    "northcarolina_doi": 23,
+    "canada_fcac": 18,
+    "newyork_dfs": 54,
+    "california_cdi": 42,
+    "wisconsin_oci": 52,
+    "utah_uid": 10,
+    "us_opm": 98,
+    "us_va": 41,
+    "us_tricare": 102,
+    "newjersey_dobi": 33,
+    "alberta_goa": 31,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 21
+  },
+  "usage": {
+    "base_report_sha256": "d30bc31a1ce1556a617a451622b1c3fea5193ef00e0d5b134b1aef010693d004",
+    "base_candidates_sha256": "45ef2c662f928ba76cd826d0b48a0f476bbfb45955c505d4b742e5a370e15c93",
+    "new_candidates_sha256": "f71ccc843101f4be6aca03f6a617a33ffddc465cf14691e4e61c57d403d1bc5a",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2963,
+    "old_old_pairs_reused": 673,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 10,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "599212147c90a236294b0d6fb7ab285d399bcd4e9db672a92fc2c38c360247bc",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 4,
+    "new_source_bytes": 1214030,
+    "new_pdf_documents": 2,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 294.5193721000105,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage85_source_decisions.json": "dd1d8bf4b0430d34ca8a842f42759a9df1dfda8ddcea24789c62c8f34588ab9b",
+    "stage85_final_review.json": "d4f79ab78b4e5797d95f3bd6ff406d9471491bebf9a39d00b2ad0d8a068c2453",
+    "review_pool_79_clearance_ledger.json": "acf634d55f38ca57f188a2debbd9eefb45781d484bc4eba8cc9b69ef5c2a104b",
+    "provisional_item_pool_79.jsonl": "0ff348c87691b6e68ae34affcf4f1df62108eba02e646f2a70ad846fab1c34fe",
+    "provisional_item_pool_79_validation.json": "b89abdd8bb5d6960c1014bf361da2ada36302721217ecff9c8839c7f33042cda"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 222,
+    "numerical_calculation": 67,
+    "multi_evidence": 85,
+    "insufficient_evidence": 58
+  },
+  "limits": [
+    "432 independent TEST still needed;DEVtask minima provisionally met.",
+    "Two approved June2022 AlbertaPDFs added as immutable snapshot13;1311previousdocuments and all sourceFAQcandidate bytes unchanged.",
+    "All5PDFpages extracted/read and3substantivepages visually checked; empty fields and underlying-policy unknowns retained.",
+    "New PDFs grouped conservatively into existing Alberta autoform family; no cap relaxation.",
+    "All42nearest historical fulltexts and all candidate neighbors read;21active changed relations reviewed. See private dispositions for holds.",
+    "Prior scope corrections,holds,stage84 familycaprevocation and split isolation preserved; single sequential Codex content review."
+  ]
+}

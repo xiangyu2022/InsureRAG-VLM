@@ -12,49 +12,49 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest item construction checkpoint is stage80_progress.json; stage81 is
-a source-only review. There are 553 provisional TEST and 58 DEV records across
-138 TEST document families, with **zero frozen/accepted records**. All 611
-retained item gates pass. Another 447 independent TEST questions are needed.
-All four TEST type targets remain unmet; DEV minimum coverage is now met.
-Publisher concentration remains within 20%; each family remains at most 20.
+The latest construction checkpoint is stage88_progress.json: **578 provisional
+TEST and 58 DEV records across 139 TEST document families**, with **zero
+frozen/accepted records**. All 636 retained item gates pass. Another 422 independent
+TEST questions are needed; all four TEST type targets remain unmet. DEV minimums
+are provisionally met. Publisher concentration stays within 20% and each family
+at most 20. Earlier reports are historical snapshots and must not be summed.
 
-Stages 72-81 processed 21 new drafts: 17 TEST and two DEV were retained, while
-two historical/candidate semantic repeats were held. Five previously retained
-Wisconsin program-administration TEST items were revoked after scope review of
-all 51 active Wisconsin records. Net growth from 541 TEST/56 DEV is 12 TEST+2 DEV.
-These exclusions concern scope, not an assertion that their arithmetic was wrong.
-Earlier numbered reports remain historical snapshots and must not be summed.
+Stages 82-88 reviewed 27 new drafts, retained 26 TEST and held one historical
+information-need repeat. One prior TEST was revoked to preserve the 20-item cap
+after substantive NY premium/healthcare source-family consolidation. Net growth
+from stage81's 553 TEST/58 DEV is 25 TEST. TEST now comprises 383 ordinary,
+85 numerical, 66 multi-evidence and 44 insufficient-evidence tasks; remaining
+targets are respectively 217, 65, 84 and 56. DEV remains 25/10/12/11.
 
-TEST has 370 ordinary, 80 numerical, 62 multi-evidence and 41 refusal tasks.
-DEV has 25 ordinary, 10 numerical, 12 multi-evidence and 11 refusal tasks.
-Related Alberta auto forms, bilingual TDI child coverage, VA transition guidance
-and shared NJ/Utah auto claims bodies were conservatively grouped. The latter
-family and the CA workers-compensation family each reach the unchanged 20 cap.
-Original 15 revocations, stage43 and stage71 scope revocations, inherited holds,
-the CA task correction and three unchanged repaired records remain effective.
-TDI remains entirely DEV. No previously held source was released.
+Evidence-heading repairs in stages82 and87 preserved the original questions and
+answers; their changed projections were rechecked without re-encoding vectors.
+Selected numerical answers were independently recomputed; multi-evidence tasks
+require each distinct fact and refusals preserve missing issued-contract facts.
+New candidates, accessible historical nearest texts and changed old-item
+relations received sequential Codex content review, not human/expert adjudication.
+Exact/near duplicates, source permissions, dates, jurisdictions and evidence
+correspondence were checked. Unknown pretraining contamination remains unresolved.
 
-Cached source hashes, permissions, evidence, jurisdiction and dates were checked.
-Selected calculations used independent exact arithmetic; multi-evidence tasks
-require distinct necessary facts and refusal tasks preserve a real information gap.
-Historical/candidate neighbors and changed old-item relationships were reviewed.
-NC template markup and WI termination-source prechecks repeated some earlier
-deferred-source work. The new read-only inspect_holdout1000_source_state.py
-looks up prior review records and current family counts before another batch;
-its output is explicitly not clearance. Source-only stages add no questions.
-Codex content review is not human or expert adjudication. Unknown pretraining
-contamination is not resolved.
+The NJ/Utah consumer-purchase family conservatively groups seven related documents.
+Three Alberta government auto-endorsement PDFs were acquired through their exact
+catalog links after current robots/terms checks; these extend the existing auto
+family to its unchanged 20-item cap. Immutable snapshots13 and14 preserve old
+document and FAQ bytes. Blank issued-form selections/durations and unretrieved
+underlying policy terms were not guessed. WI credit guidance remains deferred
+because its canonical URL occurs in the historical research corpus. Source-only
+stages83 and86 add no questions. All original15 revocations, scope holds, the CA
+task correction, unchanged same-ID repairs and TDI's all-DEV assignment persist.
 
-21 new vectors used six sequential local model processes and six small forward
-batches. Unchanged history and old candidate vectors were reused. No new source
-requests, paid services, extra agents, training, final evaluation, test-driven
-tuning or raw-data publication occurred. Offline CPU verification: 480 tests and
-58 subtests passed. Global count/type gates remain unmet, so freezing is blocked.
+27 new vectors used four sequential local model processes and four small forward
+batches; unchanged history and old candidate vectors were reused. Source access
+used five bounded HTTP requests totaling 1,812,236 response bytes, including
+robots/terms and three PDFs. There were no paid services, extra agents, training,
+final QA inference, test-driven tuning or raw-data publication. Offline CPU
+verification passed 480 tests and 58 subtests. Count/type gates still block freezing.
 
-Prior commit d9cf5c6 passed all five CI jobs in run37620082647. This checkpoint's
+Prior commit b7fc44b passed all five CI jobs in run37634049067. This checkpoint's
 exact-commit terminal CI status is recorded separately in the local receipt.
-The PR-description integration403 restriction remains binding.
+PR8 remains draft and unmerged; the PR-description API403 restriction is binding.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

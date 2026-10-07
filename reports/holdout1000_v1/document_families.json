@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-07T13:50:20.880383+00:00",
+  "updated_utc": "2026-10-07T16:05:57.439762+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -715,17 +715,20 @@
         "f4e4cb1c394cde1a64141374",
         "6eef69d5d74bba92fa7a8993",
         "eda721de69fd279fd33d22c9",
-        "f74f6d7240dd8912ae3ad0a5"
+        "f74f6d7240dd8912ae3ad0a5",
+        "032c8ea3118480d2ca5c0b38"
       ],
       "relation": "Conservative closure of existing healthcare-rights parent/form family and infertility FAQ. Parent infertility sections repeat substantive benefit and nondiscrimination explanations; inherited links preserved. Parent also reproduces the dyslexia mandate and links to its dedicated guide; conservative closure includes that guide.",
       "local_review_records": [
         "stage21_source_decisions.json",
         "stage27a_family_decision.json",
-        "stage57_source_decisions.json"
+        "stage57_source_decisions.json",
+        "stage84_source_decisions.json"
       ],
       "review_record_sha256": "6c5b1f8e927797a653e453d478149bdd5281d37b1c3ef2d541c90d952e5c67c0",
       "extension_review_sha256": [
-        "0845c64ff99ec3c27021d69f6f3570c69a52ead2d0c4453552a944cee7eb4be7"
+        "0845c64ff99ec3c27021d69f6f3570c69a52ead2d0c4453552a944cee7eb4be7",
+        "9c125c2fa3e7d3dd8595ef492173fddeccd2b787a571d5933ba6b629b3cd1d18"
       ]
     },
     {
@@ -1028,13 +1031,22 @@
       "document_ids": [
         "a97d50108ef38d5c863ecc62",
         "27356cdab50d6ff066a76b82",
-        "8ebb1f450518a4b85222506b"
+        "8ebb1f450518a4b85222506b",
+        "e085bf6be1f6e2acaae6c92c",
+        "70b469e3957fdd8778deab22",
+        "2687d2ddc856122ac61e4e63"
       ],
-      "relation": "Auto form catalog and two official pages reprint the same2023 SEF26B/45A/45B notices; conservatively isolate as one family.",
+      "relation": "Official Alberta autoform catalog, notice reprints and linked SEF20/27/43R operative forms, conservatively grouped.",
       "local_review_records": [
-        "stage74_source_decisions.json"
+        "stage74_source_decisions.json",
+        "stage85_source_decisions.json",
+        "stage88_source_decisions.json"
       ],
-      "review_record_sha256": "a2dd8c76c46d4f9127ef954c461a245be674cfe3f76eb45160dba0a009c9d866"
+      "review_record_sha256": "a2dd8c76c46d4f9127ef954c461a245be674cfe3f76eb45160dba0a009c9d866",
+      "extension_review_sha256": [
+        "dd1d8bf4b0430d34ca8a842f42759a9df1dfda8ddcea24789c62c8f34588ab9b",
+        "b38669482574fe5619f301b535a9d3c1c682c83ff7bfe82521701a3562641860"
+      ]
     },
     {
       "family_id": "family75_tdi_children_bilingual",
@@ -1047,6 +1059,23 @@
         "stage75_source_decisions.json"
       ],
       "review_record_sha256": "3486d19a6dc313be3b21156d10fbadafcaf793157312646344e6f46b6bcf9c81"
+    },
+    {
+      "family_id": "family87_nj_ut_consumer_purchase_guidance",
+      "document_ids": [
+        "e0039127c25354382716ea81",
+        "ebb0f3db263274d67756ed6b",
+        "3972502ab7f5add6e90a2193",
+        "44fc5a673eb8156d6933d0ed",
+        "52aab58b3bbbeba11e6e4e0f",
+        "cc0d31951daadacd4ce8395a",
+        "ecc25764a562a23588082b1c"
+      ],
+      "relation": "Shared consumer purchase receipt/application/coverage-check guidance and substantially similar30daynonreceipt instructions; conservative crosspublisher TESTfamily.",
+      "local_review_records": [
+        "stage87_source_decisions.json"
+      ],
+      "review_record_sha256": "fc649cccdacd498d8a8cb2b60616ff217c4063f5d21301d1091d3995a8492ce6"
     }
   ],
   "document_text_sha256": {
@@ -1423,7 +1452,24 @@
     "3d9363c54a0c93b23fa2dcfb": "bfd30e467b8b3cf419008f138dd9687a00839164b261d6036d0410ea7febaec6",
     "48ca021e38cf674e777c8f9b": "0c5b150e22c5d3bf1a2b2af7d0c32fdd37d35257f0c991008608e93a28c8cb56",
     "cc0d31951daadacd4ce8395a": "9495886310e2f57e84a41d79f559f67ec960082b90ac7bbc19c242f2331a9fef",
-    "650319676565ee81ba9cda58": "e7fe0e77054ef9a4ad7004938933e38529c427261b1a6dd3eef26ce4f74b7c2d"
+    "650319676565ee81ba9cda58": "e7fe0e77054ef9a4ad7004938933e38529c427261b1a6dd3eef26ce4f74b7c2d",
+    "c8dd0011b686b514bbcacff6": "2757f5eada073acf6362dbd1aae230df27173d62ea7646638dedcfb7f846490b",
+    "999e8e16458ab6d09fd8b8b0": "e882559da8ae5cfc163d9296808c3c73a0e934ecd8664cd73f3896401099742f",
+    "032c8ea3118480d2ca5c0b38": "f4d3e4686a1c5f613d8019fcc7e110d877e1882b140d7b345cc4f67f4e5a7900",
+    "e085bf6be1f6e2acaae6c92c": "f0cb154f3eda591f9bcf7ae01553b357056d931ef64ec9dc1d61690f3034d821",
+    "70b469e3957fdd8778deab22": "961af2b9deed25d0e6688fccb684e6279e6f734879f386490d54ebfcd33b0315",
+    "12c19bfdf672692bdc75ac95": "791f0dad4236c705bdac5fb1e5ed0516da9d923035ee815dc87ed77b9d24253f",
+    "336abca6388e5ff9bfd1be4c": "a4a9677a5a02a140168a4646f2678c8441d15aabf3faab96b4dc70cb9a7744d2",
+    "3972502ab7f5add6e90a2193": "c0dd05484c99dc19f88bec8b17710a09cbddeb131883efc653b3a305005e00bf",
+    "44fc5a673eb8156d6933d0ed": "b4c330ed6310ee8dc5bddd60ace2b8156867a5c152655b4ee665370acbc99336",
+    "52aab58b3bbbeba11e6e4e0f": "22ce4a125767b1d341b1a42b541968a0c13cb19e366559b2b4fe6cf138c2e2d1",
+    "87a1f7ae96421a2f751d7dfc": "5e9212087db8b6479c31c0f62a81f732c6f769419490c0bc7532c77b200dc0b6",
+    "a714096951e39f0264a93fcb": "006089634934f505dd3c3c369f946c41be85330da7e8fc0596d8adb3447e974d",
+    "db6b462f3a4031e233276790": "dbf57f7e8112d759e28e00747355d932afeabeffa717da7e3082558721a38709",
+    "e0039127c25354382716ea81": "ba6454c5ad3b38019196e8f0f7b9e4ac36e5ef7153ac4f41f2810e9a8f93a7d8",
+    "ebb0f3db263274d67756ed6b": "94138d02b3294fa30a79aa7a62a668f9f2ecc49c6e41606f60db2a9f4ca224de",
+    "ecc25764a562a23588082b1c": "247f6dc0ebd5c91a64caa6e5cbcdc9fef6f39a6fd299cabc8a38f65e30930626",
+    "2687d2ddc856122ac61e4e63": "e026c1f6d31d3e25fad7055dba735975b7fbd1bf8add90b004ea4076e60fa08e"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
