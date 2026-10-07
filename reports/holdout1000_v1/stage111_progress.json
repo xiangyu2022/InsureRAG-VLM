@@ -1,0 +1,115 @@
+{
+  "created_utc": "2026-10-07T21:55:40.530642+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 676,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 6,
+    "retained": 6,
+    "held": 0,
+    "retained_tasks": {
+      "numerical_calculation": 2,
+      "multi_evidence": 2,
+      "insufficient_evidence": 1,
+      "ordinary_qa": 1
+    }
+  },
+  "prior_checkpoint": "stage110_progress.json:670TEST/58DEV/145families",
+  "test_task_counts": {
+    "ordinary_qa": 432,
+    "insufficient_evidence": 58,
+    "multi_evidence": 91,
+    "numerical_calculation": 95
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 142,
+  "publisher_counts": {
+    "northcarolina_doi": 23,
+    "canada_fcac": 20,
+    "newyork_dfs": 49,
+    "california_cdi": 45,
+    "wisconsin_oci": 52,
+    "utah_uid": 12,
+    "us_opm": 111,
+    "us_va": 41,
+    "us_tricare": 119,
+    "newjersey_dobi": 36,
+    "alberta_goa": 36,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 12
+  },
+  "usage": {
+    "base_report_sha256": "4ec6ed5b4507f8c8ccc93c29863a97d7f69d1d2a28d17f82c8554b34145ee5bb",
+    "base_candidates_sha256": "72f0a0909381a52faecccc63313b678f630eed167eb63630cdb77fb0376859a2",
+    "new_candidates_sha256": "de0614c038e094ca561a847cd4be3bfb38de9ff8900a72a411c91244b2ffff3d",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 3096,
+    "old_old_pairs_reused": 700,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 6,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "9bc07de48baf25acd21cbdd52e7e8284c9deb2901b0972e949fde9b39a9472dd",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 2,
+    "new_source_bytes": 1421961,
+    "new_html_documents": 0,
+    "source_acquisition_accounted_in_stage99": false,
+    "new_pdf_documents": 1,
+    "browser_discovery_calls": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 293.0409234999679,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage111_source_decisions.json": "a8eba39218b67924a23779083d7243914be98bc02b6502ddf32719fa1f31a879",
+    "stage111_final_review.json": "d79042b56bd697b70c6806cdd86167cb901cecc6b7e8e0a81b66e7cb1408d7a9",
+    "review_pool_91_clearance_ledger.json": "1fb380103c7962a0c2b565109091255263358eabdbe686b4a06dab395a24ca5e",
+    "provisional_item_pool_91.jsonl": "015bedc32be2a701af059687507c1eefa1f54953eeaa99ce62cc3c9f0ccd147e",
+    "provisional_item_pool_91_validation.json": "2e8af247559773486301766e287d20f5f56d36969fa209763562863ecf551326"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 168,
+    "numerical_calculation": 55,
+    "multi_evidence": 59,
+    "insufficient_evidence": 42
+  },
+  "limits": [
+    "324 independent TEST still needed;DEVminima provisionallymet.",
+    "Snapshot19 addsone35pagePDF; unchanged1327documents and2317FAQrows preserved; nooldvectorsreencoded.",
+    "FEGLIfamilyconsolidated;14previousplus6newat20cap. PDFpages/editionsnotseparatefamilies.",
+    "Nearesthistory andnew/changedcandidate relations reviewed; seehashboundcontentrecords.",
+    "Prior metadata errata andall inheritedholds preserved; newholdsdocumentedinlocalledger.",
+    "Single sequentialCodexcontentreview, nothuman/expertreview."
+  ]
+}

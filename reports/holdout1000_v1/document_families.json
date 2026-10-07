@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-07T21:00:42.068326+00:00",
+  "updated_utc": "2026-10-07T22:36:41.488186+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -253,16 +253,6 @@
       "relation": "normalised_complete_body_duplicate"
     },
     {
-      "family_id": "family01_exact_4684ea7cd1b3f80e06e9f684",
-      "document_ids": [
-        "90d2f609f7dda62a8dc34b56",
-        "7bc009211fcced0dad739fae",
-        "4684ea7cd1b3f80e06e9f684",
-        "7abe835580bd022d3e30e6b9"
-      ],
-      "relation": "normalised_complete_body_duplicate"
-    },
-    {
       "family_id": "family01_exact_5c9a766231bb1de0bd7f524b",
       "document_ids": [
         "f5062b0b796e1ff13aa4607a",
@@ -290,29 +280,10 @@
       "relation": "normalised_complete_body_duplicate"
     },
     {
-      "family_id": "family01_exact_628b12fcff04027c8dc3432c",
-      "document_ids": [
-        "628b12fcff04027c8dc3432c",
-        "c7378c28a0e72e259e7d8726",
-        "de7661e25cea1486a34010d0",
-        "a54e0a96fc262c1b7761837b"
-      ],
-      "relation": "normalised_complete_body_duplicate"
-    },
-    {
       "family_id": "family01_exact_078f0efba910d0edc7c0c9da",
       "document_ids": [
         "078f0efba910d0edc7c0c9da",
         "fdd34178c90ede0814490ca7"
-      ],
-      "relation": "normalised_complete_body_duplicate"
-    },
-    {
-      "family_id": "family01_exact_196350caa2925189bd0f489c",
-      "document_ids": [
-        "196350caa2925189bd0f489c",
-        "4b0b32ae50ab7a909706f044",
-        "f59bd409b2be6ea2f92f1ff9"
       ],
       "relation": "normalised_complete_body_duplicate"
     },
@@ -716,19 +687,22 @@
         "6eef69d5d74bba92fa7a8993",
         "eda721de69fd279fd33d22c9",
         "f74f6d7240dd8912ae3ad0a5",
-        "032c8ea3118480d2ca5c0b38"
+        "032c8ea3118480d2ca5c0b38",
+        "69319913cd6a881d8401e712"
       ],
-      "relation": "Conservative closure of existing healthcare-rights parent/form family and infertility FAQ. Parent infertility sections repeat substantive benefit and nondiscrimination explanations; inherited links preserved. Parent also reproduces the dyslexia mandate and links to its dedicated guide; conservative closure includes that guide.",
+      "relation": "Conservative closure of existing healthcare-rights parent/form family and infertility FAQ. Parent infertility sections repeat substantive benefit and nondiscrimination explanations; inherited links preserved. Parent also reproduces the dyslexia mandate and links to its dedicated guide; conservative closure includes that guide. Includes surprise-bill guide after shared consumer protection/disclosure and recourse prose closure.",
       "local_review_records": [
         "stage21_source_decisions.json",
         "stage27a_family_decision.json",
         "stage57_source_decisions.json",
-        "stage84_source_decisions.json"
+        "stage84_source_decisions.json",
+        "stage107_source_decisions.json"
       ],
       "review_record_sha256": "6c5b1f8e927797a653e453d478149bdd5281d37b1c3ef2d541c90d952e5c67c0",
       "extension_review_sha256": [
         "0845c64ff99ec3c27021d69f6f3570c69a52ead2d0c4453552a944cee7eb4be7",
-        "9c125c2fa3e7d3dd8595ef492173fddeccd2b787a571d5933ba6b629b3cd1d18"
+        "9c125c2fa3e7d3dd8595ef492173fddeccd2b787a571d5933ba6b629b3cd1d18",
+        "9339deb72b17282f45e0a7c85bd45b3b54318d168d2c419d3099c8cd07f531b9"
       ]
     },
     {
@@ -1133,6 +1107,85 @@
         "stage101_source_decisions.json"
       ],
       "review_record_sha256": "b7592313544580ff78ab6044b231585922860d031146329eaabd75da31e88810"
+    },
+    {
+      "family_id": "family111_fegli_booklet_and_program_pages",
+      "document_ids": [
+        "196350caa2925189bd0f489c",
+        "228b62927d08f866fa48ad28",
+        "464d340e647aeb42c6f4280c",
+        "4684ea7cd1b3f80e06e9f684",
+        "4b0b32ae50ab7a909706f044",
+        "628b12fcff04027c8dc3432c",
+        "7abe835580bd022d3e30e6b9",
+        "7bc009211fcced0dad739fae",
+        "7bea96af2653b74c363536ca",
+        "90d2f609f7dda62a8dc34b56",
+        "a54e0a96fc262c1b7761837b",
+        "c7378c28a0e72e259e7d8726",
+        "de7661e25cea1486a34010d0",
+        "f59bd409b2be6ea2f92f1ff9"
+      ],
+      "relation": "2016 comprehensive FEGLI program booklet, substantive program-information reproduction, linked claims/beneficiary/conversion explanations and exact aliases; conservatively treated as one source family across editions.",
+      "merged_prior_groups": [
+        {
+          "family_id": "family01_exact_4684ea7cd1b3f80e06e9f684",
+          "document_ids": [
+            "90d2f609f7dda62a8dc34b56",
+            "7bc009211fcced0dad739fae",
+            "4684ea7cd1b3f80e06e9f684",
+            "7abe835580bd022d3e30e6b9"
+          ],
+          "relation": "normalised_complete_body_duplicate"
+        },
+        {
+          "family_id": "family01_exact_628b12fcff04027c8dc3432c",
+          "document_ids": [
+            "628b12fcff04027c8dc3432c",
+            "c7378c28a0e72e259e7d8726",
+            "de7661e25cea1486a34010d0",
+            "a54e0a96fc262c1b7761837b"
+          ],
+          "relation": "normalised_complete_body_duplicate"
+        },
+        {
+          "family_id": "family01_exact_196350caa2925189bd0f489c",
+          "document_ids": [
+            "196350caa2925189bd0f489c",
+            "4b0b32ae50ab7a909706f044",
+            "f59bd409b2be6ea2f92f1ff9"
+          ],
+          "relation": "normalised_complete_body_duplicate"
+        }
+      ],
+      "local_review_records": [
+        "stage111_source_decisions.json"
+      ],
+      "review_record_sha256": "a8eba39218b67924a23779083d7243914be98bc02b6502ddf32719fa1f31a879"
+    },
+    {
+      "family_id": "family113_youreurope_car_insurance",
+      "document_ids": [
+        "2fbee0fd02b4d0b0ce2d0db5",
+        "8040cda6ef4fd6210d9d8b75"
+      ],
+      "relation": "Two complementary chapters of the same EU cross-border motor-insurance guide; conservative common family despite only navigation exact overlap.",
+      "local_review_records": [
+        "stage113_source_decisions.json"
+      ],
+      "review_record_sha256": "8bafcba7b03c6157bd426431f1b5f4c17ea90cb76a5c5af4490a51f5e60a511a"
+    },
+    {
+      "family_id": "family113_youreurope_health_cover",
+      "document_ids": [
+        "9cd3597f5179948a3f173135",
+        "fd10b909593cd90b9081e8db"
+      ],
+      "relation": "EU cross-border health cover guide chapters share EHIC and residence/temporary-stay regime; treated conservatively as one family. No per-page multiplication of families.",
+      "local_review_records": [
+        "stage113_source_decisions.json"
+      ],
+      "review_record_sha256": "8bafcba7b03c6157bd426431f1b5f4c17ea90cb76a5c5af4490a51f5e60a511a"
     }
   ],
   "document_text_sha256": {
@@ -1545,7 +1598,19 @@
     "5af52850ea43879db1f2f029": "34011b71bb228b4d5ab69fad053c42be8992068b214aaafc9ceb41b572dfc1db",
     "afb91db94841e3e069556221": "0dd733336f39a1562af8db0119af2027a3d90b363ee1059d42887ab476f482c7",
     "fa72ceec7a18e0d95a50aeb6": "984e7d110f44e6738d366c0348b2cb963086c7b6832eb94857cb4db39789d5c3",
-    "ff188ee8626a38eb465b8e33": "bd39eaddda6fb0fdabc450c3006d66093e6e794f9177564df958b2f7ce6be36f"
+    "ff188ee8626a38eb465b8e33": "bd39eaddda6fb0fdabc450c3006d66093e6e794f9177564df958b2f7ce6be36f",
+    "69319913cd6a881d8401e712": "7bf64aee338d50e9ce0581c6d29788ff9619d6711d901d05ffe8f3d6663b68e4",
+    "98cc8123c255f2acfc82b5d5": "c7a219e725a756814ef010fed4572869c1be74a8c6c62f02d8021f86fa52680e",
+    "228b62927d08f866fa48ad28": "6567d7e00bc0b2bddd73c0f39a216f0aaeb34112febb8c91b8ba202677de512c",
+    "464d340e647aeb42c6f4280c": "f0768ef8cc8ae95d4444a74f59b07089a136d0509f003d0414745b51e55b633b",
+    "7bea96af2653b74c363536ca": "3edaeaa9235dabba7af3334ca6e7040aa9f4a9ad6a82bcd11c8913ad13f4dc6e",
+    "245b3fa7ecca6b6ac0499e9c": "72da260132cd2b8804360f148c785b88b9f6d2faf23fd6a9d12aea5bc19d6347",
+    "2fbee0fd02b4d0b0ce2d0db5": "d5dfdbb1a5c109721060c9efff0e9a4908effd485b9b6ee22de80bdd381c8fac",
+    "8040cda6ef4fd6210d9d8b75": "dffb0128ceb3fe20ba673634729eab7900746f116d3268245f594ed09b4afa84",
+    "9cd3597f5179948a3f173135": "0c788c1b3e1bdf3192f934ff5814507959884360fc9e3056ef1696df9882110f",
+    "fd10b909593cd90b9081e8db": "f8dd471e906365e5137c82f0e81e259cced11bbc8883d2f9219271f749e757f4",
+    "3059f50d1b4f534013ecb7cd": "2bb7b1d28bbe3e589e2e2645cf97e1ce656ce5ae7a65b5219b9fae327c7f975d",
+    "b020269c9b74158a28073e1f": "64fc0429ae59002fb8825f9ec007d5bff25baf0e101cfd871ebcda2499b6420a"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

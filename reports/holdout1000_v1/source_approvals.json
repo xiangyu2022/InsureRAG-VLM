@@ -196,7 +196,17 @@
       "https://www.opm.gov/frequently-asked-questions/insure-faq/life/",
       "https://www.opm.gov/frequently-asked-questions/insure-faq/dental-vision/"
     ],
-    "max_pages": 240
+    "max_pages": 240,
+    "reviewed_pdf_exceptions": [
+      {
+        "url": "https://www.opm.gov/healthcare-insurance/life-insurance/reference-materials/federalbooklet.pdf",
+        "source_sha256": "30d63cc6948cacd226b80263c473b0a206607577ff95d38bf49afa949ae2aaa9",
+        "review_record": "stage111_pdf_content_review.json",
+        "review_record_sha256": "1214d73cb4d3405f8a7fe8a5982cdd80803bf0b359b9e028518623c827c9e032",
+        "scope": "Existing government-authored material basis applies to original program explanatory passages only; no blanket OPM domain license. Exclude externally sourced financial-planning recommendations on physicalpage5, proprietary TCA discussion onpage28, logos/photos and sample personal fields from evidence. Raw/source/images remain private.",
+        "date_scope": "Revised March2016; ratechanges effectiveJanuary2016. All questions explicitly use2016guide; no current benefits/rate claim."
+      }
+    ]
   },
   {
     "id": "us_va",
@@ -420,5 +430,85 @@
     "raw_redistribution_in_this_task": false,
     "assigned_split": "test",
     "assignment_reason": "NewpublisherassignedwhollyTESTbeforeanydraftmodel/training/QAevaluation; noDEV overlap."
+  },
+  {
+    "id": "eu_youreurope",
+    "jurisdiction": "EU",
+    "terms": "https://european-union.europa.eu/legal-notice_en",
+    "terms_sha256": "326f3606cd6277f974af5f52991123325453f3eb59a6a4150494ef4f1f005b30",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-07T22:12:11.259324+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "CC BY4.0 for EU-owned prose only; keep attribution and identify authored QA as adaptation, no endorsement. Raw material stays local. Each exact page reviewed, no blanket domain or child-link approval.",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "European Union / European Commission, Your Europe; title, original URL, acquisition date and CC BY4.0 link; label authored QA as adaptation, no endorsement.",
+    "preflight_record": "stage113_html_content_review.json",
+    "preflight_record_sha256": "6d8230ace6492b62d8a990c421ac70eff96dc9b0ebea19dc2bf85ae2be0bf8c6",
+    "allowed_hosts": [
+      "europa.eu"
+    ],
+    "prefixes": [
+      "/youreurope/citizens/vehicles/insurance/accident/index_en.htm",
+      "/youreurope/citizens/vehicles/insurance/validity/index_en.htm",
+      "/youreurope/citizens/health/when-living-abroad/health-insurance-cover/index_en.htm",
+      "/youreurope/citizens/health/unplanned-healthcare/temporary-stays/index_en.htm"
+    ],
+    "excluded_path_keywords": [
+      ".pdf",
+      "/assets/",
+      "search"
+    ],
+    "excluded_prefixes": [
+      "/youreurope/citizens/acc/",
+      "/youreurope/citizens/dev/"
+    ],
+    "minimum_interval_seconds": 10,
+    "seeds": [
+      "https://europa.eu/youreurope/citizens/vehicles/insurance/accident/index_en.htm",
+      "https://europa.eu/youreurope/citizens/vehicles/insurance/validity/index_en.htm",
+      "https://europa.eu/youreurope/citizens/health/when-living-abroad/health-insurance-cover/index_en.htm",
+      "https://europa.eu/youreurope/citizens/health/unplanned-healthcare/temporary-stays/index_en.htm"
+    ],
+    "max_pages": 4,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false,
+    "assigned_split": "test",
+    "assignment_reason": "Whole newly sourced EU publisher assigned TEST before any model audit/training/final QA inference; no existing DEV overlap."
+  },
+  {
+    "id": "us_rrb",
+    "jurisdiction": "US",
+    "terms": "https://www.rrb.gov/Policy",
+    "terms_sha256": "c49297c3eb950b93ac57c597021a27cb2fd0eb6cd0a97dea21abfd83a5ad098c",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-07T22:25:14.662301+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "RRB Digital Rights Policy explicitly permits educational/informational use with RRB.gov attribution; copyright/trademark notices require additionalpermission and endorsements/misleadinguse prohibited. Both original agency prose bodies reviewed; images/logos/thirdparty materials excluded, raw sources local only.",
+    "attribution": "U.S. Railroad Retirement Board / RRB.gov; original title, URL, acquisition time; identify original authored QA adaptation, no endorsement.",
+    "preflight_record": "stage114_html_content_review.json",
+    "preflight_record_sha256": "06448cfb06d42fc44ccee814f9373ace6b1e0b3b3fff59c177285ef9a4d2a245",
+    "allowed_hosts": [
+      "www.rrb.gov"
+    ],
+    "prefixes": [
+      "/Benefits/AB-31",
+      "/Benefits/Unemployment/GeneralInfoUnemployment/UB9"
+    ],
+    "excluded_path_keywords": [
+      ".pdf",
+      "/search/",
+      "/user/",
+      "/admin/"
+    ],
+    "minimum_interval_seconds": 2,
+    "seeds": [
+      "https://www.rrb.gov/Benefits/AB-31",
+      "https://www.rrb.gov/Benefits/Unemployment/GeneralInfoUnemployment/UB9"
+    ],
+    "max_pages": 2,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false,
+    "assigned_split": "test",
+    "assignment_reason": "Whole new publisher assigned TEST before candidate authoring and local-model audit. No training, DEV or final-QA evaluation."
   }
 ]

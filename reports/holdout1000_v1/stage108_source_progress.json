@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-07T21:27:16.796770+00:00",
+  "status": "SOURCE_ONLY_NO_PERMISSION_CLEARANCE",
+  "new_candidates": 0,
+  "local_model_processes": 0,
+  "browser_discovery_calls": 4,
+  "counts_unchanged": {
+    "test": 664,
+    "dev": 58
+  },
+  "new_source_requests": 2,
+  "new_source_bytes": 129968,
+  "guard_denials_before_network": 0,
+  "notes": [
+    "Maryland existingpending source, robots andhomepage fetched; homepagefooter has no content-use licence link. No insurer consumerbody acquisition orapproval. Applicable reuse permission unresolved; MarylandStateArchives/tourism policies do not grant permission for MIA.",
+    "Minnesota existingredirect-outside-reviewed-host hold found before localfetch; no newaccess.",
+    "FCA copyrightURL inaccessible throughwebtool; no retry, alternatechannel orapproval.",
+    "Four browsercalls total across108/109:twoMaryland/Minnesotasearches/homepage,oneFCAopen,onejointIRDAI/Marylandsearch. Jointsearch accountedhereonce; browserbytesunknown."
+  ],
+  "source_selection_sha256": "8343b43d630c9ee84b405c78d717240f5fbeecf065ff9bdf42c1de84bedffb4a",
+  "accepted_test_items": 0,
+  "frozen": false
+}

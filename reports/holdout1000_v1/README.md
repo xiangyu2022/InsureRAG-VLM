@@ -12,58 +12,55 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest item-construction checkpoint is stage103_progress.json: **669 provisional
-TEST and 58 DEV records across 145 TEST document families**. Source-only reviews
-continue through stage106. **Accepted counts remain zero; the dataset is not frozen.**
-All 727 retained item gates pass. Another 331 independent TEST questions are needed.
+The latest item-construction checkpoint is stage114_progress.json, consolidated in
+stage115_progress.json: **722 provisional TEST and 58 DEV records across 148 TEST
+document families**. **Accepted counts remain zero; the dataset is not frozen.**
+All 780 retained item gates pass. Another 278 independent TEST questions are needed.
 All four TEST type targets remain unmet; DEV minimums are provisionally met.
 Earlier reports are historical snapshots and must not be added together.
 
-Stages94–106 reviewed 49 drafts, retained 38 TEST and held 11, with no old-item
-revocations. TEST contains 430 ordinary, 94 numerical, 89 multi-evidence and 56
-insufficient-evidence tasks. Remaining targets are 170/56/61/44 respectively.
-DEV remains 25/10/12/11. The unchanged limits are 20 items per document family
-and 20% per publisher; publisher and family split isolation both pass.
+Stages107–115 reviewed 66 drafts, retained 58 TEST and held eight. Five previously
+retained NY surprise-bill questions were revoked after conservative source-family
+reconciliation, for a net gain of 53 TEST from published stage106. The complete NY
+rights family remains capped at20. TEST contains453 ordinary,106 numerical,101
+multi-evidence and62 insufficient-evidence tasks; remaining targets are147/44/49/38.
+DEV remains25/10/12/11. Publisher and document-family split isolation pass, with
+unchanged limits of20% per publisher and20 items per family. All94 ledger links,
+prior revocations, three same-ID repairs and current vector keys/hashes were checked.
 
-Cached TRICARE, CDI, FCAC and OPM sources supply distinct consumer coverage,
-cost, enrollment and claim needs. New Zealand MBIE Consumer Protection original
-Crown explanatory text was admitted under reviewed CC BY-NC4.0 conditions,
-attribution and disclaimer requirements. Its five guides/directory share one
-conservative family with 17 retained items; the whole publisher was assigned TEST
-before authoring. Active immutable snapshot18 preserves earlier document and FAQ
-bytes. Images, logos and third-party material were excluded. Source text and
-individual questions remain local, including required attribution metadata.
+Cached OPM/TRICARE sources were supplemented by one dated35-page OPM FEGLI booklet,
+four EU consumer pages and two RRB booklets. The FEGLI booklet and13 program-page
+documents form one conservative family with20 TEST items. Four EU pages form two
+families, and each RRB booklet remains a complete family. Snapshot21 preserves all
+previous document bytes and2317 original FAQ candidates and now has1334 documents.
+OPM agency prose uses a reviewed exact-PDF scope; EU-owned prose uses CC-BY4.0 with
+attribution and adaptation notice; RRB agency text uses its explicit educational/
+informational reuse permission and attribution. Third-party text/assets and logos
+are excluded. Raw sources, attribution details and individual questions remain local.
 
-Numerical work requires retrieving operative rules/rates and independent arithmetic;
-the OPM rate example explicitly uses the October2021 table and verified HTML
-columns. Two nominal multi-evidence drafts were classified ordinary because an
-extra span was unnecessary. Refusals preserve missing case-specific information.
-New components of held composite questions and a reformulation of a previously
-revoked numerical core were held, rather than reintroduced as new independent items.
-Candidate/history neighbors and changed active relationships received sequential
-Codex content review, not human/expert adjudication. All original15 revocations,
-later scope/family-cap exclusions, same-ID repairs, CA correction and TDI DEV
-assignment remain; 88 ledger links and current vector keys/hashes were verified.
+The review held historical or retained-core duplicates, unnecessary retrieval,
+ambiguous provider scope and unresolved Medicare entitlement wording. One nominal
+multi-evidence question was reclassified ordinary because an extra span was not
+necessary. Numerical tasks independently verify operative caps, offsets, rounding
+and payment rules. Refusals preserve missing case-specific facts. Historical and
+candidate neighbors, including changed active relationships, received sequential
+Codex content review, not human/expert review. No final QA inference or tuning ran.
 
-Source-only reviews do not increase the question count. Additional NHC sources
-remain unadmitted because of family overlap and timing ambiguity. APRA boundary
-holds remain. HIA territorial reuse applicability remains unresolved; HKIA403 was
-respected. ASIC's prior permission requirement and PBGC's explicit written-
-permission requirement block their use. No alternate retrieval or approval followed.
-The NY surprise-bill cache has further possible exceptions requiring full item and
-history review; no new questions from it were counted.
+PBGC dependencies were checked both before and after this batch: zero retained
+items depend on PBGC. Its written-permission hold remains, without alternate
+retrieval. IRDAI's robots prohibition was respected before a consumer-page request;
+Maryland permission remains unresolved, Minnesota retains its cross-host hold,
+and FCA copyright terms remained inaccessible. The EU planned-care page and RRB
+Medicare/UB11 materials remain unadmitted. These are source-specific holds, not a
+claim that all compliant construction sources are exhausted.
 
-49 new vectors used four sequential local model processes and five small forward
-batches; old question/history vectors were reused. Local source checks used 26
-bounded HTTP requests and 1,364,565 response bytes, plus seven separately accounted
-browser calls. One NHC URL guard denial occurred before any HTTP request.
-There were no paid model APIs, subagents, model downloads, training, final QA
-inference or test-directed tuning. Offline CPU verification passed 480 tests and
-58 subtests. Global count/type gates still block freezing and final evaluation.
-
-Prior published commit118b579 passed all five CI jobs in run37674318205. This
-checkpoint's exact-commit terminal CI receipt is recorded separately. PR8 remains
-draft/unmerged; its description API403 restriction remains binding.
+Only66 new vectors were encoded in five sequential local model processes and seven
+small forward batches; old vectors were reused. This checkpoint used24 bounded
+HTTP requests and3,319,841 response bytes, plus five separately accounted browser
+calls. A robots guard denial occurred before HTTP. No paid model API, model download,
+subagent, training or final QA inference was used. Offline CPU verification passed
+480 tests and58 subtests. Exact-commit CI is verified and recorded separately.
+PR8 remains draft/unmerged; its description API403 restriction remains binding.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

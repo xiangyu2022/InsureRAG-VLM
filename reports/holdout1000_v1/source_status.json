@@ -102,11 +102,13 @@
       "jurisdiction": "US-MD",
       "seed_url": "https://insurance.maryland.gov/Consumer/Pages/default.aspx",
       "status": "pending_source_or_terms_review",
-      "reason": null,
+      "reason": "Robots/homepage reviewed; applicable content reuse grant not located. Archive/tourism policies not applicable. No consumer acquisition orapproval.",
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 1601,
-      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen.",
+      "local_review_record": "stage108_source_selection.json",
+      "review_record_sha256": "8343b43d630c9ee84b405c78d717240f5fbeecf065ff9bdf42c1de84bedffb4a"
     },
     {
       "publisher": "maine_boi",
@@ -222,12 +224,14 @@
       "publisher": "india_irdai",
       "jurisdiction": "IN",
       "seed_url": "https://irdai.gov.in/faqs",
-      "status": "pending_source_or_terms_review",
-      "reason": null,
+      "status": "excluded_or_held_for_access",
+      "reason": "Robots disallows all paths, including ChatGPT-User. Homepageguardblocked beforeHTTP; no alternate retrieval.",
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen.",
+      "local_review_record": "stage109_source_selection.json",
+      "review_record_sha256": "341fc62059f39d723513f5e7427eb2bc0403c64dfdcb0ff61a222cb0b6f91995"
     },
     {
       "publisher": "singapore_moneysense",
@@ -407,11 +411,13 @@
       "jurisdiction": "GB",
       "seed_url": "https://www.fca.org.uk/consumers/insurance",
       "status": "pending_source_or_terms_review",
-      "reason": null,
+      "reason": "Copyrightpage inaccessible viawebtool; no alternate retrieval; licence unresolved.",
       "terms": null,
       "access_denial_urls": [],
       "historical_host_url_mentions": 0,
-      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen."
+      "historical_mentions_interpretation": "Exposure signal only; no implication that every document is contaminated or zero means unseen.",
+      "local_review_record": "stage108_source_selection.json",
+      "review_record_sha256": "8343b43d630c9ee84b405c78d717240f5fbeecf065ff9bdf42c1de84bedffb4a"
     },
     {
       "publisher": "ohio_odi",
@@ -939,6 +945,54 @@
       "access_denial_urls": [],
       "local_review_record": "stage106_source_selection.json",
       "review_record_sha256": "244aacc896e22efc87a745e9d217dd4e276b51a3ba30110ac19cd7aa53af9b87"
+    },
+    {
+      "publisher": "eu_youreurope",
+      "jurisdiction": "EU",
+      "seed_url": "https://europa.eu/youreurope/citizens/vehicles/insurance/accident/index_en.htm",
+      "status": "approved_exact_pages_local_research",
+      "reason": "CC BY4.0 for EU-owned prose only; keep attribution and identify authored QA as adaptation, no endorsement. Raw material stays local. Each exact page reviewed, no blanket domain or child-link approval.",
+      "terms": {
+        "url": "https://european-union.europa.eu/legal-notice_en",
+        "sha256": "326f3606cd6277f974af5f52991123325453f3eb59a6a4150494ef4f1f005b30"
+      },
+      "local_review_record": "stage113_html_content_review.json",
+      "review_record_sha256": "6d8230ace6492b62d8a990c421ac70eff96dc9b0ebea19dc2bf85ae2be0bf8c6",
+      "held_exact_urls": [
+        {
+          "document_id": "81b50f1f134082e4627c7f9c",
+          "url": "https://europa.eu/youreurope/citizens/health/planned-healthcare/right-to-treatment/index_en.htm",
+          "raw_sha256": "6718206426dcd84dcce401fc27df1d0e4a928357d9965a0e5c840fa4a5860a77",
+          "reason": "Planned-treatment page combines broad cheaper-price rule and EHIC-only proof assertion. Those statements need regime-specific corroboration and may mislead across S2/directive routes. No questions and not admitted to active corpus; no follow-up acquisition in this batch."
+        }
+      ],
+      "access_denial_urls": [],
+      "raw_redistribution_in_this_task": false
+    },
+    {
+      "publisher": "us_rrb",
+      "jurisdiction": "US",
+      "seed_url": "https://www.rrb.gov/Benefits/AB-31",
+      "status": "approved_exact_two_booklets_local_research",
+      "reason": "RRB Digital Rights Policy explicitly permits educational/informational use with RRB.gov attribution; copyright/trademark notices require additionalpermission and endorsements/misleadinguse prohibited. Both original agency prose bodies reviewed; images/logos/thirdparty materials excluded, raw sources local only.",
+      "terms": {
+        "url": "https://www.rrb.gov/Policy",
+        "sha256": "c49297c3eb950b93ac57c597021a27cb2fd0eb6cd0a97dea21abfd83a5ad098c"
+      },
+      "local_review_record": "stage114_html_content_review.json",
+      "review_record_sha256": "06448cfb06d42fc44ccee814f9373ace6b1e0b3b3fff59c177285ef9a4d2a245",
+      "held_exact_urls": [
+        {
+          "url": "https://www.rrb.gov/Benefits/Medicare/GeneralInfoMedicare/RB20",
+          "reason": "PartD says musthavePartA rather than identifying any PartB-only route; broader enrollment scope unresolved. Partial full-body review plus focused gap slices, no item authored and not admitted."
+        },
+        {
+          "url": "https://www.rrb.gov/UB-11/Sickness_Benefits_for_Railroad_Employees",
+          "reason": "2023 booklet tableofcontents only; no child chapters or PDF acquired. Prefer2026UB9 for updatednumbers."
+        }
+      ],
+      "access_denial_urls": [],
+      "raw_redistribution_in_this_task": false
     }
   ],
   "excluded_previously_known": [
@@ -947,5 +1001,5 @@
     "All previously denied local memory/demo-upload paths"
   ],
   "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
-  "updated_utc": "2026-10-07T21:06:27.861550+00:00"
+  "updated_utc": "2026-10-07T22:25:14.662301+00:00"
 }
