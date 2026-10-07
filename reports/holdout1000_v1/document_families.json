@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-07T19:23:27.787941+00:00",
+  "updated_utc": "2026-10-07T21:00:42.068326+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1118,6 +1118,21 @@
         "stage93_source_decisions.json"
       ],
       "review_record_sha256": "40e3c37ed27fe65be28b0b753846da25a8f27bf691f92afa1b51489f7e7b8a1c"
+    },
+    {
+      "family_id": "family101_nz_mbie_consumer_insurance",
+      "document_ids": [
+        "d53634ff0ad9fc0a638d6234",
+        "de12c155bf0690271a103952",
+        "c995ff78e684e242c4417c53",
+        "5b35f4ae1b7201bba80e85a8",
+        "bb031861358eec53a7c95a2b"
+      ],
+      "relation": "Insurance/car/travelguidesandcomplaintprocedure pluscardirectory; sharedrights/disclosure/recourse core andexplicitlinkedconsumerchapter, conservativelyonefamily,cap20,whollyTEST.",
+      "local_review_records": [
+        "stage101_source_decisions.json"
+      ],
+      "review_record_sha256": "b7592313544580ff78ab6044b231585922860d031146329eaabd75da31e88810"
     }
   ],
   "document_text_sha256": {
@@ -1519,7 +1534,18 @@
     "451d4320b99df92755459500": "021d09b8f29de35889fd3b39091280391c89b8224045d8201ac59669593b17c9",
     "7563590d2fa4c9a6a77695d4": "b8fd42bd7f54010a02945d178f9e19144686f3524440e795fe78ca5da33fa053",
     "04afd1adc88383c4df5ccddb": "a3ba3fb768dbcf6d9e72542df5d510b8d152b46f5167a67b75abceb02269562e",
-    "747f5eb23ce02e64ab99a82a": "0af389bc80690313caf04137daf97ca770b921321f83f51b25071548f019159d"
+    "747f5eb23ce02e64ab99a82a": "0af389bc80690313caf04137daf97ca770b921321f83f51b25071548f019159d",
+    "bb9dc3df05124f704c93fc71": "7eb0946b0796d31a46fbeb745f39060ac0f95e9181ba11052dda9a7132aa2f90",
+    "d53634ff0ad9fc0a638d6234": "204080bf5f657f432468f19a656b046dcb6d42fa1912699971e95d88e1b59fd8",
+    "de12c155bf0690271a103952": "629c7239577464b9a4707fed4645b6dc11c0a16efcd850b8de2df640b2f4878f",
+    "c995ff78e684e242c4417c53": "601654237801ad0e76ee838455cd8c0c7750cf4d9e2375a1b06e18e40cff3dfd",
+    "5b35f4ae1b7201bba80e85a8": "9f5c477aa9535257a642f68eda98c9ea97739aac2028a603c303e26e2cac4c4a",
+    "bb031861358eec53a7c95a2b": "4fc94b5b74067337ddf886cb3452cb3dac6aef9f9144f8610f072f09b6187695",
+    "2abeebfb665580ecf0de635c": "a82b454ebfaf72bebaf4dfebb10dfe91b0ee086cb8459ac32d87a51342992dfe",
+    "5af52850ea43879db1f2f029": "34011b71bb228b4d5ab69fad053c42be8992068b214aaafc9ceb41b572dfc1db",
+    "afb91db94841e3e069556221": "0dd733336f39a1562af8db0119af2027a3d90b363ee1059d42887ab476f482c7",
+    "fa72ceec7a18e0d95a50aeb6": "984e7d110f44e6738d366c0348b2cb963086c7b6832eb94857cb4db39789d5c3",
+    "ff188ee8626a38eb465b8e33": "bd39eaddda6fb0fdabc450c3006d66093e6e794f9177564df958b2f7ce6be36f"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

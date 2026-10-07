@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-07T21:06:27.861550+00:00",
+  "status": "SOURCE_ONLY_NO_DRAFTS",
+  "new_candidates": 0,
+  "new_source_requests": 0,
+  "new_source_bytes": 0,
+  "local_model_processes": 0,
+  "accepted_test_items": 0,
+  "frozen": false,
+  "source_selection_sha256": "76891eaa257401f4f14f4a84bcecd940272d46f170260172da8913f7ef4b2a3c",
+  "notes": [
+    "No independent draft selected. Existing insurer-list needs cover brand/legal identity and runoff restrictions. Held pages not cleared. No company-name variants."
+  ]
+}

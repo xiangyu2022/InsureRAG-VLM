@@ -911,6 +911,34 @@
       "approved_static_html_documents": 8,
       "latest_content_review_record": "stage93_html_content_review.json",
       "latest_content_review_sha256": "5c58406d69a88c2988bca9cac009d6402ac5e46f78c67af99186742d5e70dd3f"
+    },
+    {
+      "publisher": "nz_mbie_consumer",
+      "jurisdiction": "NZ",
+      "seed_url": "https://www.consumerprotection.govt.nz/help-product-service/managing-money/insurance",
+      "status": "approved_local_noncommercial_acquisition",
+      "reason": "Crown-authored explanatory prose under full-read CC-BY-NC4.0copyrightterms. OriginalauthoredQAadaptations attributed, noncommerciallocalonly. Excludephotographs/logos/thirdpartyassets andexplicitlyattributedInsuranceCouncilstatistics/codewording; noexternalclaimcase content. Generalconsumerlaw notcurrentlegaladvice.",
+      "terms": {
+        "url": "https://www.consumerprotection.govt.nz/copyright",
+        "sha256": "2cb7293ab1c5a3ed6529bd779e45ae5571cd098cfb818d421432de5965a30cbe",
+        "acquired_utc": "2026-10-07T20:19:52.209132+00:00",
+        "basis": "Crown-authored explanatory prose under full-read CC-BY-NC4.0copyrightterms. OriginalauthoredQAadaptations attributed, noncommerciallocalonly. Excludephotographs/logos/thirdpartyassets andexplicitlyattributedInsuranceCouncilstatistics/codewording; noexternalclaimcase content. Generalconsumerlaw notcurrentlegaladvice."
+      },
+      "access_denial_urls": [],
+      "approved_static_html_documents": 5,
+      "latest_content_review_record": "stage99_html_content_review.json",
+      "latest_content_review_sha256": "b810012eccd5b5ec01d8e0601ae9878750b8ed7b0da051e1e7c656a879b3336f"
+    },
+    {
+      "publisher": "us_pbgc",
+      "jurisdiction": "US",
+      "seed_url": "https://www.pbgc.gov/",
+      "status": "excluded_or_held_for_terms_or_alias",
+      "reason": "Terms require express written PBGC permission to copy, modify, distribute, display or otherwise use website content. Permission absent; no consumer pages/tables/QA acquired and no source approval. No alternate source or route attempted.",
+      "terms": "https://www.pbgc.gov/about/policies/website",
+      "access_denial_urls": [],
+      "local_review_record": "stage106_source_selection.json",
+      "review_record_sha256": "244aacc896e22efc87a745e9d217dd4e276b51a3ba30110ac19cd7aa53af9b87"
     }
   ],
   "excluded_previously_known": [
@@ -919,5 +947,5 @@
     "All previously denied local memory/demo-upload paths"
   ],
   "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
-  "updated_utc": "2026-10-07T19:12:29.804887+00:00"
+  "updated_utc": "2026-10-07T21:06:27.861550+00:00"
 }

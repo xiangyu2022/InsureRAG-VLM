@@ -12,53 +12,58 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest construction checkpoint is stage93_progress.json: **631 provisional
-TEST and 58 DEV records across 143 TEST document families**;
-**accepted/frozen counts remain zero**. All 689 retained item gates pass.
-Another 369 independent TEST questions are needed. All four TEST type
-targets remain unmet; DEV minimums are provisionally met. Publisher concentration
-stays within 20% and each document family at most 20. Earlier reports are historical
-snapshots and must not be added together.
+The latest item-construction checkpoint is stage103_progress.json: **669 provisional
+TEST and 58 DEV records across 145 TEST document families**. Source-only reviews
+continue through stage106. **Accepted counts remain zero; the dataset is not frozen.**
+All 727 retained item gates pass. Another 331 independent TEST questions are needed.
+All four TEST type targets remain unmet; DEV minimums are provisionally met.
+Earlier reports are historical snapshots and must not be added together.
 
-Stages89–93 reviewed 54 new drafts, retained 53 TEST and held 1; net
-TEST growth from stage88's 578/58 is 53. TEST tasks are 407 ordinary,
-91 numerical, 82 multi-evidence and 51 insufficient-evidence;
-remaining targets are 193, 59, 68 and 49. DEV remains 25/10/12/11.
-A proposed FEGLI assignment question was held for repeating an existing core need.
-Cached OPM enrollment material remains deferred because held-source family overlap
-is unresolved. Prospective ACC source terms timed out; no retry, alternative
-retrieval or approval followed. Source-only stages90 and92 add no questions.
+Stages94–106 reviewed 49 drafts, retained 38 TEST and held 11, with no old-item
+revocations. TEST contains 430 ordinary, 94 numerical, 89 multi-evidence and 56
+insufficient-evidence tasks. Remaining targets are 170/56/61/44 respectively.
+DEV remains 25/10/12/11. The unchanged limits are 20 items per document family
+and 20% per publisher; publisher and family split isolation both pass.
 
-NHC official explanatory HTML was acquired under verified CC BY-NC4.0 terms,
-robots restrictions and exact linked URL guards. Sources retain written attribution,
-license and disclaimer references; images, external forms and third-party content
-were excluded. Whole-publisher TEST assignment preceded any development. The NHC
-coverage overview and its substantively overlapping new-claim page share one family
-at its unchanged 20-item cap. Complaint/dispute/rights pages and home claim-assignment
-pages form two further reviewed families; common navigation does not create a
-substantive family link. Immutable snapshots15 and16 preserve all earlier document
-and original FAQ bytes. Source text and individual questions remain local.
+Cached TRICARE, CDI, FCAC and OPM sources supply distinct consumer coverage,
+cost, enrollment and claim needs. New Zealand MBIE Consumer Protection original
+Crown explanatory text was admitted under reviewed CC BY-NC4.0 conditions,
+attribution and disclaimer requirements. Its five guides/directory share one
+conservative family with 17 retained items; the whole publisher was assigned TEST
+before authoring. Active immutable snapshot18 preserves earlier document and FAQ
+bytes. Images, logos and third-party material were excluded. Source text and
+individual questions remain local, including required attribution metadata.
 
-Selected dates distinguish 2022 cap phase-in, damage-based 2024 statutory regimes,
-and interaction-based insured-person rights. Numerical results were independently
-recomputed; multi-evidence tasks require each cited rule; refusals preserve missing
-personal facts or unavailable applicable procedures. Candidate/history neighbors,
-changed active relations, evidence correspondence, source permission and family
-isolation received sequential Codex content review, not human/expert adjudication.
-All earlier holds/revocations, same-ID repairs, CA task correction and TDI DEV
-assignment remain. A copied private ledger display label was corrected by an
-append-only erratum; the actual vector counts and public totals were already correct.
+Numerical work requires retrieving operative rules/rates and independent arithmetic;
+the OPM rate example explicitly uses the October2021 table and verified HTML
+columns. Two nominal multi-evidence drafts were classified ordinary because an
+extra span was unnecessary. Refusals preserve missing case-specific information.
+New components of held composite questions and a reformulation of a previously
+revoked numerical core were held, rather than reintroduced as new independent items.
+Candidate/history neighbors and changed active relationships received sequential
+Codex content review, not human/expert adjudication. All original15 revocations,
+later scope/family-cap exclusions, same-ID repairs, CA correction and TDI DEV
+assignment remain; 88 ledger links and current vector keys/hashes were verified.
 
-54 new vectors used 3 sequential local model processes and
-5 small forward batches; old candidate/history vectors were reused.
-Local source acquisition used 10 bounded HTTP requests and 777,695 response bytes.
-There were no paid services, subagents, model downloads, training, final QA inference,
-test-directed tuning or raw-data publication. Offline CPU verification passed
-480 tests and 58 subtests. Global count/type gates still block freezing.
+Source-only reviews do not increase the question count. Additional NHC sources
+remain unadmitted because of family overlap and timing ambiguity. APRA boundary
+holds remain. HIA territorial reuse applicability remains unresolved; HKIA403 was
+respected. ASIC's prior permission requirement and PBGC's explicit written-
+permission requirement block their use. No alternate retrieval or approval followed.
+The NY surprise-bill cache has further possible exceptions requiring full item and
+history review; no new questions from it were counted.
 
-Prior commit1e28a0f passed all five CI jobs in run37649728442. This checkpoint's
-exact-commit terminal CI receipt is recorded separately. PR8 stays draft/unmerged;
-the PR-description API403 restriction remains binding.
+49 new vectors used four sequential local model processes and five small forward
+batches; old question/history vectors were reused. Local source checks used 26
+bounded HTTP requests and 1,364,565 response bytes, plus seven separately accounted
+browser calls. One NHC URL guard denial occurred before any HTTP request.
+There were no paid model APIs, subagents, model downloads, training, final QA
+inference or test-directed tuning. Offline CPU verification passed 480 tests and
+58 subtests. Global count/type gates still block freezing and final evaluation.
+
+Prior published commit118b579 passed all five CI jobs in run37674318205. This
+checkpoint's exact-commit terminal CI receipt is recorded separately. PR8 remains
+draft/unmerged; its description API403 restriction remains binding.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

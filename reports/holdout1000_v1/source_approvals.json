@@ -372,5 +372,53 @@
       "stage93_html_content_review.json": "5c58406d69a88c2988bca9cac009d6402ac5e46f78c67af99186742d5e70dd3f"
     },
     "extension_reason": "Seven directly linked official consumer HTMLpages individually read; exactURLguards, cachedrobots/terms reused; sameCC-BY-NC4.0exclusions. No automaticapprovalofchildlinks."
+  },
+  {
+    "id": "nz_mbie_consumer",
+    "jurisdiction": "NZ",
+    "terms": "https://www.consumerprotection.govt.nz/copyright",
+    "terms_sha256": "2cb7293ab1c5a3ed6529bd779e45ae5571cd098cfb818d421432de5965a30cbe",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-07T20:19:52.209132+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "Crown-authored explanatory prose under full-read CC-BY-NC4.0copyrightterms. OriginalauthoredQAadaptations attributed, noncommerciallocalonly. Excludephotographs/logos/thirdpartyassets andexplicitlyattributedInsuranceCouncilstatistics/codewording; noexternalclaimcase content. Generalconsumerlaw notcurrentlegaladvice.",
+    "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+    "attribution": "MBIEConsumerProtection;originaltitle URL acquisitionUTC andCC-BY-NC4.0link;identifyauthoredderivatives,retain disclaimer,noendorsement.",
+    "preflight_record": "stage99_exact_html_preflight.json",
+    "preflight_record_sha256": "8916f391fb066800f73b0b3fd8cd8d4f143f4d5acfa435866918abcf7d09ba30",
+    "allowed_hosts": [
+      "www.consumerprotection.govt.nz"
+    ],
+    "prefixes": [
+      "/help-product-service/managing-money/insurance",
+      "/help-product-service/managing-money/how-to-complain-about-your-financial-service-provider",
+      "/help-product-service/travel-and-events/travel-insurance",
+      "/help-product-service/cars/paying-registering-insuring-car",
+      "/help-product-service/cars/paying-registering-insuring-car/car-insurance"
+    ],
+    "excluded_prefixes": [
+      "/admin",
+      "/security",
+      "/search"
+    ],
+    "excluded_path_keywords": [
+      ".pdf",
+      "/assets/",
+      "downloadpdf",
+      "email-share"
+    ],
+    "minimum_interval_seconds": 1.2,
+    "seeds": [
+      "https://www.consumerprotection.govt.nz/help-product-service/managing-money/insurance",
+      "https://www.consumerprotection.govt.nz/help-product-service/managing-money/how-to-complain-about-your-financial-service-provider",
+      "https://www.consumerprotection.govt.nz/help-product-service/travel-and-events/travel-insurance",
+      "https://www.consumerprotection.govt.nz/help-product-service/cars/paying-registering-insuring-car",
+      "https://www.consumerprotection.govt.nz/help-product-service/cars/paying-registering-insuring-car/car-insurance"
+    ],
+    "max_pages": 5,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false,
+    "assigned_split": "test",
+    "assignment_reason": "NewpublisherassignedwhollyTESTbeforeanydraftmodel/training/QAevaluation; noDEV overlap."
   }
 ]
