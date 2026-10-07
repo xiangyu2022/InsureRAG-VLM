@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-07T08:37:01.827500+00:00",
+  "updated_utc": "2026-10-07T10:28:23.427258+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -557,13 +557,18 @@
       "family_id": "family_ny_ltc_four_policy_classifications",
       "document_ids": [
         "401545df0d4ff8ecd80e8eff",
-        "45da4997122c5627d8a1cc65"
+        "45da4997122c5627d8a1cc65",
+        "fffca1e076dcfd15226b46f1"
       ],
       "relation": "Named four-classification explanation and its detailed minimum-standards page; common substantive product taxonomy, not navigation alone.",
       "local_review_records": [
-        "stage11_final_review.json"
+        "stage11_final_review.json",
+        "stage53_source_decisions.json"
       ],
-      "review_record_sha256": "378bbb998203330a280e7f43c974aac7084cd8b470bc190ed7d3e07fa02ae446"
+      "review_record_sha256": "378bbb998203330a280e7f43c974aac7084cd8b470bc190ed7d3e07fa02ae446",
+      "extension_review_sha256": [
+        "569d27a05affaeb980947c23ddae71b5373078a43ac29b87f0301254389c7d05"
+      ]
     },
     {
       "family_id": "family_tdi_water_damage_faq_derivatives",
@@ -688,14 +693,20 @@
         "b74c36ed7273e76c2dfed22b",
         "cce1bf0c5fc2792d1d0f946b",
         "f4e4cb1c394cde1a64141374",
-        "6eef69d5d74bba92fa7a8993"
+        "6eef69d5d74bba92fa7a8993",
+        "eda721de69fd279fd33d22c9",
+        "f74f6d7240dd8912ae3ad0a5"
       ],
       "relation": "Conservative closure of existing healthcare-rights parent/form family and infertility FAQ. Parent infertility sections repeat substantive benefit and nondiscrimination explanations; inherited links preserved. Parent also reproduces the dyslexia mandate and links to its dedicated guide; conservative closure includes that guide.",
       "local_review_records": [
         "stage21_source_decisions.json",
-        "stage27a_family_decision.json"
+        "stage27a_family_decision.json",
+        "stage57_source_decisions.json"
       ],
-      "review_record_sha256": "6c5b1f8e927797a653e453d478149bdd5281d37b1c3ef2d541c90d952e5c67c0"
+      "review_record_sha256": "6c5b1f8e927797a653e453d478149bdd5281d37b1c3ef2d541c90d952e5c67c0",
+      "extension_review_sha256": [
+        "0845c64ff99ec3c27021d69f6f3570c69a52ead2d0c4453552a944cee7eb4be7"
+      ]
     },
     {
       "family_id": "family_wi_sharing_tnc_guides",
@@ -915,6 +926,46 @@
         "stage49_source_decisions.json"
       ],
       "review_record_sha256": "ca192cc45afe720964b729186d7f81466993fe3e83a80f64e4c28dcee4ae970c"
+    },
+    {
+      "family_id": "family56_nc_wind_disaster_claims",
+      "document_ids": [
+        "2f63b362ce2d902b84ca7845",
+        "f7a3d2bdeddf7e843c8c865c"
+      ],
+      "relation": "shared substantive primary insurer investigation/adjustment and disaster claim instructions",
+      "local_review_records": [
+        "stage56_source_decisions.json"
+      ],
+      "review_record_sha256": "c4d837cc870b63ff822f94baaa236b99fa3a2c80d79f4fa6e6fd55fd9b7d934e"
+    },
+    {
+      "family_id": "family57_ny_ltc_terms_comparison_tax",
+      "document_ids": [
+        "b051032d15aff43f414d50c7",
+        "220b639c0c239c2c00d66676",
+        "a4dd2e9e2601825f731b3c92",
+        "db60476ffdbdcf0ae2f9cb7b",
+        "81b4e91e08feada200058170"
+      ],
+      "relation": "Tax and policy comparison text reproduced in LTC glossary; glossary repeats care definitions; LTC index repeats tax credit instructions",
+      "local_review_records": [
+        "stage57_source_decisions.json"
+      ],
+      "review_record_sha256": "0845c64ff99ec3c27021d69f6f3570c69a52ead2d0c4453552a944cee7eb4be7"
+    },
+    {
+      "family_id": "family59_tricare_id_documents",
+      "document_ids": [
+        "128cc16a53e7fb94b6cb3cc0",
+        "1555840deb8dfab341377ad4",
+        "9a3e1a2e3abb54e017fceff2"
+      ],
+      "relation": "Conservative same ID-card documentation workflow; overlapping TYA enrollment-before-card sequence in narrative and document table; Secondary Dependents shares court-ward one-year placement criterion with Required Documents",
+      "local_review_records": [
+        "stage59_source_decisions.json"
+      ],
+      "review_record_sha256": "fe82454196eb6234ada7896558222ca927c013f6b9fcd12341da69254343f400"
     }
   ],
   "document_text_sha256": {
@@ -1234,7 +1285,34 @@
     "8125d121babd1000acbdac8e": "f9c581f7509cce8a4ea649ace2c152df05799b242334859b51364bc80f0ae35a",
     "679e26481bbe3a064e9bd064": "961848faf559319f80f17137bcd2824455826c8b82525d03f51e984abc60827e",
     "5dc9af2c179643d58aa49543": "96960bc9ccce1a96c8f1a68a78865c372b85db3aa9308023f93fe9278dad0805",
-    "fadace07a2bae064e57ba1a1": "5b1787de65ff0036d8653cf5431b1f21b57ac96e38b71c3c0923c3ad00152258"
+    "fadace07a2bae064e57ba1a1": "5b1787de65ff0036d8653cf5431b1f21b57ac96e38b71c3c0923c3ad00152258",
+    "53b9a48dc78356dfa67f3a19": "49d289c68f45fc8137ba9dee50877697bde1914cdf939ec4c254393ef296b2c8",
+    "70048d9dd13b8e0895edd9a7": "b8d170a98089a803f71772cf0eac2b1b114e3cf6be10425f43ce507492c46f22",
+    "fffca1e076dcfd15226b46f1": "a9caf00677bde1722fd6afce8f82f91969c06c477c85bd245d8f0cdbd4d5e3e1",
+    "2696fccd93ce769bbe52e71a": "b625870a228ef3c5f96240c8b681f46b5266173b7106f97b32c6b5db6cce1119",
+    "a9b0b45732d3ee0e0aa0314e": "2f7984ead1e1fd25197728807a89eb8868e88330405dc85a01c5a90ac7167155",
+    "01909444fc350efcb3206151": "31fc718f14ce3034408b6252eec43fc0f2501b4e9d15ae8fb5c709cda598e191",
+    "6624bc1ff8a23a43b23d3bd2": "c437d46c27bb404131eee776b73aed251675550697a459a164bfc7c58c72761d",
+    "780c5a91b0a79c14d340d7f4": "0639bb5ec0b0c685f902efc9ffedd6392442e4ce17c5613a5b137cd0ff02a059",
+    "dd60b1e8b2736e3b654722d1": "af7d5b7bafd6a8001bb0ec596e0d9908306acc06c3de625246b9942e881b940c",
+    "b1f11456bdb9941bd7ff0ec1": "8bc47fb7b39700d0c833069538be9cc146ac2688cfddc8c082064a7ed331b15e",
+    "da687d51dacbd8b360940968": "3decf9f25795680684dfe052bd02f81923880fec70a11576f78df18cda2ae750",
+    "79191f0a61f1104f796ecdc1": "ac92eea49b2c13d2af080448493022df8a88e81604b24969609da00f1706dff0",
+    "2f63b362ce2d902b84ca7845": "6affcff6216cc3841a90dd35173e7de6eb038910f9d2fa33451282cfb9662af0",
+    "c5e2525caf551c4b0e09689a": "1e46681de18e8a70922e23f8799ed242a02bdf99035a050a07705c538ca11551",
+    "f7a3d2bdeddf7e843c8c865c": "eeb925e2cabc36842082fe0d3d238681b6cdfecaca58698ff3ebce61e6d29e2f",
+    "b051032d15aff43f414d50c7": "f7ae58e9796e2692a79bec462ba837b94cb7f65004dd83ab0052821fcd12837e",
+    "220b639c0c239c2c00d66676": "cae628ca6bcadd757ee3ecdbf4cd0498af44e0fbbae7273dd24d6a86527f99dd",
+    "a4dd2e9e2601825f731b3c92": "61c0d9a1902d19391bdf06083d85ba7082c0648c4604072f4ff31780e583c9db",
+    "db60476ffdbdcf0ae2f9cb7b": "65305ba740643869ad26a272d284368782901b230fe5353b3de14ae9837fcf7e",
+    "81b4e91e08feada200058170": "1106165333824bcfc07f3fa76db3c526e76aca3112c356b6e024b374ddc5ae48",
+    "eda721de69fd279fd33d22c9": "1807782626eff590548369f8d6de5f5efae5fd8add9069d4622a8f831406e6d2",
+    "f74f6d7240dd8912ae3ad0a5": "1a361ec992b35cbcc7d35e20c857cda1ec64b50ef73abf9856a7222a2a44546a",
+    "128cc16a53e7fb94b6cb3cc0": "4d8e57c213c0729540384f654111a2abf9f73f92506325ea8313abe01d6706cc",
+    "1555840deb8dfab341377ad4": "229561cfef9d4a13e66a5b1a9a003f69b722795bc227fd02157b7fb3272a2d5c",
+    "788fd904a90be37a1e4f16da": "4795f26e6f01ddd0b60905d0690d8aad47b59e25aeb61e47c3a84e8daade24a0",
+    "2f0640c24b2c225ab8d1d80c": "0746c448cc778b8dc4ce7a415434d1784612d9e59cba37865b360d6891d3d55c",
+    "9a3e1a2e3abb54e017fceff2": "d07d3c12bbe5a2d6287f74dc8f376e340f03fbca3e9bb9dc3c19dc98768feb99"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
