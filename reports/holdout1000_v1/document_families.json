@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T09:51:23.410905+00:00",
+  "updated_utc": "2026-10-16T10:50:31.957690+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1419,6 +1419,30 @@
         "stage201_source_decisions.json"
       ],
       "review_record_sha256": "b0e6a5a6f600a5cb70ac79fb1605b34984e51d43c8429695f72acd1a3fb04650"
+    },
+    {
+      "family_id": "family217_vac_income_replacement",
+      "document_ids": [
+        "524f0414115f8173740328d3",
+        "c3a7c1fd2864ebfb43cf7188"
+      ],
+      "relation": "Overview and direct FAQ of one income-replacement program; survivor and calculator pages remain linked future family members if later admitted.",
+      "local_review_records": [
+        "stage217_source_decisions.json"
+      ],
+      "review_record_sha256": "be05e69155464c2b1fcad761a5cd259631e1345efd78e365165eb87b66888bbe"
+    },
+    {
+      "family_id": "family217_vac_disability_compensation",
+      "document_ids": [
+        "059cdb9936229a361494e534",
+        "b5209b541f4eab742573780e"
+      ],
+      "relation": "Conservative family for disability compensation overview and directly related critical-injury benefit; deferred APSC stays a prospective member, not a new independent family.",
+      "local_review_records": [
+        "stage217_source_decisions.json"
+      ],
+      "review_record_sha256": "be05e69155464c2b1fcad761a5cd259631e1345efd78e365165eb87b66888bbe"
     }
   ],
   "document_text_sha256": {
@@ -1985,7 +2009,11 @@
     "2e4ec4ce837bc685e3ee9ef8": "d371550b066a9ebcb78d2bab3ea6db47b04914b742975c0755c7d6970935c0d5",
     "bd602ad66462940857659c1e": "9210854e1da5722a20ba8bd151b7bb934a44ab12e0525cd84d024aaf47a0b4d3",
     "ed4137466088618be4dae7ed": "ac6b8890ff008e2afd1896b1a61f40bcc1659c0c50e164e36eb601d95570bb3c",
-    "aec3dc218e10128a0c47b9f6": "f54b63bf9336e32895e27c69f12d0f64d8027a1b0038a8fb8275a2ff4af538a0"
+    "aec3dc218e10128a0c47b9f6": "f54b63bf9336e32895e27c69f12d0f64d8027a1b0038a8fb8275a2ff4af538a0",
+    "524f0414115f8173740328d3": "29636ea5cd6146cf9ec0df065132c06a5755a71a022cfcd7292cbe5487911b8a",
+    "059cdb9936229a361494e534": "bdfc0df2d516a13b18db48ed13199ea44786f03df52e7e8e373f9b63b5ce63e8",
+    "b5209b541f4eab742573780e": "14c21b862675af93bd97d16163ef343137387ec2bf5bbf51a938bbf41ebd4141",
+    "c3a7c1fd2864ebfb43cf7188": "53976f7c38f5b0ee70858a03baf77975ab595fd05cb2517e731070cb5bc69197"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

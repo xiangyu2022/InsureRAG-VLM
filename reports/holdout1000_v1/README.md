@@ -12,36 +12,37 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage216](stage216_progress.json): **852 provisional
-TEST and 58 DEV across 170 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Stage215 revoked two insurer regulatory-administration
-questions under the consumer task scope. The surviving 910 records are byte
-unchanged. No question rewrite or replacement was counted.
+The latest checkpoint is [stage219](stage219_progress.json): **871 provisional
+TEST and 58 DEV across 172 TEST families**. **Accepted counts remain zero; the
+dataset is not frozen.** Stage217 added 19 independently reviewed consumer-benefit
+questions: ten ordinary, two numeric, five multi-evidence and two refusal.
 
-Another 148 independent TEST are needed: 67 ordinary, 26 numeric, 31 multi-evidence
-and 24 refusal. All prior holds, including the original 15 historical revocations,
-remain in force. Historical checkpoints are not additive.
+Another 129 independent TEST are needed: 57 ordinary, 24 numeric, 26 multi-evidence
+and 22 refusal. The original task quotas, family cap and all prior holds remain,
+including the original 15 historical revocations and the two stage215 scope
+revocations. Historical checkpoints are not additive.
 
-The partial source-only corpus has 239 included, 158 excluded and 991 pending
-sources, with 540 unchanged chunks. Stages206/212 read 23 complete cached bodies:
-16 whole pages were excluded for scope or rights reasons, and seven mixed-scope
-pages remain pending. Source decisions did not load question inputs.
+The source-only corpus now has 243 included, 158 excluded and 991 pending sources
+in a 1,392-document snapshot. Four complete VAC bodies added 13 chunks; all 540
+previous chunks are unchanged. All included characters are preserved, with source
+qualifiers and title context within 512 tokens and 2,400 characters. APSC currency
+and calculator scenario structure remain held before corpus inclusion or QA.
 
-All 58 DEV items and 76 declared spans retain their exact mappings, including
-62 necessary units and 18 reviewed aliases. Whole-corpus aliases and whole-DEV
-clearance remain unfinished. No actual DEV score, TEST inference, selection lock
-or generation is claimed.
+All 58 DEV items, 76 declared spans, 62 necessary support units and 18 reviewed
+aliases retain their exact mappings. Whole-corpus aliases and whole-DEV clearance
+remain unfinished. No actual DEV score, TEST inference, selection lock or
+generation is claimed.
 
-Since stage203, deferred source preflights used 24 requests and 1,798,938 known
-successful response-body bytes, including four redundant GOV.UK policy requests
-that are explicitly recorded. NDIS individual-page reuse scope and the prior
-GOV.UK licence-completion hold remain unresolved. There were no new model calls,
-vectors, paid calls, model downloads or subagents in this checkpoint.
+The batch reused previous vectors and embedded only 19 new questions in one local
+batch. Content review read 87 historical texts, 40 candidate-neighbor QAs, 13
+numeric counterparts and 23 refusal-gap windows. Nine bounded source/policy GETs
+used 1,285,308 known successful response-body bytes; two web discovery calls are
+recorded separately. No paid calls, model downloads or subagents were used.
 
 Code is unchanged since the 534 tests plus 58 subtests regression run. Fresh
-retained-item validation and exact support mapping passed; global count and
-task-quota gates still fail. Content review is Codex review, not human or expert
-adjudication. Raw sources, individual QA, annotations and weights remain local.
+item validation and support mapping passed; global count and task-quota gates
+still fail. Content review is Codex review, not human or expert adjudication.
+Raw sources, individual QA, annotations and weights remain local.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

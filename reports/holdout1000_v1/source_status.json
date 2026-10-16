@@ -1048,6 +1048,42 @@
         }
       ],
       "raw_redistribution_in_this_task": false
+    },
+    {
+      "publisher": "canada_vac",
+      "jurisdiction": "CA",
+      "seed_url": "https://www.veterans.gc.ca/en/financial-programs-and-services/income-support/income-replacement-benefit/income-replacement-benefit-faqs",
+      "status": "approved4exactHTMLdocuments_local_research",
+      "reason": "VAC terms permit noncommercial copying of Government-authored material in whole or part and any format, with accuracy, no revision/adaptation/translation, title/author and identification as a copy of the VAC website version. Original raw HTML and verbatim evidence preserved; whitespace-only extraction, no rewritten or translated source. Independently authored factual QA is separate. No use of logos/symbols/third-party content, no raw redistribution or endorsement. All four complete source bodies have no separate third-party authorship/reuse notices.",
+      "terms": {
+        "url": "https://www.veterans.gc.ca/en/about-vac/terms-and-conditions",
+        "sha256": "460f8d814a91788fd40ad42c7232a488b7e291d1773174fe4b7f710bec1cc085"
+      },
+      "local_review_record": "stage217_html_content_review.json",
+      "review_record_sha256": "fdc68b8e981432c4e76f1b03a69109bd33b17b990cbb8bb0d748f3f2e01138a7",
+      "held_sources": [
+        {
+          "document_id": "1d160f55460e375294e92b01",
+          "decision": "DEFER_ENTIRE_SOURCE_CURRENCY_REVIEW",
+          "reason": "APSC page modified2026 still uses future-tense transition wording and unqualified500/1500monthly figures. Current indexed-rate applicability has not been verified. No claim that those figures are definitely incorrect; hold the whole source before QA rather than select other paragraphs around unresolved currency."
+        },
+        {
+          "url": "https://www.veterans.gc.ca/en/family-caregiver/financial-programs-services/income-replacement-benefit-survivors",
+          "decision": "DEFER_UNREVIEWED_REDIRECT",
+          "reason": "Exact URL guard rejected a redirect; no remote403 claim, retry or guessed target."
+        },
+        {
+          "url": "https://www.veterans.gc.ca/en/financial-programs-and-services/income-support/income-replacement-benefit/income-replacement-benefit-tool",
+          "decision": "DEFER_CALCULATOR_SCENARIO_STRUCTURE",
+          "reason": "All128unique exact DOM text nodes and2250occurrence inventory reviewed, but51scenario relationships not structurally cleared. No calculator outcome/amount used for questions or corpus. Repeated explicit pre-age65 gross/before-offset wording used only as a contextual check on the main overview. Original raw preserved; deduplicated review aid is not source extraction."
+        },
+        {
+          "url": "https://www.veterans.gc.ca/en/financial-programs-and-services/compensation-illness-or-injury",
+          "decision": "EXCLUDE_LINK_INDEX_FROM_NEW_SNAPSHOT",
+          "reason": "Complete index main body read. It primarily labels outbound benefit pages and offers no operative benefit coverage/claim rules of its own; source-only scope decision before question drafting."
+        }
+      ],
+      "raw_redistribution_in_this_task": false
     }
   ],
   "excluded_previously_known": [
@@ -1056,5 +1092,5 @@
     "All previously denied local memory/demo-upload paths"
   ],
   "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
-  "updated_utc": "2026-10-16T09:41:02.441668+00:00"
+  "updated_utc": "2026-10-16T10:32:02.512913+00:00"
 }

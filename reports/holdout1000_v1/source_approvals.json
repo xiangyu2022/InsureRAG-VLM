@@ -680,5 +680,50 @@
     "raw_redistribution_in_this_task": false,
     "assigned_split": "test",
     "assignment_reason": "EntirenewNJLaborleavepublisherassignedTESTbeforequestionauthoring. NJDOBIisaseparateexistingagency,notrenamed; noTDI/FLIsubprogramfamilysplitting."
+  },
+  {
+    "id": "canada_vac",
+    "jurisdiction": "CA",
+    "terms": "https://www.veterans.gc.ca/en/about-vac/terms-and-conditions",
+    "terms_sha256": "460f8d814a91788fd40ad42c7232a488b7e291d1773174fe4b7f710bec1cc085",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-16T10:32:02.512913+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "VAC terms permit noncommercial copying of Government-authored material in whole or part and any format, with accuracy, no revision/adaptation/translation, title/author and identification as a copy of the VAC website version. Original raw HTML and verbatim evidence preserved; whitespace-only extraction, no rewritten or translated source. Independently authored factual QA is separate. No use of logos/symbols/third-party content, no raw redistribution or endorsement. All four complete source bodies have no separate third-party authorship/reuse notices.",
+    "attribution": "Veterans Affairs Canada; complete title; author; website version copy notice; URL and acquisition date. Authored factual QA separate from official source.",
+    "preflight_record": "stage217_html_content_review.json",
+    "preflight_record_sha256": "fdc68b8e981432c4e76f1b03a69109bd33b17b990cbb8bb0d748f3f2e01138a7",
+    "allowed_hosts": [
+      "www.veterans.gc.ca"
+    ],
+    "prefixes": [
+      "/en/financial-programs-and-services/income-support/income-replacement-benefit/income-replacement-benefit-faqs",
+      "/en/financial-programs-and-services/compensation-illness-or-injury/disability-benefits",
+      "/en/financial-programs-and-services/compensation-illness-or-injury/critical-injury-benefit",
+      "/en/financial-programs-and-services/income-support/income-replacement-benefit"
+    ],
+    "approved_exact_urls": [
+      "https://www.veterans.gc.ca/en/financial-programs-and-services/income-support/income-replacement-benefit/income-replacement-benefit-faqs",
+      "https://www.veterans.gc.ca/en/financial-programs-and-services/compensation-illness-or-injury/disability-benefits",
+      "https://www.veterans.gc.ca/en/financial-programs-and-services/compensation-illness-or-injury/critical-injury-benefit",
+      "https://www.veterans.gc.ca/en/financial-programs-and-services/income-support/income-replacement-benefit"
+    ],
+    "excluded_path_keywords": [
+      ".pdf",
+      "/search",
+      "/my-vac-account"
+    ],
+    "minimum_interval_seconds": 2,
+    "seeds": [
+      "https://www.veterans.gc.ca/en/financial-programs-and-services/income-support/income-replacement-benefit/income-replacement-benefit-faqs",
+      "https://www.veterans.gc.ca/en/financial-programs-and-services/compensation-illness-or-injury/disability-benefits",
+      "https://www.veterans.gc.ca/en/financial-programs-and-services/compensation-illness-or-injury/critical-injury-benefit",
+      "https://www.veterans.gc.ca/en/financial-programs-and-services/income-support/income-replacement-benefit"
+    ],
+    "max_pages": 4,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false,
+    "assigned_split": "test",
+    "assignment_reason": "Whole new VAC publisher assigned TEST before question authoring. Source families grouped by program and related compensation; no DEV material or publisher renaming."
   }
 ]
