@@ -12,52 +12,52 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage258](stage258_progress.json): **958 provisional
+The latest checkpoint is [stage263](stage263_progress.json): **958 provisional
 TEST and 58 DEV across 178 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Stage255 retained eight ordinary, seven numerical and
-two multi-evidence questions from twenty drafts. Three were held for core or
-refusal-structure overlap. All prior holds and revocations remain.
+dataset is not frozen.** This checkpoint changes no questions. Another 42 TEST
+are needed: 18 ordinary, 4 numeric, 10 multi-evidence and 10 refusal. Original
+quotas, family/publisher caps, prior holds and revocations remain unchanged.
 
-Another 42 independent TEST are needed: 18 ordinary, 4 numeric, 10 multi-evidence
-and 10 refusal. Original quotas and family/publisher caps remain. Nine pension
-sources were assigned one conservative family. Historical counts are not additive.
+The source-only corpus now has **354 included, 228 excluded and 844 pending**
+sources in the 1,426-document snapshot, with 753 partial chunks. Review of 86
+complete cached bodies since stage258 closed 83 pending decisions; three remain
+pending. Every one of the 697 previously published checkpoint chunks is unchanged.
+The 56 added chunks preserve full included bodies and source qualifiers, with
+no gold-based text slicing. Whole-source exclusions cover navigation, empty
+search tools and out-of-scope administrative or safety material.
 
-The source-only corpus has 301 included, 198 excluded and 927 pending sources
-in a 1,426-document snapshot, with 697 partial chunks. Since stage252, 64 complete
-source bodies received scope review: 22 were included, 40 excluded and two new
-sources remain pending. All 665 previous chunks are unchanged. The short-source
-batch excluded whole navigation, empty-tool and out-of-scope administrative
-pages; substantive coverage or consumer complaint guidance was retained whole.
-No QA inputs or model forwards were used for this source-only batch.
+One newly included TDI overview was withdrawn after comparison found an
+unconditional 25-day response statement versus a later guide's 15 days plus a
+requested 10-day extension. Both concern insurer responses to TDI. The earlier
+local scope explanation was incorrect and has a hash-bound correction. The
+whole overview remains pending; no convenient subsection was retained.
+The two new partial-scope/wording concerns and earlier pension, DMLR, PSHCP and
+MathML issues also remain pending.
 
-Fifteen new TEST questions map fully to the corpus. One numerical question
-passed raw-MathML arithmetic review but its source stays pending until normalized
-extraction preserves the fraction operator. An ordinary question shares that source.
-Two earlier PSHCP items and a DMLR
-refusal also await whole-source dispositions. A separate pension-income source
-has inconsistent numeric tables and remains pending. Source conflicts were not
-removed or selectively trimmed to obtain evaluation readiness.
+Full TEST declared-span mapping is now **411 complete and 547 pending**. These
+are whole-pool counts, not recent-batch counts, and do not establish semantic
+gold-unit completion or benchmark acceptance.
 
-All 58 DEV items, 76 declared spans, 62 necessary support units and 18 reviewed
-aliases retain their exact mappings. All TEST declared-span mappings were also
-checked: 406 TEST items map completely and 552 still depend on pending sources.
-Earlier pending-item counts described recent batches, not the whole TEST pool.
-Whole-source dispositions, global aliases and whole-DEV clearance
-remain unfinished; these are the current priority. No actual DEV score, TEST
-inference or selection lock is claimed.
+All 58 DEV items and 76 declared spans retain their mappings. The 62 necessary
+support units now have 19 reviewed Spanish alternatives. A same-date English/
+Spanish complaint pair was grouped into one source family and one complete
+alias was added; no question or retained family label changed. Four incomplete
+or conflicting alias leads were rejected. Global alias review remains unfinished.
 
-The question batch embedded twenty new questions in one local process and two
-forward batches, reusing 3,428 candidate and 44,581 historical vectors. Review
-covered 84 complete targeted history records, 24 template QAs, 59 additional
-distinct QAs, 29 changed active relations and 15 source-gap windows. One long
-history record was not fully read and applies only to a held draft. Nine source
-GETs transferred 300,101 bytes; there were no browser calls in this batch.
+Deterministic checks verified the 124-ledger hash chain, unchanged current DEV
+questions in the candidate archive, no current semantic audit flags/truncation,
+no inherited-hold collisions and no declared DEV/TEST evidence-family overlap.
+These checks reuse prior content reviews; they do not independently prove
+semantic quality or grant whole-DEV clearance. The real readiness gate still
+blocks inference before model loading.
 
-There were no paid APIs, model downloads, proxy/security changes or subagents.
-Remaining quota is not observable. Code is unchanged since the 534 tests plus
-58 subtests regression run. Fresh item and mapping checks passed; global gates
-remain unmet. Review is Codex review, not human or expert adjudication. Sources,
-individual QA, annotations and weights remain local. PR8 stays draft and unmerged.
+This source/alias checkpoint used no network requests, new vectors, model
+forwards, paid APIs, model downloads or subagents. Remaining quota is not
+observable. Code is unchanged since the 534 tests plus 58 subtests regression;
+fresh item and mapping checks passed. No actual DEV score, TEST inference,
+selection lock or final evaluation is claimed. Review is Codex review, not human
+or expert adjudication. Sources, individual QA, annotations and weights remain
+local. PR8 stays draft and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

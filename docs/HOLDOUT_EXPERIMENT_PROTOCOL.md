@@ -2,7 +2,7 @@
 
 As of October 16, 2026, construction has reached 958 provisional TEST and 58 DEV
 items across 178 TEST document families. Accepted counts are zero; the benchmark
-is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage258_progress.json)
+is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage263_progress.json)
 records the current counts, validation and remaining work. Historical exposed
 results are regression evidence only.
 
@@ -33,13 +33,13 @@ The holdout_experiment module implements annotation-based metrics and uncertaint
 
 The whole-source manifest gate requires an explicit include/exclude review for
 every snapshot document before tokenization. Raw/text hashes for all 1,426 sources
-were verified. Current dispositions are 301 included, 198 excluded after source review
-and 927 pending. Review order prioritized DEV sources after a source-only
+were verified. Current dispositions are 354 included, 228 excluded after source review
+and 844 pending. Review order prioritized DEV sources after a source-only
 inventory of all 291 TDI documents. It does not authorize a gold-filtered corpus.
 Existing reviews can be reused when their content hashes and scope still apply.
 
 holdout_corpus validates source ranges, hashes, token limits and reviewed atomic
-spans. The 697 partial chunks preserve all included characters and have at most
+spans. The 753 partial chunks preserve all included characters and have at most
 512 tokens and 2,400 characters. Source headings, lists, table headers and
 qualifiers must survive chunking. Oversized atomic spans fail instead of being
 silently truncated. Source structure, never an answer key, defines boundaries.
@@ -55,7 +55,7 @@ All 58 DEV items and 76 declared evidence spans now map by exact offsets. The
 reviewed draft has 62 necessary units for 47 answerable cases. Eleven refusal
 cases retain gap-context diagnostics only. Exact text matches in another source
 are leads; they do not establish equivalent support across product scope or
-license restrictions. Eighteen Spanish support aliases have passed unit-specific semantic review; one
+license restrictions. Nineteen Spanish support aliases have passed unit-specific semantic review; one
 compound guaranty-membership alias was rejected. Global alias review and
 whole-DEV clearance are unfinished.
 The real readiness check therefore still stops before model loading.

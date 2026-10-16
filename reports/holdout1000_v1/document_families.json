@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T17:47:49.553798+00:00",
+  "updated_utc": "2026-10-16T18:12:29.472973+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1544,6 +1544,18 @@
         "stage255_source_decisions.json"
       ],
       "review_record_sha256": "b17723cefa44c63c428236b108b3d10a936d98d741ff29bc33c388e990311874"
+    },
+    {
+      "family_id": "family261_tdi_life_annuity_complaint_bilingual",
+      "document_ids": [
+        "69689c5cc007d28848fdd22c",
+        "6c0ff7d4bf53df168d895357"
+      ],
+      "relation": "Exact officialEnglish/Spanishtranslation counterpart pages, bothdated2025-04-09; samecomplaintsteps andremedylimits. Completebodies compared; no newindependentquestion.",
+      "local_review_records": [
+        "stage261_dev_semantic_alias_review.json"
+      ],
+      "review_record_sha256": "56372595d262f9aa3a8920f6f38ec840304355c13bb317eba473dfcd43885535"
     }
   ],
   "document_text_sha256": {
@@ -2161,7 +2173,9 @@
     "07357c091242268282ffdac9": "9757b2546492a5d87cf6c786bf6b04fd705d340012051d4884f9e5dfdfe7fa04",
     "3cfb269c8c6af9551972c05a": "4d8d0d9b682aeb269fedfd3ab2ba9e221598c407151aed54002a8778ccd294f7",
     "6b2219d2f983dce93d6f439a": "06ba9849021901eb99f92c0eedd2c279c704b2e986487f78a76b8bb3c082f2a7",
-    "fac87cf5c78f99bbd56f97d4": "910b0d34539d4680f2b3c0659a2c9fcc520a5d32674941e88d7833b04c0eba18"
+    "fac87cf5c78f99bbd56f97d4": "910b0d34539d4680f2b3c0659a2c9fcc520a5d32674941e88d7833b04c0eba18",
+    "69689c5cc007d28848fdd22c": "eb24d8a7db33e6cca3ebae30cec7ec9f5ad1bd87eebc1f380d3a8ffe253e6756",
+    "6c0ff7d4bf53df168d895357": "acae4a2299caabebf76733968f81b2550d631188849e6e7df0ef975fd14a49ce"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
