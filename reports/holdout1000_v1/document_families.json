@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T06:18:58.372136+00:00",
+  "updated_utc": "2026-10-16T07:00:35.806402+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -88,9 +88,16 @@
       "family_id": "family01_exact_27a256a25d4112c61e10bd9b",
       "document_ids": [
         "3338d443ce0f0623e1938c17",
-        "27a256a25d4112c61e10bd9b"
+        "27a256a25d4112c61e10bd9b",
+        "d531c22da8cb246cee91b8a4"
       ],
-      "relation": "normalised_complete_body_duplicate"
+      "relation": "Virtual viewing guide repeats health rate review authority verbatim from exact rate-review aliases; conservative full-source family bridge",
+      "local_review_records": [
+        "stage174_source_decisions.json"
+      ],
+      "extension_review_sha256": [
+        "d0fba7c22881a197b7a5450644be9381aa6b61f064748d14aecad80dc845ad9f"
+      ]
     },
     {
       "family_id": "family01_exact_369c0cb817146a2917e8710f",
@@ -1832,7 +1839,21 @@
     "f6fdd7c36f8e2309c405afe7": "994c1386c26b6abf90a53ee5f93399bc8552e9714c0f409312404248dccd730b",
     "9a11c1b7fa742bd094242c9e": "abb99c5f1763e4d94cce8606cef7436efffe9a5bb914aac0779e43150d71bdfe",
     "86d46b775135c750f659b580": "97c4b045de39da2345e2f920c177403c79dcb0b6f0753bbf0839beab24bf69c1",
-    "1f9a49cfeaea8b72252aff97": "5e4ba3afde725a43286a6c30030a507b802f36d3d189eff50d767c62c147797d"
+    "1f9a49cfeaea8b72252aff97": "5e4ba3afde725a43286a6c30030a507b802f36d3d189eff50d767c62c147797d",
+    "3a0ebf93ee2397c1d6058bde": "6a4283163c35097f01510e47df7b67399a8125f77180a80db5bd417acb67ff0d",
+    "dfd2304536342cc16527b499": "322bf0c2f999e33dc37ba35429ad5a55b32b62a9a6a0465b3819d9f1608398db",
+    "d531c22da8cb246cee91b8a4": "59da51d54b1f4ac78c69e3d05d782bea5e474b112c079379ced606c21353df85",
+    "379686f713f9fff005e08cb0": "df3eb3fda373e63ee4924966b55598413115bee894ba864b4a4daa4273cc6407",
+    "d1cc432945d69b60392aead2": "d1d04654927912a99ee8fe6fd013c0c9e9464761948db59ae7136d7bb99f17f8",
+    "0352384500baf961573ed90f": "ab9188f9840a632fac17e4bd61ec454298e00074a1c2c1d769115f64a42c09fc",
+    "2d62856a316247fa32ac3577": "ff29b11754d2b300414818d48c9fc073cb93e22ff471a1efdff0fe093d69711b",
+    "9f90c231aa0f5b9988df281a": "f3e4612c2c86e4524ebaef936d2866ff4302db72f474ebe3049778e19ae6c660",
+    "0bad8607a301d2e926e94065": "7e01b7626dd12e2f0dbf3660cd28c3ce087fe9170d534a064e948eeb813eb7f6",
+    "54c01289aec47ad2fe3573e0": "3e86ca4a0dc19275ca55e20540496533b93c1cb86bbdbb81f9c74fa47f1e3419",
+    "962e18dce132c3994d56ccc1": "08d3674441ca7381a9ea657a07a793ae5e77461d4e051cf0a01164b27a81bb8f",
+    "29406929edf9ebde74b9b171": "531b516ea28fac27405fcbded7bcf071a9a3ee5fa1fb4ffc90eab7650e6b5d66",
+    "db0a210fcd3fcf276ade666f": "710091dbf3b25b0569bb32a52a970fa9ca44947e8c54dc59a7041f727a9d5d6f",
+    "5f5cf703b8baf466b75e9ee3": "cede7c93f2e6093d446299b53c0822fb98a8675c7571bdcfb42a218adf50a882"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
