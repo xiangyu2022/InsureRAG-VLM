@@ -54,3 +54,47 @@ def rank_six_arms(chunk_ids, dense_original, dense_adapted, sparse, cross_score)
                 unique_cross_pairs=len(combined), cross_calls=1,
                 candidate_budget_per_arm=200, depth=10,
                 lexical_weight=0.2, cross_weight=0.5)
+
+
+
+def rank_arm(arm, chunk_ids, *, dense=None, sparse=None, cross_score=None):
+    """Execute one registered arm without computing unused score channels."""
+    if arm not in ARMS:
+        raise ValueError('Unknown registered retrieval arm')
+    ids = list(chunk_ids)
+    if (not ids or any(not isinstance(x, str) or not x or x != x.strip() for x in ids)
+            or len(set(ids)) != len(ids)):
+        raise ValueError('Unique nonempty corpus chunk IDs required')
+    def vector(values):
+        values = np.asarray(values, dtype=np.float64)
+        if values.shape != (len(ids),) or not np.isfinite(values).all():
+            raise ValueError('Every corpus chunk requires a finite score')
+        return values
+    def ranked(values, indices, limit):
+        return sorted(indices, key=lambda i: (-float(values[i]), ids[i]))[:limit]
+    whole = range(len(ids))
+    if arm != 'dense_original':
+        b = vector(sparse)
+        if np.any(b < 0):
+            raise ValueError('BM25 scores cannot be negative')
+        lexical = ranked(b, [i for i in whole if b[i] > 0], 100)
+        if arm == 'bm25':
+            return dict(order=[ids[i] for i in lexical[:10]], cross_pairs=0)
+    d = vector(dense)
+    original = ranked(d, whole, 100)
+    if arm == 'dense_original':
+        return dict(order=[ids[i] for i in original[:10]], cross_pairs=0)
+    pool = sorted(set(original) | set(lexical), key=lambda i: ids[i])
+    cross = None
+    if arm.startswith('rerank_'):
+        if not callable(cross_score):
+            raise ValueError('Reranked arm requires a cross scorer')
+        cross = np.asarray(cross_score([ids[i] for i in pool]), dtype=np.float64)
+        if cross.shape != (len(pool),) or not np.isfinite(cross).all():
+            raise ValueError('Every candidate requires a finite cross score')
+    scores = blend_scores(d[pool], b[pool], cross, lexical_weight=.2,
+                          cross_weight=.5 if cross is not None else 0)
+    order = sorted(range(len(pool)), key=lambda j: (-float(scores[j]), ids[pool[j]]))[:10]
+    return dict(order=[ids[pool[j]] for j in order],
+                candidate_ids=[ids[i] for i in pool],
+                cross_pairs=0 if cross is None else len(pool))

@@ -1,0 +1,146 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 957,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 581,
+    "insufficient_evidence": 90,
+    "multi_evidence": 140,
+    "numerical_calculation": 146
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 177,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 51,
+    "california_cdi": 49,
+    "wisconsin_oci": 63,
+    "utah_uid": 16,
+    "us_opm": 114,
+    "us_va": 41,
+    "us_tricare": 131,
+    "newjersey_dobi": 40,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 44,
+    "canada_esdc_ei": 91,
+    "newjersey_labor_leave": 7,
+    "canada_vac": 24,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 13
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 19,
+    "numerical_calculation": 4,
+    "multi_evidence": 10,
+    "insufficient_evidence": 10
+  },
+  "remaining_independent_test": 43,
+  "created_utc": "2026-10-16T20:02:06.166144+00:00",
+  "status": "STANDALONE_DEV_SCORING_READY_IN_CODE_SOURCE_ACCEPTANCE_PENDING",
+  "pool_version": 128,
+  "global_candidate_version": 129,
+  "source_snapshot": 33,
+  "new_questions": 0,
+  "corpus_preparation": {
+    "documents": 1426,
+    "exclude": 300,
+    "include": 486,
+    "pending": 640,
+    "partial_chunks": 926
+  },
+  "source_review_since295": {
+    "whole_primary_reviews_reused_by_matching_raw_and_text_hashes": 7,
+    "exact_text_aliases": 3,
+    "new_includes": 10,
+    "new_chunks": 41
+  },
+  "all_test_declared_span_mapping": {
+    "complete": 480,
+    "pending": 477
+  },
+  "dev_support_review": {
+    "items": 57,
+    "answerable": 46,
+    "refusals": 11,
+    "families": 27,
+    "declared_spans": 75,
+    "necessary_units": 61,
+    "reviewed_spanish_aliases": 18,
+    "mappings_unchanged": true,
+    "global_clearance": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "implementation": {
+    "standalone_per_arm_execution": true,
+    "failure_preserving_resumes": true,
+    "reviewed_DEV_scoring": true,
+    "immutable_selection_lock_writer": true,
+    "actual_DEV_selection_locked": false,
+    "test_inference_authorized": false
+  },
+  "validation": {
+    "focused_tests_passed": 45,
+    "regression_tests_passed": 584,
+    "subtests_passed": 58,
+    "explicitly_selected_top_level_test_files": 59,
+    "log_sha256": "a95437fb48850336d5b280584d262ec2089c4d87296f1f12cc372215a307d595",
+    "retained_item_errors": 0,
+    "global_dataset_gates_passed": false
+  },
+  "usage": {
+    "new_vectors": 0,
+    "model_forwards": 0,
+    "source_network_calls": 0,
+    "paid_calls": 0,
+    "actual_DEV_queries": 0,
+    "actual_TEST_queries": 0,
+    "subagents": 0,
+    "remaining_quota": "not observable"
+  },
+  "limits": [
+    "957 provisional TEST remain 43 short; accepted counts are zero and the dataset is not frozen.",
+    "640 source dispositions and global DEV aliases/family/history/legacy-hold reconciliation remain unfinished.",
+    "No actual DEV or TEST evaluation, selection lock or new model metrics.",
+    "Local generation runtime remains unavailable; no download or replacement.",
+    "Sequential Codex content review, not human/expert adjudication. No raw corpus/individual QA/weights published."
+  ],
+  "evidence_sha256": {
+    "stage301_summary.json": "eb41b349142932a9092db674ce9b798621666c44d115b3d69d60c8ffb77b4580",
+    "stage301_source_review_reuse.json": "cfd0e45d3ba4a6d27f70e882bb52626b80668a445a55100de21a615994d165f9",
+    "stage298_source_review_reuse.json": "2a45fa06f425bf05dd830ae507d69e06bdf1b6668a9be61f647f10f3947425de",
+    "stage301_dev_readiness.json": "7a8416f8b3ebee1de009c3f662db39ff04584d15b1ce6d25e8f48a5c765c6b54",
+    "stage301_all_test_declared_span_mapping.json": "7837e79aade71f9a11793c01b485277998295fa0f40f7c85e66704354f225434",
+    "stage302_code_validation.json": "65c2f73654de8bd44bae11f084cef4bba3deb916700eb4c9d90704258c02ab55",
+    "provisional_item_pool_128_validation.json": "fc057d74cc0d6aadc8fa7a1b551206a798739898283bf37d378e7db604ff910c"
+  }
+}

@@ -12,35 +12,34 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage295](stage295_progress.json): **957 provisional
+The latest checkpoint is [stage302](stage302_progress.json): **957 provisional
 TEST and 57 DEV across 177 TEST families**. **Accepted counts remain zero;
 the dataset is not frozen.** Another 43 independent TEST are needed: 19 ordinary,
-4 numeric, 10 multi-evidence and 10 refusal. Quotas are unchanged.
+4 numeric, 10 multi-evidence and 10 refusal. Quotas and all previous holds remain.
 
-One previously retained question was withdrawn because its sole task was entering
-an overseas search ZIP in a plan-comparison interface. It does not test insurance
-coverage, purchaser eligibility, policy terms, benefits, claims or specific
-dispute recourse. The complete source was reviewed; no cosmetic replacement
-was authored. All earlier item holds remain effective.
+The source corpus has **486 included, 300 excluded and 640 pending** across
+1,426 documents, with 926 partial chunks. Ten newly included sources reused
+applicable full-body reviews with matching raw/text hashes, including three
+exact-text aliases. The Alberta endorsement catalog preserves all 80 complete
+entries and their applicability/version context. Full TEST declared-span mapping
+is **480 complete and 477 pending**; offset coverage is not quality acceptance.
+All 57 DEV mappings remain intact: 46 answerable, 11 refusal, 61 necessary units
+and 18 reviewed Spanish aliases. Global alias/family/history clearance is pending.
 
-Another 80 complete cached bodies yielded39 inclusions,30 exclusions and11
-pending checks. One government-hosted page explicitly excerpts a commercial
-1992publication. It is now excluded with a central source permission hold;
-no active QA used it. Government hosting does not grant third-party reuse rights.
+The DEV runner now supports independently timed retrieval arms. The scorer
+retains failed intended requests, reports equal-family metrics and applies the
+registered tie breaks. Shared six-arm diagnostic timings cannot select an arm.
+An immutable lock writer requires reviewed artifact bindings, including the
+generation runtime/tokenizer receipt. These are implemented capabilities;
+**no actual DEV/TEST run or selection lock exists**. Review gates still block
+the real dataset, and the requested generation runtime remains unavailable.
 
-The corpus now has **476 included,300 excluded and650 pending** across1,426
-documents, with885 partial chunks. Full TEST declared-span mapping is
-**453 complete and504 pending**. These are offset checks, not benchmark acceptance.
-All57 DEV (46answerable and11refusal),75declared spans,61necessary units and18
-reviewed Spanish alternatives keep their mappings. Global semantic alias,
-source-family, historical and remaining legacy-hold review still block DEV.
-
-This checkpoint used no new vectors, model forwards, source/network calls or
-paid APIs. Code remains covered by553tests plus58subtests; fresh item,source,
-permission and mapping checks passed. No actual DEV/TEST evaluation, selection
-lock or final metrics are claimed. Review is sequential Codex content review,
-not human or expert adjudication. Raw sources,individual QA,annotations and
-weights remain local; PR8 stays draft and unmerged.
+Validation passed **584 tests plus 58 subtests** over 59 explicitly selected
+top-level files, including a complete synthetic scoring/locking CLI flow.
+This checkpoint used no model forwards, new vectors, source-network or paid calls.
+Review is sequential Codex content review, not human or expert adjudication.
+Raw sources, individual QA, annotations, traces and weights remain local;
+PR8 stays draft and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
