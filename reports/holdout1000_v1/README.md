@@ -12,45 +12,40 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage131](stage131_progress.json): **761 provisional
-TEST and 58 DEV across 153 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** The current batch adds no questions. Another 239
-independent TEST are needed: 127 ordinary, 35 numeric, 42 multi-evidence and
-35 refusal tasks. The last question batch (stage127) retained five of six drafts;
-historical checkpoints are not additive.
+The latest checkpoint is [stage134](stage134_progress.json): **763 provisional
+TEST and 58 DEV across 154 TEST families**. **Accepted counts remain zero; the
+dataset is not frozen.** Stage132 retained two of three drafts: one ordinary and
+one multi-evidence question. A rental-contract refusal was held for overlap with
+an existing information need. Another 237 independent TEST are needed: 126
+ordinary, 35 numeric, 41 multi-evidence and 35 refusal. Prior holds remain.
 
-Twelve unchanged Australian government prose sources now have source-only corpus
-inclusion records reusing prior full-page reviews. Two existing whole-page holds
-remain; ten table pages and one FAQ need further structure/scope work. Globally,
-13 sources are included, 115 excluded under existing holds and 1,216 pending.
-The 39 partial chunks preserve every included character. Fourteen evidence spans
-map by exact offsets across 12 items; 11 items have all declared spans covered.
-Necessity and equivalent-support labels still need review. This is not global
-relevance gold or a retrieval result. A real definition-boundary failure led to
-a fix for reviewed atomic ranges that begin with whitespace.
+For count reconciliation, stage120 had 748 TEST; stages122, 124, 127 added 1, 7, 5
+respectively to reach 761. Stages128 through 131 added none. DEV stayed at 58.
+Historical checkpoints are not additive.
 
-The offline DEV CLI accepts only ID/question requests, gates incomplete corpus
-and review records before loading models, binds document vectors to hashes, and
-saves each intended query including failures. Exact resumes reuse saved successes
-and failures. A real-model integration run used four invented sources and one
-invented query with all six registered arms; a second execution loaded no models
-and performed no inference. No actual DEV/TEST input was used in that run.
+The entire 291-document TDI cache received source-only structure proposals before
+QA metadata was used to prioritize review order. Full-source review cleared 27
+additional pages for the partial corpus. All remaining global sources retain
+their dispositions: 40 included, 115 excluded under prior holds, 1,189 pending.
+The 88 partial chunks preserve every included character and stay within 509 tokens
+and 2,400 characters. A long FAQ list was split at its six actual source headings,
+keeping each question's nested list and qualifiers together.
 
-All 58 DEV requests have a private label-free export. Its readiness check stops
-before model loading because complete source dispositions, evidence/alias mapping
-and the whole-DEV clearance are unfinished. Generation is not needed for retrieval.
-Shared six-arm timings are not standalone per-arm p95; final scoring and selection
-lock orchestration remain unfinished. No real DEV score or TEST inference exists.
+All 58 DEV items and 76 declared evidence spans now map by exact offsets. A separate
+content review identifies 62 necessary units across 47 answerable cases. The 11 refusal
+cases have only gap-context diagnostics, never answer-retrieval gold. Five exact
+text matches in other sources remain scope/alias leads; they are not automatically
+equivalent support. Global semantic aliases and 1,189 source dispositions remain
+unfinished. The real DEV readiness check still stops before model loading.
 
-Two additional cached Wisconsin pages were deferred for unresolved historical
-document-family relationships before any questions were authored. This does not
-establish that the remaining cache is exhausted or can supply the 239 missing tasks.
-Stages129–131 made no source requests and used no paid API, download, new training
-or subagent. The synthetic CLI used three encoder batches and one four-pair cross
-batch. Offline checks passed **523 tests plus 58 subtests** across 56 explicitly
-selected top-level test files. Sources, individual QA and weights stay private.
-The previous published commit ccc95b5 passed all five CI jobs; exact-head CI for
-this checkpoint is verified after publication. PR8 stays draft and unmerged.
+No actual DEV score, TEST inference, selection lock or generation is claimed.
+The existing six-arm offline CLI remains validated on synthetic inputs only.
+Stages132 through 134 made no source requests and used no paid API, download,
+training or subagent. Only 3 new curation vectors were encoded in one batch;
+all earlier vectors were reused. Corpus/mapping work used no model forward calls.
+Offline validation passed **523 tests plus 58 subtests** over 56 explicit top-level
+files. Sources, individual QA, annotations and weights remain private. PR8 stays
+draft and unmerged; exact-commit CI is checked after this publication.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

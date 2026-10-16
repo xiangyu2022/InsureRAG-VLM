@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T02:00:30.780944+00:00",
+  "updated_utc": "2026-10-16T03:24:08.842175+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1236,6 +1236,18 @@
         "stage127_source_decisions.json"
       ],
       "review_record_sha256": "0bd8df7c338142fed2167a5eccf287bc3723a779b961fe67bd9d78d39d1e3c59"
+    },
+    {
+      "family_id": "family132_ut_wi_no_surprises_consumer_protections",
+      "document_ids": [
+        "de544fbd041ddd5a4461d5cf",
+        "3a2d5f322b74f0b6761d98c8"
+      ],
+      "relation": "Substantive common balance-billing definitions, emergency/nonemergency protections, waiver exceptions, appeal routes and provider-directory protections; both assigned TEST. WI broad health index has a brief linked summary, not another article version; remaining overlaps are water-leak/site navigation.",
+      "local_review_records": [
+        "stage132_source_decisions.json"
+      ],
+      "review_record_sha256": "dd8d90f075ac0bf880492c2151e8bf47ed465763ac7795aa4ae5b607e35f7741"
     }
   ],
   "document_text_sha256": {
@@ -1683,7 +1695,15 @@
     "55e948ff59f93dc8a357366c": "adfd1d5f1efdbb3c7e0479c3b7bdc34ce462ffe7ecc3264a2b3bf6039d78617e",
     "cc82e8f0a213ba05399a8deb": "68d961cdff76cd43d288b9d031b7198376d1f30869d493358b4a4422a6c1c187",
     "e740bf5875aff07fdc539bf5": "63c0c314c32e2c25b58fca52046de03b18b3f10bf743695b6c5c125c4a54fe4f",
-    "c6495e61db5861e855adf6d5": "06297793013e64cd535721cc086909a030a3bda1554f12044f83425b8210f21f"
+    "c6495e61db5861e855adf6d5": "06297793013e64cd535721cc086909a030a3bda1554f12044f83425b8210f21f",
+    "197d257d2904025a0eb13a2e": "98d3db740864101a79941bc3927c0f26265a1bf1788e27be9d297444ac3c5deb",
+    "524c5121188baede4bee12f8": "587ac0b7bacba02d30a0e8c5d03ad5ceb9b1589f6f5234d5437e00d14355d7e8",
+    "7a5815fb1e5e5f01d0921087": "1db34af4efa5a5ad6e5763bd749dad393a7798b1710fac899f2c142dbb0d6aef",
+    "de544fbd041ddd5a4461d5cf": "d85fbd143abaabc9cd358f1a1a0c287cbdfd5960d2a996845320bfd46792203e",
+    "6e5d253653e9e53a685bf46a": "d15283aac1434359521d9939fae1d48e8ff0eab9af3a55ce3f9f16944a69b463",
+    "43e69209d01217447f10af5f": "a87cc5795656fda067685a02c6d7dfd82f478af4ea00f012f5f20b905d51ace8",
+    "3a2d5f322b74f0b6761d98c8": "31ac8cbf9d1b2994002481c4b265afc146a926e53d8e1841cf47262290519df2",
+    "48b3a394d530f3a0b168f91e": "05320b4cbd672a05f862911fa0dd16fff1a169c5e74ad50d0d0fb652f6ce8a9f"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
