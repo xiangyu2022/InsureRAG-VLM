@@ -998,14 +998,14 @@
       "publisher": "canada_esdc_ei",
       "jurisdiction": "CA",
       "seed_url": "https://www.canada.ca/en/services/benefits/ei/ei-regular-benefit.html",
-      "status": "approved33exactHTMLdocuments_local_research",
-      "reason": "Same-day Canada.ca terms reviewed at stage187, bound unchanged hash; noncommercial reproduction with accuracy and full title/author/URL attribution. Treasury Board of Canada Secretariat explanatory text; root also attributes National Joint Council. No linked NJC directives, Canada Life/MSH pages, forms, images or account data acquired. Original bytes private and authored QA separate.",
+      "status": "approved42exactHTMLdocuments_local_research",
+      "reason": "Reuse unchanged same-day Canada.ca terms from stage187: noncommercial reproduction with accuracy and source attribution. Original Treasury Board of Canada Secretariat and Public Services and Procurement Canada explanations; Crown copyright notice retained for survivor booklet. No linked third-party pages, forms, account portals, images or downloadable publications acquired. Original bytes remain local; authored factual questions separate.",
       "terms": {
         "url": "https://www.canada.ca/en/transparency/terms.html",
         "sha256": "e0c0b4c3ee0d1bc18323f3ca351f854744099a495f38265457dae0b59e2cfc42"
       },
-      "local_review_record": "stage241_html_content_review.json",
-      "review_record_sha256": "4968b1d9deff0ff924900e66933095a929ee59e80392a4359acf83039409309f",
+      "local_review_record": "stage254_html_content_review.json",
+      "review_record_sha256": "22efbbd3c32c4fc9d52e724d51b1379668bec04996ba5d34de86a9ab0f8d5f9c",
       "held_exact_urls": [
         {
           "id": "eb38fbd0cabbf38633e5fb05",
@@ -1144,5 +1144,5 @@
     "All previously denied local memory/demo-upload paths"
   ],
   "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
-  "updated_utc": "2026-10-16T16:05:07.922359+00:00"
+  "updated_utc": "2026-10-16T17:29:14.117132+00:00"
 }

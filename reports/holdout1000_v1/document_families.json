@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T17:15:21.510520+00:00",
+  "updated_utc": "2026-10-16T17:47:49.553798+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1525,6 +1525,25 @@
         "stage241_source_decisions.json"
       ],
       "review_record_sha256": "19d5d9dec903374b3758507a3c2470f67340cf49b7351f1d557ca40c51bfb6e8"
+    },
+    {
+      "family_id": "family254_canada_public_service_pension_survivor",
+      "document_ids": [
+        "69c39281434bab034391ef1e",
+        "ba5d37a1febeef24bce12845",
+        "cef4f6a6e23e7a8affbfd037",
+        "d5495ae1650691b21ff12307",
+        "d98b72cfbb65c80bb0818c3d",
+        "07357c091242268282ffdac9",
+        "3cfb269c8c6af9551972c05a",
+        "6b2219d2f983dce93d6f439a",
+        "fac87cf5c78f99bbd56f97d4"
+      ],
+      "relation": "Nine publicservice pension overview/member/survivor/disability/parttime pages treated as one conservative program family, including indexpages and quality-deferred retirement-income page. No pagebased family splitting; no substantive16word overlap to prior1417sources.",
+      "local_review_records": [
+        "stage255_source_decisions.json"
+      ],
+      "review_record_sha256": "b17723cefa44c63c428236b108b3d10a936d98d741ff29bc33c388e990311874"
     }
   ],
   "document_text_sha256": {
@@ -2133,7 +2152,16 @@
     "ce9965865973dcdcf0a5418a": "f29b96e2fb8db85853f0d51eeab5566c59659bab27e436503ac830513a2b7480",
     "abb1d16cd0f3dcfbb3c4f2e0": "13b73fb5845171795979fd966d7dbc7bf48b79b1d2e92eba735ff4827f4a464e",
     "ede68bfd77f05d28e61b7d32": "615ef9bf11eda66e86f0e55e4bd3f2f2070fc6d7f98c80f89f8baae2c6c91eda",
-    "b9e1bbe88ad82c7cb5a0d457": "7869d08110eba6ac31507296630356b5e5b5ab7265f920b1f304e62a10a3d6fd"
+    "b9e1bbe88ad82c7cb5a0d457": "7869d08110eba6ac31507296630356b5e5b5ab7265f920b1f304e62a10a3d6fd",
+    "69c39281434bab034391ef1e": "4f9afb1ee3aab8caa40e5a2cf3883f9055539618f238cc4682d5ea888390360f",
+    "ba5d37a1febeef24bce12845": "e1d3d26552eea61fbc48987f987ed9c8762c39a62380a7d47d37e761524b0a05",
+    "cef4f6a6e23e7a8affbfd037": "9b1db9ede83a0523b28a6d8ce39bd2d32ba125963c56be35bebb2cc02dfec12e",
+    "d5495ae1650691b21ff12307": "aa116b4336abc1e1b508fd5fc2cd5bb211b4493285cedbd8ca1649b3813c5e6b",
+    "d98b72cfbb65c80bb0818c3d": "95fc38ee39180ec1ebe150974e3d3eaf5c5d63dfe671b07986618422a99eb763",
+    "07357c091242268282ffdac9": "9757b2546492a5d87cf6c786bf6b04fd705d340012051d4884f9e5dfdfe7fa04",
+    "3cfb269c8c6af9551972c05a": "4d8d0d9b682aeb269fedfd3ab2ba9e221598c407151aed54002a8778ccd294f7",
+    "6b2219d2f983dce93d6f439a": "06ba9849021901eb99f92c0eedd2c279c704b2e986487f78a76b8bb3c082f2a7",
+    "fac87cf5c78f99bbd56f97d4": "910b0d34539d4680f2b3c0659a2c9fcc520a5d32674941e88d7833b04c0eba18"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
