@@ -12,39 +12,41 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage333](stage333_progress.json): **969 provisional
-TEST and 57 DEV across 180 TEST families**. **Accepted counts remain zero;
-the dataset is not frozen.** Another 31 independent TEST are needed: 15 ordinary,
-1 numeric, 7 multi-evidence and 8 refusal. Quotas and all previous holds remain.
+The latest checkpoint is [stage342](stage342_progress.json): **972 provisional
+TEST and 57 DEV across 182 TEST families**. **Accepted counts remain zero;
+the dataset is not frozen.** Another 28 independent TEST are needed: 14 ordinary,
+6 multi-evidence and 8 refusal. The numerical quota is met. Quotas and all prior
+holds remain.
 
-Eight new cached-source tasks passed provisional item gates after sequential
-content review: two ordinary, three numeric, one multi-evidence and two refusal.
-All 42 targeted historical records were read. A further focused scan found 41
-records: 34 were fully read and seven inspected partially or at matching-context
-windows. Fourteen affected existing questions and their new neighbors were
-reviewed. Script thresholds alone did not establish independence.
+Three new cached-source tasks passed provisional item gates after sequential
+content review: one ordinary, one numeric and one multi-evidence. One candidate
+was held for overlap with an exposed historical task core. All 21 targeted
+historical records were read; 179 focused leads were inspected through relevant
+short records, long-record matching windows and acronym contexts. Whole long
+historical documents were not claimed read. Nine affected existing questions
+and their new neighbors were reviewed. Thresholds alone did not clear novelty.
 
-The source corpus has **538 included, 341 excluded and 547 pending** across
-1,426 documents, with 988 partial chunks. The latest 32 complete bodies yielded
-12 inclusions, 16 exclusions and four pending decisions. Legacy timing, family
-and historical-overlap holds remain. No source inclusion restores held QA.
-Full TEST declared-span mapping is **497 complete and 472 pending**; offset
-coverage is not quality acceptance. All 57 DEV questions and answers, 61 necessary
-units and 19 reviewed Spanish support alternatives remain unchanged. Global
-alias, family, history and legacy-hold reconciliation remain unfinished.
+The source corpus has **546 included, 346 excluded and 534 pending** across
+1,426 documents, with 1,004 partial chunks. The latest 16 complete bodies yielded
+eight inclusions, five exclusions and three pending decisions. Legacy family,
+currency and historical-overlap holds remain. Source inclusion restores no QA.
+Full TEST declared-span mapping is **505 complete and 467 pending**;
+offset coverage is not quality acceptance. All 57 DEV texts, 61 necessary units
+and 19 reviewed Spanish support alternatives are unchanged. Global alias,
+family, history and legacy-hold reconciliation remain unfinished.
 
 DEV execution, family-macro scoring and immutable selection-lock tooling are
-implemented, but **no actual DEV/TEST run or selection lock exists**. The real
-dataset remains blocked by review gates and the unverified generation runtime.
+implemented, but **no actual DEV/TEST run or selection lock exists**. Review
+gates remain closed; the generation runtime has not been verified.
 
-The relevant quality, corpus, DEV-readiness and scoring checks passed **82 tests**
+Relevant quality, corpus, DEV-readiness and scoring checks passed **82 tests**
 over four explicitly selected top-level files. The unchanged executable code's
 latest full regression at stage302 passed 584 tests plus 58 subtests. This batch
-encoded eight questions in one local forward batch, reusing 3,454 candidate and
-44,581 historical vectors. There were no source-network requests, paid model
-calls or model downloads. Review is sequential Codex content review, not human
-or expert adjudication. Raw sources, individual QA, annotations and weights
-remain local; PR8 stays draft and unmerged. Construction continues.
+encoded four questions in one local forward batch, reusing 3,462 candidate and
+44,581 historical vectors. No source-network requests, paid model calls or model
+downloads occurred. Review is sequential Codex content review, not human or
+expert adjudication. Raw sources, individual QA, annotations and weights remain
+local; PR8 stays draft and unmerged. Construction continues.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
