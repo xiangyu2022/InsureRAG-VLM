@@ -1,7 +1,7 @@
 # Independent holdout experiment preparation
 
 As of October 16, 2026, construction has reached 978 provisional TEST and 57 DEV
-items across 180 TEST document families. Accepted counts are zero; the benchmark
+items across 182 TEST document families. Accepted counts are zero; the benchmark
 is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage355_progress.json)
 records the current counts, validation and remaining work. Historical exposed
 results are regression evidence only.
