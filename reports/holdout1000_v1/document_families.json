@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T08:26:41.737526+00:00",
+  "updated_utc": "2026-10-16T09:24:28.910190+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1379,13 +1379,31 @@
         "7236058bd89123b018a84a90",
         "96115e5a92962842cc059bd3",
         "cbef8aa1e6b9626191aa3eb7",
-        "ff72b40f836613f2dbf316de"
+        "ff72b40f836613f2dbf316de",
+        "c7679ea005a4b1a0f2c41cfe"
       ],
-      "relation": "One conservative TEST family for all8interconnectedCPPdisability, child andpostretirement explanatorypages; sharedapplication, consent andeligibilityrules. ExistingEI family andpublisherTESTassignment preserved.",
+      "relation": "Retain8CPPdisability/children/postretirementmembersandaddretirementindexbecauseitsrelated-benefitdescriptionsandnavigationderivefromsameCPPoverview;noquestionauthoredfromnewindex.",
       "local_review_records": [
-        "stage187_source_decisions.json"
+        "stage187_source_decisions.json",
+        "stage198_source_decisions.json"
       ],
-      "review_record_sha256": "4682a86c7ebfb7085ee27fd3dab18109f5ba56c80c24bf6e4f4b2ecb4aab0412"
+      "review_record_sha256": "4682a86c7ebfb7085ee27fd3dab18109f5ba56c80c24bf6e4f4b2ecb4aab0412",
+      "extension_review_sha256": [
+        "cf10c95d68667fa4383faf3e459393dcc1bfa9478743b465915b8007c0a33f0d"
+      ]
+    },
+    {
+      "family_id": "family198_cpp_credit_split_survivor_death",
+      "document_ids": [
+        "2584717d8829883bd5ecf762",
+        "334a231bbc92f7368049b7ec",
+        "d59048e26f92fb77c0f038d5"
+      ],
+      "relation": "OneconservativeTESTfamilyforcredit-split/survivor/deathsourcepages:shared2025separated-spouseeligibilityandsubstantialdeath/survivorapplicationprose;cap20. Notversions/translationsofCPPdisabilitypages.",
+      "local_review_records": [
+        "stage198_source_decisions.json"
+      ],
+      "review_record_sha256": "cf10c95d68667fa4383faf3e459393dcc1bfa9478743b465915b8007c0a33f0d"
     }
   ],
   "document_text_sha256": {
@@ -1943,7 +1961,11 @@
     "7236058bd89123b018a84a90": "a541abce04422d240b9aa1a6c9265f6e07cede63e7505c1863925d72ee1c28a5",
     "96115e5a92962842cc059bd3": "810c4ce6efadab262f344a124e37cbe9eaadb0d14b6b0f49972fd9557c3729e7",
     "cbef8aa1e6b9626191aa3eb7": "03a3b9d545b48669e15271d1946dec37c0508e5e204cf839a9856cae769d99fc",
-    "ff72b40f836613f2dbf316de": "989689b1bc2dac1f069082b75b499928a045154b7125d1016d5d261ae7765265"
+    "ff72b40f836613f2dbf316de": "989689b1bc2dac1f069082b75b499928a045154b7125d1016d5d261ae7765265",
+    "2584717d8829883bd5ecf762": "b50dc7ab1735e5f2fadb129a92771f2b2f5093c89693d574828a68bd31d059a9",
+    "334a231bbc92f7368049b7ec": "b96526dbaf52669d211bd3626f4acef9f447218111c6bd6a569b87e5b4dce99b",
+    "c7679ea005a4b1a0f2c41cfe": "99e0aff32ae2869772a5fc28edae9f4f6d1d54e694213ed6d23000c2dedbdac8",
+    "d59048e26f92fb77c0f038d5": "c93196eb5d5b354c8a0e807cee1a5065ec32e1446b7458c8c2eebd39e7b6659c"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

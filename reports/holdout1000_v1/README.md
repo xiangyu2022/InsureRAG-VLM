@@ -12,33 +12,33 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage189](stage189_progress.json): **834 provisional
-TEST and 58 DEV across 168 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Another 166 independent TEST are needed: 80 ordinary,
-28 numeric, 32 multi-evidence and 26 refusal questions.
+The latest checkpoint is [stage200](stage200_progress.json): **847 provisional
+TEST and 58 DEV across 169 TEST families**. **Accepted counts remain zero; the
+dataset is not frozen.** Another 153 independent TEST are needed: 70 ordinary,
+27 numeric, 31 multi-evidence and 25 refusal questions.
 
-Stage187 reviewed 17 CPP disability and children's-benefit candidates and
-retained 15: ten ordinary, three numeric, one multi-evidence and one refusal.
-One candidate bundled independent questions and one addressed statistical
-research rather than a consumer insurance decision; both were held despite
-clean automated screens. All prior holds and historical revocations remain.
-Historical counts are checkpoints, not additive totals.
+Stage198 retained 13 of 14 CPP credit-split, survivor and death-benefit candidates:
+ten ordinary, one numeric, one multi-evidence and one refusal. Content review
+held a numeric template despite clean automated screens. One proposed multi
+was reclassified as ordinary because the question already supplied one premise.
+All prior holds and historical revocations remain. Historical counts are not
+additive totals.
 
-Fresh robots and full Canada.ca terms review preceded ten bounded sequential
-requests totaling 326,777 response-body bytes. Eight new HTML sources share one
-conservative TEST family under the existing ESDC publisher. Original malformed
-earnings text and inconsistent average-period labels remain visible; neither
-was silently corrected. A separate UK licensing lead stopped after three policy
-requests totaling 83,203 bytes when the licence host prohibited AI input. No
-licence-page request, alternate route, retry or proxy/security change followed.
+The batch reused hash-verified same-day robots and full Canada.ca terms review.
+Four bounded sequential GETs transferred 139,337 response-body bytes. Three new
+substantive sources share one conservative TEST family; a retirement index joins
+the existing CPP disability family because of shared derived benefit descriptions.
+Original relationship-list ambiguity and average-quarter labels remain visible.
+No source wording was silently repaired. Deferred source leads remain separate,
+unadmitted records and do not contribute questions or vectors.
 
-The full snapshot contains 1,379 documents and the unchanged 2,317 source FAQ.
-The source-only corpus draft has 230 included, 142 excluded and 1,007 pending
-sources. Its 513 chunks preserve every included primary character. Both new
-raw tables were reviewed; 61 source-defined qualifier groups and exact page
-headings and dates preserve context. Rendered chunks meet the 512-token and
-2,400-character limits. The previous 487 chunks were reused unchanged. All
-eight new bodies remain included independently of whether a question survived.
+The snapshot contains 1,383 documents and the unchanged 2,317 source FAQ.
+The source-only corpus draft has 234 included, 142 excluded and 1,007 pending
+sources. Its 529 chunks preserve every included primary character. Both new
+raw tables were reviewed; 32 source-defined qualifier groups and exact headings
+and dates preserve context. Rendered chunks meet the 512-token and 2,400-character
+limits. The previous 513 chunks were reused unchanged. All four new source bodies
+remain included independently of whether a question survived.
 
 All 58 DEV items and 76 declared spans map by offsets. The 62 necessary units
 for 47 answerable cases and 18 Spanish aliases retain their exact chunk sets;
@@ -46,14 +46,13 @@ for 47 answerable cases and 18 Spanish aliases retain their exact chunk sets;
 clearance remain unfinished. No actual DEV score, TEST inference, selection
 lock or generation is claimed.
 
-The item audit read 85 targeted historical records, 26 neighboring QA pairs,
-16 additional numeric-template comparisons and three changed active
-neighborhoods. It encoded only 17 new questions in two local batches, reusing
-old candidate vectors and 44,581 historical vectors. There were no paid APIs,
-model downloads or subagents. Code is unchanged from the 534-test plus
-58-subtest regression; the retained pool was freshly validated. Sources,
-individual QA, annotations and weights remain local. PR8 stays draft and
-unmerged; exact-commit CI is checked after publication.
+The item audit read 66 targeted historical records, 35 neighboring QA pairs,
+19 additional numeric-template comparisons and nine changed active neighborhoods.
+It encoded only 14 new questions in one local batch, reusing old candidate vectors
+and 44,581 historical vectors. There were no paid APIs, model downloads or subagents.
+Code is unchanged from the 534-test plus 58-subtest regression; the retained pool
+was freshly validated. Sources, individual QA, annotations and weights remain local.
+PR8 stays draft and unmerged; exact-commit CI is checked after publication.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

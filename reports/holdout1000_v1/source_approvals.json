@@ -571,12 +571,12 @@
     "terms": "https://www.canada.ca/en/transparency/terms.html",
     "terms_sha256": "e0c0b4c3ee0d1bc18323f3ca351f854744099a495f38265457dae0b59e2cfc42",
     "require_terms_sha256": true,
-    "reviewed_utc": "2026-10-16T08:14:40.736826+00:00",
+    "reviewed_utc": "2026-10-16T09:10:28.466389+00:00",
     "decision": "local_noncommercial_research",
-    "basis": "Full12906character current Canada.ca terms reviewed; non-commercial reproduction allowed with accuracy, full title, author and URL attribution; third-party copyright and official symbols excluded. Official ESDC explanatory prose and facts only. No images, logos, PDFs, forms, account data or third-party materials acquired. Raw sources and individual QA remain local. Existing10EI sources and all prior holds preserved;8CPP additions separately reviewed, legacy publisherID retained.",
+    "basis": "Reuse same-day hash-verified Canada.ca terms12906chars fullyreviewed atstage187: noncommercialreproductionwithaccuracy,fulltitle,authorandURLattribution. ESDCexplanatoryproseonly;noexternalforms,images,symbolsoraccountdata. Originalsourcebytesretained;QAseparatelyauthoredandprivate. Existing18ESDCsourcesandallholdspreserved;fourCPPsourcesseparatelyreviewed,legacypublisherretained.",
     "attribution": "Employment and Social Development Canada / Government of Canada; fulltitle, originalURL and acquisition date; copy of original version, authored QA distinct adaptation without endorsement.",
-    "preflight_record": "stage187_html_content_review.json",
-    "preflight_record_sha256": "34b4645f5ec2cb1dce26dd6d772ea107a62a083ed83851ffed75cbc5bbfc8394",
+    "preflight_record": "stage198_html_content_review.json",
+    "preflight_record_sha256": "a4b901e5d00b6c01ebdb598593a42d9c9614cb01157c6d0772a48af75b0a4faa",
     "allowed_hosts": [
       "www.canada.ca"
     ],
@@ -598,7 +598,11 @@
       "/en/services/benefits/publicpensions/cpp/cpp-childrens-benefit.html",
       "/en/services/benefits/publicpensions/cpp-disability-benefit/eligibility.html",
       "/en/services/benefits/publicpensions/cpp-disability-benefit/apply.html",
-      "/en/services/benefits/publicpensions/cpp-disability-benefit/benefit-amount.html"
+      "/en/services/benefits/publicpensions/cpp-disability-benefit/benefit-amount.html",
+      "/en/services/benefits/publicpensions/cpp/cpp-survivor-pension.html",
+      "/en/services/benefits/publicpensions/cpp/cpp-split-credits.html",
+      "/en/services/benefits/publicpensions/cpp.html",
+      "/en/services/benefits/publicpensions/cpp/cpp-death-benefit.html"
     ],
     "excluded_path_keywords": [
       ".pdf",
@@ -624,9 +628,13 @@
       "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-childrens-benefit.html",
       "https://www.canada.ca/en/services/benefits/publicpensions/cpp-disability-benefit/eligibility.html",
       "https://www.canada.ca/en/services/benefits/publicpensions/cpp-disability-benefit/apply.html",
-      "https://www.canada.ca/en/services/benefits/publicpensions/cpp-disability-benefit/benefit-amount.html"
+      "https://www.canada.ca/en/services/benefits/publicpensions/cpp-disability-benefit/benefit-amount.html",
+      "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-survivor-pension.html",
+      "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-split-credits.html",
+      "https://www.canada.ca/en/services/benefits/publicpensions/cpp.html",
+      "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-death-benefit.html"
     ],
-    "max_pages": 18,
+    "max_pages": 22,
     "per_document_review_required": true,
     "raw_redistribution_in_this_task": false,
     "assigned_split": "test",
