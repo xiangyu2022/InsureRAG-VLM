@@ -12,10 +12,23 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage203](stage203_progress.json): **854 provisional
+The latest checkpoint is [stage210](stage210_progress.json): **854 provisional
 TEST and 58 DEV across 170 TEST families**. **Accepted counts remain zero; the
 dataset is not frozen.** Another 146 independent TEST are needed: 65 ordinary,
 26 numeric, 31 multi-evidence and 24 refusal questions.
+
+Stage206 completed source-only review of nine cached pages. Seven whole pages
+were excluded for non-insurance content or explicit third-party reproduction
+restrictions; two mixed-scope pages remain pending. No question inputs were loaded
+for these decisions. Existing chunks and DEV support mappings remain unchanged.
+Exact raw and normalized alias checks found no pending sources eligible for direct
+review reuse. No new questions or model vectors were created by this corpus pass.
+
+Four additional source preflights remain deferred: an unreviewed Canadian redirect,
+an Australian read timeout, Quebec robots HTTP403, and unresolved CPF benchmark
+reuse conditions. Nine requests transferred 894,079 known successful body bytes;
+failed-response sizes are unknown. No retries, alternate routes or proxy changes
+were used. No source bodies or individual QA from these leads were admitted.
 
 Stage201 retained seven of eight New Jersey leave-insurance candidates: five
 ordinary, one numeric and one refusal. One otherwise plausible candidate was held
@@ -33,7 +46,7 @@ approved pages share one conservative TEST family. The new July 17, 2026
 benefit-linked job-protection scope was checked against the dated official update.
 
 The snapshot contains 1,388 documents and the unchanged 2,317 source FAQ.
-The source-only corpus draft has 239 included, 142 excluded and 1,007 pending
+The source-only corpus draft has 239 included, 149 excluded and 1,000 pending
 sources. Its 540 chunks preserve every included primary character. The new raw
 comparison table and 29 source-defined qualifier groups were reviewed. Exact page
 headings and the job-protection effective date retain context. Rendered chunks meet
