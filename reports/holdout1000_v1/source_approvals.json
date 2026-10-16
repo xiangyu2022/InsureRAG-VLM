@@ -775,5 +775,66 @@
     "raw_redistribution_in_this_task": false,
     "assigned_split": "test",
     "assignment_reason": "Whole new WSIB publisher assigned TEST before authoring or model audit. Five source bodies grouped as one conservative family; held sources remain unadmitted and prospective same-family members."
+  },
+  {
+    "id": "canada_worksafebc",
+    "jurisdiction": "CA-BC",
+    "terms": "https://www.worksafebc.com/en/legal/terms-of-use",
+    "terms_sha256": "1038e2e00f51478a52183b325bf1d50640592d24d8a4c5fc8e271ee0ddea9279",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-16T12:07:12.962444+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "Terms expressly permit display, print, download and use of WorkSafeBC-owned text for noncommercial/personal/educational purposes without content modification or removal of notices. Copyright page makes explicit exception for Terms. Preserve original raw bodies, notices and source attribution; authored factual questions separate; no original content publication, website republication, logos or endorsement. Third-party material requires separate rights and will be held. Public pages only; account/application/payment terms read but no such services accessed.",
+    "copyright_notice": "Copyright 2026 WorkSafeBC. Original full copyright/terms and raw page notices retained locally.",
+    "attribution": "WorkSafeBC; full title/URL/acquisition date; original raw retained; factual QA separate.",
+    "preflight_record": "stage229_html_content_review.json",
+    "preflight_record_sha256": "d43c5cbf19b9698e73e2162ef1890e34900b16b372e549428d8a014bb1f38527",
+    "allowed_hosts": [
+      "www.worksafebc.com"
+    ],
+    "prefixes": [
+      "/en/claims/benefits-services/wage-loss-benefits/pop-wage-loss-benefits",
+      "/en/claims/benefits-services/services-seriously-injured-workers",
+      "/en/claims/benefits-services/health-care-benefits",
+      "/en/claims/benefits-services/determining-eligibility",
+      "/en/claims/benefits-services/death-benefits",
+      "/en/claims/benefits-services/permanent-disability-benefits",
+      "/en/claims/benefits-services/wage-loss-benefits/short-term-wage-loss-benefits",
+      "/en/claims/report-workplace-injury-illness/out-of-province-claims",
+      "/en/claims/benefits-services/permanent-disability-benefits/lump-sums-commutations"
+    ],
+    "approved_exact_urls": [
+      "https://www.worksafebc.com/en/claims/benefits-services/wage-loss-benefits/pop-wage-loss-benefits",
+      "https://www.worksafebc.com/en/claims/benefits-services/services-seriously-injured-workers",
+      "https://www.worksafebc.com/en/claims/benefits-services/health-care-benefits",
+      "https://www.worksafebc.com/en/claims/benefits-services/determining-eligibility",
+      "https://www.worksafebc.com/en/claims/benefits-services/death-benefits",
+      "https://www.worksafebc.com/en/claims/benefits-services/permanent-disability-benefits",
+      "https://www.worksafebc.com/en/claims/benefits-services/wage-loss-benefits/short-term-wage-loss-benefits",
+      "https://www.worksafebc.com/en/claims/report-workplace-injury-illness/out-of-province-claims",
+      "https://www.worksafebc.com/en/claims/benefits-services/permanent-disability-benefits/lump-sums-commutations"
+    ],
+    "excluded_path_keywords": [
+      ".pdf",
+      "/search",
+      "online.worksafebc.com"
+    ],
+    "minimum_interval_seconds": 2,
+    "seeds": [
+      "https://www.worksafebc.com/en/claims/benefits-services/wage-loss-benefits/pop-wage-loss-benefits",
+      "https://www.worksafebc.com/en/claims/benefits-services/services-seriously-injured-workers",
+      "https://www.worksafebc.com/en/claims/benefits-services/health-care-benefits",
+      "https://www.worksafebc.com/en/claims/benefits-services/determining-eligibility",
+      "https://www.worksafebc.com/en/claims/benefits-services/death-benefits",
+      "https://www.worksafebc.com/en/claims/benefits-services/permanent-disability-benefits",
+      "https://www.worksafebc.com/en/claims/benefits-services/wage-loss-benefits/short-term-wage-loss-benefits",
+      "https://www.worksafebc.com/en/claims/report-workplace-injury-illness/out-of-province-claims",
+      "https://www.worksafebc.com/en/claims/benefits-services/permanent-disability-benefits/lump-sums-commutations"
+    ],
+    "max_pages": 9,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false,
+    "assigned_split": "test",
+    "assignment_reason": "Whole new claimant publisher assignedTEST before drafting or modelaudit; all9bodies one conservative family,cap20."
   }
 ]

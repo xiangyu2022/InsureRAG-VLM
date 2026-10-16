@@ -12,31 +12,36 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage226](stage226_progress.json): **892 provisional
-TEST and 58 DEV across 173 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Stage223 retained six of nine cached-source drafts:
-five ordinary and one multi-evidence. Three were held for historical core
-exposure; two also triggered evidence containment. Automatic semantic scores
-do not override positive content evidence.
+The latest checkpoint is [stage231](stage231_progress.json): **904 provisional
+TEST and 58 DEV across 174 TEST families**. **Accepted counts remain zero; the
+dataset is not frozen.** Stage229 retained twelve of fourteen drafts: six
+ordinary, two numeric, two multi-evidence and two refusal. One draft was held for
+historical receipt-rule exposure and one for insufficient task independence.
+Automatic semantic scores do not override content review.
 
-Another 108 independent TEST are needed: 45 ordinary, 22 numeric, 21 multi-evidence
-and 20 refusal. Original quotas, family cap and all prior holds remain, including
+Another 96 independent TEST are needed: 39 ordinary, 20 numeric, 19 multi-evidence
+and 18 refusal. Original quotas, family cap and all prior holds remain, including
 the original 15 historical revocations and two stage215 scope revocations.
 Historical checkpoints are not additive.
 
-The source-only corpus now has: 250 included, 158 excluded and 989 pending
-sources in a 1,397-document snapshot, with 584 partial chunks. Two complete NJ
-pages added four chunks; all 580 previous chunks are unchanged. Whole-source
-dispositions, global aliases and whole-DEV clearance remain unfinished. The six
-new retained questions map to complete included bodies. All 58 DEV
-items, 76 declared spans, 62 necessary support units and 18 reviewed aliases
-retain their exact mappings. No actual DEV score, TEST inference, selection
-lock or generation is claimed.
+The source-only corpus has 259 included, 158 excluded and 989 pending sources
+in a 1,406-document snapshot, with 606 partial chunks. Nine complete WorkSafeBC
+sources added 22 chunks in one conservative family; all 584 previous chunks
+are unchanged. An ambiguous long-term wage source remains held in full.
+Whole-source dispositions, global aliases and whole-DEV clearance remain
+unfinished. All twelve new retained questions map to complete included bodies.
+All 58 DEV items, 76 declared spans, 62 necessary support units and 18 reviewed
+aliases retain their exact mappings. No actual DEV score, TEST inference,
+selection lock or generation is claimed.
 
-This batch embedded only nine new questions in one local model process and one
-forward batch, reusing old vectors. Review read 41 targeted historical texts,
-53 unique neighboring QAs and all 12 changed active-neighbor relationships.
-No new source GETs, paid calls, downloads or subagents were used.
+This batch embedded fourteen new questions in one local model process and one
+forward batch, reusing old vectors. Review read 70 targeted historical texts,
+64 unique neighboring QAs and 20 changed active-neighbor relationships, plus
+32 corpus gap windows. Fifty template matches were examined in bounded windows.
+Acquisition used 13 successful source/legal/sitemap GETs (1,659,460 body bytes),
+two separate unsuccessful robots preflights and three web discovery calls.
+There were no paid calls, downloads or subagents. The completed audit was reused
+after execution recovered from a usage-limit interruption; remaining quota is unknown.
 
 Usage correction preserved: stage217's 19 vectors used one model process and
 two forward batches (16 plus 3). Its numeric provenance already recorded two;

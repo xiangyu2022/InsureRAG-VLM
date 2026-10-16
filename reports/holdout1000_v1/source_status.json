@@ -1115,6 +1115,27 @@
         }
       ],
       "raw_redistribution_in_this_task": false
+    },
+    {
+      "publisher": "canada_worksafebc",
+      "jurisdiction": "CA-BC",
+      "seed_url": "https://www.worksafebc.com/en/claims/benefits-services/wage-loss-benefits/pop-wage-loss-benefits",
+      "status": "approved9exactHTMLdocuments_local_research",
+      "reason": "Terms expressly permit display, print, download and use of WorkSafeBC-owned text for noncommercial/personal/educational purposes without content modification or removal of notices. Copyright page makes explicit exception for Terms. Preserve original raw bodies, notices and source attribution; authored factual questions separate; no original content publication, website republication, logos or endorsement. Third-party material requires separate rights and will be held. Public pages only; account/application/payment terms read but no such services accessed.",
+      "terms": {
+        "url": "https://www.worksafebc.com/en/legal/terms-of-use",
+        "sha256": "1038e2e00f51478a52183b325bf1d50640592d24d8a4c5fc8e271ee0ddea9279"
+      },
+      "local_review_record": "stage229_html_content_review.json",
+      "review_record_sha256": "d43c5cbf19b9698e73e2162ef1890e34900b16b372e549428d8a014bb1f38527",
+      "held_sources": [
+        {
+          "document_id": "2a01d6235c29d32ee5b1e233",
+          "decision": "DEFER_ENTIRE_SOURCE_CALCULATION_UNIT_LABELS",
+          "reason": "Complete3268character body and raw4-rowtable read. Step3uses netweekly times90percent then Step4describes netannual division but labels quotient netannual. No silent correction or drafting from unaffected portions; requires source applicability resolution."
+        }
+      ],
+      "raw_redistribution_in_this_task": false
     }
   ],
   "excluded_previously_known": [
@@ -1123,5 +1144,5 @@
     "All previously denied local memory/demo-upload paths"
   ],
   "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
-  "updated_utc": "2026-10-16T11:05:05.615114+00:00"
+  "updated_utc": "2026-10-16T12:07:12.962444+00:00"
 }
