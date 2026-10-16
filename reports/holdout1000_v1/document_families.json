@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T16:17:57.238331+00:00",
+  "updated_utc": "2026-10-16T16:48:05.942287+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -955,13 +955,18 @@
         "220b639c0c239c2c00d66676",
         "a4dd2e9e2601825f731b3c92",
         "db60476ffdbdcf0ae2f9cb7b",
-        "81b4e91e08feada200058170"
+        "81b4e91e08feada200058170",
+        "218094e878e71280e41b391b"
       ],
-      "relation": "Tax and policy comparison text reproduced in LTC glossary; glossary repeats care definitions; LTC index repeats tax credit instructions",
+      "relation": "NY Partnership child shares substantive program introduction with already grouped parent db60476ffdbdcf0ae2f9cb7b; extend family57, not a new family. VAC disability/CIB substantive overlap already one family; IRB/CIB shared MyVAC navigation boilerplate does not merge separate program families.",
       "local_review_records": [
-        "stage57_source_decisions.json"
+        "stage57_source_decisions.json",
+        "stage244_source_decisions.json"
       ],
-      "review_record_sha256": "0845c64ff99ec3c27021d69f6f3570c69a52ead2d0c4453552a944cee7eb4be7"
+      "review_record_sha256": "0845c64ff99ec3c27021d69f6f3570c69a52ead2d0c4453552a944cee7eb4be7",
+      "extension_review_sha256": [
+        "33a8522934461d6e2bb381a0acc95fdbf5438d62db51e9a411838d2479bcc2b0"
+      ]
     },
     {
       "family_id": "family59_tricare_id_documents",
@@ -2106,7 +2111,8 @@
     "544664ad6e4d5020417636ee": "ee9f9b30ca84548981d41b25942c76fb070b1a92ded41dd2a009d729b4e96a4d",
     "5816adf2928aadcf5c155819": "da395f04f7c41f257fefdf7cff5ea463e19f2ad95d3daff5977ec3c9f873d4d4",
     "961d386736411c690a694232": "1b5b0286d14aa0829269612367ab015cae1abc6fa2711334d4ee95afe39c73dc",
-    "b887f7594d435c9055fd23ce": "7b296caf5196b4d534df87d05efee2863e5c94885f86b3b64d70af4005420735"
+    "b887f7594d435c9055fd23ce": "7b296caf5196b4d534df87d05efee2863e5c94885f86b3b64d70af4005420735",
+    "218094e878e71280e41b391b": "d5e98211b881229645f2ae518cfb960b4a938698dd3aa160fc37a42c925e359d"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
