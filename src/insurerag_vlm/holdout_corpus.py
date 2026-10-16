@@ -129,3 +129,90 @@ def map_support_span(evidence, document, chunks):
     if cursor < b:
         raise ValueError('Evidence has uncovered source characters')
     return [c['id'] for c in relevant]
+
+
+def source_snapshot_digest(documents):
+    """Bind the complete source universe; this never consumes QA annotations."""
+    records = []
+    seen = set()
+    for document in documents:
+        ident = document.get('id')
+        if not isinstance(ident, str) or not ident.strip() or ident in seen:
+            raise ValueError('Source IDs must be nonempty and unique')
+        seen.add(ident)
+        text_hash = digest(document['text'])
+        if (document.get('normalized_text_sha256') != text_hash
+                or not re.fullmatch('[0-9a-f]{64}', document.get('source_sha256', ''))):
+            raise ValueError('Invalid source snapshot hash')
+        records.append({k: document.get(k) for k in (
+            'id', 'source_sha256', 'normalized_text_sha256',
+            'publisher', 'jurisdiction', 'source_url')})
+    if not records:
+        raise ValueError('Source snapshot must not be empty')
+    return digest(json.dumps(sorted(records, key=lambda r: r['id']),
+                             sort_keys=True, separators=(',', ':')))
+
+
+def validate_inclusion_manifest(documents, manifest):
+    """Require one explicit disposition for every source, including distractors.
+
+    Review hashes/rationales are assertions supplied by the review workflow;
+    this structural gate does not independently establish permission or prove
+    that selection was blind to gold. Pending/omitted sources cannot disappear
+    silently from a retrieval experiment. Source exclusions also require review.
+    """
+    documents = list(documents)
+    if (manifest.get('version') != 1
+            or manifest.get('selection_basis') != 'source_only'
+            or manifest.get('source_snapshot_sha256') != source_snapshot_digest(documents)):
+        raise ValueError('Manifest does not bind the complete source snapshot')
+    by_id = {d['id']: d for d in documents}
+    reviewed = {}
+    entries = manifest.get('entries')
+    if not isinstance(entries, list):
+        raise ValueError('Manifest entries must be a list')
+    for entry in entries:
+        ident = entry.get('document_id')
+        if ident not in by_id or ident in reviewed:
+            raise ValueError('Unknown or duplicate manifest source')
+        document = by_id[ident]
+        if (entry.get('source_sha256') != document['source_sha256']
+                or entry.get('text_sha256') != document['normalized_text_sha256']
+                or entry.get('selection_basis') != 'source_only'):
+            raise ValueError('Manifest entry source binding mismatch')
+        review = entry.get('review', {})
+        if (review.get('decision') not in ('include', 'exclude')
+                or not isinstance(review.get('scope_rationale'), str)
+                or not review['scope_rationale'].strip()
+                or not re.fullmatch('[0-9a-f]{64}', review.get('record_sha256', ''))):
+            raise ValueError('Every source needs completed include/exclude review')
+        if review['decision'] == 'include':
+            spans = _ranges(entry.get('ranges', []), len(document['text']))
+            atoms = _ranges(entry.get('atomic_ranges', []), len(document['text']))
+            if (entry.get('atomic_ranges_reviewed') is not True or not spans
+                    or any(not any(a <= x < y <= b for a, b in spans) for x, y in atoms)):
+                raise ValueError('Included source structure/ranges are not reviewed')
+        elif entry.get('ranges') or entry.get('atomic_ranges'):
+            raise ValueError('Excluded source cannot have included ranges')
+        reviewed[ident] = entry
+    if reviewed.keys() != by_id.keys():
+        raise ValueError('Manifest must disposition every source in the snapshot')
+    included = [reviewed[i] for i in sorted(reviewed)
+                if reviewed[i]['review']['decision'] == 'include']
+    if not included:
+        raise ValueError('Corpus cannot exclude every source')
+    return included
+
+
+def build_corpus(documents, manifest, token_count, **budgets):
+    """Build only after the whole source-only review manifest passes.
+
+    The caller writes artifacts only after this returns successfully. Gold span
+    mapping is a later operation, and never determines the documents or chunks.
+    """
+    documents = list(documents)
+    included = validate_inclusion_manifest(documents, manifest)
+    by_id = {d['id']: d for d in documents}
+    return [chunk for entry in included
+            for chunk in chunk_document(by_id[entry['document_id']], entry,
+                                        token_count, **budgets)]

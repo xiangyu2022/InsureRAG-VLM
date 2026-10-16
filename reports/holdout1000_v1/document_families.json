@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T01:33:56.380450+00:00",
+  "updated_utc": "2026-10-16T02:00:30.780944+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -503,11 +503,16 @@
         "0859407de46f408b7f2885b6",
         "2913aef34a7f255cafbd604b",
         "5f9ade10c7ef86c59ae303d9",
-        "e2f1fdec937c0934a038f6a2"
+        "e2f1fdec937c0934a038f6a2",
+        "5491a758ada4e7da53b16e57"
       ],
-      "relation": "Three independently reviewed FEHB premium-conversion/LWOP shared rules; overlaps existing LWOP continuation family.",
+      "relation": "Existing FEHB cost/premium-conversion/LWOP family extended to tribal finance chapter sharing the complete billed-premium adjustment paragraph. Existing overlapping component and direct table hold remain unchanged.",
       "local_review_records": [
-        "agent_opm08_independent_review.json"
+        "agent_opm08_independent_review.json",
+        "stage127_source_decisions.json"
+      ],
+      "extension_review_sha256": [
+        "0bd8df7c338142fed2167a5eccf287bc3723a779b961fe67bd9d78d39d1e3c59"
       ]
     },
     {
@@ -1206,6 +1211,31 @@
         "stage117_source_decisions.json"
       ],
       "review_record_sha256": "c7af24315eca9d41e4069f524192f4d3632e650b6e0a510a7907e42de5bd8829"
+    },
+    {
+      "family_id": "family127_al_erisa_consumer_producer_warning",
+      "document_ids": [
+        "55e948ff59f93dc8a357366c",
+        "e740bf5875aff07fdc539bf5"
+      ],
+      "relation": "Consumer and producer explanations of the same Alabama ERISA/union-plan scam, sharing the complete legitimate-plan origin/distribution rule.",
+      "local_review_records": [
+        "stage127_source_decisions.json"
+      ],
+      "review_record_sha256": "0bd8df7c338142fed2167a5eccf287bc3723a779b961fe67bd9d78d39d1e3c59"
+    },
+    {
+      "family_id": "family127_nj_consumer_assistance_financial_jurisdiction",
+      "document_ids": [
+        "0ad9f4e649f2d62e2242cd49",
+        "cc82e8f0a213ba05399a8deb",
+        "c6495e61db5861e855adf6d5"
+      ],
+      "relation": "Shared substantive jurisdiction and complaint-routing explanation; conservatively group the mixed insurance/banking consumer assistance body with its financial-jurisdiction and institution overview derivatives.",
+      "local_review_records": [
+        "stage127_source_decisions.json"
+      ],
+      "review_record_sha256": "0bd8df7c338142fed2167a5eccf287bc3723a779b961fe67bd9d78d39d1e3c59"
     }
   ],
   "document_text_sha256": {
@@ -1646,7 +1676,14 @@
     "56bd87c8a5d4224df4d6b14e": "7ef19722311d38dc3ad448e201b1288fab0e5563fb889d0ee1e51b1cc3593920",
     "b02bfbcea0eb596dca1a63be": "6257142a5763af0279ef5773e211cf7b46cf91db7d04c06ab7108ecbd266fe25",
     "dd5351ab8aa58f91aec39564": "14918b7f7c7c84b41f5578d6dd6d2f747d85be718489ad8da10802bd1368276a",
-    "8cffb8f1b8194c0b2b8a8974": "f1e24eb47b8b8f88f8677dd0812b9281cd1643c897f7cf5d72281f3ffcb3030c"
+    "8cffb8f1b8194c0b2b8a8974": "f1e24eb47b8b8f88f8677dd0812b9281cd1643c897f7cf5d72281f3ffcb3030c",
+    "e6162dc2f379b94e82a59dcd": "fe8395bf061abaa0d169d349fab5e7cf81388fbd9dce415945f0c00f42671e2f",
+    "0ad9f4e649f2d62e2242cd49": "81dc6bfbad8fe71c3f4e83a44d159b263c02bb47828f8cf44d13d5eb8924e326",
+    "5491a758ada4e7da53b16e57": "685ddbd137b2812388a216cbb9d3707272ad9468af5e7d9c58535ffa451c0142",
+    "55e948ff59f93dc8a357366c": "adfd1d5f1efdbb3c7e0479c3b7bdc34ce462ffe7ecc3264a2b3bf6039d78617e",
+    "cc82e8f0a213ba05399a8deb": "68d961cdff76cd43d288b9d031b7198376d1f30869d493358b4a4422a6c1c187",
+    "e740bf5875aff07fdc539bf5": "63c0c314c32e2c25b58fca52046de03b18b3f10bf743695b6c5c125c4a54fe4f",
+    "c6495e61db5861e855adf6d5": "06297793013e64cd535721cc086909a030a3bda1554f12044f83425b8210f21f"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

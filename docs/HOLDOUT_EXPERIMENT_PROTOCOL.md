@@ -1,8 +1,8 @@
 # Independent holdout experiment preparation
 
-As of October 16, 2026, construction has reached 756 provisional TEST and 58 DEV
+As of October 16, 2026, construction has reached 761 provisional TEST and 58 DEV
 items. Accepted counts are zero; the benchmark is not frozen. The current
-[aggregate checkpoint](../reports/holdout1000_v1/stage125_progress.json) is the
+[aggregate checkpoint](../reports/holdout1000_v1/stage128_progress.json) is the
 source of truth. Historical exposed results are regression evidence only.
 
 The [prospective protocol](../reports/holdout1000_v1/evaluation_protocol_v1.json)
@@ -46,7 +46,7 @@ out. The current runtime location is needed. No download, replacement model,
 new DEV comparison or TEST inference was performed. This checkpoint includes
 protocol and metric preparation, not completed end-to-end execution.
 
-Validation: 503 tests and 58 subtests passed offline, including denominator,
+Validation: 510 tests and 58 subtests passed offline, including denominator,
 short-ranking, failure, evidence-alias and family-pairing cases. Individual QA,
 raw sources, runtime traces and weights stay local; only aggregates and code are
 published. No source holds or count targets were relaxed.
@@ -58,3 +58,15 @@ fabricated IDs and stale content fail closed. One full-source pilot mapped four
 items/five spans across two chunks, without inference. Global inclusion, semantic
 alternatives and DEV selection remain pending. Loopback port 11435 also refused the
 read-only runtime probe; the unresolved runtime is not silently substituted.
+
+The whole-source manifest gate requires every snapshot document to have an explicit
+include/exclude disposition before tokenization. The inventory verifies 1,344
+raw/text hashes but still has 1,228 pending source/structure reviews. Existing review
+evidence can be reused; pending is not a claim all these sources are new or suitable
+for independent questions. Exclusions and aliases need review without gold filters.
+
+The six-arm fusion core and pinned local retrieval models passed a four-source,
+one-query synthetic CUDA wiring run. No real DEV/TEST question was used. Each
+candidate union stays within 200, with stable score/ID ties and reuse of identical
+cross-encoder pairs. Full DEV orchestration and relevance mapping remain pending;
+unavailable generation does not prevent retrieval.

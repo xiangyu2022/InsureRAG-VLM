@@ -59,3 +59,76 @@ def test_noncontiguous_permission_scope_is_preserved_and_gap_cannot_map():
     e=dict(document_id=d['id'],start=0,end=35,sha256=digest(d['text'][:35]))
     with pytest.raises(ValueError,match='uncovered'):map_support_span(e,d,cs)
     with pytest.raises(ValueError,match='Token counter'):chunk_document(d,m,lambda _:0)
+
+
+def corpus_fixture():
+    from copy import deepcopy
+    from src.insurerag_vlm.holdout_corpus import source_snapshot_digest
+    first, included = fixture()
+    second = dict(first, id='distractor', text='Separate source material.')
+    second['normalized_text_sha256'] = digest(second['text'])
+    disposition = deepcopy(included)
+    disposition.update(document_id='distractor', text_sha256=second['normalized_text_sha256'],
+                       ranges=[], atomic_ranges=[], review=dict(decision='exclude',
+                       record_sha256='c'*64, scope_rationale='Synthetic rights restriction'))
+    docs = [first, second]
+    manifest = dict(version=1, selection_basis='source_only',
+                    source_snapshot_sha256=source_snapshot_digest(docs),
+                    entries=[included, disposition])
+    return docs, manifest
+
+
+def test_full_corpus_requires_review_of_nonanswer_sources_before_tokenization():
+    from copy import deepcopy
+    from src.insurerag_vlm.holdout_corpus import build_corpus
+    docs, manifest = corpus_fixture()
+    calls = []
+    def forbidden(_):
+        calls.append(True)
+        raise AssertionError('Must validate all source dispositions first')
+    for mode in ['missing', 'pending', 'duplicate', 'unreviewed_exclusion']:
+        bad = deepcopy(manifest)
+        if mode == 'missing': bad['entries'].pop()
+        elif mode == 'pending': bad['entries'][1]['review']['decision'] = 'pending'
+        elif mode == 'duplicate': bad['entries'].append(deepcopy(bad['entries'][1]))
+        else: bad['entries'][1]['review'].pop('record_sha256')
+        with pytest.raises(ValueError): build_corpus(docs, bad, forbidden)
+    assert calls == []
+    chunks = build_corpus(docs, manifest, count)
+    assert {c['document_id'] for c in chunks} == {'source'}
+
+
+def test_corpus_snapshot_binds_missing_changed_and_duplicate_sources():
+    from src.insurerag_vlm.holdout_corpus import build_corpus, source_snapshot_digest
+    docs, manifest = corpus_fixture()
+    assert source_snapshot_digest(docs) == source_snapshot_digest(list(reversed(docs)))
+    for changed in [docs[:1], docs + docs[:1],
+                    [docs[0], dict(docs[1], source_sha256='d'*64)],
+                    [docs[0], dict(docs[1], jurisdiction='different')],
+                    [docs[0], dict(docs[1], text='Changed text')]]:
+        with pytest.raises(ValueError): build_corpus(changed, manifest, count)
+
+
+def test_reviewed_distractor_is_searchable_without_gold_and_order_is_stable():
+    from src.insurerag_vlm.holdout_corpus import build_corpus
+    docs, manifest = corpus_fixture()
+    second = manifest['entries'][1]
+    second['review']['decision'] = 'include'
+    second['ranges'] = [[0, len(docs[1]['text'])]]
+    chunks = build_corpus(docs, manifest, count)
+    assert {c['document_id'] for c in chunks} == {'source', 'distractor'}
+    assert chunks == build_corpus(list(reversed(docs)), manifest, count)
+    assert ''.join(c['text'] for c in chunks if c['document_id']=='distractor') == docs[1]['text']
+    second['atomic_ranges_reviewed'] = False
+    with pytest.raises(ValueError): build_corpus(docs, manifest, count)
+
+
+def test_exclusion_does_not_hide_ranges_or_allow_an_empty_corpus():
+    from src.insurerag_vlm.holdout_corpus import build_corpus
+    docs, manifest = corpus_fixture()
+    manifest['entries'][1]['ranges'] = [[0, 5]]
+    with pytest.raises(ValueError): build_corpus(docs, manifest, count)
+    manifest['entries'][1]['ranges'] = []
+    manifest['entries'][0]['review']['decision'] = 'exclude'
+    manifest['entries'][0]['ranges'] = []
+    with pytest.raises(ValueError, match='every source'): build_corpus(docs, manifest, count)
