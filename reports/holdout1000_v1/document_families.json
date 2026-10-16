@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T07:46:52.177031+00:00",
+  "updated_utc": "2026-10-16T08:26:41.737526+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1368,6 +1368,24 @@
         "stage183_source_decisions.json"
       ],
       "review_record_sha256": "955604eb8769ce7bdf4239151a0ba1ee4a8878041927fdedee3c56a1bcb846bb"
+    },
+    {
+      "family_id": "family187_cpp_disability_children_postretirement",
+      "document_ids": [
+        "6fb2c1e417aa299f486b296d",
+        "06dfb89f81ffdb791af9bc55",
+        "3435ab252972a6ef53dcab33",
+        "544761304ab03a5924f757b4",
+        "7236058bd89123b018a84a90",
+        "96115e5a92962842cc059bd3",
+        "cbef8aa1e6b9626191aa3eb7",
+        "ff72b40f836613f2dbf316de"
+      ],
+      "relation": "One conservative TEST family for all8interconnectedCPPdisability, child andpostretirement explanatorypages; sharedapplication, consent andeligibilityrules. ExistingEI family andpublisherTESTassignment preserved.",
+      "local_review_records": [
+        "stage187_source_decisions.json"
+      ],
+      "review_record_sha256": "4682a86c7ebfb7085ee27fd3dab18109f5ba56c80c24bf6e4f4b2ecb4aab0412"
     }
   ],
   "document_text_sha256": {
@@ -1917,7 +1935,15 @@
     "d4f208873b1d4e4ae3f376c2": "50f1bbe4e4558ee1d55bdbff835b4d954b038aaf9fd22f9fec9610f11f263197",
     "e43f5a6538e32a33cb756b0f": "62fbea70bf78b3ab959407a5155632cadbbb562157b259f675810a0a3ecf663a",
     "fd2a7cc538021c77709a2e7d": "ca07be0c896159d4538a19d88c14b964454255a4b8b796abdbdb6935df8befc9",
-    "fe6c0007d2ebd1d1a7e4ae4d": "4f9fdf6284f7dc136e542f921124bcd8e63b5438dcb2f249f7f5c89e24346546"
+    "fe6c0007d2ebd1d1a7e4ae4d": "4f9fdf6284f7dc136e542f921124bcd8e63b5438dcb2f249f7f5c89e24346546",
+    "6fb2c1e417aa299f486b296d": "f2746c03af96f29a3e081bb37271005ac597b26b4945764fafbbe4e68b16110e",
+    "06dfb89f81ffdb791af9bc55": "3f3033276a2f660847b8c3e6e133f400362df2d108f8011f8b0bac67072666d6",
+    "3435ab252972a6ef53dcab33": "481d2233e924d4208805e1b87ccb2de0d62177e2aa520d2db9f4fddd616ab8cb",
+    "544761304ab03a5924f757b4": "3014372aac63ee23451d0c7131cf503f11b5bff670d3bdf9456c4d17e8cba418",
+    "7236058bd89123b018a84a90": "a541abce04422d240b9aa1a6c9265f6e07cede63e7505c1863925d72ee1c28a5",
+    "96115e5a92962842cc059bd3": "810c4ce6efadab262f344a124e37cbe9eaadb0d14b6b0f49972fd9557c3729e7",
+    "cbef8aa1e6b9626191aa3eb7": "03a3b9d545b48669e15271d1946dec37c0508e5e204cf839a9856cae769d99fc",
+    "ff72b40f836613f2dbf316de": "989689b1bc2dac1f069082b75b499928a045154b7125d1016d5d261ae7765265"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

@@ -1,0 +1,200 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 834,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 520,
+    "insufficient_evidence": 74,
+    "multi_evidence": 118,
+    "numerical_calculation": 122
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 168,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 50,
+    "california_cdi": 50,
+    "wisconsin_oci": 63,
+    "utah_uid": 16,
+    "us_opm": 115,
+    "us_va": 41,
+    "us_tricare": 130,
+    "newjersey_dobi": 38,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 43,
+    "canada_esdc_ei": 34
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 80,
+    "numerical_calculation": 28,
+    "multi_evidence": 32,
+    "insufficient_evidence": 26
+  },
+  "created_utc": "2026-10-16T08:30:39.595435+00:00",
+  "status": "CONSTRUCTION_AND_CORPUS_REVIEW_ACTIVE_NOT_FROZEN",
+  "remaining_independent_test": 166,
+  "question_batch": {
+    "drafted": 17,
+    "retained": 15,
+    "held_bundled_multi": 1,
+    "held_statistical_research_scope": 1,
+    "retained_tasks": {
+      "ordinary_qa": 10,
+      "numerical_calculation": 3,
+      "multi_evidence": 1,
+      "insufficient_evidence": 1
+    }
+  },
+  "corpus_preparation": {
+    "created_utc": "2026-10-16T08:28:03.122762+00:00",
+    "status": "PARTIAL_SOURCE_CORPUS_NOT_DEV_READY",
+    "test": 834,
+    "dev": 58,
+    "accepted": 0,
+    "frozen": false,
+    "source_dispositions": {
+      "pending": 1007,
+      "include": 230,
+      "exclude": 142
+    },
+    "new_dispositions": {
+      "include": 8,
+      "exclude": 0,
+      "pending": 0
+    },
+    "partial_chunks": 513,
+    "max_tokens": 512,
+    "max_encoder_chars": 2400,
+    "all_included_characters_preserved": true,
+    "previous_chunks_unchanged": 487,
+    "old_chunks_retokenized": 0,
+    "dev_items_fully_mapped": 58,
+    "dev_declared_spans_mapped": 76,
+    "actual_dev_queries": 0,
+    "test_queries": 0,
+    "model_forwards": 0,
+    "source_requests": 0
+  },
+  "dev_support_review": {
+    "dev_items": 58,
+    "answerable": 47,
+    "refusal_context_only": 11,
+    "declared_spans_mapped": 76,
+    "necessary_units": 62,
+    "reviewed_spanish_aliases": 18,
+    "global_alias_review_complete": false,
+    "dev_QA_and_families_changed": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 58,
+    "source_count": 1379,
+    "generation_required": false
+  },
+  "validation": {
+    "retained_item_gate_errors": 0,
+    "global_dataset_gates_passed": false,
+    "remaining_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "unchanged_code_regression": {
+      "stage": 159,
+      "tests_passed": 534,
+      "subtests_passed": 58,
+      "explicit_top_level_test_files": 56
+    },
+    "code_or_tests_changed": false,
+    "targeted_history_records_fully_read": 85,
+    "distinct_neighbor_QAs_read": 26,
+    "extra_numeric_template_pairs_read": 16,
+    "changed_active_neighbors_reviewed": 3
+  },
+  "source_structure": {
+    "reviewed_qualifier_groups": 61,
+    "raw_tables_reviewed": 2,
+    "previous_chunks_unchanged": 487,
+    "rendered_limits": {
+      "tokens": 512,
+      "characters": 2400
+    },
+    "old_chunks_retokenized": 0,
+    "all_included_primary_text_preserved": true,
+    "source_context_not_automatically_gold_alias": true
+  },
+  "usage": {
+    "new_source_requests": 10,
+    "new_source_get_requests": 10,
+    "new_source_head_requests": 0,
+    "new_source_bytes": 326777,
+    "new_html_documents": 8,
+    "discovery_html_pages": 1,
+    "policy_and_robots_pages": 2,
+    "retries": 0,
+    "model_downloads": 0,
+    "external_model_api_calls": 0,
+    "network_security_or_proxy_changes": false,
+    "deferred_uk_lead_policy_requests": 3,
+    "deferred_uk_lead_policy_bytes": 83203,
+    "total_new_source_and_policy_requests": 13,
+    "total_response_body_bytes": 409980,
+    "paid_api_calls": 0,
+    "curation_vectors": 17,
+    "curation_forward_batches": 2,
+    "old_vectors_reencoded": 0,
+    "historical_question_vectors_reused": 44581,
+    "corpus_model_forwards": 0,
+    "actual_dev_queries": 0,
+    "actual_test_queries": 0,
+    "generation_calls": 0,
+    "new_subagents": 0,
+    "remaining_quota": "not observable"
+  },
+  "limits": [
+    "834 provisional TEST remains166short; acceptedcountsarezero anddatasetisunfrozen.",
+    "230included142excluded1007pending sources; no unreviewed-sourceexclusions toobtainDEVscores.",
+    "513source-onlychunks preserveallincludedprimarytext within512tokens2400characters includingcopiedcontext.",
+    "Allpriorholds, scope/familycaprevocations and15historicalrevocationsremain. A bundledmulti taskanda statisticalresearch-scope taskwereheld despitecleanautomatedscreens.",
+    "Globalaliases andwholeDEVclearance remainincomplete. NorealDEV/TESTinference, selectionlock or generation.",
+    "Single sequentialCodexcontentreview, nothuman/expertreview. Rawsource, individualQA, annotationsandweights staylocal.",
+    "CPPmalformedearningsrange andinconsistentaveragereferenceperiod arepreservedandnotcorrectedbyinference.",
+    "UKleadstoppedatNationalArchivesrobotsai-input=no; licencepagewasnotrequested andnoalternativerouteused."
+  ],
+  "evidence_sha256": {
+    "review_pool_112_clearance_ledger.json": "0f2392be4fbb76963077cd103ff61a635ae9ab6c04f913403440304cafb8a719",
+    "provisional_item_pool_112_validation.json": "32ab49c0155d61025d0a452bcea264b3d6726edf7f801a7e79bd62461f2f093e",
+    "stage187_final_review.json": "2640bbc679af645431d84aead0a9045b2f706a8c46d2e38287bcead938a6a8c4",
+    "stage187_html_content_review.json": "34b4645f5ec2cb1dce26dd6d772ea107a62a083ed83851ffed75cbc5bbfc8394",
+    "stage188_source_disposition_review.json": "f92bdaf662ba449fa8d28bf6e8d6c41dc0a844b3cab89be5c09785ecfc7ed698",
+    "stage189_dev_support_units_draft.json": "6453d5abb2c9fe3835d0eb7cf29abb097b42ddf990caae2d03dfbeafdd78d906",
+    "stage189_dev_readiness.json": "4e8c2f48a6e42d545af811aa0844ae18ada7782d6c41f704c53ba1bd1fde426b"
+  }
+}
