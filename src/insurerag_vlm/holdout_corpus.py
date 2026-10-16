@@ -67,7 +67,13 @@ def chunk_document(document, inclusion, token_count, *, max_tokens=512, max_char
         # range is never split, including when it crosses a natural boundary.
         ends = {start + m.end() for m in re.finditer(r'\S+\s*', text[start:stop])}
         ends.add(stop)
-        ends = sorted(e for e in ends if not any(a < e < b for a,b in atoms))
+        # Reviewed units can start with whitespace or at an HTML boundary that
+        # the word-plus-trailing-space scan does not expose. Their exact edges
+        # are valid cuts too; otherwise a fitting definition can become stuck.
+        ends.update(e for pair in atoms for e in pair if start < e <= stop)
+        ends = sorted(e for e in ends
+                      if not any(a < e < b for a,b in atoms)
+                      and (e == stop or text[e:stop].strip()))
         cursor = start
         while cursor < stop:
             available = [e for e in ends if cursor < e <= cursor + max_chars]

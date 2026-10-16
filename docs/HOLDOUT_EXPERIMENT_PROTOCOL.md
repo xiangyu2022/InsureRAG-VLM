@@ -70,3 +70,20 @@ one-query synthetic CUDA wiring run. No real DEV/TEST question was used. Each
 candidate union stays within 200, with stable score/ID ties and reuse of identical
 cross-encoder pairs. Full DEV orchestration and relevance mapping remain pending;
 unavailable generation does not prevent retrieval.
+
+
+The stage131 implementation adds `scripts/run_holdout_dev_retrieval.py`. Supply
+the complete source snapshot, source-only inclusion manifest, label-free DEV
+request JSON and separately reviewed DEV clearance. `--check-only` reports all
+readiness blockers without model loading or generation. Actual inference also
+requires local pinned models and a private output directory. Never mark a draft
+clearance ready merely to run the command.
+
+The CLI preserves failed intended requests, fingerprints code/model/tokenizer and
+corpus inputs, rejects changed resumes and reuses exact saved results. A completed
+resume loads no models. The real-model integration validation used only synthetic
+fixtures; actual DEV readiness remains blocked by corpus and support review.
+Current partial mapping covers 14 spans and 11 complete declared-evidence items;
+it does not approve semantic alternatives. Shared execution timings are recorded
+but do not establish standalone per-arm p95 for the selection tie-break. Scoring
+and the final selection lock remain separate unfinished work.

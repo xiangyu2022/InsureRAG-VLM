@@ -12,46 +12,45 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage128](stage128_progress.json): **761 provisional
+The latest checkpoint is [stage131](stage131_progress.json): **761 provisional
 TEST and 58 DEV across 153 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** All 819 retained item gates pass. Another 239 independent
-TEST are needed: 127 ordinary, 35 numeric, 42 multi-evidence and 35 refusal tasks.
-DEV remains 25/10/12/11 by those types. Historical checkpoints are not additive.
+dataset is not frozen.** The current batch adds no questions. Another 239
+independent TEST are needed: 127 ordinary, 35 numeric, 42 multi-evidence and
+35 refusal tasks. The last question batch (stage127) retained five of six drafts;
+historical checkpoints are not additive.
 
-The cached batch reviewed six candidates: five retained and one held as a duplicate
-of an existing initial-claims-paid fraud question. New retained tasks comprise one
-ordinary, one numeric, two multi-evidence and one refusal. All 99 ledger links,
-original 15 revocations, later holds, three same-ID repairs, source/split/family
-caps and vector hashes were checked. No retained PBGC dependency was found.
+Twelve unchanged Australian government prose sources now have source-only corpus
+inclusion records reusing prior full-page reviews. Two existing whole-page holds
+remain; ten table pages and one FAQ need further structure/scope work. Globally,
+13 sources are included, 115 excluded under existing holds and 1,216 pending.
+The 39 partial chunks preserve every included character. Fourteen evidence spans
+map by exact offsets across 12 items; 11 items have all declared spans covered.
+Necessity and equivalent-support labels still need review. This is not global
+relevance gold or a retrieval result. A real definition-boundary failure led to
+a fix for reviewed atomic ranges that begin with whitespace.
 
-All 1,344 cached raw artifacts and normalized texts passed hash checks. The complete
-source-only inventory has 42 exact-text alias groups. Its draft inclusion manifest
-contains one prior pilot inclusion, 115 existing-hold exclusions and 1,228 pending
-source/structure dispositions. Pending does not mean newly usable or unreviewed in
-every previous workflow. Existing evidence must be bound to explicit corpus review.
-The whole-manifest gate rejects omitted/pending sources before tokenization and
-keeps reviewed distractors searchable. It does not prove permissions by itself.
-Global mapping and semantic alternatives remain unfinished; the prior one-source
-pilot mapped four items/five spans only.
+The offline DEV CLI accepts only ID/question requests, gates incomplete corpus
+and review records before loading models, binds document vectors to hashes, and
+saves each intended query including failures. Exact resumes reuse saved successes
+and failures. A real-model integration run used four invented sources and one
+invented query with all six registered arms; a second execution loaded no models
+and performed no inference. No actual DEV/TEST input was used in that run.
 
-The six registered ranking arms share deterministic ID ties and bounded per-arm
-dense100/positive-BM25-100 unions. Identical cross-encoder pairs are reused without
-changing either pool. An offline CUDA smoke used four synthetic sources and one
-synthetic query with the three hash-pinned inherited retrieval models. All six
-arms ran in about 6 seconds without truncation, generation or real DEV/TEST inputs.
-This establishes runtime wiring, not retrieval quality or a DEV selection. Full
-corpus review, mapping and DEV orchestration remain to be completed under the
-[prospective protocol](evaluation_protocol_v1.json). Retrieval does not require the
-unresolved Qwen generation service.
+All 58 DEV requests have a private label-free export. Its readiness check stops
+before model loading because complete source dispositions, evidence/alias mapping
+and the whole-DEV clearance are unfinished. Generation is not needed for retrieval.
+Shared six-arm timings are not standalone per-arm p95; final scoring and selection
+lock orchestration remain unfinished. No real DEV score or TEST inference exists.
 
-Six new candidate vectors were encoded in one curation forward batch. The separate
-synthetic smoke used three encoder batches and one four-pair reranker batch.
-Stages127/128 made no network requests. Earlier stage126 Indiana terms preflight
-used two requests/65,338 bytes and stopped without approval or consumer acquisition;
-all source restrictions remain. No paid API, download, new training, subagent, DEV
-scoring or TEST inference ran. Offline checks: 510 tests plus 58 subtests passed.
-Raw sources, individual QA and weights stay private. PR8 remains draft/unmerged;
-exact-commit CI is checked after publication. Work continues.
+Two additional cached Wisconsin pages were deferred for unresolved historical
+document-family relationships before any questions were authored. This does not
+establish that the remaining cache is exhausted or can supply the 239 missing tasks.
+Stages129–131 made no source requests and used no paid API, download, new training
+or subagent. The synthetic CLI used three encoder batches and one four-pair cross
+batch. Offline checks passed **523 tests plus 58 subtests** across 56 explicitly
+selected top-level test files. Sources, individual QA and weights stay private.
+The previous published commit ccc95b5 passed all five CI jobs; exact-head CI for
+this checkpoint is verified after publication. PR8 stays draft and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

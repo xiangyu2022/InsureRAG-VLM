@@ -132,3 +132,17 @@ def test_exclusion_does_not_hide_ranges_or_allow_an_empty_corpus():
     manifest['entries'][0]['review']['decision'] = 'exclude'
     manifest['entries'][0]['ranges'] = []
     with pytest.raises(ValueError, match='every source'): build_corpus(docs, manifest, count)
+
+
+@pytest.mark.parametrize('tail', ['', '  '])
+def test_atomic_definition_edges_with_leading_and_trailing_space_are_valid_cuts(tail):
+    d, m = fixture()
+    text = 'Intro. Term detail.' + tail
+    d.update(text=text, normalized_text_sha256=digest(text))
+    m.update(text_sha256=digest(text), ranges=[[0,len(text)]], atomic_ranges=[[6,19]])
+    chunks = chunk_document(d, m, count, max_tokens=5, max_chars=15)
+    assert [c['text'] for c in chunks] == ['Intro.', ' Term detail.' + tail]
+    assert ''.join(c['text'] for c in chunks) == text
+    assert all(c['text'].strip() and len(c['text']) <= 15 for c in chunks)
+    evidence = dict(document_id=d['id'], start=6, end=19, sha256=digest(text[6:19]))
+    assert map_support_span(evidence, d, chunks) == [chunks[1]['id']]
