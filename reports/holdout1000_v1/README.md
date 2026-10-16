@@ -12,44 +12,32 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage267](stage267_progress.json): **958 provisional
-TEST and 58 DEV across 178 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Another 42 TEST are needed: 18 ordinary, 4 numeric,
-10 multi-evidence and 10 refusal. No question, answer, quota or hold changed.
+The latest checkpoint is [stage270](stage270_progress.json): **958 provisional
+TEST and 58 DEV across 178 TEST families**. **Accepted counts remain zero;
+the dataset is not frozen.** Another 42 independent TEST are needed: 18 ordinary,
+4 numeric, 10 multi-evidence and 10 refusal. No question, answer, quota or hold changed.
 
-MathML fractions previously lost their division operator during HTML text
-extraction. The extractor now transcribes supported fractions with explicit
-grouping and division. Unknown structures, malformed operands and barless
-fractions fail instead of producing misleading flat text. This is a narrow
-source-preservation fix, not general mathematical interpretation.
+Review of 46 complete cached bodies closed 41 source decisions: 35 includes and
+6 whole-page navigation/out-of-scope exclusions. Five bodies remain pending
+because their wording leaves coverage or eligibility scope unresolved. The
+source-only corpus now has **390 included, 234 excluded and 802 pending** across
+1,426 documents. Its 795 partial chunks preserve all 755 previous chunks and
+every included source character. Source headings, table dates, footnotes and
+coverage qualifiers are retained; missing price cells are not treated as zero.
 
-One complete source was re-extracted into immutable snapshot33. Its original
-bytes are unchanged; only two fraction transcriptions changed normalized text.
-All 1,425 other document lines and 2,317 source-FAQ rows remain byte-identical.
-Two retained TEST evidence spans were rebound and verified. Their questions,
-answers and lexical-audit normalization are unchanged, so all 3,448 candidate
-and 44,581 historical vectors were reused without model forwards.
+Full TEST declared-span mapping is **416 complete and 542 pending**. This is
+offset coverage, not semantic gold-unit completion or benchmark acceptance.
+All 58 DEV items, 76 declared spans, 62 necessary units and 19 reviewed Spanish
+alternatives retain their verified mappings. Global alias and whole-DEV quality
+review remain unfinished; the readiness gate continues to block inference.
 
-The source-only corpus has **355 included, 228 excluded and 843 pending**
-sources across 1,426 documents. Its 755 partial chunks preserve the 753 previous
-chunks and add two complete source-defined chunks. The MathML source issue is
-resolved; other source conflicts and all item holds remain pending as before.
-
-Full TEST declared-span mapping is **413 complete and 545 pending**. These
-counts do not establish semantic gold-unit completion or benchmark acceptance.
-All 58 DEV items, 76 declared spans, 62 necessary support units and 19 reviewed
-Spanish alternatives retain their mappings. The 125-ledger lineage and current
-audit bindings were checked; global aliases and whole-DEV clearance remain
-unfinished. Readiness still blocks inference before model loading.
-
-The code passed **553 tests and 58 subtests** across 57 explicitly selected
-top-level files, including 19 synthetic MathML cases. Fresh item and mapping
-checks passed. This checkpoint made no network requests, new vectors, model
-forwards, paid calls, downloads or subagents. Remaining quota is not observable.
-No actual DEV score, TEST inference, selection lock or final evaluation is
-claimed. Review is Codex review, not human or expert adjudication. Sources,
-individual QA, annotations, vectors and weights stay local. PR8 remains draft
-and unmerged.
+The MathML repair in stage267 remains covered by 553 tests plus 58 subtests.
+This checkpoint changes no code or tests and runs fresh source/mapping checks.
+It used one unhelpful browser search, no source downloads, new vectors, model
+forwards, paid APIs, model downloads or subagents. Remaining quota is not visible.
+No actual DEV/TEST evaluation, selection lock or final metrics are claimed.
+Review is sequential Codex content review, not human or expert adjudication.
+Sources, individual QA, annotations and weights remain local; PR8 stays draft.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
