@@ -510,5 +510,56 @@
     "raw_redistribution_in_this_task": false,
     "assigned_split": "test",
     "assignment_reason": "Whole new publisher assigned TEST before candidate authoring and local-model audit. No training, DEV or final-QA evaluation."
+  },
+  {
+    "id": "canada_esdc_ei",
+    "jurisdiction": "CA",
+    "terms": "https://www.canada.ca/en/transparency/terms.html",
+    "terms_sha256": "583a4fb2c6b78c8de0ce26c536c03620ac259dac06c26826861a11d05c7f8310",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-07T22:49:30.740229+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "Government of Canada terms permit noncommercial whole/partial reproduction with accuracy, complete title/author/original URL. Only original ESDC consumer EI explanatory prose; third-party text, official symbols, images, external links and interactive estimator output excluded. Original snapshots preserved; authored QA separate and attributed; no commercial/raw redistribution.",
+    "attribution": "Employment and Social Development Canada / Government of Canada; fulltitle, originalURL and acquisition date; copy of original version, authored QA distinct adaptation without endorsement.",
+    "preflight_record": "stage117_html_content_review.json",
+    "preflight_record_sha256": "c8c63cebb91245f52099be09e704dfb0cac87baf194c91cc40300ed272b52d1d",
+    "allowed_hosts": [
+      "www.canada.ca"
+    ],
+    "prefixes": [
+      "/en/services/benefits/ei/ei-regular-benefit.html",
+      "/en/services/benefits/ei/ei-sickness.html",
+      "/en/services/benefits/ei/ei-maternity-parental.html",
+      "/en/services/benefits/ei/ei-regular-benefit/while-receiving.html",
+      "/en/services/benefits/ei/ei-maternity-parental/special-circumstances.html",
+      "/en/services/benefits/ei/ei-sickness/qualify.html",
+      "/en/services/benefits/ei/ei-regular-benefit/benefit-amount.html",
+      "/en/services/benefits/ei/ei-maternity-parental/benefit-amount.html",
+      "/en/services/benefits/ei/ei-maternity-parental/eligibility.html",
+      "/en/services/benefits/ei/ei-sickness/benefit-amount.html"
+    ],
+    "excluded_path_keywords": [
+      ".pdf",
+      "/search/",
+      "/service-canada/"
+    ],
+    "minimum_interval_seconds": 2,
+    "seeds": [
+      "https://www.canada.ca/en/services/benefits/ei/ei-regular-benefit.html",
+      "https://www.canada.ca/en/services/benefits/ei/ei-sickness.html",
+      "https://www.canada.ca/en/services/benefits/ei/ei-maternity-parental.html",
+      "https://www.canada.ca/en/services/benefits/ei/ei-regular-benefit/while-receiving.html",
+      "https://www.canada.ca/en/services/benefits/ei/ei-maternity-parental/special-circumstances.html",
+      "https://www.canada.ca/en/services/benefits/ei/ei-sickness/qualify.html",
+      "https://www.canada.ca/en/services/benefits/ei/ei-regular-benefit/benefit-amount.html",
+      "https://www.canada.ca/en/services/benefits/ei/ei-maternity-parental/benefit-amount.html",
+      "https://www.canada.ca/en/services/benefits/ei/ei-maternity-parental/eligibility.html",
+      "https://www.canada.ca/en/services/benefits/ei/ei-sickness/benefit-amount.html"
+    ],
+    "max_pages": 10,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false,
+    "assigned_split": "test",
+    "assignment_reason": "Entire newly sourced ESDC EI publisher assigned TEST before authoring or modelaudit. Existing otherCanadaagency FCAC isalsoTEST; no DEV overlap."
   }
 ]

@@ -993,6 +993,30 @@
       ],
       "access_denial_urls": [],
       "raw_redistribution_in_this_task": false
+    },
+    {
+      "publisher": "canada_esdc_ei",
+      "jurisdiction": "CA",
+      "seed_url": "https://www.canada.ca/en/services/benefits/ei/ei-regular-benefit.html",
+      "status": "approved_exact_ten_sections_19_provisional_test_not_frozen",
+      "reason": "Government of Canada terms permit noncommercial whole/partial reproduction with accuracy, complete title/author/original URL. Only original ESDC consumer EI explanatory prose; third-party text, official symbols, images, external links and interactive estimator output excluded. Original snapshots preserved; authored QA separate and attributed; no commercial/raw redistribution.",
+      "terms": {
+        "url": "https://www.canada.ca/en/transparency/terms.html",
+        "sha256": "583a4fb2c6b78c8de0ce26c536c03620ac259dac06c26826861a11d05c7f8310"
+      },
+      "local_review_record": "stage117_html_content_review.json",
+      "review_record_sha256": "c8c63cebb91245f52099be09e704dfb0cac87baf194c91cc40300ed272b52d1d",
+      "held_exact_urls": [
+        {
+          "id": "eb38fbd0cabbf38633e5fb05",
+          "url": "https://www.canada.ca/en/services/benefits/ei/ei-regular-benefit/eligibility.html",
+          "reason": "General eligibility bullet list appears to require flood/wildfire impact for all claimants; rawHTML confirms unqualifiedli. Hold entirepage for unresolved scope even though hours table is wellformed; no question fromit."
+        }
+      ],
+      "access_denial_urls": [],
+      "raw_redistribution_in_this_task": false,
+      "latest_item_review_record": "stage117_final_review.json",
+      "latest_item_review_sha256": "cf26939e4b94aee094c13186acb4a4913282771ca3ce14dce4eba936955cab6b"
     }
   ],
   "excluded_previously_known": [
@@ -1001,5 +1025,5 @@
     "All previously denied local memory/demo-upload paths"
   ],
   "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
-  "updated_utc": "2026-10-07T22:25:14.662301+00:00"
+  "updated_utc": "2026-10-16T00:43:17.542048+00:00"
 }

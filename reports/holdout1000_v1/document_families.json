@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-07T22:36:41.488186+00:00",
+  "updated_utc": "2026-10-16T00:39:03.014663+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1186,6 +1186,26 @@
         "stage113_source_decisions.json"
       ],
       "review_record_sha256": "8bafcba7b03c6157bd426431f1b5f4c17ea90cb76a5c5af4490a51f5e60a511a"
+    },
+    {
+      "family_id": "family117_canada_ei_consumer_guides",
+      "document_ids": [
+        "62519a8004491c050ec249e4",
+        "7c3482a0cfb14612db6219da",
+        "8bacc3258c50f7059ddce9b1",
+        "b873670e5ce5287cbf737865",
+        "e48b481ee2498d7d2397be90",
+        "e6f04b14c33715177917193c",
+        "eae9afa1425d1d44ad46cf35",
+        "ef95bfb03dc0be05389a4122",
+        "f189ca9f3716741e5eb9663e",
+        "fb12a5c28aa783b14ab9477e"
+      ],
+      "relation": "One national EI consumer guide family across regular, sickness and parental sections; shared qualifying/rate/best-weeks rules and common scheme conservatively unified, not chapter-counted.",
+      "local_review_records": [
+        "stage117_source_decisions.json"
+      ],
+      "review_record_sha256": "c7af24315eca9d41e4069f524192f4d3632e650b6e0a510a7907e42de5bd8829"
     }
   ],
   "document_text_sha256": {
@@ -1610,7 +1630,17 @@
     "9cd3597f5179948a3f173135": "0c788c1b3e1bdf3192f934ff5814507959884360fc9e3056ef1696df9882110f",
     "fd10b909593cd90b9081e8db": "f8dd471e906365e5137c82f0e81e259cced11bbc8883d2f9219271f749e757f4",
     "3059f50d1b4f534013ecb7cd": "2bb7b1d28bbe3e589e2e2645cf97e1ce656ce5ae7a65b5219b9fae327c7f975d",
-    "b020269c9b74158a28073e1f": "64fc0429ae59002fb8825f9ec007d5bff25baf0e101cfd871ebcda2499b6420a"
+    "b020269c9b74158a28073e1f": "64fc0429ae59002fb8825f9ec007d5bff25baf0e101cfd871ebcda2499b6420a",
+    "62519a8004491c050ec249e4": "25e0e4d0ec08c3e045cdc64147bb8313316137f9eaca0079d66ef529a2a32e68",
+    "8bacc3258c50f7059ddce9b1": "22f9fe79d0e2a8c62abd9dbddad4aea6e91ff532d240b684029504aa1efb7014",
+    "e6f04b14c33715177917193c": "a2468c945be68b70c12ed49e1b4560e0d03595f8485920cc09f9023405cdf01f",
+    "7c3482a0cfb14612db6219da": "0c1aee5dacba5e7d242c1d66ed36c8c7ce24bb8dd8da3a914bb1fcf8bc8c80e1",
+    "b873670e5ce5287cbf737865": "efa45fb8c75e6647d9f14cc777fc292d6bffe239859a336242ea54c13028dfa4",
+    "e48b481ee2498d7d2397be90": "6c5fe4beef24d147a2d3c648d2d3e6d2a4f88ea981834c17cf84e7801d013d30",
+    "eae9afa1425d1d44ad46cf35": "736cd37a24069d7aa1a997bc1462cee88857567ae63b41a4b19f0b24499c7479",
+    "ef95bfb03dc0be05389a4122": "528fc2bb00844eb7c46112efade50d0296683b5137162af77e0cc4e0fe1d7b09",
+    "f189ca9f3716741e5eb9663e": "135a4e2425e5ad5a45268a50baec6ce2080357d26eea2cfc54cb4c1ab087cb43",
+    "fb12a5c28aa783b14ab9477e": "bbe83a0d2f29c5682ccbebf1b8d21ad7062982390ea2ee690b850238223133bd"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
