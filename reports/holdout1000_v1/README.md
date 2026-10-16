@@ -12,41 +12,41 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage363](stage363_progress.json): **986 provisional
-TEST and 57 DEV across 181 TEST families**. **Accepted counts remain zero;
-the dataset is not frozen.** Another 14 independent TEST are needed: six ordinary,
-three multi-evidence and five refusal. The numerical quota is met.
+The latest checkpoint is [stage379](stage379_progress.json): **1,000 provisional
+TEST and 57 DEV across 184 TEST families**. TEST has 600 ordinary, 150 numerical,
+150 multi-evidence and 100 insufficient-evidence questions. Count, task, publisher,
+family and item-validator checks pass. **Accepted counts remain zero; the dataset
+is not frozen.** This is a construction milestone, not a completed benchmark.
 
-Nine of ten reviewed drafts passed provisional item gates. One car-registration
-draft was held as outside insurance scope. A previously retained insurer financial
-admission question was also revoked: its buyer framing did not make corporate
-capital and trust-bank requirements a consumer insurance task. All earlier holds
-remain. The review fully read 51 targeted historical records, inspected every
-matching window in 131 focused and seven reverse-focused history records, and
-read 92 unique neighboring or affected candidate QAs. Fourteen existing questions
-in the income-replacement family were checked for information-need independence.
-Fourteen later drafts remain uncounted while their sequential audit continues.
+Since stage363, 15 of 25 reviewed drafts passed provisional item gates; ten were
+held. One older home-warranty salesperson-licensing question was revoked as
+outside consumer insurance scope. The net gain is 14 TEST. Repeated flood-notice
+and dependent-marriage cores, and combinations of already covered questions,
+were held. The complete 141-ledger hash chain was verified; none of 416 effective
+inherited item holds appears in the retained pool. The OPM FEDVIP overview and
+eligibility documents now share a TEST family, below the family limit.
 
-The source corpus has **590 included, 358 excluded and 478 pending** across
-1,426 documents, with 1,092 partial chunks. Twenty-four complete cached source
-bodies yielded 18 inclusions, four exclusions and two pending decisions. Relevant
-tables and permission records were checked. Original authorship, currency and
-family holds remain; source inclusion restores no QA. TEST declared-span mapping
-is **544 complete and 442 pending**. Offset coverage is not quality acceptance.
-All 57 DEV texts, 61 necessary units and 19 reviewed Spanish support alternatives
-are unchanged. Global aliases, family isolation, history and legacy-hold
-reconciliation remain unfinished.
+The source corpus has **599 included, 361 excluded and 466 pending** across
+1,426 documents, with 1,110 partial chunks. Twelve complete cached source bodies
+yielded nine inclusions and three exclusions; the prior 1,092 chunks are unchanged.
+TEST declared-span mapping is **567 complete and 433 pending**. There are 116
+pending sources used by current questions, including unresolved currency and
+qualification conflicts. Offset coverage is not content acceptance. All 57 DEV
+texts, 61 necessary units and 19 reviewed Spanish support alternatives are
+unchanged and rebound to this pool/corpus. Global source dispositions, aliases,
+family/history review and legacy disposition reconciliation remain unfinished.
 
-No actual DEV/TEST run or immutable selection lock exists. The local generation
-service was unavailable at its last check. Four explicitly selected quality,
-corpus, DEV-readiness and scoring files passed **82 tests**. The latest full code
+No actual DEV/TEST run or immutable selection lock exists. The readiness gate
+still blocks retrieval before model loading; generation service availability
+does not resolve those data gates. Four explicitly selected quality, corpus,
+DEV-readiness and scoring files passed **82 tests**. The latest full code
 regression at commit `114bf4119b5f87a184c635b9ed1f96d5ccccc50f` passed 632 tests
-plus 58 subtests across 60 explicit files. The admitted draft batch encoded ten
-questions in one local forward batch, reusing 3,474 candidate and 44,581 history
+plus 58 subtests across 60 explicit files. Five admitted local audit batches
+encoded 25 new questions, reusing prior candidate vectors and 44,581 history
 vectors. No paid model calls, model downloads or source network calls occurred.
 Review is sequential Codex content review, not human or expert adjudication.
 Raw sources, individual QA, annotations and weights remain local. The separate
-Agent scaffold is unchanged. PR8 stays draft and unmerged. Construction continues.
+Agent scaffold is unchanged. PR8 stays draft and unmerged. Global review continues.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
@@ -127,5 +127,5 @@ text and audits of both original and repaired evidence, while preserving raw
 source offsets. The historical normalization/cache has not silently changed.
 
 The original12-24hour construction estimate is superseded by the estimate in
-`protocol.json`. The current review queue alone is smaller than the test target;
-additional suitable sources and substantive information needs remain necessary.
+`protocol.json`. The provisional count now meets the minimum; unresolved global quality
+findings may still require exclusions and independently reviewed replacements.

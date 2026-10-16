@@ -1,8 +1,8 @@
 # Independent holdout experiment preparation
 
-As of October 16, 2026, construction has reached 986 provisional TEST and 57 DEV
-items across 181 TEST document families. Accepted counts are zero; the benchmark
-is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage363_progress.json)
+As of October 16, 2026, construction has reached 1,000 provisional TEST and 57 DEV
+items across 184 TEST document families. Accepted counts are zero; the benchmark
+is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage379_progress.json)
 records the current counts, validation and remaining work. Historical exposed
 results are regression evidence only.
 
@@ -33,8 +33,8 @@ The holdout_experiment module implements annotation-based metrics and uncertaint
 
 The whole-source manifest gate requires an explicit include/exclude review for
 every snapshot document before tokenization. Raw/text hashes for all 1,426 sources
-were verified. Current dispositions are 590 included, 358 excluded after source review
-and 478 pending. Review order prioritized DEV sources after a source-only
+were verified. Current dispositions are 599 included, 361 excluded after source review
+and 466 pending. Review order prioritized DEV sources after a source-only
 inventory of all 291 TDI documents. It does not authorize a gold-filtered corpus.
 Existing reviews can be reused when their content hashes and scope still apply.
 A strict MathML fraction transcription now preserves division and grouping. One
@@ -42,7 +42,7 @@ source was re-extracted into snapshot33 with immutable prior snapshots and exact
 evidence rebindings; unsupported MathML structures fail instead of flattening.
 
 holdout_corpus validates source ranges, hashes, token limits and reviewed atomic
-spans. The 1,092 partial chunks preserve all included characters and have at most
+spans. The 1,110 partial chunks preserve all included characters and have at most
 512 tokens and 2,400 characters. Source headings, lists, table headers and
 qualifiers must survive chunking. Oversized atomic spans fail instead of being
 silently truncated. Source structure, never an answer key, defines boundaries.
