@@ -12,32 +12,36 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage270](stage270_progress.json): **958 provisional
-TEST and 58 DEV across 178 TEST families**. **Accepted counts remain zero;
+The latest checkpoint is [stage273](stage273_progress.json): **958 provisional
+TEST and 57 DEV across 178 TEST families**. **Accepted counts remain zero;
 the dataset is not frozen.** Another 42 independent TEST are needed: 18 ordinary,
-4 numeric, 10 multi-evidence and 10 refusal. No question, answer, quota or hold changed.
+4 numeric, 10 multi-evidence and 10 refusal. TEST questions and quotas are unchanged.
 
-Review of 46 complete cached bodies closed 41 source decisions: 35 includes and
-6 whole-page navigation/out-of-scope exclusions. Five bodies remain pending
-because their wording leaves coverage or eligibility scope unresolved. The
-source-only corpus now has **390 included, 234 excluded and 802 pending** across
-1,426 documents. Its 795 partial chunks preserve all 755 previous chunks and
-every included source character. Source headings, table dates, footnotes and
-coverage qualifiers are retained; missing price cells are not treated as zero.
+All 58 former DEV question/answer records and their declared support or refusal
+contexts were read. One employer reporting/notification question was withdrawn
+because its primary task was corporate administration. It was not rewritten.
+The remaining 57 DEV retain their answers and evidence: 46 answerable items,
+11 refusal contexts, 75 declared spans, 61 necessary units and 18 reviewed
+Spanish alternatives. Eleven numeric results, including a multi-evidence
+calculation, were independently recomputed. This content check does not establish
+global historical independence or authorize DEV inference.
 
-Full TEST declared-span mapping is **416 complete and 542 pending**. This is
-offset coverage, not semantic gold-unit completion or benchmark acceptance.
-All 58 DEV items, 76 declared spans, 62 necessary units and 19 reviewed Spanish
-alternatives retain their verified mappings. Global alias and whole-DEV quality
-review remain unfinished; the readiness gate continues to block inference.
+A literal full-support scan across 1,426 sources found five cross-document
+leads. Seven complete source bodies were compared. No alias was added: identical
+wording on a different product page or an excluded source does not establish
+equivalent support for the question's scope. Global semantic alias review remains
+unfinished; previously held sources and questions remain held.
 
-The MathML repair in stage267 remains covered by 553 tests plus 58 subtests.
-This checkpoint changes no code or tests and runs fresh source/mapping checks.
-It used one unhelpful browser search, no source downloads, new vectors, model
-forwards, paid APIs, model downloads or subagents. Remaining quota is not visible.
+The corpus remains **390 included, 234 excluded and 802 pending** with 795
+partial chunks. Full TEST declared-span mapping is **416 complete and 542 pending**;
+these counts do not establish semantic gold-unit completion or acceptance.
+
+This checkpoint used no new vectors, model forwards or source/network calls.
+Code remains covered by 553 tests plus 58 subtests; the preceding exact commit
+c68766a passed all five CI jobs. Fresh item and DEV mapping checks passed.
 No actual DEV/TEST evaluation, selection lock or final metrics are claimed.
 Review is sequential Codex content review, not human or expert adjudication.
-Sources, individual QA, annotations and weights remain local; PR8 stays draft.
+Raw sources, individual QA, annotations and weights remain local; PR8 stays draft.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

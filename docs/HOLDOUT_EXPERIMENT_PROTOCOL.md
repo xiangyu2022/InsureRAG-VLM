@@ -1,8 +1,8 @@
 # Independent holdout experiment preparation
 
-As of October 16, 2026, construction has reached 958 provisional TEST and 58 DEV
+As of October 16, 2026, construction has reached 958 provisional TEST and 57 DEV
 items across 178 TEST document families. Accepted counts are zero; the benchmark
-is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage270_progress.json)
+is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage273_progress.json)
 records the current counts, validation and remaining work. Historical exposed
 results are regression evidence only.
 
@@ -54,11 +54,11 @@ unchanged; retrieval and reranking consume the header-enriched representation.
 This source-only relationship needs explicit review. It does not establish gold
 unit necessity or automatically clear repeated headers as support alternatives.
 
-All 58 DEV items and 76 declared evidence spans now map by exact offsets. The
-reviewed draft has 62 necessary units for 47 answerable cases. Eleven refusal
+All 57 DEV items and 75 declared evidence spans now map by exact offsets. The
+reviewed draft has 61 necessary units for 47 answerable cases. Eleven refusal
 cases retain gap-context diagnostics only. Exact text matches in another source
 are leads; they do not establish equivalent support across product scope or
-license restrictions. Nineteen Spanish support aliases have passed unit-specific semantic review; one
+license restrictions. Eighteen Spanish support aliases have passed unit-specific semantic review; one
 compound guaranty-membership alias was rejected. Global alias review and
 whole-DEV clearance are unfinished.
 The real readiness check therefore still stops before model loading.
