@@ -12,23 +12,26 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage325](stage325_progress.json): **961 provisional
+The latest checkpoint is [stage333](stage333_progress.json): **969 provisional
 TEST and 57 DEV across 180 TEST families**. **Accepted counts remain zero;
-the dataset is not frozen.** Another 39 independent TEST are needed: 17 ordinary,
-4 numeric, 8 multi-evidence and 10 refusal. Quotas and all previous holds remain.
+the dataset is not frozen.** Another 31 independent TEST are needed: 15 ordinary,
+1 numeric, 7 multi-evidence and 8 refusal. Quotas and all previous holds remain.
 
-Four of six new drafts passed provisional item gates. Two Medicare drafts were
-held for historical core overlap despite passing automated similarity thresholds.
-The earlier scope corrections from 958 to 957 TEST and 58 to 57 DEV remain in the
-revocation chain; new admissions do not restore those items or the original 15.
+Eight new cached-source tasks passed provisional item gates after sequential
+content review: two ordinary, three numeric, one multi-evidence and two refusal.
+All 42 targeted historical records were read. A further focused scan found 41
+records: 34 were fully read and seven inspected partially or at matching-context
+windows. Fourteen affected existing questions and their new neighbors were
+reviewed. Script thresholds alone did not establish independence.
 
-The source corpus has **526 included, 325 excluded and 575 pending** across
-1,426 documents, with 973 partial chunks. Full TEST declared-span mapping is
-**489 complete and 472 pending**; offset coverage is not quality acceptance.
-All 57 DEV questions and answers remain unchanged. Their 61 necessary units
-include 19 reviewed Spanish support alternatives. The latest official LTC
-counterpart was joined to its English document family. Global alias, family,
-history and legacy-hold reconciliation remain unfinished.
+The source corpus has **538 included, 341 excluded and 547 pending** across
+1,426 documents, with 988 partial chunks. The latest 32 complete bodies yielded
+12 inclusions, 16 exclusions and four pending decisions. Legacy timing, family
+and historical-overlap holds remain. No source inclusion restores held QA.
+Full TEST declared-span mapping is **497 complete and 472 pending**; offset
+coverage is not quality acceptance. All 57 DEV questions and answers, 61 necessary
+units and 19 reviewed Spanish support alternatives remain unchanged. Global
+alias, family, history and legacy-hold reconciliation remain unfinished.
 
 DEV execution, family-macro scoring and immutable selection-lock tooling are
 implemented, but **no actual DEV/TEST run or selection lock exists**. The real
@@ -37,7 +40,7 @@ dataset remains blocked by review gates and the unverified generation runtime.
 The relevant quality, corpus, DEV-readiness and scoring checks passed **82 tests**
 over four explicitly selected top-level files. The unchanged executable code's
 latest full regression at stage302 passed 584 tests plus 58 subtests. This batch
-encoded six questions in one local forward batch, reusing 3,448 candidate and
+encoded eight questions in one local forward batch, reusing 3,454 candidate and
 44,581 historical vectors. There were no source-network requests, paid model
 calls or model downloads. Review is sequential Codex content review, not human
 or expert adjudication. Raw sources, individual QA, annotations and weights
