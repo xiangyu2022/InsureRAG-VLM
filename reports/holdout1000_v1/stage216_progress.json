@@ -1,0 +1,176 @@
+{
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 170,
+  "dev_support_review": {
+    "dev_items": 58,
+    "answerable": 47,
+    "refusal_context_only": 11,
+    "declared_spans_mapped": 76,
+    "necessary_units": 62,
+    "reviewed_spanish_aliases": 18,
+    "global_alias_review_complete": false,
+    "dev_QA_and_families_changed": false
+  },
+  "created_utc": "2026-10-16T10:21:35.177759+00:00",
+  "status": "CONSTRUCTION_AND_CORPUS_REVIEW_ACTIVE_NOT_FROZEN",
+  "previous_question_checkpoint": "stage210_progress.json",
+  "provisional_item_gate_counts": {
+    "test": 852,
+    "dev": 58
+  },
+  "test_task_counts": {
+    "ordinary_qa": 533,
+    "insufficient_evidence": 76,
+    "multi_evidence": 119,
+    "numerical_calculation": 124
+  },
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 50,
+    "california_cdi": 48,
+    "wisconsin_oci": 63,
+    "utah_uid": 16,
+    "us_opm": 115,
+    "us_va": 41,
+    "us_tricare": 130,
+    "newjersey_dobi": 38,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 43,
+    "canada_esdc_ei": 47,
+    "newjersey_labor_leave": 7
+  },
+  "remaining_independent_test": 148,
+  "remaining_test_tasks": {
+    "ordinary_qa": 67,
+    "numerical_calculation": 26,
+    "multi_evidence": 31,
+    "insufficient_evidence": 24
+  },
+  "new_question_items": 0,
+  "previous_items_revoked": 2,
+  "revocation_reason": "Two historical affinity-proposal questions concern insurer expense-calculation and regulatory filing/verification administration; these are outside the consumer decision scope. No rewrite or replacement counted. All surviving pool rows are byte unchanged.",
+  "corpus_preparation": {
+    "created_utc": "2026-10-16T10:14:49.549983+00:00",
+    "status": "PARTIAL_SOURCE_CORPUS_NOT_DEV_READY",
+    "test": 852,
+    "dev": 58,
+    "accepted": 0,
+    "frozen": false,
+    "source_dispositions": {
+      "pending": 991,
+      "include": 239,
+      "exclude": 158
+    },
+    "new_dispositions": {
+      "include": 0,
+      "exclude": 9,
+      "reviewed_still_pending": 5
+    },
+    "partial_chunks": 540,
+    "chunks_sha256": "352b4a90fe383ea226156b0d15830d09045d60f12d1f5747f4022a348a79bf1d",
+    "all_previous_chunks_unchanged": true,
+    "qa_inputs_loaded": 0,
+    "model_forwards": 0,
+    "source_requests": 0,
+    "actual_dev_queries": 0,
+    "test_queries": 0,
+    "limits": [
+      "Nine whole-page exclusionshavecompletebodyreviewandcontent/rightsgrounds. No gold-basedsourcefiltering.",
+      "Five newly fully read mixed-scope sources remain pending; all 23 sources in the stage206 queue now have complete body review, with seven cumulative mixed-scope pending sources.",
+      "991 source dispositionsremainpending;globalaliasesandwholeDEVnotcleared."
+    ],
+    "count_note": "Removal-only stage215 correction; original stage212 summary recorded854 before scope review."
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 58,
+    "source_count": 1388,
+    "generation_required": false
+  },
+  "validation": {
+    "retained_item_gate_errors": 0,
+    "global_dataset_gates_passed": false,
+    "remaining_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "unchanged_code_regression": {
+      "stage": 159,
+      "tests_passed": 534,
+      "subtests_passed": 58,
+      "explicit_top_level_test_files": 56
+    },
+    "code_or_tests_changed": false,
+    "exact_support_mapping_rechecked": true
+  },
+  "usage": {
+    "new_candidate_vectors": 0,
+    "old_vectors_reencoded": 0,
+    "model_calls": 0,
+    "model_downloads": 0,
+    "paid_api_calls": 0,
+    "actual_dev_queries": 0,
+    "actual_test_queries": 0,
+    "new_subagents": 0,
+    "cached_complete_source_bodies_reviewed_since203": 23,
+    "deferred_source_requests_since203": 24,
+    "known_successful_response_body_bytes_since203": 1798938,
+    "redundant_GOVUK_policy_requests": 4,
+    "remaining_quota": "not observable"
+  },
+  "source_disposition_review": {
+    "fully_read_since203": 23,
+    "whole_pages_excluded_since203": 16,
+    "mixed_scope_still_pending": 7,
+    "qa_inputs_loaded_for_source_decisions": 0
+  },
+  "deferred_source_leads": {
+    "ndis": "Conditional CC BY-NC3 reuse statement but no individual page license specification established; all six reviewed pages remain outside corpus.",
+    "govuk": "Existing stage186 licence-completion hold preserved; four redundant same-host policy/entry requests explicitly counted. No National Archives request or alternate licence route."
+  },
+  "limits": [
+    "852 provisional TEST remains148short; accepted0/unfrozen.",
+    "991source dispositions, global aliases and wholeDEV clearance unfinished. No actual DEV/TEST score.",
+    "Item revocations do not remove or filter source corpus;540chunks unchanged.",
+    "All prior holds and original15historical revocations preserved; single sequential Codex review, not human/expert.",
+    "Only aggregate reports/documents published; no source bodies, individual QA, annotations or weights."
+  ],
+  "evidence_sha256": {
+    "stage212_source_disposition_review.json": "8b3cae5b02caa58d0a359ae1afffcdcf81daf422967fe3bc264950c5f3da3b84",
+    "stage212_corpus_mapping_summary.json": "6e7d2ea47f4d952bb364a12feec4a1c53a9156f25a72cace6c2c2273266e5969",
+    "stage215_consumer_scope_review.json": "5a8f8fa2acf9ea8caacb5c15a6b1eda4cb80de8edf6e8aa7c48504cf3688c235",
+    "review_pool_115_clearance_ledger.json": "dee3770481e58b84e524f90771b7cc0edaba0ff62da91697b93e3b0a93bc0c2c",
+    "provisional_item_pool_115_validation.json": "64ba0e90260632ab44a135ef307288203e0611f0f502a9008d682afc918fad43",
+    "stage211_source_selection.json": "56fa51681cee337585d4d6c7847b0c207a0021f8aadf631a4cae030b7d6782fe",
+    "stage213_source_selection.json": "23ae9c93c28c4fd7090313712d49d6e9be6d2aa5eb7c25feda8f1388f9dff2c1",
+    "stage216_dev_support_units_draft.json": "fc3f939ebfe7c9bc3236af52632502593f06a412a85bd62f16e39486c57df054",
+    "stage216_dev_readiness.json": "7700dfee03a476d6286310a7005f6111305f59a3cda12dbcad02ed9171876932"
+  }
+}

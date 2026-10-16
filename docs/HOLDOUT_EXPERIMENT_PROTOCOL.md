@@ -1,8 +1,8 @@
 # Independent holdout experiment preparation
 
-As of October 16, 2026, construction has reached 854 provisional TEST and 58 DEV
+As of October 16, 2026, construction has reached 852 provisional TEST and 58 DEV
 items across 170 TEST document families. Accepted counts are zero; the benchmark
-is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage210_progress.json)
+is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage216_progress.json)
 records the current counts, validation and remaining work. Historical exposed
 results are regression evidence only.
 
@@ -33,8 +33,8 @@ The holdout_experiment module implements annotation-based metrics and uncertaint
 
 The whole-source manifest gate requires an explicit include/exclude review for
 every snapshot document before tokenization. Raw/text hashes for all 1,388 sources
-were verified. Current dispositions are 239 included, 149 excluded under existing
-holds and 1,000 pending. Review order prioritized DEV sources after a source-only
+were verified. Current dispositions are 239 included, 158 excluded after source review
+and 991 pending. Review order prioritized DEV sources after a source-only
 inventory of all 291 TDI documents. It does not authorize a gold-filtered corpus.
 Existing reviews can be reused when their content hashes and scope still apply.
 

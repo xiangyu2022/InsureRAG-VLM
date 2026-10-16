@@ -12,62 +12,36 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage210](stage210_progress.json): **854 provisional
+The latest checkpoint is [stage216](stage216_progress.json): **852 provisional
 TEST and 58 DEV across 170 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Another 146 independent TEST are needed: 65 ordinary,
-26 numeric, 31 multi-evidence and 24 refusal questions.
+dataset is not frozen.** Stage215 revoked two insurer regulatory-administration
+questions under the consumer task scope. The surviving 910 records are byte
+unchanged. No question rewrite or replacement was counted.
 
-Stage206 completed source-only review of nine cached pages. Seven whole pages
-were excluded for non-insurance content or explicit third-party reproduction
-restrictions; two mixed-scope pages remain pending. No question inputs were loaded
-for these decisions. Existing chunks and DEV support mappings remain unchanged.
-Exact raw and normalized alias checks found no pending sources eligible for direct
-review reuse. No new questions or model vectors were created by this corpus pass.
+Another 148 independent TEST are needed: 67 ordinary, 26 numeric, 31 multi-evidence
+and 24 refusal. All prior holds, including the original 15 historical revocations,
+remain in force. Historical checkpoints are not additive.
 
-Four additional source preflights remain deferred: an unreviewed Canadian redirect,
-an Australian read timeout, Quebec robots HTTP403, and unresolved CPF benchmark
-reuse conditions. Nine requests transferred 894,079 known successful body bytes;
-failed-response sizes are unknown. No retries, alternate routes or proxy changes
-were used. No source bodies or individual QA from these leads were admitted.
+The partial source-only corpus has 239 included, 158 excluded and 991 pending
+sources, with 540 unchanged chunks. Stages206/212 read 23 complete cached bodies:
+16 whole pages were excluded for scope or rights reasons, and seven mixed-scope
+pages remain pending. Source decisions did not load question inputs.
 
-Stage201 retained seven of eight New Jersey leave-insurance candidates: five
-ordinary, one numeric and one refusal. One otherwise plausible candidate was held
-because its answer asserted a rule outside its declared evidence. No multi-evidence
-question was manufactured to meet a quota. All prior holds and historical revocations
-remain. Historical counts are not additive totals.
+All 58 DEV items and 76 declared spans retain their exact mappings, including
+62 necessary units and 18 reviewed aliases. Whole-corpus aliases and whole-DEV
+clearance remain unfinished. No actual DEV score, TEST inference, selection lock
+or generation is claimed.
 
-Current robots and full linked legal and privacy policies were reviewed before
-bounded source acquisition. Twelve sequential requests transferred 765,912 bytes.
-Five official Labor topic pages were approved under New Jersey's express State
-information reuse permission, with item-specific notices checked. Two composite
-pages with unresolved internal wording and one script-dependent page without its
-rendered body remain deferred. No questions were taken from those pages. All five
-approved pages share one conservative TEST family. The new July 17, 2026
-benefit-linked job-protection scope was checked against the dated official update.
+Since stage203, deferred source preflights used 24 requests and 1,798,938 known
+successful response-body bytes, including four redundant GOV.UK policy requests
+that are explicitly recorded. NDIS individual-page reuse scope and the prior
+GOV.UK licence-completion hold remain unresolved. There were no new model calls,
+vectors, paid calls, model downloads or subagents in this checkpoint.
 
-The snapshot contains 1,388 documents and the unchanged 2,317 source FAQ.
-The source-only corpus draft has 239 included, 149 excluded and 1,000 pending
-sources. Its 540 chunks preserve every included primary character. The new raw
-comparison table and 29 source-defined qualifier groups were reviewed. Exact page
-headings and the job-protection effective date retain context. Rendered chunks meet
-the 512-token and 2,400-character limits. The previous 529 chunks were reused
-unchanged. All five approved bodies remain included independently of retained QA.
-
-All 58 DEV items and 76 declared spans map by offsets. The 62 necessary units
-for 47 answerable cases and 18 Spanish aliases retain their exact chunk sets;
-11 refusals have gap-context diagnostics only. Global alias and whole-DEV
-clearance remain unfinished. No actual DEV score, TEST inference, selection
-lock or generation is claimed.
-
-The item audit read 38 targeted historical records, 18 neighboring QA pairs,
-22 numeric-template comparisons, nine additional parental-benefit QA comparisons
-and two changed active neighborhoods. Only eight new questions were encoded in one
-local batch; old candidate vectors and 44,581 historical vectors were reused.
-There were no paid APIs, model downloads or subagents. All content review was by
-a single Codex workflow, not a human or expert panel. Code is unchanged from the
-534-test plus 58-subtest regression; the retained pool was freshly validated.
-Sources, individual QA, annotations and weights remain local. PR8 stays draft
-and unmerged; exact-commit CI is checked after publication.
+Code is unchanged since the 534 tests plus 58 subtests regression run. Fresh
+retained-item validation and exact support mapping passed; global count and
+task-quota gates still fail. Content review is Codex review, not human or expert
+adjudication. Raw sources, individual QA, annotations and weights remain local.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
