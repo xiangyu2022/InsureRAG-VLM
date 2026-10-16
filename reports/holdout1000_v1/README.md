@@ -12,46 +12,40 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest item-construction checkpoint is stage119_progress.json, consolidated in
-stage120_progress.json: **748 provisional TEST and 58 DEV records across 149 TEST
-document families**. **Accepted counts remain zero; the dataset is not frozen.**
-All 806 retained item gates pass. Another 252 independent TEST questions are needed.
-TEST has 468 ordinary, 112 numerical, 105 multi-evidence and 63 insufficient-evidence
-tasks; remaining targets are 132/38/45/37. DEV remains 25/10/12/11. Earlier reports
-are historical snapshots and must not be added together.
+The latest construction checkpoint is [stage125](stage125_progress.json),
+consolidating stages122 and124: **756 provisional TEST and 58 DEV across 151 TEST
+families**. **Accepted counts remain zero; the dataset is not frozen.** All 814
+retained item gates pass. Another 244 independent TEST are needed. TEST tasks are
+472 ordinary/114 numeric/106 multi-evidence/64 insufficient-evidence; remaining targets
+are 128/36/44/36. DEV remains25/10/12/11. Historical checkpoints are not additive.
 
-The October 16 resume completed the pending Canada EI audit and a cached OPM/EU
-batch: 29 drafts, 26 retained TEST and three held, with no previously held item
-restored. A missing-input variation duplicated an existing numeric information
-need; two other candidates retained unresolved historical overlap despite passing
-automated screens. The entire ten-section EI guide forms one conservative family.
-The prior private-provider EHIC question remains held; the new supported case is
-explicitly limited to necessary care at a public-system provider. Snapshot22 has
-1344 documents and preserves the original 2317 FAQ candidates. All 96 ledger links,
-split/family/publisher isolation, three same-ID repairs, existing revocations and
-current vector hashes were verified. No retained PBGC dependency was found.
+This batch reviewed 16 drafts, retained 8 and held 8. Five NYitems retain an unresolved
+transitive historical-source family; one TRRcomparison repeats an existing pivotal
+exception; two NC healthitems repeat historical information needs. All 98 ledger links,
+original 15 revocations, laterholds, three same-ID repairs, source/split/family caps
+and current vector hashes were checked. No retained PBGC dependency was found.
 
-The prospective [experiment protocol](evaluation_protocol_v1.json) registers six
-retrieval arms, DEV-only selection, complete-evidence units, citation/refusal
-metrics, family-cluster uncertainty and measured cost. The new metric helpers
-handle short rankings, failures, alias evidence and paired family bootstrap.
-Annotated-chunk completeness is a diagnostic; the primary complete-evidence score
-uses necessary support units. These are tested tools and a design, not a completed
-experiment, DEV selection lock, frozen benchmark or final performance result.
-Source-only corpus/relevance mapping remains pending. Existing original/adapted
-query and reranker weight hashes match their inherited pins. The usual Ollama
-binary/Qwen manifest is absent and localhost ports 11434/11437 timed out; the current
-runtime path/address is needed before generation. Nothing was downloaded.
+The access guard now refuses explicit applicable `Content-Signal: ai-input=no`.
+A separate UK preflight stopped after 3 requests/83203 responsebytes when the linked
+licence host prohibited AI input. No licence/benefit page was fetched, no source
+approved and no alternate route attempted. The undated NC guides are explicitly
+scoped to cached snapshots, not current-law assurances.
 
-Only 29 new vectors were encoded in two sequential local model processes and three
-forward batches; old vectors were reused. No public-source HTTP request or browser
-discovery ran during this resume. The stage117 report also accounts for 14 EI
-requests/453735 bytes acquired on October 7, explicitly distinct from resume usage.
-FSCS remains a prior robots/homepage-only preflight, without approved terms or QA.
-No paid API, new training, TEST inference, tuning or subagent was used. Offline
-regression passed 487 tests and 58 subtests. PR8 remains draft/unmerged, and its
-description API403 restriction remains binding. Exact-commit CI is recorded after
-push. Raw sources, individual questions/answers and weights remain private.
+The source-only corpus helper partitions reviewed source ranges under exact
+local-tokenizer limits and preserves declared atomic tables/qualifiers. Oversized
+atomic ranges, stale hashes, uncovered evidence and duplicate/fabricated chunkIDs
+fail closed. A one-source engineering pilot preserved 4,130 characters in 2 chunks
+(max 490 tokens) and mapped 4 items/5 support spans. This is not the global corpus,
+alias adjudication, DEV selection or final evaluation. Full source inclusion and
+relevance review remain pending under the [prospective protocol](evaluation_protocol_v1.json).
+
+Only 16 newvectors were encoded in 2 sequential local model processes/2 forwards;
+unchanged vectors were reused. No paid API, modeldownload, newtraining, subagent,
+DEVscoring or TESTinference ran. Offline tests:503 passed plus58 subtests. Current
+Qwen runtime remains unresolved; historical11434/11437 timed out and project
+endpoint 11435 refused connection. Raw sources, individual QA and weights stay
+private. PR8 remains draft/unmerged; its description API403 is not bypassed.
+Exact-commit CI is checked after publication. Work continues toward 1000 TEST.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

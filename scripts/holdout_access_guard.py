@@ -19,6 +19,7 @@ class ConservativeRobots:
             raise ValueError('Ambiguous HTML robots response')
         groups = []
         names, rules = [], []
+        global_signals = []
         for line in text.splitlines():
             line = line.split('#', 1)[0].strip()
             if ':' not in line:
@@ -32,8 +33,12 @@ class ConservativeRobots:
                 names.append(value.lower())
             elif names:
                 rules.append((key, value))
+            elif key == 'content-signal':
+                global_signals.append((key, value))
         groups.append((names, rules))
         identities = [agent.lower() for agent in agents]
+        groups.append((['*'], global_signals))
+        self.ai_input_allowed = True
         self.disallowed = []
         self.crawl_delay = 0.0
         for names, rules in groups:
@@ -49,6 +54,15 @@ class ConservativeRobots:
                     if end:
                         value = value[:-1]
                     self.disallowed.append(re.compile('^' + re.escape(value).replace(r'\*', '.*') + ('$' if end else '')))
+                elif key == 'content-signal':
+                    # This acquisition feeds a RAG/model-input workflow. Search
+                    # permission or a custom user agent cannot override ai-input=no.
+                    for signal in value.split(','):
+                        match = re.fullmatch(r'([a-z-]+)\s*=\s*(yes|no)', signal.strip(), re.I)
+                        if not match:
+                            raise ValueError('Ambiguous robots content-signal')
+                        if match[1].lower() == 'ai-input' and match[2].lower() == 'no':
+                            self.ai_input_allowed = False
                 elif key == 'crawl-delay':
                     delay = float(value)
                     if not math.isfinite(delay) or delay < 0:
@@ -58,7 +72,7 @@ class ConservativeRobots:
     def can_fetch(self, url):
         parsed = urlparse(url)
         path = unquote(parsed.path or '/') + ('?' + unquote(parsed.query) if parsed.query else '')
-        return not any(rule.search(path) for rule in self.disallowed)
+        return self.ai_input_allowed and not any(rule.search(path) for rule in self.disallowed)
 
 
 def excluded_path(url, policy):

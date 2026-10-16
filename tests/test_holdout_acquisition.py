@@ -184,3 +184,26 @@ def test_separate_explicit_terms_host_does_not_expand_content_scope(tmp_path,mon
     if terms_redirect:assert result['blocked']=='terms_unavailable_or_disallowed'
     elif content_redirect:assert result['pages']==0 and result['robots_exclusions']==1
     else:assert result['blocked'] is None and result['pages']==1
+
+
+@pytest.mark.parametrize('prefix', ['', 'User-agent: *\n', 'User-agent: GPTBot\n'])
+def test_ai_input_denial_blocks_fetch_even_when_search_is_permitted(prefix,tmp_path,monkeypatch):
+    get=Mock();monkeypatch.setattr('scripts.preflight_holdout1000_sources.requests.get',get)
+    robots=prefix+'Content-Signal: ai-train=no, search=yes, ai-input=no\nUser-agent: CustomResearch\nAllow: /'
+    result=fetch('https://example.invalid/consumer/safe',tmp_path,url_guard=guard(robots))
+    assert result['status'] is None and 'robots_disallow' in result['error']
+    get.assert_not_called()
+
+
+def test_ai_signals_intersect_applicable_groups_without_inventing_training_permission():
+    parser=ConservativeRobots('User-agent: *\nContent-Signal: ai-input=no\n'
+                              'User-agent: GPTBot\nContent-Signal: ai-input=yes',REVIEW_AGENTS)
+    assert not parser.can_fetch('https://example.invalid/consumer/safe')
+    unrelated=ConservativeRobots('User-agent: Unrelated\nContent-Signal: ai-input=no\n'
+                                 'User-agent: *\nContent-Signal: ai-train=no, search=yes',REVIEW_AGENTS)
+    assert unrelated.can_fetch('https://example.invalid/consumer/safe')
+
+
+@pytest.mark.parametrize('directive',['Content-Signal: ai-input=maybe','Crawl-delay: 10 seconds'])
+def test_ambiguous_ai_policy_or_delay_requires_review(directive):
+    with pytest.raises(ValueError):ConservativeRobots('User-agent: *\n'+directive,REVIEW_AGENTS)
