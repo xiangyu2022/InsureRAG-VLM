@@ -998,14 +998,14 @@
       "publisher": "canada_esdc_ei",
       "jurisdiction": "CA",
       "seed_url": "https://www.canada.ca/en/services/benefits/ei/ei-regular-benefit.html",
-      "status": "approved27exactHTMLdocuments_local_research",
-      "reason": "Same-day Canada.ca terms fully reviewed at stage187, unchanged hash; noncommercial reproduction with accuracy and full title/author/URL attribution. Government Health Canada and Service Canada consumer explanatory text only. No external fee grids/forms/images/account data. Original bytes retained privately, authored QA separate.",
+      "status": "approved33exactHTMLdocuments_local_research",
+      "reason": "Same-day Canada.ca terms reviewed at stage187, bound unchanged hash; noncommercial reproduction with accuracy and full title/author/URL attribution. Treasury Board of Canada Secretariat explanatory text; root also attributes National Joint Council. No linked NJC directives, Canada Life/MSH pages, forms, images or account data acquired. Original bytes private and authored QA separate.",
       "terms": {
         "url": "https://www.canada.ca/en/transparency/terms.html",
         "sha256": "e0c0b4c3ee0d1bc18323f3ca351f854744099a495f38265457dae0b59e2cfc42"
       },
-      "local_review_record": "stage235_html_content_review.json",
-      "review_record_sha256": "90bf2a45bf9224c12d2c2b6001d7dcb417839d27e2ad46dac2f907ebbc5df10f",
+      "local_review_record": "stage241_html_content_review.json",
+      "review_record_sha256": "4968b1d9deff0ff924900e66933095a929ee59e80392a4359acf83039409309f",
       "held_exact_urls": [
         {
           "id": "eb38fbd0cabbf38633e5fb05",
@@ -1144,5 +1144,5 @@
     "All previously denied local memory/demo-upload paths"
   ],
   "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
-  "updated_utc": "2026-10-16T15:28:32.852505+00:00"
+  "updated_utc": "2026-10-16T16:05:07.922359+00:00"
 }

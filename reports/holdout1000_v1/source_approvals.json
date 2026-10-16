@@ -571,12 +571,12 @@
     "terms": "https://www.canada.ca/en/transparency/terms.html",
     "terms_sha256": "e0c0b4c3ee0d1bc18323f3ca351f854744099a495f38265457dae0b59e2cfc42",
     "require_terms_sha256": true,
-    "reviewed_utc": "2026-10-16T15:28:32.852505+00:00",
+    "reviewed_utc": "2026-10-16T16:05:07.922359+00:00",
     "decision": "local_noncommercial_research",
-    "basis": "Same-day Canada.ca terms fully reviewed at stage187, unchanged hash; noncommercial reproduction with accuracy and full title/author/URL attribution. Government Health Canada and Service Canada consumer explanatory text only. No external fee grids/forms/images/account data. Original bytes retained privately, authored QA separate. Existing22sources and all holds preserved; five CDCP pages added under legacy publisher with correct author attribution.",
+    "basis": "Same-day Canada.ca terms reviewed at stage187, bound unchanged hash; noncommercial reproduction with accuracy and full title/author/URL attribution. Treasury Board of Canada Secretariat explanatory text; root also attributes National Joint Council. No linked NJC directives, Canada Life/MSH pages, forms, images or account data acquired. Original bytes private and authored QA separate. Existing27sources and all holds preserved; six group-health/dental pages added under legacy publisher with correct author attribution.",
     "attribution": "Employment and Social Development Canada / Government of Canada; fulltitle, originalURL and acquisition date; copy of original version, authored QA distinct adaptation without endorsement.",
-    "preflight_record": "stage235_html_content_review.json",
-    "preflight_record_sha256": "90bf2a45bf9224c12d2c2b6001d7dcb417839d27e2ad46dac2f907ebbc5df10f",
+    "preflight_record": "stage241_html_content_review.json",
+    "preflight_record_sha256": "4968b1d9deff0ff924900e66933095a929ee59e80392a4359acf83039409309f",
     "allowed_hosts": [
       "www.canada.ca"
     ],
@@ -607,7 +607,13 @@
       "/en/services/benefits/dental/dental-care-plan/qualify.html",
       "/en/services/benefits/dental/dental-care-plan/member-eligibility-review.html",
       "/en/services/benefits/dental/dental-care-plan.html",
-      "/en/services/benefits/dental/dental-care-plan/renew.html"
+      "/en/services/benefits/dental/dental-care-plan/renew.html",
+      "/en/treasury-board-secretariat/services/benefit-plans/active-members/submitting-benefit-claim.html",
+      "/en/treasury-board-secretariat/services/benefit-plans/health-care-plan/frequently-asked-questions/new-pshcp-faq.html",
+      "/en/treasury-board-secretariat/services/benefit-plans/health-care-plan/public-service-health-care-plan-glance.html",
+      "/en/treasury-board-secretariat/services/benefit-plans/retired-members/submitting-benefit-claim.html",
+      "/en/treasury-board-secretariat/services/benefit-plans/health-care-plan/public-service-health-care-plan-travel-emergency-assistance-benefits.html",
+      "/en/treasury-board-secretariat/topics/benefit-plans/plans/health-care-plan.html"
     ],
     "excluded_path_keywords": [
       ".pdf",
@@ -642,9 +648,15 @@
       "https://www.canada.ca/en/services/benefits/dental/dental-care-plan/qualify.html",
       "https://www.canada.ca/en/services/benefits/dental/dental-care-plan/member-eligibility-review.html",
       "https://www.canada.ca/en/services/benefits/dental/dental-care-plan.html",
-      "https://www.canada.ca/en/services/benefits/dental/dental-care-plan/renew.html"
+      "https://www.canada.ca/en/services/benefits/dental/dental-care-plan/renew.html",
+      "https://www.canada.ca/en/treasury-board-secretariat/services/benefit-plans/active-members/submitting-benefit-claim.html",
+      "https://www.canada.ca/en/treasury-board-secretariat/services/benefit-plans/health-care-plan/frequently-asked-questions/new-pshcp-faq.html",
+      "https://www.canada.ca/en/treasury-board-secretariat/services/benefit-plans/health-care-plan/public-service-health-care-plan-glance.html",
+      "https://www.canada.ca/en/treasury-board-secretariat/services/benefit-plans/retired-members/submitting-benefit-claim.html",
+      "https://www.canada.ca/en/treasury-board-secretariat/services/benefit-plans/health-care-plan/public-service-health-care-plan-travel-emergency-assistance-benefits.html",
+      "https://www.canada.ca/en/treasury-board-secretariat/topics/benefit-plans/plans/health-care-plan.html"
     ],
-    "max_pages": 27,
+    "max_pages": 33,
     "per_document_review_required": true,
     "raw_redistribution_in_this_task": false,
     "assigned_split": "test",

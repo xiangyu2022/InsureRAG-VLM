@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T15:41:06.635335+00:00",
+  "updated_utc": "2026-10-16T16:17:57.238331+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1492,6 +1492,22 @@
         "stage235_source_decisions.json"
       ],
       "review_record_sha256": "bed130bf5c24c260b4fcbbec6e1ea0eb327f984359d9011a8fab100cad38a362"
+    },
+    {
+      "family_id": "family241_canada_public_service_group_health_dental",
+      "document_ids": [
+        "117f847208bfe5c441e91c4f",
+        "323cb2c420f3b1867fae30bc",
+        "544664ad6e4d5020417636ee",
+        "5816adf2928aadcf5c155819",
+        "961d386736411c690a694232",
+        "b887f7594d435c9055fd23ce"
+      ],
+      "relation": "All six PSHCP-related public-service pages one conservative family, including active/retired dental sections; shared prose and navigation. No page-based split inflation.",
+      "local_review_records": [
+        "stage241_source_decisions.json"
+      ],
+      "review_record_sha256": "19d5d9dec903374b3758507a3c2470f67340cf49b7351f1d557ca40c51bfb6e8"
     }
   ],
   "document_text_sha256": {
@@ -2084,7 +2100,13 @@
     "270217fc909ce19e885eca53": "ee8fea06d5549d0302710b6e02324134dd18f60243e864c37f5efb828a53d375",
     "8f301f46e0fc572505c86aa8": "faf6bbd883d3eed4a52f8c04892993ec32d0b6954081f425b35920d100a3c91d",
     "f047b19e427540e28cc00cf9": "77324dd43d0c9ecc717a7e7d1ee7115adac88857cb27a3c8c81eeac3914cc634",
-    "fea158e6f8540b7792a7da7a": "fc809f740ae6f02dbee0493a7d7d176dd592ea893df0181f8b66a7ed4b8b7f90"
+    "fea158e6f8540b7792a7da7a": "fc809f740ae6f02dbee0493a7d7d176dd592ea893df0181f8b66a7ed4b8b7f90",
+    "117f847208bfe5c441e91c4f": "8333696368b12884c597d20855adac2e210093630117a8ad7b8c60ed60ff8b3a",
+    "323cb2c420f3b1867fae30bc": "7c9be92a0da8fe464f5af81f6e344ad8e0e166c5c0d3b03ceb7efd7c0d93e253",
+    "544664ad6e4d5020417636ee": "ee9f9b30ca84548981d41b25942c76fb070b1a92ded41dd2a009d729b4e96a4d",
+    "5816adf2928aadcf5c155819": "da395f04f7c41f257fefdf7cff5ea463e19f2ad95d3daff5977ec3c9f873d4d4",
+    "961d386736411c690a694232": "1b5b0286d14aa0829269612367ab015cae1abc6fa2711334d4ee95afe39c73dc",
+    "b887f7594d435c9055fd23ce": "7b296caf5196b4d534df87d05efee2863e5c94885f86b3b64d70af4005420735"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

@@ -12,49 +12,51 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage237](stage237_progress.json): **918 provisional
-TEST and 58 DEV across 175 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Stage235 retained fourteen of fifteen drafts: nine
-ordinary, two numeric, two multi-evidence and one refusal. One tax-residency
-draft was held for insufficient independence from historical tasks. A renewal
-document question was classified as ordinary because its operative rule needs
-only one source passage; no multi-evidence credit was claimed.
+The latest checkpoint is [stage243](stage243_progress.json): **933 provisional
+TEST and 58 DEV across 176 TEST families**. **Accepted counts remain zero; the
+dataset is not frozen.** Stage241 retained fifteen of sixteen drafts: four
+ordinary, three numeric, four multi-evidence and four refusal. A brand/generic
+drug exception draft was held for insufficient independence from historical
+material even though automatic scores were below their review thresholds.
 
-Another 82 independent TEST are needed: 30 ordinary, 18 numeric, 17 multi-evidence
-and 17 refusal. Original quotas, family cap and all prior holds remain, including
+Another 67 independent TEST are needed: 26 ordinary, 15 numeric, 13 multi-evidence
+and 13 refusal. Original quotas, family cap and all prior holds remain, including
 the original 15 historical revocations and two stage215 scope revocations.
 Historical checkpoints are not additive.
 
-The source-only corpus has 272 included, 158 excluded and 981 pending sources
-in a 1,411-document snapshot, with 636 partial chunks. Eight complete cached
-ALDOI sources added twelve chunks; eleven reviewed sources remain pending for
-vintage, tax-scope or missing structural labels. Five complete CDCP pages added
-eighteen chunks in one conservative family. All 606 previously published chunks
-are unchanged. Source text, complete tables and relevant qualifiers are preserved.
-Whole-source dispositions, global aliases and whole-DEV clearance remain
-unfinished. All fourteen new retained questions map to included bodies. The 58
-DEV items, 76 declared spans, 62 necessary support units and 18 reviewed aliases
-retain their exact mappings. No actual DEV score, TEST inference or selection lock.
+The source-only corpus has 277 included, 158 excluded and 982 pending sources
+in a 1,417-document snapshot, with 663 partial chunks. Five complete Canadian
+public-service health/dental pages added 27 chunks. The active-member page stays
+wholly pending because its disability-claim timing sentence needs clarification;
+no convenient PSHCP subsection was selectively admitted. Thirteen newly retained
+questions map fully to included bodies; two still await that whole-source
+disposition. Item gates and final corpus readiness are separate requirements.
+All 636 previously published chunks are unchanged. Complete tables, source dates,
+Supplementary scope and relevant qualifiers are preserved. The 58 DEV items,
+76 declared spans, 62 necessary support units and 18 reviewed aliases retain
+their exact mappings. Whole-source dispositions, global aliases and whole-DEV
+clearance remain unfinished. No actual DEV score, TEST inference or selection lock.
 
-This batch embedded fifteen new questions in one local process and one forward
-batch, reusing 3,373 candidate and 44,581 historical vectors. Review read 71 short
-historical records in full; one 650,269-character Medicare manual was examined
-through targeted windows and its relevant calculation section, not read in full.
-It also covered 33 neighboring QAs, ten changed active relations, 37 corpus gap
-windows and eleven template counterpart QAs. Automatic scores do not override
-content review. CDCP acquisition used five GETs (153,359 body bytes) and one web
-discovery. Separate Alberta/ICBC policy preflights used six GETs (632,949 bytes)
-and one web discovery; rights restrictions stopped both before business pages.
-No paid calls, downloads or subagents. Remaining quota is not observable.
+This batch embedded sixteen new questions in one local process and one forward
+batch, reusing 3,388 candidate and 44,581 historical vectors. Review read all 76
+targeted historical records, including one 14,000-character record; it also
+covered 23 neighboring QAs, thirteen changed active relations, 129 corpus-gap
+windows and sixteen template QAs. Of the gap windows, 83 were read from old
+sources and 46 were covered by complete readings of the six new bodies.
+One shared PDSP evidence paragraph supports two distinct tasks: the prohibition
+on coordination between two PDSP memberships and missing priority rules for
+PDSP plus a different employer plan. It does not create extra source families.
 
-Usage corrections preserved: stage217's 19 vectors used one process and two
-forward batches (16 plus 3). Stage234 inherited an incorrect discovery count
-from a template; its actual web discovery count was zero. Original records are
-preserved with local errata. No model rerun was needed for either correction.
+PSHCP acquisition used six GETs (229,580 body bytes) and one web discovery.
+Separate WorkSafe Victoria and New Jersey checks used seven successful GETs
+(2,430,504 body bytes) and two web discoveries; permission or content issues
+stopped their admission. A further NJ request was blocked by the local access
+guard and not retried. Cache review used no network. No paid calls, model
+downloads, proxy/security changes or subagents. Remaining quota is not observable.
 
 Code is unchanged since the 534 tests plus 58 subtests regression run. Fresh
-item validation and support mapping passed; global count and task quotas still
-fail. Content review is Codex review, not human or expert adjudication.
+item validation and DEV mapping checks passed; global quotas and corpus gates
+remain unmet. Content review is Codex review, not human or expert adjudication.
 Raw sources, individual QA, annotations and weights remain local.
 
 Review ledgers are deltas: absence from the latest ledger does not release an

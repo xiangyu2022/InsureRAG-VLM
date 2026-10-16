@@ -1,8 +1,8 @@
 # Independent holdout experiment preparation
 
-As of October 16, 2026, construction has reached 918 provisional TEST and 58 DEV
-items across 175 TEST document families. Accepted counts are zero; the benchmark
-is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage237_progress.json)
+As of October 16, 2026, construction has reached 933 provisional TEST and 58 DEV
+items across 176 TEST document families. Accepted counts are zero; the benchmark
+is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage243_progress.json)
 records the current counts, validation and remaining work. Historical exposed
 results are regression evidence only.
 
@@ -32,14 +32,14 @@ The holdout_experiment module implements annotation-based metrics and uncertaint
   Ratio-metric intervals, such as refusal precision, still need orchestration.
 
 The whole-source manifest gate requires an explicit include/exclude review for
-every snapshot document before tokenization. Raw/text hashes for all 1,411 sources
-were verified. Current dispositions are 272 included, 158 excluded after source review
-and 981 pending. Review order prioritized DEV sources after a source-only
+every snapshot document before tokenization. Raw/text hashes for all 1,417 sources
+were verified. Current dispositions are 277 included, 158 excluded after source review
+and 982 pending. Review order prioritized DEV sources after a source-only
 inventory of all 291 TDI documents. It does not authorize a gold-filtered corpus.
 Existing reviews can be reused when their content hashes and scope still apply.
 
 holdout_corpus validates source ranges, hashes, token limits and reviewed atomic
-spans. The 636 partial chunks preserve all included characters and have at most
+spans. The 663 partial chunks preserve all included characters and have at most
 512 tokens and 2,400 characters. Source headings, lists, table headers and
 qualifiers must survive chunking. Oversized atomic spans fail instead of being
 silently truncated. Source structure, never an answer key, defines boundaries.
