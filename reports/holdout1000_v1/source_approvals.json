@@ -639,5 +639,46 @@
     "raw_redistribution_in_this_task": false,
     "assigned_split": "test",
     "assignment_reason": "Entire newly sourced ESDC EI publisher assigned TEST before authoring or modelaudit. Existing otherCanadaagency FCAC isalsoTEST; no DEV overlap."
+  },
+  {
+    "id": "newjersey_labor_leave",
+    "jurisdiction": "US-NJ",
+    "terms": "https://www.nj.gov/nj/legal.shtml",
+    "terms_sha256": "647e1bad26f57aa35c6a0ec4bb8ac8467c8ffbd241867ebaf01ea23c22db91e0",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-16T09:41:02.441668+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "NJlegalSectionFexpresslypermitsviewing/copying/distributingStateinformationunlessspecificrestriction;fiveofficialLaborconsumerpagescheckedfornotices. CopyrightStateofNJfooterpreserved;noadditionalmaterialrestrictionfound. State seal/logos,externalformsandthirdpartymaterialsnotused. PrivateQA/localresearchonly;nofalsepublicdomainclaim.",
+    "attribution": "New Jersey Department of Labor and Workforce Development; fulltitle,URL,acquisitiondate. AuthoredQAseparatefromsource.",
+    "preflight_record": "stage201_html_content_review.json",
+    "preflight_record_sha256": "6f4a8eb68d5c6a5c82c4e179a04642fe21a66be736dffc36e6e9169d01ede91b",
+    "allowed_hosts": [
+      "www.nj.gov"
+    ],
+    "prefixes": [
+      "/labor/myleavebenefits/worker/resources/intermittent-leave.shtml",
+      "/labor/myleavebenefits/help/faq/school-employees.shtml",
+      "/labor/myleavebenefits/worker/resources/unemployed_apply.shtml",
+      "/labor/myleavebenefits/worker/resources/keepingnjsafe.shtml",
+      "/labor/myleavebenefits/worker/job-protection-information/more-protections.shtml"
+    ],
+    "excluded_path_keywords": [
+      ".pdf",
+      "/claims",
+      "/search"
+    ],
+    "minimum_interval_seconds": 2,
+    "seeds": [
+      "https://www.nj.gov/labor/myleavebenefits/worker/resources/intermittent-leave.shtml",
+      "https://www.nj.gov/labor/myleavebenefits/help/faq/school-employees.shtml",
+      "https://www.nj.gov/labor/myleavebenefits/worker/resources/unemployed_apply.shtml",
+      "https://www.nj.gov/labor/myleavebenefits/worker/resources/keepingnjsafe.shtml",
+      "https://www.nj.gov/labor/myleavebenefits/worker/job-protection-information/more-protections.shtml"
+    ],
+    "max_pages": 5,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false,
+    "assigned_split": "test",
+    "assignment_reason": "EntirenewNJLaborleavepublisherassignedTESTbeforequestionauthoring. NJDOBIisaseparateexistingagency,notrenamed; noTDI/FLIsubprogramfamilysplitting."
   }
 ]

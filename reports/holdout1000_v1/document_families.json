@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T09:24:28.910190+00:00",
+  "updated_utc": "2026-10-16T09:51:23.410905+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1404,6 +1404,21 @@
         "stage198_source_decisions.json"
       ],
       "review_record_sha256": "cf10c95d68667fa4383faf3e459393dcc1bfa9478743b465915b8007c0a33f0d"
+    },
+    {
+      "family_id": "family201_nj_labor_leave_insurance",
+      "document_ids": [
+        "0cbb6e65ffb30707a52f0b10",
+        "2e4ec4ce837bc685e3ee9ef8",
+        "bd602ad66462940857659c1e",
+        "ed4137466088618be4dae7ed",
+        "aec3dc218e10128a0c47b9f6"
+      ],
+      "relation": "OneconservativefamilyforNJLaborconsumerleaveinsurancetopicpagesandJuly2026jobprotectionupdate. Sharedprogramworkflowandderivationkepttogether;futuredeferredTDI/FLI/statuspagesmustnotcreateindependentfamily.",
+      "local_review_records": [
+        "stage201_source_decisions.json"
+      ],
+      "review_record_sha256": "b0e6a5a6f600a5cb70ac79fb1605b34984e51d43c8429695f72acd1a3fb04650"
     }
   ],
   "document_text_sha256": {
@@ -1965,7 +1980,12 @@
     "2584717d8829883bd5ecf762": "b50dc7ab1735e5f2fadb129a92771f2b2f5093c89693d574828a68bd31d059a9",
     "334a231bbc92f7368049b7ec": "b96526dbaf52669d211bd3626f4acef9f447218111c6bd6a569b87e5b4dce99b",
     "c7679ea005a4b1a0f2c41cfe": "99e0aff32ae2869772a5fc28edae9f4f6d1d54e694213ed6d23000c2dedbdac8",
-    "d59048e26f92fb77c0f038d5": "c93196eb5d5b354c8a0e807cee1a5065ec32e1446b7458c8c2eebd39e7b6659c"
+    "d59048e26f92fb77c0f038d5": "c93196eb5d5b354c8a0e807cee1a5065ec32e1446b7458c8c2eebd39e7b6659c",
+    "0cbb6e65ffb30707a52f0b10": "25902d6afe3b9be66f57d7d29506aeede25e867399a41c9b0adb908a28c647b3",
+    "2e4ec4ce837bc685e3ee9ef8": "d371550b066a9ebcb78d2bab3ea6db47b04914b742975c0755c7d6970935c0d5",
+    "bd602ad66462940857659c1e": "9210854e1da5722a20ba8bd151b7bb934a44ab12e0525cd84d024aaf47a0b4d3",
+    "ed4137466088618be4dae7ed": "ac6b8890ff008e2afd1896b1a61f40bcc1659c0c50e164e36eb601d95570bb3c",
+    "aec3dc218e10128a0c47b9f6": "f54b63bf9336e32895e27c69f12d0f64d8027a1b0038a8fb8275a2ff4af538a0"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

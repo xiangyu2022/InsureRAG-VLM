@@ -1017,6 +1017,37 @@
       "raw_redistribution_in_this_task": false,
       "latest_item_review_record": "stage117_final_review.json",
       "latest_item_review_sha256": "cf26939e4b94aee094c13186acb4a4913282771ca3ce14dce4eba936955cab6b"
+    },
+    {
+      "publisher": "newjersey_labor_leave",
+      "jurisdiction": "US-NJ",
+      "seed_url": "https://www.nj.gov/labor/myleavebenefits/",
+      "status": "approved5exactHTMLdocuments_local_research",
+      "reason": "NJlegalSectionFexpresslypermitsviewing/copying/distributingStateinformationunlessspecificrestriction;fiveofficialLaborconsumerpagescheckedfornotices. CopyrightStateofNJfooterpreserved;noadditionalmaterialrestrictionfound. State seal/logos,externalformsandthirdpartymaterialsnotused. PrivateQA/localresearchonly;nofalsepublicdomainclaim.",
+      "terms": {
+        "url": "https://www.nj.gov/nj/legal.shtml",
+        "sha256": "647e1bad26f57aa35c6a0ec4bb8ac8467c8ffbd241867ebaf01ea23c22db91e0"
+      },
+      "local_review_record": "stage201_html_content_review.json",
+      "review_record_sha256": "6f4a8eb68d5c6a5c82c4e179a04642fe21a66be736dffc36e6e9169d01ede91b",
+      "held_exact_urls": [
+        {
+          "id": "d07c3fbf9b90f2c337828a25",
+          "url": "https://www.nj.gov/labor/myleavebenefits/worker/tdi/index.shtml",
+          "reason": "Regularbaseyearprose saysdeterminedbyapplicationdatewhileprecedingruleandtableuseSundayofdisabilityweek; partialreturnwording14daysrequiresclarification. No paragraphselectionaroundambiguity."
+        },
+        {
+          "id": "ebc19d2fb46be18c81c2ed93",
+          "url": "https://www.nj.gov/labor/myleavebenefits/worker/fli/index.shtml",
+          "reason": "Generalcaregivingnoticereasonableexceptemergency conflictswithcaregiverpanel30daysandbondingcopy. Baseyearapplicationdatevsleaveweekwordingalsounresolved. Noquestionsfromanysection."
+        },
+        {
+          "id": "34c8a790c53954461bfbac2a",
+          "url": "https://www.nj.gov/labor/myleavebenefits/worker/resources/claims-status.shtml",
+          "reason": "Maincontains3charactersandemptydata-i18nelements;externalclaims_process.jsnotfetchedorexecuted. Notassumedemptyorirrelevant;notadmitted."
+        }
+      ],
+      "raw_redistribution_in_this_task": false
     }
   ],
   "excluded_previously_known": [
@@ -1025,5 +1056,5 @@
     "All previously denied local memory/demo-upload paths"
   ],
   "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
-  "updated_utc": "2026-10-16T09:10:28.466389+00:00"
+  "updated_utc": "2026-10-16T09:41:02.441668+00:00"
 }

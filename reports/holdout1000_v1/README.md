@@ -12,33 +12,33 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage200](stage200_progress.json): **847 provisional
-TEST and 58 DEV across 169 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Another 153 independent TEST are needed: 70 ordinary,
-27 numeric, 31 multi-evidence and 25 refusal questions.
+The latest checkpoint is [stage203](stage203_progress.json): **854 provisional
+TEST and 58 DEV across 170 TEST families**. **Accepted counts remain zero; the
+dataset is not frozen.** Another 146 independent TEST are needed: 65 ordinary,
+26 numeric, 31 multi-evidence and 24 refusal questions.
 
-Stage198 retained 13 of 14 CPP credit-split, survivor and death-benefit candidates:
-ten ordinary, one numeric, one multi-evidence and one refusal. Content review
-held a numeric template despite clean automated screens. One proposed multi
-was reclassified as ordinary because the question already supplied one premise.
-All prior holds and historical revocations remain. Historical counts are not
-additive totals.
+Stage201 retained seven of eight New Jersey leave-insurance candidates: five
+ordinary, one numeric and one refusal. One otherwise plausible candidate was held
+because its answer asserted a rule outside its declared evidence. No multi-evidence
+question was manufactured to meet a quota. All prior holds and historical revocations
+remain. Historical counts are not additive totals.
 
-The batch reused hash-verified same-day robots and full Canada.ca terms review.
-Four bounded sequential GETs transferred 139,337 response-body bytes. Three new
-substantive sources share one conservative TEST family; a retirement index joins
-the existing CPP disability family because of shared derived benefit descriptions.
-Original relationship-list ambiguity and average-quarter labels remain visible.
-No source wording was silently repaired. Deferred source leads remain separate,
-unadmitted records and do not contribute questions or vectors.
+Current robots and full linked legal and privacy policies were reviewed before
+bounded source acquisition. Twelve sequential requests transferred 765,912 bytes.
+Five official Labor topic pages were approved under New Jersey's express State
+information reuse permission, with item-specific notices checked. Two composite
+pages with unresolved internal wording and one script-dependent page without its
+rendered body remain deferred. No questions were taken from those pages. All five
+approved pages share one conservative TEST family. The new July 17, 2026
+benefit-linked job-protection scope was checked against the dated official update.
 
-The snapshot contains 1,383 documents and the unchanged 2,317 source FAQ.
-The source-only corpus draft has 234 included, 142 excluded and 1,007 pending
-sources. Its 529 chunks preserve every included primary character. Both new
-raw tables were reviewed; 32 source-defined qualifier groups and exact headings
-and dates preserve context. Rendered chunks meet the 512-token and 2,400-character
-limits. The previous 513 chunks were reused unchanged. All four new source bodies
-remain included independently of whether a question survived.
+The snapshot contains 1,388 documents and the unchanged 2,317 source FAQ.
+The source-only corpus draft has 239 included, 142 excluded and 1,007 pending
+sources. Its 540 chunks preserve every included primary character. The new raw
+comparison table and 29 source-defined qualifier groups were reviewed. Exact page
+headings and the job-protection effective date retain context. Rendered chunks meet
+the 512-token and 2,400-character limits. The previous 529 chunks were reused
+unchanged. All five approved bodies remain included independently of retained QA.
 
 All 58 DEV items and 76 declared spans map by offsets. The 62 necessary units
 for 47 answerable cases and 18 Spanish aliases retain their exact chunk sets;
@@ -46,13 +46,15 @@ for 47 answerable cases and 18 Spanish aliases retain their exact chunk sets;
 clearance remain unfinished. No actual DEV score, TEST inference, selection
 lock or generation is claimed.
 
-The item audit read 66 targeted historical records, 35 neighboring QA pairs,
-19 additional numeric-template comparisons and nine changed active neighborhoods.
-It encoded only 14 new questions in one local batch, reusing old candidate vectors
-and 44,581 historical vectors. There were no paid APIs, model downloads or subagents.
-Code is unchanged from the 534-test plus 58-subtest regression; the retained pool
-was freshly validated. Sources, individual QA, annotations and weights remain local.
-PR8 stays draft and unmerged; exact-commit CI is checked after publication.
+The item audit read 38 targeted historical records, 18 neighboring QA pairs,
+22 numeric-template comparisons, nine additional parental-benefit QA comparisons
+and two changed active neighborhoods. Only eight new questions were encoded in one
+local batch; old candidate vectors and 44,581 historical vectors were reused.
+There were no paid APIs, model downloads or subagents. All content review was by
+a single Codex workflow, not a human or expert panel. Code is unchanged from the
+534-test plus 58-subtest regression; the retained pool was freshly validated.
+Sources, individual QA, annotations and weights remain local. PR8 stays draft
+and unmerged; exact-commit CI is checked after publication.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
