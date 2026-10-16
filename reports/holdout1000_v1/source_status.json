@@ -1084,6 +1084,37 @@
         }
       ],
       "raw_redistribution_in_this_task": false
+    },
+    {
+      "publisher": "ontario_wsib",
+      "jurisdiction": "CA-ON",
+      "seed_url": "https://www.wsib.ca/en/benefits-non-economic-loss",
+      "status": "approved5exactHTMLdocuments_local_research",
+      "reason": "WSIB terms permit noncommercial personal and public reproduction whole or part, excluding audio/video/presentations and separate third-party restrictions, without modifying content and with copyright notice and applicable disclaimer. Full terms, privacy and linking conditions read. Raw HTML, copyright and complete applicable disclaimer retained locally; verbatim evidence and whitespace-normalized main content, no edited official source. Factual authored QA separately identified and private. No official logos, affiliation, endorsement, accounts, forms or raw publication.",
+      "terms": {
+        "url": "https://www.wsib.ca/en/terms-use",
+        "sha256": "033458ecd58389efe2557417f8b451a6cd2130a5b1257812f04703156b3d56be"
+      },
+      "local_review_record": "stage220_html_content_review.json",
+      "review_record_sha256": "b90a5eaf858131bc273323e0dcbb8d8d10010e03e2b761691852dc96fee8448a",
+      "held_sources": [
+        {
+          "document_id": "5dff0dfd4d763d938b4f9c74",
+          "decision": "DEFER_ENTIRE_SOURCE_CAUSATION_QUALIFIER",
+          "reason": "Full body read: traumatic mental stress definition says caused or significantly contributed to by work-related incidents, while later general eligibility and submitting-claim sections require predominant cause for both categories. Do not select unrelated paragraphs around unresolved material applicability. No diagnostic or eligibility QA from this source."
+        },
+        {
+          "document_id": "ff0375c64821c9d4a03cb0e6",
+          "decision": "DEFER_ENTIRE_SOURCE_BOUNDARY_AND_PAYMENT_SCOPE",
+          "reason": "Full body read: LOE contribution/beneficiary sections use afterJan1,1998 while beneficiary hierarchy says onorafterJan1 and linked LOE table includes Jan1. Payment section states lump-sum cheque, later says lump sum or annuity without defining annuity scope. Requires fuller policy applicability review; do not infer repairs or author from unaffected paragraphs."
+        },
+        {
+          "url": "https://www.wsib.ca/en/businesses/claims/wsib-benefits",
+          "decision": "PENDING_WHOLE_SOURCE_CURRENCY_REVIEW_OUTSIDE_SNAPSHOT",
+          "reason": "Complete5352-character body read. Substantive consumer benefit overview, not excluded for business URL. Contains unqualified COVID emergency time-limit pointer in2026snapshot; additional source applicability review needed before admission. Used only to discover three explicitly linked source pages."
+        }
+      ],
+      "raw_redistribution_in_this_task": false
     }
   ],
   "excluded_previously_known": [
@@ -1092,5 +1123,5 @@
     "All previously denied local memory/demo-upload paths"
   ],
   "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
-  "updated_utc": "2026-10-16T10:32:02.512913+00:00"
+  "updated_utc": "2026-10-16T11:05:05.615114+00:00"
 }

@@ -12,32 +12,40 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage219](stage219_progress.json): **871 provisional
-TEST and 58 DEV across 172 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Stage217 added 19 independently reviewed consumer-benefit
-questions: ten ordinary, two numeric, five multi-evidence and two refusal.
+The latest checkpoint is [stage222](stage222_progress.json): **886 provisional
+TEST and 58 DEV across 173 TEST families**. **Accepted counts remain zero; the
+dataset is not frozen.** Stage220 retained 15 of 18 drafts: seven ordinary,
+two numeric, four multi-evidence and two refusal questions. Three were held for
+an insufficiently qualified payment sequence or insufficient independent need.
 
-Another 129 independent TEST are needed: 57 ordinary, 24 numeric, 26 multi-evidence
-and 22 refusal. The original task quotas, family cap and all prior holds remain,
-including the original 15 historical revocations and the two stage215 scope
-revocations. Historical checkpoints are not additive.
+Another 114 independent TEST are needed: 50 ordinary, 22 numeric, 22 multi-evidence
+and 20 refusal. Original quotas, family cap and all prior holds remain, including
+the original 15 historical revocations and two stage215 scope revocations.
+Historical checkpoints are not additive.
 
-The source-only corpus now has 243 included, 158 excluded and 991 pending sources
-in a 1,392-document snapshot. Four complete VAC bodies added 13 chunks; all 540
-previous chunks are unchanged. All included characters are preserved, with source
-qualifiers and title context within 512 tokens and 2,400 characters. APSC currency
-and calculator scenario structure remain held before corpus inclusion or QA.
+The source-only corpus has 248 included, 158 excluded and 991 pending sources
+in a 1,397-document snapshot. Five complete WSIB bodies added 27 chunks; all 553
+previous chunks are unchanged. Included characters are preserved with source
+qualifiers and title context within 512 tokens and 2,400 characters. Whole WSIB
+mental-stress and LRI pages remain deferred. The affected LOE/LRI timing draft
+is held; dated source explanations remain intact for global applicability review.
 
 All 58 DEV items, 76 declared spans, 62 necessary support units and 18 reviewed
 aliases retain their exact mappings. Whole-corpus aliases and whole-DEV clearance
 remain unfinished. No actual DEV score, TEST inference, selection lock or
 generation is claimed.
 
-The batch reused previous vectors and embedded only 19 new questions in one local
-batch. Content review read 87 historical texts, 40 candidate-neighbor QAs, 13
-numeric counterparts and 23 refusal-gap windows. Nine bounded source/policy GETs
-used 1,285,308 known successful response-body bytes; two web discovery calls are
-recorded separately. No paid calls, model downloads or subagents were used.
+The batch embedded only 18 new questions in one local model process and two
+forward batches, reusing old vectors. Review read 82 historical texts, 66 neighbor
+QAs, 13 numeric counterparts and 157 refusal-gap windows. Twelve bounded GETs
+used 1,402,033 response-body bytes. No paid calls, downloads or subagents.
+An evidence-projection schema failure was repaired before model execution;
+original QA and evidence spans were unchanged and checks reran successfully.
+
+Usage correction: stage217's 19 vectors used one model process and **two**
+forward batches (16 plus 3). Its numeric provenance already recorded two;
+earlier prose and a parent milestone incorrectly said one. Original hash-bound
+records are preserved with a local erratum; no model was rerun for this correction.
 
 Code is unchanged since the 534 tests plus 58 subtests regression run. Fresh
 item validation and support mapping passed; global count and task-quota gates

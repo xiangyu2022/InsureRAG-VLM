@@ -725,5 +725,55 @@
     "raw_redistribution_in_this_task": false,
     "assigned_split": "test",
     "assignment_reason": "Whole new VAC publisher assigned TEST before question authoring. Source families grouped by program and related compensation; no DEV material or publisher renaming."
+  },
+  {
+    "id": "ontario_wsib",
+    "jurisdiction": "CA-ON",
+    "terms": "https://www.wsib.ca/en/terms-use",
+    "terms_sha256": "033458ecd58389efe2557417f8b451a6cd2130a5b1257812f04703156b3d56be",
+    "require_terms_sha256": true,
+    "reviewed_utc": "2026-10-16T11:05:05.615114+00:00",
+    "decision": "local_noncommercial_research",
+    "basis": "WSIB terms permit noncommercial personal and public reproduction whole or part, excluding audio/video/presentations and separate third-party restrictions, without modifying content and with copyright notice and applicable disclaimer. Full terms, privacy and linking conditions read. Raw HTML, copyright and complete applicable disclaimer retained locally; verbatim evidence and whitespace-normalized main content, no edited official source. Factual authored QA separately identified and private. No official logos, affiliation, endorsement, accounts, forms or raw publication.",
+    "copyright_notice": "Copyright 1998-2026 Workplace Safety and Insurance Board of Ontario. All rights reserved.",
+    "disclaimer_url": "https://www.wsib.ca/en/terms-use",
+    "attribution": "WSIB Ontario; full title/URL/acquisition date; copy of website source, authored QA separate.",
+    "preflight_record": "stage220_html_content_review.json",
+    "preflight_record_sha256": "b90a5eaf858131bc273323e0dcbb8d8d10010e03e2b761691852dc96fee8448a",
+    "allowed_hosts": [
+      "www.wsib.ca"
+    ],
+    "prefixes": [
+      "/en/benefits-non-economic-loss",
+      "/en/loss-earnings-benefit",
+      "/en/injured-or-ill-people/resources-injured-or-ill-people/your-guide-benefits-services-and",
+      "/en/injured-or-ill-people/resources-injured-or-ill-people/arranging-travel-your-claim",
+      "/en/injured-or-ill-people/appeals/disagreeing-wsib-decision-about-claim"
+    ],
+    "approved_exact_urls": [
+      "https://www.wsib.ca/en/benefits-non-economic-loss",
+      "https://www.wsib.ca/en/loss-earnings-benefit",
+      "https://www.wsib.ca/en/injured-or-ill-people/resources-injured-or-ill-people/your-guide-benefits-services-and",
+      "https://www.wsib.ca/en/injured-or-ill-people/resources-injured-or-ill-people/arranging-travel-your-claim",
+      "https://www.wsib.ca/en/injured-or-ill-people/appeals/disagreeing-wsib-decision-about-claim"
+    ],
+    "excluded_path_keywords": [
+      ".pdf",
+      "/search",
+      "/online-services"
+    ],
+    "minimum_interval_seconds": 2,
+    "seeds": [
+      "https://www.wsib.ca/en/benefits-non-economic-loss",
+      "https://www.wsib.ca/en/loss-earnings-benefit",
+      "https://www.wsib.ca/en/injured-or-ill-people/resources-injured-or-ill-people/your-guide-benefits-services-and",
+      "https://www.wsib.ca/en/injured-or-ill-people/resources-injured-or-ill-people/arranging-travel-your-claim",
+      "https://www.wsib.ca/en/injured-or-ill-people/appeals/disagreeing-wsib-decision-about-claim"
+    ],
+    "max_pages": 5,
+    "per_document_review_required": true,
+    "raw_redistribution_in_this_task": false,
+    "assigned_split": "test",
+    "assignment_reason": "Whole new WSIB publisher assigned TEST before authoring or model audit. Five source bodies grouped as one conservative family; held sources remain unadmitted and prospective same-family members."
   }
 ]

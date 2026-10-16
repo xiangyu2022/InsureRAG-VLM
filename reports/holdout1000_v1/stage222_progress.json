@@ -1,0 +1,194 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 886,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 550,
+    "insufficient_evidence": 80,
+    "multi_evidence": 128,
+    "numerical_calculation": 128
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 173,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 50,
+    "california_cdi": 48,
+    "wisconsin_oci": 63,
+    "utah_uid": 16,
+    "us_opm": 115,
+    "us_va": 41,
+    "us_tricare": 130,
+    "newjersey_dobi": 38,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 43,
+    "canada_esdc_ei": 47,
+    "newjersey_labor_leave": 7,
+    "canada_vac": 19,
+    "ontario_wsib": 15
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 50,
+    "numerical_calculation": 22,
+    "multi_evidence": 22,
+    "insufficient_evidence": 20
+  },
+  "created_utc": "2026-10-16T11:24:55.991484+00:00",
+  "status": "CONSTRUCTION_AND_CORPUS_REVIEW_ACTIVE_NOT_FROZEN",
+  "remaining_independent_test": 114,
+  "question_batch": {
+    "drafts": 18,
+    "retained": 15,
+    "held": 3,
+    "retained_tasks": {
+      "numerical_calculation": 2,
+      "multi_evidence": 4,
+      "ordinary_qa": 7,
+      "insufficient_evidence": 2
+    }
+  },
+  "corpus_preparation": {
+    "created_utc": "2026-10-16T11:23:55.163517+00:00",
+    "status": "PARTIAL_SOURCE_CORPUS_NOT_DEV_READY",
+    "test": 886,
+    "dev": 58,
+    "accepted": 0,
+    "frozen": false,
+    "source_dispositions": {
+      "pending": 991,
+      "include": 248,
+      "exclude": 158
+    },
+    "new_dispositions": {
+      "include": 5,
+      "exclude": 0,
+      "pending": 0
+    },
+    "partial_chunks": 580,
+    "max_tokens": 512,
+    "max_encoder_chars": 2400,
+    "all_included_characters_preserved": true,
+    "previous_chunks_unchanged": 553,
+    "old_chunks_retokenized": 0,
+    "dev_items_fully_mapped": 58,
+    "dev_declared_spans_mapped": 76,
+    "actual_dev_queries": 0,
+    "test_queries": 0,
+    "model_forwards": 0,
+    "source_requests": 0
+  },
+  "dev_support_review": {
+    "dev_items": 58,
+    "answerable": 47,
+    "refusal_context_only": 11,
+    "declared_spans_mapped": 76,
+    "necessary_units": 62,
+    "reviewed_spanish_aliases": 18,
+    "global_alias_review_complete": false,
+    "dev_QA_and_families_changed": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 58,
+    "source_count": 1397,
+    "generation_required": false
+  },
+  "validation": {
+    "retained_item_gate_errors": 0,
+    "global_dataset_gates_passed": false,
+    "remaining_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "unchanged_code_regression": {
+      "stage": 159,
+      "tests_passed": 534,
+      "subtests_passed": 58,
+      "explicit_top_level_test_files": 56
+    },
+    "code_or_tests_changed": false,
+    "exact_support_mapping_rechecked": true
+  },
+  "usage": {
+    "new_candidate_vectors": 18,
+    "curation_model_processes": 1,
+    "curation_forward_batches": 2,
+    "old_vectors_reencoded": 0,
+    "model_downloads": 0,
+    "paid_api_calls": 0,
+    "actual_dev_queries": 0,
+    "actual_test_queries": 0,
+    "new_subagents": 0,
+    "new_source_and_policy_GETs": 12,
+    "known_successful_response_body_bytes": 1402033,
+    "web_discovery_calls": 0,
+    "remaining_quota": "not observable"
+  },
+  "review_evidence": {
+    "targeted_history_texts_fully_read": 82,
+    "candidate_neighbor_QAs_read": 66,
+    "changed_active_neighbors_reviewed": 13,
+    "numeric_template_counterparts_read": 13,
+    "refusal_gap_windows_read": 157,
+    "new_complete_source_bodies": 5,
+    "source_defined_qualifier_groups": 54
+  },
+  "prior_usage_erratum": {
+    "stage217_new_vectors": 19,
+    "stage217_model_processes": 1,
+    "stage217_forward_batches": 2,
+    "original_numeric_provenance_correct": true,
+    "prose_and_parent_milestone_corrected_here": true,
+    "original_hash_bound_records_preserved": true
+  },
+  "limits": [
+    "886 provisional TEST remains114short; accepted0/unfrozen.",
+    "991source dispositions, global aliases and wholeDEV clearance unfinished. No actual DEV/TEST score.",
+    "All prior holds and original15historical revocations retained, including two stage215 consumer-scope revocations.",
+    "Three current candidates held for answer payment-sequence qualification or insufficient independent information need. No QA edited after semantic audit.",
+    "Whole WSIB mental-stress/LRI pages remain deferred; no current indexed rate or actual benefit payment inferred from historical examples.",
+    "Source bodies preserve cached versions. LOE/LRI timing juxtaposition needs later global applicability review; the affected draft is held.",
+    "Single sequential Codex content review, not human/expert adjudication.",
+    "Only aggregate reports and source/family metadata published; raw sources, individual QA, annotations and weights stay local."
+  ],
+  "evidence_sha256": {
+    "review_pool_117_clearance_ledger.json": "ae6238a83afb288a8c91e262c65e2f2f887c1560277698e4fe41dc9976cef3d6",
+    "provisional_item_pool_117_validation.json": "5fc65c2390e4b411afdb2fbe85bc876154251f28380dc6348a4bea0ee403882f",
+    "stage220_final_review.json": "8f70ea20f9c833a5684f6e87e0247ac4559b67e5f64fc9c6f26af204d5f4a2fe",
+    "stage220_source_decisions.json": "39aba2b0937365f8084263d776405a4371af3ab9a3d6434455c90e10a1ddb40e",
+    "stage221_source_disposition_review.json": "20cb5ae1b172c6c727552a003d83bae69572850a0b03d36d29a994f2e886bfcf",
+    "stage221_corpus_mapping_summary.json": "e0959d470176dab1cd128bb91a9aa31efc591b163b600e6dd07b8c09969f3684",
+    "stage222_dev_support_units_draft.json": "307edc0a2401f939b09d8ef5690f37f66a29513230d227f871204ce700777126",
+    "stage222_dev_readiness.json": "e10e872ba0f412bf6dd213cacccda449a0360e5cd9daff39dcf8eded26534892",
+    "stage220_usage_erratum.json": "52b068f233865ed538a6707b399fcfb28927198033764437b70558a8dcd55109",
+    "stage220_projection_schema_repair.json": "50a4b83f30f59d1da90bb8a1dc2f418316211f00f05f2bc1ef768614739e29c2"
+  }
+}

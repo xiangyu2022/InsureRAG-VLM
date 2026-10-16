@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T10:50:31.957690+00:00",
+  "updated_utc": "2026-10-16T11:23:39.460365+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1443,6 +1443,21 @@
         "stage217_source_decisions.json"
       ],
       "review_record_sha256": "be05e69155464c2b1fcad761a5cd259631e1345efd78e365165eb87b66888bbe"
+    },
+    {
+      "family_id": "family220_wsib_claimant_benefits",
+      "document_ids": [
+        "1f086c3b958068ae89f1ed7f",
+        "d056ad87533d5d7ee13d97ec",
+        "034dbf0546e11edab5c9532b",
+        "0ac199ca67cce19e21c964ce",
+        "793f45b5c37d2e04e4feaec1"
+      ],
+      "relation": "One conservative family for WSIB claimant guide and direct benefit, travel and claim-appeal explanations. Guide summarizes these topics; future LRI/mental-stress sources remain prospective members if cleared. No separate family created for each webpage.",
+      "local_review_records": [
+        "stage220_source_decisions.json"
+      ],
+      "review_record_sha256": "39aba2b0937365f8084263d776405a4371af3ab9a3d6434455c90e10a1ddb40e"
     }
   ],
   "document_text_sha256": {
@@ -2013,7 +2028,12 @@
     "524f0414115f8173740328d3": "29636ea5cd6146cf9ec0df065132c06a5755a71a022cfcd7292cbe5487911b8a",
     "059cdb9936229a361494e534": "bdfc0df2d516a13b18db48ed13199ea44786f03df52e7e8e373f9b63b5ce63e8",
     "b5209b541f4eab742573780e": "14c21b862675af93bd97d16163ef343137387ec2bf5bbf51a938bbf41ebd4141",
-    "c3a7c1fd2864ebfb43cf7188": "53976f7c38f5b0ee70858a03baf77975ab595fd05cb2517e731070cb5bc69197"
+    "c3a7c1fd2864ebfb43cf7188": "53976f7c38f5b0ee70858a03baf77975ab595fd05cb2517e731070cb5bc69197",
+    "1f086c3b958068ae89f1ed7f": "c55e39557a27fc4f4ed88d4aa56fc15e6f80a66f3ed4e0e5812a98aa1dcd1d7f",
+    "d056ad87533d5d7ee13d97ec": "5cbc4d8c95908fe56a48547e862544d337d1d4e9dce15702376e60231b1bf294",
+    "034dbf0546e11edab5c9532b": "2fba3717960b989fc876fa21cb110fc8ac04e1fb5dab2bfa6fb11e854342e6ce",
+    "0ac199ca67cce19e21c964ce": "80ad15a771546f68cc78e2078068366b44a553d6ac3b7476291a5e2d22030e75",
+    "793f45b5c37d2e04e4feaec1": "fa96e112c203b43de5f7c7349b617344f52618a01b8ef5184b7424e9d7b92f18"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
