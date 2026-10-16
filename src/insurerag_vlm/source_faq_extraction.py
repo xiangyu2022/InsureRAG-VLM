@@ -2,6 +2,9 @@
 import re
 from bs4 import BeautifulSoup,Tag,NavigableString,Comment,ProcessingInstruction
 
+from .source_mathml import preserve_mathml
+
+
 def clean(text):return ' '.join(text.split())
 def content_root(soup):
     main=(soup.select_one('#main_content .content_left_column') or soup.find('main')
@@ -11,6 +14,7 @@ def content_root(soup):
     for tag in main.find_all(['script','style','nav','header','footer']):tag.decompose()
     for link in main.find_all('a'):
         if clean(link.get_text(' ',strip=True)).casefold()=='shareable link to answer':link.decompose()
+    preserve_mathml(main)
     return main
 
 def extract_original_faq(raw):

@@ -12,52 +12,44 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage263](stage263_progress.json): **958 provisional
+The latest checkpoint is [stage267](stage267_progress.json): **958 provisional
 TEST and 58 DEV across 178 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** This checkpoint changes no questions. Another 42 TEST
-are needed: 18 ordinary, 4 numeric, 10 multi-evidence and 10 refusal. Original
-quotas, family/publisher caps, prior holds and revocations remain unchanged.
+dataset is not frozen.** Another 42 TEST are needed: 18 ordinary, 4 numeric,
+10 multi-evidence and 10 refusal. No question, answer, quota or hold changed.
 
-The source-only corpus now has **354 included, 228 excluded and 844 pending**
-sources in the 1,426-document snapshot, with 753 partial chunks. Review of 86
-complete cached bodies since stage258 closed 83 pending decisions; three remain
-pending. Every one of the 697 previously published checkpoint chunks is unchanged.
-The 56 added chunks preserve full included bodies and source qualifiers, with
-no gold-based text slicing. Whole-source exclusions cover navigation, empty
-search tools and out-of-scope administrative or safety material.
+MathML fractions previously lost their division operator during HTML text
+extraction. The extractor now transcribes supported fractions with explicit
+grouping and division. Unknown structures, malformed operands and barless
+fractions fail instead of producing misleading flat text. This is a narrow
+source-preservation fix, not general mathematical interpretation.
 
-One newly included TDI overview was withdrawn after comparison found an
-unconditional 25-day response statement versus a later guide's 15 days plus a
-requested 10-day extension. Both concern insurer responses to TDI. The earlier
-local scope explanation was incorrect and has a hash-bound correction. The
-whole overview remains pending; no convenient subsection was retained.
-The two new partial-scope/wording concerns and earlier pension, DMLR, PSHCP and
-MathML issues also remain pending.
+One complete source was re-extracted into immutable snapshot33. Its original
+bytes are unchanged; only two fraction transcriptions changed normalized text.
+All 1,425 other document lines and 2,317 source-FAQ rows remain byte-identical.
+Two retained TEST evidence spans were rebound and verified. Their questions,
+answers and lexical-audit normalization are unchanged, so all 3,448 candidate
+and 44,581 historical vectors were reused without model forwards.
 
-Full TEST declared-span mapping is now **411 complete and 547 pending**. These
-are whole-pool counts, not recent-batch counts, and do not establish semantic
-gold-unit completion or benchmark acceptance.
+The source-only corpus has **355 included, 228 excluded and 843 pending**
+sources across 1,426 documents. Its 755 partial chunks preserve the 753 previous
+chunks and add two complete source-defined chunks. The MathML source issue is
+resolved; other source conflicts and all item holds remain pending as before.
 
-All 58 DEV items and 76 declared spans retain their mappings. The 62 necessary
-support units now have 19 reviewed Spanish alternatives. A same-date English/
-Spanish complaint pair was grouped into one source family and one complete
-alias was added; no question or retained family label changed. Four incomplete
-or conflicting alias leads were rejected. Global alias review remains unfinished.
+Full TEST declared-span mapping is **413 complete and 545 pending**. These
+counts do not establish semantic gold-unit completion or benchmark acceptance.
+All 58 DEV items, 76 declared spans, 62 necessary support units and 19 reviewed
+Spanish alternatives retain their mappings. The 125-ledger lineage and current
+audit bindings were checked; global aliases and whole-DEV clearance remain
+unfinished. Readiness still blocks inference before model loading.
 
-Deterministic checks verified the 124-ledger hash chain, unchanged current DEV
-questions in the candidate archive, no current semantic audit flags/truncation,
-no inherited-hold collisions and no declared DEV/TEST evidence-family overlap.
-These checks reuse prior content reviews; they do not independently prove
-semantic quality or grant whole-DEV clearance. The real readiness gate still
-blocks inference before model loading.
-
-This source/alias checkpoint used no network requests, new vectors, model
-forwards, paid APIs, model downloads or subagents. Remaining quota is not
-observable. Code is unchanged since the 534 tests plus 58 subtests regression;
-fresh item and mapping checks passed. No actual DEV score, TEST inference,
-selection lock or final evaluation is claimed. Review is Codex review, not human
-or expert adjudication. Sources, individual QA, annotations and weights remain
-local. PR8 stays draft and unmerged.
+The code passed **553 tests and 58 subtests** across 57 explicitly selected
+top-level files, including 19 synthetic MathML cases. Fresh item and mapping
+checks passed. This checkpoint made no network requests, new vectors, model
+forwards, paid calls, downloads or subagents. Remaining quota is not observable.
+No actual DEV score, TEST inference, selection lock or final evaluation is
+claimed. Review is Codex review, not human or expert adjudication. Sources,
+individual QA, annotations, vectors and weights stay local. PR8 remains draft
+and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
