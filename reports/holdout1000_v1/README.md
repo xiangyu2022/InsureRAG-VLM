@@ -12,34 +12,35 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage289](stage289_progress.json): **958 provisional
-TEST and 57 DEV across 178 TEST families**. **Accepted counts remain zero;
-the dataset is not frozen.** Another 42 independent TEST are needed: 18 ordinary,
-4 numeric, 10 multi-evidence and 10 refusal. Questions and quotas are unchanged.
+The latest checkpoint is [stage295](stage295_progress.json): **957 provisional
+TEST and 57 DEV across 177 TEST families**. **Accepted counts remain zero;
+the dataset is not frozen.** Another 43 independent TEST are needed: 19 ordinary,
+4 numeric, 10 multi-evidence and 10 refusal. Quotas are unchanged.
 
-Source review since stage278 excluded seven professional, administrative,
-deposit-protection or warranty sources outside this benchmark's consumer
-insurance scope. One previously included deposit source was removed; no active
-QA used it. Three complete Alberta endorsements were admitted after verifying
-raw/text hashes against earlier full text and visual reviews and rereading their
-clause/table structure. Blank form fields and original version dates remain intact.
-Another 40 complete cached bodies yielded 24 inclusions, 11 exclusions and five
-pending scope/currency checks. No linked third-party material was acquired.
+One previously retained question was withdrawn because its sole task was entering
+an overseas search ZIP in a plan-comparison interface. It does not test insurance
+coverage, purchaser eligibility, policy terms, benefits, claims or specific
+dispute recourse. The complete source was reviewed; no cosmetic replacement
+was authored. All earlier item holds remain effective.
 
-The corpus now has **437 included, 270 excluded and 719 pending** across 1,426
-documents, with 846 partial chunks. Full TEST declared-span mapping is
-**437 complete and 521 pending**. These are offset checks, not benchmark acceptance.
-All 57 DEV (46 answerable and 11 refusal), 75 declared spans, 61 necessary units
-and 18 reviewed Spanish alternatives keep their mappings. Global semantic alias,
-source-family, historical and remaining legacy-hold reviews still block actual
-DEV inference. The earlier protocol count of 47 answerable DEV is corrected to46.
+Another 80 complete cached bodies yielded39 inclusions,30 exclusions and11
+pending checks. One government-hosted page explicitly excerpts a commercial
+1992publication. It is now excluded with a central source permission hold;
+no active QA used it. Government hosting does not grant third-party reuse rights.
+
+The corpus now has **476 included,300 excluded and650 pending** across1,426
+documents, with885 partial chunks. Full TEST declared-span mapping is
+**453 complete and504 pending**. These are offset checks, not benchmark acceptance.
+All57 DEV (46answerable and11refusal),75declared spans,61necessary units and18
+reviewed Spanish alternatives keep their mappings. Global semantic alias,
+source-family, historical and remaining legacy-hold review still block DEV.
 
 This checkpoint used no new vectors, model forwards, source/network calls or
-paid APIs. Code remains covered by 553 tests plus58 subtests; fresh source and
-mapping checks passed. No actual DEV/TEST evaluation, selection lock or final
-metrics are claimed. Review is sequential Codex content review, not human or
-expert adjudication. Raw sources, individual QA, annotations and weights remain
-local; PR8 stays draft and unmerged.
+paid APIs. Code remains covered by553tests plus58subtests; fresh item,source,
+permission and mapping checks passed. No actual DEV/TEST evaluation, selection
+lock or final metrics are claimed. Review is sequential Codex content review,
+not human or expert adjudication. Raw sources,individual QA,annotations and
+weights remain local; PR8 stays draft and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T19:04:43.359924+00:00",
+  "updated_utc": "2026-10-16T19:32:17.654586+00:00",
   "scope": "Additional document-level conservative holds; existing triage exclusions still apply. Holds are not claims every passage is false. No held page is cleared by low similarity or an individually plausible answer.",
   "documents": {
     "1056fbb935fe0e7ae00642b4": {
@@ -1108,6 +1108,16 @@
       "original_review_sha256": "a34c3665d2f53f510bf82a52ddd589019ccf495ca89c75303f4a20595a736ba3",
       "source_sha256": "41c62fe3e499912290456e5a4290e82a9a1450d374583942e792ad67004cc3e7",
       "text_sha256": "d83459b3a815b68f7ada364464969e115dd561eac19715d2958548d1fa7d36f5"
+    },
+    "da69ecf58fe66a396b02dbe2": {
+      "publisher": "alabama_doi",
+      "reason": "Whole page explicitly attributes its substantive survey passage to a1992InsuranceAdvocate commercialpublication excerpt; governmenthost permission does not establish thirdpartyexcerpt reuse rights. Exclude whole source pending explicitpermission. The professionalratingssurvey is also outside consumerpolicy/claim/benefit scope.",
+      "local_review_record": "stage294_scope_and_rights_review.json",
+      "review_record_sha256": "bb23c7c851ab4bd5468df98021509f2e3ab19ce7e3585ea8ea72d3307d7c7d9e",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution",
+      "source_sha256": "d4c5903a195070dd899b217612c6bab6ce57bbb85c67d4479fa9def30b65ac73",
+      "text_sha256": "2edf86b3bb2822e1ec58978e4888341390a23a432715033c24606a416d9c1bc5"
     }
   },
   "proposal_metadata": {

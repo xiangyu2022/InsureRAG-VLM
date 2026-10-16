@@ -1,8 +1,8 @@
 # Independent holdout experiment preparation
 
-As of October 16, 2026, construction has reached 958 provisional TEST and 57 DEV
-items across 178 TEST document families. Accepted counts are zero; the benchmark
-is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage289_progress.json)
+As of October 16, 2026, construction has reached 957 provisional TEST and 57 DEV
+items across 177 TEST document families. Accepted counts are zero; the benchmark
+is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage295_progress.json)
 records the current counts, validation and remaining work. Historical exposed
 results are regression evidence only.
 
@@ -33,8 +33,8 @@ The holdout_experiment module implements annotation-based metrics and uncertaint
 
 The whole-source manifest gate requires an explicit include/exclude review for
 every snapshot document before tokenization. Raw/text hashes for all 1,426 sources
-were verified. Current dispositions are 437 included, 270 excluded after source review
-and 719 pending. Review order prioritized DEV sources after a source-only
+were verified. Current dispositions are 476 included, 300 excluded after source review
+and 650 pending. Review order prioritized DEV sources after a source-only
 inventory of all 291 TDI documents. It does not authorize a gold-filtered corpus.
 Existing reviews can be reused when their content hashes and scope still apply.
 A strict MathML fraction transcription now preserves division and grouping. One
@@ -42,7 +42,7 @@ source was re-extracted into snapshot33 with immutable prior snapshots and exact
 evidence rebindings; unsupported MathML structures fail instead of flattening.
 
 holdout_corpus validates source ranges, hashes, token limits and reviewed atomic
-spans. The 846 partial chunks preserve all included characters and have at most
+spans. The 885 partial chunks preserve all included characters and have at most
 512 tokens and 2,400 characters. Source headings, lists, table headers and
 qualifiers must survive chunking. Oversized atomic spans fail instead of being
 silently truncated. Source structure, never an answer key, defines boundaries.
