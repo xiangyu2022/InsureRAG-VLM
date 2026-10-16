@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T18:26:58.403797+00:00",
+  "updated_utc": "2026-10-16T20:49:17.836126+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1559,6 +1559,31 @@
         "stage261_dev_semantic_alias_review.json"
       ],
       "review_record_sha256": "56372595d262f9aa3a8920f6f38ec840304355c13bb317eba473dfcd43885535"
+    },
+    {
+      "family_id": "family323_tricare_retired_reserve_age_transition",
+      "document_ids": [
+        "c8240c30c1ffd36f440bbdee",
+        "4320bcbd46b31d8e63c6398d",
+        "cdf360252557112b64a2d48a"
+      ],
+      "relation": "Retired Reserve age-based health options and full Guard/Reserve retirement chapter conservatively grouped with existing retired-beneficiary family. No new independent family claimed for this chapter.",
+      "local_review_records": [
+        "stage323_source_decisions.json"
+      ],
+      "review_record_sha256": "a7a96b5ce13d8b97591c92b7056414679d71110fd3ed72b91a582977b10afbf0"
+    },
+    {
+      "family_id": "family324_tdi_ltc_rates_spanish_counterpart",
+      "document_ids": [
+        "0f059ca6b76dca7ce8ff4ee7",
+        "6f9fed47c3faea2ce5b11d0a"
+      ],
+      "relation": "Official reciprocal English/Spanish LTC rate-increase explanation datedJan22,2024; complete counterpart comparison and one DEVsupport alias reviewed.",
+      "local_review_records": [
+        "stage324_dev_semantic_alias_review.json"
+      ],
+      "review_record_sha256": "badda341dcc2ced47c85f99bec51570b63b5634f49929e4420c1df1312885767"
     }
   ],
   "document_text_sha256": {
@@ -2178,7 +2203,14 @@
     "6b2219d2f983dce93d6f439a": "6297c3c4e57d453a907f30247644de41d7925dfe4e15776dc3c356f91b6a63d3",
     "fac87cf5c78f99bbd56f97d4": "910b0d34539d4680f2b3c0659a2c9fcc520a5d32674941e88d7833b04c0eba18",
     "69689c5cc007d28848fdd22c": "eb24d8a7db33e6cca3ebae30cec7ec9f5ad1bd87eebc1f380d3a8ffe253e6756",
-    "6c0ff7d4bf53df168d895357": "acae4a2299caabebf76733968f81b2550d631188849e6e7df0ef975fd14a49ce"
+    "6c0ff7d4bf53df168d895357": "acae4a2299caabebf76733968f81b2550d631188849e6e7df0ef975fd14a49ce",
+    "1a63a7e586fa049d96f1696b": "7c6025aec37915e7d1c5d53f274ecc7e301455cee9c35fe0ea2f9f781f076aa0",
+    "c0ac0d8c3a526f00b2e9bf6d": "7c6d6e864cc99db3ca66527aa0dc0ba000f6dc7744a0c0ce7fd6c9bc3395e591",
+    "1bae3ac32634883764d6ad54": "8e6cd9a0dd0fdb232d505132e651816e2c3ea70543319dd50d713c9dbfc7f589",
+    "c8240c30c1ffd36f440bbdee": "62dd47e47448b003d0a44627fe03a46bcafb447c2d16b029af5109242e482610",
+    "c0583cb23081d1f61bbf3aff": "b2d3f0b37a6cb70a5c93a537357193acf1a35885bfcbef6b48e5ec6f58e0595c",
+    "0f059ca6b76dca7ce8ff4ee7": "640cbbc79846804cc05f38b20594d83c6728de081f09f5b71358be2026bc832f",
+    "6f9fed47c3faea2ce5b11d0a": "6c27f1b8e3c7a9d49e4a436943b36855e1b113306fc4a6ff389c7e2ad095e5d8"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

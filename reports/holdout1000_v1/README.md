@@ -12,34 +12,36 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage302](stage302_progress.json): **957 provisional
-TEST and 57 DEV across 177 TEST families**. **Accepted counts remain zero;
-the dataset is not frozen.** Another 43 independent TEST are needed: 19 ordinary,
-4 numeric, 10 multi-evidence and 10 refusal. Quotas and all previous holds remain.
+The latest checkpoint is [stage325](stage325_progress.json): **961 provisional
+TEST and 57 DEV across 180 TEST families**. **Accepted counts remain zero;
+the dataset is not frozen.** Another 39 independent TEST are needed: 17 ordinary,
+4 numeric, 8 multi-evidence and 10 refusal. Quotas and all previous holds remain.
 
-The source corpus has **486 included, 300 excluded and 640 pending** across
-1,426 documents, with 926 partial chunks. Ten newly included sources reused
-applicable full-body reviews with matching raw/text hashes, including three
-exact-text aliases. The Alberta endorsement catalog preserves all 80 complete
-entries and their applicability/version context. Full TEST declared-span mapping
-is **480 complete and 477 pending**; offset coverage is not quality acceptance.
-All 57 DEV mappings remain intact: 46 answerable, 11 refusal, 61 necessary units
-and 18 reviewed Spanish aliases. Global alias/family/history clearance is pending.
+Four of six new drafts passed provisional item gates. Two Medicare drafts were
+held for historical core overlap despite passing automated similarity thresholds.
+The earlier scope corrections from 958 to 957 TEST and 58 to 57 DEV remain in the
+revocation chain; new admissions do not restore those items or the original 15.
 
-The DEV runner now supports independently timed retrieval arms. The scorer
-retains failed intended requests, reports equal-family metrics and applies the
-registered tie breaks. Shared six-arm diagnostic timings cannot select an arm.
-An immutable lock writer requires reviewed artifact bindings, including the
-generation runtime/tokenizer receipt. These are implemented capabilities;
-**no actual DEV/TEST run or selection lock exists**. Review gates still block
-the real dataset, and the requested generation runtime remains unavailable.
+The source corpus has **526 included, 325 excluded and 575 pending** across
+1,426 documents, with 973 partial chunks. Full TEST declared-span mapping is
+**489 complete and 472 pending**; offset coverage is not quality acceptance.
+All 57 DEV questions and answers remain unchanged. Their 61 necessary units
+include 19 reviewed Spanish support alternatives. The latest official LTC
+counterpart was joined to its English document family. Global alias, family,
+history and legacy-hold reconciliation remain unfinished.
 
-Validation passed **584 tests plus 58 subtests** over 59 explicitly selected
-top-level files, including a complete synthetic scoring/locking CLI flow.
-This checkpoint used no model forwards, new vectors, source-network or paid calls.
-Review is sequential Codex content review, not human or expert adjudication.
-Raw sources, individual QA, annotations, traces and weights remain local;
-PR8 stays draft and unmerged.
+DEV execution, family-macro scoring and immutable selection-lock tooling are
+implemented, but **no actual DEV/TEST run or selection lock exists**. The real
+dataset remains blocked by review gates and the unverified generation runtime.
+
+The relevant quality, corpus, DEV-readiness and scoring checks passed **82 tests**
+over four explicitly selected top-level files. The unchanged executable code's
+latest full regression at stage302 passed 584 tests plus 58 subtests. This batch
+encoded six questions in one local forward batch, reusing 3,448 candidate and
+44,581 historical vectors. There were no source-network requests, paid model
+calls or model downloads. Review is sequential Codex content review, not human
+or expert adjudication. Raw sources, individual QA, annotations and weights
+remain local; PR8 stays draft and unmerged. Construction continues.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
