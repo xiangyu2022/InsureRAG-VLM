@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T03:24:08.842175+00:00",
+  "updated_utc": "2026-10-16T04:14:05.482341+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1703,7 +1703,14 @@
     "6e5d253653e9e53a685bf46a": "d15283aac1434359521d9939fae1d48e8ff0eab9af3a55ce3f9f16944a69b463",
     "43e69209d01217447f10af5f": "a87cc5795656fda067685a02c6d7dfd82f478af4ea00f012f5f20b905d51ace8",
     "3a2d5f322b74f0b6761d98c8": "31ac8cbf9d1b2994002481c4b265afc146a926e53d8e1841cf47262290519df2",
-    "48b3a394d530f3a0b168f91e": "05320b4cbd672a05f862911fa0dd16fff1a169c5e74ad50d0d0fb652f6ce8a9f"
+    "48b3a394d530f3a0b168f91e": "05320b4cbd672a05f862911fa0dd16fff1a169c5e74ad50d0d0fb652f6ce8a9f",
+    "30aee754e195afcfa172be69": "171a384cbac755c2d79dcb1e9da390dcbee3d294e414ab2b11919c3d55a7197f",
+    "4f11e9c68f926f4fe1c252a7": "a85b231cc196f209b9619dcd5c65bd34c4f897814bb69c7d0e56cac66ffff82b",
+    "3549f58724f6e08114f701f4": "d03aac359d96291741b1f7fa8c79320e18aa3c9e04d73dfcb01feab1f43c73a0",
+    "5c83017175398e2a3dd4abea": "387143a1a5f5b323f07236827c964696571eb7dff36132ac08fea808e7a7223a",
+    "1f0a806b0e4d6020cfb470f5": "8bb4c97c08d93b2be61941a6480f4581f231e30294905123c77c2771c1901808",
+    "48ef79222ae1d23547fa177c": "4ff0c2ffd2f5123cf35f90175a87b9da252f299d9c5ed0fe3cebadd6691ce8a4",
+    "3b6a618df00aa06ac55e0368": "6ddc857dc533e720c3d469ea3d33e7f9731a6de619501ec35a912a2fcd249bc7"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

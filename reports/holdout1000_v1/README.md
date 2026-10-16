@@ -12,40 +12,35 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage134](stage134_progress.json): **763 provisional
-TEST and 58 DEV across 154 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Stage132 retained two of three drafts: one ordinary and
-one multi-evidence question. A rental-contract refusal was held for overlap with
-an existing information need. Another 237 independent TEST are needed: 126
-ordinary, 35 numeric, 41 multi-evidence and 35 refusal. Prior holds remain.
+The latest checkpoint is [stage141](stage141_progress.json): **767 provisional
+TEST and 58 DEV across 155 TEST families**. **Accepted counts remain zero; the
+dataset is not frozen.** Since stage134, two ordinary, one multi-evidence and one
+refusal question passed item review. One nominal multi-evidence draft lacked a
+necessary second premise; one numeric draft repeated an existing calculation
+core. Both were held. Another 233 independent TEST are needed: 124 ordinary,
+35 numeric, 40 multi-evidence and 34 refusal. All prior holds remain.
 
-For count reconciliation, stage120 had 748 TEST; stages122, 124, 127 added 1, 7, 5
-respectively to reach 761. Stages128 through 131 added none. DEV stayed at 58.
-Historical checkpoints are not additive.
+Count reconciliation: stage120 had 748 TEST; stages122, 124 and127 added 1, 7 and5
+to reach761. Stage132 added2, stage135 added2 and stage138 added2 to reach767.
+DEV stayed at58. Historical checkpoints are not additive.
 
-The entire 291-document TDI cache received source-only structure proposals before
-QA metadata was used to prioritize review order. Full-source review cleared 27
-additional pages for the partial corpus. All remaining global sources retain
-their dispositions: 40 included, 115 excluded under prior holds, 1,189 pending.
-The 88 partial chunks preserve every included character and stay within 509 tokens
-and 2,400 characters. A long FAQ list was split at its six actual source headings,
-keeping each question's nested list and qualifiers together.
-
-All 58 DEV items and 76 declared evidence spans now map by exact offsets. A separate
-content review identifies 62 necessary units across 47 answerable cases. The 11 refusal
-cases have only gap-context diagnostics, never answer-retrieval gold. Five exact
-text matches in other sources remain scope/alias leads; they are not automatically
-equivalent support. Global semantic aliases and 1,189 source dispositions remain
-unfinished. The real DEV readiness check still stops before model loading.
+The partial source-only corpus now has47 included,115 excluded and1,182 pending
+sources. Its119 chunks preserve every included character, within509tokens and
+2,400characters. Every pending source still needs disposition; none is excluded
+just to obtain DEV results. All58DEV items and76declared spans map by offsets.
+The draft has62necessary units for47answerable cases;11refusals have gap-context
+diagnostics only. Eighteen Spanish semantic aliases passed unit-specific review.
+One compound guaranty-membership alias failed because the translated condition
+differs. Version dates and relevant unchanged obligations were compared directly.
+Whole-corpus aliases and whole-DEV clearance remain unfinished.
 
 No actual DEV score, TEST inference, selection lock or generation is claimed.
-The existing six-arm offline CLI remains validated on synthetic inputs only.
-Stages132 through 134 made no source requests and used no paid API, download,
-training or subagent. Only 3 new curation vectors were encoded in one batch;
-all earlier vectors were reused. Corpus/mapping work used no model forward calls.
-Offline validation passed **523 tests plus 58 subtests** over 56 explicit top-level
-files. Sources, individual QA, annotations and weights remain private. PR8 stays
-draft and unmerged; exact-commit CI is checked after this publication.
+This work used cached sources, no paid APIs, downloads or subagents, and six new
+curation vectors in two batches since stage134. Earlier vectors were reused.
+Corpus work used no model forwards. Code and tests are unchanged from the523test
+plus58subtest regression; the retained pool was freshly validated. Sources,
+individual QA, annotations and weights remain private. PR8 remains draft and
+unmerged; exact-commit CI is checked after publication.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
