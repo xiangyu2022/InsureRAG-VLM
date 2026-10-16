@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T07:00:35.806402+00:00",
+  "updated_utc": "2026-10-16T07:46:52.177031+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1331,6 +1331,43 @@
         "stage168_source_decisions.json"
       ],
       "review_record_sha256": "b0a460cefa3bd63e88e0cf9af78824fec0183b104d49367055f0c136b35373b3"
+    },
+    {
+      "family_id": "family183_rrb_survivor_student_spouse_suite",
+      "document_ids": [
+        "151b114a97bdfef531180afb",
+        "3b7fb790d54b6b470ba095a2",
+        "4108ee2dd5cd32c0361a9a35",
+        "43ed941eb1b2c51215fa286c",
+        "951dc193068abb06c1ce7d86",
+        "c8eb7603fa7a7a337eb09f00",
+        "d7a0eef6f7d745da5c222ec9",
+        "ef2e6e74142954460d9292da",
+        "210fb0486bd8d902db120698",
+        "2d33d2374a326b55b8d01bac",
+        "87c764467f6dfd97e5a7ee09",
+        "a30a74619dec55ce2720e6bc",
+        "d0034c011e59eba4ac218e9e",
+        "f1551665a5cdc319b57d025a",
+        "1d8fb0ccc97a33c07a30787f",
+        "2ad8b4952c7f9632849e0844",
+        "58ca1761dd1a4197329d6889",
+        "5d53472e7ab7b1550c638e32",
+        "6cb172f690a9c105e2559539",
+        "95c8982543f7fd691f065d77",
+        "9d51699811a82e3ecba2ad00",
+        "b62bfe409d5a25045d6b8db9",
+        "bc4a54fa387683b72fd49407",
+        "d4f208873b1d4e4ae3f376c2",
+        "e43f5a6538e32a33cb756b0f",
+        "fd2a7cc538021c77709a2e7d",
+        "fe6c0007d2ebd1d1a7e4ae4d"
+      ],
+      "relation": "Conservative single TEST family for interconnected RRB survivor/student/spouse eligibility and supporting military-service pages; wholeG316publicationincludingallchapters. SharedsurvivorFRA/earningsprose joinsG177S/G177C/computation; no newchapterfamilies.",
+      "local_review_records": [
+        "stage183_source_decisions.json"
+      ],
+      "review_record_sha256": "955604eb8769ce7bdf4239151a0ba1ee4a8878041927fdedee3c56a1bcb846bb"
     }
   ],
   "document_text_sha256": {
@@ -1853,7 +1890,34 @@
     "962e18dce132c3994d56ccc1": "08d3674441ca7381a9ea657a07a793ae5e77461d4e051cf0a01164b27a81bb8f",
     "29406929edf9ebde74b9b171": "531b516ea28fac27405fcbded7bcf071a9a3ee5fa1fb4ffc90eab7650e6b5d66",
     "db0a210fcd3fcf276ade666f": "710091dbf3b25b0569bb32a52a970fa9ca44947e8c54dc59a7041f727a9d5d6f",
-    "5f5cf703b8baf466b75e9ee3": "cede7c93f2e6093d446299b53c0822fb98a8675c7571bdcfb42a218adf50a882"
+    "5f5cf703b8baf466b75e9ee3": "cede7c93f2e6093d446299b53c0822fb98a8675c7571bdcfb42a218adf50a882",
+    "151b114a97bdfef531180afb": "44a86a33e18762679c00720f249b40cbd31db884ba501267277e77bb42368004",
+    "3b7fb790d54b6b470ba095a2": "686568461ce839122852bfec22e36edd398dc83b8824c644cf5ab97764059d7e",
+    "4108ee2dd5cd32c0361a9a35": "5a7a0bdfe408da36304c13ed7aa70659aa540c3ccfdd872c24945e1bd0b3622f",
+    "43ed941eb1b2c51215fa286c": "8912871a541cab29a2926c8240397c8f397ad6ac257b8494e179b0741064dcac",
+    "951dc193068abb06c1ce7d86": "9379a148b1e99aa478eadef772299bb623eee16978544b577d2d3047b11e5933",
+    "c8eb7603fa7a7a337eb09f00": "7f2d439207a8b282d643eee947b3aa4f6093602c31618f04f09b84cedec1f0de",
+    "d7a0eef6f7d745da5c222ec9": "160deba01fde1e668f1f5a37c1ae4a204ce4f62efa9447810fd6e5140ea01bb2",
+    "ef2e6e74142954460d9292da": "3991ed5caf551f61c6bb5c3ef18d7ad634be019a0d6e0b9e5b4fbf23133b31e2",
+    "210fb0486bd8d902db120698": "53209d7c2ea8cd343da442dc89cedb248f2cc1d311af929d3e3219c38b2ea6ba",
+    "2d33d2374a326b55b8d01bac": "554edad9d71d2f98ba3f31ccb6df091d6c6ee11b60b1c05dfd2ff99610491572",
+    "87c764467f6dfd97e5a7ee09": "55bf3711182e7957b49d1b93c66530a5dc557df7e4ee94a60f42d6f25175249e",
+    "a30a74619dec55ce2720e6bc": "508036646ca6a8aa7cd0eb5616697302e91a1c0cb35f6bfab003e18b0c02fce1",
+    "d0034c011e59eba4ac218e9e": "2977118b3d3c3203bd6d2190adc58283e5736f35d993ec801ef70773d28708e1",
+    "f1551665a5cdc319b57d025a": "cd7df4774a75c121f4a498148dfeed162f02b235e1368e91b5c8400798c17206",
+    "1d8fb0ccc97a33c07a30787f": "07eb8ff5b6c3d435e5b7d1bed46dfeb76451b1a1b1b5ab1d291af74c0d675afb",
+    "2ad8b4952c7f9632849e0844": "71297f37f2469f7676648c7ce05e16ed6ef16b742bc6521710530fd5ddc51c67",
+    "58ca1761dd1a4197329d6889": "79c6deddd557045df6830979588729b1bd80c4b5f635055cf5bc1383f118de44",
+    "5d53472e7ab7b1550c638e32": "a12ba788d21c134a9877cb34a51e4092712ba3ad07a9c86fe18cc323d011a5f2",
+    "6cb172f690a9c105e2559539": "f0af26322a44e383dfa792519f9e201b1ae6afbb75a998c3a276aa8a7615ee0d",
+    "95c8982543f7fd691f065d77": "40f0ea59228938625bf42dd683d32b7ab0e2f0fb0c57e6451ffb07b8010bfca9",
+    "9d51699811a82e3ecba2ad00": "6f335c36a9eb71919a7d65e55f05f511f7dea41e00d2ad4883c7ee9742852f99",
+    "b62bfe409d5a25045d6b8db9": "a3fac21a06b67f71c0f0394900799a83be216f7711948aea6a9725310cd31fd2",
+    "bc4a54fa387683b72fd49407": "3ff18c0bc7f91e3dfe44e5ba0c8985a65560beda38d21d3a1b726f56f61c9e99",
+    "d4f208873b1d4e4ae3f376c2": "50f1bbe4e4558ee1d55bdbff835b4d954b038aaf9fd22f9fec9610f11f263197",
+    "e43f5a6538e32a33cb756b0f": "62fbea70bf78b3ab959407a5155632cadbbb562157b259f675810a0a3ecf663a",
+    "fd2a7cc538021c77709a2e7d": "ca07be0c896159d4538a19d88c14b964454255a4b8b796abdbdb6935df8befc9",
+    "fe6c0007d2ebd1d1a7e4ae4d": "4f9fdf6284f7dc136e542f921124bcd8e63b5438dcb2f249f7f5c89e24346546"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

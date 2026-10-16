@@ -12,26 +12,33 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage180](stage180_progress.json): **800 provisional
-TEST and 58 DEV across 166 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Another 200 independent TEST are needed: 102 ordinary,
-33 numeric, 35 multi-evidence and 30 refusal questions.
+The latest checkpoint is [stage185](stage185_progress.json): **819 provisional
+TEST and 58 DEV across 167 TEST families**. **Accepted counts remain zero; the
+dataset is not frozen.** Another 181 independent TEST are needed: 90 ordinary,
+31 numeric, 33 multi-evidence and 27 refusal questions.
 
-Count reconciliation: stage175 recorded 790 TEST; stage174 added five, stage177
-added two and stage178 added three. DEV stayed at 58. Historical checkpoints
-are not additive. The ten retained tasks comprise eight ordinary, one
-multi-evidence and one refusal. Six drafts were held: five outside consumer
-task scope and one repeating an annual tier-premium comparison. Two regulatory
-themes previously revoked were detected and held again. Passing automated
-similarity thresholds does not establish independent task quality.
+Stage183 reviewed 20 candidates and retained 19: 12 ordinary, two numeric,
+two multi-evidence and three refusal tasks. One correct student end-date
+calculation was held because it repeated an existing task. Another candidate
+was reclassified as ordinary because its question already supplied the second
+premise. All prior holds and historical revocations remain. Historical counts
+are checkpoints, not additive totals.
 
-The source-only corpus draft has 200 included, 137 excluded and 1,007 pending
-sources. Its 451 chunks preserve all included primary text. Complete insurer
-tables retain company labels, footnotes and exact county/year context. Source
-conditions and exceptions stay together; copied context counts toward the
-512-token and 2,400-character limits. All 427 preexisting chunks were reused
-unchanged in the latest corpus batch. Source-only inclusion is independent of
-whether a question was retained. Ambiguous or unreviewed sources remain pending.
+Normal network access recovered without proxy or security changes. After fresh
+robots and complete policy review, bounded sequential acquisition added 27 RRB
+HTML documents. The policy text was unchanged although its raw hash changed.
+All new related chapters share one conservative TEST family. This batch used
+32 source requests (31 GET and one HEAD), 1,999,053 response-body bytes and no
+retries. Source-specific rights, dates and attribution are recorded locally.
+
+The full snapshot contains 1,371 documents and the unchanged 2,317 source FAQ.
+The source-only corpus draft has 222 included, 142 excluded and 1,007 pending
+sources. Its 487 chunks preserve every included primary character. All seven
+new raw tables were reviewed; complete rows retain column headers, beneficiary
+conditions and dated document context. Rendered chunks meet the 512-token and
+2,400-character limits. The previous 451 chunks were reused unchanged. Five
+chapter indexes were excluded under the source-only criterion; substantive
+sources remain included even when a question was held.
 
 All 58 DEV items and 76 declared spans map by offsets. The 62 necessary units
 for 47 answerable cases and 18 Spanish aliases retain their exact chunk sets;
@@ -39,12 +46,13 @@ for 47 answerable cases and 18 Spanish aliases retain their exact chunk sets;
 clearance remain unfinished. No actual DEV score, TEST inference, selection
 lock or generation is claimed.
 
-This checkpoint used 16 new curation vectors in three sequential batches;
-unchanged candidate vectors and 44,581 historical question vectors were reused.
-There were no new source requests, paid APIs, downloads or subagents. Code is
-unchanged from the 534-test plus 58-subtest regression; the retained pool was
-freshly validated. Sources, individual QA, annotations and weights remain local.
-PR8 stays draft and unmerged; exact-commit CI is checked after publication.
+The item audit read 91 targeted historical records, 39 neighboring QA pairs
+and two changed active neighborhoods. It encoded only 20 new questions in two
+local batches, reusing old candidate vectors and 44,581 historical vectors.
+There were no paid APIs, model downloads or subagents. Code is unchanged from
+the 534-test plus 58-subtest regression; the retained pool was freshly validated.
+Sources, individual QA, annotations and weights remain local. PR8 stays draft
+and unmerged; exact-commit CI is checked after publication.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

@@ -973,14 +973,14 @@
       "publisher": "us_rrb",
       "jurisdiction": "US",
       "seed_url": "https://www.rrb.gov/Benefits/AB-31",
-      "status": "approved_exact_two_booklets_local_research",
-      "reason": "RRB Digital Rights Policy explicitly permits educational/informational use with RRB.gov attribution; copyright/trademark notices require additionalpermission and endorsements/misleadinguse prohibited. Both original agency prose bodies reviewed; images/logos/thirdparty materials excluded, raw sources local only.",
+      "status": "approved29exactHTMLdocuments_local_research",
+      "reason": "Full current RRB website policy read: educational/informational use with RRB.gov attribution allowed; copyright/trademark content requires permission, no endorsement. Full27article bodies and allrenderedcopyright/trademark notice matches inspected, no contrary notices. Federal agency consumer benefit prose and facts only; noPDF/images/logos/third-party/form responses. Raw materials remain local.",
       "terms": {
         "url": "https://www.rrb.gov/Policy",
-        "sha256": "c49297c3eb950b93ac57c597021a27cb2fd0eb6cd0a97dea21abfd83a5ad098c"
+        "sha256": "5241737515bf0082f85ee0ec6a3bcc3b1d3c9efbff59c4e14c7b1efb337f4a29"
       },
-      "local_review_record": "stage114_html_content_review.json",
-      "review_record_sha256": "06448cfb06d42fc44ccee814f9373ace6b1e0b3b3fff59c177285ef9a4d2a245",
+      "local_review_record": "stage183_html_content_review.json",
+      "review_record_sha256": "e9f56c30ebb6b493e61e58019f6ee366d3c0b76fb3635b85b78e850339f98438",
       "held_exact_urls": [
         {
           "url": "https://www.rrb.gov/Benefits/Medicare/GeneralInfoMedicare/RB20",
@@ -1025,5 +1025,5 @@
     "All previously denied local memory/demo-upload paths"
   ],
   "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
-  "updated_utc": "2026-10-16T00:43:17.542048+00:00"
+  "updated_utc": "2026-10-16T07:34:29.277219+00:00"
 }
