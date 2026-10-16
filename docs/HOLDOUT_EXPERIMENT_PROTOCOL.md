@@ -1,8 +1,8 @@
 # Independent holdout experiment preparation
 
-As of October 16, 2026, construction has reached 771 provisional TEST and 58 DEV
-items across 157 TEST document families. Accepted counts are zero; the benchmark
-is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage154_progress.json)
+As of October 16, 2026, construction has reached 782 provisional TEST and 58 DEV
+items across 159 TEST document families. Accepted counts are zero; the benchmark
+is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage167_progress.json)
 records the current counts, validation and remaining work. Historical exposed
 results are regression evidence only.
 
@@ -33,16 +33,23 @@ The holdout_experiment module implements annotation-based metrics and uncertaint
 
 The whole-source manifest gate requires an explicit include/exclude review for
 every snapshot document before tokenization. Raw/text hashes for all 1,344 sources
-were verified. Current dispositions are 126 included, 136 excluded under existing
-holds and 1,082 pending. Review order prioritized DEV sources after a source-only
+were verified. Current dispositions are 147 included, 136 excluded under existing
+holds and 1,061 pending. Review order prioritized DEV sources after a source-only
 inventory of all 291 TDI documents. It does not authorize a gold-filtered corpus.
 Existing reviews can be reused when their content hashes and scope still apply.
 
 holdout_corpus validates source ranges, hashes, token limits and reviewed atomic
-spans. The 220 partial chunks preserve all included characters and have at most
-509 tokens and 2,400 characters. Source headings, lists, table headers and
+spans. The 304 partial chunks preserve all included characters and have at most
+512 tokens and 2,400 characters. Source headings, lists, table headers and
 qualifiers must survive chunking. Oversized atomic spans fail instead of being
 silently truncated. Source structure, never an answer key, defines boundaries.
+
+For a reviewed large table, complete row atoms may carry copied source header
+spans. Headers remain exact, hash-bound source text and count toward both encoder
+and character limits. The primary text partition and evidence offsets remain
+unchanged; retrieval and reranking consume the header-enriched representation.
+This source-only relationship needs explicit review. It does not establish gold
+unit necessity or automatically clear repeated headers as support alternatives.
 
 All 58 DEV items and 76 declared evidence spans now map by exact offsets. The
 reviewed draft has 62 necessary units for 47 answerable cases. Eleven refusal

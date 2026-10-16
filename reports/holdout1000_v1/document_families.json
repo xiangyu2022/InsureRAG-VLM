@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T04:50:20.732770+00:00",
+  "updated_utc": "2026-10-16T05:37:24.194192+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1260,6 +1260,33 @@
         "stage151_source_decisions.json"
       ],
       "review_record_sha256": "8a7dcc1fbb983449fccaebf076ef8165d32df35d159545140f1c790d7ffda636"
+    },
+    {
+      "family_id": "family164_wi_complaint_preparation_and_health_recourse",
+      "document_ids": [
+        "dfbae46e15a0bfb069c07937",
+        "0acc9a8041d821d6733c0774",
+        "cd2c463bce55484be96558eb",
+        "2d67584ec3c3bb5de04a5b63",
+        "ddd02e4db4c303ef2701f786"
+      ],
+      "relation": "Substantive complaint review/process prose and identical AI preparation paragraph; conservative closure includes existing opioid/mental-health family through shared complaint section, all TEST and cap20 retained.",
+      "local_review_records": [
+        "stage164_source_decisions.json"
+      ],
+      "review_record_sha256": "f17357fbd0aa06addaeec9fcac20a9d55e6d30efa7281b52f704be56e134363d"
+    },
+    {
+      "family_id": "family164_nc_al_annuity_costs",
+      "document_ids": [
+        "c363c5be65e32bf59b1a55fb",
+        "9b768a2fc5c0f7544bbb7890"
+      ],
+      "relation": "Repeated purchase-payment, comparison and surrender-waiver explanations; one cross-publisher TEST family, no splitting to create independence.",
+      "local_review_records": [
+        "stage164_source_decisions.json"
+      ],
+      "review_record_sha256": "f17357fbd0aa06addaeec9fcac20a9d55e6d30efa7281b52f704be56e134363d"
     }
   ],
   "document_text_sha256": {
@@ -1731,7 +1758,23 @@
     "7f487b48af4f48ac91c25473": "3826e27af46b41e70112599b684703db3c5a4f9f94272effdbde38bbe84a3038",
     "8439e01cd4b78d9d8a379c0f": "d0153e6403b5aa467b284ded2f531dd0eca73dec0b00cedb8589d6c9d1d03e34",
     "9170d63b66ca9709ccb7d143": "15daead89a1fda2f6747e08043d19eb237d1e5eafc1db10db9ee348340e5a678",
-    "8c041cdd728c0816bcff7701": "c44c16df5f8aa54ec74935f08e4a83a039ff4a2a86c2cc34b0cf5b26bc66a8e8"
+    "8c041cdd728c0816bcff7701": "c44c16df5f8aa54ec74935f08e4a83a039ff4a2a86c2cc34b0cf5b26bc66a8e8",
+    "23b1faa77677e0c50b3841d1": "836587275de7b1feff42186bf77e0e2c70414cbb2dc61f95178a45573b2450e7",
+    "45cdf130555459c03f0c5dd1": "1d262adc0d7cf553578113c5204e2db6ebe9ac9835c08d53cdf653afbb108269",
+    "4780172e0c819994f6fee17f": "afab481a33cbd32380c636cfc7d016c2585eca9d520256767094baa5b71f4ebb",
+    "ee0a9b785cd6a11b2325beb5": "2634259506110f652560aaa82f604f64beb60ddd02f5b0e40cd41a6bda007c8e",
+    "d12b36f3f2b77f0c8e13b7ab": "b5598920248a5b9606f2a85114931189b63210653ad3afec4ea360df1f7afe98",
+    "e13051b64e01c28bb2827e44": "1b5f0e8c1b956b8843a62941c98bab74ad696c74824123c2c555503b345a0792",
+    "e3800b08a99d534183a294c7": "d80eeaea4ad35835a4dd497a17fd07a190456c29a959bbbd6f3a86d432eb88a0",
+    "75f36ef1a2dc74c062a9cee7": "3712c0ce07d50f47d8fb26c4f31a4f26539f8d3e59d904e69d8bd42232cdcc3c",
+    "dfbae46e15a0bfb069c07937": "f9749948bd6cf58ad8591b1bfa7d4eb762339662795c59d2d0be2cfe58e74e82",
+    "82a014da6c0ab1086d997fa2": "050304ce4e2bad773760a5c4278ada5e293fa80cbb278847196265b174937467",
+    "c363c5be65e32bf59b1a55fb": "9d2e40ab5413de1e0f361cefa31283af855f92e0c703bfe10e9013201d1ca878",
+    "41760dc928f472b0d4008b5a": "35e409401daf4282dbfec34b063555d495410fdd8095ee959d024f2d6510e929",
+    "167b1305458aa2b8ff02a154": "55797dad2c17c7a9780cbfecace5093d2d1df09d37ab586fef571fd1a17f6b24",
+    "0acc9a8041d821d6733c0774": "172fecee145f8bacb2c1cc684fad529915acb8bf848b0083076f0c58aba2dc21",
+    "cd2c463bce55484be96558eb": "d81d71a30e79e9cdecc7a1d27d9c0d93e72e1957677c09335d36625bf2a90439",
+    "9b768a2fc5c0f7544bbb7890": "6e8b4fd6f2b52a258192247584a04cb42cda294feda6888cde86760913d2444c"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",

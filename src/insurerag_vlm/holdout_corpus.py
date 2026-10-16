@@ -2,8 +2,9 @@
 
 The caller supplies a separately reviewed inclusion manifest and a pinned local
 encoder token counter. Question text and answer labels are never inputs to
-chunk_document. Atomic ranges must include table headers and their qualifiers;
-oversized atomic text fails rather than silently dropping rows or truncating it.
+chunk_document. Atomic ranges and explicitly reviewed source contexts preserve table headers
+and qualifiers. Oversized encoded units fail rather than dropping or truncating
+text. Copied context is separate from the unchanged primary source partition.
 """
 import hashlib
 import json
@@ -25,6 +26,59 @@ def _ranges(values, length):
             raise ValueError('Ranges must be ordered, disjoint and within source')
         result.append((a, b))
     return result
+
+
+def _source_context_groups(inclusion, text, spans, atoms):
+    """Validate source-only header/row relationships, without QA annotations."""
+    groups = inclusion.get('source_context_groups', [])
+    if not isinstance(groups, list):
+        raise ValueError('Source context groups must be a list')
+    if groups and inclusion.get('source_context_reviewed') is not True:
+        raise ValueError('Source context relationships require explicit review')
+    result = []
+    for group in groups:
+        if not isinstance(group, dict) or set(group) != {'member_ranges', 'context_ranges'}:
+            raise ValueError('Source context group requires member and context ranges')
+        members = _ranges(group['member_ranges'], len(text))
+        contexts = _ranges(group['context_ranges'], len(text))
+        if not members or not contexts:
+            raise ValueError('Source context group cannot be empty')
+        for a, b in members + contexts:
+            if ((a, b) not in atoms or not text[a:b].strip()
+                    or not any(x <= a < b <= y for x, y in spans)):
+                raise ValueError('Source context and members must be included protected atoms')
+        if any(max(a, x) < min(b, y) for a, b in members for x, y in contexts):
+            raise ValueError('Source context cannot overlap its member')
+        result.append((members, contexts))
+    return result
+
+
+def _render_source_context(text, start, end, groups):
+    needed = sorted({(a, b) for members, contexts in groups
+                     if any(max(start, x) < min(end, y) for x, y in members)
+                     for a, b in contexts if not (start <= a and b <= end)})
+    refs = [dict(start=a, end=b, text=text[a:b], sha256=digest(text[a:b]))
+            for a, b in needed]
+    rendered = '\n'.join([r['text'] for r in refs] + [text[start:end]])
+    return refs, rendered
+
+
+def _check_rendered_context(chunk, document):
+    """Check copied header provenance; semantic necessity remains a review gate."""
+    if 'context_spans' not in chunk and 'retrieval_text' not in chunk:
+        return
+    refs = chunk.get('context_spans')
+    if not isinstance(refs, list) or 'retrieval_text' not in chunk:
+        raise ValueError('Incomplete chunk source context')
+    if any(not isinstance(r, dict) or set(r) != {'start', 'end', 'text', 'sha256'} for r in refs):
+        raise ValueError('Malformed chunk source context')
+    ranges = _ranges([[r['start'], r['end']] for r in refs], len(document['text']))
+    for r, (a, b) in zip(refs, ranges):
+        if (r['text'] != document['text'][a:b] or r['sha256'] != digest(r['text'])
+                or max(a, chunk['start']) < min(b, chunk['end'])):
+            raise ValueError('Chunk source context provenance mismatch')
+    if chunk['retrieval_text'] != '\n'.join([r['text'] for r in refs] + [chunk['text']]):
+        raise ValueError('Chunk retrieval text does not match source context')
 
 
 def chunk_document(document, inclusion, token_count, *, max_tokens=512, max_chars=2400):
@@ -52,13 +106,15 @@ def chunk_document(document, inclusion, token_count, *, max_tokens=512, max_char
     atoms = _ranges(inclusion.get('atomic_ranges', []), len(text))
     if not spans or any(not any(a <= x < y <= b for a,b in spans) for x,y in atoms):
         raise ValueError('Missing inclusion or partially included atomic range')
-    def fits(part):
+    groups = _source_context_groups(inclusion, text, spans, atoms)
+    def fits(start, end):
+        _, part = _render_source_context(text, start, end, groups)
         count = token_count(part)
         if type(count) is not int or count < 1:
             raise ValueError('Token counter must return positive integer')
         return len(part) <= max_chars and count <= max_tokens
     for a,b in atoms:
-        if not fits(text[a:b]):
+        if not fits(a, b):
             raise ValueError('Atomic source range exceeds encoder/context budget')
     manifest_hash = digest(json.dumps(inclusion, sort_keys=True, separators=(',', ':')))
     chunks = []
@@ -79,17 +135,21 @@ def chunk_document(document, inclusion, token_count, *, max_tokens=512, max_char
             available = [e for e in ends if cursor < e <= cursor + max_chars]
             chosen = None
             for end in reversed(available):
-                if fits(text[cursor:end]):
+                if fits(cursor, end):
                     chosen = end
                     break
             if chosen is None or not text[cursor:chosen].strip():
                 raise ValueError('Source cannot fit without dropping or splitting protected text')
             part = text[cursor:chosen]
+            context_spans, rendered = _render_source_context(text, cursor, chosen, groups)
             identity = json.dumps([document['id'], digest(text), cursor, chosen, digest(part)], separators=(',', ':'))
-            chunks.append(dict(id=digest(identity), document_id=document['id'],
+            chunk = dict(id=digest(identity), document_id=document['id'],
                                start=cursor, end=chosen, text=part, sha256=digest(part),
                                source_sha256=document['source_sha256'], text_sha256=digest(text),
-                               inclusion_sha256=manifest_hash, tokens=token_count(part)))
+                               inclusion_sha256=manifest_hash, tokens=token_count(rendered))
+            if groups:
+                chunk.update(context_spans=context_spans, retrieval_text=rendered)
+            chunks.append(chunk)
             cursor = chosen
     return chunks
 
@@ -122,6 +182,7 @@ def map_support_span(evidence, document, chunks):
                 or c['source_sha256'] != document['source_sha256']
                 or c['text'] != document['text'][x:y] or c['sha256'] != digest(c['text'])):
             raise ValueError('Chunk provenance mismatch')
+        _check_rendered_context(c, document)
         if x < b and y > a:
             relevant.append(c)
     relevant.sort(key=lambda c: (c['start'], c['end'], c['id']))
@@ -198,7 +259,8 @@ def validate_inclusion_manifest(documents, manifest):
             if (entry.get('atomic_ranges_reviewed') is not True or not spans
                     or any(not any(a <= x < y <= b for a, b in spans) for x, y in atoms)):
                 raise ValueError('Included source structure/ranges are not reviewed')
-        elif entry.get('ranges') or entry.get('atomic_ranges'):
+            _source_context_groups(entry, document['text'], spans, atoms)
+        elif entry.get('ranges') or entry.get('atomic_ranges') or entry.get('source_context_groups'):
             raise ValueError('Excluded source cannot have included ranges')
         reviewed[ident] = entry
     if reviewed.keys() != by_id.keys():

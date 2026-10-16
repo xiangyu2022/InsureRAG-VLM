@@ -66,7 +66,8 @@ def main():
     count = lambda text: len(tokenizer.encode(text, add_special_tokens=True, truncation=False))
     chunks = sorted(build_corpus(docs, manifest, count), key=lambda c: c['id'])
     ids = [c['id'] for c in chunks]
-    texts = [c['text'] for c in chunks]
+    # Reviewed source headers are part of the encoded/reranked context budget.
+    texts = [c.get('retrieval_text', c['text']) for c in chunks]
     by_id = dict(zip(ids, texts))
     code_files = ['scripts/run_holdout_dev_retrieval.py', 'scripts/eval_insuranceqa_scale.py',
                   'src/insurerag_vlm/holdout_corpus.py', 'src/insurerag_vlm/holdout_dev_runner.py',

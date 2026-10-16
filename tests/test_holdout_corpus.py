@@ -146,3 +146,93 @@ def test_atomic_definition_edges_with_leading_and_trailing_space_are_valid_cuts(
     assert all(c['text'].strip() and len(c['text']) <= 15 for c in chunks)
     evidence = dict(document_id=d['id'], start=6, end=19, sha256=digest(text[6:19]))
     assert map_support_span(evidence, d, chunks) == [chunks[1]['id']]
+
+
+def contextual_table_fixture():
+    d, m = fixture()
+    text = 'Guide. Term Plan Limit. RowA Gold cap 10. RowB Silver cap 20. RowC Bronze cap 30. End.'
+    d.update(text=text, normalized_text_sha256=digest(text))
+    header = [text.index('Term'), text.index(' RowA')]
+    rows = [[text.index(label), text.index('.', text.index(label)) + 1]
+            for label in ['RowA', 'RowB', 'RowC']]
+    m.update(text_sha256=digest(text), ranges=[[0,len(text)]],
+             atomic_ranges=[header] + rows, source_context_reviewed=True,
+             source_context_groups=[dict(member_ranges=rows, context_ranges=[header])])
+    return d, m, header, rows
+
+
+def test_complete_rows_keep_source_headers_within_the_actual_encoder_budget():
+    d, m, header, rows = contextual_table_fixture()
+    chunks = chunk_document(d, m, count, max_tokens=12, max_chars=70)
+    assert ''.join(c['text'] for c in chunks) == d['text']
+    assert len(chunks) > 1
+    assert all(c['tokens'] == count(c['retrieval_text']) <= 12
+               and len(c['retrieval_text']) <= 70 for c in chunks)
+    for a, b in rows:
+        containing = [c for c in chunks if c['start'] <= a < b <= c['end']]
+        assert len(containing) == 1
+        c = containing[0]
+        assert d['text'][header[0]:header[1]] in c['retrieval_text']
+        evidence = dict(document_id=d['id'], start=a, end=b, sha256=digest(d['text'][a:b]))
+        assert map_support_span(evidence, d, chunks) == [c['id']]
+    # Header copies are context, not additional primary offsets or automatic
+    # semantic support-alternative clearance.
+    a, b = header
+    evidence = dict(document_id=d['id'], start=a, end=b, sha256=digest(d['text'][a:b]))
+    assert len(map_support_span(evidence, d, chunks)) == 1
+    assert any(c['context_spans'] for c in chunks)
+
+
+def test_row_that_fits_alone_cannot_overflow_when_its_header_is_added():
+    from copy import deepcopy
+    d, m, _, _ = contextual_table_fixture()
+    bare = deepcopy(m)
+    bare.pop('source_context_groups')
+    bare.pop('source_context_reviewed')
+    assert chunk_document(d, bare, count, max_tokens=8, max_chars=70)
+    with pytest.raises(ValueError, match='Atomic'):
+        chunk_document(d, m, count, max_tokens=8, max_chars=70)
+    with pytest.raises(ValueError, match='Atomic'):
+        chunk_document(d, m, count, max_tokens=50, max_chars=25)
+
+
+@pytest.mark.parametrize('mode', ['unreviewed', 'not_atomic', 'empty', 'overlap'])
+def test_header_context_needs_explicit_protected_source_relationships(mode):
+    d, m, header, rows = contextual_table_fixture()
+    if mode == 'unreviewed': m['source_context_reviewed'] = False
+    elif mode == 'not_atomic': m['source_context_groups'][0]['context_ranges'] = [[header[0]+1,header[1]]]
+    elif mode == 'empty': m['source_context_groups'][0]['member_ranges'] = []
+    else: m['source_context_groups'][0]['context_ranges'] = [rows[0]]
+    with pytest.raises(ValueError, match='context'):
+        chunk_document(d, m, count)
+
+
+@pytest.mark.parametrize('mode', ['changed_copy', 'missing_copy', 'changed_rendering', 'duplicate_copy'])
+def test_copied_header_and_rendered_input_provenance_are_checked(mode):
+    d, m, _, rows = contextual_table_fixture()
+    chunks = chunk_document(d, m, count, max_tokens=12, max_chars=70)
+    c = next(c for c in chunks if c['context_spans'])
+    if mode == 'changed_copy': c['context_spans'][0]['text'] += ' injected'
+    elif mode == 'missing_copy': c.pop('context_spans')
+    elif mode == 'changed_rendering': c['retrieval_text'] = c['text']
+    else: c['context_spans'].append(dict(c['context_spans'][0]))
+    a, b = rows[0]
+    evidence = dict(document_id=d['id'], start=a, end=b, sha256=digest(d['text'][a:b]))
+    with pytest.raises(ValueError): map_support_span(evidence, d, chunks)
+
+
+def test_unreviewed_table_context_blocks_whole_corpus_before_tokenization():
+    from src.insurerag_vlm.holdout_corpus import build_corpus, source_snapshot_digest
+    d, entry, _, _ = contextual_table_fixture()
+    docs, manifest = corpus_fixture()
+    docs[0], manifest['entries'][0] = d, entry
+    manifest['source_snapshot_sha256'] = source_snapshot_digest(docs)
+    entry['source_context_reviewed'] = False
+    calls = []
+    def forbidden(_):
+        calls.append(True)
+        raise AssertionError('Review gate must precede tokenizer')
+    with pytest.raises(ValueError, match='context'): build_corpus(docs, manifest, forbidden)
+    assert calls == []
+    entry['source_context_reviewed'] = True
+    assert build_corpus(docs, manifest, count, max_tokens=12, max_chars=70)
