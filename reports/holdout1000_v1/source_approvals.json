@@ -571,12 +571,12 @@
     "terms": "https://www.canada.ca/en/transparency/terms.html",
     "terms_sha256": "e0c0b4c3ee0d1bc18323f3ca351f854744099a495f38265457dae0b59e2cfc42",
     "require_terms_sha256": true,
-    "reviewed_utc": "2026-10-16T09:10:28.466389+00:00",
+    "reviewed_utc": "2026-10-16T15:28:32.852505+00:00",
     "decision": "local_noncommercial_research",
-    "basis": "Reuse same-day hash-verified Canada.ca terms12906chars fullyreviewed atstage187: noncommercialreproductionwithaccuracy,fulltitle,authorandURLattribution. ESDCexplanatoryproseonly;noexternalforms,images,symbolsoraccountdata. Originalsourcebytesretained;QAseparatelyauthoredandprivate. Existing18ESDCsourcesandallholdspreserved;fourCPPsourcesseparatelyreviewed,legacypublisherretained.",
+    "basis": "Same-day Canada.ca terms fully reviewed at stage187, unchanged hash; noncommercial reproduction with accuracy and full title/author/URL attribution. Government Health Canada and Service Canada consumer explanatory text only. No external fee grids/forms/images/account data. Original bytes retained privately, authored QA separate. Existing22sources and all holds preserved; five CDCP pages added under legacy publisher with correct author attribution.",
     "attribution": "Employment and Social Development Canada / Government of Canada; fulltitle, originalURL and acquisition date; copy of original version, authored QA distinct adaptation without endorsement.",
-    "preflight_record": "stage198_html_content_review.json",
-    "preflight_record_sha256": "a4b901e5d00b6c01ebdb598593a42d9c9614cb01157c6d0772a48af75b0a4faa",
+    "preflight_record": "stage235_html_content_review.json",
+    "preflight_record_sha256": "90bf2a45bf9224c12d2c2b6001d7dcb417839d27e2ad46dac2f907ebbc5df10f",
     "allowed_hosts": [
       "www.canada.ca"
     ],
@@ -602,7 +602,12 @@
       "/en/services/benefits/publicpensions/cpp/cpp-survivor-pension.html",
       "/en/services/benefits/publicpensions/cpp/cpp-split-credits.html",
       "/en/services/benefits/publicpensions/cpp.html",
-      "/en/services/benefits/publicpensions/cpp/cpp-death-benefit.html"
+      "/en/services/benefits/publicpensions/cpp/cpp-death-benefit.html",
+      "/en/services/benefits/dental/dental-care-plan/coverage.html",
+      "/en/services/benefits/dental/dental-care-plan/qualify.html",
+      "/en/services/benefits/dental/dental-care-plan/member-eligibility-review.html",
+      "/en/services/benefits/dental/dental-care-plan.html",
+      "/en/services/benefits/dental/dental-care-plan/renew.html"
     ],
     "excluded_path_keywords": [
       ".pdf",
@@ -632,9 +637,14 @@
       "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-survivor-pension.html",
       "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-split-credits.html",
       "https://www.canada.ca/en/services/benefits/publicpensions/cpp.html",
-      "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-death-benefit.html"
+      "https://www.canada.ca/en/services/benefits/publicpensions/cpp/cpp-death-benefit.html",
+      "https://www.canada.ca/en/services/benefits/dental/dental-care-plan/coverage.html",
+      "https://www.canada.ca/en/services/benefits/dental/dental-care-plan/qualify.html",
+      "https://www.canada.ca/en/services/benefits/dental/dental-care-plan/member-eligibility-review.html",
+      "https://www.canada.ca/en/services/benefits/dental/dental-care-plan.html",
+      "https://www.canada.ca/en/services/benefits/dental/dental-care-plan/renew.html"
     ],
-    "max_pages": 22,
+    "max_pages": 27,
     "per_document_review_required": true,
     "raw_redistribution_in_this_task": false,
     "assigned_split": "test",

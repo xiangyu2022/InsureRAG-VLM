@@ -998,14 +998,14 @@
       "publisher": "canada_esdc_ei",
       "jurisdiction": "CA",
       "seed_url": "https://www.canada.ca/en/services/benefits/ei/ei-regular-benefit.html",
-      "status": "approved22exactHTMLdocuments_local_research",
-      "reason": "Reuse same-day hash-verified Canada.ca terms12906chars fullyreviewed atstage187: noncommercialreproductionwithaccuracy,fulltitle,authorandURLattribution. ESDCexplanatoryproseonly;noexternalforms,images,symbolsoraccountdata. Originalsourcebytesretained;QAseparatelyauthoredandprivate.",
+      "status": "approved27exactHTMLdocuments_local_research",
+      "reason": "Same-day Canada.ca terms fully reviewed at stage187, unchanged hash; noncommercial reproduction with accuracy and full title/author/URL attribution. Government Health Canada and Service Canada consumer explanatory text only. No external fee grids/forms/images/account data. Original bytes retained privately, authored QA separate.",
       "terms": {
         "url": "https://www.canada.ca/en/transparency/terms.html",
         "sha256": "e0c0b4c3ee0d1bc18323f3ca351f854744099a495f38265457dae0b59e2cfc42"
       },
-      "local_review_record": "stage198_html_content_review.json",
-      "review_record_sha256": "a4b901e5d00b6c01ebdb598593a42d9c9614cb01157c6d0772a48af75b0a4faa",
+      "local_review_record": "stage235_html_content_review.json",
+      "review_record_sha256": "90bf2a45bf9224c12d2c2b6001d7dcb417839d27e2ad46dac2f907ebbc5df10f",
       "held_exact_urls": [
         {
           "id": "eb38fbd0cabbf38633e5fb05",
@@ -1144,5 +1144,5 @@
     "All previously denied local memory/demo-upload paths"
   ],
   "publication": "Aggregate rights/access metadata only; no raw sources or benchmark items.",
-  "updated_utc": "2026-10-16T12:07:12.962444+00:00"
+  "updated_utc": "2026-10-16T15:28:32.852505+00:00"
 }

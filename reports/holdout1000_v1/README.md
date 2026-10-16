@@ -12,45 +12,49 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage231](stage231_progress.json): **904 provisional
-TEST and 58 DEV across 174 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Stage229 retained twelve of fourteen drafts: six
-ordinary, two numeric, two multi-evidence and two refusal. One draft was held for
-historical receipt-rule exposure and one for insufficient task independence.
-Automatic semantic scores do not override content review.
+The latest checkpoint is [stage237](stage237_progress.json): **918 provisional
+TEST and 58 DEV across 175 TEST families**. **Accepted counts remain zero; the
+dataset is not frozen.** Stage235 retained fourteen of fifteen drafts: nine
+ordinary, two numeric, two multi-evidence and one refusal. One tax-residency
+draft was held for insufficient independence from historical tasks. A renewal
+document question was classified as ordinary because its operative rule needs
+only one source passage; no multi-evidence credit was claimed.
 
-Another 96 independent TEST are needed: 39 ordinary, 20 numeric, 19 multi-evidence
-and 18 refusal. Original quotas, family cap and all prior holds remain, including
+Another 82 independent TEST are needed: 30 ordinary, 18 numeric, 17 multi-evidence
+and 17 refusal. Original quotas, family cap and all prior holds remain, including
 the original 15 historical revocations and two stage215 scope revocations.
 Historical checkpoints are not additive.
 
-The source-only corpus has 259 included, 158 excluded and 989 pending sources
-in a 1,406-document snapshot, with 606 partial chunks. Nine complete WorkSafeBC
-sources added 22 chunks in one conservative family; all 584 previous chunks
-are unchanged. An ambiguous long-term wage source remains held in full.
+The source-only corpus has 272 included, 158 excluded and 981 pending sources
+in a 1,411-document snapshot, with 636 partial chunks. Eight complete cached
+ALDOI sources added twelve chunks; eleven reviewed sources remain pending for
+vintage, tax-scope or missing structural labels. Five complete CDCP pages added
+eighteen chunks in one conservative family. All 606 previously published chunks
+are unchanged. Source text, complete tables and relevant qualifiers are preserved.
 Whole-source dispositions, global aliases and whole-DEV clearance remain
-unfinished. All twelve new retained questions map to complete included bodies.
-All 58 DEV items, 76 declared spans, 62 necessary support units and 18 reviewed
-aliases retain their exact mappings. No actual DEV score, TEST inference,
-selection lock or generation is claimed.
+unfinished. All fourteen new retained questions map to included bodies. The 58
+DEV items, 76 declared spans, 62 necessary support units and 18 reviewed aliases
+retain their exact mappings. No actual DEV score, TEST inference or selection lock.
 
-This batch embedded fourteen new questions in one local model process and one
-forward batch, reusing old vectors. Review read 70 targeted historical texts,
-64 unique neighboring QAs and 20 changed active-neighbor relationships, plus
-32 corpus gap windows. Fifty template matches were examined in bounded windows.
-Acquisition used 13 successful source/legal/sitemap GETs (1,659,460 body bytes),
-two separate unsuccessful robots preflights and three web discovery calls.
-There were no paid calls, downloads or subagents. The completed audit was reused
-after execution recovered from a usage-limit interruption; remaining quota is unknown.
+This batch embedded fifteen new questions in one local process and one forward
+batch, reusing 3,373 candidate and 44,581 historical vectors. Review read 71 short
+historical records in full; one 650,269-character Medicare manual was examined
+through targeted windows and its relevant calculation section, not read in full.
+It also covered 33 neighboring QAs, ten changed active relations, 37 corpus gap
+windows and eleven template counterpart QAs. Automatic scores do not override
+content review. CDCP acquisition used five GETs (153,359 body bytes) and one web
+discovery. Separate Alberta/ICBC policy preflights used six GETs (632,949 bytes)
+and one web discovery; rights restrictions stopped both before business pages.
+No paid calls, downloads or subagents. Remaining quota is not observable.
 
-Usage correction preserved: stage217's 19 vectors used one model process and
-two forward batches (16 plus 3). Its numeric provenance already recorded two;
-earlier prose and a parent milestone incorrectly said one. Original hash-bound
-records are preserved with a local erratum; no model was rerun for this correction.
+Usage corrections preserved: stage217's 19 vectors used one process and two
+forward batches (16 plus 3). Stage234 inherited an incorrect discovery count
+from a template; its actual web discovery count was zero. Original records are
+preserved with local errata. No model rerun was needed for either correction.
 
 Code is unchanged since the 534 tests plus 58 subtests regression run. Fresh
-item validation and support mapping passed; global count and task-quota gates
-still fail. Content review is Codex review, not human or expert adjudication.
+item validation and support mapping passed; global count and task quotas still
+fail. Content review is Codex review, not human or expert adjudication.
 Raw sources, individual QA, annotations and weights remain local.
 
 Review ledgers are deltas: absence from the latest ledger does not release an

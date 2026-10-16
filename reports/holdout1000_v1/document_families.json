@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T15:03:36.727777+00:00",
+  "updated_utc": "2026-10-16T15:41:06.635335+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1477,6 +1477,21 @@
         "stage229_source_decisions.json"
       ],
       "review_record_sha256": "f12e681e10fb00d4e2195487778312be91072e13ac728f3721710f2f01705784"
+    },
+    {
+      "family_id": "family235_canada_dental_care_plan",
+      "document_ids": [
+        "1c16f0fc5bab735e8859c192",
+        "270217fc909ce19e885eca53",
+        "8f301f46e0fc572505c86aa8",
+        "f047b19e427540e28cc00cf9",
+        "fea158e6f8540b7792a7da7a"
+      ],
+      "relation": "All five Canadian Dental Care Plan consumer pages in one conservative family: shared eligibility, tax-slip review and renewal prose. No page-by-page family inflation; same legacy publisher retained.",
+      "local_review_records": [
+        "stage235_source_decisions.json"
+      ],
+      "review_record_sha256": "bed130bf5c24c260b4fcbbec6e1ea0eb327f984359d9011a8fab100cad38a362"
     }
   ],
   "document_text_sha256": {
@@ -2064,7 +2079,12 @@
     "b9f18e23bba3b463cfcf7f5e": "c82c71cf7d0ed8f3d6a301c62835274b3e2360ab5296d6764e36e1c1da82b5a7",
     "c6c7ceb21c52eea17524ffe9": "69a0be3662283a5a476006cc4bb5b92885019fb950af1af9af707d4c0b7a5bfa",
     "ca7382f3d9f1703971e68b84": "9d31cd5c120a4b3a036a973640093fc873241c66c85736d5c283493d83cfb1d1",
-    "ed5f79a86b6b8c77558233d0": "024c05fac999a641d714a3b20e744d280be73e85f354a77c09751d51aef44666"
+    "ed5f79a86b6b8c77558233d0": "024c05fac999a641d714a3b20e744d280be73e85f354a77c09751d51aef44666",
+    "1c16f0fc5bab735e8859c192": "087679dcc0d37f498ad404ee4db8c2db8bf5fb8118dbe35ff690a04ba1d424c4",
+    "270217fc909ce19e885eca53": "ee8fea06d5549d0302710b6e02324134dd18f60243e864c37f5efb828a53d375",
+    "8f301f46e0fc572505c86aa8": "faf6bbd883d3eed4a52f8c04892993ec32d0b6954081f425b35920d100a3c91d",
+    "f047b19e427540e28cc00cf9": "77324dd43d0c9ecc717a7e7d1ee7115adac88857cb27a3c8c81eeac3914cc634",
+    "fea158e6f8540b7792a7da7a": "fc809f740ae6f02dbee0493a7d7d176dd592ea893df0181f8b66a7ed4b8b7f90"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
