@@ -12,36 +12,38 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage273](stage273_progress.json): **958 provisional
+The latest checkpoint is [stage278](stage278_progress.json): **958 provisional
 TEST and 57 DEV across 178 TEST families**. **Accepted counts remain zero;
 the dataset is not frozen.** Another 42 independent TEST are needed: 18 ordinary,
-4 numeric, 10 multi-evidence and 10 refusal. TEST questions and quotas are unchanged.
+4 numeric, 10 multi-evidence and 10 refusal. Questions and quotas are unchanged.
 
-All 58 former DEV question/answer records and their declared support or refusal
-contexts were read. One employer reporting/notification question was withdrawn
-because its primary task was corporate administration. It was not rewritten.
-The remaining 57 DEV retain their answers and evidence: 46 answerable items,
-11 refusal contexts, 75 declared spans, 61 necessary units and 18 reviewed
-Spanish alternatives. Eleven numeric results, including a multi-evidence
-calculation, were independently recomputed. This content check does not establish
-global historical independence or authorize DEV inference.
+Another 40 complete cached bodies were reviewed. A separate reconciliation
+found that six early third-party-source permission holds had not reached the
+central document registry. One of those pages was later incorrectly included
+in the corpus. All six holds are now restored, the one included chunk is removed,
+and five pending sources are excluded. No active TEST or DEV item used these
+sources. Six unchanged raw/text hashes bind the reused original content review.
+No new permission was inferred from the state-agency hosting location.
 
-A literal full-support scan across 1,426 sources found five cross-document
-leads. Seven complete source bodies were compared. No alias was added: identical
-wording on a different product page or an excluded source does not establish
-equivalent support for the question's scope. Global semantic alias review remains
-unfinished; previously held sources and questions remain held.
+The corpus now has **411 included, 252 excluded and 763 pending** across 1,426
+documents, with 816 partial chunks. Full TEST declared-span mapping is
+**420 complete and 538 pending**. These are offset checks, not benchmark acceptance.
+All 57 DEV, 75 declared spans, 61 necessary units and 18 reviewed Spanish
+alternatives keep their mappings. The 127-ledger chain, inherited item holds and
+current declared DEV/TEST family separation were rechecked. Global semantic
+alias, source-family and historical review still block actual DEV inference.
 
-The corpus remains **390 included, 234 excluded and 802 pending** with 795
-partial chunks. Full TEST declared-span mapping is **416 complete and 542 pending**;
-these counts do not establish semantic gold-unit completion or acceptance.
+The historical scan found 184 hold records in 108 source-decision files; all
+46 mentions of currently included sources were read. Remaining pending/excluded
+and freeform records need further reconciliation. Task-level duplication or cap
+notes do not automatically exclude a source or release any held question.
 
-This checkpoint used no new vectors, model forwards or source/network calls.
-Code remains covered by 553 tests plus 58 subtests; the preceding exact commit
-c68766a passed all five CI jobs. Fresh item and DEV mapping checks passed.
-No actual DEV/TEST evaluation, selection lock or final metrics are claimed.
-Review is sequential Codex content review, not human or expert adjudication.
-Raw sources, individual QA, annotations and weights remain local; PR8 stays draft.
+This checkpoint used no new vectors, model forwards, source/network calls or
+paid APIs. Code remains covered by 553 tests plus 58 subtests; fresh source,
+item, lineage and mapping checks passed. No actual DEV/TEST evaluation, selection
+lock or final metrics are claimed. Review is sequential Codex content review,
+not human or expert adjudication. Raw sources, individual QA, annotations and
+weights remain local; PR8 stays draft and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

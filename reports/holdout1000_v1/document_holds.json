@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-05T22:20:12.094943+00:00",
+  "updated_utc": "2026-10-16T19:04:43.359924+00:00",
   "scope": "Additional document-level conservative holds; existing triage exclusions still apply. Holds are not claims every passage is false. No held page is cleared by low similarity or an individually plausible answer.",
   "documents": {
     "1056fbb935fe0e7ae00642b4": {
@@ -1042,6 +1042,72 @@
       "review_record_sha256": "263fd7e8b60881979c38c07ea194bda7db19803785c105b4ad7d4e6194c000f7",
       "primary_verification_urls": [],
       "status": "hold_pending_explicit_resolution"
+    },
+    "2e1ee028d649da165f392bde": {
+      "publisher": "wisconsin_oci",
+      "reason": "THIRD_PARTY_AUTHORED_SCOPE: Wisconsin and Utah explicitly credit NAIC; Alabama cancer pages reproduce substantive sections. State-agency original-content approval does not establish permission for these pages.",
+      "local_review_record": "stage277_rights_hold_reconciliation.json",
+      "review_record_sha256": "6c1d5310659434de062acfa07fe6c187e59f8360b21baef1f40fbc1f312a5873",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution",
+      "original_review_sha256": "a34c3665d2f53f510bf82a52ddd589019ccf495ca89c75303f4a20595a736ba3",
+      "source_sha256": "af6d13124442a986b6dd2186494e586d798ba1b0621162ab080938fc073bd141",
+      "text_sha256": "a889c413febb2b1477c473bc7f39e0e1832f0dcc99b7248dbca1d658169b79a7"
+    },
+    "558655870a9d923043900aca": {
+      "publisher": "alabama_doi",
+      "reason": "THIRD_PARTY_AUTHORED_SCOPE: Wisconsin and Utah explicitly credit NAIC; Alabama cancer pages reproduce substantive sections. State-agency original-content approval does not establish permission for these pages.",
+      "local_review_record": "stage277_rights_hold_reconciliation.json",
+      "review_record_sha256": "6c1d5310659434de062acfa07fe6c187e59f8360b21baef1f40fbc1f312a5873",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution",
+      "original_review_sha256": "a34c3665d2f53f510bf82a52ddd589019ccf495ca89c75303f4a20595a736ba3",
+      "source_sha256": "14bcfbcd414b6f7f2413b3d2393eee8da63a22cd4b149359b124d7ac0fd3e196",
+      "text_sha256": "b824dd11f5f89146a05078315554d77c96a380b720123b7e87b0622109a47990"
+    },
+    "05f2c62ffd1fbd93c008e5e7": {
+      "publisher": "alabama_doi",
+      "reason": "THIRD_PARTY_AUTHORED_SCOPE: Wisconsin and Utah explicitly credit NAIC; Alabama cancer pages reproduce substantive sections. State-agency original-content approval does not establish permission for these pages.",
+      "local_review_record": "stage277_rights_hold_reconciliation.json",
+      "review_record_sha256": "6c1d5310659434de062acfa07fe6c187e59f8360b21baef1f40fbc1f312a5873",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution",
+      "original_review_sha256": "a34c3665d2f53f510bf82a52ddd589019ccf495ca89c75303f4a20595a736ba3",
+      "source_sha256": "856f30fbf06f90c24292bf975de8ebe744a326d038af558456712f04c3790890",
+      "text_sha256": "47825f82d0b8113d5cf5e0543c59c878dfb73cf1c63effe372211d37d88fb6f8"
+    },
+    "352a59a55b41a49237159f0b": {
+      "publisher": "alabama_doi",
+      "reason": "THIRD_PARTY_AUTHORED_SCOPE: Wisconsin and Utah explicitly credit NAIC; Alabama cancer pages reproduce substantive sections. State-agency original-content approval does not establish permission for these pages.",
+      "local_review_record": "stage277_rights_hold_reconciliation.json",
+      "review_record_sha256": "6c1d5310659434de062acfa07fe6c187e59f8360b21baef1f40fbc1f312a5873",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution",
+      "original_review_sha256": "a34c3665d2f53f510bf82a52ddd589019ccf495ca89c75303f4a20595a736ba3",
+      "source_sha256": "afa81025507170850d5e1e6d727ae8f36be3d7c684ff8acf34ed2eff87b1799c",
+      "text_sha256": "8eae80e54132ed806b7ab9f8b08efd862d0f38b5bbba9a0c8e99138c24a283c6"
+    },
+    "c624ca04ea566ca713728ea0": {
+      "publisher": "alabama_doi",
+      "reason": "THIRD_PARTY_AUTHORED_SCOPE: Wisconsin and Utah explicitly credit NAIC; Alabama cancer pages reproduce substantive sections. State-agency original-content approval does not establish permission for these pages.",
+      "local_review_record": "stage277_rights_hold_reconciliation.json",
+      "review_record_sha256": "6c1d5310659434de062acfa07fe6c187e59f8360b21baef1f40fbc1f312a5873",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution",
+      "original_review_sha256": "a34c3665d2f53f510bf82a52ddd589019ccf495ca89c75303f4a20595a736ba3",
+      "source_sha256": "8011a3452d4fd31d8f5a56e14d0cf0ee4debcbd2577440c545f2b6454b5551a8",
+      "text_sha256": "7f87f4c8d31c8d78edec941d65c84c83b7d84428d2d0b45643992a47ce9f51c6"
+    },
+    "cedc97a5a17c05d0a89bf44c": {
+      "publisher": "utah_uid",
+      "reason": "THIRD_PARTY_AUTHORED_SCOPE: Wisconsin and Utah explicitly credit NAIC; Alabama cancer pages reproduce substantive sections. State-agency original-content approval does not establish permission for these pages.",
+      "local_review_record": "stage277_rights_hold_reconciliation.json",
+      "review_record_sha256": "6c1d5310659434de062acfa07fe6c187e59f8360b21baef1f40fbc1f312a5873",
+      "primary_verification_urls": [],
+      "status": "hold_pending_explicit_resolution",
+      "original_review_sha256": "a34c3665d2f53f510bf82a52ddd589019ccf495ca89c75303f4a20595a736ba3",
+      "source_sha256": "41c62fe3e499912290456e5a4290e82a9a1450d374583942e792ad67004cc3e7",
+      "text_sha256": "d83459b3a815b68f7ada364464969e115dd561eac19715d2958548d1fa7d36f5"
     }
   },
   "proposal_metadata": {
