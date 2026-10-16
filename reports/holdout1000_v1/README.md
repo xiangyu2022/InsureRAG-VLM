@@ -12,23 +12,25 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage167](stage167_progress.json): **782 provisional
-TEST and 58 DEV across 159 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Stages155 and164 retained eleven independent tasks:
-eight ordinary, two multi-evidence and one numerical. Another218 independent
-TEST are needed:114ordinary,34numeric,37multi-evidence and33refusal. All prior
-holds remain; related Wisconsin complaint sources were conservatively merged.
+The latest checkpoint is [stage175](stage175_progress.json): **790 provisional
+TEST and 58 DEV across 161 TEST families**. **Accepted counts remain zero; the
+dataset is not frozen.** Stages168 and172 retained eight independent tasks:
+four ordinary, one numerical, one multi-evidence and two refusal questions.
+Another210 independent TEST are needed:110ordinary,33numeric,36multi-evidence
+and31refusal. A driver-exclusion draft was held after content review found its
+core in historical material, despite passing automatic similarity thresholds.
 
-Count reconciliation: stage154 recorded771 TEST; stage155 added3 and stage164
-added8. DEV stayed at58. Historical checkpoints are not additive.
+Count reconciliation: stage167 recorded782 TEST; stage168 added6 and stage172
+added2. DEV stayed at58. Historical checkpoints are not additive.
 
-The source-only corpus draft has147included,136excluded and1,061pending sources.
-Its304chunks preserve every included primary-text character. Reviewed complete
-table rows can carry exact source-header copies, whose provenance is checked
-and whose content counts toward512tokens and2,400characters. Retrieval consumes
-that rendered context. Copies do not automatically become gold support aliases.
-Existing chunks are reused when inputs and structure are unchanged. Unreviewed
-sources remain pending; they are not excluded to obtain DEV scores.
+The source-only corpus draft has173included,136excluded and1,035pending sources.
+Its390chunks preserve every included primary-text character. A41row benefit
+table retains complete rows and exact source title/column headers. Two RRB
+article roots were reconciled to canonical text, and complete list members
+retain exact source introductions. Copied context counts toward512tokens and
+2,400characters; it does not automatically become a gold support alias.
+Unchanged chunks are reused. Unreviewed sources remain pending and are not
+excluded to obtain DEV scores.
 
 All58DEV items and76declared spans map by offsets. The62necessary units for47
 answerable cases and18Spanish aliases retain their exact chunk sets;11refusals
@@ -36,13 +38,14 @@ have gap-context diagnostics only. Global alias and whole-DEV clearance remain
 unfinished. No actual DEV score, TEST inference, selection lock or generation
 is claimed.
 
-This checkpoint used eleven new curation vectors in two sequential batches;
+This checkpoint used nine new curation vectors in two sequential batches;
 old vectors and44,581historical question vectors were reused. There were no
-new source requests, paid APIs, model downloads or subagents. Code passed534
-tests plus58subtests; the retained pool was freshly validated. One invalid draft
-task enum was corrected before validation without changing its audited question,
-answer or evidence. Sources, individual QA, annotations and weights remain local.
-PR8 remains draft and unmerged; exact-commit CI is checked after publication.
+new source requests, paid APIs, downloads or subagents. Code is unchanged from
+the534test plus58subtest regression; the retained pool was freshly validated.
+Two old automobile-question insurance-type labels were corrected without
+changing question, answer, evidence, task or ID. Original audit drafts remain.
+Sources, individual QA, annotations and weights remain local. PR8 stays draft
+and unmerged; exact-commit CI is checked after publication.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

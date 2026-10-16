@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T05:37:24.194192+00:00",
+  "updated_utc": "2026-10-16T06:18:58.372136+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1287,6 +1287,43 @@
         "stage164_source_decisions.json"
       ],
       "review_record_sha256": "f17357fbd0aa06addaeec9fcac20a9d55e6d30efa7281b52f704be56e134363d"
+    },
+    {
+      "family_id": "family168_tricare_medical_retirement_status",
+      "document_ids": [
+        "316f4cc88c3450b936433cad",
+        "cdf360252557112b64a2d48a",
+        "52f27a7b6e1be3e9ad43854d"
+      ],
+      "relation": "Medical-retirement status chapter, retired-beneficiary eligibility and parent retirement guide conservatively one family, including existing retirement/Guard closure transitively. Generic plan-menu and age-out links alone do not create a new family.",
+      "local_review_records": [
+        "stage168_source_decisions.json"
+      ],
+      "review_record_sha256": "b0a460cefa3bd63e88e0cf9af78824fec0183b104d49367055f0c136b35373b3"
+    },
+    {
+      "family_id": "family168_tricare_prime_fee_payment",
+      "document_ids": [
+        "33284f4b80d49752a1beeced",
+        "cf0169f30be0269f9a544acc"
+      ],
+      "relation": "Two Prime fee pages repeat substantive three-month setup collection rule. Conservative bridge to existing Medicare/cost family; cap checked after merge.",
+      "local_review_records": [
+        "stage168_source_decisions.json"
+      ],
+      "review_record_sha256": "b0a460cefa3bd63e88e0cf9af78824fec0183b104d49367055f0c136b35373b3"
+    },
+    {
+      "family_id": "family168_tricare_bill_cost_explanations",
+      "document_ids": [
+        "bdfe1ba1c7eb383d0f5b4418",
+        "a6c22196495fec67e0d6af80"
+      ],
+      "relation": "Complementary cost/payment explanatory pages sharing fraud-alert paragraph; conservatively one family despite EOB content occurring only in payment page.",
+      "local_review_records": [
+        "stage168_source_decisions.json"
+      ],
+      "review_record_sha256": "b0a460cefa3bd63e88e0cf9af78824fec0183b104d49367055f0c136b35373b3"
     }
   ],
   "document_text_sha256": {
@@ -1774,7 +1811,28 @@
     "167b1305458aa2b8ff02a154": "55797dad2c17c7a9780cbfecace5093d2d1df09d37ab586fef571fd1a17f6b24",
     "0acc9a8041d821d6733c0774": "172fecee145f8bacb2c1cc684fad529915acb8bf848b0083076f0c58aba2dc21",
     "cd2c463bce55484be96558eb": "d81d71a30e79e9cdecc7a1d27d9c0d93e72e1957677c09335d36625bf2a90439",
-    "9b768a2fc5c0f7544bbb7890": "6e8b4fd6f2b52a258192247584a04cb42cda294feda6888cde86760913d2444c"
+    "9b768a2fc5c0f7544bbb7890": "6e8b4fd6f2b52a258192247584a04cb42cda294feda6888cde86760913d2444c",
+    "6629b35bc398fae360feda7a": "60d46587c983c0e77b614992a14f55c4c66c5ecbd81e48c0d609e0181a618471",
+    "56fff22c93926d359796205c": "2538f3f9a9eb0f907122d3b4d2895c2bb4b176d9f2723bbca54e2d2a8718bdd5",
+    "316f4cc88c3450b936433cad": "f0085fc758c8ae044efcd563f7fba07691a5309f104f739866f9ae10d8a0f7c3",
+    "33284f4b80d49752a1beeced": "375c72a248aac86156ddbbefadcbff3a631471df3243d9d6f2081035efcbd7fb",
+    "bdfe1ba1c7eb383d0f5b4418": "495e102453ccb7b295d0f987159e35c884854f795c1d094ed196e73653faff4f",
+    "7edd7a0653c1d6abd0418270": "8b77546a1596082ebac164f85a984a2837f0894965fb2c0a6de4b7f446ef25f3",
+    "f9d22168ff1b207add41ccc3": "ed549838c3c3056d57d34b4a9d5c34d97d9332aa1f0b70eb8621f3d4f4f63e01",
+    "6be1ac98b2fff6b2bea4b1e6": "c6a2a4f0c075d59e8e962eb30620467672408ffc7904056f65540102977941b4",
+    "9f2c77544b58fc8261b8cf6b": "c7c765bcde759e1ecbf67ed0664e00f79c712e44b305ae90a1bc452859310d79",
+    "cd5020b88086ff95cf2f4ae4": "142f01520d4960eb1da1330380ce3435f68b03e17cb317e78839a08eb2b4edd8",
+    "cdf360252557112b64a2d48a": "1fe25af22dfb8a4b718e67c41a18c175c509fff97ba8de0e37e1028f2b92437a",
+    "839d23d7b8826988cc8fbbf5": "1070c905663c4a535b7ab99358af223a23abe819ae9188ce814b386d4cad6212",
+    "e6eba4e8e3bd930d08c63baa": "fcde630128a8262560c246cef2cc6e0c583fbe3bb885349093c3e697c2a944e2",
+    "3055d45daa24347c64edff38": "61e7ea51203755fcece6c9782249d83cfd46bb6a91392e412cae0aa1a16142a9",
+    "f2c82d08bd69040eea282381": "b0a7c88072b8436673a7777c99a9b0794d6962e1dead3b6abf5434d5c672898b",
+    "7c9bd379cffa75cb0622f7dc": "4d3f268b53b8ff814ff4691b1f9bf3998725085855f001eb726b2b2b1b986ffa",
+    "6431273cda22da3c07cdff1f": "d8730ab576a5b620695dbd41136f65d1214431dfbd5fda9b392bb8ca6a23fde7",
+    "f6fdd7c36f8e2309c405afe7": "994c1386c26b6abf90a53ee5f93399bc8552e9714c0f409312404248dccd730b",
+    "9a11c1b7fa742bd094242c9e": "abb99c5f1763e4d94cce8606cef7436efffe9a5bb914aac0779e43150d71bdfe",
+    "86d46b775135c750f659b580": "97c4b045de39da2345e2f920c177403c79dcb0b6f0753bbf0839beab24bf69c1",
+    "1f9a49cfeaea8b72252aff97": "5e4ba3afde725a43286a6c30030a507b802f36d3d189eff50d767c62c147797d"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
