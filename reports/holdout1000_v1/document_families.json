@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T04:14:05.482341+00:00",
+  "updated_utc": "2026-10-16T04:50:20.732770+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1248,6 +1248,18 @@
         "stage132_source_decisions.json"
       ],
       "review_record_sha256": "dd8d90f075ac0bf880492c2151e8bf47ed465763ac7795aa4ae5b607e35f7741"
+    },
+    {
+      "family_id": "nc_provider_complaint_preparation_v1",
+      "document_ids": [
+        "3dee436ac13b1d5a0059c5aa",
+        "7150d9a9d15533f8f600a5b5"
+      ],
+      "relation": "Two distinct official complaint guidance pages jointly required by a cross-document provider complaint task; conservatively isolate as one connected evidence family.",
+      "local_review_records": [
+        "stage151_source_decisions.json"
+      ],
+      "review_record_sha256": "8a7dcc1fbb983449fccaebf076ef8165d32df35d159545140f1c790d7ffda636"
     }
   ],
   "document_text_sha256": {
@@ -1710,7 +1722,16 @@
     "5c83017175398e2a3dd4abea": "387143a1a5f5b323f07236827c964696571eb7dff36132ac08fea808e7a7223a",
     "1f0a806b0e4d6020cfb470f5": "8bb4c97c08d93b2be61941a6480f4581f231e30294905123c77c2771c1901808",
     "48ef79222ae1d23547fa177c": "4ff0c2ffd2f5123cf35f90175a87b9da252f299d9c5ed0fe3cebadd6691ce8a4",
-    "3b6a618df00aa06ac55e0368": "6ddc857dc533e720c3d469ea3d33e7f9731a6de619501ec35a912a2fcd249bc7"
+    "3b6a618df00aa06ac55e0368": "6ddc857dc533e720c3d469ea3d33e7f9731a6de619501ec35a912a2fcd249bc7",
+    "4dfda179d8e37b5bff61578e": "717f36b7fdefb3eb96e6c8844c5151a364a1e98a0cfae94b5a1097c9f9350efb",
+    "3dee436ac13b1d5a0059c5aa": "c538b147831717b37a390e9ea5f2441d9e585c815e4dc5e537852fc3e3c8a8c0",
+    "3f262ed4a8b43bdd4fe1e456": "eaaf079c339c610f46cfc509f764ec9e3d1fcc2a54d7790953ac904708bc8145",
+    "7150d9a9d15533f8f600a5b5": "b3b62adcdcd5eb4fcb53c1e8105492d7beb6551eb676cd89fee227ce8dfcb7c8",
+    "710e9827b79c8b2301e10360": "620b8495767b5ef289380113f5a6f60370051aae40eb55b8af4db476a7c0fe50",
+    "7f487b48af4f48ac91c25473": "3826e27af46b41e70112599b684703db3c5a4f9f94272effdbde38bbe84a3038",
+    "8439e01cd4b78d9d8a379c0f": "d0153e6403b5aa467b284ded2f531dd0eca73dec0b00cedb8589d6c9d1d03e34",
+    "9170d63b66ca9709ccb7d143": "15daead89a1fda2f6747e08043d19eb237d1e5eafc1db10db9ee348340e5a678",
+    "8c041cdd728c0816bcff7701": "c44c16df5f8aa54ec74935f08e4a83a039ff4a2a86c2cc34b0cf5b26bc66a8e8"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
