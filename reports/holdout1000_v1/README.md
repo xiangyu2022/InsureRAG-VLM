@@ -12,48 +12,45 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage246](stage246_progress.json): **939 provisional
-TEST and 58 DEV across 176 TEST families**. **Accepted counts remain zero; the
-dataset is not frozen.** Stage244 retained four numeric and two refusal questions
-from eleven drafts. Five were held for historical core overlap, a duplicate
-global candidate, or overlapping formulations within the batch. Automatic
-no-match results alone were not treated as independence clearance.
+The latest checkpoint is [stage252](stage252_progress.json): **941 provisional
+TEST and 58 DEV across 177 TEST families**. **Accepted counts remain zero; the
+dataset is not frozen.** Stage250 retained one multi-evidence and one refusal
+question from thirteen drafts. Eleven were held for historical/global core
+overlap or failure to fit consumer insurance decisions. Existing administrative
+and model-development holds were preserved. Source selection now checks prior
+same-source candidate holds before authoring, in addition to document holds.
 
-Another 61 independent TEST are needed: 26 ordinary, 11 numeric, 13 multi-evidence
-and 11 refusal. Original quotas, family cap and all prior holds remain, including
+Another 59 independent TEST are needed: 26 ordinary, 11 numeric, 12 multi-evidence
+and 10 refusal. Original quotas, family cap and all prior holds remain, including
 the original 15 historical revocations and two stage215 scope revocations.
 Historical checkpoints are not additive.
 
-The source-only corpus has 278 included, 158 excluded and 981 pending sources
-in a 1,417-document snapshot, with 664 partial chunks. The complete cached New
-York Partnership body was included and joined its existing LTC document family.
-All 663 previous chunks are unchanged. All six newly retained questions map to
-included sources; two earlier PSHCP questions still await whole-source disposition
-of the active-member page. That page remains wholly pending because its disability
-claim timing sentence needs clarification; no convenient subsection was admitted.
-Item gates and final corpus readiness remain separate requirements.
+The source-only corpus has 279 included, 158 excluded and 980 pending sources
+in a 1,417-document snapshot, with 665 partial chunks. The complete TRICARE
+activation page was included; all 664 previous chunks are unchanged. One new
+question maps to it. The DMLR directory remains wholly pending because its bill
+citation differs from its parent overview. Its missing-ratio refusal passes
+item gates but is not globally accepted. Two earlier PSHCP questions also await
+whole-source disposition. No convenient subsections were selectively admitted.
 
-The 58 DEV items, 76 declared spans, 62 necessary support units and 18 reviewed
+All 58 DEV items, 76 declared spans, 62 necessary support units and 18 reviewed
 aliases retain their exact mappings. Whole-source dispositions, global aliases
 and whole-DEV clearance remain unfinished. No actual DEV score, TEST inference
 or selection lock is claimed.
 
-This cache-only batch read six complete bodies and embedded eleven new questions
-in one local process and one forward batch, reusing 3,404 candidate and 44,581
-historical vectors. All 49 targeted historical records were read in full. The
-focused history scan covered six short records in full and targeted windows of
-two long records; those long records were not claimed as fully read. Review also
-covered 19 nearest QAs, 29 additional QAs in 21 changed active relations, and
-32 corpus-gap windows. Twenty additional template QAs were read and five earlier
-reads reused. A focused search URL spelling error was documented; the actual
-candidate URLs were independently checked by the exact audit.
+Stages247-250 reviewed fifteen complete cached bodies and embedded thirteen new
+questions in one local process and one forward batch, reusing 3,415 candidate
+and 44,581 historical vectors. Review covered 63 full targeted history records,
+34 nearest QAs, 22 additional QAs in 11 changed active relations, 30 template
+QAs and 20 corpus-gap windows. One browser call with two queries found no usable
+authoritative evidence; there were no source GETs in that reviewed batch.
 
-There were no new source requests, browser discovery calls, paid APIs, model
-downloads, proxy/security changes or subagents. Remaining quota is not observable.
-Code is unchanged since the 534 tests plus 58 subtests regression run. Fresh
-retained-item validation and DEV mapping checks passed; global gates remain unmet.
-Content review is Codex review, not human or expert adjudication. Raw sources,
-individual QA, annotations and weights remain local. PR8 stays draft and unmerged.
+There were no paid APIs, model downloads, proxy/security changes or subagents.
+Remaining quota is not observable. Code is unchanged since the 534 tests plus
+58 subtests regression run. Fresh item and DEV mapping checks passed; global
+gates remain unmet. Review is Codex review, not human or expert adjudication.
+Raw sources, individual QA, annotations and weights remain local. PR8 stays
+draft and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

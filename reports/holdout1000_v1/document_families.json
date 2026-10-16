@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T16:48:05.942287+00:00",
+  "updated_utc": "2026-10-16T17:15:21.510520+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -223,9 +223,16 @@
       "family_id": "family01_exact_679b65b075cfb62289ec5486",
       "document_ids": [
         "679b65b075cfb62289ec5486",
-        "df3f7a948667c5d31ee6fa37"
+        "df3f7a948667c5d31ee6fa37",
+        "abb1d16cd0f3dcfbb3c4f2e0"
       ],
-      "relation": "normalised_complete_body_duplicate"
+      "relation": "Two exact Special Health Topics aliases and linked dentalMLR directory share same report-requirement summary. AB1932/AB1962 citation inconsistency remains explicitly unresolved; no statutory-number question retained.",
+      "local_review_records": [
+        "stage250_source_decisions.json"
+      ],
+      "extension_review_sha256": [
+        "f562bbf078dd8b6bfc1a041f54a9bcd72620ddd93cf5bfa4b5363c77a98fa022"
+      ]
     },
     {
       "family_id": "family01_exact_c1c18c447ec948d170a8dd78",
@@ -746,13 +753,18 @@
       "family_id": "family_tricare_deactivation_benefits",
       "document_ids": [
         "cb39a916736289e894a44290",
-        "629f187ac13306fe68d5f126"
+        "629f187ac13306fe68d5f126",
+        "8b66ad203d99afd50d1e5c4e"
       ],
-      "relation": "Substantive same-program versions covering TAMP, TYA and resumed dental benefits; conservative family.",
+      "relation": "Same reservist activation/deactivation benefit transition; member/family dental treatment grouped conservatively.",
       "local_review_records": [
-        "stage24_source_decisions.json"
+        "stage24_source_decisions.json",
+        "stage250_source_decisions.json"
       ],
-      "review_record_sha256": "a76b65a71061bb44b3355f72f88974389a7db2a5e9739b1bba5b3aa66b92255c"
+      "review_record_sha256": "a76b65a71061bb44b3355f72f88974389a7db2a5e9739b1bba5b3aa66b92255c",
+      "extension_review_sha256": [
+        "f562bbf078dd8b6bfc1a041f54a9bcd72620ddd93cf5bfa4b5363c77a98fa022"
+      ]
     },
     {
       "family_id": "family_wi_mental_substance_mandates",
@@ -2112,7 +2124,16 @@
     "5816adf2928aadcf5c155819": "da395f04f7c41f257fefdf7cff5ea463e19f2ad95d3daff5977ec3c9f873d4d4",
     "961d386736411c690a694232": "1b5b0286d14aa0829269612367ab015cae1abc6fa2711334d4ee95afe39c73dc",
     "b887f7594d435c9055fd23ce": "7b296caf5196b4d534df87d05efee2863e5c94885f86b3b64d70af4005420735",
-    "218094e878e71280e41b391b": "d5e98211b881229645f2ae518cfb960b4a938698dd3aa160fc37a42c925e359d"
+    "218094e878e71280e41b391b": "d5e98211b881229645f2ae518cfb960b4a938698dd3aa160fc37a42c925e359d",
+    "dc0e4f4f9695933f44a1f9e3": "74460a2644cf927ed55d305803f867ce1c5426fd0efe7903d707bc109ce50e30",
+    "1b029bc8640397feb42d6539": "160431b1c1ab009c0890928188f48294eb46c2dd9d02003da869ce3678a512de",
+    "d153ad8e8ba65aac369c682f": "a3b36f5b36cc96a1dc54391032784e76469f5fbbc4a4c80dc4bdcf42e00a3864",
+    "6829d2f53231919d263d6afe": "cc917ad0730ee62327c6a4cecd7d6ea561cee29e10513b796f22c46c21d07349",
+    "8b66ad203d99afd50d1e5c4e": "5e831d2e5b3a61689e18c379f508f4662f5a7eccd1a96670e8dffd87c43bddd8",
+    "ce9965865973dcdcf0a5418a": "f29b96e2fb8db85853f0d51eeab5566c59659bab27e436503ac830513a2b7480",
+    "abb1d16cd0f3dcfbb3c4f2e0": "13b73fb5845171795979fd966d7dbc7bf48b79b1d2e92eba735ff4827f4a464e",
+    "ede68bfd77f05d28e61b7d32": "615ef9bf11eda66e86f0e55e4bd3f2f2070fc6d7f98c80f89f8baae2c6c91eda",
+    "b9e1bbe88ad82c7cb5a0d457": "7869d08110eba6ac31507296630356b5e5b5ab7265f920b1f304e62a10a3d6fd"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
