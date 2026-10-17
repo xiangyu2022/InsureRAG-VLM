@@ -1,0 +1,64 @@
+{
+  "created_utc": "2026-10-05T22:08:44.403143+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "supersedes": "stage19_progress.json",
+  "provisional_item_gate_counts": {
+    "test": 303,
+    "dev": 42
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_document_families": 100,
+  "scope_revision": {
+    "prior_items_revoked": 1,
+    "affected_publisher_task_stratum_reviewed": 7,
+    "other_items_retained": 6,
+    "reason": "One insurer corporate filing task falls outside established consumer insurance scope."
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "dev_task_count_below_target:insufficient_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ]
+  },
+  "test_task_counts": {
+    "ordinary_qa": 217,
+    "insufficient_evidence": 20,
+    "multi_evidence": 33,
+    "numerical_calculation": 33
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 9,
+    "multi_evidence": 6,
+    "numerical_calculation": 6
+  },
+  "remaining_test_questions": 697,
+  "usage": {
+    "new_vectors": 0,
+    "new_model_runs": 0,
+    "new_source_requests": 0,
+    "new_agents": 0
+  },
+  "evidence_sha256": {
+    "stage19_scope_reconciliation.json": "69bb952b0dd7c0b0d0d5051c64cec2259f1df11850e9a1998364a974ef989298",
+    "review_pool_23_clearance_ledger.json": "023268dabbdcdfa05d001fda296e27119b54239b241068a9339f40e39d9e69eb",
+    "provisional_item_pool_23.jsonl": "3e15afe754158d60b11c851f681eed31b09c1571973d15b98cdbe414564f2776",
+    "provisional_item_pool_23_validation.json": "e7945b3ee54a560a7a4cadc256205064a02f3c7b18dfa02459378b202da63485"
+  },
+  "limits": [
+    "Prior stage19 count304 is superseded, not additive.",
+    "Historical15 and all earlier holds remain excluded.",
+    "No freeze, final inference or training."
+  ]
+}

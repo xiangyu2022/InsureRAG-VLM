@@ -1,0 +1,102 @@
+{
+  "created_utc": "2026-10-05T15:48:43.848637+00:00",
+  "status": "COMPLEX_CANDIDATE_EXPANSION_BLOCKED_BY_NO_NEW_MODEL_RUN_CONSTRAINT",
+  "provisional_item_gate_counts": {
+    "test": 249,
+    "dev": 40
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "new_items_cleared": 0,
+  "prior_items_revoked": 0,
+  "ledger_reconciliation": {
+    "hash_linked_ledgers_verified": 13,
+    "effective_item_holds": 209,
+    "explicit_same_id_repairs_preserved": 3,
+    "active_pool_hold_conflicts": 0,
+    "stale_complex_candidates_removed_from_review_queue": 18,
+    "stale_complex_by_task": {
+      "numerical_calculation": 9,
+      "multi_evidence": 7,
+      "insufficient_evidence": 2
+    },
+    "remaining_unreviewed_ordinary_candidates_before_other_gates": 1163,
+    "remaining_unheld_unreserved_complex_candidates_in_global22": 0
+  },
+  "test_task_counts": {
+    "ordinary_qa": 196,
+    "insufficient_evidence": 12,
+    "multi_evidence": 22,
+    "numerical_calculation": 19
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 9,
+    "multi_evidence": 6,
+    "numerical_calculation": 4
+  },
+  "test_task_deficits": {
+    "ordinary_qa": 404,
+    "numerical_calculation": 131,
+    "multi_evidence": 128,
+    "insufficient_evidence": 88
+  },
+  "dev_complex_task_deficits": {
+    "numerical_calculation": 6,
+    "multi_evidence": 4,
+    "insufficient_evidence": 1
+  },
+  "test_document_families": 92,
+  "minimum_additional_test_families": 8,
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "too_few_document_groups",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "dev_task_count_below_target:insufficient_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "model_free_dataset_validation_rerun": true,
+    "unit_test_reference": "Stage9 targeted tests: 42 passed. Not rerun for this report-only checkpoint."
+  },
+  "minimum_next_batch_plan": {
+    "status": "PROPOSED_NOT_AUTHORED_OR_CLEARED",
+    "test": {
+      "numerical_calculation": 3,
+      "multi_evidence": 3,
+      "insufficient_evidence": 2
+    },
+    "dev": {
+      "numerical_calculation": 2,
+      "multi_evidence": 1,
+      "insufficient_evidence": 1
+    },
+    "source_priority": "Use unheld, approved cached documents and distinct substantive rules first; preserve publisher split assignments and family caps.",
+    "review": "One review workflow; source-dependent calculation, interacting evidence and realistic private-fact gaps. No changed-number or joined-subquestion inflation.",
+    "audit_requirement": "Changed questions need fresh exact/near/containment and frozen-model semantic history/global-neighbor audits. The current no-new-model-run constraint blocks completing that semantic gate.",
+    "collection": "No source shortfall proven by this candidate inventory. No new acquisition is justified yet; report specific source gaps before minimal authorized public supplementation."
+  },
+  "usage": {
+    "new_source_requests": 0,
+    "new_model_runs": 0,
+    "new_subagents": 0,
+    "new_training_runs": 0
+  },
+  "evidence_sha256": {
+    "stage10_inherited_holds_reconciliation.json": "42567676a3a57c71bdfbeaf8d4cb0c65263a4b03411142d533103bb11e498ab7",
+    "provisional_item_pool_13.jsonl": "6a727ac08c044312d484c7deba974eee19a3916fa472005d31404ffaf4cc67fd",
+    "review_pool_13_clearance_ledger.json": "ec210c5c78a161af5236370b40f098ce60b1141967b110842778aae399ed928b"
+  },
+  "limits": [
+    "This reconciles existing decisions; it does not establish source sufficiency for all remaining quotas.",
+    "All item-level records and source text remain local. Dataset remains provisional and unfrozen."
+  ]
+}

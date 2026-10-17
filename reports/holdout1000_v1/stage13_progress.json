@@ -1,0 +1,108 @@
+{
+  "created_utc": "2026-10-05T17:17:55.268730+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 264,
+    "dev": 42
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 6,
+    "retained": 5,
+    "held": 1,
+    "pass_rate": 0.8333333333333334,
+    "new_test": 5,
+    "new_dev": 0,
+    "retained_task_counts": {
+      "multi_evidence": 2,
+      "numerical_calculation": 2,
+      "ordinary_qa": 1
+    },
+    "hold_reason": "multi-evidence necessity not demonstrated after eligibility approval was stipulated",
+    "prior_revocations": 0
+  },
+  "test_task_counts": {
+    "ordinary_qa": 201,
+    "insufficient_evidence": 14,
+    "multi_evidence": 26,
+    "numerical_calculation": 23
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 9,
+    "multi_evidence": 6,
+    "numerical_calculation": 6
+  },
+  "test_document_families": 99,
+  "net_new_test_document_families": 4,
+  "source_family_groups_added": 1,
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "too_few_document_groups",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "dev_task_count_below_target:insufficient_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "old_active_neighbor_changes_reviewed": 13,
+    "exact_flags": 0,
+    "lexical_flags": 0,
+    "evidence_containment_flags": 0,
+    "semantic_new_history_flags": 0,
+    "same_parent_evidence_edges": 4,
+    "targeted_tests": {
+      "passed": 42,
+      "seconds": 0.29
+    }
+  },
+  "usage": {
+    "base_report_sha256": "47f34817df8957b92a124d2dd4c1e8502c21e1dad284545d3c4f82e2d1c37f81",
+    "base_candidates_sha256": "8703f7b8bf70d5466937bddd2149aaded20159fd4d0a99386f8de5c4714fa8fd",
+    "new_candidates_sha256": "98739f8975e19d25fa8a76725ff465fcf743c3f2357acafd586f8b4f3157d269",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2554,
+    "old_old_pairs_reused": 657,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 6,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "8719a530a233966a20b082f3d776171e7613769c8a2ea749806622c94c4653ff",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests_in_cached_trial": 0,
+    "new_subagents": 0,
+    "new_qa_inference_runs": 0,
+    "lexical_audit_seconds": 299.0026471000165,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage13_final_review.json": "edf3634af1240e11a37f15a14e42bbbd22937b8a8c1d7d066d2ef37914cf657d",
+    "review_pool_16_clearance_ledger.json": "87df8213ee43ed5433bb022b63dc87db3ba28538d15d2e40bae604f225f98ba2",
+    "provisional_item_pool_16.jsonl": "90bdadb07fa9826908bf5c05aab60df917b345d3714e7f5690d7dd11d4faa280",
+    "provisional_item_pool_16_validation.json": "1ceba79eef31f75365c99920b41a80580c5949b4f7ed5cbccde6a1cea00964d3"
+  },
+  "earlier_source_supplement": {
+    "status": "proxy_failure_no_HTTP_response",
+    "attempts": 1,
+    "successful_pages": 0,
+    "second_page_requested": false,
+    "retries": false,
+    "record_sha256": "6cc65adac11e52ecd15f05d4c2ea41436a1168bbacd06c6f688895764b8ce0e9"
+  },
+  "limits": [
+    "Still provisional: TEST/DEV size, task counts and one further TEST family remain below protocol targets.",
+    "No proxy/network-setting change, access bypass, web retry, raw-data publication, training, paid service or merge.",
+    "All source/QA/evidence and item review text stay local."
+  ]
+}

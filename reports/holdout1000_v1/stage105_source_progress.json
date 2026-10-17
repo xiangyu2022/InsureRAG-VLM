@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-10-07T21:06:27.861550+00:00",
+  "status": "SOURCE_ONLY_NO_DRAFTS",
+  "new_candidates": 0,
+  "new_source_requests": 0,
+  "new_source_bytes": 0,
+  "local_model_processes": 0,
+  "accepted_test_items": 0,
+  "frozen": false,
+  "source_selection_sha256": "d7286fca34e9a1f13b9935959af06636253af44cc59b893e9f6a18b0e62079a3",
+  "notes": [
+    "NYsurprisebill full29995character body read. Existing certification,fee,clock,numerical and uninsuredIDR needs preserved. Possible additional consumer exceptions need sourceURL/history/overlap and item audit before drafting; no clearance claimed."
+  ]
+}

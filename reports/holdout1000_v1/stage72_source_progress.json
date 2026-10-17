@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-07T12:30:13.243704+00:00",
+  "status": "SOURCE_ONLY_NO_DRAFTS",
+  "new_candidates": 0,
+  "model_calls": 0,
+  "source_requests": 0,
+  "local_review_sha256": "aba07ce1ab4086b9858d4451b3506a47b5910243fc43ab2aa07eca693d54dc69",
+  "selection_summary": "Existing annuity whole-source hold preserved; related historical lender-payment process requires source-family reconciliation. No draft or quota credit.",
+  "review_limit": "1017broad historical matches scanned; only all15deduplicated annuity windows and10targeted mortgage10day records reviewed. No claim of full1017row review. No source registry release, pool or vector change."
+}

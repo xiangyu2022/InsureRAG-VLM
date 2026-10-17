@@ -1,0 +1,163 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 958,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 582,
+    "insufficient_evidence": 90,
+    "multi_evidence": 140,
+    "numerical_calculation": 146
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 178,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 51,
+    "california_cdi": 49,
+    "wisconsin_oci": 63,
+    "utah_uid": 16,
+    "us_opm": 115,
+    "us_va": 41,
+    "us_tricare": 131,
+    "newjersey_dobi": 40,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 44,
+    "canada_esdc_ei": 91,
+    "newjersey_labor_leave": 7,
+    "canada_vac": 24,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 13
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 18,
+    "numerical_calculation": 4,
+    "multi_evidence": 10,
+    "insufficient_evidence": 10
+  },
+  "remaining_independent_test": 42,
+  "created_utc": "2026-10-16T18:55:40.841332+00:00",
+  "status": "DEV_CONTENT_REVIEW_SCOPE_CORRECTION_GLOBAL_CLEARANCE_PENDING",
+  "pool_version": 126,
+  "global_candidate_version": 129,
+  "source_snapshot": 33,
+  "TEST_questions_changed": 0,
+  "DEV_questions_rewritten": 0,
+  "DEV_items_revoked": 1,
+  "revocation_reason": "One employer noncoverage reporting/notification question primarily tested corporate administrative duties. Withdrawn under the existing consumer task scope; no cosmetic rewrite or threshold change.",
+  "dev_content_review": {
+    "items_read": 58,
+    "remaining": 57,
+    "answerable": 46,
+    "refusal": 11,
+    "declared_spans": 75,
+    "necessary_units": 61,
+    "reviewed_spanish_aliases": 18,
+    "numeric_results_rechecked": 11,
+    "retained_answers_and_evidence_unchanged": true,
+    "global_acceptance": false
+  },
+  "alias_review": {
+    "documents_searched_for_full_literal_support": 1426,
+    "units": 61,
+    "exact_leads": 5,
+    "complete_source_bodies_compared": 7,
+    "new_aliases": 0,
+    "reason": "Identical text across product scopes or excluded sources is insufficient semantic support.",
+    "global_alias_clearance": false
+  },
+  "corpus": {
+    "documents": 1426,
+    "include": 390,
+    "exclude": 234,
+    "pending": 802,
+    "chunks": 795
+  },
+  "all_test_declared_span_mapping": {
+    "complete": 416,
+    "pending": 542
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "validation": {
+    "item_gate_errors": 0,
+    "global_dataset_gates_passed": false,
+    "remaining_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "code_or_tests_changed": false,
+    "unchanged_code_regression": {
+      "tests_passed": 553,
+      "subtests_passed": 58,
+      "explicit_top_level_files": 57,
+      "elapsed_seconds": 11.91,
+      "new_synthetic_mathml_cases": 19,
+      "log_sha256": "bc841e1bc78a0845232c6eb9c189710e8fa040c3c1484ea8807ab820fcc471f6"
+    },
+    "previous_exact_commit_CI": {
+      "commit": "c68766a0384c0edcae73f6026eab2177dd0747d5",
+      "run_id": 38950238152,
+      "all5success": true
+    },
+    "all_retained_DEV_mappings_rechecked": true
+  },
+  "usage": {
+    "new_vectors": 0,
+    "model_forwards": 0,
+    "network_source_calls": 0,
+    "browser_search_calls": 0,
+    "paid_calls": 0,
+    "actual_DEV_queries": 0,
+    "actual_TEST_queries": 0,
+    "remaining_quota": "not observable"
+  },
+  "limits": [
+    "Still42independentTESTshort;accepted0/unfrozen.",
+    "802whole-source decisions and globalsemantic alias/family/history review remainunfinished.",
+    "Content alignment review alone doesnotauthorizeDEV inference; no final evaluation or selection lock.",
+    "Alloldholds/revocations andsourceconflicts preserved.",
+    "No rawcorpus,individualQA,annotations,vectors orweights published."
+  ],
+  "evidence_sha256": {
+    "stage272_dev_item_content_review.json": "7ae73a21a80e028fd924972f8b1ca9e9b83df05b835b713f62f191777c8952e4",
+    "review_pool_126_clearance_ledger.json": "df2f11102c9121a8ca3ee82a86a0e3c0c3192d52b28c8bfd717deccde698ca5b",
+    "provisional_item_pool_126_validation.json": "7b722cdf65c0f3123c0e4970090f9df26978ac90afb675cd556ff1aedf2c0219",
+    "stage272_summary.json": "9dc7e70e4e0bf760cdca37b2e4067f26c4a8a550199a69c56678dccfd82ea830",
+    "stage272_dev_support_units_draft.json": "f2ce8e44778c38575e4fc1b000491049411eecae06c43b2b097d38c0cc89cf2a",
+    "stage272_dev_requests.json": "a9b9cf4830079e4274d4a15d5c8b81d6650355987f9473302a72bbbc9db12e10",
+    "stage272_dev_readiness.json": "7a8416f8b3ebee1de009c3f662db39ff04584d15b1ce6d25e8f48a5c765c6b54",
+    "stage273_alias_scope_review.json": "048ff3e63cd0a79ee52926a3b0021ea7bbf1501845a5cb3b3cb7e78b1fc3783b"
+  }
+}

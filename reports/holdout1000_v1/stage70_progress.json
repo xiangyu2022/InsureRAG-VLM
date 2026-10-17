@@ -1,0 +1,105 @@
+{
+  "created_utc": "2026-10-07T12:09:21.756552+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 544,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 3,
+    "retained": 2,
+    "held": 1,
+    "retained_tasks": {
+      "numerical_calculation": 1,
+      "ordinary_qa": 1
+    }
+  },
+  "prior_checkpoint": "stage69_progress.json:542TEST/58DEV/139families",
+  "test_task_counts": {
+    "ordinary_qa": 366,
+    "insufficient_evidence": 39,
+    "multi_evidence": 61,
+    "numerical_calculation": 78
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 140,
+  "publisher_counts": {
+    "northcarolina_doi": 21,
+    "canada_fcac": 16,
+    "newyork_dfs": 55,
+    "california_cdi": 40,
+    "wisconsin_oci": 51,
+    "utah_uid": 10,
+    "us_opm": 98,
+    "us_va": 36,
+    "us_tricare": 102,
+    "newjersey_dobi": 33,
+    "alberta_goa": 18,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 5
+  },
+  "usage": {
+    "base_report_sha256": "2877646381de95e90ebda3ff7a30dcc0f9ddd10ee499887864cbe16bba21813a",
+    "base_candidates_sha256": "17f65974a3b881173921e41af709ec45598e78a6fa6d3fca002411fa1efb864d",
+    "new_candidates_sha256": "5a790a71165dc05eef14167f79a0fa74be34d161990e97aae7f47dd2e152824c",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2928,
+    "old_old_pairs_reused": 671,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 3,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "fc39e50a8cf9f47ac621bad0e748ef01e4c66d2c72933f64f8afb5eb3856c2b9",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 271.1513042000588,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage70_source_decisions.json": "14e250b46dbbc1c6b5f58851c84fdf6f1c55588c4040c299109e390ed7a68880",
+    "stage70_final_review.json": "5977d6025bc41f28b7cdaaaa34f8ee6c3f556f176cef0e13a04de85d5c789c07",
+    "review_pool_69_clearance_ledger.json": "9af2de1a0a4f5a25bc0ee85eb51eb3bb1f8f826a31d7fc02749688c54037681a",
+    "provisional_item_pool_69.jsonl": "238fad21d69d39109624864b41259b09d37eed19194a4398270cd87c5dd2da13",
+    "provisional_item_pool_69_validation.json": "004759df97a83410db33aabe98d89eb6bb3538165b31f6d4fce00db4ffcc0237"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 234,
+    "numerical_calculation": 72,
+    "multi_evidence": 89,
+    "insufficient_evidence": 61
+  },
+  "limits": [
+    "456 independent TEST still needed.",
+    "Two TEST retained:one numerical,one ordinary; one same-gap duplicate held.",
+    "All15 nearest historical fulltexts and20 neighboring QAs read;5 changed active relations reviewed.",
+    "Refusal candidate repeats pre-existing9f4ab0a1971faeaf1f53caf8; no count for reformulation.",
+    "Prior task/split corrections and holds preserved; single sequential Codex content review."
+  ]
+}

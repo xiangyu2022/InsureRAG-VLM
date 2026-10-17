@@ -1,0 +1,110 @@
+{
+  "created_utc": "2026-10-07T12:16:24.312682+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 541,
+    "dev": 56
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 5,
+    "retained": 0,
+    "held": 5,
+    "retained_tasks": {},
+    "previous_scope_revocations": {
+      "test": 3,
+      "dev": 2
+    }
+  },
+  "prior_checkpoint": "stage70_progress.json:544TEST/58DEV/140families",
+  "test_task_counts": {
+    "ordinary_qa": 364,
+    "insufficient_evidence": 39,
+    "multi_evidence": 60,
+    "numerical_calculation": 78
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 8
+  },
+  "test_document_families": 139,
+  "publisher_counts": {
+    "northcarolina_doi": 21,
+    "canada_fcac": 16,
+    "newyork_dfs": 55,
+    "california_cdi": 37,
+    "wisconsin_oci": 51,
+    "utah_uid": 10,
+    "us_opm": 98,
+    "us_va": 36,
+    "us_tricare": 102,
+    "newjersey_dobi": 33,
+    "alberta_goa": 18,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_task_count_below_target:numerical_calculation",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "scope_review_records": 90,
+    "all_current_dev_reviewed": 58,
+    "all_turn_retained_reviewed": 34
+  },
+  "usage": {
+    "base_report_sha256": "db365fc362e79e143213f86c16aaa9b6a0e6768d2be10e122cc3aaea59c8182c",
+    "base_candidates_sha256": "3ec2f358a3b5a25b2ada1ac10aea8532e2c3a974b6af971042c06f3a12c918cb",
+    "new_candidates_sha256": "c97c111d2b671f65b8459cc6bbe79b0abf770bb92189b3ff79946d04c4fec6fd",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2931,
+    "old_old_pairs_reused": 672,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 5,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "f58d06318efb1740e0047fcef38d199b0f9d092606b546f35b5246e5e7a6f0fd",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 274.5577821000479,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage71_source_decisions.json": "42f32ad2e1da6af02f52b13bcbf30c863b916ae1b080305691047fa98342d45b",
+    "stage71_final_review.json": "08d74d9a9a5bd293b5c6777e4ab7f2c733019a3da84bf97278b2dc2a39408dfb",
+    "review_pool_70_clearance_ledger.json": "6f893c4c1f79f767765d81a93658ed9237b67571cdd7329aabf87d3d38a8c939",
+    "provisional_item_pool_70.jsonl": "f1aa83a446696bc7bd8d7c59659bb96dc08de02da21aa770bcd80d760dffb328",
+    "provisional_item_pool_70_validation.json": "79c5f3daeea5be9b8e9be4e7dc070bb0ec319b04232d79d0cfd1666de08d1528"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 236,
+    "numerical_calculation": 72,
+    "multi_evidence": 90,
+    "insufficient_evidence": 61
+  },
+  "limits": [
+    "459 independent TEST still needed; DEV numerical needs2.",
+    "Five regulator/anti-fraud administrative drafts held; no new TEST.",
+    "Two CE DEV and three representative-compensation/project-milestone TEST revoked for consumer scope.",
+    "Prior reports preserve historical snapshots; stage71 effective counts supersede stage64/67 approvals.",
+    "Scope text explicitly recorded in protocol without changing targets.",
+    "Codex content review, not expert/human adjudication."
+  ]
+}

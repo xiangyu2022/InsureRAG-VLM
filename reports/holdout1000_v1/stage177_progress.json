@@ -1,0 +1,115 @@
+{
+  "created_utc": "2026-10-16T06:51:53.908460+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 797,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 2,
+    "retained": 2,
+    "held": 0,
+    "retained_tasks": {
+      "ordinary_qa": 2
+    }
+  },
+  "prior_checkpoint": "stage174_progress.json:795TEST/58DEV/163families",
+  "test_task_counts": {
+    "ordinary_qa": 496,
+    "insufficient_evidence": 69,
+    "multi_evidence": 115,
+    "numerical_calculation": 117
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 163,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 50,
+    "california_cdi": 49,
+    "wisconsin_oci": 63,
+    "utah_uid": 14,
+    "us_opm": 115,
+    "us_va": 41,
+    "us_tricare": 130,
+    "newjersey_dobi": 38,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 24,
+    "canada_esdc_ei": 19
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 10
+  },
+  "usage": {
+    "base_report_sha256": "03bfd5b09990b6d612c92d7f1ebc6ce52bd19052d9f3a6b78a17f0130645eae0",
+    "base_candidates_sha256": "89a0879da75b11f35873457fda7bf8605c265c649502d9b4c76f591e12608028",
+    "new_candidates_sha256": "0989e0ab4c7b664da5e8c1e5da3691bb1b9f66127196c29bcae7658c677cfd29",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 3248,
+    "old_old_pairs_reused": 722,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 2,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "6c35282e287ed10e44f799b2ac77d53ae8a4098ebb8b336ec4906394faabbca9",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_source_bytes": 0,
+    "new_html_documents": 0,
+    "source_acquisition_accounted_in_stage99": false,
+    "new_pdf_documents": 0,
+    "browser_discovery_calls": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 241.77092199999606,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage177_source_decisions.json": "2d06384253c740ae624918532e880b6adcb84be8b15f0c5f438b4cc7b2bf9a70",
+    "stage177_final_review.json": "8e1b54544c19f4411a0d1b863e7d33b29e9ad9227e2514a1c95fb0effe53fb73",
+    "review_pool_109_clearance_ledger.json": "aeff6506764a973840ea99a36441caf424ddda8e0d87ef45b31cef692e1ed1e3",
+    "provisional_item_pool_109.jsonl": "c39830799ab091e2dd8798b9b9fd27c9df6a82ab1edd72254ef9ac0cfcd55fb2",
+    "provisional_item_pool_109_validation.json": "52491a99a6b09e1cf6a9ec022708b9b1b649cd076f796b6483fec652df146b6d"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 104,
+    "numerical_calculation": 33,
+    "multi_evidence": 35,
+    "insufficient_evidence": 31
+  },
+  "limits": [
+    "203 independent TEST still needed;DEVminima provisionallymet.",
+    "Snapshot22 unchanged at1344documents/2317FAQ; no old vectors reencoded.",
+    "Two ordinary consumer workflow tasks retained. Existing Medicare/moving family reaches20TEST; no DEVmovement orholdrelaxation.",
+    "Nearesthistory andnew/changedcandidate relations reviewed; seehashboundcontentrecords.",
+    "Prior metadata errata andall inheritedholds preserved; newholdsdocumentedinlocalledger.",
+    "Single sequentialCodexcontentreview, nothuman/expertreview."
+  ]
+}

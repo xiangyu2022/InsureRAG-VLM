@@ -1,0 +1,212 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 958,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 582,
+    "insufficient_evidence": 90,
+    "multi_evidence": 140,
+    "numerical_calculation": 146
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 178,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 51,
+    "california_cdi": 49,
+    "wisconsin_oci": 63,
+    "utah_uid": 16,
+    "us_opm": 115,
+    "us_va": 41,
+    "us_tricare": 131,
+    "newjersey_dobi": 40,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 44,
+    "canada_esdc_ei": 91,
+    "newjersey_labor_leave": 7,
+    "canada_vac": 24,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 13
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 18,
+    "numerical_calculation": 4,
+    "multi_evidence": 10,
+    "insufficient_evidence": 10
+  },
+  "created_utc": "2026-10-16T17:59:34.157384+00:00",
+  "status": "CONSTRUCTION_AND_GLOBAL_CORPUS_REVIEW_ACTIVE_NOT_FROZEN",
+  "remaining_independent_test": 42,
+  "question_batch": {
+    "drafts": 20,
+    "retained": 17,
+    "held": 3,
+    "retained_tasks": {
+      "numerical_calculation": 7,
+      "ordinary_qa": 8,
+      "multi_evidence": 2
+    }
+  },
+  "corpus_preparation": {
+    "created_utc": "2026-10-16T17:57:31.816727+00:00",
+    "status": "PARTIAL_SOURCE_CORPUS_NOT_DEV_READY",
+    "source_dispositions": {
+      "pending": 927,
+      "include": 301,
+      "exclude": 198
+    },
+    "new_dispositions": {
+      "exclude": 36,
+      "include": 19
+    },
+    "partial_chunks": 697,
+    "max_tokens": 512,
+    "max_encoder_chars": 2400,
+    "previous_chunks_unchanged": 678,
+    "old_chunks_retokenized": 0,
+    "all_included_characters_preserved": true,
+    "dev_rebind_pending": false,
+    "actual_dev_queries": 0,
+    "test_queries": 0,
+    "model_forwards": 0
+  },
+  "corpus_since_published252": {
+    "new_snapshot_documents": 9,
+    "source_only_bodies_reviewed": 64,
+    "new_includes": 22,
+    "new_excludes": 40,
+    "new_conflict_or_extraction_pending": 2,
+    "old_chunks_unchanged": 665,
+    "new_chunks": 32
+  },
+  "dev_support_review": {
+    "dev_items": 58,
+    "answerable": 47,
+    "refusal_context_only": 11,
+    "declared_spans_mapped": 76,
+    "necessary_units": 62,
+    "reviewed_spanish_aliases": 18,
+    "global_alias_review_complete": false,
+    "dev_QA_and_families_changed": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 58,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "new_test_support_mapping": {
+    "complete": 15,
+    "pending": 2,
+    "total_test_items_pending_source_disposition": 552,
+    "total_test_complete_declared_span_mapping": 406
+  },
+  "validation": {
+    "retained_item_gate_errors": 0,
+    "global_dataset_gates_passed": false,
+    "remaining_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "unchanged_code_regression": {
+      "stage": 159,
+      "tests_passed": 534,
+      "subtests_passed": 58,
+      "explicit_top_level_test_files": 56
+    },
+    "code_or_tests_changed": false,
+    "dev_exact_support_mapping_rechecked": true,
+    "all_test_declared_span_mapping_rechecked": true,
+    "new_test_mapping_all_complete": false
+  },
+  "usage": {
+    "new_candidate_vectors": 20,
+    "curation_model_processes": 1,
+    "curation_forward_batches": 2,
+    "old_candidate_vectors_reused": 3428,
+    "historical_vectors_reused": 44581,
+    "old_vectors_reencoded": 0,
+    "new_source_requests": 9,
+    "new_source_bytes": 300101,
+    "browser_discovery_calls": 0,
+    "model_downloads": 0,
+    "paid_api_calls": 0,
+    "actual_dev_queries": 0,
+    "actual_test_queries": 0,
+    "new_subagents": 0,
+    "remaining_quota": "not observable"
+  },
+  "review_evidence": {
+    "targeted_history_records_fully_read": 84,
+    "long_history_record_not_fully_read_for_held_only_draft": 1,
+    "template_QAs_fully_read": 24,
+    "additional_distinct_QAs_fully_read": 59,
+    "changed_active_relations": 29,
+    "gap_windows": 15,
+    "retained": 17,
+    "held": 3,
+    "source_only_short_bodies_fully_read": 55,
+    "short_bodies_included": 19,
+    "short_bodies_excluded": 36
+  },
+  "prior_usage_erratum": {
+    "stage217_new_vectors": 19,
+    "stage217_model_processes": 1,
+    "stage217_forward_batches": 2,
+    "original_numeric_provenance_correct": true,
+    "prose_and_parent_milestone_corrected_here": true,
+    "original_hash_bound_records_preserved": true
+  },
+  "limits": [
+    "958 provisional TEST remains42 short;accepted0/unfrozen.",
+    "927 whole-source dispositions, globalaliases andwholeDEVclearance unfinished. Prioritize these gates before final inference.",
+    "All priorholds andoriginal15historicalrevocations retained,including two stage215scope revocations.",
+    "Three drafts held for historical/global core or refusal-structure overlap. No scope orquota relaxation.",
+    "Nine pension sources grouped as one family; no family fragmentation.",
+    "Part-time source remains pending: rawMathML fraction verified for item arithmetic but normalized corpus drops the division operator.",
+    "Retirement-income source remains wholly pending for inconsistent numeric tables. DMLR citation and PSHCP deadline conflicts remain pending. No convenient subsections admitted.",
+    "Single sequentialCodexcontentreview, nothuman/expertadjudication.",
+    "Only aggregates/familymetadata published; rawsources/individualQA/annotations/weights local.",
+    "Qwen3.5:4b remainsmissing;no download/substitution. NoactualDEV/TEST,selectionlock orfinalevaluation."
+  ],
+  "evidence_sha256": {
+    "review_pool_124_clearance_ledger.json": "d05a3464d9f2c02e61d79f3a43dee8c51f92026062b199997432240b17a9c62b",
+    "provisional_item_pool_124_validation.json": "b1343c54f04f7c89d23bb9c8ce4e02d84e477b728a74bb035ae50056295abd9c",
+    "stage255_final_review.json": "d5986551216402f46809d7bcbca17da024680235acdcb1be2e270c7f28ba2285",
+    "stage255_source_decisions.json": "b17723cefa44c63c428236b108b3d10a936d98d741ff29bc33c388e990311874",
+    "stage256_source_disposition_review.json": "410bbaf9e0f8c715106c50699ddcf4210aefec69f1ee53b4f16c520ff408dc55",
+    "stage257_source_disposition_review.json": "7acd4b5a9e74c20974ecd497b171b506351cd7bfd8283b9a9efa56c63474a8aa",
+    "stage258_dev_support_units_draft.json": "a096c725027854abde49363cf569e512fc82b18e05565f4eb11dc760e3f05792",
+    "stage258_dev_readiness.json": "04ad79f4462ebfd1ef269ec2d8b9dfefc95933b41bd4760c73a348996a93db17",
+    "stage258_new_support_mapping.json": "df08be47e76394e9be2b8d84245850d8acb3e4972fe777f32ea784eb096a57e6",
+    "stage257_corpus_mapping_summary.json": "e2af1670a1a946f18e41707665dc20ef80cb5535105164642e95d0b962a73443"
+  }
+}

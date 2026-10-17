@@ -1,0 +1,169 @@
+{
+  "created_utc": "2026-10-16T22:06:52.585161+00:00",
+  "status": "CONSTRUCTION_AND_GLOBAL_REVIEW_CONTINUE",
+  "provisional_item_gate_counts": {
+    "test": 978,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 589,
+    "insufficient_evidence": 93,
+    "multi_evidence": 146,
+    "numerical_calculation": 150
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 182,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 51,
+    "california_cdi": 49,
+    "wisconsin_oci": 63,
+    "utah_uid": 16,
+    "us_opm": 117,
+    "us_va": 41,
+    "us_tricare": 134,
+    "newjersey_dobi": 41,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 44,
+    "canada_esdc_ei": 101,
+    "newjersey_labor_leave": 8,
+    "canada_vac": 24,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 16
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 11,
+    "numerical_calculation": 0,
+    "multi_evidence": 4,
+    "insufficient_evidence": 7
+  },
+  "remaining_independent_test": 22,
+  "pool_version": 133,
+  "global_candidate_version": 133,
+  "source_snapshot": 33,
+  "corpus_preparation": {
+    "documents": 1426,
+    "exclude": 354,
+    "include": 572,
+    "pending": 500,
+    "partial_chunks": 1056
+  },
+  "all_test_declared_span_mapping": {
+    "complete": 527,
+    "pending": 451
+  },
+  "dev_support_review": {
+    "items": 57,
+    "declared_spans": 75,
+    "answerable": 46,
+    "refusals": 11,
+    "necessary_units": 61,
+    "reviewed_Spanish_aliases": 19,
+    "global_clearance_complete": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "changes": {
+    "reviewed_drafts": 8,
+    "new_TEST_retained": 6,
+    "new_held": 2,
+    "retained_tasks": {
+      "ordinary_qa": 3,
+      "multi_evidence": 2,
+      "insufficient_evidence": 1
+    },
+    "source_bodies_reviewed_since_last_publication": 40,
+    "source_decisions": {
+      "include": 26,
+      "exclude": 8,
+      "pending": 6
+    },
+    "additional_unreviewed_drafts_not_counted": 10,
+    "DEV_texts_changed": 0,
+    "new_DEV_support_aliases": 0
+  },
+  "review_evidence": {
+    "targeted_history_records": 40,
+    "targeted_history_records_fully_read": 39,
+    "long_targeted_record_matching_context_read": true,
+    "focused_history_records": 98,
+    "focused_review": "First nine fully read; all matching windows in remaining89read. No claim of reading all3.4million characters.",
+    "nearest_candidate_QAs": 23,
+    "changed_active_QAs_and_neighbors": 19,
+    "focused_template_QAs": 14,
+    "explicit_cross_candidate_similarity_dispositions": 2,
+    "all_prior_ledger_links_verified": 132,
+    "global_review_complete": false
+  },
+  "validation": {
+    "focused_tests_passed": 82,
+    "explicit_top_level_test_files": 4,
+    "retained_item_errors": 0,
+    "latest_full_code_regression": {
+      "checkpoint": "stage302",
+      "tests": 584,
+      "subtests": 58,
+      "explicit_files": 59
+    },
+    "global_dataset_gates_passed": false,
+    "log_sha256": "6ce0636b2d49f4b90745193210a932fa48d7699af1edfab77877974b353f74b9"
+  },
+  "usage": {
+    "scope": "Admitted eight-draft audit batch; later ten-draft audit remains uncounted",
+    "new_question_vectors": 8,
+    "model_forward_batches": 1,
+    "old_candidate_vectors_reused": 3466,
+    "history_vectors_reused": 44581,
+    "source_network_calls": 0,
+    "external_model_API_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_queries": 0,
+    "actual_TEST_queries": 0,
+    "subagents": 0,
+    "remaining_quota": "not observable"
+  },
+  "limits": [
+    "22independentTEST plus all global source/alias/family/history/DEV gates remain.",
+    "Original15suspects and stage215/272/294revocations retained;two new core-overlap holds.",
+    "Source inclusion does not release held QA.",
+    "No actual DEV/TEST evaluation, generation, parameter selection or TEST tuning. Qwen runtime remains unverified.",
+    "Single sequential Codex content review, not human/expert review. No raw corpus, individual QA or weights published."
+  ],
+  "evidence_sha256": {
+    "stage347_summary.json": "45e5517762445fbb209272f08956c311d6850940d907a1edecae6985b4f1c1eb",
+    "stage347_final_review.json": "fde5079f233615a64bc19f4e71b17dcaf694c5a53f11bc39150d93e351307362",
+    "stage345_corpus_mapping_summary.json": "638e77a6474db8c784a9a0b981287644505ed4aa687af05caaaa7593508dacd1",
+    "stage350_corpus_mapping_summary.json": "c105ec9048ebd9d370dfd7c546a06a5bcef474c1ce9570e971dd0b3053eb6a7c",
+    "stage352_summary.json": "cc215f8a81f711e7895873b333ca2636806f492ba0ef143d90157f71d7de43f6",
+    "stage352_dev_readiness.json": "7a8416f8b3ebee1de009c3f662db39ff04584d15b1ce6d25e8f48a5c765c6b54",
+    "provisional_item_pool_133_validation.json": "7e745de97464e610bc38b8c024ba1373b5d592d369f31cabb6cf8df5e0b30a48"
+  }
+}

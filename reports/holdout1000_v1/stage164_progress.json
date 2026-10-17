@@ -1,0 +1,117 @@
+{
+  "created_utc": "2026-10-16T05:37:24.194192+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 782,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 8,
+    "retained": 8,
+    "held": 0,
+    "retained_tasks": {
+      "ordinary_qa": 6,
+      "multi_evidence": 1,
+      "numerical_calculation": 1
+    }
+  },
+  "prior_checkpoint": "stage155_progress.json:774TEST/58DEV/158families",
+  "test_task_counts": {
+    "ordinary_qa": 486,
+    "insufficient_evidence": 67,
+    "multi_evidence": 113,
+    "numerical_calculation": 116
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 159,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 49,
+    "california_cdi": 45,
+    "wisconsin_oci": 60,
+    "utah_uid": 14,
+    "us_opm": 115,
+    "us_va": 41,
+    "us_tricare": 125,
+    "newjersey_dobi": 38,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 3,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 24,
+    "canada_esdc_ei": 19
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 28
+  },
+  "usage": {
+    "base_report_sha256": "37322c52b28243e6d08ffef819d3ccca0654fe21a9baa52d5e16dc0cdb1cd15e",
+    "base_candidates_sha256": "28f4ff1e290e0ff070bc185f4f44e771ceb606c3710edc2688f8b1bb32213b15",
+    "new_candidates_sha256": "67a5aac445e85152bf71e9f27ff231f061ea0ab45fe00863ddcd5f738fc292f2",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 3221,
+    "old_old_pairs_reused": 720,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 8,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "d14b905a133e2a84e453b1eae1e95a312f1059f5a72014cb1e892f80886867ca",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_source_bytes": 0,
+    "new_html_documents": 0,
+    "source_acquisition_accounted_in_stage99": false,
+    "new_pdf_documents": 0,
+    "browser_discovery_calls": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 249.46761130000232,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage164_source_decisions.json": "f17357fbd0aa06addaeec9fcac20a9d55e6d30efa7281b52f704be56e134363d",
+    "stage164_final_review.json": "6c89999e2b80597bbcb6321d69c20be259de9303d2a0502f514f27153256b15b",
+    "review_pool_105_clearance_ledger.json": "97dda5b92f2dadbae24ddf2b819e851cbc1aace0d0e25e47ec01718a1cc99fc7",
+    "provisional_item_pool_105.jsonl": "6a3edd3a09de30191421b3d192eda950376b61953c1cdfd36d6c9e3244f2b863",
+    "provisional_item_pool_105_validation.json": "f8816e1cbc8ee72bef6d743cfdf6ff78f09e2e9d722e56dd11d8bdd1de30ebdf"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 114,
+    "numerical_calculation": 34,
+    "multi_evidence": 37,
+    "insufficient_evidence": 33
+  },
+  "limits": [
+    "218 independent TEST still needed;DEVminima provisionallymet.",
+    "Snapshot22 unchanged at1344documents/2317FAQ; no old vectors reencoded.",
+    "Eight tasks retained:6ordinary1multi1numerical. No refusal quota credit, no DEV movement or hold relaxation. Conservative WI family merge and NC/AL annuity family closure applied.",
+    "Nearesthistory andnew/changedcandidate relations reviewed; seehashboundcontentrecords.",
+    "Prior metadata errata andall inheritedholds preserved; newholdsdocumentedinlocalledger.",
+    "Single sequentialCodexcontentreview, nothuman/expertreview."
+  ]
+}

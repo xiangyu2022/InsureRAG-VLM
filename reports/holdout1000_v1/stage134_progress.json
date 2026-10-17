@@ -1,0 +1,191 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 763,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 474,
+    "insufficient_evidence": 65,
+    "multi_evidence": 109,
+    "numerical_calculation": 115
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 154,
+  "publisher_counts": {
+    "northcarolina_doi": 30,
+    "canada_fcac": 20,
+    "newyork_dfs": 49,
+    "california_cdi": 45,
+    "wisconsin_oci": 52,
+    "utah_uid": 14,
+    "us_opm": 115,
+    "us_va": 41,
+    "us_tricare": 124,
+    "newjersey_dobi": 38,
+    "alberta_goa": 36,
+    "australia_apra": 2,
+    "alabama_doi": 3,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 24,
+    "canada_esdc_ei": 19
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 126,
+    "numerical_calculation": 35,
+    "multi_evidence": 41,
+    "insufficient_evidence": 35
+  },
+  "created_utc": "2026-10-16T03:37:53.083465+00:00",
+  "status": "CONSTRUCTION_AND_DEV_SOURCE_REVIEW_ACTIVE_NOT_FROZEN",
+  "prior_published_checkpoint": "stage131_progress.json",
+  "current_question_batch": {
+    "stage": 132,
+    "drafted": 3,
+    "retained_test": 2,
+    "held_core_task_overlap": 1,
+    "retained_tasks": {
+      "ordinary_qa": 1,
+      "multi_evidence": 1
+    },
+    "new_dev": 0
+  },
+  "remaining_independent_test": 237,
+  "count_reconciliation_748_to761": {
+    "stage120": 748,
+    "stage122_delta": 1,
+    "stage124_delta": 7,
+    "stage127_delta": 5,
+    "stage128_to131_delta": 0,
+    "dev_unchanged": 58
+  },
+  "corpus_preparation": {
+    "created_utc": "2026-10-16T03:30:39.968351+00:00",
+    "status": "PARTIAL_SOURCE_CORPUS_DEV_OFFSETS_MAPPED_NOT_READY",
+    "test": 763,
+    "dev": 58,
+    "accepted": 0,
+    "frozen": false,
+    "source_only_tdi_inventory": 291,
+    "new_full_source_inclusions": 27,
+    "source_dispositions": {
+      "pending": 1189,
+      "exclude": 115,
+      "include": 40
+    },
+    "partial_chunks": 88,
+    "max_chunk_tokens": 509,
+    "max_chunk_chars": 2400,
+    "all_included_characters_preserved": true,
+    "dev_items_with_all_declared_spans_mapped": 58,
+    "dev_declared_spans_mapped": 76,
+    "all_items_with_some_spans_mapped": 70,
+    "all_items_with_all_spans_mapped": 69,
+    "all_spans_mapped": 90,
+    "semantic_necessity_and_alias_review_complete": false,
+    "source_only_global_corpus_complete": false,
+    "actual_dev_runs": 0,
+    "test_inference_runs": 0,
+    "network_requests": 0,
+    "model_forward_calls": 0,
+    "evidence_sha256": {
+      "stage133_tdi_source_structure_proposals.json": "cc1d921dec6ef435f1a892bbd7e84bbecc935c41e66250b1d2f8504206fa5a71",
+      "stage133_tdi_source_inclusion_review.json": "fc79e3be768f73b4b5931db0c922ea04e737c1dc8dff4962660161762cd3d13c",
+      "stage133_inclusion_manifest_draft.json": "1d77b6b6e92d564500016365f7f43c248f3c3b2ba6b34cca616bdee24ef9bff1",
+      "stage133_partial_source_chunks.jsonl": "a09530a7bf2cfa5ba5db2c70f6f65c774614ebcce7f3c193de70ab09a895253e",
+      "stage133_partial_support_mapping.json": "86ea128bf6e6b7d63b3cd9d31a0aa707810082b660f60433be1c807cf9b70687"
+    }
+  },
+  "dev_support_review": {
+    "dev_items": 58,
+    "answerable": 47,
+    "refusal_gap_context_only": 11,
+    "necessary_units": 62,
+    "all_unit_source_sets_fit_one_chunk": true,
+    "global_semantic_alias_review_complete": false,
+    "exact_text_match_leads": 5,
+    "units_with_exact_match_leads": 2,
+    "related_family_documents_pending": 4,
+    "exact_match_is_not_scope_equivalence": true,
+    "retained_QA_modified": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 58,
+    "source_count": 1344,
+    "generation_required": false
+  },
+  "validation": {
+    "offline_tests_passed": 523,
+    "offline_subtests_passed": 58,
+    "explicit_top_level_test_files": 56,
+    "seconds": 8.63,
+    "forbidden_directory_traversed": false,
+    "retained_item_gate_errors": 0,
+    "global_dataset_gates_passed": false,
+    "remaining_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ]
+  },
+  "usage": {
+    "source_requests": 0,
+    "paid_api_calls": 0,
+    "new_local_curation_vectors": 3,
+    "curation_encoder_forward_batches": 1,
+    "old_candidate_vectors_reencoded": 0,
+    "historical_vectors_reencoded": 0,
+    "corpus_model_forwards": 0,
+    "actual_dev_queries": 0,
+    "actual_test_queries": 0,
+    "generation_calls": 0,
+    "new_subagents": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "remaining_quota": "not observable"
+  },
+  "limits": [
+    "763TEST remains237short:126ordinary35numeric41multi35refusal. Accepted0 and unfrozen.",
+    "27TDIpages were read in full after an all291source-only structural inventory; source review order prioritized DEV, while every remaining global source remains pending or keeps its prior disposition. No gold-filtered corpus is approved.",
+    "40included115excluded1189pending;88partialchunks preserve every included character, at most509tokens/2400characters. No source hold was relaxed.",
+    "All58DEV/76declaredspans now map exactly.47answerable cases have62reviewed necessary support units;11refusal cases have gap-context diagnostics only.",
+    "Two contiguous IROspans form one logical obligation. Phone/date tails removed from two relevance annotations only; existing questions/answers/evidence remain unchanged.",
+    "Five exact-text matches in other sources are leads, not semantic aliases. Product scope, source disposition and global equivalents still require review before readiness.",
+    "WholeDEVreadiness remains false before model loading. No actualDEVscore, selection lock, TESTinference or generation.",
+    "Single sequential Codex review, not human/expert review. Public files contain aggregates and source-family metadata only; raw sources, QA, annotations and weights remain local.",
+    "Stage131commit296e2ca7797eca25b67b4b527fa532448a7b4181 passed all5CIjobs; this checkpoint requires its own exact-commit verification."
+  ],
+  "evidence_sha256": {
+    "stage132_final_review.json": "7e6551d94e615cd06171964c209a5acb09a7274997415d4245ec213381bbec40",
+    "review_pool_100_clearance_ledger.json": "266c868634b24c03a70c8514db5a1b4676d6498f47bc49fe2f3b4815994095e0",
+    "provisional_item_pool_100_validation.json": "06c5d747d569437e7bcf14d6ff2abbe6d4bc18356be764f223cd2a380faa9b39",
+    "stage133_corpus_mapping_summary.json": "1a6588af3d259aeac8462d5e7eee79762222ab836c6cd62917b7a04ae52387c9",
+    "stage133_tdi_source_inclusion_review.json": "fc79e3be768f73b4b5931db0c922ea04e737c1dc8dff4962660161762cd3d13c",
+    "stage134_dev_support_units_draft.json": "070c5b3652971b12b3eb67965b74ffdbcf7bb7d6fa3cf149b0c24710a29e909e",
+    "stage134_dev_exact_alias_leads.json": "50486f12ecbfe8664446aa52fb184242ebe0c32cf68c5c39142440f26f8aa788",
+    "stage134_dev_readiness.json": "dbde4cdc901261da4e02d8f8f41ccc1b17d002837e01a48ec840979757e07d3f",
+    "stage134_cpu_tests.log": "12e933ee6cbd1e983c6a326b1532402d8397132d7d22c3818f9f1fe7e5e371e9"
+  }
+}

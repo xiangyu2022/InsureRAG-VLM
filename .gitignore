@@ -1,4 +1,5 @@
 __pycache__/
+/reports/holdout1000_v1/local/
 .pytest_cache/
 pytest-cache-files-*/
 # Keep full model outputs and public-source excerpts local; publish summaries only.

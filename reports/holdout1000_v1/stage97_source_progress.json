@@ -1,0 +1,18 @@
+{
+  "status": "SOURCE_ONLY_NO_DRAFTS_FAMILY_REVIEW_DEFERRED",
+  "new_candidates": 0,
+  "new_model_calls": 0,
+  "new_source_requests": 5,
+  "new_source_bytes": 454093,
+  "guard_denials_before_network": 1,
+  "provisional_test_items": 638,
+  "provisional_dev_items": 58,
+  "accepted_items": 0,
+  "frozen": false,
+  "source_selection_sha256": "c7e436065cbb62a207649bcd7ea5bc2f592c6180e8f9b58f26330cfd3d3378e6",
+  "notes": [
+    "FiveboundedlicensedHTMLcached;twoappend-onlysnapshot17sources notadmitted,threecache-only.",
+    "Substantivefamilyoverlap with cappedfamily andtimingambiguity deferred; noquestionorcapchange.",
+    "RequestinformationURLblockedbeforeHTTP; nooverride/retry."
+  ]
+}

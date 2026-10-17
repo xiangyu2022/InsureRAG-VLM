@@ -1,0 +1,76 @@
+{
+  "version": 2,
+  "status": "SOURCE_PREFLIGHT_NOT_A_COMPLETED_DATASET",
+  "created_utc": "2026-10-04T14:33:00Z",
+  "base_commit": "832a0fca0d82fabf9a0e759f414c9f52e3a6f541",
+  "target_test_accepted": 1000,
+  "target_dev_accepted": 50,
+  "candidate_target_range": [
+    1800,
+    2200
+  ],
+  "test_task_targets": {
+    "ordinary_qa": 600,
+    "numerical_calculation": 150,
+    "multi_evidence": 150,
+    "insufficient_evidence": 100
+  },
+  "source_targets": {
+    "minimum_independent_test_publishers": 8,
+    "maximum_publisher_fraction": 0.2,
+    "minimum_test_document_groups": 100,
+    "maximum_questions_per_document_group": 20
+  },
+  "splits": "Assign entire publisher groups to dev or test before model development; document families, versions, near-duplicate components and derivations stay together. Previously exposed 47 dev/37 test questions and all 218 old extracted FAQs are historical/regression only, not new holdout candidates.",
+  "source_requirements": [
+    "Official public sources with recorded access/reuse terms; restrictions checked before bulk acquisition",
+    "Explicit jurisdiction, insurance type, publisher, URL, acquisition time, body SHA256 and document-group identity",
+    "Exclude access-restricted sites, personal submissions, third-party material without suitable permission, obsolete provisions without explicit as-of framing",
+    "Do not infer unrestricted reuse from public availability or government domain"
+  ],
+  "per_item_requirements": [
+    "Unique substantive information need; no paraphrase/template multiplication",
+    "Source-original FAQ or explicitly agent-authored, with provenance distinguished",
+    "Verifiable reference answer and exact evidence span offsets/hashes",
+    "Question can be understood without omitted FAQ/page context; resolve pronouns and jurisdiction",
+    "Calculation has cited rule, all operands, units, formula, exact independently checked result and rounding rule",
+    "Multi-evidence requires each cited span; redundant citations do not qualify",
+    "Refusal records realistic missing facts and why accessible evidence cannot settle the specific request; no empty-context-only shortcut",
+    "Automated checks passed; unresolved quality findings excluded from accepted count",
+    "Numerical QA must require retrieval of an identified source rule/rate/threshold omitted from the question; supplying all rules and operands is arithmetic-only and held. Record explicit content-review necessity rationale."
+  ],
+  "deduplication": {
+    "exact": "Normalize Unicode/whitespace/case; cluster question, answer and evidence duplicates",
+    "near": "Question and evidence char ngram similarity plus lexical semantic candidate screening; threshold flags require disposition, not silent acceptance",
+    "history": "Compare all candidate questions/evidence against accessible training/dev/test/report strings and old 218 FAQs, preserve known denied-path exclusions and audit hashes",
+    "pretraining": "Foundation-model pretraining contamination cannot be completely excluded"
+  },
+  "content_review": {
+    "reviewer_type": "Codex agent content review, not human/expert review",
+    "required": "100% numeric/multi-evidence/refusal, at least 25% ordinary QA; stratify by publisher, insurance type and document group",
+    "records": "Item-specific decisions, error taxonomy, evidence rationale, revisions and removals retained; automated checks and model review separately counted",
+    "escalation": "Any critical sampled error triggers full review of affected publisher/extractor/task stratum; accepted items with outstanding defects forbidden"
+  },
+  "freeze": "Only after at least 1000 accepted test records and all quality gates pass; hash corpus, test/dev manifests, review ledger, exclusion ledger and evaluation configuration before model inference",
+  "evaluation": "Frozen baseline, no post-test tuning; separate independent dev for any iteration; fixed denominators including errors/refusals, retrieval Recall/Hit separately, evidence completeness, numeric result accuracy, citation support and refusal/coverage. Report per task/publisher counts and Wilson or publisher/document-cluster intervals as appropriate.",
+  "publication": "Code, synthetic unit tests, provenance and aggregate audit records may be pushed. Raw sources and derived question/evidence text stay local unless each applicable source license explicitly permits redistribution; never publish private data or weights.",
+  "estimate": "Revised2026-10-04: earlier12-24h is not supported by observed quality-review yield. Roughly50-70hours additional construction/review may be needed at current cumulative yield, excluding final inference; new-source acquisition and expanded containment/family review may extend this. This is not a completion deadline. No completion claim based on unreviewed candidates.",
+  "preferred_dev_accepted": 150,
+  "dev_source_targets": {
+    "minimum_document_groups": 10,
+    "maximum_questions_per_document_group": 20
+  },
+  "dev_task_minimums": {
+    "ordinary_qa": 10,
+    "numerical_calculation": 10,
+    "multi_evidence": 10,
+    "insufficient_evidence": 10
+  },
+  "protocol_amendment": {
+    "utc": "2026-10-04T18:32:18.656681+00:00",
+    "reason": "The user-required minimum remains1000quality independent TEST records.150dev was an assistant-proposed construction target, not a user constraint; retain minimum50source-separated dev records covering allfour tasks and10document groups, with150preferred. Changed before any final QA inference or test-directed tuning.",
+    "test_requirements_unchanged": true
+  },
+  "require_source_review_registries": true,
+  "task_scope": "Consumer insurance coverage, benefits, policy cost, claims, purchaser requirements and specific policy-related recourse. Exclude standalone professional licensing/continuing education, corporate regulatory administration, representative compensation applications and project/grant milestones without a consumer policy/benefit/claim need. Applies to TEST and DEV; codifies stage19/stage43 scope decisions, not a relaxation."
+}

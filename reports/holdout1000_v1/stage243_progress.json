@@ -1,0 +1,210 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 933,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 574,
+    "insufficient_evidence": 87,
+    "multi_evidence": 137,
+    "numerical_calculation": 135
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 176,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 50,
+    "california_cdi": 48,
+    "wisconsin_oci": 63,
+    "utah_uid": 16,
+    "us_opm": 115,
+    "us_va": 41,
+    "us_tricare": 130,
+    "newjersey_dobi": 40,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 43,
+    "canada_esdc_ei": 76,
+    "newjersey_labor_leave": 7,
+    "canada_vac": 19,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 12
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 26,
+    "numerical_calculation": 15,
+    "multi_evidence": 13,
+    "insufficient_evidence": 13
+  },
+  "created_utc": "2026-10-16T16:25:41.155752+00:00",
+  "status": "CONSTRUCTION_AND_CORPUS_REVIEW_ACTIVE_NOT_FROZEN",
+  "remaining_independent_test": 67,
+  "question_batch": {
+    "drafts": 16,
+    "retained": 15,
+    "held": 1,
+    "retained_tasks": {
+      "numerical_calculation": 3,
+      "multi_evidence": 4,
+      "insufficient_evidence": 4,
+      "ordinary_qa": 4
+    }
+  },
+  "corpus_preparation": {
+    "created_utc": "2026-10-16T16:24:00.077693+00:00",
+    "status": "PARTIAL_SOURCE_CORPUS_NOT_DEV_READY",
+    "source_dispositions": {
+      "pending": 982,
+      "include": 277,
+      "exclude": 158
+    },
+    "new_dispositions": {
+      "include": 5,
+      "exclude": 0,
+      "pending": 1
+    },
+    "partial_chunks": 663,
+    "max_tokens": 512,
+    "max_encoder_chars": 2400,
+    "previous_chunks_unchanged": 636,
+    "old_chunks_retokenized": 0,
+    "all_included_characters_preserved": true,
+    "dev_rebind_pending": true,
+    "actual_dev_queries": 0,
+    "test_queries": 0,
+    "model_forwards": 0
+  },
+  "dev_support_review": {
+    "dev_items": 58,
+    "answerable": 47,
+    "refusal_context_only": 11,
+    "declared_spans_mapped": 76,
+    "necessary_units": 62,
+    "reviewed_spanish_aliases": 18,
+    "global_alias_review_complete": false,
+    "dev_QA_and_families_changed": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 58,
+    "source_count": 1417,
+    "generation_required": false
+  },
+  "new_test_support_mapping": {
+    "complete": 13,
+    "pending_whole_source_disposition": 2
+  },
+  "validation": {
+    "retained_item_gate_errors": 0,
+    "global_dataset_gates_passed": false,
+    "remaining_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "unchanged_code_regression": {
+      "stage": 159,
+      "tests_passed": 534,
+      "subtests_passed": 58,
+      "explicit_top_level_test_files": 56
+    },
+    "code_or_tests_changed": false,
+    "dev_exact_support_mapping_rechecked": true,
+    "new_test_mapping_all_complete": false
+  },
+  "usage": {
+    "new_candidate_vectors": 16,
+    "curation_model_processes": 1,
+    "curation_forward_batches": 1,
+    "old_candidate_vectors_reused": 3388,
+    "historical_vectors_reused": 44581,
+    "old_vectors_reencoded": 0,
+    "model_downloads": 0,
+    "paid_api_calls": 0,
+    "actual_dev_queries": 0,
+    "actual_test_queries": 0,
+    "new_subagents": 0,
+    "PSHCP_GETs": 6,
+    "PSHCP_body_bytes": 229580,
+    "PSHCP_web_discovery": 1,
+    "other_unadmitted_successful_GETs": 7,
+    "other_unadmitted_body_bytes": 2430504,
+    "other_web_discoveries": 2,
+    "local_access_guard_stops": 1,
+    "network_security_changes": false,
+    "remaining_quota": "not observable"
+  },
+  "review_evidence": {
+    "targeted_history_texts_fully_read": 76,
+    "longest_targeted_record_chars": 14000,
+    "longest_record_fully_read": true,
+    "focused_history_false_positive_fullread": 1,
+    "candidate_neighbor_QAs_read": 23,
+    "changed_active_neighbors_reviewed": 13,
+    "gap_windows_read": 129,
+    "old_source_gap_windows_read": 83,
+    "new_source_windows_covered_by_full_bodies": 46,
+    "template_full_QAs_read": 16,
+    "retained_questions": 15,
+    "held_questions": 1
+  },
+  "prior_usage_erratum": {
+    "stage217_new_vectors": 19,
+    "stage217_model_processes": 1,
+    "stage217_forward_batches": 2,
+    "original_numeric_provenance_correct": true,
+    "prose_and_parent_milestone_corrected_here": true,
+    "original_hash_bound_records_preserved": true
+  },
+  "limits": [
+    "933provisionalTEST remains67short;accepted0/unfrozen.",
+    "982whole-source dispositions, globalaliases andwholeDEVclearance unfinished; noactualDEV/TESTscore.",
+    "All priorholds andoriginal15historicalrevocations retained,including two stage215scope revocations.",
+    "Brand/generic medicalexception draft held forhistoricalcore independence despiteunflagged scores. QAunchangedafteraudits.",
+    "Fivecomplete sources included;active-member page remainswhollypending onDIdeadline interpretation.13newQAfullymapped;2newQAwait finalcorpusmapping. No selectivePSHCPsubsection admission.",
+    "WorkSafeVictoria permissiondeferred andNJworkerscomp sourcequalitydeferred. One NJlink locallyblocked,notretried; no bypass.",
+    "Single sequentialCodexcontentreview, nothuman/expertadjudication.",
+    "All previous636chunks unchanged;27newchunks preserve everyincludedcharacter, completeFAQtable andsourcequalifiers.",
+    "Only aggregates/sourcepermission/familymetadata published;rawsources/individualQA/annotations/weights local.",
+    "Qwen3.5:4b remainsmissing; no download/substitution."
+  ],
+  "evidence_sha256": {
+    "review_pool_121_clearance_ledger.json": "2ea1969c4b05785f693009791150988340203c1731a34ac62b120ebad330800a",
+    "provisional_item_pool_121_validation.json": "7cbfd05f57f9f9e38a66f7c6a8286467d727ae00e61ade87999da36e2346d032",
+    "stage241_final_review.json": "609b76b410da22e1cafda2f49358436b2445c0b7eab5f768560abe8fcb166e43",
+    "stage241_source_decisions.json": "19d5d9dec903374b3758507a3c2470f67340cf49b7351f1d557ca40c51bfb6e8",
+    "stage243_dev_support_units_draft.json": "d7b979c29e50379439563cfcfce1e5887b7d6de9ea1ed6ce363a48d36ea9355e",
+    "stage243_dev_readiness.json": "6024e2c9cef8b8d7758e51e705cb64d9078836945c03771c612701cce1ab59ed",
+    "stage243_new_support_mapping.json": "220073593bbbe005eb5fa013f8f5c4d00f1eeada5a7a0bee7c6bff2c57571d77",
+    "stage242_source_disposition_review.json": "ccc1c573ada1a58bd627c1cfef326671913707f95a642176de17358a2f218238",
+    "stage242_corpus_mapping_summary.json": "6aecf7cf2241c6b8db145a8b22b6ac1cb0ec4d51d1679350432661e8ef9a598a",
+    "stage238_source_selection.json": "2aee066741d920eb04411d01be6a9075de17fd359f19914cc0edc64a80e21616",
+    "stage239_cache_review_notes.json": "3495604992b187e9cd5de8cd47b3ccf61a6482de29de6a7d0c8e2350ab0b24de",
+    "stage240_source_selection.json": "8c0142678794edc4b0b477cb3a25805a490d25afedf7b0f60abaefe1ae3ca702"
+  }
+}

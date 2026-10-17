@@ -1,0 +1,113 @@
+{
+  "created_utc": "2026-10-07T19:46:22.812063+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 638,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 8,
+    "retained": 7,
+    "held": 1,
+    "retained_tasks": {
+      "numerical_calculation": 1,
+      "multi_evidence": 2,
+      "ordinary_qa": 3,
+      "insufficient_evidence": 1
+    }
+  },
+  "prior_checkpoint": "stage93_progress.json:631TEST/58DEV/143families",
+  "test_task_counts": {
+    "ordinary_qa": 410,
+    "insufficient_evidence": 52,
+    "multi_evidence": 84,
+    "numerical_calculation": 92
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 144,
+  "publisher_counts": {
+    "northcarolina_doi": 23,
+    "canada_fcac": 18,
+    "newyork_dfs": 54,
+    "california_cdi": 45,
+    "wisconsin_oci": 52,
+    "utah_uid": 12,
+    "us_opm": 100,
+    "us_va": 41,
+    "us_tricare": 106,
+    "newjersey_dobi": 36,
+    "alberta_goa": 36,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 9
+  },
+  "usage": {
+    "base_report_sha256": "82b40db973588d707423100e4a4bcabdf1041aa02d4e2ea8377b8d1f6ef94e7e",
+    "base_candidates_sha256": "b4ae2fb55b7dce0b32b9a3e8d7aedcf288a880984797ddc20b28a35896dcc523",
+    "new_candidates_sha256": "362aa034cd04bf72b2adb20e609c336b66738742825ff7185a63295ce502e2af",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 3038,
+    "old_old_pairs_reused": 693,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 8,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "4c0eb5a595ed6e0aeff313b6a9a2e825d965c96ab58e3fa50cca46d113850985",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_source_bytes": 0,
+    "new_html_documents": 0,
+    "new_pdf_documents": 0,
+    "browser_discovery_calls": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 292.6030684998259,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage94_source_decisions.json": "b68197c389be1126b53c8835e47983abd5936e97f06354b25fd5c2d49d4ae8e1",
+    "stage94_final_review.json": "6d6a667cb72b96ffd502b33f116d14d6570115d0a6b635a88f9871284ec08a6d",
+    "review_pool_85_clearance_ledger.json": "f99ca35bb7a9dd211971d2aa7d5738a72cc667f4d1c3cfa810e839f0d851c3b5",
+    "provisional_item_pool_85.jsonl": "e51800efefd8fb166ad3a54f99d51a3955998c5fe6ad981ad844be04e7dfd33f",
+    "provisional_item_pool_85_validation.json": "76cc9fa9cf8d27bb7e1cc1eba1d44b7ce6a4249aa45de7fbabe9ae168c50df63"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 190,
+    "numerical_calculation": 58,
+    "multi_evidence": 66,
+    "insufficient_evidence": 48
+  },
+  "limits": [
+    "362 independent TEST still needed;DEVminima provisionallymet.",
+    "No new source documents; snapshot16 and2317FAQ unchanged.",
+    "Four cached sources; no new family merges or split changes.",
+    "Nearesthistory andnew/changedcandidate relations reviewed; seehashboundcontentrecords.",
+    "Prior metadata erratum and all inherited holds preserved; one new history-core duplicate held.",
+    "Single sequentialCodexcontentreview, nothuman/expertreview."
+  ]
+}

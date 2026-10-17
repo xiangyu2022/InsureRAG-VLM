@@ -1,0 +1,15 @@
+{
+  "status": "SOURCE_ONLY_PRIOR_PERMISSION_HOLD_PRESERVED",
+  "new_source_requests": 2,
+  "new_source_bytes": 90267,
+  "new_candidates": 0,
+  "new_model_calls": 0,
+  "provisional_test_items": 638,
+  "provisional_dev_items": 58,
+  "accepted_items": 0,
+  "frozen": false,
+  "source_selection_sha256": "7b49e84a1aa959a6a0a787f894a57393d0c320a7662fe594d9f3439778cbe62b",
+  "notes": [
+    "Robots andhomepage only fetched beforepriorhold was recognized. Stop: no consumerpage,terms retry,QA,corpusadmission ornewapproval. No assertionthat homepageaccess establishes reuse."
+  ]
+}

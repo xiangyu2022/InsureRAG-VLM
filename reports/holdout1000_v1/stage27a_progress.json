@@ -1,0 +1,72 @@
+{
+  "created_utc": "2026-10-05T23:50:44.057791+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 326,
+    "dev": 45
+  },
+  "accepted_test_items": 0,
+  "frozen": false,
+  "new_items": 0,
+  "items_revoked": 1,
+  "test_document_families": 103,
+  "reason": "A newly recognized substantive parent/child relation produced21items in a20item-capped family. One child-guide item removed; cap unchanged.",
+  "evidence_sha256": {
+    "stage27a_family_decision.json": "6c5b1f8e927797a653e453d478149bdd5281d37b1c3ef2d541c90d952e5c67c0",
+    "review_pool_30_clearance_ledger.json": "6a0a2921184e7b2cc77e9175177700a8377a4a48d6caaa8834ca1695a872c175",
+    "provisional_item_pool_30.jsonl": "8232d6a73d575e0758d777a8955feae183f7d7f920e69ea77e65749e45af4cb9",
+    "provisional_item_pool_30_validation.json": "5a67826299aa15157a5d1df3b8cab8be381f58070152f1cb33c77e3d1ac98a03"
+  },
+  "validation": {
+    "passed": false,
+    "errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "item_errors": {},
+    "test_n": 326,
+    "dev_n": 45,
+    "publishers": {
+      "northcarolina_doi": 10,
+      "canada_fcac": 11,
+      "newyork_dfs": 43,
+      "california_cdi": 15,
+      "wisconsin_oci": 26,
+      "utah_uid": 8,
+      "us_opm": 32,
+      "us_va": 28,
+      "us_tricare": 64,
+      "newjersey_dobi": 26,
+      "alberta_goa": 11,
+      "australia_apra": 2,
+      "alabama_doi": 2,
+      "au_privatehealth_ombudsman": 8,
+      "us_usda_rma": 40
+    },
+    "tasks": {
+      "ordinary_qa": 229,
+      "insufficient_evidence": 24,
+      "multi_evidence": 36,
+      "numerical_calculation": 37
+    },
+    "document_groups": 103,
+    "document_group_count_basis": "Hash-validated registry and exact-body aliases",
+    "accepted_test_items": 0,
+    "review_label": "Automated gates plus recorded agent content review; not human/expert adjudication.",
+    "frozen": false,
+    "clearance_ledger_sha256": "6a0a2921184e7b2cc77e9175177700a8377a4a48d6caaa8834ca1695a872c175",
+    "provisional_items_passing_item_gates": 371
+  },
+  "usage": {
+    "new_embeddings": 0,
+    "source_requests": 0,
+    "subagents": 0,
+    "final_qa_runs": 0
+  }
+}

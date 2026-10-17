@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-07T11:46:37.522826+00:00",
+  "status": "SOURCE_ONLY_NO_DRAFTS",
+  "new_candidates": 0,
+  "model_calls": 0,
+  "source_requests": 0,
+  "review_limit": "Historical topic scan completed30matches; TFL excerpt output partially truncated, not fully adjudicated. No draft/clearance relies on an unread match. No registry changes or source hold release.",
+  "local_review_sha256": "2f01442ee19f5339a83ac90b6d0d0d902860be14b9b31a1fd1d17457aacd2844",
+  "selection_summary": "No new question: existing TFL claim/overseas needs already covered; HCFSA year/scope unresolved. Source-only checkpoint, no pool/global increment."
+}

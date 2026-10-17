@@ -1,0 +1,140 @@
+{
+  "created_utc": "2026-10-16T01:35:22.797640+00:00",
+  "status": "CONSTRUCTION_AND_CORPUS_PREPARATION_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 756,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_document_families": 151,
+  "prior_published_counts": {
+    "test": 748,
+    "dev": 58
+  },
+  "trial": {
+    "drafts": 16,
+    "new_retained_test": 8,
+    "new_held": 8,
+    "prior_items_revoked": 0
+  },
+  "test_task_counts": {
+    "ordinary_qa": 472,
+    "insufficient_evidence": 64,
+    "multi_evidence": 106,
+    "numerical_calculation": 114
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 128,
+    "numerical_calculation": 36,
+    "multi_evidence": 44,
+    "insufficient_evidence": 36
+  },
+  "remaining_independent_test": 244,
+  "usage": {
+    "new_candidate_vectors_encoded": 16,
+    "local_model_processes": 2,
+    "forward_batches": 2,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "new_source_requests_this_resume": 3,
+    "new_source_bytes_this_resume": 83203,
+    "browser_discovery_calls_this_resume": 0
+  },
+  "verification": {
+    "test": 756,
+    "dev": 58,
+    "test_families": 151,
+    "ledger_links": 98,
+    "stages": [
+      122,
+      124
+    ],
+    "original15_preserved": true,
+    "scope6_preserved": true,
+    "same_id_repairs_unchanged": 3,
+    "active_held_reserved_disjoint": true,
+    "split_isolation": true,
+    "family_cap": 20,
+    "publisher_cap": 0.2,
+    "task_correction_preserved": true,
+    "tdi_dev_assignment_preserved": true,
+    "cache_question_keys_verified": true,
+    "accepted": 0,
+    "frozen": false,
+    "offline_tests_passed": 503,
+    "offline_subtests_passed": 58,
+    "offline_seconds": 10.85,
+    "pbgc_retained_dependency_hits": 0,
+    "retained_items_checked": 814,
+    "retained_item_gates_pass": true,
+    "global_gates_pass": false
+  },
+  "source_preflight": {
+    "requests": 3,
+    "response_bytes": 83203,
+    "benefit_body_pages_fetched": 0,
+    "licence_pages_fetched": 0,
+    "new_approvals": 0,
+    "status": "STOPPED_AT_LINKED_LICENSE_ACCESS_RESTRICTION",
+    "reason": "Linked National Archives robots declares ai-input=no; crawl-delay with units also rejected. No alternate entry or policy bypass. GOV.UKbenefitpages not acquired."
+  },
+  "corpus_preparation": {
+    "status": "SINGLE_SOURCE_ENGINEERING_PILOT_NOT_DEV_CORPUS_NOT_RESULTS",
+    "documents": 1,
+    "chunks": 2,
+    "source_characters": 4130,
+    "max_chunk_tokens": 490,
+    "mapped_items": 4,
+    "support_units": 5,
+    "model_forward_calls": 0,
+    "network_requests": 0,
+    "dev_scoring_runs": 0,
+    "test_inference_runs": 0,
+    "source_snapshot_sha256": "c146feb66e29b39fdb10dc39dc6ba9ee69adf09cb52b3a823f9bf180cf791502",
+    "pool_sha256": "d22576749fbe22dab8d125535a707321d905d979c6144a26388d705d591501e9",
+    "code_sha256": "78fb5af2e7cbcdc0ad0927c56100b2f4dda4ba418b88bd69b1c880f8b8b7b091",
+    "tokenizer_files": {
+      "special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "tokenizer_config.json": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3",
+      "vocab.txt": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    },
+    "limitation": "Full source-only inclusion review across candidate corpus and all support aliases remains pending. One source does not constitute global retrieval evaluation."
+  },
+  "experiment_preparation": {
+    "source_only_global_corpus_complete": false,
+    "global_relevance_mapping_complete": false,
+    "dev_selection_locked": false,
+    "new_dev_comparisons": 0,
+    "new_test_inference": 0,
+    "real_generation_runtime_verified": false
+  },
+  "evidence_sha256": {
+    "provisional_item_pool_98.jsonl": "7235619d9f4166cae71c59c63743d96776ce2450409ccbc5a7b4f1afa7e58c29",
+    "review_pool_98_clearance_ledger.json": "4feed48def797b2c65ced729d96b7b7475d6a2d4e48412b16217a2e36801e43d",
+    "provisional_item_pool_98_validation.json": "25df579b164efa479693ac61eb5c5b40ed8a753010d8cf0323a4c42ca9b45190",
+    "stage125_cpu_tests.log": "c8edace2ee5e97424d5451b69db36b28f6958d3f844a24dd5f5251d2ae7d1078",
+    "stage125_corpus_pilot_summary.json": "3ba5909e1268cb54f6c4c6de183cc5ab2c5467fc3840df54547851a0d6f835a4",
+    "stage123_network_probe/budget.json": "43b4a85804c7daa14ff9c33f170cbcdd99d9186073ae053ce182a3e4bf8f13e4"
+  },
+  "limits": [
+    "Single sequential Codex content review, not human/expert adjudication.",
+    "At least244 independent TEST and all globalgates remain; no count/family/task/permission relaxation.",
+    "FiveNYdrafts held for unresolved transitive historical family, oneTRRdraft for sharedexception, twoNChealthdrafts for historicalcore reuse.",
+    "The corpus pilot uses one complete source,2chunks and4items/5spans; it is not a fullretrievalcorpus or semantic-alias clearance.",
+    "Current Ollama location unresolved: usualexe/modelmanifest absent,11434/11437timed out; project-documented11435connectionrefused. No registryinstallation record found in ordinary uninstall locations.",
+    "All original15revocations and laterholds remain; no modeldownload, paidAPI, newtraining, subagents or TEST tuning.",
+    "Raw sources, per-question records, private traces and weights remain local."
+  ]
+}

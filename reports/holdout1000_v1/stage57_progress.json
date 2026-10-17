@@ -1,0 +1,110 @@
+{
+  "created_utc": "2026-10-07T10:09:00.022612+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 515,
+    "dev": 46
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 3,
+    "retained": 3,
+    "held": 0,
+    "previous_items_revoked": 1,
+    "net_test_added": 2,
+    "retained_tasks": {
+      "numerical_calculation": 1,
+      "ordinary_qa": 2
+    }
+  },
+  "prior_checkpoint": "stage56_progress.json:513TEST/46DEV/133families",
+  "test_task_counts": {
+    "ordinary_qa": 349,
+    "insufficient_evidence": 37,
+    "multi_evidence": 56,
+    "numerical_calculation": 73
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 10,
+    "multi_evidence": 9,
+    "numerical_calculation": 6
+  },
+  "test_document_families": 133,
+  "publisher_counts": {
+    "northcarolina_doi": 21,
+    "canada_fcac": 16,
+    "newyork_dfs": 52,
+    "california_cdi": 32,
+    "wisconsin_oci": 45,
+    "utah_uid": 10,
+    "us_opm": 98,
+    "us_va": 33,
+    "us_tricare": 97,
+    "newjersey_dobi": 32,
+    "alberta_goa": 18,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 17,
+    "us_usda_rma": 40
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 8
+  },
+  "usage": {
+    "base_report_sha256": "dfa90b5afb031aedbf850ddaaf33abc5e99bf90348dcfe1251b57238ed5b15e7",
+    "base_candidates_sha256": "22df10b2c689e25191e1cf69e363083ee36ef752b91946a5e16a3b2487185c2a",
+    "new_candidates_sha256": "057a3d36b125059a1522d37388fb6d39227b34b08a0df4febdf3d6b03309761d",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2883,
+    "old_old_pairs_reused": 669,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 3,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "9813979579cdb5fa43314311f0fa83919471caa929281eecb02ce40d9a30f501",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 277.1937100000214,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage57_source_decisions.json": "0845c64ff99ec3c27021d69f6f3570c69a52ead2d0c4453552a944cee7eb4be7",
+    "stage57_final_review.json": "e30bcbbb1d2744c10b7bceae85767c99449f02c4a4a2c4ccd18c3f4afc3c1d04",
+    "review_pool_58_clearance_ledger.json": "242ebe6b3cd33f04db2a707b3510e0f651a8d6163c88b7129d27f28481ae8e50",
+    "provisional_item_pool_58.jsonl": "df31a3fa83d70d869b54bd156be7715ec69c335703b99df1ef43f8dee94ecfa8",
+    "provisional_item_pool_58_validation.json": "5b9b1e291c8e01d6f431b1d69cbb3ad5d4e25abf8bb72953ad9a6a4d824737dc"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 251,
+    "numerical_calculation": 77,
+    "multi_evidence": 94,
+    "insufficient_evidence": 63
+  },
+  "limits": [
+    "485 independent TEST still needed; DEV count,numerical andmulti minima unmet.",
+    "Three newTEST retained:two ordinary andone numerical. One existing ordinary held for corrected family cap;net+2TEST.",
+    "NY womens/breast pages joined healthcare family; old singleton item excluded to keep20item cap.",
+    "All15 nearest historical fulltexts and23neighbor QAs read.",
+    "Single sequential Codex content review, not human/expert review. Prior holds and original15 revocations preserved."
+  ]
+}
