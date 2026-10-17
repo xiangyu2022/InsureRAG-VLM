@@ -12,48 +12,38 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage402](stage402_progress.json): **1,000 provisional
-TEST and 57 DEV across 184 TEST families**. TEST task quotas are now **600 ordinary,
-150 numerical, 150 multi-evidence and 100 insufficient-evidence**. **Accepted
-counts remain zero; the dataset is not frozen.**
+The latest checkpoint is [stage413](stage413_progress.json): **1,000 provisional
+TEST and 57 DEV across 184 TEST families**. The existing task quotas are
+**600 ordinary, 150 numerical, 150 multi-evidence and 100 insufficient-evidence**.
+**Accepted counts remain zero; the dataset is not frozen.** All 1,004 individually
+reviewed TEST candidates and the prior deterministic selection reasons are preserved.
 
-Four new multi-evidence questions passed sequential content, contamination and
-duplicate review. A fixed-seed hash ordering, recorded before selection, selected
-600 of 604 individually reviewed ordinary questions under the existing family
-and publisher caps. Four ordinary questions were not selected: three because of
-the family cap and one after the ordinary quota was filled. None was revoked for
-quality. All 1,004 individually reviewed TEST candidates, previous versions and
-selection reasons remain private and preserved. No model results guided selection.
+Source review now records **704 included, 385 excluded and 337 pending** across
+1,426 documents, with **1,416 partial chunks**. Since stage402, 90 complete cached
+bodies (394,313 characters) yielded 52 inclusions, 24 exclusions and 14 pending
+decisions. All previous 1,272 chunks are unchanged. Included source characters,
+dates, table rows, headers and qualifications are preserved; chunks remain within
+512 tokens and 2,400 characters. Open source scope, year, translation and rights
+issues are recorded without silently repairing source text.
 
-Source review has reached **652 included, 361 excluded and 413 pending** across
-1,426 documents, with 1,272 partial chunks. Since stage395, 20 complete source
-bodies (138,084 characters) yielded 18 inclusions and two pending decisions.
-All previous 1,204 chunks are unchanged. Complete source characters, tables,
-dates and qualifications were preserved. Date and third-party rights questions
-remain pending instead of silently modifying source text.
+TEST declared-span mapping is **740 complete and 260 pending**. The retained
+pool uses 57 pending sources. All 57 DEV texts, 61 necessary units and 19 reviewed
+Spanish support alternatives are unchanged. All 143 ledger links were checked;
+none of the 416 inherited item holds is active. The dataset validator reports
+zero item or coverage errors. These checks do not establish global acceptance.
 
-TEST declared-span mapping is **712 complete and 288 pending**. There are
-**64 pending sources used by the retained pool**. All 57 DEV texts, 61 necessary
-units and 19 reviewed Spanish support alternatives are unchanged. All 143 ledger
-links were checked; none of the 416 effective inherited item holds is active.
-The dataset validator reports zero item or coverage errors. These structural
-checks do not establish global semantic acceptance.
+Global source decisions, necessary support, equivalent aliases, family/history
+and legacy reconciliation remain unfinished. The readiness gate blocks actual
+DEV retrieval. No DEV/TEST inference, selection lock or freeze exists. Four
+private user-requested examples remain isolated from future model/prompt work.
 
-Global source dispositions, necessary support, equivalent aliases, family/history
-and legacy reconciliation remain unfinished. The readiness gate still blocks
-actual DEV retrieval. No actual DEV/TEST inference, model selection, selection
-lock or freeze exists. Four private user-requested examples remain locally logged
-and isolated from any future model or prompt development.
-
-The 82 focused tests from stage379 remain applicable because no code, tests,
-protocol or family registry changed. Exact-commit CI for
-`a2b76657a4bc94d4642455b4db14b2560b54617e` passed all five jobs. Only four new
-local vectors were encoded in one forward pass; 3,509 prior candidate vectors
-and 44,581 historical vectors were reused. Source review used no model or network
-calls. No paid APIs or model downloads were used. This is sequential Codex content
-review, not human or expert adjudication. Raw sources, individual QA, annotations
-and weights remain local. The Agent scaffold is unchanged. PR8 remains draft and
-unmerged; global acceptance work continues.
+No new vectors, model forwards, paid APIs or source network requests were used
+since stage402. The 82 focused tests recorded at stage379 remain applicable:
+code, tests, protocol and family registry are unchanged. Exact-commit CI for
+`d7a3b31bc7f8c6e589225811d9e2e73298fbd34a` passed all five jobs. This is
+sequential Codex content review, not human or expert adjudication. Raw sources,
+individual QA, annotations and weights remain local. The Agent scaffold is
+unchanged. PR8 remains draft and unmerged; global acceptance work continues.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
