@@ -12,35 +12,37 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage458](stage458_progress.json): **1,000 provisional
+The latest checkpoint is [stage465](stage465_progress.json): **1,000 provisional
 TEST and 57 DEV across 184 TEST families**, with task quotas **600 ordinary,
 150 numerical, 150 multi-evidence and 100 insufficient-evidence**. **Accepted
 counts remain zero; the dataset is not frozen.**
 
-Source review records **748 included, 399 excluded and 279 pending**, with
-**3,663 partial chunks**. Since stage451, 24 complete cached bodies
-(126,398 characters) produced eight inclusions, eight exclusions and eight
-pending decisions. All previous 3,638 chunks are unchanged. Three dated
-Australian rebate tables retain every income/age cell, effective period and
-family-tier qualification. New chunks pass the 512-token and 2,400-character
-limits. Source inclusion does not establish global acceptance.
+Source review records **759 included, 411 excluded and 256 pending**, with
+**3,711 partial chunks**. Since stage458, 36 complete cached bodies
+(227,719 characters) produced 11 inclusions, 12 exclusions and 13 pending
+decisions. All previous 3,663 chunks are unchanged. Four Australian health
+comparison tables preserve complete columns and shared rows with their
+section labels. New chunks meet the 512-token and 2,400-character limits.
+An oversized renters-guide paragraph was split at complete content boundaries
+before persistence; no text was discarded. Source inclusion does not establish
+global acceptance.
 
-The historical FEGLI PDF remains pending. Its existing exact-hash 35-page
-review was reused; this batch read the first 15,000 characters and visually
-compared page 5, not all pages anew. Sidebar/worksheet interleaving and the
-previously excluded pages require source-only layout and rights preparation.
-Other pending reviews retain historical-family, translation, pandemic-version
-and payer-order qualifications. NAIC-attributed articles and professional
-service-of-process material were excluded. No held item was restored.
+Pending decisions retain source-family history, attributed third-party material,
+version and scope issues. Raw HTML confirmed a fraction-layout problem in a
+home valuation example; it remains pending. A Spanish alternative-health page
+was excluded consistently with its English counterpart's existing scope hold.
+Mortgage, general credit and bank-deposit material and report directories were
+excluded by source purpose. No held item was restored. The historical FEGLI
+PDF still requires source-only layout and licensed-range preparation.
 
 TEST declared-span mapping is **860 complete and 140 pending**. The retained
 pool uses 37 pending sources. All 57 DEV texts, 61 necessary support units and
 19 Spanish alternatives are unchanged. All 143 ledger links verify; none of
 416 inherited item holds is active. Dataset item and coverage checks report
 zero errors. Necessary support, equivalent aliases, family/history, legacy
-restrictions and source consistency remain unresolved global gates. No
-DEV/TEST inference, model selection lock or freeze has occurred. Four private
-examples remain isolated from model/prompt development.
+restrictions and 46 recorded source-consistency issues remain global gates.
+No DEV/TEST inference, model selection lock or freeze has occurred. Four
+private examples remain isolated from model/prompt development.
 
 No new vectors, model forwards, downloads, paid APIs or source acquisitions
 were used. The pipeline's prior 82 focused tests still apply because code is
@@ -48,7 +50,7 @@ unchanged. The [Agent verification](../agent_draft/status_20261018.json) remains
 the stage420 verification: 48 synthetic tests passed, with no real-model
 controller run. Independent acceptance work continues.
 
-Exact-commit CI for `0d1a29358b74727fd9930a08f3eb1c5a4397e014` passed all five
+Exact-commit CI for `efbac95738061a27ddf7cf3ac376fd992fa4ece8` passed all five
 jobs. Review is sequential Codex review, not human or expert adjudication.
 Raw sources, individual QA, annotations and weights remain local. PR8 is
 draft and unmerged.
