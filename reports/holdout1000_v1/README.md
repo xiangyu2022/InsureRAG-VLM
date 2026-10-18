@@ -12,29 +12,27 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage440](stage440_progress.json): **1,000 provisional
+The latest checkpoint is [stage451](stage451_progress.json): **1,000 provisional
 TEST and 57 DEV across 184 TEST families**, with task quotas **600 ordinary,
 150 numerical, 150 multi-evidence and 100 insufficient-evidence**. **Accepted
 counts remain zero; the dataset is not frozen.**
 
-Source review records **737 included, 391 excluded and 298 pending**, with
-**3,540 partial chunks**. Since stage429, fifteen complete cached bodies
-(171,791 characters) produced seven inclusions, three exclusions and five
-pending decisions. Seven historical OPM rate tables were separately checked
-by a deterministic audit: **14,004 rows / 168,048 cells** matched the original
-HTML with no component-sum or schema anomalies. All non-table prose and all
-headers were reviewed; individual plan/rate cells were not claimed as Codex
-content review. Original years, payer categories, row identities and values
-remain intact. This checks faithful source preservation, not global truth.
+Source review records **740 included, 391 excluded and 295 pending**, with
+**3,638 partial chunks**. Since stage440, five complete cached bodies
+(315,992 characters) produced three inclusions and two pending decisions.
+All previous 3,540 chunks are unchanged. Source text, exceptions, historical
+dates and section context are preserved; new chunks pass the 512-token and
+2,400-character limits. Source inclusion does not establish current-law
+applicability or clear global question quality.
 
-Three additional administrative/search/download directories were excluded
-after complete nonrepetitive text and schema review. Their repeated records
-were structurally inventoried rather than claimed individually read. No linked
-documents were fetched. All previous 1,562 chunks are unchanged. All included
-source characters remain within the 512-token and 2,400-character limits.
+The two pending chapters retain prior PSHB and court-default-plan restrictions,
+an incomplete exception list, and an HSA example that conflates coverage with
+HSA eligibility. Cancellation/reinstatement exceptions and disability-duration
+boundaries also remain in the mandatory global issue register. No missing rule
+was invented and no previously held item was restored.
 
-TEST declared-span mapping is **829 complete and 171 pending**. The retained
-pool uses 40 pending sources. All 57 DEV texts, 61 necessary support units and
+TEST declared-span mapping is **860 complete and 140 pending**. The retained
+pool uses 37 pending sources. All 57 DEV texts, 61 necessary support units and
 19 Spanish alternatives are unchanged. All 143 ledger links verify; none of
 416 inherited item holds is active. Dataset item and coverage checks report
 zero errors. Global necessary support, equivalent aliases, family/history,
@@ -48,7 +46,7 @@ unchanged. The [Agent verification](../agent_draft/status_20261018.json) remains
 the stage420 verification: 48 synthetic tests passed, with no real-model
 controller run. Independent acceptance work continues.
 
-Exact-commit CI for `0a12be7e307b565c6161438db2b221a31cfce61f` passed all five
+Exact-commit CI for `954f81939cf6bb4a9fb4f88476819ba600b8a50d` passed all five
 jobs. Review is sequential Codex review, not human or expert adjudication.
 Raw sources, individual QA, annotations and weights remain local. PR8 is
 draft and unmerged.
