@@ -12,38 +12,41 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage420](stage420_progress.json): **1,000 provisional
+The latest checkpoint is [stage429](stage429_progress.json): **1,000 provisional
 TEST and 57 DEV across 184 TEST families**, with task quotas **600 ordinary,
 150 numerical, 150 multi-evidence and 100 insufficient-evidence**. **Accepted
 counts remain zero; the dataset is not frozen.**
 
-Source review records **715 included, 385 excluded and 326 pending**, with
-**1,486 partial chunks**. Since stage413, ten full cached bodies (119,876
-characters) produced eight inclusions and two pending decisions. Three exact
-aliases reused prior full-body review after raw hashes, complete visible text,
-notices, publisher and family checks. They add no independent questions. All
-previous 1,416 chunks are unchanged. Full included text and source qualifications
-are preserved within the 512-token and 2,400-character chunk limits.
+Source review records **723 included, 385 excluded and 318 pending**, with
+**1,562 partial chunks**. Since stage420, fourteen complete cached bodies
+(233,620 characters) produced eight inclusions and six pending decisions.
+All previous 1,486 chunks are unchanged. Complete included text, table rows,
+age bands, dates and source qualifications remain within the 512-token and
+2,400-character limits. Source inclusion preserves a reviewed snapshot;
+it does not establish current applicability or global acceptance.
 
-TEST declared-span mapping is **771 complete and 229 pending**. The retained pool
-uses 49 pending sources. All 57 DEV texts, 61 necessary units and 19 reviewed
-Spanish support alternatives are unchanged. All 143 ledger links were checked;
-none of the 416 inherited item holds is active. Dataset item and coverage
-validation reports zero errors. Global necessary support, equivalent aliases,
-family/history and legacy reconciliation remain incomplete; structural validation
-does not establish acceptance. No DEV/TEST inference, selection lock or freeze
-has occurred. Four private examples remain isolated from model/prompt development.
+TEST declared-span mapping is **826 complete and 174 pending**. The retained
+pool uses 41 pending sources. All 57 DEV texts, 61 necessary support units
+and 19 Spanish alternatives are unchanged. All 143 ledger links verify;
+none of 416 inherited item holds is active. Dataset item and coverage checks
+report zero errors. Global necessary support, equivalent aliases, family/history,
+legacy restrictions and source consistency remain unresolved. No DEV/TEST
+inference, model selection lock or freeze has occurred. Four private examples
+remain isolated from model/prompt development.
 
-The [Agent verification](../agent_draft/status_20261018.json) records a fresh
-**48/48 synthetic test pass** and unchanged implementation. The local generation
-endpoint remains unavailable; installed project checkpoints are retrieval and
-reranker models. Real-model Agent validation remains blocked, while source review
-continues. No new vectors, model forwards, downloads, paid APIs or source
-acquisitions were used. The source pipeline's prior 82 focused tests still apply.
-Exact-commit CI for `f04b7b9b1684691ffb485a9e464d730796fc43c8` passed all five
-jobs. This is sequential Codex review, not human or expert adjudication. Raw
-sources, individual QA, annotations and weights remain local. PR8 is draft and
-unmerged.
+The mandatory issue register now includes additional eligibility-boundary,
+PIP scope, valuation-list version and historical-contact discrepancies.
+These remain open despite individual question clearances. No new vectors,
+model forwards, downloads, paid APIs or source acquisitions were used.
+The pipeline's prior 82 focused tests still apply because code is unchanged.
+The [Agent verification](../agent_draft/status_20261018.json) remains the
+stage420 verification: 48 synthetic tests passed, with no real-model controller
+run. Independent source review continues.
+
+Exact-commit CI for `8acd1fc3f8811e5c1b7254eb7a842dad4fd6f636` passed all five
+jobs. Review is sequential Codex review, not human or expert adjudication.
+Raw sources, individual QA, annotations and weights remain local. PR8 is
+draft and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
