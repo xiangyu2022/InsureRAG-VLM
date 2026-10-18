@@ -12,50 +12,61 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage474](stage474_progress.json): **1,000 provisional
-TEST and 57 DEV across 184 TEST families**, with task quotas **600 ordinary,
+The latest checkpoint is [stage483](stage483_progress.json): **1,000 provisional
+TEST and 57 DEV across 183 TEST families**, with task quotas **600 ordinary,
 150 numerical, 150 multi-evidence and 100 insufficient-evidence**. **Accepted
 counts remain zero; the dataset is not frozen.**
 
-Source review records **770 included, 423 excluded and 233 pending**, with
-**3,791 partial chunks**. Since stage465, 18 complete cached bodies
-(156,059 characters) produced seven inclusions, seven exclusions and four
-pending decisions. Nine additional fragment URLs reused reviews only after
-exact raw-byte/text, publisher, base-URL, permission and family checks. Four
-were included and five excluded. They add no independent questions.
+One ordinary question was revoked for an unqualified payer-scope assumption.
+An already reviewed reserve was selected using the existing fixed hash rank
+and family/publisher caps. No new question, seed, quota or threshold was
+introduced. All 144 ledger links verify; none of 417 effective historical
+holds is active. The original revoked questions remain excluded.
 
-The NJ complaint page and FEGLI rate page now pass source-structure checks.
-All 47 FEGLI tables remain complete within chunks with their dated employee,
-annuitant or historical section context; Option B/C free-coverage exceptions
-remain attached. All previous 3,711 chunks are unchanged. Of 80 added chunks,
-44 reuse identical rendered content and token counts from exact page copies.
-Newly tokenized chunks meet the 512-token and 2,400-character limits.
+Source review records **778 included, 431 excluded and 217 pending**, with
+**3,855 partial chunks**. Seven historical fee-for-service rate tables passed
+complete raw/normalized row matching: 462 rows, 5,544 cells and 792 cross-year
+or payer-category comparisons. One table body was fully read; the other six
+received schema, header and non-table text review alongside machine checks.
+These checks are not claimed as human or expert review of every rate cell.
 
-TEST declared-span mapping improved to **868 complete and 132 pending**.
-The retained pool uses 35 pending sources. All 57 DEV texts, 61 necessary
-support units and 19 Spanish alternatives are unchanged. All 143 ledger
-links verify; none of 416 inherited item holds is active. Item and coverage
-checks report zero errors. Source inclusion does not establish acceptance.
+Eight entire directories, draft-legislation or professional administration
+sources were excluded by explicit document purpose. The review records the
+prefaces, terminal text and headings actually examined, without claiming
+full-body reading. One complete undated guide was included with its annual
+income-table caveat preserved; the table's effective year was not inferred.
+All prior 3,791 chunks remain unchanged; 64 new chunks meet the 512-token
+and 2,400-character limits. No original source text was silently repaired.
 
-Publication and regulatory directories were excluded by source purpose.
-Two Spanish guides retain the same enrollment/scope exclusions as their
-English counterparts. Historical source-family leads, dated product claims,
-translation equivalence and other applicability issues remain unresolved.
-There are 50 recorded source-consistency issues. The historical FEGLI PDF
-still requires source-only layout and licensed-range preparation. No held
-item was restored. No DEV/TEST inference, model selection lock or freeze
-has occurred. Four private examples remain isolated from model/prompt work.
+TEST declared-span mapping is **869 complete and 131 pending**. The retained
+pool uses 33 pending sources. All 57 DEV texts, 61 necessary support units
+and 19 Spanish alternatives are unchanged. Item and coverage checks report
+zero errors. Source inclusion and span mapping do not establish acceptance.
 
-No new vectors, model forwards, downloads, paid APIs or source acquisitions
-were used. The pipeline's prior 82 focused tests still apply because code is
-unchanged. The [Agent verification](../agent_draft/status_20261018.json) remains
-the stage420 verification: 48 synthetic tests passed, with no real-model
-controller run. Independent acceptance work continues.
+All 63 currently flagged candidate similarity pairs were reviewed at the
+information-need level, covering 77 distinct QA records in 27 connected
+groups. The recorded decisions distinguish required rules and operations,
+not merely different numbers, names or dates. This does not claim exhaustive
+review of every below-threshold pair or resolve historical contamination.
+Shared document families remain subject to the registered family controls.
 
-Exact-commit CI for `2ad0a77f5d3db301961d8e9760d66d831e6044ee` passed all five
-jobs. Review is sequential Codex review, not human or expert adjudication.
-Raw sources, individual QA, annotations and weights remain local. PR8 is
-draft and unmerged.
+There are 52 recorded source-consistency issues. Necessary TEST support,
+source dates, equivalent aliases, family/history and legacy restrictions
+still require global reconciliation. The historical FEGLI PDF still needs
+layout and licensed-range preparation. No actual DEV/TEST inference, model
+selection lock or freeze has occurred. Four private examples remain isolated
+from model/prompt development. Independent acceptance work continues.
+
+This batch used no new vectors, model forwards, downloads, paid APIs or
+source acquisitions. Code is unchanged, so the pipeline's prior 82 focused
+tests remain applicable. The [Agent verification](../agent_draft/status_20261018.json)
+remains stage420's 48 passing synthetic tests, with no real-model controller
+run. Exact-commit CI for `5f6d1f7682139f9d13f9d19bf87bb8cd5f5e8f8f` passed
+all five jobs.
+
+Review is sequential Codex review, not human or expert adjudication. Raw
+sources, individual QA, annotations and weights remain local. PR8 is draft
+and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
