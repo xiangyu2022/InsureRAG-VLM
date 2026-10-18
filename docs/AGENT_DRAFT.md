@@ -76,11 +76,18 @@ would need an isolated worker. The draft makes no such guarantee.
 
 ## Connect an existing local model or reranker
 
-At the recorded local probe, `http://localhost:11434/api/tags` refused the
-connection; no running Ollama process or configured alternate endpoint was found.
-**No real-model controller loop was run.** Mock adapter tests verify the call
-contract and usage extraction only. The delivered artifact is a runnable
-scaffold, not a validated model Agent.
+On October 18, 2026, the existing Agent contract tests passed **48/48** again.
+Implementation and synthetic-trace hashes match the original delivery. The
+[current verification report](../reports/agent_draft/status_20261018.json)
+records the test, runtime probe and installed-weight inventory.
+
+The read-only probe of `http://127.0.0.1:11434/api/tags` still refused connection.
+No Ollama process, executable on PATH, standard per-user model store or configured
+alternate endpoint was found in the checked locations. The project has BGE and
+three BERT retrieval adaptation/reranker checkpoints; these are not generative
+controller models. No installation, model download or service startup was attempted.
+**No real-model controller loop was run.** Mock adapter tests verify only the call
+contract and usage extraction. The artifact remains a runnable synthetic scaffold.
 
 When an already installed local Ollama model is available, run just one
 synthetic case with its verified digest:
@@ -123,7 +130,8 @@ results as a personal coverage or claim decision.
 The next connection point is the existing local-model adapter: verify the
 runtime, run a few synthetic full loops, inspect actions/citations and actual
 usage, then evaluate on separately designated development material. Never tune
-this controller on true TEST outputs. Holdout state remains 978 provisional
-TEST / 57 DEV, 10 uncounted candidates, accepted=0 and frozen=false. Its global
-review, revocations, six baselines and freeze-before-final-evaluation protocol
-remain unchanged.
+this controller on true TEST outputs. Current holdout progress is recorded in the
+[aggregate checkpoint](../reports/holdout1000_v1/stage420_progress.json): 1,000
+provisional TEST and 57 DEV, accepted=0 and frozen=false. Source and global
+acceptance work continues independently of the unavailable generation runtime.
+The six-baseline protocol and freeze-before-final-evaluation rule remain unchanged.
