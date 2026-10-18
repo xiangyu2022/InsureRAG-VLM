@@ -12,38 +12,43 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage429](stage429_progress.json): **1,000 provisional
+The latest checkpoint is [stage440](stage440_progress.json): **1,000 provisional
 TEST and 57 DEV across 184 TEST families**, with task quotas **600 ordinary,
 150 numerical, 150 multi-evidence and 100 insufficient-evidence**. **Accepted
 counts remain zero; the dataset is not frozen.**
 
-Source review records **723 included, 385 excluded and 318 pending**, with
-**1,562 partial chunks**. Since stage420, fourteen complete cached bodies
-(233,620 characters) produced eight inclusions and six pending decisions.
-All previous 1,486 chunks are unchanged. Complete included text, table rows,
-age bands, dates and source qualifications remain within the 512-token and
-2,400-character limits. Source inclusion preserves a reviewed snapshot;
-it does not establish current applicability or global acceptance.
+Source review records **737 included, 391 excluded and 298 pending**, with
+**3,540 partial chunks**. Since stage429, fifteen complete cached bodies
+(171,791 characters) produced seven inclusions, three exclusions and five
+pending decisions. Seven historical OPM rate tables were separately checked
+by a deterministic audit: **14,004 rows / 168,048 cells** matched the original
+HTML with no component-sum or schema anomalies. All non-table prose and all
+headers were reviewed; individual plan/rate cells were not claimed as Codex
+content review. Original years, payer categories, row identities and values
+remain intact. This checks faithful source preservation, not global truth.
 
-TEST declared-span mapping is **826 complete and 174 pending**. The retained
-pool uses 41 pending sources. All 57 DEV texts, 61 necessary support units
-and 19 Spanish alternatives are unchanged. All 143 ledger links verify;
-none of 416 inherited item holds is active. Dataset item and coverage checks
-report zero errors. Global necessary support, equivalent aliases, family/history,
+Three additional administrative/search/download directories were excluded
+after complete nonrepetitive text and schema review. Their repeated records
+were structurally inventoried rather than claimed individually read. No linked
+documents were fetched. All previous 1,562 chunks are unchanged. All included
+source characters remain within the 512-token and 2,400-character limits.
+
+TEST declared-span mapping is **829 complete and 171 pending**. The retained
+pool uses 40 pending sources. All 57 DEV texts, 61 necessary support units and
+19 Spanish alternatives are unchanged. All 143 ledger links verify; none of
+416 inherited item holds is active. Dataset item and coverage checks report
+zero errors. Global necessary support, equivalent aliases, family/history,
 legacy restrictions and source consistency remain unresolved. No DEV/TEST
 inference, model selection lock or freeze has occurred. Four private examples
 remain isolated from model/prompt development.
 
-The mandatory issue register now includes additional eligibility-boundary,
-PIP scope, valuation-list version and historical-contact discrepancies.
-These remain open despite individual question clearances. No new vectors,
-model forwards, downloads, paid APIs or source acquisitions were used.
-The pipeline's prior 82 focused tests still apply because code is unchanged.
-The [Agent verification](../agent_draft/status_20261018.json) remains the
-stage420 verification: 48 synthetic tests passed, with no real-model controller
-run. Independent source review continues.
+No new vectors, model forwards, downloads, paid APIs or source acquisitions
+were used. The pipeline's prior 82 focused tests still apply because code is
+unchanged. The [Agent verification](../agent_draft/status_20261018.json) remains
+the stage420 verification: 48 synthetic tests passed, with no real-model
+controller run. Independent acceptance work continues.
 
-Exact-commit CI for `8acd1fc3f8811e5c1b7254eb7a842dad4fd6f636` passed all five
+Exact-commit CI for `0a12be7e307b565c6161438db2b221a31cfce61f` passed all five
 jobs. Review is sequential Codex review, not human or expert adjudication.
 Raw sources, individual QA, annotations and weights remain local. PR8 is
 draft and unmerged.
