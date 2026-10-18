@@ -12,57 +12,50 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage483](stage483_progress.json): **1,000 provisional
+The latest checkpoint is [stage492](stage492_progress.json): **1,000 provisional
 TEST and 57 DEV across 183 TEST families**, with task quotas **600 ordinary,
 150 numerical, 150 multi-evidence and 100 insufficient-evidence**. **Accepted
 counts remain zero; the dataset is not frozen.**
 
-One ordinary question was revoked for an unqualified payer-scope assumption.
-An already reviewed reserve was selected using the existing fixed hash rank
-and family/publisher caps. No new question, seed, quota or threshold was
-introduced. All 144 ledger links verify; none of 417 effective historical
-holds is active. The original revoked questions remain excluded.
+All 145 ledger links verify; none of 417 effective historical item holds is
+active. The prior payer-scope withdrawal remains in force. Questions, answers,
+evidence and active family assignments are unchanged in this batch.
 
-Source review records **778 included, 431 excluded and 217 pending**, with
-**3,855 partial chunks**. Seven historical fee-for-service rate tables passed
-complete raw/normalized row matching: 462 rows, 5,544 cells and 792 cross-year
-or payer-category comparisons. One table body was fully read; the other six
-received schema, header and non-table text review alongside machine checks.
-These checks are not claimed as human or expert review of every rate cell.
+Source review records **784 included, 446 excluded and 196 pending**, with
+**3,881 partial chunks**. Since stage483, 16 complete bodies were inspected
+(134,829 characters), and 11 directories or professional resources were
+excluded through explicit purpose review. Two other purpose reviews were
+inconclusive and do not count as full-body review. Whole Spanish versions
+received the same scope and conflicting-limit exclusions as related English
+sources. All previous 3,855 chunks remain unchanged; 26 new chunks preserve
+original text and meet the 512-token and 2,400-character limits.
 
-Eight entire directories, draft-legislation or professional administration
-sources were excluded by explicit document purpose. The review records the
-prefaces, terminal text and headings actually examined, without claiming
-full-body reading. One complete undated guide was included with its annual
-income-table caveat preserved; the table's effective year was not inferred.
-All prior 3,791 chunks remain unchanged; 64 new chunks meet the 512-token
-and 2,400-character limits. No original source text was silently repaired.
+Six official publication families now group 18 English, Spanish and Hmong
+versions. Matching publication numbers, topics and explicit official catalog
+links support the grouping. Eleven additional conservative document holds
+carry existing restrictions to related versions. This does not establish
+translation equivalence or historical clearance, and affects no active item.
 
-TEST declared-span mapping is **869 complete and 131 pending**. The retained
-pool uses 33 pending sources. All 57 DEV texts, 61 necessary support units
-and 19 Spanish alternatives are unchanged. Item and coverage checks report
-zero errors. Source inclusion and span mapping do not establish acceptance.
+TEST declared-span mapping remains **869 complete and 131 pending**. The pool
+uses 33 pending sources. All 57 DEV texts, 61 necessary support units and
+19 Spanish alternatives are unchanged. Item and coverage checks report zero
+errors. Source inclusion and span mapping do not establish acceptance.
 
-All 63 currently flagged candidate similarity pairs were reviewed at the
-information-need level, covering 77 distinct QA records in 27 connected
-groups. The recorded decisions distinguish required rules and operations,
-not merely different numbers, names or dates. This does not claim exhaustive
-review of every below-threshold pair or resolve historical contamination.
-Shared document families remain subject to the registered family controls.
-
-There are 52 recorded source-consistency issues. Necessary TEST support,
+The earlier information-need review of 63 similarity pairs (77 QA records)
+is reused after exact question, answer, evidence and resolved-family identity
+checks. It is not a second content review or exhaustive below-threshold review.
+There are 55 mandatory source-consistency issues. Necessary TEST support,
 source dates, equivalent aliases, family/history and legacy restrictions
 still require global reconciliation. The historical FEGLI PDF still needs
 layout and licensed-range preparation. No actual DEV/TEST inference, model
 selection lock or freeze has occurred. Four private examples remain isolated
 from model/prompt development. Independent acceptance work continues.
 
-This batch used no new vectors, model forwards, downloads, paid APIs or
-source acquisitions. Code is unchanged, so the pipeline's prior 82 focused
-tests remain applicable. The [Agent verification](../agent_draft/status_20261018.json)
-remains stage420's 48 passing synthetic tests, with no real-model controller
-run. Exact-commit CI for `5f6d1f7682139f9d13f9d19bf87bb8cd5f5e8f8f` passed
-all five jobs.
+This batch used no new vectors, model forwards, downloads, paid APIs or source
+acquisitions. The existing quality, corpus and DEV runner tests freshly passed
+**60/60**. [Agent verification](../agent_draft/status_20261018.json) remains
+stage420's 48 passing synthetic tests, with no real-model controller run.
+Exact-commit CI for `93610bb2344978b5ff39c7fcbd351a2ebf3f5fb1` passed all five jobs.
 
 Review is sequential Codex review, not human or expert adjudication. Raw
 sources, individual QA, annotations and weights remain local. PR8 is draft

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-16T19:32:17.654586+00:00",
+  "updated_utc": "2026-10-18T18:29:44.884880+00:00",
   "scope": "Additional document-level conservative holds; existing triage exclusions still apply. Holds are not claims every passage is false. No held page is cleared by low similarity or an individually plausible answer.",
   "documents": {
     "1056fbb935fe0e7ae00642b4": {
@@ -1118,6 +1118,116 @@
       "status": "hold_pending_explicit_resolution",
       "source_sha256": "d4c5903a195070dd899b217612c6bab6ce57bbb85c67d4479fa9def30b65ac73",
       "text_sha256": "2edf86b3bb2822e1ec58978e4888341390a23a432715033c24606a416d9c1bc5"
+    },
+    "7029df6f38e81bbe13fa19ac": {
+      "publisher": "wisconsin_oci",
+      "reason": "Propagated existing PI023 whole-page hold for conflated COBRA election/payment deadlines and legal-separation wording to official language/version family. No assertion that every translation repeats the defect; unresolved family cannot supply accepted items.",
+      "local_review_record": "stage488_family_review.json",
+      "review_record_sha256": "59ea61148d6e8ee8ad5e575e40476f5a4ef13d0da0e3b5914f52fbcb64d5cfd2",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-023C.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "720144f7c8c014950b5d38ba": {
+      "publisher": "wisconsin_oci",
+      "reason": "Propagated existing PI023 whole-page hold for conflated COBRA election/payment deadlines and legal-separation wording to official language/version family. No assertion that every translation repeats the defect; unresolved family cannot supply accepted items.",
+      "local_review_record": "stage488_family_review.json",
+      "review_record_sha256": "59ea61148d6e8ee8ad5e575e40476f5a4ef13d0da0e3b5914f52fbcb64d5cfd2",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-023B.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "36e32c0a343a42f99e52bd5a": {
+      "publisher": "wisconsin_oci",
+      "reason": "Preserve stage50/stage89 conservative no-new-question family restriction, explicitly including translations, for continuation material shared with held PI023. Family grouping does not resolve the underlying conflict.",
+      "local_review_record": "stage488_family_review.json",
+      "review_record_sha256": "59ea61148d6e8ee8ad5e575e40476f5a4ef13d0da0e3b5914f52fbcb64d5cfd2",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-242A.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "b005c92f7ad259e7fe264691": {
+      "publisher": "wisconsin_oci",
+      "reason": "Preserve stage50/stage89 conservative no-new-question family restriction, explicitly including translations, for continuation material shared with held PI023. Family grouping does not resolve the underlying conflict.",
+      "local_review_record": "stage488_family_review.json",
+      "review_record_sha256": "59ea61148d6e8ee8ad5e575e40476f5a4ef13d0da0e3b5914f52fbcb64d5cfd2",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-242B.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "b2f41b08235943e9d2c9c460": {
+      "publisher": "wisconsin_oci",
+      "reason": "Preserve stage50/stage89 conservative no-new-question family restriction, explicitly including translations, for continuation material shared with held PI023. Family grouping does not resolve the underlying conflict.",
+      "local_review_record": "stage488_family_review.json",
+      "review_record_sha256": "59ea61148d6e8ee8ad5e575e40476f5a4ef13d0da0e3b5914f52fbcb64d5cfd2",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-242C.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "5534e4dcebc49937ca4a788f": {
+      "publisher": "wisconsin_oci",
+      "reason": "Preserve stage25/stage69 restriction on termination and altered-renewal content exposed in historical WI auto corpus/prepared evaluation. Apply conservatively to official language/version family until scope-specific history reconciliation.",
+      "local_review_record": "stage488_family_review.json",
+      "review_record_sha256": "59ea61148d6e8ee8ad5e575e40476f5a4ef13d0da0e3b5914f52fbcb64d5cfd2",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-024C.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "8d826f99e7cf71bb1d646b00": {
+      "publisher": "wisconsin_oci",
+      "reason": "Preserve stage25/stage69 restriction on termination and altered-renewal content exposed in historical WI auto corpus/prepared evaluation. Apply conservatively to official language/version family until scope-specific history reconciliation.",
+      "local_review_record": "stage488_family_review.json",
+      "review_record_sha256": "59ea61148d6e8ee8ad5e575e40476f5a4ef13d0da0e3b5914f52fbcb64d5cfd2",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-024B.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "fc0eeb0bf73c4c5b0c3541c6": {
+      "publisher": "wisconsin_oci",
+      "reason": "Preserve stage25/stage69 restriction on termination and altered-renewal content exposed in historical WI auto corpus/prepared evaluation. Apply conservatively to official language/version family until scope-specific history reconciliation.",
+      "local_review_record": "stage488_family_review.json",
+      "review_record_sha256": "59ea61148d6e8ee8ad5e575e40476f5a4ef13d0da0e3b5914f52fbcb64d5cfd2",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-024.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "249f07b68706974311df17bd": {
+      "publisher": "wisconsin_oci",
+      "reason": "Preserve stage164 no-draft restriction pending Part D historical mechanism and Spanish/Hmong derivative checks. Grouping identifies the family but does not clear 177 historical leads.",
+      "local_review_record": "stage488_family_review.json",
+      "review_record_sha256": "59ea61148d6e8ee8ad5e575e40476f5a4ef13d0da0e3b5914f52fbcb64d5cfd2",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-222C.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "ad8c749f5b49a55d34b75189": {
+      "publisher": "wisconsin_oci",
+      "reason": "Preserve stage164 no-draft restriction pending Part D historical mechanism and Spanish/Hmong derivative checks. Grouping identifies the family but does not clear 177 historical leads.",
+      "local_review_record": "stage488_family_review.json",
+      "review_record_sha256": "59ea61148d6e8ee8ad5e575e40476f5a4ef13d0da0e3b5914f52fbcb64d5cfd2",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-222B.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "e13051b64e01c28bb2827e44": {
+      "publisher": "wisconsin_oci",
+      "reason": "Preserve stage164 no-draft restriction pending Part D historical mechanism and Spanish/Hmong derivative checks. Grouping identifies the family but does not clear 177 historical leads.",
+      "local_review_record": "stage488_family_review.json",
+      "review_record_sha256": "59ea61148d6e8ee8ad5e575e40476f5a4ef13d0da0e3b5914f52fbcb64d5cfd2",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-222.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
     }
   },
   "proposal_metadata": {
@@ -1125,5 +1235,12 @@
     "base_registry_sha256": "bc2f6e346d68222086dbfef53b82f695f34ef4cf1e35ae88148cd815b95a62f7",
     "local_proposal": "agent_source_family_merge11_proposal.json",
     "family_hold_propagation": false
-  }
+  },
+  "additional_review_records": [
+    {
+      "local_review_record": "stage488_family_review.json",
+      "sha256": "59ea61148d6e8ee8ad5e575e40476f5a4ef13d0da0e3b5914f52fbcb64d5cfd2",
+      "reason": "Explicitly propagate existing conservative restrictions to eleven additional related documents."
+    }
+  ]
 }

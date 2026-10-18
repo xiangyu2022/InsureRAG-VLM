@@ -1,14 +1,13 @@
 # Independent holdout experiment preparation
 
 As of October 18, 2026, construction has reached 1,000 provisional TEST and 57 DEV
-items across 184 TEST document families. Accepted counts are zero; the benchmark
-is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage483_progress.json)
+items across 183 TEST document families. Accepted counts are zero; the benchmark
+is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage492_progress.json)
 records the current counts, validation and remaining work. Historical exposed
-results are regression evidence only. Four NHC multi-evidence items remain correctly
-classified as ordinary QA. Four new independently reviewed multi-evidence items
-and deterministic ordinary selection restore the existing 600/150/150/100 task
-quotas. All 1,004 individually reviewed TEST candidates and selection reasons
-are preserved; the 1,000 retained items are still provisional.
+results are regression evidence only. Task quotas remain 600/150/150/100.
+After one payer-scope withdrawal, the unchanged registered fixed-hash selection
+retains 1,000 of 1,003 eligible TEST candidates. Earlier candidate versions,
+withdrawals and selection reasons remain archived locally.
 
 The [prospective protocol](../reports/holdout1000_v1/evaluation_protocol_v1.json)
 registers BM25, original dense, original/adapted hybrid and original/adapted
