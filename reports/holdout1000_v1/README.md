@@ -12,47 +12,38 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage527](stage527_progress.json): **1,000 provisional
-TEST and 57 DEV across 183 TEST families**. The original task quotas are restored:
+The latest checkpoint is [stage539](stage539_progress.json): **1,000 provisional
+TEST and 57 DEV across 183 TEST families**, with the original task quotas of
 **600 ordinary, 150 numerical, 150 multi-evidence and 100 insufficient-evidence**.
 **Accepted counts remain zero; the dataset is not frozen.**
 
-Five independently reviewed replacements were selected using the registered
-seed-42 ranking, original task quotas and family/publisher caps. No previously
-withdrawn item was restored. Three ordinary candidates remain outside the pool
-because of family caps; one reviewed multi-evidence reserve remains unselected.
-New content review passed three numerical candidates and held one comparison
-candidate for overlap with an active DEV need, despite no automated threshold flag.
-One answer was revised to remove a claim outside its cited evidence.
+The source manifest now has **787 included, 491 excluded and 148 pending**
+documents. Three further cached bodies were read in full (49,840 characters):
+two excluded and one retained pending. All 3,915 partial chunks and active QA
+are unchanged. Thirty-three pending source bodies still need full reading;
+53 source issues remain open and 12 are resolved by whole-source exclusion.
+TEST declared-span mapping remains 869 complete and 131 pending. These counts
+do not establish necessary-support, alias, family or historical clearance.
 
-Source review records **787 included, 489 excluded and 150 pending**, with
-**3,915 partial chunks**. Twelve further cached bodies were read in full
-(178,436 characters): one was included, seven excluded and four remain pending.
-Eight new chunks preserve the entire included source; all 3,907 old chunks are
-unchanged. Thirty-six pending bodies still need full reading. The issue register
-has **52 open issues and 12 resolved by whole-source exclusion**.
+A new PDF word-order helper preserves every source word exactly once, validates
+review and inventory hashes, and records exact offsets and original page boxes.
+It rejects draft layouts, QA payloads, missing or duplicated words and malformed
+geometry. Ten table/worksheet pages received source-only visual review; a
+font-dependent word-order error was corrected in the private proposal. Remaining
+worksheet, shared-cell and licensed-range checks still block source admission.
+No extraction snapshot or evidence annotation was replaced. This helper is not
+yet integrated into the production corpus pipeline.
 
-TEST declared-span mapping is **869 complete and 131 pending**. DEV's 57 items,
-61 necessary support units and 19 Spanish alternatives remain unchanged.
-All 151 ledger links verify; none of 436 effective item holds is active. Original
-item/coverage checks pass, and 61 active similarity pairs retain their reviewed
-identities. These checks do not establish global source, support, alias or
-contamination clearance. The real DEV readiness check still fails closed.
+**94 targeted tests passed**, including 21 new synthetic layout tests. No network
+requests, model forwards, new vectors, paid calls or real DEV/TEST inference
+occurred since stage527. The previous exact commit
+`461cf50f7b4d1d338b134f0d753e4b994ea86d33` passed all five CI jobs.
 
-Only four new question vectors were encoded in two local forward batches;
-unchanged candidate/history vectors were reused. No paid calls, model downloads,
-or real DEV/TEST inference occurred. Three PBGC robots/navigation/terms requests
-saved 154,739 bytes; the terms require written permission, so benefit-content
-acquisition stopped and no PBGC source entered the corpus. Network settings were
-unchanged. **73 targeted tests passed**. The previous exact commit
-`6cc4e859a345b4c455aaaa03e3b24f9406c468a0` passed all five CI jobs.
-
-Global source, necessary-support, alias, family/history and legacy reconciliation
-continues. FEGLI PDF layout/licensed-range preparation remains pending, and the
-registered generation runtime was unavailable at its last check. No selection
-lock or TEST freeze has occurred. Reviews are sequential Codex reviews, not human
-or expert reviews. Raw sources, individual QA, annotations and weights remain
-local. PR8 stays draft and unmerged.
+Global source, support, alias, family/history and legacy reconciliation continues.
+The registered generation runtime was unavailable at its last check. No selection
+lock, TEST freeze or final evaluation has occurred. Reviews are sequential Codex
+reviews, not human or expert reviews. Raw sources, individual QA, annotations and
+weights remain local. PR8 stays draft and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

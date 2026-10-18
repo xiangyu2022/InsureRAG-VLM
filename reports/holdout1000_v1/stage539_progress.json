@@ -1,0 +1,181 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 1000,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 150,
+    "ordinary_qa": 600
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 183,
+  "publisher_counts": {
+    "canada_fcac": 20,
+    "us_va": 42,
+    "us_tricare": 139,
+    "newjersey_dobi": 41,
+    "newyork_dfs": 53,
+    "california_cdi": 51,
+    "alberta_goa": 38,
+    "northcarolina_doi": 39,
+    "us_opm": 120,
+    "wisconsin_oci": 65,
+    "us_usda_rma": 40,
+    "au_privatehealth_ombudsman": 20,
+    "utah_uid": 15,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 40,
+    "canada_esdc_ei": 103,
+    "alabama_doi": 5,
+    "newjersey_labor_leave": 9,
+    "canada_vac": 28,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 20,
+    "australia_apra": 2
+  },
+  "pool_version": 151,
+  "admitted_global_candidate_version": 145,
+  "source_snapshot": 33,
+  "all_test_declared_span_mapping": {
+    "complete": 869,
+    "pending": 131
+  },
+  "global_preflight": {
+    "ledger_links_verified": 151,
+    "effective_inherited_item_holds": 436,
+    "held_active_items": 0,
+    "item_errors": 0,
+    "coverage_errors": [],
+    "global_acceptance_passed": false
+  },
+  "dev_support_review": {
+    "items": 57,
+    "declared_spans": 75,
+    "answerable": 46,
+    "refusals": 11,
+    "necessary_units": 61,
+    "reviewed_Spanish_aliases": 19,
+    "global_clearance_complete": false
+  },
+  "identified_semantic_pair_review": {
+    "original_pairs": 63,
+    "retained_active_pairs": 61,
+    "identity_rebind_version": 526,
+    "below_threshold_pairs_exhaustively_reviewed": false
+  },
+  "created_utc": "2026-10-18T20:54:15.416631+00:00",
+  "status": "PROVISIONAL_1000_GLOBAL_ACCEPTANCE_PENDING_PDF_LAYOUT_TOOL_ADDED",
+  "corpus_preparation": {
+    "documents": 1426,
+    "include": 787,
+    "exclude": 491,
+    "pending": 148,
+    "partial_chunks": 3915,
+    "full_body_unreviewed_pending": 33
+  },
+  "source_quality_issues": {
+    "mandatory_register_version": 528,
+    "total_recorded_issues": 65,
+    "open_issues": 53,
+    "resolved_for_current_corpus_by_whole_source_exclusion": 12
+  },
+  "source_review_since_stage527": {
+    "complete_cached_bodies_read": 3,
+    "cached_body_characters": 49840,
+    "whole_source_exclusions": 2,
+    "remain_pending": 1,
+    "active_QA_or_chunks_changed": 0
+  },
+  "pdf_layout_preparation": {
+    "source_pages": 35,
+    "source_words": 13377,
+    "all_words_assigned_exactly_once": true,
+    "table_or_worksheet_pages_reviewed": 10,
+    "geometry_straddles_above_one_point": 0,
+    "word_order_corrections": 1,
+    "unchanged_normalized_word_order_pages": 23,
+    "whole_layout_review_complete": false,
+    "new_extraction_admitted": false,
+    "evidence_rebinding_performed": false
+  },
+  "engineering": {
+    "module": "src/insurerag_vlm/holdout_pdf_layout.py",
+    "purpose": "Render an explicitly reviewed source-only word order with exact offsets, original geometric provenance, source/inventory/layout hashes and complete-word coverage; never infer source quality, rights or evidence clearance.",
+    "fail_closed": [
+      "Unreviewed layout or QA inputs",
+      "Changed source or inventory hash",
+      "Omitted, duplicated or out-of-range word assignments",
+      "Incomplete or reordered page inventory",
+      "Malformed geometry or unexpected payload fields"
+    ],
+    "production_pipeline_integration": false
+  },
+  "validation": {
+    "fresh_targeted_tests": {
+      "passed": 94,
+      "seconds": 0.47,
+      "files": [
+        "tests/test_holdout_authoring_preflight.py",
+        "tests/test_holdout_source_state.py",
+        "tests/test_holdout_quality.py",
+        "tests/test_holdout_corpus.py",
+        "tests/test_holdout_dev_runner.py",
+        "tests/test_holdout_pdf_layout.py"
+      ]
+    },
+    "new_module_synthetic_tests": 21,
+    "global_dataset_gates_passed": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "usage_since_stage527": {
+    "network_requests": 0,
+    "model_forwards": 0,
+    "new_vectors": 0,
+    "paid_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0
+  },
+  "previous_exact_commit_ci": {
+    "commit": "461cf50f7b4d1d338b134f0d753e4b994ea86d33",
+    "run_id": 39163931977,
+    "all_five_jobs_success": true
+  },
+  "limits": [
+    "1000 is provisional; independent-benchmark global acceptance is incomplete.",
+    "148 pending source decisions,53 open issues and global support/alias/family/history/legacy checks remain.",
+    "The PDF draft remains blocked; source/layout completeness is not semantic or rights clearance.",
+    "The registered generation runtime was unavailable at its last check; no final evaluation or freeze.",
+    "Only code, synthetic tests and aggregate summaries are published. Raw source, QA, annotations and weights stay local."
+  ],
+  "evidence_sha256": {
+    "stage528_source_disposition_review.json": "a9c0d9360b68d0a41f68a079084824383603bfa4e0f5ee2eee437d2cab270221",
+    "stage529_global_preflight.json": "fce32bfdec38768963d8a0ff81198a16fd40f79ba399994b9cc11130527953a0",
+    "stage538_pdf_layout_review.json": "7c9b219d92319dda8bc6bbba5fb9e296af5726f6a2a65cfe947c9f6f5cdbf7f8"
+  }
+}
