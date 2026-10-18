@@ -6,19 +6,40 @@ from .source_mathml import preserve_mathml
 
 
 def clean(text):return ' '.join(text.split())
-def content_root(soup):
+def content_root(soup, *, preserve_headers=()):
     main=(soup.select_one('#main_content .content_left_column') or soup.find('main')
           or soup.select_one('[role="main"]') or soup.select_one('#main-main-content')
           or soup.select_one('#main-content') or soup.select_one('#main') or soup)
+    # Some publishers use header for substantive section labels. Preserve only
+    # explicitly reviewed selectors; navigation/header removal remains default.
+    if not isinstance(preserve_headers, (list, tuple)):
+        raise ValueError('Reviewed header selectors must be a list or tuple')
+    selected = {}
+    for selector in preserve_headers:
+        if not isinstance(selector, str) or not selector.strip():
+            raise ValueError('Reviewed header selector must be nonempty text')
+        matches = main.select(selector)
+        if not matches or any(node.name != 'header' for node in matches):
+            raise ValueError('Reviewed header selector must match header elements')
+        selected.update((id(node), node) for node in matches)
+    removable = ['script', 'style', 'nav', 'header', 'footer']
+    for node in selected.values():
+        for parent in node.parents:
+            if parent is main:
+                break
+            if parent.name in removable and id(parent) not in selected:
+                raise ValueError('Reviewed header is inside excluded navigation')
     for comment in main.find_all(string=lambda value:isinstance(value,(Comment,ProcessingInstruction))):comment.extract()
-    for tag in main.find_all(['script','style','nav','header','footer']):tag.decompose()
+    for tag in list(main.find_all(removable)):
+        if tag.name is not None and id(tag) not in selected:
+            tag.decompose()
     for link in main.find_all('a'):
         if clean(link.get_text(' ',strip=True)).casefold()=='shareable link to answer':link.decompose()
     preserve_mathml(main)
     return main
 
-def extract_original_faq(raw):
-    soup=BeautifulSoup(raw,'html.parser');main=content_root(soup);headings=[]
+def extract_original_faq(raw, *, preserve_headers=()):
+    soup=BeautifulSoup(raw,'html.parser');main=content_root(soup, preserve_headers=preserve_headers);headings=[]
     def question_text(node):
         return clean(node.get('header','') if node.name=='va-accordion-item' else node.get_text(' ',strip=True))
     for node in main.find_all(['h1','h2','h3','h4','h5','h6','summary','strong','b','dt','button','va-accordion-item']):
