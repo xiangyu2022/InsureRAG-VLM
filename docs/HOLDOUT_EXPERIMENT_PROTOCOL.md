@@ -4,7 +4,7 @@ As of October 18, 2026, the current checkpoint has 1,000 provisional TEST and 57
 items across 183 TEST document families. Five reviewed replacements restored the
 original 600/150/150/100 task quotas under the original seed and caps. Previously
 withdrawn items remain withdrawn. Accepted counts are zero; the benchmark is not
-frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage570_progress.json)
+frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage577_progress.json)
 distinguishes passing item/coverage checks from unfinished global acceptance.
 
 The [prospective protocol](../reports/holdout1000_v1/evaluation_protocol_v1.json)
@@ -34,8 +34,8 @@ The holdout_experiment module implements annotation-based metrics and uncertaint
 
 The whole-source manifest gate requires an explicit include/exclude review for
 every snapshot document before tokenization. Raw/text hashes for all 1,426 sources
-were verified. Current dispositions are 788 included, 511 excluded after source review
-and 127 pending. Review order prioritized DEV sources after a source-only
+were verified. Current dispositions are 788 included, 515 excluded after source review
+and 123 pending. Review order prioritized DEV sources after a source-only
 inventory of all 291 TDI documents. It does not authorize a gold-filtered corpus.
 Existing reviews can be reused when their content hashes and scope still apply.
 A strict MathML fraction transcription now preserves division and grouping. One
@@ -156,8 +156,8 @@ The script neither fetches URLs nor follows embedded historical origin paths.
 python scripts/preflight_holdout_authoring.py --root reports/holdout1000_v1 `
   --pool-number 151 --documents extraction_batch_33/documents.jsonl `
   --candidates global_candidates_reviewed_145.jsonl `
-  --manifest stage568_inclusion_manifest_draft.json `
+  --manifest stage575_inclusion_manifest_draft.json `
   --legacy stage277_legacy_hold_leads.json `
-  --issues stage568_source_consistency_issue_register.json `
+  --issues stage575_source_consistency_issue_register.json `
   --document DOCUMENT_ID --output next_authoring_packet.json
 ```

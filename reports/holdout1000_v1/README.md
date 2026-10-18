@@ -12,20 +12,19 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage570](stage570_progress.json): **1,000 provisional
+The latest checkpoint is [stage577](stage577_progress.json): **1,000 provisional
 TEST and 57 DEV across 183 TEST families**, retaining **600 ordinary, 150 numerical,
 150 multi-evidence and 100 insufficient-evidence TEST tasks**.
 **Accepted counts remain zero; the dataset is not frozen.**
 
-The source manifest has **788 included, 511 excluded and 127 pending** documents.
-Five fresh complete cached-body readings covered 155,598 characters. One prior
-29,995-character full reading was reused after exact raw/text hash verification.
-One further exclusion uses directly reviewed original-language problem passages
-and is not claimed as a full-body reading. Overall this batch excluded five sources.
-Six pending sources lack a manifest admission-review record. This count does not
-mean six sources have never been read: the previous checkpoint's wording and JSON
-field were corrected to distinguish historical reading from source admission.
-The register still has **54 open issues and 12 resolved by source exclusion**.
+The source manifest has **788 included, 515 excluded and 123 pending** documents.
+Every source now has a manifest review record, but a pending record is not admission
+or proof of a full-body reading. Three fresh complete cached-body readings covered
+172,453 characters. Three further exclusions use directly reviewed problem passages
+and are not claimed as full-body readings. Four sources were excluded in this batch.
+The register has **53 open issues and 13 resolved by source exclusion**. One shared
+appeal-route issue closed after the umbrella source was excluded; historical and
+family restrictions remain in force.
 
 All **3,918 partial chunks** remain byte-identical. Changed source decisions affect
 no active QA. Declared TEST mappings remain **876 complete, 124 pending**; mapping
@@ -40,13 +39,15 @@ No canonical snapshot or evidence changed.
 
 Code and tests are unchanged from `30f844e03542fb70c764548fedcd576125b7ad9f`, where
 **94 synthetic tests** passed. This aggregate checkpoint reuses those results
-and verifies raw/text, prior-reading, corpus and global review bindings.
+and verifies raw/text, calendar arithmetic, corpus and global review bindings.
 All five CI jobs passed on the preceding exact commit
-`05ffe3ac1afcbae2d3075943dfc6bd67c539b400`. Current DEV readiness remains false.
+`73f36a041a851de3d037be2dad1f547e57bb5fbe`. Current DEV readiness remains false.
 
-No source network requests, model forwards, new vectors, paid calls, downloads,
-or actual DEV/TEST inference occurred in this batch. Global source, support,
-alias, family/history and legacy reconciliation continues. The registered
+This batch used four bounded web searches and three official page opens for
+currency checks; HTTP request counts and bytes are not exposed. No reference
+pages were added to the canonical corpus. There were no model forwards, new
+vectors, paid calls, downloads or actual DEV/TEST inference. Global source,
+support, alias, family/history and legacy reconciliation continues. The registered
 generation runtime was unavailable at its last check. No selection lock, TEST
 freeze or final evaluation has occurred. Reviews are sequential Codex reviews,
 not human or expert reviews. Raw sources, QA, annotations and weights remain
