@@ -83,7 +83,7 @@
     "exclude": 506,
     "pending": 132,
     "partial_chunks": 3918,
-    "full_body_unreviewed_pending": 13
+    "pending_sources_without_admission_review_record": 13
   },
   "source_quality_issues": {
     "mandatory_register_version": 561,
@@ -196,5 +196,6 @@
     "actual_DEV_inference": 0,
     "actual_TEST_inference": 0,
     "old_chunks_retokenized": 0
-  }
+  },
+  "review_count_correction": "Terminology corrected in stage570: absence of a manifest admission-review record does not prove absence of a historical full-body reading."
 }
