@@ -12,38 +12,40 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage539](stage539_progress.json): **1,000 provisional
+The latest checkpoint is [stage548](stage548_progress.json): **1,000 provisional
 TEST and 57 DEV across 183 TEST families**, with the original task quotas of
 **600 ordinary, 150 numerical, 150 multi-evidence and 100 insufficient-evidence**.
 **Accepted counts remain zero; the dataset is not frozen.**
 
-The source manifest now has **787 included, 491 excluded and 148 pending**
-documents. Three further cached bodies were read in full (49,840 characters):
-two excluded and one retained pending. All 3,915 partial chunks and active QA
-are unchanged. Thirty-three pending source bodies still need full reading;
-53 source issues remain open and 12 are resolved by whole-source exclusion.
-TEST declared-span mapping remains 869 complete and 131 pending. These counts
-do not establish necessary-support, alias, family or historical clearance.
+The source manifest now has **788 included, 499 excluded and 139 pending**
+documents. Nine complete cached-body readings, including counterpart rereadings,
+covered 132,482 characters. Four additional whole-source exclusions reuse verified
+legacy restrictions and do not claim a fresh full-body read. Overall this batch
+included one source and excluded eight. Twenty-three pending bodies remain unread.
+The issue register has **54 open issues and 12 resolved by source exclusion**.
 
-A new PDF word-order helper preserves every source word exactly once, validates
-review and inventory hashes, and records exact offsets and original page boxes.
-It rejects draft layouts, QA payloads, missing or duplicated words and malformed
-geometry. Ten table/worksheet pages received source-only visual review; a
-font-dependent word-order error was corrected in the private proposal. Remaining
-worksheet, shared-cell and licensed-range checks still block source admission.
-No extraction snapshot or evidence annotation was replaced. This helper is not
-yet integrated into the production corpus pipeline.
+Whole-page FEDVIP scope review distinguished an earlier non-Postal task-review
+scope from the actual OPM authorship permission. All source cohorts and qualifiers
+were retained in three new chunks. All 3,915 previous chunks are unchanged, giving
+**3,918 partial chunks**. Seven existing TEST items now have exact declared-span
+mappings: **876 complete, 124 pending**. No question, answer or individual clearance
+changed. Mapping is not necessary-support or alias clearance.
 
-**94 targeted tests passed**, including 21 new synthetic layout tests. No network
-requests, model forwards, new vectors, paid calls or real DEV/TEST inference
-occurred since stage527. The previous exact commit
-`461cf50f7b4d1d338b134f0d753e4b994ea86d33` passed all five CI jobs.
+The PDF word-order helper and private layout proposals are unchanged. Worksheet,
+shared-cell and licensed-range checks still block PDF admission. **94 synthetic
+tests** and **all five CI jobs** passed on the exact unchanged-code commit
+`30f844e03542fb70c764548fedcd576125b7ad9f`; this metadata-only checkpoint reuses those
+results. Fresh checks verify source/chunk preservation, token budgets, affected
+mappings and unchanged review bindings. Actual DEV readiness still fails closed.
 
-Global source, support, alias, family/history and legacy reconciliation continues.
-The registered generation runtime was unavailable at its last check. No selection
-lock, TEST freeze or final evaluation has occurred. Reviews are sequential Codex
-reviews, not human or expert reviews. Raw sources, individual QA, annotations and
-weights remain local. PR8 stays draft and unmerged.
+No source network requests, model forwards, new vectors, paid calls, downloads,
+or real DEV/TEST inference occurred in this batch. The local tokenizer was used
+only for the newly included source. Global source, support, alias, family/history
+and legacy reconciliation continues. The registered generation runtime was
+unavailable at its last check. No selection lock, TEST freeze or final evaluation
+has occurred. Reviews are sequential Codex reviews, not human or expert reviews.
+Raw sources, individual QA, annotations and weights remain local. PR8 stays draft
+and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
