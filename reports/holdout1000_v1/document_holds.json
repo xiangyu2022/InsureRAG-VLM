@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-18T19:49:18.278700+00:00",
+  "updated_utc": "2026-10-18T22:10:46.017311+00:00",
   "scope": "Additional document-level conservative holds; existing triage exclusions still apply. Holds are not claims every passage is false. No held page is cleared by low similarity or an individually plausible answer.",
   "documents": {
     "1056fbb935fe0e7ae00642b4": {
@@ -1239,6 +1239,17 @@
         "https://www.rrb.gov/Newsroom/NewsReleases/Medicare"
       ],
       "status": "hold_pending_explicit_resolution"
+    },
+    "bdfe1ba1c7eb383d0f5b4418": {
+      "publisher": "us_tricare",
+      "reason": "WHOLE_SOURCE_PAYMENT_SCOPE_HOLD: PayMyBill dated2025-08-18 mandates automatic payment for all subsequent enrollment fees/monthly premiums, immediately gives an online alternative, and links Prime. The directly corresponding Prime fee-payment page dated2026-05-15 expressly permits mailing the bill monthly/quarterly and phone card payment, with automatic payment suggested. Unreconciled universal versus plan-specific/version scope; exclude whole older hub, not assert all clauses false. Do not salvage an EOB/fraud paragraph or silently rewrite payment rules.",
+      "local_review_record": "stage582_source_scope_review.json",
+      "review_record_sha256": "e21fa35777595d4364000a37c5c8b38aa0fd0b9261b17c82ce19e9a356c9edef",
+      "primary_verification_urls": [
+        "https://www.tricare.mil/Costs/PayFees",
+        "https://www.tricare.mil/Costs/PayFees/PrimeFees"
+      ],
+      "status": "hold_pending_explicit_resolution"
     }
   },
   "proposal_metadata": {
@@ -1257,6 +1268,11 @@
       "local_review_record": "stage515_source_scope_review.json",
       "sha256": "17272e57387032177b93f8f6a97403b7d3b6cbcb5b0f456075e76a13c1ae356c",
       "reason": "Whole-source scope hold after current official-source comparison;five active items and one reserve withdrawn."
+    },
+    {
+      "local_review_record": "stage582_source_scope_review.json",
+      "sha256": "e21fa35777595d4364000a37c5c8b38aa0fd0b9261b17c82ce19e9a356c9edef",
+      "reason": "Whole-source payment scope hold;one active ordinaryTEST withdrawn."
     }
   ]
 }
