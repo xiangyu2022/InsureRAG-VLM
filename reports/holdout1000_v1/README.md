@@ -12,33 +12,35 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage451](stage451_progress.json): **1,000 provisional
+The latest checkpoint is [stage458](stage458_progress.json): **1,000 provisional
 TEST and 57 DEV across 184 TEST families**, with task quotas **600 ordinary,
 150 numerical, 150 multi-evidence and 100 insufficient-evidence**. **Accepted
 counts remain zero; the dataset is not frozen.**
 
-Source review records **740 included, 391 excluded and 295 pending**, with
-**3,638 partial chunks**. Since stage440, five complete cached bodies
-(315,992 characters) produced three inclusions and two pending decisions.
-All previous 3,540 chunks are unchanged. Source text, exceptions, historical
-dates and section context are preserved; new chunks pass the 512-token and
-2,400-character limits. Source inclusion does not establish current-law
-applicability or clear global question quality.
+Source review records **748 included, 399 excluded and 279 pending**, with
+**3,663 partial chunks**. Since stage451, 24 complete cached bodies
+(126,398 characters) produced eight inclusions, eight exclusions and eight
+pending decisions. All previous 3,638 chunks are unchanged. Three dated
+Australian rebate tables retain every income/age cell, effective period and
+family-tier qualification. New chunks pass the 512-token and 2,400-character
+limits. Source inclusion does not establish global acceptance.
 
-The two pending chapters retain prior PSHB and court-default-plan restrictions,
-an incomplete exception list, and an HSA example that conflates coverage with
-HSA eligibility. Cancellation/reinstatement exceptions and disability-duration
-boundaries also remain in the mandatory global issue register. No missing rule
-was invented and no previously held item was restored.
+The historical FEGLI PDF remains pending. Its existing exact-hash 35-page
+review was reused; this batch read the first 15,000 characters and visually
+compared page 5, not all pages anew. Sidebar/worksheet interleaving and the
+previously excluded pages require source-only layout and rights preparation.
+Other pending reviews retain historical-family, translation, pandemic-version
+and payer-order qualifications. NAIC-attributed articles and professional
+service-of-process material were excluded. No held item was restored.
 
 TEST declared-span mapping is **860 complete and 140 pending**. The retained
 pool uses 37 pending sources. All 57 DEV texts, 61 necessary support units and
 19 Spanish alternatives are unchanged. All 143 ledger links verify; none of
 416 inherited item holds is active. Dataset item and coverage checks report
-zero errors. Global necessary support, equivalent aliases, family/history,
-legacy restrictions and source consistency remain unresolved. No DEV/TEST
-inference, model selection lock or freeze has occurred. Four private examples
-remain isolated from model/prompt development.
+zero errors. Necessary support, equivalent aliases, family/history, legacy
+restrictions and source consistency remain unresolved global gates. No
+DEV/TEST inference, model selection lock or freeze has occurred. Four private
+examples remain isolated from model/prompt development.
 
 No new vectors, model forwards, downloads, paid APIs or source acquisitions
 were used. The pipeline's prior 82 focused tests still apply because code is
@@ -46,7 +48,7 @@ unchanged. The [Agent verification](../agent_draft/status_20261018.json) remains
 the stage420 verification: 48 synthetic tests passed, with no real-model
 controller run. Independent acceptance work continues.
 
-Exact-commit CI for `954f81939cf6bb4a9fb4f88476819ba600b8a50d` passed all five
+Exact-commit CI for `0d1a29358b74727fd9930a08f3eb1c5a4397e014` passed all five
 jobs. Review is sequential Codex review, not human or expert adjudication.
 Raw sources, individual QA, annotations and weights remain local. PR8 is
 draft and unmerged.
