@@ -1,13 +1,12 @@
 # Independent holdout experiment preparation
 
-As of October 18, 2026, construction has reached 1,000 provisional TEST and 57 DEV
-items across 183 TEST document families. Accepted counts are zero; the benchmark
-is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage507_progress.json)
-records the current counts, validation and remaining work. Historical exposed
-results are regression evidence only. Task quotas remain 600/150/150/100.
-After one payer-scope withdrawal, the unchanged registered fixed-hash selection
-retains 1,000 of 1,003 eligible TEST candidates. Earlier candidate versions,
-withdrawals and selection reasons remain archived locally.
+As of October 18, 2026, the current checkpoint has 995 provisional TEST and 57 DEV
+items across 182 TEST document families. Five TEST items were withdrawn after
+whole-source scope review. Accepted counts are zero; the benchmark is not frozen.
+The [aggregate checkpoint](../reports/holdout1000_v1/stage517_progress.json) records
+the explicit minimum failures. Task quotas remain 600/150/150/100; current counts
+are 599/146/150/100. No replacement or quota relaxation has been applied. Earlier
+candidate versions and withdrawal reasons remain archived locally.
 
 The [prospective protocol](../reports/holdout1000_v1/evaluation_protocol_v1.json)
 registers BM25, original dense, original/adapted hybrid and original/adapted
@@ -36,8 +35,8 @@ The holdout_experiment module implements annotation-based metrics and uncertaint
 
 The whole-source manifest gate requires an explicit include/exclude review for
 every snapshot document before tokenization. Raw/text hashes for all 1,426 sources
-were verified. Current dispositions are 787 included, 477 excluded after source review
-and 162 pending. Review order prioritized DEV sources after a source-only
+were verified. Current dispositions are 786 included, 482 excluded after source review
+and 158 pending. Review order prioritized DEV sources after a source-only
 inventory of all 291 TDI documents. It does not authorize a gold-filtered corpus.
 Existing reviews can be reused when their content hashes and scope still apply.
 A strict MathML fraction transcription now preserves division and grouping. One
@@ -45,7 +44,7 @@ source was re-extracted into snapshot33 with immutable prior snapshots and exact
 evidence rebindings; unsupported MathML structures fail instead of flattening.
 
 holdout_corpus validates source ranges, hashes, token limits and reviewed atomic
-spans. The 3,909 partial chunks preserve all included characters and have at most
+spans. The 3,907 partial chunks preserve all included characters and have at most
 512 tokens and 2,400 characters. Source headings, lists, table headers and
 qualifiers must survive chunking. Oversized atomic spans fail instead of being
 silently truncated. Source structure, never an answer key, defines boundaries.
@@ -134,7 +133,7 @@ hold, task quota or acceptance threshold was relaxed. PR8 remains draft.
 
 Before drafting from cached sources, run `scripts/preflight_holdout_authoring.py`
 with the current explicit pool, complete candidate history, document snapshot,
-source manifest and legacy restriction index. The script verifies the ledger
+source manifest, legacy restriction index and mandatory source-issue register. The script verifies the ledger
 chain, retains inherited holds, and shows inactive and withdrawn questions as
 well as active TEST/DEV questions. It also reports shared 16-word source
 passages and the associated family/source restrictions. Inspect these before
@@ -150,9 +149,10 @@ The script neither fetches URLs nor follows embedded historical origin paths.
 
 ```powershell
 python scripts/preflight_holdout_authoring.py --root reports/holdout1000_v1 `
-  --pool-number 147 --documents extraction_batch_33/documents.jsonl `
+  --pool-number 148 --documents extraction_batch_33/documents.jsonl `
   --candidates global_candidates_reviewed_142.jsonl `
-  --manifest stage497_inclusion_manifest_draft.json `
+  --manifest stage515_inclusion_manifest_draft.json `
   --legacy stage277_legacy_hold_leads.json `
+  --issues stage515_source_consistency_issue_register.json `
   --document DOCUMENT_ID --output next_authoring_packet.json
 ```

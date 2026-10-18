@@ -22,7 +22,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, required=True)
     parser.add_argument('--pool-number', type=int, required=True)
-    for name in ('documents', 'candidates', 'manifest', 'legacy', 'output'):
+    for name in ('documents', 'candidates', 'manifest', 'legacy', 'issues', 'output'):
         parser.add_argument('--' + name, required=True, help='Path relative to root/local')
     parser.add_argument('--document', action='append', required=True)
     args = parser.parse_args()
@@ -37,7 +37,7 @@ def main():
 
     # No globs, origin paths, URLs or embedded review pointers are followed.
     paths = {name: local_path(local, getattr(args, name)) for name in
-             ('documents', 'candidates', 'manifest', 'legacy', 'output')}
+             ('documents', 'candidates', 'manifest', 'legacy', 'issues', 'output')}
     if paths['output'].exists():
         raise FileExistsError('Private packet output must be new')
     docs = read(paths['documents'], True)
@@ -55,10 +55,15 @@ def main():
         data = read(path)
         ledgers.append({'sha256': bindings[str(path.relative_to(root))], 'data': data})
     manifest = read(paths['manifest']); legacy = read(paths['legacy'])
+    issues = read(paths['issues'])['issues']
+    if any(d['id'] not in documents for issue in issues for d in issue['documents']):
+        raise ValueError('Issue register references an unknown document')
     decisions = {e['document_id']: e['review'] for e in manifest['entries']}
     restrictions = {key: {'source_hold': source_holds.get(key),
                           'source_review': decisions.get(key, {'decision': 'missing'}),
-                          'legacy_records': [r for r in legacy['records'] if r.get('document') == key]}
+                          'legacy_records': [r for r in legacy['records'] if r.get('document') == key],
+                          'source_quality_issues': [r for r in issues
+                              if any(d['id'] == key for d in r['documents'])]}
                     for key in documents}
     result = build_authoring_packet(documents, candidates, {q['id'] for q in active}, families,
                                      item_dispositions(ledgers, inherited), restrictions, args.document)

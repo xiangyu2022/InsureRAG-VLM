@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-18T18:29:44.884880+00:00",
+  "updated_utc": "2026-10-18T19:49:18.278700+00:00",
   "scope": "Additional document-level conservative holds; existing triage exclusions still apply. Holds are not claims every passage is false. No held page is cleared by low similarity or an individually plausible answer.",
   "documents": {
     "1056fbb935fe0e7ae00642b4": {
@@ -1228,6 +1228,17 @@
         "https://oci.wi.gov/Pages/Consumers/PI-222.aspx"
       ],
       "status": "hold_pending_explicit_resolution"
+    },
+    "3059f50d1b4f534013ecb7cd": {
+      "publisher": "us_rrb",
+      "reason": "WHOLE_SOURCE_SCOPE_HOLD: AB-31 states Medicare termination before full retirement age after disability-freeze termination without distinguishing separate age65 eligibility. Fresh AB-31 substantive body is identical; the directly linked official Medicare-family FAQ explicitly distinguishes age65 entitlement from early disability/freeze entitlement. Do not silently narrow the source or count plausible other clauses around this unresolved scope. Conservative source exclusion, not a claim that every clause is false.",
+      "local_review_record": "stage515_source_scope_review.json",
+      "review_record_sha256": "17272e57387032177b93f8f6a97403b7d3b6cbcb5b0f456075e76a13c1ae356c",
+      "primary_verification_urls": [
+        "https://www.rrb.gov/Benefits/AB-31",
+        "https://www.rrb.gov/Newsroom/NewsReleases/Medicare"
+      ],
+      "status": "hold_pending_explicit_resolution"
     }
   },
   "proposal_metadata": {
@@ -1241,6 +1252,11 @@
       "local_review_record": "stage488_family_review.json",
       "sha256": "59ea61148d6e8ee8ad5e575e40476f5a4ef13d0da0e3b5914f52fbcb64d5cfd2",
       "reason": "Explicitly propagate existing conservative restrictions to eleven additional related documents."
+    },
+    {
+      "local_review_record": "stage515_source_scope_review.json",
+      "sha256": "17272e57387032177b93f8f6a97403b7d3b6cbcb5b0f456075e76a13c1ae356c",
+      "reason": "Whole-source scope hold after current official-source comparison;five active items and one reserve withdrawn."
     }
   ]
 }

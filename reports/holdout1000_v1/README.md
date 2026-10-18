@@ -12,53 +12,54 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage507](stage507_progress.json): **1,000 provisional
-TEST and 57 DEV across 183 TEST families**, with task quotas **600 ordinary,
-150 numerical, 150 multi-evidence and 100 insufficient-evidence**. **Accepted
-counts remain zero; the dataset is not frozen.** All 147 ledger links verify;
-none of 429 effective historical item holds is active.
+The latest checkpoint is [stage517](stage517_progress.json): **995 provisional
+TEST and 57 DEV across 182 TEST families**. The minimum is no longer met after
+a conservative whole-source withdrawal. **Accepted counts remain zero; the
+dataset is not frozen.** Current TEST counts are **599 ordinary, 146 numerical,
+150 multi-evidence and 100 insufficient-evidence**. Quotas remain 600/150/150/100;
+one ordinary and four numerical items must be replaced independently.
 
-The latest ten replacement drafts produced **one individually reviewed,
-unselected refusal reserve and nine held drafts**. Holds cover historical and
-DEV overlap, reuse of withdrawn needs, exposed source rules, and unnecessary
-or independently answerable citations in purported multi-evidence questions.
-Four stage500/504 reserves now remain unselected. Active TEST questions,
-answers, evidence and families are unchanged; no quota or threshold changed.
+A fresh official-source comparison left an RRB Medicare-termination scope issue
+unresolved. The complete AB-31 source was held and excluded. Five active TEST
+items and one unselected reserve relying on that source were withdrawn, including
+plausible questions on its other clauses. No old withdrawn need was restored,
+no source paragraph was silently repaired, and no replacement has been selected.
+Three separately reviewed stage500 reserves remain unselected.
 
-A new deterministic pre-authoring packet shows inactive and held historical
-questions alongside active ones, follows reviewed families, and reports shared
-16-word source passages with associated legacy restrictions. Real cache checks
-confirmed three previously missed restriction patterns. Its private output is
-restricted to `local/`, contains historical QA and must not be published.
-It is a review aid, not semantic or source clearance, and uses no model calls.
+Source review now records **786 included, 482 excluded and 158 pending**, with
+**3,907 partial chunks**. Six additional cached bodies were fully inspected
+(66,896 characters): four were excluded and two remain pending. The subsequent
+RRB exclusion removed two chunks; every retained chunk is unchanged. The issue
+register has **48 open issues and 12 resolved for the current corpus by whole-source
+exclusion**. Exclusion does not clear related-family contamination.
 
-Source decisions remain **787 included, 477 excluded and 162 pending**, with
-**3,909 partial chunks**. Three newly exposed preexisting source/family issues
-were added to the mandatory register: **47 open, 11 resolved for the current
-corpus by whole-source exclusion**. Existing source inclusion does not release
-old item holds or establish complete source consistency.
+TEST declared-span mapping is **864 complete and 131 pending**. DEV remains at
+57 items, 61 necessary support units and 19 Spanish alternatives with unchanged
+texts and support mappings. All 148 ledger links verify; none of 435 effective
+item holds is active. Item checks have zero errors, while the overall TEST,
+ordinary and numerical minimum checks explicitly fail. The prior similarity-pair
+review now covers 61 remaining active pairs by exact identity-subset verification.
+No new semantic computation was needed.
 
-TEST declared-span mapping remains **869 complete and 131 pending**. Those
-131 comprise 79 ordinary, 18 numerical, 23 multi-evidence and 11 refusal items.
-DEV still has 57 items, 61 necessary support units and 19 Spanish alternatives.
-All active content and mapping identities were verified unchanged. The review
-of 63 active similarity pairs was rebound by hash; 25 changed old working-set
-neighbors and one new reserve/active pair were reviewed. Item/coverage checks
-have zero errors, which does not establish global acceptance.
+The deterministic private authoring packet now requires the current source-issue
+register in addition to full historical candidates, inherited holds and source
+restrictions. A real cache check shows the new source hold, its issue and the five
+withdrawn items. This remains an aid for review, not automatic clearance.
 
-The batch encoded ten new question vectors in one local model forward,
-reusing 3,519 candidate and 44,581 historical vectors. No paid calls, model
-downloads, source acquisitions or actual DEV/TEST inference occurred.
-**73 targeted tests passed** across authoring, source state, quality, corpus
-and DEV support code. Previous exact-commit CI for
-`cd7462a92415823cd845c9d718a1743157fc4fd2` passed all five jobs.
+Official RRB access recovered under the existing network settings. A changed
+terms hash stopped content fetching until the new complete policy was reviewed.
+Three official reference pages plus robots and terms were retrieved sequentially
+(294,018 saved body bytes total), within the access guards. They remain isolated
+from the corpus. No paid calls, model downloads, new question vectors or actual
+DEV/TEST inference occurred. **73 targeted tests passed**. Exact-commit CI for
+`6c06f4760aeae86d4c265bd5f6e781db9486e7f7` passed all five jobs.
 
-Necessary support, equivalent aliases, family/history and legacy restrictions
-still require global reconciliation. FEGLI PDF layout/licensed-range preparation
-and the registered generation runtime remain pending. No model-selection lock
-or TEST freeze has occurred. Review is sequential Codex review, not human or
-expert review. Raw sources, individual QA, annotations and weights remain local.
-PR8 stays draft and unmerged; independent acceptance work continues.
+Global source, necessary-support, alias, family/history and legacy reconciliation
+remains unfinished. FEGLI PDF layout/licensed-range preparation is pending, and
+the registered real generation runtime is unavailable. No selection lock or TEST
+freeze has occurred. Reviews are sequential Codex reviews, not human or expert
+reviews. Raw sources, individual QA, annotations and weights remain local. PR8
+stays draft and unmerged; independent replacement and acceptance work continues.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

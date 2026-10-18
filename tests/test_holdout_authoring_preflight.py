@@ -17,7 +17,8 @@ def fixture():
     return dict(documents=docs, candidates=candidates, active_ids={'dev'},
                 families={'a': 'one', 'b': 'two', 'c': 'two'},
                 dispositions={'old': [{'kind': 'inherited_hold', 'record': 'No retrieval required'}]},
-                restrictions={'b': {'legacy_records': ['No new arithmetic from this exposed rule']}},
+                restrictions={'b': {'legacy_records': ['No new arithmetic from this exposed rule'],
+                                    'source_quality_issues': [{'status': 'OPEN', 'issue': 'Synthetic scope conflict'}]}},
                 selected_ids=['a'], window_size=4)
 
 
@@ -32,6 +33,7 @@ def test_inactive_need_and_related_family_dev_are_visible_before_authoring():
     assert sources['b']['matching_windows']
     assert sources['c']['matching_windows'] == []  # Included through reviewed family.
     assert sources['b']['restrictions']['legacy_records']
+    assert sources['b']['restrictions']['source_quality_issues'][0]['status'] == 'OPEN'
     assert result['private_contains_historical_QA']
     assert result['status'] == 'AUTHORING_LEADS_ONLY_NOT_CLEARANCE'
 
