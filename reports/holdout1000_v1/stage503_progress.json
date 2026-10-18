@@ -1,0 +1,254 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 1000,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 600,
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 150
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 183,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 53,
+    "california_cdi": 50,
+    "wisconsin_oci": 65,
+    "utah_uid": 15,
+    "us_opm": 120,
+    "us_va": 42,
+    "us_tricare": 139,
+    "newjersey_dobi": 41,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 44,
+    "canada_esdc_ei": 103,
+    "newjersey_labor_leave": 8,
+    "canada_vac": 27,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 20
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 0,
+    "numerical_calculation": 0,
+    "multi_evidence": 0,
+    "insufficient_evidence": 0
+  },
+  "remaining_independent_test_to_item_count_minimum": 0,
+  "pool_version": 146,
+  "admitted_global_candidate_version": 141,
+  "source_snapshot": 33,
+  "dev_support_review": {
+    "items": 57,
+    "declared_spans": 75,
+    "answerable": 46,
+    "refusals": 11,
+    "necessary_units": 61,
+    "reviewed_Spanish_aliases": 19,
+    "global_clearance_complete": false
+  },
+  "validation": {
+    "focused_tests_passed": 82,
+    "explicit_top_level_test_files": 4,
+    "latest_full_code_regression": {
+      "commit": "114bf4119b5f87a184c635b9ed1f96d5ccccc50f",
+      "tests": 632,
+      "subtests": 58,
+      "explicit_files": 60
+    },
+    "global_dataset_gates_passed": false,
+    "log_sha256": "d3c18989396531b8a081734b76385e2816397e68d9998f84740bfdb96dda150e",
+    "focused_test_reuse": "Stage492 targeted registry/corpus/DEV tests60passed; code,tests,protocol,familyandholdregistriesunchanged since that run. Current source preflight, unchangedchunk checks, DEV mappings and pool/ledger validation reran. No new blanket regression claimed.",
+    "last_registry_change_targeted_tests": {
+      "passed": 60,
+      "seconds": 0.6,
+      "files": [
+        "tests/test_holdout_quality.py",
+        "tests/test_holdout_corpus.py",
+        "tests/test_holdout_dev_runner.py"
+      ]
+    }
+  },
+  "agent_review": {
+    "status": "SYNTHETIC_SCAFFOLD_REAL_MODEL_RUNTIME_UNAVAILABLE",
+    "fresh_synthetic_tests_passed": 48,
+    "implementation_unchanged": true,
+    "real_model_generation_calls": 0,
+    "report": "../agent_draft/status_20261018.json"
+  },
+  "created_utc": "2026-10-18T19:09:23.385080+00:00",
+  "status": "GLOBAL_ACCEPTANCE_IN_PROGRESS_NOT_FROZEN",
+  "corpus_preparation": {
+    "documents": 1426,
+    "exclude": 477,
+    "include": 787,
+    "pending": 162,
+    "partial_chunks": 3909
+  },
+  "all_test_declared_span_mapping": {
+    "complete": 869,
+    "pending": 131
+  },
+  "active_QA_source_dispositions": {
+    "include": 926,
+    "pending": 128,
+    "include+pending": 3
+  },
+  "active_source_dispositions": {
+    "include": 305,
+    "pending": 33
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "identified_semantic_pair_review": {
+    "report_version": 482,
+    "pairs": 63,
+    "unique_QAs": 77,
+    "connected_components": 27,
+    "distinct_information_need_decisions": 63,
+    "below_threshold_pairs_exhaustively_reviewed": false,
+    "new_vectors": 0,
+    "not_global_acceptance": true,
+    "identity_rebind_version": 502,
+    "QA_evidence_resolved_families_unchanged": true,
+    "new_content_review_claim": false
+  },
+  "global_preflight": {
+    "item_validator_errors": 0,
+    "coverage_validator_errors": 0,
+    "ledger_links_verified": 146,
+    "effective_inherited_item_holds": 420,
+    "held_item_intersection": 0,
+    "active_semantic_threshold_flags": 0,
+    "active_candidate_similarity_edges_content_reviewed": 63,
+    "global_review_complete": false
+  },
+  "source_quality_issues": {
+    "mandatory_register_version": 498,
+    "open_issues": 44,
+    "included_source_does_not_clear_applicability_or_aliases": true,
+    "examples": [
+      "Eligibility equality boundaries",
+      "Cross-page scope and version discrepancies",
+      "Historical dates and contact details",
+      "Policy-year limits and premium-waiver qualifications"
+    ],
+    "resolved_for_current_corpus_by_whole_source_exclusion": 11,
+    "total_recorded_issues": 55,
+    "related_family_contamination_not_automatically_cleared": true
+  },
+  "usage": {
+    "scope": "Since stage492",
+    "new_question_vectors": 6,
+    "model_forward_batches": 1,
+    "external_model_API_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_queries": 0,
+    "actual_TEST_queries": 0,
+    "subagents": 0,
+    "remaining_quota": "not observable",
+    "old_candidate_vectors_reused": 3513,
+    "historical_vectors_reused": 44581
+  },
+  "previous_exact_commit_ci": {
+    "commit": "0c04dce1d9a0d4b8755366b852a5e2d713c34cbf",
+    "run_id": 39154816551,
+    "job_count": 5,
+    "all_success": true,
+    "url": "https://github.com/xiangyu2022/InsureRAG-VLM/actions/runs/39154816551"
+  },
+  "limits": [
+    "1000 provisional TEST meet task quotas; accepted counts remain zero and dataset is not frozen.",
+    "162 source dispositions remain, including 33 active sources; 131 TEST declared-span mappings remain incomplete.",
+    "Necessary support, equivalent aliases, family/history, legacy restrictions and source consistency remain global gates.",
+    "No actual DEV/TEST inference, model selection lock or final evaluation.",
+    "Agent runtime status is unchanged from stage420; its absence does not block source review.",
+    "Four previously disclosed private examples stay isolated from model/prompt development.",
+    "Sequential Codex content review is not human/expert review; raw sources, per-item data and weights remain local.",
+    "Official language/version grouping does not prove translation equivalence or clear historical restrictions.",
+    "Six replacement drafts reviewed:3unselectedreserves,3held. NoneaddedtoactiveTEST; pool146/global141. Necessarysupport/aliases/globalacceptance remainpending."
+  ],
+  "evidence_sha256": {
+    "stage493_source_disposition_review.json": "34cb6b1ed7e50c952663cbe44ae4edc5d30165d61916186518c958e6c7145532",
+    "stage495_source_disposition_review.json": "ae5541a66cfa1cbea7f81f74c8795db963286844e07017d105d55c0779fe406a",
+    "stage497_source_disposition_review.json": "693d4ff34c277897487139b05895564846f4c1b8b2c4be786036591d426ae63f",
+    "stage502_summary.json": "846dfb059f17d5959bccb600f181f83c7e42df598948885811481e9357f91fb5",
+    "stage502_global_preflight.json": "363e91fb7b14b468c9ed05b7e197eb7e4c810a11d7d40d5d75ef1fcd6c9c0e87",
+    "stage498_source_consistency_issue_register.json": "61ee79048dc9eb42385a2242becbe7fec69d7240e6522dfcfa03b2eaf229a3d0",
+    "stage499_replacement_construction_registration.json": "fc3645e5102d61dbdf08649088dfb0e8feed03acd8318def205d525a8570ab00",
+    "stage500_cached6_drafts_v2.jsonl": "18133ed1ff1da418fd40094e0086b4829a6149b78f9318314a7f4d2aa3b7bef3",
+    "stage500_draft_span_correction.json": "219e163ebfbdbfccf27658fc78315606725f7e9b585080df160068033a7d8f62",
+    "semantic_global_reviewed_141.json": "764fc9e7ea96542073f6d664498b7c5a03964aebcba29cdd33c36fd04d6b1284",
+    "stage500_content_review.json": "52ff4fe3844b519b89ee3c7ffae3f6f087d23afc6cfa0a96e09c574fe7520dbd",
+    "stage500_summary.json": "b730f9b565262f5f4604649b0da416d4b9e008c73093e0467710220d5dbbe208",
+    "stage500_reviewed_reserves.jsonl": "0984613dc05ae76007ba36f02b0246220980f791736f7616a8a9f037fea73a8e",
+    "review_pool_146_clearance_ledger.json": "f28fd5095ed419f27533f0cca5d9cb0112307c9725106bd8ef7d6d2bb0652e87",
+    "stage502_pair_review_rebind.json": "a84b136a37c2afc099fb1dbeffa507b93a839406c286aa0d614708f4d6da4359",
+    "stage492_publication_receipt.json": "75255039d7d6cd222a22a85c48b4b7d1c817206a9e7289a0f01d447bfa619efa"
+  },
+  "changes_since_stage492": {
+    "net_pending_source_reduction": 34,
+    "new_source_decisions": {
+      "include": 3,
+      "exclude": 31
+    },
+    "complete_body_inspections": 8,
+    "complete_body_characters_inspected": 77416,
+    "additional_whole_source_restriction_exclusions": 28,
+    "existing_hash_bound_content_reviews_reused": true,
+    "new_chunks": 28,
+    "previous_chunks_unchanged": 3881,
+    "active_questions_answers_evidence_and_families_unchanged": true,
+    "new_counted_questions": 0,
+    "uncounted_replacement_drafts": 6,
+    "new_source_acquisitions": 0
+  },
+  "replacement_preparation": {
+    "registration_version": 499,
+    "current_pending_source_TEST": 131,
+    "by_task": {
+      "ordinary_qa": 79,
+      "numerical_calculation": 18,
+      "multi_evidence": 23,
+      "insufficient_evidence": 11
+    },
+    "draft_version": 500,
+    "uncounted_drafts": 6,
+    "automated_audit_version": 141,
+    "content_and_history_admission_pending": false,
+    "reviewed_unselected_reserves": 3,
+    "held_drafts": 3,
+    "new_active_items": 0,
+    "changed_old_active_neighbors_reviewed": 18,
+    "quotas_thresholds_seed_unchanged": true
+  }
+}

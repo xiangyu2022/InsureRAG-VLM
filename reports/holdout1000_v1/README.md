@@ -12,54 +12,58 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage492](stage492_progress.json): **1,000 provisional
+The latest checkpoint is [stage503](stage503_progress.json): **1,000 provisional
 TEST and 57 DEV across 183 TEST families**, with task quotas **600 ordinary,
 150 numerical, 150 multi-evidence and 100 insufficient-evidence**. **Accepted
-counts remain zero; the dataset is not frozen.**
+counts remain zero; the dataset is not frozen.** All 146 ledger links verify;
+none of 420 effective historical item holds is active.
 
-All 145 ledger links verify; none of 417 effective historical item holds is
-active. The prior payer-scope withdrawal remains in force. Questions, answers,
-evidence and active family assignments are unchanged in this batch.
+Source review records **787 included, 477 excluded and 162 pending**, with
+**3,909 partial chunks**. Since stage492, eight complete bodies were inspected
+(77,416 characters). Three were included and three excluded. Another 28 entire
+sources were excluded under verified existing family, history or rights
+restrictions, reusing hash-bound review records without claiming fresh body
+reading. No restriction was released and no clean paragraph was selected
+around a held source. All previous 3,881 chunks remain unchanged; 28 new
+chunks preserve original text and satisfy the encoder limits.
 
-Source review records **784 included, 446 excluded and 196 pending**, with
-**3,881 partial chunks**. Since stage483, 16 complete bodies were inspected
-(134,829 characters), and 11 directories or professional resources were
-excluded through explicit purpose review. Two other purpose reviews were
-inconclusive and do not count as full-body review. Whole Spanish versions
-received the same scope and conflicting-limit exclusions as related English
-sources. All previous 3,855 chunks remain unchanged; 26 new chunks preserve
-original text and meet the 512-token and 2,400-character limits.
+Eleven source issues are now resolved for the current corpus by whole-source
+exclusion; **44 issues remain open**. Exclusion does not automatically clear
+related-family contamination. Six official publication families and their
+language versions retain the grouping and conservative holds recorded in
+stage492. Active questions, answers, evidence and family assignments are
+unchanged.
 
-Six official publication families now group 18 English, Spanish and Hmong
-versions. Matching publication numbers, topics and explicit official catalog
-links support the grouping. Eleven additional conservative document holds
-carry existing restrictions to related versions. This does not establish
-translation equivalence or historical clearance, and affects no active item.
+TEST declared-span mapping remains **869 complete and 131 pending**. These
+131 TEST comprise 79 ordinary, 18 numerical, 23 multi-evidence and 11 refusal
+items. Their sources are not yet admitted. A prospective replacement workflow
+now prioritizes already reviewed sources outside DEV publishers, held or
+historically restricted families, and open issue families. Six new drafts
+were reviewed: three passed individual review as **unselected reserves**
+(one ordinary, one numerical and one multi-evidence); three were held for
+history/rule or information-need overlap. None has entered the active TEST set. Task quotas,
+thresholds, sampling seed and family/publisher caps have not changed.
 
-TEST declared-span mapping remains **869 complete and 131 pending**. The pool
-uses 33 pending sources. All 57 DEV texts, 61 necessary support units and
-19 Spanish alternatives are unchanged. Item and coverage checks report zero
-errors. Source inclusion and span mapping do not establish acceptance.
+The retained DEV set still has 57 items, 61 necessary support units and
+19 reviewed Spanish alternatives. Current item and coverage checks report
+zero errors; these do not establish global acceptance. The earlier review
+of 63 candidate similarity pairs remains bound to unchanged QA/evidence/family
+identities. All 18 old active rows whose nearest neighbors changed were reviewed. No new
+threshold pair was found. The three passed reserves remain unselected.
 
-The earlier information-need review of 63 similarity pairs (77 QA records)
-is reused after exact question, answer, evidence and resolved-family identity
-checks. It is not a second content review or exhaustive below-threshold review.
-There are 55 mandatory source-consistency issues. Necessary TEST support,
-source dates, equivalent aliases, family/history and legacy restrictions
+This batch encoded only six new question vectors in one local model forward,
+reusing all existing candidate and historical vectors. No model downloads,
+paid APIs, source acquisitions or actual DEV/TEST inference occurred. The
+stage492 targeted 60-test result remains applicable to unchanged code and
+registries; current corpus, mapping and ledger checks reran. Exact-commit CI
+for `0c04dce1d9a0d4b8755366b852a5e2d713c34cbf` passed all five jobs.
+
+Necessary support, equivalent aliases, family/history and legacy restrictions
 still require global reconciliation. The historical FEGLI PDF still needs
-layout and licensed-range preparation. No actual DEV/TEST inference, model
-selection lock or freeze has occurred. Four private examples remain isolated
-from model/prompt development. Independent acceptance work continues.
-
-This batch used no new vectors, model forwards, downloads, paid APIs or source
-acquisitions. The existing quality, corpus and DEV runner tests freshly passed
-**60/60**. [Agent verification](../agent_draft/status_20261018.json) remains
-stage420's 48 passing synthetic tests, with no real-model controller run.
-Exact-commit CI for `93610bb2344978b5ff39c7fcbd351a2ebf3f5fb1` passed all five jobs.
-
-Review is sequential Codex review, not human or expert adjudication. Raw
-sources, individual QA, annotations and weights remain local. PR8 is draft
-and unmerged.
+layout and licensed-range preparation. No model selection lock or TEST freeze
+has occurred. Review is sequential Codex review, not human or expert review.
+Raw sources, individual QA, annotations and weights remain local. PR8 is draft
+and unmerged; independent acceptance work continues.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
