@@ -31,7 +31,7 @@ def _span(cell, name):
 
 
 def _text(cell):
-    if cell.find(['table', 'script', 'style', 'math']) is not None:
+    if cell.find(['table', 'script', 'style', 'math', 'img', 'svg', 'canvas', 'input']) is not None:
         raise ValueError('Nested table or unsupported cell content')
     value = ' '.join(cell.get_text(' ', strip=True).split())
     if '|' in value or EMPTY_CELL in value:

@@ -23,6 +23,8 @@ def test_grouped_headers_and_blank_cells_keep_their_original_columns():
 
 
 @pytest.mark.parametrize('html', [
+    '<table><thead><tr><th>A</th></tr></thead>'
+    '<tbody><tr><td><img alt="covered" src="icon.svg"></td></tr></tbody></table>',
     '<table><thead><tr><th rowspan="3">A</th><th>B</th></tr></thead>'
     '<tbody><tr><td>x</td><td>y</td></tr></tbody></table>',
     '<table><thead><tr><th>A</th><th>B</th></tr><tr><th>C</th></tr></thead>'
