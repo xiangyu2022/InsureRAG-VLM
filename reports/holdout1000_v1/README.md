@@ -12,37 +12,39 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage465](stage465_progress.json): **1,000 provisional
+The latest checkpoint is [stage474](stage474_progress.json): **1,000 provisional
 TEST and 57 DEV across 184 TEST families**, with task quotas **600 ordinary,
 150 numerical, 150 multi-evidence and 100 insufficient-evidence**. **Accepted
 counts remain zero; the dataset is not frozen.**
 
-Source review records **759 included, 411 excluded and 256 pending**, with
-**3,711 partial chunks**. Since stage458, 36 complete cached bodies
-(227,719 characters) produced 11 inclusions, 12 exclusions and 13 pending
-decisions. All previous 3,663 chunks are unchanged. Four Australian health
-comparison tables preserve complete columns and shared rows with their
-section labels. New chunks meet the 512-token and 2,400-character limits.
-An oversized renters-guide paragraph was split at complete content boundaries
-before persistence; no text was discarded. Source inclusion does not establish
-global acceptance.
+Source review records **770 included, 423 excluded and 233 pending**, with
+**3,791 partial chunks**. Since stage465, 18 complete cached bodies
+(156,059 characters) produced seven inclusions, seven exclusions and four
+pending decisions. Nine additional fragment URLs reused reviews only after
+exact raw-byte/text, publisher, base-URL, permission and family checks. Four
+were included and five excluded. They add no independent questions.
 
-Pending decisions retain source-family history, attributed third-party material,
-version and scope issues. Raw HTML confirmed a fraction-layout problem in a
-home valuation example; it remains pending. A Spanish alternative-health page
-was excluded consistently with its English counterpart's existing scope hold.
-Mortgage, general credit and bank-deposit material and report directories were
-excluded by source purpose. No held item was restored. The historical FEGLI
-PDF still requires source-only layout and licensed-range preparation.
+The NJ complaint page and FEGLI rate page now pass source-structure checks.
+All 47 FEGLI tables remain complete within chunks with their dated employee,
+annuitant or historical section context; Option B/C free-coverage exceptions
+remain attached. All previous 3,711 chunks are unchanged. Of 80 added chunks,
+44 reuse identical rendered content and token counts from exact page copies.
+Newly tokenized chunks meet the 512-token and 2,400-character limits.
 
-TEST declared-span mapping is **860 complete and 140 pending**. The retained
-pool uses 37 pending sources. All 57 DEV texts, 61 necessary support units and
-19 Spanish alternatives are unchanged. All 143 ledger links verify; none of
-416 inherited item holds is active. Dataset item and coverage checks report
-zero errors. Necessary support, equivalent aliases, family/history, legacy
-restrictions and 46 recorded source-consistency issues remain global gates.
-No DEV/TEST inference, model selection lock or freeze has occurred. Four
-private examples remain isolated from model/prompt development.
+TEST declared-span mapping improved to **868 complete and 132 pending**.
+The retained pool uses 35 pending sources. All 57 DEV texts, 61 necessary
+support units and 19 Spanish alternatives are unchanged. All 143 ledger
+links verify; none of 416 inherited item holds is active. Item and coverage
+checks report zero errors. Source inclusion does not establish acceptance.
+
+Publication and regulatory directories were excluded by source purpose.
+Two Spanish guides retain the same enrollment/scope exclusions as their
+English counterparts. Historical source-family leads, dated product claims,
+translation equivalence and other applicability issues remain unresolved.
+There are 50 recorded source-consistency issues. The historical FEGLI PDF
+still requires source-only layout and licensed-range preparation. No held
+item was restored. No DEV/TEST inference, model selection lock or freeze
+has occurred. Four private examples remain isolated from model/prompt work.
 
 No new vectors, model forwards, downloads, paid APIs or source acquisitions
 were used. The pipeline's prior 82 focused tests still apply because code is
@@ -50,7 +52,7 @@ unchanged. The [Agent verification](../agent_draft/status_20261018.json) remains
 the stage420 verification: 48 synthetic tests passed, with no real-model
 controller run. Independent acceptance work continues.
 
-Exact-commit CI for `efbac95738061a27ddf7cf3ac376fd992fa4ece8` passed all five
+Exact-commit CI for `2ad0a77f5d3db301961d8e9760d66d831e6044ee` passed all five
 jobs. Review is sequential Codex review, not human or expert adjudication.
 Raw sources, individual QA, annotations and weights remain local. PR8 is
 draft and unmerged.
