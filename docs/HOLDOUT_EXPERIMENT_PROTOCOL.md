@@ -1,11 +1,15 @@
 # Independent holdout experiment preparation
 
 As of October 18, 2026, the current checkpoint has 1,000 provisional TEST and 57 DEV
-items across 184 TEST document families. The latest whole-source hold removed one ordinary task; a separately reviewed
-replacement restored the 600/150/150/100 task quotas under the original seed and
-caps. Previously withdrawn items remain withdrawn. Accepted counts are zero; the benchmark is not
-frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage618_progress.json)
-distinguishes passing item/coverage checks from unfinished global acceptance.
+items across 185 TEST document families. A whole-source scope hold withdrew one
+ordinary and one multi-evidence task. Separately reviewed replacements restored
+the original 600/150/150/100 quotas with seed 42 and unchanged family/publisher caps.
+All prior eligible reserves were considered; ordering of surplus multi reserves
+was registered before computing ranks. Previously withdrawn items remain withdrawn.
+Accepted counts are zero; the benchmark is not frozen. The
+[aggregate checkpoint](../reports/holdout1000_v1/stage630_progress.json) distinguishes
+passing item/coverage checks from unfinished global acceptance. Declared mappings
+are 880 complete and 120 pending across 29 sources.
 
 The [prospective protocol](../reports/holdout1000_v1/evaluation_protocol_v1.json)
 registers BM25, original dense, original/adapted hybrid and original/adapted
@@ -34,8 +38,8 @@ The holdout_experiment module implements annotation-based metrics and uncertaint
 
 The whole-source manifest gate requires an explicit include/exclude review for
 every snapshot document before tokenization. Raw/text hashes for all 1,426 sources
-were verified. Current dispositions are 795 included, 532 excluded after source review
-and 99 pending. Review order prioritized DEV sources after a source-only
+were verified. Current dispositions are 795 included, 539 excluded after source review
+and 92 pending. Review order prioritized DEV sources after a source-only
 inventory of all 291 TDI documents. It does not authorize a gold-filtered corpus.
 Existing reviews can be reused when their content hashes and scope still apply.
 A strict MathML fraction transcription now preserves division and grouping. One
@@ -178,10 +182,10 @@ The script neither fetches URLs nor follows embedded historical origin paths.
 
 ```powershell
 python scripts/preflight_holdout_authoring.py --root reports/holdout1000_v1 `
-  --pool-number 154 --documents extraction_batch_36/documents.jsonl `
-  --candidates global_candidates_reviewed_146.jsonl `
-  --manifest stage616_inclusion_manifest_draft.json `
+  --pool-number 157 --documents extraction_batch_36/documents.jsonl `
+  --candidates global_candidates_reviewed_147.jsonl `
+  --manifest stage627_inclusion_manifest_draft.json `
   --legacy stage277_legacy_hold_leads.json `
-  --issues stage616_source_consistency_issue_register.json `
+  --issues stage627_source_consistency_issue_register.json `
   --document DOCUMENT_ID --output next_authoring_packet.json
 ```

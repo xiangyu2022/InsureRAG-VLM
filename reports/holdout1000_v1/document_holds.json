@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-18T22:10:46.017311+00:00",
+  "updated_utc": "2026-10-18T23:50:10.019745+00:00",
   "scope": "Additional document-level conservative holds; existing triage exclusions still apply. Holds are not claims every passage is false. No held page is cleared by low similarity or an individually plausible answer.",
   "documents": {
     "1056fbb935fe0e7ae00642b4": {
@@ -1250,6 +1250,17 @@
         "https://www.tricare.mil/Costs/PayFees/PrimeFees"
       ],
       "status": "hold_pending_explicit_resolution"
+    },
+    "110327eb7d2cf51114a6ad59": {
+      "publisher": "us_tricare",
+      "reason": "WHOLE_SOURCE_POS_COHORT_SCOPE_HOLD: The TPR plan page dated2026-04-07 explicitly covers active-duty members and their families, then says care without a referral is subject to POS fees without a cohort qualification in its original What You Pay section. Its directly linked POS definition dated2026-06-05 explicitly excludes active-duty members. Preserve this unresolved blanket-versus-cohort scope conflict by excluding the whole plan page; do not silently narrow its fee bullet, certify current law, or salvage unrelated safe clauses.",
+      "local_review_record": "stage627_source_scope_review.json",
+      "review_record_sha256": "6d4c29ab2d63ffa41ee8c5c89dae3bd51e5a8a8b47e8aedcb796661d5b7ec28d",
+      "primary_verification_urls": [
+        "https://www.tricare.mil/Plans/HealthPlans/TPR",
+        "https://www.tricare.mil/Costs/Cost-Terms/POS"
+      ],
+      "status": "hold_pending_explicit_resolution"
     }
   },
   "proposal_metadata": {
@@ -1273,6 +1284,11 @@
       "local_review_record": "stage582_source_scope_review.json",
       "sha256": "e21fa35777595d4364000a37c5c8b38aa0fd0b9261b17c82ce19e9a356c9edef",
       "reason": "Whole-source payment scope hold;one active ordinaryTEST withdrawn."
+    },
+    {
+      "local_review_record": "stage627_source_scope_review.json",
+      "sha256": "6d4c29ab2d63ffa41ee8c5c89dae3bd51e5a8a8b47e8aedcb796661d5b7ec28d",
+      "reason": "Whole-source POS cohort-scope hold;two active TEST items withdrawn."
     }
   ]
 }

@@ -1,0 +1,165 @@
+{
+  "created_utc": "2026-10-18T23:54:29.120372+00:00",
+  "status": "PROVISIONAL_1000_AFTER_TWO_SOURCE_WITHDRAWALS_AND_REPLACEMENTS",
+  "reviewer_type": "Single sequential Codex content review, not human or expert",
+  "test_provisional": 1000,
+  "dev_provisional": 57,
+  "accepted_test": 0,
+  "accepted_dev": 0,
+  "frozen": false,
+  "test_document_families": 185,
+  "test_tasks": {
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 150,
+    "ordinary_qa": 600
+  },
+  "publisher_counts": {
+    "canada_fcac": 20,
+    "us_va": 42,
+    "us_tricare": 136,
+    "newjersey_dobi": 41,
+    "newyork_dfs": 55,
+    "california_cdi": 51,
+    "alberta_goa": 38,
+    "northcarolina_doi": 39,
+    "us_opm": 121,
+    "wisconsin_oci": 65,
+    "us_usda_rma": 40,
+    "au_privatehealth_ombudsman": 20,
+    "utah_uid": 15,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 40,
+    "canada_esdc_ei": 103,
+    "alabama_doi": 5,
+    "newjersey_labor_leave": 9,
+    "canada_vac": 28,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 20,
+    "australia_apra": 2
+  },
+  "pool_version": 157,
+  "clearance_ledger_version": 157,
+  "global_candidate_version": 147,
+  "document_snapshot": 36,
+  "corpus_preparation": {
+    "documents": 1426,
+    "include": 795,
+    "exclude": 539,
+    "pending": 92,
+    "partial_chunks": 3970
+  },
+  "source_quality_issues": {
+    "mandatory_register_version": 627,
+    "total_recorded_issues": 66,
+    "open_issues": 47,
+    "resolved_for_current_corpus_by_whole_source_exclusion": 19
+  },
+  "all_test_declared_span_mapping": {
+    "complete": 880,
+    "pending": 120,
+    "pending_source_documents": 29,
+    "not_global_support_clearance": true
+  },
+  "global_preflight": {
+    "ledger_links_verified": 157,
+    "effective_inherited_item_holds": 439,
+    "held_active_items": 0,
+    "reviewed_active_semantic_pairs": 61,
+    "DEV_necessary_units": 61,
+    "DEV_reviewed_aliases": 19,
+    "global_acceptance": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "previous_exact_commit_ci": {
+    "commit": "a20deb7f098bcd621a47a414b97e6a3e3079b0d4",
+    "run_id": 39176385127,
+    "all_five_jobs_success": true
+  },
+  "source_review_since_stage618": {
+    "whole_source_exclusions": 7,
+    "new_inclusions": 0,
+    "chunks_added": 0,
+    "all3970existing_chunks_unchanged": true,
+    "canonical_snapshot_unchanged": true,
+    "source_quality_withdrawals": 2,
+    "reviewed_replacements_selected": 2,
+    "old_nonselected_ordinary_reserves_still_family_capped": 3,
+    "old_multi_reserve_considered_but_unselected": 1,
+    "new_family_review": "Complete carrier table stays together; generic shared authority introduction remains reserved. Existing families and restrictions unchanged.",
+    "scope": "Six complete sources excluded for unresolved dates or program scope; one complete plan page excluded for a directly linked cohort-scope conflict. No selective safe-paragraph admission or new current-law claim."
+  },
+  "replacement_selection": {
+    "original_seed": 42,
+    "original_task_quotas_preserved": true,
+    "original_family_cap": 20,
+    "original_publisher_cap": 200,
+    "ordinary_hash_rule_unchanged": true,
+    "multi_surplus_rank_prospectively_registered": true,
+    "all_reviewed_eligible_reserves_considered": true,
+    "test_results_used": false,
+    "held_items_restored": 0,
+    "thresholds_relaxed": false
+  },
+  "usage_since_stage618": {
+    "official_reference_PDF_open_actions": 1,
+    "PDF_screenshot_requests": 1,
+    "reference_pages_added_to_corpus": 0,
+    "underlying_network_bytes": "not exposed",
+    "local_embedding_forward_batches": 1,
+    "new_question_vectors": 2,
+    "prior_candidate_vectors_reused": 3534,
+    "history_vectors_reused": 44581,
+    "external_model_api_calls": 0,
+    "paid_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0
+  },
+  "validation": {
+    "fresh_targeted_tests_passed": 94,
+    "production_code_and_tests_unchanged_from": "a20deb7f098bcd621a47a414b97e6a3e3079b0d4",
+    "all1426source_hashes_and_root_digest_verified": true,
+    "all1000declared_TEST_mappings_recomputed": true,
+    "DEV57content61units19aliases_unchanged": true,
+    "all157ledger_links_and439holds_verified": true,
+    "active_semantic_pair_identities_unchanged": true,
+    "global_dataset_gates_passed": false
+  },
+  "limits": [
+    "1000 TEST is provisional;accepted counts remain zero and the benchmark is not frozen.",
+    "92 pending sources and47 open source issues remain;120TEST declared mappings across29sources are incomplete.",
+    "Declared span mapping does not establish necessary-support or semantic-alias clearance; global family/history/legacy checks remain unfinished.",
+    "One reviewed official draft reference does not resolve the dental directory date/status mismatch; that source remains pending.",
+    "Registered generation runtime was unavailable at the last check. This is separate from unfinished independent data work.",
+    "No DEV selection lock,TEST freeze or final evaluation. No source text,individual QA,annotations or weights published. PR8 remains draft and unmerged."
+  ],
+  "evidence_sha256": {
+    "stage623_dental_reference_review.json": "8af39a58954d8bedf16fbd4c1538fbb0c7e77caff87865e055623d3e8c99ec50",
+    "stage625_content_review.json": "4fc820a88e579364d89a152c6f9bc6d6b98bfb6477204b2757acbe20d140078f",
+    "stage625_family_review.json": "6d01c8aff0808b747ee70b128ac831af7ad78fbc654ddfef3ca13613cc232f4b",
+    "stage626_source_disposition_review.json": "835408c67a9036c495d5ac3ddec3498dced3542cf927a2039586eafb9daf485a",
+    "stage627_source_scope_review.json": "6d4c29ab2d63ffa41ee8c5c89dae3bd51e5a8a8b47e8aedcb796661d5b7ec28d",
+    "stage628_replacement_selection_registration.json": "72f8ebe24a5dd08ad38cbff55a87b3736e1d7529d894e622768671e9057dfb4c",
+    "stage628_selection_review.json": "42b962ec4d01de6010eb3b31993f1247e2a51b45dbf662acbba46e13b4c6f0b3",
+    "stage629_global_preflight.json": "b56eafac7edad4b8a5e02b110bc52cd812f39390f655c32f9e0452398d353ca2",
+    "stage629_all_test_declared_span_mapping.json": "43711d9e1e921ec2ff7b533100f3c34ab3904abcc83daa4334b42b5e17ff980f",
+    "stage629_test_receipt.json": "d7ed510c8782663eb1ca91195e40f11b8b85a3ab4609d8ef521f55b93c477984",
+    "stage618_publication_receipt.json": "80288bfec414191262685f33234ddca6128194e0a2aa317a9415a1410a4a6f3a"
+  }
+}

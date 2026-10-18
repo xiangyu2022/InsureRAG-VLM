@@ -12,47 +12,42 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage618](stage618_progress.json): **1,000 provisional
-TEST and57 DEV across184 TEST families**, retaining **600 ordinary,150 numerical,
-150 multi-evidence and100 insufficient-evidence TEST tasks**.
+The latest checkpoint is [stage630](stage630_progress.json): **1,000 provisional
+TEST and 57 DEV across 185 TEST families**, retaining **600 ordinary, 150 numerical,
+150 multi-evidence and 100 insufficient-evidence TEST tasks**.
 **Accepted counts remain zero; the dataset is not frozen.**
 
-An explicit reviewed deletion helper preserves historical struck-out words as
-labeled source metadata, rather than treating them as active instructions. It
-rejects partial selections, ambiguous markers and unsupported structures without
-changing the DOM. One cached template now preserves all three original deletions.
-Removing only the marker wrappers reproduces the previous source text exactly.
-Each substantive chunk carries the original revision notice; this is a historical
-template, not verified current-law guidance. Snapshot36 changes one source; the
-other1,425 document lines and FAQ candidates are unchanged.
+A whole-source cohort-scope conflict withdrew two active tasks. Two separately
+reviewed replacements restored the quotas. All six eligible old/new reserves
+were considered; the surplus multi-reserve ordering was registered before ranks
+were computed. The original seed 42, ordinary ranking, quotas, family cap 20 and
+publisher cap 200 remain. No held task was restored or task category changed.
 
-Six whole-source exclusions address documented scope conflicts, incomplete
-definitions and a duplicated coverage-list explanation. No page was rewritten
-or selectively trimmed to retain useful answers. Four current-corpus issues were
-resolved by exclusion. A prior review description was corrected: the original
-list has five HTML elements but only four distinct named coverages.
+Seven complete sources were excluded for unresolved date or program scope,
+including the source behind the two withdrawals. No source was rewritten or
+trimmed to retain useful answers. The manifest now has **795 included, 539 excluded
+and 92 pending** sources. The issue register retains **47 open issues and 19
+resolved by whole-source exclusion**. Snapshot36 and all **3,970 chunks** are
+unchanged. Declared TEST mappings are **880 complete and 120 pending across 29
+sources**; this does not establish necessary-support or semantic-alias clearance.
 
-The manifest has **795 included,532 excluded and99 pending** documents, with
-**47 open issues and19 resolved by source exclusion**. There are **3,970 partial
-chunks**, including two new chunks; all previous3,968 chunks are byte-identical.
-Declared TEST mappings remain **878 complete and122 pending across30 sources**.
-All1,426 per-source hashes and the complete snapshot root digest were checked.
-DEV content,61 necessary units and19 aliases keep their previous chunk sets.
+All 157 ledger links and 439 effective item holds were verified, with none active.
+The 61 active semantic-pair identities remain previously reviewed. All 1,426 source
+hashes and the snapshot root digest were checked. DEV content, 61 necessary units
+and 19 aliases retain their mappings. Global support, alias, family, history and
+legacy clearance remains unfinished; DEV readiness is false.
 
-**52 targeted tests passed**, including11 new revision cases and one nontext
-table case. Tables now reject image/nontext cells; the earlier real168-cell
-table transcription remains identical. All five CI jobs passed on preceding
-commit `020df40921a37668390a97995f77118133e86318`; this commit needs its own receipt.
-Pool154,ledger154,437 item holds and61 reviewed active semantic-pair identities
-remain bound. No withdrawn task was restored. Global support,alias,family,
-history and legacy clearance remains unfinished.
+**94 targeted tests passed**. Production code and tests are unchanged from
+`a20deb7f098bcd621a47a414b97e6a3e3079b0d4`, whose five CI jobs passed. This publication
+requires its own exact-commit CI receipt.
 
-One official-source open attempt returned no statutory text and did not resolve
-the dependent-support boundary. No reference entered the corpus. No model
-forwards,new vectors,paid calls or model downloads were used. No actual DEV/TEST
-inference,selection lock or freeze occurred. Reviews are sequential Codex content
-reviews,not human or expert reviews. Raw sources,QA,annotations and weights stay
-local. PR8 remains draft and unmerged.
+One local embedding batch encoded only two new questions, reusing 3,534 candidate
+and 44,581 history vectors. One official reference PDF was opened and a screenshot
+requested; its draft status does not resolve the related source issue. No reference
+entered the corpus. No paid calls, model downloads or actual DEV/TEST inference
+occurred. Reviews are sequential Codex content reviews, not human or expert reviews.
+Raw sources, individual QA, annotations and weights remain local. PR8 stays draft
+and unmerged; no selection lock or freeze occurred.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
