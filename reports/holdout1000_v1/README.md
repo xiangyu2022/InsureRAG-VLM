@@ -12,46 +12,47 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage586](stage586_progress.json): **1,000 provisional
+The latest checkpoint is [stage592](stage592_progress.json): **1,000 provisional
 TEST and 57 DEV across 184 TEST families**, retaining **600 ordinary, 150 numerical,
 150 multi-evidence and 100 insufficient-evidence TEST tasks**.
 **Accepted counts remain zero; the dataset is not frozen.**
 
-A whole-source payment-scope hold withdrew one active ordinary task, temporarily
-reducing TEST to 999. One new independently reviewed ordinary task restored the
-quota under the original seed 42 and caps. Three previous ordinary reserves remain
-blocked by the family cap; no held item was restored or task reclassified to fill
-the vacancy. AB-31's five former active items and one reserve remain withdrawn.
+The latest source reviews excluded six whole documents for demonstrated calendar
+or scope problems. One corresponding source issue was resolved for the current
+corpus by exclusion. Prior item withdrawals remain in force; no held item was
+restored, no quota was relaxed and no task was reclassified. These source changes
+have no active QA or existing corpus chunks.
 
-The source manifest has **790 included, 519 excluded and 117 pending** documents.
-Every source has a manifest review record; pending records are not admission.
-The register has **53 open issues and 13 resolved by source exclusion**. Two whole
-source chunks were appended; all prior 3,918 chunks are unchanged. Current partial
-corpus size is **3,920 chunks**. Declared TEST mappings are **877 complete and 123
-pending**, which does not establish necessary-support or semantic-alias clearance.
+The manifest has **790 included, 525 excluded and 111 pending** documents. Every
+source has a review record; pending records are not admission. The issue register
+has **52 open issues and 14 resolved by source exclusion**. All **3,920 chunks**
+remain byte-identical. Declared TEST mappings remain **877 complete and 123 pending**;
+this does not establish necessary-support or semantic-alias clearance.
 
-All 154 ledger links and 437 effective item holds were verified, with none active.
-The 61 active semantic pairs retain their prior reviewed identities. DEV content,
-61 necessary units and 19 reviewed aliases retain their chunksets; global corpus-wide
-alias/family/history clearance remains unfinished.
+Original HTML preserves six product labels and a twelve-row plan matrix that the
+flat extraction lost. Two structural repairs are prepared, but no canonical source
+has been replaced or admitted on that basis. The PDF source also remains pending
+context dependencies, licensed ranges and an original unit ambiguity.
 
-The private PDF literal order passes the real renderer for all 35 pages and 13,377
-words, with 624 provenance groups. Source context dependencies, licensed-range chunks
-and an original unit ambiguity still block admission. No canonical snapshot changed.
+Pool 154, all 154 ledger links, 437 effective item holds and the 61 reviewed active
+semantic-pair identities retain their verified bindings. No held item is active.
+DEV content, 61 necessary units and 19 reviewed aliases retain their chunksets.
+Global support, family, history and legacy clearance remains unfinished.
 
-**94 synthetic tests passed again**. Code and tests are unchanged from
-`30f844e03542fb70c764548fedcd576125b7ad9f`. All five CI jobs passed on the preceding
-exact commit `77ca65a718f0e3eab6e63f96cbf5d81bad7832e0`; the new commit needs its own
-CI receipt. DEV readiness remains false.
+The last targeted offline suite passed **94 tests**. Code and tests are unchanged
+from `30f844e03542fb70c764548fedcd576125b7ad9f`; hash checks reuse that validation.
+All five CI jobs passed on the preceding exact commit
+`ed6d4b5f36409478dee8f8b13245e896c572cd2c`. This publication needs its own CI receipt.
 
-This batch used one web-search call containing two queries and three official page
-opens. No reference page entered the corpus. One local embedding batch encoded one
-new question, reusing 3,533 prior candidate vectors and 44,581 history question vectors.
-No paid calls, model downloads or actual DEV/TEST inference occurred. The registered
-generation runtime was unavailable at its last check. No selection lock, TEST freeze
-or final evaluation has occurred. Reviews are sequential Codex content reviews,
-not human or expert reviews. Raw sources, QA, annotations and weights remain local.
-PR8 stays draft and unmerged.
+This batch used two search calls with four query actions, seven official page-open
+actions (six successful and one failed), and one official-page find action. No
+reference page entered the corpus. There were no new vectors, model forwards,
+paid calls or downloads. The registered local generation service was rechecked:
+it still fails to connect, and Ollama is not on PATH. No actual DEV/TEST inference,
+selection lock, freeze or final evaluation has occurred.
+
+Reviews are sequential Codex content reviews, not human or expert reviews.
+Raw sources, QA, annotations and weights remain local. PR8 stays draft and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
