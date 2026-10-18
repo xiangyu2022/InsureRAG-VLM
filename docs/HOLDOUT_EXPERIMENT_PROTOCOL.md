@@ -2,7 +2,7 @@
 
 As of October 18, 2026, construction has reached 1,000 provisional TEST and 57 DEV
 items across 183 TEST document families. Accepted counts are zero; the benchmark
-is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage503_progress.json)
+is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage507_progress.json)
 records the current counts, validation and remaining work. Historical exposed
 results are regression evidence only. Task quotas remain 600/150/150/100.
 After one payer-scope withdrawal, the unchanged registered fixed-hash selection
@@ -128,3 +128,31 @@ Validation passed 584 tests and 58 subtests over 59 explicitly selected top-leve
 files. Individual QA, source text, annotations, traces and weights stay local;
 only aggregates, source-family metadata, code and tests are published. No source
 hold, task quota or acceptance threshold was relaxed. PR8 remains draft.
+
+
+### Pre-authoring historical and related-source packet
+
+Before drafting from cached sources, run `scripts/preflight_holdout_authoring.py`
+with the current explicit pool, complete candidate history, document snapshot,
+source manifest and legacy restriction index. The script verifies the ledger
+chain, retains inherited holds, and shows inactive and withdrawn questions as
+well as active TEST/DEV questions. It also reports shared 16-word source
+passages and the associated family/source restrictions. Inspect these before
+spending a question embedding batch. A related source's inclusion is not a
+release of earlier authoring restrictions. Match-free text is not proof of
+independence; template, paraphrase, translation and historical-needs review
+remain required. Do not count a renamed withdrawn information need.
+
+All private path arguments are relative to the selected report's `local/`
+directory. `--output` must name a new file there. The packet includes historical
+QA and source excerpts and must remain ignored; publish only aggregate findings.
+The script neither fetches URLs nor follows embedded historical origin paths.
+
+```powershell
+python scripts/preflight_holdout_authoring.py --root reports/holdout1000_v1 `
+  --pool-number 147 --documents extraction_batch_33/documents.jsonl `
+  --candidates global_candidates_reviewed_142.jsonl `
+  --manifest stage497_inclusion_manifest_draft.json `
+  --legacy stage277_legacy_hold_leads.json `
+  --document DOCUMENT_ID --output next_authoring_packet.json
+```
