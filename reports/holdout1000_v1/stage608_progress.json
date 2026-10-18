@@ -1,0 +1,214 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 1000,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 150,
+    "ordinary_qa": 600
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 184,
+  "publisher_counts": {
+    "canada_fcac": 20,
+    "us_va": 42,
+    "us_tricare": 138,
+    "newjersey_dobi": 41,
+    "newyork_dfs": 53,
+    "california_cdi": 51,
+    "alberta_goa": 38,
+    "northcarolina_doi": 39,
+    "us_opm": 121,
+    "wisconsin_oci": 65,
+    "us_usda_rma": 40,
+    "au_privatehealth_ombudsman": 20,
+    "utah_uid": 15,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 40,
+    "canada_esdc_ei": 103,
+    "alabama_doi": 5,
+    "newjersey_labor_leave": 9,
+    "canada_vac": 28,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 20,
+    "australia_apra": 2
+  },
+  "pool_version": 154,
+  "admitted_global_candidate_version": 146,
+  "source_snapshot": 33,
+  "all_test_declared_span_mapping": {
+    "complete": 878,
+    "pending": 122
+  },
+  "global_preflight": {
+    "ledger_links_verified": 154,
+    "effective_inherited_item_holds": 437,
+    "held_active_items": 0,
+    "item_errors": 0,
+    "coverage_errors": [],
+    "global_acceptance_passed": false
+  },
+  "dev_support_review": {
+    "items": 57,
+    "declared_spans": 75,
+    "answerable": 46,
+    "refusals": 11,
+    "necessary_units": 61,
+    "reviewed_Spanish_aliases": 19,
+    "global_clearance_complete": false
+  },
+  "identified_semantic_pair_review": {
+    "original_pairs": 63,
+    "retained_active_pairs": 61,
+    "identity_rebind_version": 585,
+    "below_threshold_pairs_exhaustively_reviewed": false
+  },
+  "created_utc": "2026-10-18T23:07:32.347842+00:00",
+  "status": "PROVISIONAL_1000_TABLE_AND_CONTEXT_REPAIR_GLOBAL_GATES_PENDING",
+  "corpus_preparation": {
+    "documents": 1426,
+    "include": 794,
+    "exclude": 526,
+    "pending": 106,
+    "partial_chunks": 3968,
+    "pending_sources_without_admission_review_record": 0
+  },
+  "source_quality_issues": {
+    "mandatory_register_version": 606,
+    "total_recorded_issues": 66,
+    "open_issues": 51,
+    "resolved_for_current_corpus_by_whole_source_exclusion": 15
+  },
+  "pdf_layout_preparation": {
+    "source_pages": 35,
+    "source_words": 13377,
+    "all_words_assigned_exactly_once": true,
+    "rendered_groups": 624,
+    "rendered_characters": 83584,
+    "geometry_straddles_above_one_point": 0,
+    "unchanged_normalized_word_order_pages_reused": 23,
+    "literal_word_order_review_complete": true,
+    "actual_renderer_passed": true,
+    "source_quality_or_rights_cleared": false,
+    "source_context_and_licensed_range_chunks_complete": false,
+    "new_extraction_admitted": false,
+    "canonical_snapshot_changed": false,
+    "evidence_rebinding_performed": false
+  },
+  "engineering": {
+    "module": "src/insurerag_vlm/holdout_pdf_layout.py",
+    "purpose": "Render an explicitly reviewed source-only word order with exact offsets, original geometric provenance, source/inventory/layout hashes and complete-word coverage; never infer source quality, rights or evidence clearance.",
+    "fail_closed": [
+      "Unreviewed layout or QA inputs",
+      "Changed source or inventory hash",
+      "Omitted, duplicated or out-of-range word assignments",
+      "Incomplete or reordered page inventory",
+      "Malformed geometry or unexpected payload fields"
+    ],
+    "production_pipeline_integration": false
+  },
+  "validation": {
+    "fresh_targeted_tests": 40,
+    "new_synthetic_cases": 9,
+    "all168_original_table_cells_matched_prior_review": true,
+    "all12_row_date_header_footnote_contexts_verified": true,
+    "all20_FEHB_notes_retained_in_their_sections": true,
+    "all1426_manifest_source_hashes_verified": true,
+    "manifest_root_snapshot_digest_verified": true,
+    "all1000_declared_TEST_mappings_unchanged": true,
+    "DEV57items61units19aliases_unchanged": true,
+    "real_readiness_reaches_pending_source_gate": true,
+    "global_dataset_gates_passed": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "previous_exact_commit_ci": {
+    "commit": "266f447411ce93d244f81e4a95cbd6bce2e270ba",
+    "run_id": 39174188362,
+    "all_five_jobs_success": true
+  },
+  "limits": [
+    "1000 TEST is provisional; accepted counts remain zero and the benchmark is not frozen.",
+    "106 pending sources and51 open issues remain;122 TEST declared mappings are incomplete.",
+    "Necessary support, semantic aliases, source families, historical contamination and legacy restrictions still need global clearance.",
+    "Table transcription and source contexts do not authorize new questions or certify live legal currency.",
+    "The registered generation runtime was unavailable at its last check; independent data work continues without downloads or fallback models.",
+    "No DEV selection lock, TEST freeze or final evaluation.",
+    "Raw sources, QA, annotations and weights stay local; PR8 remains draft and unmerged."
+  ],
+  "evidence_sha256": {
+    "stage601_extraction_pytest.log": "bf71ca5b2016c01eb800db3dd0d78929a744446a7665a9dd5c106727446e8218",
+    "stage602_source_disposition_review.json": "71d5aa18295c811f8302dc3e0394791de778a6aa01e5cc4b62896ccd72d03e5d",
+    "extraction_batch_35/summary.json": "5470ba1210afbac521111840ae672e0fa6ce039c64e87b011a58b88ca1e697f1",
+    "stage605_source_disposition_review.json": "d34053853d6956a1c1fc7b273a3638bdce1f5917e40d3b22c20a7eee7ad66409",
+    "stage606_snapshot_binding_review.json": "39f38c6261d7f9282bb4adeec34d24cc4412d2cd829fad3063ae5fc99a786ace",
+    "stage607_global_preflight.json": "dc16f11bfd4af89a341da07aee0d7064abff8b6115fa7938ee73acea931be7dd",
+    "stage607_dev_readiness.json": "c3c33f85d154e3a6b0281572f0bb0aab2bae73b154f2a21d818564938bb21904",
+    "stage600_publication_receipt.json": "a30362d9bbae055cdf6650c90e60cf3939128cd5941bd387df9b8674c578f3b9"
+  },
+  "runtime": {
+    "created_utc": "2026-10-18T22:31:11.579215+00:00",
+    "status": "REGISTERED_RUNTIME_READ_ONLY_PROBE",
+    "url": "http://127.0.0.1:11434/api/tags",
+    "ollama_on_PATH": false,
+    "model_downloads": 0,
+    "paid_calls": 0,
+    "proxy_or_security_settings_changed": false,
+    "service_start_attempts": 0,
+    "error_type": "ConnectionError",
+    "response_received": false
+  },
+  "document_snapshot": 35,
+  "code_change": {
+    "problem": "Flattened source tables lose blank cells and grouped header relationships.",
+    "behavior": "An explicit reviewed-table helper transcribes complete rectangular header paths and unmerged body cells, preserving emptiness as metadata without inferring negative coverage. Ambiguous, incomplete or unsupported structures fail without changing the DOM.",
+    "real_source_validation": "All168 original cells,44 blanks and12 carrier rows match the previously reviewed original HTML; each row carries exact dated headers and eligibility footnotes. No QA changed.",
+    "tests": "Nine new synthetic cases;40 targeted table/header/FAQ/MathML tests passed."
+  },
+  "source_review_since_stage600": {
+    "new_inclusions": 2,
+    "new_exclusions": 0,
+    "source_table_transcription": 1,
+    "source_context_only_admission": 1,
+    "other_document_lines_byte_identical": 1425,
+    "old_chunks_byte_identical": 3928,
+    "new_chunks": 40,
+    "active_QA_changed": 0,
+    "new_questions": 0,
+    "previous_holds_retained": true,
+    "manifest_root_digest_corrected": true
+  },
+  "usage_since_stage600": {
+    "web_source_actions": 0,
+    "local_model_forwards": 0,
+    "new_vectors": 0,
+    "model_downloads": 0,
+    "paid_calls": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0
+  }
+}

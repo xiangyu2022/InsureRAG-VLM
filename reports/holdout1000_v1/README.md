@@ -12,49 +12,44 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage600](stage600_progress.json): **1,000 provisional
+The latest checkpoint is [stage608](stage608_progress.json): **1,000 provisional
 TEST and 57 DEV across 184 TEST families**, retaining **600 ordinary, 150 numerical,
 150 multi-evidence and 100 insufficient-evidence TEST tasks**.
 **Accepted counts remain zero; the dataset is not frozen.**
 
-A source extraction fix now preserves explicitly reviewed body headers. Default
-navigation removal is unchanged, and invalid selectors fail. On one cached source,
-the fix restores six original product labels while preserving all 29 feature items
-and the remaining original text. Snapshot34 changes exactly one document; the other
-1,425 document lines, original FAQ bytes and all candidate questions are unchanged.
-No label was inferred and no new question was created.
+A new reviewed-table helper preserves grouped headers, cell positions and explicit
+empty cells. It rejects incomplete or ambiguous structures without changing the DOM.
+One cached table was transcribed with all 168 original cells, including 44 blanks,
+matched against the prior HTML review. Its 12 row chunks carry the original header,
+date and eligibility footnote. Empty cells are not interpreted as negative coverage.
+Snapshot35 changes one source; the other 1,425 lines and FAQ candidates are unchanged.
 
-A separate historical source was admitted with its explicit 2009 context retained
-in legislative chunks and its undated referral section kept separate. Its existing
-authoring restrictions and related FAQ exclusion remain in force. One further
-calendar-conflicted directory was excluded. No withdrawn item was restored.
+A second source admission preserves 20 program notes within their FEHB sections.
+Abbreviated retirement notes carry the source's limited-exceptions qualification.
+Only navigation is omitted; substantive source text is unchanged. These source-only
+repairs do not create questions or establish global semantic clearance.
 
-The manifest has **792 included, 526 excluded and 108 pending** documents, with
-**51 open issues and 15 resolved by source exclusion**. All prior **3,920 chunks**
-are byte-identical; eight new chunks bring the partial corpus to **3,928**.
-Declared TEST mappings are now **878 complete and 122 pending**. These mappings do
-not establish necessary-support or semantic-alias clearance.
+The manifest now has **794 included, 526 excluded and 106 pending** documents,
+with **51 open issues and 15 resolved by source exclusion**. The partial corpus
+contains **3,968 chunks**; all previous 3,928 chunks remain byte-identical.
+Declared TEST mappings remain **878 complete and 122 pending**. DEV content,
+61 necessary units and 19 reviewed aliases retain their original chunk sets.
+All 1,426 per-source hashes and the manifest's snapshot root digest were checked.
+A stale root digest from snapshot33 was corrected in a new private checkpoint;
+the real readiness check now reaches the pending-source gate and remains blocked.
 
-Pool 154, all 154 ledger links, 437 effective item holds and the 61 reviewed active
-semantic-pair identities retain their verified bindings. No held item is active.
-DEV content, 61 necessary units and 19 reviewed aliases retain their chunksets.
-All 1,426 manifest/source text hashes were checked against snapshot34. Global
-support, family, history and legacy clearance remains unfinished.
+**40 targeted extraction tests passed**, including nine new synthetic table cases.
+All five CI jobs passed for preceding commit
+`266f447411ce93d244f81e4a95cbd6bce2e270ba`; this commit needs its own CI receipt.
+Pool154, ledger154, 437 item holds and61 reviewed active semantic-pair identities
+remain bound. No withdrawn question was restored. Global support, alias, family,
+history and legacy clearance remains unfinished.
 
-**125 targeted tests passed:** 31 extraction/MathML tests and 94 holdout tests.
-The actual pre-authoring entry point also processed the repaired source with the
-current ledger, history, source manifest and issue register; it produces leads,
-not clearance. All five CI jobs passed on preceding commit
-`eb66203cbfd25653a5acb432f77b9977e67816ad`; this new commit needs its own CI receipt.
-
-This batch used two official page-open attempts; neither yielded the requested
-legal text, so those source questions remain pending. No reference page entered
-the corpus. There were no new vectors, generation calls, paid calls or model
-downloads. The registered runtime was unavailable at its last check; independent
-data review continues. No actual DEV/TEST inference, selection lock or freeze.
-
-Reviews are sequential Codex content reviews, not human or expert reviews.
-Raw sources, QA, annotations and weights remain local. PR8 stays draft and unmerged.
+This batch used cached sources, with no source web requests, model forwards, new
+vectors, paid calls or model downloads. No actual DEV/TEST inference, selection
+lock or freeze occurred. Reviews are sequential Codex content reviews, not human
+or expert reviews. Raw sources, QA, annotations and weights remain local.
+PR8 stays draft and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

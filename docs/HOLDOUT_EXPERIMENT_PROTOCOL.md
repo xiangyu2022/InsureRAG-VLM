@@ -4,7 +4,7 @@ As of October 18, 2026, the current checkpoint has 1,000 provisional TEST and 57
 items across 184 TEST document families. The latest whole-source hold removed one ordinary task; a separately reviewed
 replacement restored the 600/150/150/100 task quotas under the original seed and
 caps. Previously withdrawn items remain withdrawn. Accepted counts are zero; the benchmark is not
-frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage600_progress.json)
+frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage608_progress.json)
 distinguishes passing item/coverage checks from unfinished global acceptance.
 
 The [prospective protocol](../reports/holdout1000_v1/evaluation_protocol_v1.json)
@@ -34,8 +34,8 @@ The holdout_experiment module implements annotation-based metrics and uncertaint
 
 The whole-source manifest gate requires an explicit include/exclude review for
 every snapshot document before tokenization. Raw/text hashes for all 1,426 sources
-were verified. Current dispositions are 792 included, 526 excluded after source review
-and 108 pending. Review order prioritized DEV sources after a source-only
+were verified. Current dispositions are 794 included, 526 excluded after source review
+and 106 pending. Review order prioritized DEV sources after a source-only
 inventory of all 291 TDI documents. It does not authorize a gold-filtered corpus.
 Existing reviews can be reused when their content hashes and scope still apply.
 A strict MathML fraction transcription now preserves division and grouping. One
@@ -49,7 +49,7 @@ licensed-range chunks, an original unit ambiguity and evidence rebinding remain
 unfinished. Rendering success does not admit the source or replace a snapshot.
 
 holdout_corpus validates source ranges, hashes, token limits and reviewed atomic
-spans. The 3,928 partial chunks preserve all included characters and have at most
+spans. The 3,968 partial chunks preserve all included characters and have at most
 512 tokens and 2,400 characters. Source headings, lists, table headers and
 qualifiers must survive chunking. Oversized atomic spans fail instead of being
 silently truncated. Source structure, never an answer key, defines boundaries.
@@ -68,6 +68,15 @@ missing selectors, non-header matches and excluded-navigation ancestors fail.
 Snapshot34 restores six original labels in one source, preserving its 29 feature
 items and original suffix. All other document lines and FAQ candidates are unchanged.
 This source repair does not authorize new questions or clear global aliases.
+
+The explicit `render_reviewed_table` helper preserves grouped header paths and
+original blank-cell positions for reviewed rectangular tables. Unsupported or
+ambiguous structures fail. Snapshot35 transcribes one source table without
+interpreting empty cells as negative facts; each row retains dated headers and
+the original eligibility footnote. Source-only FEHB sections also retain local
+program notes and the original limited-exceptions qualification. The manifest
+root digest now binds snapshot35 as well as every per-source hash. Pending
+source decisions still block corpus construction and actual DEV retrieval.
 
 All 57 DEV items and 75 declared evidence spans now map by exact offsets. The
 reviewed draft has 61 necessary units for 46 answerable cases. Eleven refusal
@@ -162,10 +171,10 @@ The script neither fetches URLs nor follows embedded historical origin paths.
 
 ```powershell
 python scripts/preflight_holdout_authoring.py --root reports/holdout1000_v1 `
-  --pool-number 154 --documents extraction_batch_34/documents.jsonl `
+  --pool-number 154 --documents extraction_batch_35/documents.jsonl `
   --candidates global_candidates_reviewed_146.jsonl `
-  --manifest stage597_inclusion_manifest_draft.json `
+  --manifest stage606_inclusion_manifest_draft.json `
   --legacy stage277_legacy_hold_leads.json `
-  --issues stage597_source_consistency_issue_register.json `
+  --issues stage606_source_consistency_issue_register.json `
   --document DOCUMENT_ID --output next_authoring_packet.json
 ```
