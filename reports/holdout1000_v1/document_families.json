@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-19T00:27:16.167317+00:00",
+  "updated_utc": "2026-10-19T00:59:39.021127+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -707,21 +707,24 @@
         "eda721de69fd279fd33d22c9",
         "f74f6d7240dd8912ae3ad0a5",
         "032c8ea3118480d2ca5c0b38",
-        "69319913cd6a881d8401e712"
+        "69319913cd6a881d8401e712",
+        "1661eefc839b1b094bc41154"
       ],
-      "relation": "Conservative closure of existing healthcare-rights parent/form family and infertility FAQ. Parent infertility sections repeat substantive benefit and nondiscrimination explanations; inherited links preserved. Parent also reproduces the dyslexia mandate and links to its dedicated guide; conservative closure includes that guide. Includes surprise-bill guide after shared consumer protection/disclosure and recourse prose closure.",
+      "relation": "Conservative closure of existing healthcare-rights parent/form family and infertility FAQ. Parent infertility sections repeat substantive benefit and nondiscrimination explanations; inherited links preserved. Parent also reproduces the dyslexia mandate and links to its dedicated guide; conservative closure includes that guide. Includes surprise-bill guide after shared consumer protection/disclosure and recourse prose closure. Includes dedicated COBRA/Age29 overview after exact substantive continuation-eligibility paragraph comparison with parent.",
       "local_review_records": [
         "stage21_source_decisions.json",
         "stage27a_family_decision.json",
         "stage57_source_decisions.json",
         "stage84_source_decisions.json",
-        "stage107_source_decisions.json"
+        "stage107_source_decisions.json",
+        "stage664_family_review.json"
       ],
       "review_record_sha256": "6c5b1f8e927797a653e453d478149bdd5281d37b1c3ef2d541c90d952e5c67c0",
       "extension_review_sha256": [
         "0845c64ff99ec3c27021d69f6f3570c69a52ead2d0c4453552a944cee7eb4be7",
         "9c125c2fa3e7d3dd8595ef492173fddeccd2b787a571d5933ba6b629b3cd1d18",
-        "9339deb72b17282f45e0a7c85bd45b3b54318d168d2c419d3099c8cd07f531b9"
+        "9339deb72b17282f45e0a7c85bd45b3b54318d168d2c419d3099c8cd07f531b9",
+        "b351f827855c3f4478c61ea1df863a6aac963e908e57534fd7c60500d2bb343f"
       ]
     },
     {
@@ -2324,7 +2327,8 @@
     "b2f41b08235943e9d2c9c460": "9113e8f58c94a21685495a53cd8c63d13a091462234c3b144e0839a15046dedb",
     "2574049d4c435cd3922a15a2": "42cf5883f2c1a5997541b4989bbcaca8702da36b7506abb9b7b5f3044594d6cc",
     "3ebaed4151adf9c9d1e848dc": "a42678ef1b453a37c53870a11901fa2b95a1db4e6d17b8f973a8d41800f7e47b",
-    "80f3155ea476028e366c9d3f": "77da5785335f9d384e42e70bce1f0136206c33f35a6e078de6cbc31b828fd83f"
+    "80f3155ea476028e366c9d3f": "77da5785335f9d384e42e70bce1f0136206c33f35a6e078de6cbc31b828fd83f",
+    "1661eefc839b1b094bc41154": "cbe58e5e171feb9297f34556679603f257e5794db8037a191e2759bf5819941a"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
@@ -2381,6 +2385,14 @@
         "family_al_nc_annuity_payout_options"
       ],
       "reason": "Whole cross-publisher sources grouped;existinghistoricalauthoringrestrictionspreserved. NoactiveQAaffected."
+    },
+    {
+      "local_review_record": "stage664_family_review.json",
+      "sha256": "b351f827855c3f4478c61ea1df863a6aac963e908e57534fd7c60500d2bb343f",
+      "family_ids": [
+        "family_ny_healthcare_rights_infertility"
+      ],
+      "reason": "Whole source extension by substantive exact paragraph; active family count stays20 and existing authoring holds remain."
     }
   ],
   "proposal_metadata": {
