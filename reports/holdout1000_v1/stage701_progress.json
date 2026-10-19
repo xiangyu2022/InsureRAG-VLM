@@ -1,0 +1,172 @@
+{
+  "created_utc": "2026-10-19T02:11:52.808124+00:00",
+  "status": "PROVISIONAL_1000_PARTIAL_NECESSARY_SUPPORT_210",
+  "reviewer_type": "Single sequential Codex content review, not human or expert",
+  "test_provisional": 1000,
+  "dev_provisional": 57,
+  "accepted_test": 0,
+  "accepted_dev": 0,
+  "frozen": false,
+  "test_document_families": 186,
+  "test_tasks": {
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 150,
+    "ordinary_qa": 600
+  },
+  "publisher_counts": {
+    "canada_fcac": 20,
+    "us_va": 41,
+    "us_tricare": 135,
+    "newjersey_dobi": 42,
+    "newyork_dfs": 55,
+    "california_cdi": 51,
+    "alberta_goa": 38,
+    "northcarolina_doi": 39,
+    "us_opm": 121,
+    "wisconsin_oci": 65,
+    "us_usda_rma": 40,
+    "au_privatehealth_ombudsman": 20,
+    "utah_uid": 15,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 40,
+    "canada_esdc_ei": 103,
+    "alabama_doi": 6,
+    "newjersey_labor_leave": 9,
+    "canada_vac": 28,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 20,
+    "australia_apra": 2
+  },
+  "pool_version": 168,
+  "clearance_ledger_version": 168,
+  "global_candidate_version": 150,
+  "document_snapshot": 36,
+  "corpus_preparation": {
+    "documents": 1426,
+    "include": 797,
+    "exclude": 602,
+    "pending": 27,
+    "partial_chunks": 4080
+  },
+  "source_quality_issues": {
+    "mandatory_register_version": 674,
+    "total_recorded_issues": 67,
+    "open_issues": 24,
+    "resolved_for_current_corpus_by_whole_source_exclusion": 43,
+    "newly_registered_preexisting_issues": 1
+  },
+  "all_test_declared_span_mapping": {
+    "complete": 883,
+    "pending": 117,
+    "pending_source_documents": 26,
+    "not_global_support_clearance": true
+  },
+  "global_preflight": {
+    "ledger_links_verified": 168,
+    "effective_inherited_item_holds": 444,
+    "held_active_items": 0,
+    "reviewed_active_semantic_pairs": 61,
+    "DEV_necessary_units": 61,
+    "DEV_reviewed_aliases": 19,
+    "global_acceptance": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "previous_exact_commit_ci": {
+    "commit": "22cf16511475ae42130437e22bb503921029fae0",
+    "run_id": 39188113067,
+    "all_five_jobs_success": true
+  },
+  "cached_source_url_gate": {
+    "sources_checked": 1426,
+    "historical_records_scanned": 724751,
+    "source_URL_hits": 26,
+    "active_TEST_or_DEV_sources_with_hits": 0,
+    "semantics": "Conservative normalized URL substring exposure, including references; no-hit is not clearance.",
+    "cache_binding": "Source URL records, historical corpus digest, normalization code and screening code.",
+    "historical_origin_paths_opened": false
+  },
+  "validation": {
+    "targeted_tests_passed": 102,
+    "test_receipt_stage": 653,
+    "real_authoring_CLI_integration_passed": true,
+    "production_code_and_tests_unchanged_from": "22cf16511475ae42130437e22bb503921029fae0",
+    "all168ledger_links_and444holds_verified": true,
+    "all1426source_hashes_and_root_digest_verified": true,
+    "all1000declared_TEST_mappings_recomputed": true,
+    "DEV57content61units19aliases_unchanged": true,
+    "active_semantic_pair_identities_unchanged": true,
+    "TEST_support_items_checked": 210,
+    "necessary_units_checked": 290,
+    "support_spans_checked": 341,
+    "alternative_chunk_sets_checked": 296,
+    "document_specific_chunk_coverage_verified": true,
+    "global_dataset_gates_passed": false
+  },
+  "limits": [
+    "1000 TEST items are provisional;accepted counts remain zero and the benchmark is not frozen.",
+    "27 pending sources and24 open issues remain;117 declared TEST mappings across26sources are incomplete.",
+    "210 TEST necessary-support annotations are drafted;790remain. Global equivalent-support aliases and family/history/legacy acceptance are unfinished.",
+    "Registered generation runtime was unavailable at the last check;independent data work continues.",
+    "No DEV selection lock,TEST freeze or final evaluation. Raw sources,individual QA,annotations and weights remain local. PR8 remains draft and unmerged."
+  ],
+  "evidence_sha256": {
+    "stage687_global_preflight.json": "b53f1c64d4fab69a478e93ba6a86a8c8c947a0245d49e2a51c763954b0dd1031",
+    "stage687_all_test_declared_span_mapping.json": "c1567c8858cbdffae418cfe24a4e9f17cc8a11a8c498e3167b3ac8e27d80cca9",
+    "stage699_test_support_units_draft.json": "4e5a325512c8fa7c04721ebd10f933d7d7101364ec22b1fc1dac15fedd903509",
+    "stage700_support_mapping_validation.json": "59e5cd52fe77e11d6639a5b40574e8fd44a400064b0f4f1bc08f24e600acfe61",
+    "stage653_test_receipt_v2.json": "4cff5f780e1611fa7f163c346ab5806bc15c4ee69458a90509bd5292d74eed54",
+    "stage693_publication_receipt.json": "666165881b168b40fb36a15b35b1d93aab3c548f6b6ee4334cfc87f1a758f629"
+  },
+  "test_necessary_support_draft": {
+    "reviewed_items": 210,
+    "answerable_items": 189,
+    "necessary_units": 290,
+    "refusal_diagnostic_items": 21,
+    "remaining_items": 790,
+    "global_semantic_alias_clearance": false,
+    "whole_TEST_clearance": false
+  },
+  "review_since_stage693": {
+    "new_TEST_support_items": 100,
+    "new_necessary_support_units": 132,
+    "new_refusal_diagnostic_items": 10,
+    "active_QA_changes": 0,
+    "new_active_withdrawals": 0,
+    "old_holds_restored": 0,
+    "new_candidate_drafts": 0,
+    "new_reviewed_reserves": 0,
+    "total_reviewed_unselected_reserves": 5,
+    "source_manifest_unchanged": true,
+    "source_chunks_unchanged": true,
+    "canonical_snapshot_unchanged": true,
+    "thresholds_relaxed": false,
+    "task_quotas_and_caps_unchanged": true
+  },
+  "usage_since_stage693": {
+    "web_search_calls": 0,
+    "web_open_calls": 0,
+    "new_question_vectors": 0,
+    "local_embedding_forward_batches": 0,
+    "external_model_api_calls": 0,
+    "paid_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0
+  }
+}
