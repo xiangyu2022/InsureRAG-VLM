@@ -1,14 +1,15 @@
 # Independent holdout experiment preparation
 
 As of October 19, 2026, the current checkpoint has 1,000 provisional TEST and 57 DEV
-items across 186 TEST document families. One source-scope withdrawal was replaced
-by an already-reviewed eligible reserve. The original 600/150/150/100 quotas,
-seed 42 and family/publisher caps remain. One new draft was held for historical
-source-URL exposure before embedding; no held task was restored.
+items across 186 TEST document families. The original 600/150/150/100 quotas,
+seed 42 and family/publisher caps remain. One complete source was admitted after
+official historical-reference verification and original table-context review.
+Fifty-four other sources were excluded using hash-bound prior reviews without
+changing active questions. No held item was restored.
 Accepted counts are zero; the benchmark is not frozen. The
-[aggregate checkpoint](../reports/holdout1000_v1/stage655_progress.json) distinguishes
+[aggregate checkpoint](../reports/holdout1000_v1/stage663_progress.json) distinguishes
 passing item/coverage checks from unfinished global acceptance. Declared mappings
-are 882 complete and 118 pending across 27 sources.
+are 883 complete and 117 pending across 26 sources.
 
 The [prospective protocol](../reports/holdout1000_v1/evaluation_protocol_v1.json)
 registers BM25, original dense, original/adapted hybrid and original/adapted
@@ -37,8 +38,8 @@ The holdout_experiment module implements annotation-based metrics and uncertaint
 
 The whole-source manifest gate requires an explicit include/exclude review for
 every snapshot document before tokenization. Raw/text hashes for all 1,426 sources
-were verified. Current dispositions are 795 included, 548 excluded after source review
-and 83 pending. Review order prioritized DEV sources after a source-only
+were verified. Current dispositions are 796 included, 602 excluded after source review
+and 28 pending. Review order prioritized DEV sources after a source-only
 inventory of all 291 TDI documents. It does not authorize a gold-filtered corpus.
 Existing reviews can be reused when their content hashes and scope still apply.
 A strict MathML fraction transcription now preserves division and grouping. One
@@ -52,7 +53,7 @@ licensed-range chunks, an original unit ambiguity and evidence rebinding remain
 unfinished. Rendering success does not admit the source or replace a snapshot.
 
 holdout_corpus validates source ranges, hashes, token limits and reviewed atomic
-spans. The 4,002 partial chunks preserve all included characters and have at most
+spans. The 4,063 partial chunks preserve all included characters and have at most
 512 tokens and 2,400 characters. Source headings, lists, table headers and
 qualifiers must survive chunking. Oversized atomic spans fail instead of being
 silently truncated. Source structure, never an answer key, defines boundaries.
@@ -183,9 +184,9 @@ The script neither fetches URLs nor follows embedded historical origin paths.
 python scripts/preflight_holdout_authoring.py --root reports/holdout1000_v1 `
   --pool-number 164 --documents extraction_batch_36/documents.jsonl `
   --candidates global_candidates_reviewed_148.jsonl `
-  --manifest stage649_inclusion_manifest_draft.json `
+  --manifest stage659_inclusion_manifest_draft.json `
   --legacy stage277_legacy_hold_leads.json `
-  --issues stage649_source_consistency_issue_register.json `
+  --issues stage659_source_consistency_issue_register.json `
   --source-url-audit source_url_audit.json --history-sha256 VERIFIED_HISTORY_SHA256 `
   --document DOCUMENT_ID --output next_authoring_packet.json
 ```
