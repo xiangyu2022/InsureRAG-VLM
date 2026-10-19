@@ -12,42 +12,40 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage678](stage678_progress.json): **1,000 provisional
+The latest checkpoint is [stage693](stage693_progress.json): **1,000 provisional
 TEST and 57 DEV across 186 TEST families**, with **600 ordinary, 150 numerical,
 150 multi-evidence and 100 insufficient-evidence TEST tasks**.
 **Accepted counts remain zero; the dataset is not frozen.**
 
-Two new candidates completed exact, containment, semantic and content review.
-They remain unselected reserves: one numerical and one ordinary task. One changed
-active semantic-neighbor relation was reviewed. Active questions and all old holds
-remain unchanged. Only two new vectors were encoded in one local forward batch;
-3,538 old question vectors and 44,581 historical vectors were reused.
+Necessary-support annotations now cover **110 TEST items**: 158 units for 99
+answerable items and 11 refusal contexts excluded from answer-retrieval scoring.
+All 186 support spans and 163 alternative chunk sets passed document-specific
+coverage checks. The other **890 items** and global equivalent-support aliases
+still need review. No TEST model outputs were used.
 
-One complete source was admitted with 17 source-context chunks. A previously
-unresolved family membership was corrected without changing active assignments.
-The manifest has **797 included, 602 excluded and 27 pending** sources; the
-register has **24 open issues and 43 resolved by whole-source exclusion**.
-The increase from 23 to 24 open issues records a PDF unit ambiguity already known
-at stage553. It is not a newly discovered defect. The earlier reviewed PDF word
-order remains the preferred preparation; this batch's redundant diagnostic is
-not a canonical replacement or source admission.
+One new draft passed automated thresholds but was held after content review
+found overlap with an existing information need. It is not a reserve or TEST
+item. Four changed active-neighbor lists were reviewed. One reference-answer
+spelling correction preserved its question, evidence and meaning. No active
+item was withdrawn and no old hold restored. Five previously reviewed candidates
+remain unselected reserves: four ordinary and one numerical task.
 
-Snapshot36 is unchanged. There are **4,080 partial chunks**, with the preceding
-4,063 chunk lines preserved. Declared TEST mappings are **883 complete and 117
-pending across 26 sources**. Necessary-support annotations have been reviewed for
-10 TEST items: 13 units for nine answerable items, plus one refusal context that
-is excluded from answer-retrieval scoring. Global alias clearance is unfinished.
+The manifest remains **797 included, 602 excluded and 27 pending** sources, with
+**24 open issues and 43 resolved by whole-source exclusion**. Snapshot36 and its
+4,080 partial chunks are unchanged. Declared TEST mappings remain **883 complete
+and 117 pending across 26 sources**. No unresolved source issue was waived.
 
-All 166 ledger links, 443 effective holds, 61 active semantic pairs and source
-hashes were checked. DEV57 content, 61 units and 19 aliases remain unchanged.
-Code and tests are unchanged; the existing 102 targeted tests and real authoring
-CLI integration remain applicable. The preceding exact commit passed all five
-CI jobs. This publication requires its own exact-commit CI receipt.
+All 168 ledger links, 444 effective holds, 61 active semantic pairs and source
+hashes were checked. DEV57 content, 61 units and 19 aliases are unchanged.
+Production code and tests are unchanged; the existing 102 targeted tests and
+real authoring CLI integration remain applicable. The preceding exact commit
+passed all five CI jobs; this publication requires its own CI receipt.
 
-This batch used two searches and two reference-open calls, no paid calls,
-downloads or actual DEV/TEST inference. Reviews are sequential Codex reviews,
-not human or expert reviews. Raw sources, individual QA, annotations and weights
-remain local. PR8 remains draft and unmerged.
+This batch encoded one new question vector in one local forward batch, reusing
+3,540 question vectors and 44,581 historical vectors. It used no web requests,
+paid calls, model downloads or actual DEV/TEST inference. Reviews are sequential
+Codex content reviews, not human or expert reviews. Raw sources, individual QA,
+annotations and weights remain local. PR8 remains draft and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

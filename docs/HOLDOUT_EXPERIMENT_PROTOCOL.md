@@ -2,13 +2,14 @@
 
 As of October 19, 2026, the current checkpoint has 1,000 provisional TEST and 57 DEV
 items across 186 TEST document families. The original 600/150/150/100 quotas,
-seed 42 and family/publisher caps remain. Two newly reviewed candidates remain
-unselected reserves. Active questions are unchanged and no hold was restored.
-Accepted counts are zero; the benchmark is not frozen. The
-[aggregate checkpoint](../reports/holdout1000_v1/stage678_progress.json) distinguishes
-passing item/coverage checks from unfinished global acceptance. Declared mappings
-are 883 complete and 117 pending across 26 sources. Ten TEST necessary-support
-annotations are drafted; global equivalent-support aliases remain unfinished.
+seed 42 and family/publisher caps remain. Five reviewed candidates remain
+unselected reserves. One new draft was held for information-need overlap; one
+reference-answer spelling correction preserved question and evidence. No active
+item was withdrawn and no old hold restored. Accepted counts remain zero and the
+benchmark is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage693_progress.json)
+distinguishes passing item checks from unfinished global acceptance. Declared
+mappings are 883 complete and 117 pending across 26 sources. Necessary-support
+annotations cover 110 TEST items;890remain and global aliases are unfinished.
 
 The [prospective protocol](../reports/holdout1000_v1/evaluation_protocol_v1.json)
 registers BM25, original dense, original/adapted hybrid and original/adapted
