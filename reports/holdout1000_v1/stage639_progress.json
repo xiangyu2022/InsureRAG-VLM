@@ -1,0 +1,152 @@
+{
+  "created_utc": "2026-10-19T00:17:29.503637+00:00",
+  "status": "PROVISIONAL_1000_SOURCE_REVIEW_AND_HISTORICAL_RULE_WITHDRAWAL",
+  "reviewer_type": "Single sequential Codex content review, not human or expert",
+  "test_provisional": 1000,
+  "dev_provisional": 57,
+  "accepted_test": 0,
+  "accepted_dev": 0,
+  "frozen": false,
+  "test_document_families": 186,
+  "test_tasks": {
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 150,
+    "ordinary_qa": 600
+  },
+  "publisher_counts": {
+    "canada_fcac": 20,
+    "us_va": 42,
+    "us_tricare": 135,
+    "newjersey_dobi": 42,
+    "newyork_dfs": 55,
+    "california_cdi": 51,
+    "alberta_goa": 38,
+    "northcarolina_doi": 39,
+    "us_opm": 121,
+    "wisconsin_oci": 65,
+    "us_usda_rma": 40,
+    "au_privatehealth_ombudsman": 20,
+    "utah_uid": 15,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 40,
+    "canada_esdc_ei": 103,
+    "alabama_doi": 5,
+    "newjersey_labor_leave": 9,
+    "canada_vac": 28,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 20,
+    "australia_apra": 2
+  },
+  "pool_version": 160,
+  "clearance_ledger_version": 160,
+  "global_candidate_version": 148,
+  "document_snapshot": 36,
+  "corpus_preparation": {
+    "documents": 1426,
+    "include": 795,
+    "exclude": 542,
+    "pending": 89,
+    "partial_chunks": 3970
+  },
+  "source_quality_issues": {
+    "mandatory_register_version": 637,
+    "total_recorded_issues": 66,
+    "open_issues": 47,
+    "resolved_for_current_corpus_by_whole_source_exclusion": 19
+  },
+  "all_test_declared_span_mapping": {
+    "complete": 881,
+    "pending": 119,
+    "pending_source_documents": 28,
+    "not_global_support_clearance": true
+  },
+  "global_preflight": {
+    "ledger_links_verified": 160,
+    "effective_inherited_item_holds": 441,
+    "held_active_items": 0,
+    "reviewed_active_semantic_pairs": 61,
+    "DEV_necessary_units": 61,
+    "DEV_reviewed_aliases": 19,
+    "global_acceptance": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "previous_exact_commit_ci": {
+    "commit": "a242f92cd229ac3d00aa5f3371492c9ea47de4d9",
+    "run_id": 39178517217,
+    "all_five_jobs_success": true
+  },
+  "review_since_stage630": {
+    "whole_source_exclusions": 3,
+    "new_inclusions": 0,
+    "chunks_added": 0,
+    "canonical_snapshot_unchanged": true,
+    "active_source_quality_withdrawals": 1,
+    "previously_reviewed_replacements_selected": 1,
+    "new_drafts_reviewed": 2,
+    "new_unselected_numerical_reserves": 1,
+    "new_historical_rule_exclusions": 1,
+    "scope": "One plan source excluded for an internal population-scope conflict; two unused sources excluded because existing authorship/reuse holds remain unresolved. A separate notification draft was rejected after full historical-answer review despite subthreshold automatic scores.",
+    "old_holds_restored": 0,
+    "thresholds_relaxed": false,
+    "task_quotas_and_caps_unchanged": true
+  },
+  "usage_since_stage630": {
+    "web_actions": 0,
+    "reference_pages_added_to_corpus": 0,
+    "new_question_vectors": 2,
+    "local_embedding_forward_batches": 1,
+    "prior_candidate_vectors_reused": 3536,
+    "history_vectors_reused": 44581,
+    "external_model_api_calls": 0,
+    "paid_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0
+  },
+  "validation": {
+    "previous_targeted_tests_passed": 94,
+    "test_receipt_stage": 629,
+    "production_code_and_tests_unchanged_from": "a20deb7f098bcd621a47a414b97e6a3e3079b0d4",
+    "all1426source_hashes_and_root_digest_verified": true,
+    "all1000declared_TEST_mappings_recomputed": true,
+    "DEV57content61units19aliases_unchanged": true,
+    "all160ledger_links_and441holds_verified": true,
+    "active_semantic_pair_identities_unchanged": true,
+    "global_dataset_gates_passed": false
+  },
+  "limits": [
+    "1000 TEST is provisional;accepted counts remain zero and the benchmark is not frozen.",
+    "89 pending sources and47 open source issues remain;119TEST declared mappings across28sources are incomplete.",
+    "Declared mappings do not establish necessary-support or semantic-alias clearance. Global family/history/legacy clearance remains unfinished.",
+    "Registered generation runtime was unavailable at the last check; this is separate from incomplete independent data work.",
+    "No DEV selection lock,TEST freeze or final evaluation. No source text,individual QA,annotations or weights published. PR8 remains draft and unmerged."
+  ],
+  "evidence_sha256": {
+    "stage633_content_review.json": "e55fc3189859f41b3c34126a270e49cca069aca55b03f3cd9b4a7420ad605a89",
+    "stage633_family_review.json": "8799a7983628dbda67e45a8e7499ca41bb597ee74f12a1c427579964eee5bff3",
+    "stage634_source_scope_review.json": "ac73c0a8a064d85d718ef1915fd38fe4bc443a973f6a9f7e8aaf80552eae223d",
+    "stage635_replacement_selection_registration.json": "0dacf44fa3d8ad2080616cbdad5b48e5a50bb716b376e957bdfaff358eb1d50a",
+    "stage635_selection_review.json": "1f07ecc039c8c1477cb10491b5941ad75b56352e0309bb52cd346c3fc9db38fd",
+    "stage637_source_disposition_review.json": "7cc5ac7e43479651732f6c9692d1e8fea1e73391f2629268ea04596f1a00355a",
+    "stage638_global_preflight.json": "eb4718b50811895e702ae3555bc6b6319bf5b364960a9387088f2ef10be5bb66",
+    "stage638_all_test_declared_span_mapping.json": "968a9ef704f78032db785d6e270e526d4a713e4f024fd0da2416f72008c6f0ac",
+    "stage629_test_receipt.json": "d7ed510c8782663eb1ca91195e40f11b8b85a3ab4609d8ef521f55b93c477984",
+    "stage630_publication_receipt.json": "58cdfca996dc33c66467ca91a091c533ab3995e6337aad54de7bdc605b90a3ca"
+  }
+}

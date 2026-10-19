@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-18T23:50:10.019745+00:00",
+  "updated_utc": "2026-10-19T00:06:36.931666+00:00",
   "scope": "Additional document-level conservative holds; existing triage exclusions still apply. Holds are not claims every passage is false. No held page is cleared by low similarity or an individually plausible answer.",
   "documents": {
     "1056fbb935fe0e7ae00642b4": {
@@ -1261,6 +1261,16 @@
         "https://www.tricare.mil/Costs/Cost-Terms/POS"
       ],
       "status": "hold_pending_explicit_resolution"
+    },
+    "fe3e4e5bb314c83def921f79": {
+      "publisher": "us_tricare",
+      "reason": "WHOLE_SOURCE_RESERVE_COHORT_SCOPE_HOLD: The TRICARE Retired Reserve page dated2026-03-04 introduces the plan as for qualified Select Reserve members, while its Who Can Participate list explicitly requires members of the retired Reserve and separately qualified family/survivor cohorts. Original headings and list text confirm the mismatch. Exclude the complete source for unresolved cohort wording; do not silently replace Select with Retired or salvage its separate survivor FEHB exception. This does not assert that every clause is false.",
+      "local_review_record": "stage634_source_scope_review.json",
+      "review_record_sha256": "ac73c0a8a064d85d718ef1915fd38fe4bc443a973f6a9f7e8aaf80552eae223d",
+      "primary_verification_urls": [
+        "https://www.tricare.mil/Plans/HealthPlans/TRR"
+      ],
+      "status": "hold_pending_explicit_resolution"
     }
   },
   "proposal_metadata": {
@@ -1289,6 +1299,11 @@
       "local_review_record": "stage627_source_scope_review.json",
       "sha256": "6d4c29ab2d63ffa41ee8c5c89dae3bd51e5a8a8b47e8aedcb796661d5b7ec28d",
       "reason": "Whole-source POS cohort-scope hold;two active TEST items withdrawn."
+    },
+    {
+      "local_review_record": "stage634_source_scope_review.json",
+      "sha256": "ac73c0a8a064d85d718ef1915fd38fe4bc443a973f6a9f7e8aaf80552eae223d",
+      "reason": "Whole-source internal cohort conflict;one multi-evidence TEST withdrawn."
     }
   ]
 }
