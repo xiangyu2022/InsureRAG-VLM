@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-19T00:15:22.914859+00:00",
+  "updated_utc": "2026-10-19T00:27:16.167317+00:00",
   "reviewer": "Codex source-family review, not complete proof of semantic independence",
   "local_review_record": "agent_family01_findings.json",
   "review_record_sha256": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
@@ -1668,6 +1668,17 @@
       "local_review_records": [
         "stage633_family_review.json"
       ]
+    },
+    {
+      "family_id": "family_al_nc_annuity_payout_options",
+      "document_ids": [
+        "4f11e9c68f926f4fe1c252a7",
+        "80f3155ea476028e366c9d3f"
+      ],
+      "relation": "substantive_cross_publisher_payout_option_derivatives",
+      "local_review_records": [
+        "stage644_family_review.json"
+      ]
     }
   ],
   "document_text_sha256": {
@@ -2312,7 +2323,8 @@
     "b005c92f7ad259e7fe264691": "b4e97913994e1afb20c09136e60bd17e42818451a01cd920b2f5cd99a7e9e982",
     "b2f41b08235943e9d2c9c460": "9113e8f58c94a21685495a53cd8c63d13a091462234c3b144e0839a15046dedb",
     "2574049d4c435cd3922a15a2": "42cf5883f2c1a5997541b4989bbcaca8702da36b7506abb9b7b5f3044594d6cc",
-    "3ebaed4151adf9c9d1e848dc": "a42678ef1b453a37c53870a11901fa2b95a1db4e6d17b8f973a8d41800f7e47b"
+    "3ebaed4151adf9c9d1e848dc": "a42678ef1b453a37c53870a11901fa2b95a1db4e6d17b8f973a8d41800f7e47b",
+    "80f3155ea476028e366c9d3f": "77da5785335f9d384e42e70bce1f0136206c33f35a6e078de6cbc31b828fd83f"
   },
   "limitations": [
     "Exact-body aliases and reviewed substantive/version families must share split and coverage count.",
@@ -2361,6 +2373,14 @@
       "new_document_id": "3ebaed4151adf9c9d1e848dc",
       "split": "test",
       "reason": "One whole historical illustration family; shared navigation is not a derivative table."
+    },
+    {
+      "local_review_record": "stage644_family_review.json",
+      "sha256": "c61ab9a57570c85300696b0ec164fe6b5f3f399ef14785822a15c5a2462fc138",
+      "family_ids": [
+        "family_al_nc_annuity_payout_options"
+      ],
+      "reason": "Whole cross-publisher sources grouped;existinghistoricalauthoringrestrictionspreserved. NoactiveQAaffected."
     }
   ],
   "proposal_metadata": {

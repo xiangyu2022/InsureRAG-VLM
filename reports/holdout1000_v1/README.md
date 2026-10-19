@@ -12,38 +12,39 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage639](stage639_progress.json): **1,000 provisional
+The latest checkpoint is [stage655](stage655_progress.json): **1,000 provisional
 TEST and 57 DEV across 186 TEST families**, with **600 ordinary, 150 numerical,
 150 multi-evidence and 100 insufficient-evidence TEST tasks**.
 **Accepted counts remain zero; the dataset is not frozen.**
 
-One source with an internal population-scope conflict was excluded; its active
-multi-evidence task was withdrawn. An already-reviewed eligible reserve filled
-that vacancy under the original quotas, seed 42 and family/publisher caps.
-Two further unused sources were excluded for unresolved authorship/reuse authority.
-A new notification draft was rejected for historical rule exposure even though
-its automatic scores were below flag thresholds. One numerical draft passed
-individual review as an unselected reserve. No held task was restored.
+Six sources were excluded after source-scope review. One active numerical task
+was withdrawn and an already-reviewed eligible reserve filled that vacancy under
+the original quotas, seed 42 and family/publisher caps. One new draft was held for
+historical source-URL exposure before embedding. Two related documents were
+grouped as one family with their existing authoring restrictions preserved.
+No held task was restored.
 
-The source manifest has **795 included, 542 excluded and 89 pending** documents.
-The issue register retains **47 open issues and 19 resolved by whole-source
-exclusion**. Snapshot36 and all **3,970 chunks** are unchanged. Declared TEST
-mappings are **881 complete and 119 pending across 28 sources**; this is not
-necessary-support or semantic-alias clearance. Global support, alias, family,
-history and legacy clearance remains unfinished; DEV readiness is false.
+The source manifest has **795 included, 548 excluded and 83 pending** documents.
+The issue register retains **42 open issues and 24 resolved by whole-source
+exclusion**. Snapshot36 is unchanged. Source-only header/date contexts were
+repaired for 33 table rows, giving **4,002 partial chunks**. Declared TEST mappings
+are **882 complete and 118 pending across 27 sources**; this is not necessary
+support or semantic-alias clearance. Global checks remain unfinished.
 
-All 160 ledger links and 441 effective item holds were checked, with none active.
-The 61 active semantic-pair identities remain previously reviewed. All 1,426
-source hashes and the root digest were checked; DEV content, 61 necessary units
-and 19 aliases retain their mappings. The prior **94 targeted tests passed**;
-production code and tests are unchanged. The preceding commit's five CI jobs
-passed, and this publication requires its own exact-commit CI receipt.
+A cached URL preflight checked all 1,426 sources against authorized historical
+text: 26 source URLs were exposed, with no active TEST/DEV source among those
+hits. The cache binds URLs, history and code; a no-hit result is not clearance.
+The authoring packet can use it before drafting or expensive question audits.
+All 164 ledger links, 443 effective holds and all source hashes were checked.
+The 61 active semantic pairs, DEV content, 61 units and 19 aliases retain their
+reviewed identities and mappings. **102 targeted tests passed**, including eight
+new URL-gate tests; a real authoring CLI integration also passed.
 
-One local embedding batch encoded only two new questions, reusing 3,536 candidate
-and 44,581 history vectors. No web actions, paid calls, model downloads or actual
-DEV/TEST inference occurred in this batch. Reviews are sequential Codex content
+This batch used no new question vectors, model forwards, web actions, paid calls,
+downloads or actual DEV/TEST inference. Reviews are sequential Codex content
 reviews, not human or expert reviews. Raw sources, individual QA, annotations and
 weights remain local. PR8 stays draft and unmerged; no selection lock or freeze.
+The previous commit passed all five CI jobs; this commit requires its own receipt.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_utc": "2026-10-19T00:06:36.931666+00:00",
+  "updated_utc": "2026-10-19T00:40:08.711244+00:00",
   "scope": "Additional document-level conservative holds; existing triage exclusions still apply. Holds are not claims every passage is false. No held page is cleared by low similarity or an individually plausible answer.",
   "documents": {
     "1056fbb935fe0e7ae00642b4": {
@@ -1271,6 +1271,46 @@
         "https://www.tricare.mil/Plans/HealthPlans/TRR"
       ],
       "status": "hold_pending_explicit_resolution"
+    },
+    "48ca021e38cf674e777c8f9b": {
+      "publisher": "us_va",
+      "reason": "WHOLE_SOURCE_SURVIVOR_BENEFIT_TERMINOLOGY_HOLD: The life-insurance-needs guide dated2026-09-22 labels DIC as sometimes called death pension benefits in its annual-income categories. Original HTML confirms the wording. The existing distinct-program terminology concern has no verified reconciliation in the cached source. Exclude the complete guide for unresolved category scope; do not silently rename a benefit, infer eligibility, or salvage its otherwise arithmetically usable annual-income example. This is a corpus eligibility decision, not a current benefit-law ruling or a claim that every clause is false.",
+      "local_review_record": "stage640_source_scope_review.json",
+      "review_record_sha256": "5eb97383f92820ab0d54935c23c942ccc06b4d48b2aa26e1839f1ac0403cb157",
+      "primary_verification_urls": [
+        "https://www.va.gov/resources/deciding-how-much-life-insurance-to-get/"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "4f11e9c68f926f4fe1c252a7": {
+      "publisher": "northcarolina_doi",
+      "reason": "Preserve stage135/stage509 whole-source authoring restriction for substantively related AL/NC annuity options. The installment-refund mechanism is historically exposed, including the held arithmetic candidate. Grouping these sources is not permission to author a reworded or numerical variant or to restore that candidate. Source-only corpus inclusion remains a separate previously reviewed decision.",
+      "local_review_record": "stage644_family_review.json",
+      "review_record_sha256": "c61ab9a57570c85300696b0ec164fe6b5f3f399ef14785822a15c5a2462fc138",
+      "primary_verification_urls": [
+        "https://www.ncdoi.gov/consumers/annuities/annuity-options"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "80f3155ea476028e366c9d3f": {
+      "publisher": "alabama_doi",
+      "reason": "Preserve stage135/stage509 whole-source authoring restriction for substantively related AL/NC annuity options. The installment-refund mechanism is historically exposed, including the held arithmetic candidate. Grouping these sources is not permission to author a reworded or numerical variant or to restore that candidate. Source-only corpus inclusion remains a separate previously reviewed decision.",
+      "local_review_record": "stage644_family_review.json",
+      "review_record_sha256": "c61ab9a57570c85300696b0ec164fe6b5f3f399ef14785822a15c5a2462fc138",
+      "primary_verification_urls": [
+        "https://aldoi.gov/Consumers/AnnuityOptions.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
+    },
+    "c9d830dfb0e1f0b87a90a04a": {
+      "publisher": "wisconsin_oci",
+      "reason": "HOLD_HISTORICAL_SOURCE_URL: SourceURLappears in historical research_v2 corpus. Existing exact-history rule excludes that document even when the URL is only a reference and no exact QAor lexical/containment match occurs. Do not rehabilitate through a different company row,date qualifier,aliasURL or semantic score.",
+      "local_review_record": "stage648_content_review.json",
+      "review_record_sha256": "b4d85850c9803eccdb5032da465d5f01539eb7f5199f82fb16dad691e9c64043",
+      "primary_verification_urls": [
+        "https://oci.wi.gov/Pages/Consumers/PI-046.aspx"
+      ],
+      "status": "hold_pending_explicit_resolution"
     }
   },
   "proposal_metadata": {
@@ -1304,6 +1344,21 @@
       "local_review_record": "stage634_source_scope_review.json",
       "sha256": "ac73c0a8a064d85d718ef1915fd38fe4bc443a973f6a9f7e8aaf80552eae223d",
       "reason": "Whole-source internal cohort conflict;one multi-evidence TEST withdrawn."
+    },
+    {
+      "local_review_record": "stage640_source_scope_review.json",
+      "sha256": "5eb97383f92820ab0d54935c23c942ccc06b4d48b2aa26e1839f1ac0403cb157",
+      "reason": "Whole-source unresolved benefit category;one numerical TEST withdrawn."
+    },
+    {
+      "local_review_record": "stage644_family_review.json",
+      "sha256": "c61ab9a57570c85300696b0ec164fe6b5f3f399ef14785822a15c5a2462fc138",
+      "reason": "Formalize existing no-new-question restriction on two related sources;not a new corpus exclusion."
+    },
+    {
+      "local_review_record": "stage648_content_review.json",
+      "sha256": "b4d85850c9803eccdb5032da465d5f01539eb7f5199f82fb16dad691e9c64043",
+      "reason": "HistoricalURLauthoringhold;newdraftnotselected. Sourcecorpusinclusionunchanged."
     }
   ]
 }

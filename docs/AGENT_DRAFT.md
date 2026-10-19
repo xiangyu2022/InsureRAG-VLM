@@ -131,7 +131,7 @@ The next connection point is the existing local-model adapter: verify the
 runtime, run a few synthetic full loops, inspect actions/citations and actual
 usage, then evaluate on separately designated development material. Never tune
 this controller on true TEST outputs. Current holdout progress is recorded in the
-[aggregate checkpoint](../reports/holdout1000_v1/stage639_progress.json): 1,000
+[aggregate checkpoint](../reports/holdout1000_v1/stage655_progress.json): 1,000
 provisional TEST and 57 DEV, accepted=0 and frozen=false. Original task quotas
 are restored; global source, support and contamination gates remain unfinished.
 Acceptance work continues independently of the unavailable generation runtime.
