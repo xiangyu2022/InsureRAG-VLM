@@ -15,6 +15,20 @@ class FixtureRetriever:
                 for name, text in DOCUMENTS.items()][:top_k]
 
 
+class LazyLocalController:
+    """A saved review must remain usable while the generation service is down."""
+    context_tokens = 8192
+
+    def __init__(self, model, endpoint, expected_digest):
+        self.settings = (model, endpoint, expected_digest)
+        self.controller = None
+
+    def next_action(self, *args):
+        if self.controller is None:
+            self.controller = LocalModelController(*self.settings)
+        return self.controller.next_action(*args)
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command', choices=['start', 'status', 'resume'])
@@ -32,7 +46,7 @@ def main(argv=None):
     if args.controller == 'ollama' and not args.expected_digest:
         parser.error('Local generation requires an explicit --expected-digest; no downloads')
     controller = (SyntheticController(args.scenario) if args.controller == 'scripted'
-                  else LocalModelController(args.model, args.ollama_url, args.expected_digest))
+                  else LazyLocalController(args.model, args.ollama_url, args.expected_digest))
     runtime = digest({'fixtures': DOCUMENTS, 'scenario': args.scenario,
                       'controller': args.controller, 'model': args.model if args.controller == 'ollama' else None,
                       'digest': args.expected_digest, 'endpoint': args.ollama_url})

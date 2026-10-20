@@ -322,3 +322,43 @@ def test_edit_recovery_after_decision_checkpoint_does_not_increment_twice(tmp_pa
     assert recovered['status'] == 'awaiting_review' and len(recovered['reviews']) == 1
     assert b.resume('one', d) == recovered
     assert r.calls == c.calls == 0
+
+
+def test_saved_local_model_review_works_without_model_service(tmp_path, monkeypatch, capsys):
+    from src.insurerag_vlm import agent_graph_demo as demo
+    from src.insurerag_vlm.agent_demo import DOCUMENTS
+    from src.insurerag_vlm.agent_graph import digest
+    def unavailable(*args):
+        pytest.fail('Review/status must not initialize or contact the model')
+    monkeypatch.setattr(demo, 'LocalModelController', unavailable)
+    runtime = digest({'fixtures': DOCUMENTS, 'scenario': 'ordinary',
+                      'controller': 'ollama', 'model': 'ollama:qwen3.5:4b',
+                      'digest': 'test-digest', 'endpoint': 'http://localhost:11434'})
+    # Scripted setup only: represents the persisted state, not an actual model run.
+    db = tmp_path / 'review.sqlite'
+    a = ReviewAgent(db, FixtureRetriever(), SyntheticController('ordinary'), runtime_id=runtime)
+    s = a.start('offline-review', QUESTIONS['ordinary'])
+    common = ['--db', str(db), '--thread-id', 'offline-review', '--controller', 'ollama',
+              '--expected-digest', 'test-digest']
+    assert demo.main(['status', *common]) == 0
+    assert json.loads(capsys.readouterr().out)['result']['answer'] is None
+    file = tmp_path / 'decision.json'
+    file.write_text(json.dumps(decision(s)), encoding='utf8')
+    assert demo.main(['resume', *common, '--decision', str(file)]) == 0
+    assert json.loads(capsys.readouterr().out)['result']['status'] == 'approved'
+
+
+def test_lazy_model_initializes_once_on_generation_only(monkeypatch):
+    from src.insurerag_vlm import agent_graph_demo as demo
+    initializations = []
+    class Controller:
+        def __init__(self, *settings):
+            initializations.append(settings)
+        def next_action(self, *args):
+            return 'scripted-response', {}
+    monkeypatch.setattr(demo, 'LocalModelController', Controller)
+    lazy = demo.LazyLocalController('ollama:test', 'http://localhost:11434', 'test-digest')
+    assert initializations == []
+    for _ in range(2):
+        assert lazy.next_action('system', '{}', 10, 1) == ('scripted-response', {})
+    assert len(initializations) == 1

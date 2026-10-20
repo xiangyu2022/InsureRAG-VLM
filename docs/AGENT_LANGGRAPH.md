@@ -173,6 +173,9 @@ python -m src.insurerag_vlm.agent_graph_demo start --thread-id local-model-1 --c
 
 Use identical settings for status/resume. Verify the local model identity first;
 the historical digest is not proof that a model is available now.
+The CLI creates the local model adapter lazily on the first generation call.
+Viewing, editing, rejecting or approving a saved draft therefore works even
+while Ollama is offline; returning to retrieval may require generation again.
 
 Data work is preserved separately: pool 169 contains 1,000 provisional TEST,
 57 DEV and 187 TEST document families, with **accepted=0, frozen=false**.
