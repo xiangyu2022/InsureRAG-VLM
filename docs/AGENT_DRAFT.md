@@ -1,5 +1,11 @@
 # Consumer insurance QA Agent draft
 
+**Historical in-memory reference.** The preferred prototype is now the
+[durable LangGraph Agent](AGENT_LANGGRAPH.md), with explicit version-bound human
+review. This older demo does not pause for approval and remains for regression
+comparison. Its historical verification and runtime notes are retained below.
+
+
 This runnable scaffold adds a bounded controller loop around the existing hybrid
 retrieval and insurance reranker. It addresses consumer rules and information,
 not personal claim adjudication. It is independent of the holdout experiment.

@@ -1,14 +1,16 @@
 # Independent holdout experiment preparation
 
-As of October 19, 2026, the current checkpoint has 1,000 provisional TEST and 57 DEV
-items across 186 TEST document families. The original 600/150/150/100 quotas,
-seed 42 and family/publisher caps remain. Five reviewed candidates remain
-unselected reserves. This batch changed no active questions, answers or evidence;
-no item was withdrawn and no old hold restored. Accepted counts remain zero and
-the benchmark is not frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage701_progress.json)
-distinguishes item checks from unfinished global acceptance. Declared mappings
-are 883 complete and 117 pending across 26 sources. Necessary-support annotations
-cover 210 TEST items;790remain and global aliases are unfinished.
+As of October 20, 2026, pool 169 has 1,000 provisional TEST and 57 DEV items
+across 187 TEST document families. The original 600/150/150/100 quotas, seed 42
+and family/publisher caps remain. One temporal-ambiguity question was withdrawn
+and an already reviewed reserve selected; four reviewed reserves remain.
+No old hold was restored. Accepted counts remain zero and the benchmark is not
+frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage704_progress.json)
+records the correction. All 210 support annotations/290 units are preserved;
+790 items and global aliases remain unfinished. Downstream global/mapping/support
+reports need rebinding to pool 169; the previous pool's 883 complete/117 pending
+declared mappings are not current clearance. Agent implementation proceeds
+separately with synthetic fixtures and no TEST outputs.
 
 The [prospective protocol](../reports/holdout1000_v1/evaluation_protocol_v1.json)
 registers BM25, original dense, original/adapted hybrid and original/adapted

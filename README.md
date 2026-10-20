@@ -2,6 +2,12 @@
 
 A local research prototype for citation-grounded insurance document QA. The current verified serving target is **Qwen3.5-4B through Ollama**, with hybrid retrieval, page-level evidence, explicit abstention, and an optional image-QA API.
 
+The [LangGraph Agent prototype](docs/AGENT_LANGGRAPH.md) adds durable SQLite
+checkpoints and mandatory, version-bound human approval before answer release.
+Its current validation uses synthetic fixtures; the local generation runtime
+was unavailable in the October 20 check. The separate 1,000-question holdout is
+still provisional, **accepted=0 and not frozen**.
+
 ## Research snapshot and evaluation scope
 
 The [October 3 research release](https://github.com/xiangyu2022/InsureRAG-VLM/releases/tag/research-prototype-2026-10-03)
