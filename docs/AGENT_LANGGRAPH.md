@@ -177,16 +177,16 @@ The CLI creates the local model adapter lazily on the first generation call.
 Viewing, editing, rejecting or approving a saved draft therefore works even
 while Ollama is offline; returning to retrieval may require generation again.
 
-Data work is preserved separately: pool 170 contains 995 provisional TEST,
-57 DEV and 186 TEST families, with **accepted=0, frozen=false**. Six TEST items were
-withdrawn after whole-source permission review; one fully reviewed numeric reserve
-was selected. Five new drafts remain uncounted. The earlier natural-hazard temporal
-ambiguity withdrawal is preserved. Necessary-support annotation covers 310 items /
-419 units, with 685 items remaining. Declared mapping is 884 complete / 111 pending.
-See the [versioned count reconciliation](HOLDOUT_REVIEW_LAYERS_ZH.md) and
-[current aggregate](../reports/holdout1000_v1/stage732_progress.json).
-There are 24 pending sources, 22 open issues and unfinished global acceptance work.
-Seven OPM refreshes stopped at the access guard's terms redirect scope check.
-No final holdout inference or tuning on TEST results occurred. The user requested
-pausing after this batch to conserve usage. LangGraph implementation is unchanged;
-real generation remains paused while Ollama is unavailable.
+Data work is preserved separately: pool 171 contains 999 provisional TEST,
+57 DEV and 186 TEST families, with **accepted=0, frozen=false**. Four prior drafts
+were selected and one held after linked historical-answer review. Previous
+withdrawals, including the natural-hazard temporal-ambiguity item, remain in force.
+Necessary-support annotation covers 858 items / 1,031 units / 87 refusal diagnostics.
+Mapping is 888 complete / 111 pending; 141 support reviews remain (30 mapped but
+source-issue-blocked and 111 unmapped). See the [count reconciliation](HOLDOUT_REVIEW_LAYERS_ZH.md)
+and [current aggregate](../reports/holdout1000_v1/stage770_progress.json).
+All currently eligible cached support items are reviewed. The 24 pending sources,
+22 open issues, global aliases and one-item ordinary-task deficit still prevent
+acceptance. Seven known OPM scope blocks were not retried. LangGraph implementation
+is unchanged; real generation remains paused while Ollama is unavailable. No
+final holdout inference or tuning on TEST results occurred.
