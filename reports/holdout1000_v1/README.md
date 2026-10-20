@@ -12,38 +12,44 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage716](stage716_progress.json): **1,000 provisional
-TEST and 57 DEV across 187 TEST families**, with the unchanged 600/150/150/100 task
-quotas. **Accepted counts remain zero; the dataset is not frozen.**
+The latest checkpoint is [stage732](stage732_progress.json): **995 provisional TEST
+and 57 DEV across 186 TEST families**. Accepted counts remain zero; the dataset is
+not frozen. Original task quotas are unchanged: 4 ordinary and 1 multi-evidence
+item are missing. Five new private drafts remain uncounted.
 
-[Review-layer reconciliation](../../docs/HOLDOUT_REVIEW_LAYERS_ZH.md) explains why
-stage593's 123 unmapped items and stage707's 790 unannotated-support items are different
-measures. Both use 1,000 TEST items as denominator. Current declared mapping is
-**883 complete/117 pending**; necessary-support annotation is **250 done/750 pending**.
-The 750 comprise 633 mechanically mapped items awaiting content-support review and
-117 unmapped items. Historical checkpoints retain their original versions.
+This batch added 60 necessary-support annotations: **310 items, 419 necessary
+units and 31 refusal diagnostics**, with 685 items still awaiting support review.
+Declared evidence mapping is **884 complete / 111 pending**. The 685 comprise
+574 mapped but unannotated items and 111 unmapped items. The
+[versioned review-layer reconciliation](../../docs/HOLDOUT_REVIEW_LAYERS_ZH.md)
+explains the earlier 123 versus 790 counts and the current denominator change.
 
-This batch added 40 support annotations, bringing the total to 345 necessary units
-for 225 answerable items plus 25 refusal diagnostics. The original 210 item annotations
-are unchanged. One newly annotated extra reference-answer claim was retained as
-verified nonessential context rather than a mandatory retrieval requirement.
-All 404 support spans and 352 alternative chunk sets passed document-specific checks.
-Global semantic alternatives/aliases remain unfinished; no model outputs were used.
+Whole-source permission review withdrew 6 previously unmapped TEST items; one
+previously fully reviewed numeric reserve was selected. Thus 1,000 - 6 + 1 = 995.
+The 994 retained TEST questions, answers and evidence and original 250 support
+annotations are unchanged. Audit metadata is rebound to ledger170.
+No old hold was released. The historical natural-hazard temporal-ambiguity item
+remains withdrawn. Five new drafts and three family-capped old drafts are not
+fully reviewed reserves.
 
-One cached overview was excluded as a whole after source-scope follow-up; no clean
-sections were salvaged and no original text was repaired. This touched no active
-question, support record or chunk. The source manifest is now **797 included,
-603 excluded, 26 pending**, with **23 open issues and 44 resolved through exclusion**.
-Snapshot 36 and 4,080 source-only chunks remain unchanged. Report bindings have
-been refreshed for pool 169 and source manifest 712. Source exclusion is not a
-claim that the original source is false, nor permission to reintroduce it.
+Three sources were excluded as whole pages. The manifest now contains 796 included,
+606 excluded and 24 pending sources; 22 issues remain open. Two previously missing
+rights issues were registered and resolved by exclusion, and one existing issue
+was closed. Snapshot 36 is unchanged. Removing two unused blocks from an excluded
+source leaves 4,078 source-only chunks. All affected reports are rebound.
 
-All 169 ledger links and 445 effective holds remain bound; no held item is active.
-The seven named holdout-quality modules passed 102 tests. Production code is
-unchanged from 73aa396, whose exact CI passed all five jobs; this publication needs
-its own receipt. No generation, paid API, model download, new vector or web request
-was used in this batch. Raw sources, individual QA, annotations and weights remain
-private. PR8 remains draft and unmerged.
+A bounded version check fetched 17 of 24 pending sources: 15 extracted bodies were
+unchanged, and two changes did not resolve the original issues. Seven OPM refreshes
+stopped at a terms-page redirect rejected by the access guard's content scope.
+No alternate route, relaxed guard or automatic corpus admission was used.
+
+All 485 necessary-support spans and 427 alternative chunk sets passed structural
+checks. The seven named quality modules passed 102 tests. Global semantic support
+aliases and other acceptance gates remain open. No new vectors, generation,
+paid API, model download, training or final holdout inference ran. Raw sources,
+individual QA, annotations and weights remain private; PR8 remains draft.
+This batch pauses after one publication and exact-commit CI verification, as
+requested to conserve usage. Actual generation remains blocked by unavailable Ollama.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

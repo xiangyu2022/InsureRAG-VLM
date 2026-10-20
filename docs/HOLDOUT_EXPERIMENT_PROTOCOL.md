@@ -1,15 +1,17 @@
 # Independent holdout experiment preparation
 
-As of October 20, 2026, pool 169 retains 1,000 provisional TEST/57 DEV and 187 TEST
-families. The 600/150/150/100 quotas, seed 42 and family/publisher caps are unchanged.
-The [stage716 aggregate](../reports/holdout1000_v1/stage716_progress.json) records
-250 support-annotated items/345 necessary units, 25 refusal diagnostics and 750 remaining
-items. Declared mapping remains 883 complete/117 pending; these are different review
-layers, explained in the [count reconciliation](HOLDOUT_REVIEW_LAYERS_ZH.md).
-All current reports are rebound to pool 169/source 712. There are 26 pending sources
-and 23 open issues; global support aliases and other acceptance gates remain open.
-No active QA changed in this batch. **Accepted=0, frozen=false**; no DEV selection
-or final TEST inference has run.
+As of October 20, 2026, pool 170 retains 995 provisional TEST/57 DEV and 186 TEST
+families. Whole-source review withdrew six TEST items and selected one previously
+reviewed numeric reserve. The original 600/150/150/100 quotas, seed 42 and caps are
+unchanged; four ordinary and one multi-evidence item are missing. Five new drafts
+are uncounted. The [stage732 aggregate](../reports/holdout1000_v1/stage732_progress.json)
+records 310 support-annotated items/419 necessary units, 31 refusal diagnostics and
+685 remaining items. Declared mapping is 884 complete/111 pending, a different
+review layer explained in the [reconciliation](HOLDOUT_REVIEW_LAYERS_ZH.md).
+Current reports are bound to pool 170/source 725. There are 24 pending sources,
+22 open issues and unfinished global acceptance gates. **Accepted=0, frozen=false**;
+no DEV selection or final TEST inference has run. Pause after this batch to conserve
+usage; do not automatically regenerate, fetch or start further model work.
 
 The [prospective protocol](../reports/holdout1000_v1/evaluation_protocol_v1.json)
 registers BM25, original dense, original/adapted hybrid and original/adapted

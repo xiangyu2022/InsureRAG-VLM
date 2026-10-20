@@ -177,13 +177,16 @@ The CLI creates the local model adapter lazily on the first generation call.
 Viewing, editing, rejecting or approving a saved draft therefore works even
 while Ollama is offline; returning to retrieval may require generation again.
 
-Data work is preserved separately: pool 169 contains 1,000 provisional TEST,
-57 DEV and 187 TEST document families, with **accepted=0, frozen=false**. The earlier
-natural-hazard temporal-ambiguity item remains withdrawn. Necessary-support
-annotations now cover 250 items/345 units, with 750 items remaining. Declared evidence
-mapping is 883 complete/117 pending; these are different review layers, not a
-regression from 123 to 790 pending. See the
-[count reconciliation](HOLDOUT_REVIEW_LAYERS_ZH.md) and
-[current aggregate](../reports/holdout1000_v1/stage716_progress.json).
-Report bindings are current; 26 sources, 23 source issues and global acceptance
-work remain. No final holdout inference or tuning on TEST results occurred.
+Data work is preserved separately: pool 170 contains 995 provisional TEST,
+57 DEV and 186 TEST families, with **accepted=0, frozen=false**. Six TEST items were
+withdrawn after whole-source permission review; one fully reviewed numeric reserve
+was selected. Five new drafts remain uncounted. The earlier natural-hazard temporal
+ambiguity withdrawal is preserved. Necessary-support annotation covers 310 items /
+419 units, with 685 items remaining. Declared mapping is 884 complete / 111 pending.
+See the [versioned count reconciliation](HOLDOUT_REVIEW_LAYERS_ZH.md) and
+[current aggregate](../reports/holdout1000_v1/stage732_progress.json).
+There are 24 pending sources, 22 open issues and unfinished global acceptance work.
+Seven OPM refreshes stopped at the access guard's terms redirect scope check.
+No final holdout inference or tuning on TEST results occurred. The user requested
+pausing after this batch to conserve usage. LangGraph implementation is unchanged;
+real generation remains paused while Ollama is unavailable.
