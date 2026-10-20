@@ -12,39 +12,41 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage770](stage770_progress.json): **999 provisional TEST
-and 57 DEV across 186 TEST families**. Accepted counts remain zero; the dataset is
-not frozen. Original task quotas remain 600/150/150/100; one ordinary item is missing.
+The latest checkpoint is [stage781](stage781_progress.json): **1,000 provisional TEST
+and 57 DEV across 186 TEST families**. The unchanged 600/150/150/100 task counts
+are met. **Accepted=0, frozen=false**: source and global acceptance gates remain open.
 
-The five prior drafts are fully disposed: four selected after targeted review,
-one held because linked historical gold answers already exposed its mechanism.
-The existing 995 TEST and 57 DEV content is unchanged. No historical withdrawal
-was restored, including the natural-hazard temporal-ambiguity item. A separate
-walk-in candidate was not selected because the full page contained an office
-closure notice. Three older family-capped drafts remain unreviewed, not reserves.
+One new ordinary candidate passed exact, containment, lexical and semantic review,
+including five nearest historical records and four linked training gold answers.
+The existing 999 TEST/57 DEV content is unchanged; all 452 holds remain in force.
+No old withdrawal, including the natural-hazard temporal-ambiguity item, was restored.
 
-Necessary-support annotation now covers **858 items, 1,031 necessary units and
-87 refusal diagnostics**. All currently eligible cached items were reviewed.
-Declared evidence mapping is **888 complete / 111 pending**. The 141 unannotated
-items comprise **30 mapped items affected by open source issues** and **111
-unmapped items on 24 pending sources**. The 30 mapped items involve eight included
-sources requiring consistency, temporal-scope or semantic-alias reconciliation;
-these are substantive review gates, not all network failures. See the
-[versioned review-layer reconciliation](../../docs/HOLDOUT_REVIEW_LAYERS_ZH.md).
+Necessary support covers **872 items / 1,047 units / 88 refusal diagnostics**, plus
+four reviewed equivalent-support records. Mapping is **889 complete / 111 pending**.
+The **128 remaining support reviews comprise 17 mapped but source-issue-blocked
+items and 111 unmapped items**. No currently eligible cached item remains unannotated.
+See the [versioned count reconciliation](../../docs/HOLDOUT_REVIEW_LAYERS_ZH.md).
 
-This batch added 548 support annotations. The manifest remains 796 included,
-606 excluded and 24 pending sources; 22 issues remain open. Snapshot 36 and all
-4,078 source-only chunks are unchanged. Seven known OPM terms-redirect scope blocks
-were not retried. No source guard, threshold or dataset quota was relaxed.
+Seven source issues were resolved for the current corpus. Four complete sources
+were quarantined, removing 14 chunks without affecting active QA or existing support.
+Three issues were resolved by current-item scope review with source limitations
+retained. The manifest is 792 included / 610 excluded / 24 pending; 15 issues remain
+open and 4,064 source-only chunks remain. A prior NC issue description was corrected:
+the cached motorcycle page does not state the disputed difference-of-limits formula.
+No source text was silently repaired or selected clean paragraphs admitted as a whole page.
 
-Structural verification covers 1,202 support spans and 1,078 alternative chunk
-sets. The final check reused 514 verified unchanged records and validated the
-344 later additions. The seven named quality modules passed 102 tests. Global
-support aliases and other acceptance gates remain open. One local embedding batch
-encoded only five new drafts; 3,541 candidate and 44,581 history vectors were reused.
-No source fetch, generation, paid API, model download, training or final holdout
-inference ran. Raw sources, individual QA, annotations and weights remain private.
-PR8 remains draft; LangGraph is unchanged and real generation awaits available Ollama.
+All 858 prior support records were preserved; 14 new records and four known aliases
+were validated. The seven named quality modules passed 102 tests. Global semantic
+aliases, family/history/legacy and final acceptance still require completion.
+A private per-source register binds all 128 affected item IDs to the required dated,
+corrected or scope-qualified evidence. Its 29 blocking sources are distinct from
+two admitted co-sources used by blocked multi-evidence items.
+
+Only one new local embedding was computed; 3,546 candidate and 44,581 history vectors
+were reused. No new source fetch, blocked OPM retry, generation, paid API, model
+download, training, DEV selection or final TEST inference ran. Individual QA, raw
+sources, annotations and weights remain local. PR8 remains draft; LangGraph is
+unchanged and real generation remains paused under the prior Ollama-unavailable record.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an

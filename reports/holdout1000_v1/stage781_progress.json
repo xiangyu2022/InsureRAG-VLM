@@ -1,0 +1,162 @@
+{
+  "created_utc": "2026-10-20T19:56:35.935179+00:00",
+  "status": "1000_PROVISIONAL_COUNT_MET_SOURCE_AND_GLOBAL_ACCEPTANCE_BLOCKED",
+  "reviewer_type": "Single sequential Codex content review,not human or expert",
+  "pool": 172,
+  "snapshot": 36,
+  "source_version": 778,
+  "global_candidate_version": 152,
+  "test_provisional": 1000,
+  "dev_provisional": 57,
+  "test_families": 186,
+  "accepted_test": 0,
+  "accepted_dev": 0,
+  "frozen": false,
+  "test_tasks": {
+    "ordinary_qa": 600,
+    "numerical_calculation": 150,
+    "multi_evidence": 150,
+    "insufficient_evidence": 100
+  },
+  "task_quotas_unchanged": true,
+  "structural_pool_validation_errors": [],
+  "global_acceptance_still_required": true,
+  "declared_mapping": {
+    "complete": 889,
+    "pending": 111,
+    "version": 778
+  },
+  "necessary_support": {
+    "annotated_items": 872,
+    "necessary_units": 1047,
+    "answerable_items": 784,
+    "refusal_diagnostics": 88,
+    "known_reviewed_alias_records": 4,
+    "remaining_items": 128,
+    "currently_eligible_remaining": 0,
+    "version": 779,
+    "global_alias_clearance": false
+  },
+  "cross_tab": {
+    "mapped_annotated": 872,
+    "mapped_unannotated_source_issue_blocked": 17,
+    "unmapped_unannotated": 111
+  },
+  "delta_from_stage770": {
+    "TEST_added": 1,
+    "TEST_removed": 0,
+    "support_annotations_added": 14,
+    "necessary_units_added": 16,
+    "refusal_diagnostics_added": 1,
+    "mapping_added": 1,
+    "prior999TESTand57DEV_content_unchanged": true,
+    "original858support_records_unchanged": true
+  },
+  "sources": {
+    "include": 792,
+    "exclude": 610,
+    "pending": 24,
+    "open_issues": 15,
+    "resolved_by_whole_source_exclusion": 51,
+    "resolved_by_current_item_scope_review": 3,
+    "total_issue_records": 69,
+    "source_chunks": 4064,
+    "whole_sources_newly_quarantined": 4,
+    "chunks_removed": 14,
+    "issue_resolutions_this_batch": 7,
+    "active_QA_removed_due_to_source_exclusions": 0,
+    "existing_support_impacted_by_exclusions": 0,
+    "blocking_included_sources": 5,
+    "admitted_cosources_in_blocked_multievidence_items": 2,
+    "known_OPM_terms_scope_blocks": 7,
+    "known_blocked_access_retries": 0
+  },
+  "source_decisions": [
+    "Three current-item scope issues reconciled from unchanged complete-source reviews and targeted context;13existingTESTitems became eligible for support annotation. Source limitations and all historical holds remain.",
+    "Two related historically exposed AL/NC annuity-option sources quarantined whole;their family and authoring holds remain.",
+    "Spanish TDI storm source quarantined whole for unresolved literal wording;no silent translation repair.",
+    "Undated NC basic-auto source quarantined whole pending UIM policy applicability. Reread motorcycle page does not state the difference-of-limits formula;prior issue characterization corrected.",
+    "Wisconsin college-guide qualifications retained;the previously excluded mandated-benefits guide remains excluded. Current-corpus comparison issue closed,not contemporary statutory verification."
+  ],
+  "new_candidate_review": {
+    "new_ordinary_selected": 1,
+    "unselected_reviewed_reserves": 0,
+    "nearest_historical_records_read": 5,
+    "linked_training_questions": 3,
+    "linked_gold_answers": 4,
+    "old_active_neighbor_changes": 0,
+    "new_threshold_pairs": 0,
+    "effective_item_holds": 452,
+    "old_withdrawals_restored": 0
+  },
+  "validation": {
+    "new_support_records_validated": 14,
+    "old_validated_records_reused": 858,
+    "necessary_spans": 1219,
+    "alternative_chunk_sets": 1094,
+    "reviewed_alias_records": 4,
+    "nonessential_context_records": 3,
+    "retained_chunk_payloads_identical": true,
+    "DEV57items61units19aliases_unchanged": true,
+    "active_semantic_pairs": 61
+  },
+  "tests": {
+    "passed": 102,
+    "failed": 0,
+    "skipped": 0,
+    "seconds": 0.406,
+    "modules": [
+      "test_holdout_source_urls.py",
+      "test_holdout_authoring_preflight.py",
+      "test_holdout_source_state.py",
+      "test_holdout_quality.py",
+      "test_holdout_corpus.py",
+      "test_holdout_dev_runner.py",
+      "test_holdout_pdf_layout.py"
+    ],
+    "scope": "Seven explicitly named quality modules;not a full local test suite",
+    "production_code_unchanged_from": "9cfe68b59a545a0c93731cc83a42e53c8ccf49b1"
+  },
+  "usage": {
+    "new_source_fetches": 0,
+    "new_question_vectors": 1,
+    "embedding_forward_batches": 1,
+    "old_candidate_vectors_reused": 3546,
+    "historical_vectors_reused": 44581,
+    "new_candidate_deterministic_history_screen": "Existing scripts screened only the new candidate against cached history;old candidate audits were reused. Near-screen took about282seconds locally.",
+    "generation_calls": 0,
+    "paid_API_calls": 0,
+    "model_downloads": 0,
+    "training": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0,
+    "subagents": 0,
+    "publication_batches": 1
+  },
+  "remaining": [
+    "Obtain specifieddated/corrected authoritativeevidence throughpermitted access,or explicitlyreview whole-source exclusions withindependent replacementtasks. No blind retries of known7OPMscopeblocks.",
+    "Preserve all872supportreviews;finish128after sourcegates resolve.",
+    "Thencompleteglobalalias,family,history,legacy and acceptancechecks againststabilizedsources;no finalholdoutinference or tuningbeforefreeze.",
+    "Realgenerationstillpaused for priorOllamaunavailability;no paidAPI/modeldownload."
+  ],
+  "evidence_sha256": {
+    "stage773_scope_reconciliation.json": "1f1db58e78029f08cdc08abef65de40a089a60ffe919afe69c779bd40f9a8e66",
+    "stage775_test_support_units_draft.json": "92d7d253eb9e3f7ae1ccce55b8b270bb2f0c21b117cc20c0bf283ac724e2f396",
+    "stage776_targeted_review_packet.json": "6d9586008ccff6f070d6a1e3618357a0f17ba36358e9adc893cba61a2b7cab9e",
+    "stage776_linked_history_answers.json": "7af1bdd831c513470e93864e581115f9c07a8e318608345ad5e435b13300c9fe",
+    "stage777_content_review.json": "e5825766a4a67996102eee12fb97f77a98183d4481cb5efaff6b71ddabd89f10",
+    "stage777_source_disposition_review.json": "36eb53a904afade7b970975c5e93febaf908ed076940eb1f91f173f267d93199",
+    "stage778_source_disposition_review.json": "2e6170743f2a7fb725bd6d11d996b149f365cdac919afa4b81cf60badcb1df97",
+    "stage778_global_preflight.json": "3a81fa854a370b90e7d2ae9d15277fb4e197e33c579057ee1750483384270492",
+    "stage779_test_support_units_draft.json": "9d82ecea4e6d81535ed750957cce0af19dfac482d190a8babb8fca520e5f53ce",
+    "stage780_support_mapping_validation.json": "0c387136fe41861792a3bb891c6ef4e8f30c6ef50cdd7863db02f963db132421",
+    "stage780_aux_context_validation.json": "7beab6b48dd6e411add24f8d55f6ea5b3bc6b0ca451a040a57abb351c0fcac63",
+    "stage780_remaining_source_gates.json": "82333fba19f763a9634fcf3489f582755994abecee1e2e9813901667379b57fe",
+    "stage781_test_receipt.json": "343e4a35aa9f386e2a6777a6e9261d15ba3ad8b61fc6c6f2c8d68da5b59fb52c"
+  },
+  "previous_exact_commit_CI": {
+    "commit": "9cfe68b59a545a0c93731cc83a42e53c8ccf49b1",
+    "run_id": 39484056462,
+    "all5passed": true
+  }
+}

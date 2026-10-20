@@ -177,16 +177,14 @@ The CLI creates the local model adapter lazily on the first generation call.
 Viewing, editing, rejecting or approving a saved draft therefore works even
 while Ollama is offline; returning to retrieval may require generation again.
 
-Data work is preserved separately: pool 171 contains 999 provisional TEST,
-57 DEV and 186 TEST families, with **accepted=0, frozen=false**. Four prior drafts
-were selected and one held after linked historical-answer review. Previous
-withdrawals, including the natural-hazard temporal-ambiguity item, remain in force.
-Necessary-support annotation covers 858 items / 1,031 units / 87 refusal diagnostics.
-Mapping is 888 complete / 111 pending; 141 support reviews remain (30 mapped but
-source-issue-blocked and 111 unmapped). See the [count reconciliation](HOLDOUT_REVIEW_LAYERS_ZH.md)
-and [current aggregate](../reports/holdout1000_v1/stage770_progress.json).
-All currently eligible cached support items are reviewed. The 24 pending sources,
-22 open issues, global aliases and one-item ordinary-task deficit still prevent
-acceptance. Seven known OPM scope blocks were not retried. LangGraph implementation
-is unchanged; real generation remains paused while Ollama is unavailable. No
-final holdout inference or tuning on TEST results occurred.
+Data work is preserved separately: pool 172 contains 1,000 provisional TEST,
+57 DEV and 186 TEST families; the unchanged task quotas are met. **Accepted=0,
+frozen=false**. Necessary support covers 872 items/1,047 units/88 refusal diagnostics;
+mapping is 889 complete/111 pending. The remaining 128 support reviews comprise
+17 mapped but source-issue-blocked items and 111 unmapped items. There are 24 pending
+sources and 15 open issues. Source exclusions affect no active QA or existing support.
+All historical withdrawals remain in force. See the [count reconciliation](HOLDOUT_REVIEW_LAYERS_ZH.md)
+and [current aggregate](../reports/holdout1000_v1/stage781_progress.json).
+LangGraph implementation is unchanged. Real generation remains paused under the
+prior Ollama-unavailable record; no model download, paid API, final holdout inference
+or tuning on TEST results occurred. Synthetic workflow verification is not real-model effectiveness.

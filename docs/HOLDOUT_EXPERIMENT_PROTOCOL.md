@@ -1,19 +1,17 @@
 # Independent holdout experiment preparation
 
-As of October 20, 2026, pool 171 retains 999 provisional TEST/57 DEV and 186 TEST
-families. Four of five previous drafts passed targeted review; one was held after
-linked historical answers exposed its mechanism. The original 600/150/150/100
-quotas, seed 42 and caps remain unchanged; one ordinary TEST item is missing.
-The [stage770 aggregate](../reports/holdout1000_v1/stage770_progress.json) records
-858 support-annotated items/1,031 necessary units and 87 refusal diagnostics.
-Mapping is 888 complete/111 pending. The remaining 141 support reviews comprise
-30 mapped but source-issue-blocked items and 111 unmapped items. Current reports
-bind pool 171/source 725/global 151. There are 24 pending sources and 22 open
-issues. **Accepted=0, frozen=false**; no DEV selection or final TEST inference ran.
-All currently eligible cached support items are reviewed; source consistency,
-applicability and global alias gates must be resolved before further clearance.
-See the [count reconciliation](HOLDOUT_REVIEW_LAYERS_ZH.md). No known blocked OPM
-access was retried; no generation, paid API or model download occurred.
+As of October 20, 2026, pool 172 retains 1,000 provisional TEST/57 DEV and 186 TEST
+families. The unchanged 600/150/150/100 quotas are met. **Accepted=0, frozen=false**.
+The [stage781 aggregate](../reports/holdout1000_v1/stage781_progress.json) records
+872 support-annotated items/1,047 units/88 refusal diagnostics and four known aliases.
+Mapping is 889 complete/111 pending. The remaining 128 support reviews comprise
+17 mapped items blocked by source issues and 111 unmapped items. Source 778 has
+792 included/610 excluded/24 pending documents, 15 open issues and 4,064 chunks.
+Four complete source exclusions affected no active QA or existing support; source
+snapshots and all historical holds are preserved. One independent ordinary candidate
+was added after nearest-record and linked training-answer review. Global acceptance
+requires source corrections and alias/family/history/legacy checks; no DEV selection
+or final TEST inference ran. See the [count reconciliation](HOLDOUT_REVIEW_LAYERS_ZH.md).
 
 The [prospective protocol](../reports/holdout1000_v1/evaluation_protocol_v1.json)
 registers BM25, original dense, original/adapted hybrid and original/adapted
