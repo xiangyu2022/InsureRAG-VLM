@@ -1,16 +1,15 @@
 # Independent holdout experiment preparation
 
-As of October 20, 2026, pool 169 has 1,000 provisional TEST and 57 DEV items
-across 187 TEST document families. The original 600/150/150/100 quotas, seed 42
-and family/publisher caps remain. One temporal-ambiguity question was withdrawn
-and an already reviewed reserve selected; four reviewed reserves remain.
-No old hold was restored. Accepted counts remain zero and the benchmark is not
-frozen. The [aggregate checkpoint](../reports/holdout1000_v1/stage704_progress.json)
-records the correction. All 210 support annotations/290 units are preserved;
-790 items and global aliases remain unfinished. Downstream global/mapping/support
-reports need rebinding to pool 169; the previous pool's 883 complete/117 pending
-declared mappings are not current clearance. Agent implementation proceeds
-separately with synthetic fixtures and no TEST outputs.
+As of October 20, 2026, pool 169 retains 1,000 provisional TEST/57 DEV and 187 TEST
+families. The 600/150/150/100 quotas, seed 42 and family/publisher caps are unchanged.
+The [stage716 aggregate](../reports/holdout1000_v1/stage716_progress.json) records
+250 support-annotated items/345 necessary units, 25 refusal diagnostics and 750 remaining
+items. Declared mapping remains 883 complete/117 pending; these are different review
+layers, explained in the [count reconciliation](HOLDOUT_REVIEW_LAYERS_ZH.md).
+All current reports are rebound to pool 169/source 712. There are 26 pending sources
+and 23 open issues; global support aliases and other acceptance gates remain open.
+No active QA changed in this batch. **Accepted=0, frozen=false**; no DEV selection
+or final TEST inference has run.
 
 The [prospective protocol](../reports/holdout1000_v1/evaluation_protocol_v1.json)
 registers BM25, original dense, original/adapted hybrid and original/adapted

@@ -178,11 +178,12 @@ Viewing, editing, rejecting or approving a saved draft therefore works even
 while Ollama is offline; returning to retrieval may require generation again.
 
 Data work is preserved separately: pool 169 contains 1,000 provisional TEST,
-57 DEV and 187 TEST document families, with **accepted=0, frozen=false**.
-One natural-hazard question with an event-versus-assessment time ambiguity was
-withdrawn and replaced by an already reviewed ordinary-QA reserve. All 210
-necessary-support annotations (290 units) remain; 790 are unfinished, and
-downstream reports still need rebinding to the new pool. Source and global
-quality gates remain open. See the
-[aggregate checkpoint](../reports/holdout1000_v1/stage704_progress.json).
-No final holdout inference or tuning on TEST results occurred.
+57 DEV and 187 TEST document families, with **accepted=0, frozen=false**. The earlier
+natural-hazard temporal-ambiguity item remains withdrawn. Necessary-support
+annotations now cover 250 items/345 units, with 750 items remaining. Declared evidence
+mapping is 883 complete/117 pending; these are different review layers, not a
+regression from 123 to 790 pending. See the
+[count reconciliation](HOLDOUT_REVIEW_LAYERS_ZH.md) and
+[current aggregate](../reports/holdout1000_v1/stage716_progress.json).
+Report bindings are current; 26 sources, 23 source issues and global acceptance
+work remain. No final holdout inference or tuning on TEST results occurred.

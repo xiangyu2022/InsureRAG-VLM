@@ -12,37 +12,38 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage704](stage704_progress.json): **1,000 provisional
-TEST and 57 DEV across 187 TEST families**, with **600 ordinary, 150 numerical,
-150 multi-evidence and 100 insufficient-evidence TEST tasks**.
-**Accepted counts remain zero; the dataset is not frozen.**
+The latest checkpoint is [stage716](stage716_progress.json): **1,000 provisional
+TEST and 57 DEV across 187 TEST families**, with the unchanged 600/150/150/100 task
+quotas. **Accepted counts remain zero; the dataset is not frozen.**
 
-One natural-hazard question confused a period after assessment with a period
-after the event. It was withdrawn, not silently repaired or restored. An already
-reviewed ordinary-QA reserve replaced it. Four reviewed reserves remain
-unselected: three ordinary and one numerical. No new question was generated.
+[Review-layer reconciliation](../../docs/HOLDOUT_REVIEW_LAYERS_ZH.md) explains why
+stage593's 123 unmapped items and stage707's 790 unannotated-support items are different
+measures. Both use 1,000 TEST items as denominator. Current declared mapping is
+**883 complete/117 pending**; necessary-support annotation is **250 done/750 pending**.
+The 750 comprise 633 mechanically mapped items awaiting content-support review and
+117 unmapped items. Historical checkpoints retain their original versions.
 
-All **210 necessary-support annotations** remain: 290 units for 189 answerable
-items and 21 refusal contexts. The remaining **790 items** and global aliases
-still need review. The interrupted stage703 packet was never finalized or counted.
-The previous 341-span/296-alternative-set validation remains historical evidence
-for unchanged annotations; its pool binding and other downstream global/mapping
-reports must be refreshed for pool 169 before they can clear the current dataset.
-The previous pool's declared mapping was 883 complete and 117 pending across
-26 sources; these are not newly validated counts for pool 169.
+This batch added 40 support annotations, bringing the total to 345 necessary units
+for 225 answerable items plus 25 refusal diagnostics. The original 210 item annotations
+are unchanged. One newly annotated extra reference-answer claim was retained as
+verified nonessential context rather than a mandatory retrieval requirement.
+All 404 support spans and 352 alternative chunk sets passed document-specific checks.
+Global semantic alternatives/aliases remain unfinished; no model outputs were used.
 
-The manifest remains **797 included, 602 excluded and 27 pending** sources, with
-**24 open issues**. Snapshot36 and 4,080 partial chunks are unchanged. The updated
-pool passes structural/item validation; all 169 ledger links were verified,
-445 effective holds are retained and no held item is active.
+One cached overview was excluded as a whole after source-scope follow-up; no clean
+sections were salvaged and no original text was repaired. This touched no active
+question, support record or chunk. The source manifest is now **797 included,
+603 excluded, 26 pending**, with **23 open issues and 44 resolved through exclusion**.
+Snapshot 36 and 4,080 source-only chunks remain unchanged. Report bindings have
+been refreshed for pool 169 and source manifest 712. Source exclusion is not a
+claim that the original source is false, nor permission to reintroduce it.
 
-This bounded data correction reused cached review and unchanged vectors. No
-DEV/TEST inference or paid model call occurred. Raw sources, individual QA,
-annotations and weights remain local. PR8 remains draft and unmerged.
-The separate [LangGraph prototype](../../docs/AGENT_LANGGRAPH.md) now implements
-durable human review; its synthetic tests do not establish model quality or
-benchmark acceptance. Previous commit 30af51e passed all five CI jobs; the new
-code publication requires its own exact-commit CI receipt.
+All 169 ledger links and 445 effective holds remain bound; no held item is active.
+The seven named holdout-quality modules passed 102 tests. Production code is
+unchanged from 73aa396, whose exact CI passed all five jobs; this publication needs
+its own receipt. No generation, paid API, model download, new vector or web request
+was used in this batch. Raw sources, individual QA, annotations and weights remain
+private. PR8 remains draft and unmerged.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
