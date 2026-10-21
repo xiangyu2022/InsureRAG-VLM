@@ -1,0 +1,282 @@
+{
+  "created_utc": "2026-10-21T01:56:33.544149+00:00",
+  "status": "PROVISIONAL_COUNT_MET_SUPPORT_ALIASES_EXPANDED_SOURCE_AND_GLOBAL_GATES_OPEN",
+  "reviewer_type": "Single sequential Codex review, not human or expert",
+  "pool": 172,
+  "snapshot": 36,
+  "source_version": 778,
+  "support_version": 792,
+  "global_candidate_version": 152,
+  "test_provisional": 1000,
+  "dev_provisional": 57,
+  "test_families": 186,
+  "accepted_test": 0,
+  "accepted_dev": 0,
+  "frozen": false,
+  "declared_mapping": {
+    "complete": 889,
+    "pending": 111
+  },
+  "necessary_support": {
+    "annotated_items": 872,
+    "necessary_units": 1047,
+    "answerable_items": 784,
+    "refusal_diagnostics": 88,
+    "remaining_items": 128,
+    "mapped_source_issue_blocked": 17,
+    "unmapped": 111,
+    "known_reviewed_alias_records": 84,
+    "DEV_alias_records": 19,
+    "global_alias_clearance": false
+  },
+  "delta_from_stage781": {
+    "questions_added": 0,
+    "questions_removed": 0,
+    "new_support_items": 0,
+    "new_necessary_units": 0,
+    "new_reviewed_TEST_aliases": 80,
+    "alias_changed_TEST_items": 35,
+    "whole_body_equivalent_aliases": 65,
+    "context_reviewed_aliases": 15,
+    "rejected_scope_mismatch_groups": 3,
+    "original_necessary_support_unchanged": true,
+    "DEV_unchanged": true
+  },
+  "alias_discovery": {
+    "units_checked": 1108,
+    "necessary_spans_checked": 1280,
+    "included_source_bodies": 792,
+    "method": "Literal support discovery, whole-body equivalence and scoped context review; not exhaustive paraphrase/cross-language clearance.",
+    "isolated_short_fragments": "Generic digits and short-fragment occurrences were separated from semantic decisions; exact original offsets and all row/column headers are required for whole-body alternatives.",
+    "new_alias_spans": 118,
+    "new_alias_source_documents": 23
+  },
+  "source_gates": {
+    "pending_sources": 24,
+    "included_sources_with_blocked_items": 5,
+    "distinct_blocking_sources": 29,
+    "open_issues": 15,
+    "affected_TEST_by_publisher": {
+      "Canada": 2,
+      "NYDFS": 6,
+      "NJ": 21,
+      "WI OCI": 4,
+      "NC DOI": 2,
+      "NZ Consumer Protection": 5,
+      "TRICARE": 13,
+      "VA": 10,
+      "OPM": 65
+    },
+    "new_source_clearances": 0,
+    "OPM_denied_paths_not_retried": 7,
+    "new_TRICARE_reference_HTTP403": 1
+  },
+  "official_reference_findings": [
+    {
+      "publisher": "Canada",
+      "disposition": "Useful historical distinction,but no demonstrated correction/supersession of newer retainedpage. Preserve whole-source pending;do not silently rewrite it or admit only unaffectedPSHCPparagraphs.",
+      "minimum_evidence": "Current TBS/plan administrator dated clarification connecting recommendedleadtime and enforceable deadline to the retained2025page,or correctedcompletepage.",
+      "references": [
+        {
+          "url": "https://www.canada.ca/en/treasury-board-secretariat/services/pension-plan/news-notices-pensions-benefits/proof-claim-provision-disability-insurance-plan-proof-loss-provision-public-service-management-insurance-plan-long-term-disability.html",
+          "date": "Notice2012-10-01;effective2013-01-01;page-details2017-11-23",
+          "read_scope": "Official browser fulltext lines24-44 reviewed"
+        },
+        {
+          "url": "https://www.canada.ca/en/treasury-board-secretariat/services/benefit-plans/active-members/submitting-benefit-claim.html",
+          "date": "Page-details2025-10-28",
+          "read_scope": "Relevant officialtext119-131 reviewed"
+        }
+      ]
+    },
+    {
+      "publisher": "NYDFS",
+      "disposition": "Corroborates one side of retainedmainpage equality conflict;doesnot establish effectiveversion or repair contradictoryatleast clause. No threshold chosen by majorityvote.",
+      "minimum_evidence": "NYDFS dated reconciliation/erratum linking mainpage and FAQ/application at exact50/75equality,with2026/2027scope.",
+      "references": [
+        {
+          "url": "https://www.dfs.ny.gov/consumers/small_businesses/faqs_healthyny",
+          "date": "No controlling effective date established",
+          "read_scope": "Official fullFAQ reviewed"
+        },
+        {
+          "url": "https://www.dfs.ny.gov/consumers/small_businesses/hny_application",
+          "date": "Search-index publication age only;not an effective date",
+          "read_scope": "Search lead only"
+        }
+      ]
+    },
+    {
+      "publisher": "NJ",
+      "disposition": "Dated authority found for partof7affectedUM/UIMitems,but existingwholepage remainsundated/stale. The other14NJitems stillneedPIP/vendor orhistorical2010ACA/ERISA clarification. No source cleared.",
+      "minimum_evidence": "CorrecteddatedcompleteUM/UIMguide or reviewable historicalscope;separate datedPIP/valuationvendor authority andhistorical2010scam-warning correction. Replacementmust preserve whole-source standard.",
+      "references": [
+        {
+          "url": "https://www.nj.gov/dobi/bulletins/blt25_06.pdf",
+          "date": "2025-07-31;phases2023-01-01 and2026-01-01",
+          "read_scope": "Both PDFpages extractedtext reviewed"
+        },
+        {
+          "url": "https://www.nj.gov/dobi/division_consumers/pdf/autoguide2026.pdf",
+          "date": "2026edition;indexage not treatedas effective date",
+          "read_scope": "Relevant coverage/optiontables andPIPsections reviewed;not whole-document admission"
+        },
+        {
+          "url": "https://www.nj.gov/dobi/ins_ombudsman/wysk3.htm",
+          "date": "Undatedretainedguide",
+          "read_scope": "Relevant originalguidebody reviewed"
+        }
+      ]
+    },
+    {
+      "publisher": "WI OCI",
+      "disposition": "Partialscopeevidence only;wholeOtherVehiclespage remainspending. Do not useautoFAQas motorcycleequivalence.",
+      "minimum_evidence": "Datedmotorcycle-specificUMrequirement andOCIcorrection/qualification of the snowmobileage/birthconditions.",
+      "references": [
+        {
+          "url": "https://dnr.wisconsin.gov/newsroom/release/38216",
+          "date": "2020-09-28",
+          "read_scope": "Official releasefullbody reviewed"
+        },
+        {
+          "url": "https://oci.wi.gov/Pages/Consumers/OtherVehicles.aspx",
+          "date": "2023-06-14",
+          "read_scope": "Relevant officialsearch/body excerpt"
+        }
+      ]
+    },
+    {
+      "publisher": "NC DOI",
+      "disposition": "Original businesswholepage stillrequires product/date andprivatefloodscope;no replacementby passenger-auto assumptions.",
+      "minimum_evidence": "NCauthoritative commercial/businessauto applicability andprivateflood qualification forretainedguide.",
+      "references": [
+        {
+          "url": "https://www.ncdoi.gov/changes-rating-automobile-insurance-policies-effective-july-1-2025",
+          "date": "Effective2025-07-01 fornew/renewedpolicies",
+          "read_scope": "Officialsearch evidence;not fullsource admission"
+        }
+      ]
+    },
+    {
+      "publisher": "NZ Consumer Protection",
+      "disposition": "Newdatedadvice doesnot settleentrylaw,COVIDconditions,orcomplaintscheme/deadline. Keepwholepagepending.",
+      "minimum_evidence": "Fiji officialdatedentryrequirements plusapplicableNZcomplaintscheme/deadline andCOVIDscope,or correctedcompleteconsumerpage.",
+      "references": [
+        {
+          "url": "https://www.safetravel.govt.nz/destinations/fiji",
+          "date": "Pageupdated2026-03-17",
+          "read_scope": "Officialpage overview reviewed"
+        },
+        {
+          "url": "https://www.consumerprotection.govt.nz/help-product-service/travel-and-events/travel-insurance",
+          "date": "No controlling effectivedate established",
+          "read_scope": "Officialsearch lead comparedwithexistingcache"
+        }
+      ]
+    },
+    {
+      "publisher": "TRICARE",
+      "disposition": "Studentboundary remainsconflicting;medicalretirementclarification unavailableonnew403path;pharmacy,payerorder,Medicareenrollment andpremiumscopes stillneedwhole-source resolution. All13itemsremainheldatsupportgate.",
+      "minimum_evidence": "Correctedd atedstudentboundary guidance;accessibleofficialretirementqualifications;explicitplan/pharmacy andMedicare/payerorder scopes. Do not retrynew403path.",
+      "references": [
+        {
+          "url": "https://www.tricare.mil/Plans/Eligibility/Children",
+          "date": "2024-11-21",
+          "read_scope": "Officialstudentsection reviewed"
+        },
+        {
+          "url": "https://www.tricare.mil/LifeEvents/College",
+          "date": "2026-09-11",
+          "read_scope": "Officialcollegebody reviewed"
+        },
+        {
+          "url": "https://tricare.mil/childadult",
+          "date": "2025-07-18",
+          "read_scope": "Officialsearch lead only"
+        },
+        {
+          "url": "https://reynolds.tricare.mil/Health-Services/Primary-Care/Active-Duty/Medical-Evaluation-Boards",
+          "date": null,
+          "read_scope": "ACCESS_DENIED"
+        },
+        {
+          "url": "https://tricare.mil/-/media/Files/TRICARE/Publications/Handbooks/Pharmacy_HB.pdf",
+          "date": "Searchindex ageonly;notverifiededitiondate",
+          "read_scope": "Searchleadonly;nodownload/admission"
+        }
+      ]
+    },
+    {
+      "publisher": "VA",
+      "disposition": "No publisherclarification of basicwaiver duringtwo-yearoverlap found;do notinferrevocation frommustpayboth.",
+      "minimum_evidence": "VA datedstatement specificallyaddressingexistingbasicS-DVIpremiumwaivers duringpre2026VALife transition;distinguishsupplementalcoverage.",
+      "references": [
+        {
+          "url": "https://www.va.gov/life-insurance/options-eligibility/s-dvi/",
+          "date": "2026-01-02",
+          "read_scope": "Officialfullbody reviewed"
+        },
+        {
+          "url": "https://www.va.gov/life-insurance/totally-disabled-or-terminally-ill/",
+          "date": "No effectiveversionconclusion",
+          "read_scope": "Officialwaiverpage inspected"
+        },
+        {
+          "url": "https://www.benefits.va.gov/INSURANCE/docs/life-insurance-programs-booklet.pdf",
+          "date": "Editionnotverified",
+          "read_scope": "Searchleadonly;notdownloaded"
+        }
+      ]
+    },
+    {
+      "publisher": "OPM",
+      "disposition": "Not fetched/searched thisround. Sevenpreviouslydenied paths anddependent2includedsources remainblocked;cachedaliasworkis separate.",
+      "minimum_evidence": "Same exactstage785publishercorrections andapproved-access evidence;continuationdoesnotauthorizeguardoverride.",
+      "references": []
+    }
+  ],
+  "validation": {
+    "new_alias_records_verified": 80,
+    "new_alias_crosssplit_conflicts": 0,
+    "new_alias_historical_source_URL_flags": 0,
+    "old_support_fields_preserved": true,
+    "pool_source_chunk_content_unchanged": true,
+    "QA_contamination_audits_reused": true,
+    "full_global_acceptance": false
+  },
+  "tests": {
+    "local_102_named_tests": "Prior verified result on unchanged production/test code; not rerun this batch.",
+    "previous_exact_commit": "cb920b859f9338727980af144e8b29ef6e55a34c",
+    "previous_CI_run": 39487979701,
+    "previous_CI_all5_passed": true,
+    "new_checks": "Incremental alias coverage, source-hash/family/hold checks and preservation assertions; publication JSON and git diff validation.",
+    "new_commit_CI": "Verify separately after push; not yet claimed."
+  },
+  "usage": {
+    "paid_API_calls": 0,
+    "model_calls": 0,
+    "model_downloads": 0,
+    "new_vectors": 0,
+    "raw_source_ingestion": 0,
+    "OPM_guard_retries": 0,
+    "TRICARE_403_retries": 0,
+    "training": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0,
+    "subagents": 0
+  },
+  "remaining": [
+    "Obtain the per-source dated corrections/qualifications, or review whole-source withdrawal and independent replacements. Supplementary search results do not repair retained source text.",
+    "128 support reviews remain source-gated; do not count mapping completion as support completion.",
+    "Complete paraphrase/cross-language alias discovery and final family/history/legacy acceptance on the stabilized corpus. Current literal-alias review does not establish exhaustive equivalence.",
+    "Real generation remains paused under prior Ollama-unavailable record; not re-probed."
+  ],
+  "evidence_sha256": {
+    "stage787_targeted_official_reference_review.json": "39e2198fe6147f7623e7841d833e2eb3871ed7a84185c469c34da67d477a598f",
+    "stage789_compact_literal_alias_leads.json": "a7cef36db15cf755d66f572afc80eb5a1b51b45dde543aae928d8ef2c0951fc6",
+    "stage790_exact_body_alias_review.json": "6647d8516b688146461f08a98cb967dba107a006dd601678601b83c8de7f5089",
+    "stage791_context_alias_review.json": "11cc41e454f1d9b563e1833a909382b3f0f82df88c1c19bc2b14e2470fb62539",
+    "stage792_test_support_units_draft.json": "a967e5ae91ea792d5372ee6b7b6e8ae8dd4d092b8407a1c33835947c0dcb68b9",
+    "stage793_support_alias_validation.json": "572aa016bf84ad63d06f7428ef84a04620ba8c551e77c5759b0bc81392cafd4b"
+  }
+}

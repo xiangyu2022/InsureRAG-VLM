@@ -12,41 +12,36 @@ Source-original FAQs, authored hypothetical cases, advisory model decisions and
 Codex content-review decisions are recorded separately. None is expert or human
 adjudication. Provisional per-item clearance is not dataset acceptance.
 
-The latest checkpoint is [stage781](stage781_progress.json): **1,000 provisional TEST
-and 57 DEV across 186 TEST families**. The unchanged 600/150/150/100 task counts
-are met. **Accepted=0, frozen=false**: source and global acceptance gates remain open.
+The latest aggregate is [stage794](stage794_progress.json): **1,000 provisional TEST
+and 57 DEV across 186 TEST families**. **Accepted=0, frozen=false**. The pool,
+source bodies, chunk corpus and original necessary-support labels are unchanged.
 
-One new ordinary candidate passed exact, containment, lexical and semantic review,
-including five nearest historical records and four linked training gold answers.
-The existing 999 TEST/57 DEV content is unchanged; all 452 holds remain in force.
-No old withdrawal, including the natural-hazard temporal-ambiguity item, was restored.
+This batch added **80 verified TEST equivalent-support records across 35 items**:
+65 preserve complete units in identical whole-page copies; 15 passed contextual
+scope review. TEST now has 84 known alias records; DEV retains 19. Three groups
+of identical wording were rejected because plan, product or table scope differed.
+Generic repeated numbers were not accepted as aliases. Incremental checks verified
+all 118 new alias spans, chunk coverage and isolation, with no new cross-split or
+historical source-URL flags. Broader paraphrase and cross-language alias clearance
+remains incomplete; these records do not add independent questions.
 
-Necessary support covers **872 items / 1,047 units / 88 refusal diagnostics**, plus
-four reviewed equivalent-support records. Mapping is **889 complete / 111 pending**.
-The **128 remaining support reviews comprise 17 mapped but source-issue-blocked
-items and 111 unmapped items**. No currently eligible cached item remains unannotated.
-See the [versioned count reconciliation](../../docs/HOLDOUT_REVIEW_LAYERS_ZH.md).
+Necessary support remains **872 items / 1,047 units / 88 refusal diagnostics**.
+Mapping remains **889 complete / 111 pending**. The **128 support gaps are 17 mapped
+but source-issue-blocked items plus 111 unmapped items**, involving 29 blocking
+sources and 15 open issues. The manifest remains 792 included / 610 excluded /
+24 pending, with 4,064 source-only chunks. See the [review-layer definitions](../../docs/HOLDOUT_REVIEW_LAYERS_ZH.md).
 
-Seven source issues were resolved for the current corpus. Four complete sources
-were quarantined, removing 14 chunks without affecting active QA or existing support.
-Three issues were resolved by current-item scope review with source limitations
-retained. The manifest is 792 included / 610 excluded / 24 pending; 15 issues remain
-open and 4,064 source-only chunks remain. A prior NC issue description was corrected:
-the cached motorcycle page does not state the disputed difference-of-limits formula.
-No source text was silently repaired or selected clean paragraphs admitted as a whole page.
+Targeted official references supplied partial date and scope evidence for the
+remaining sources, but no complete source conflict was cleared. The aggregate
+links the references and records the evidence still needed. Seven denied OPM paths
+were not retried. One new TRICARE supplementary page returned HTTP 403; it was not
+retried, and its search snippet was not accepted as full-page evidence.
 
-All 858 prior support records were preserved; 14 new records and four known aliases
-were validated. The seven named quality modules passed 102 tests. Global semantic
-aliases, family/history/legacy and final acceptance still require completion.
-A private per-source register binds all 128 affected item IDs to the required dated,
-corrected or scope-qualified evidence. Its 29 blocking sources are distinct from
-two admitted co-sources used by blocked multi-evidence items.
-
-Only one new local embedding was computed; 3,546 candidate and 44,581 history vectors
-were reused. No new source fetch, blocked OPM retry, generation, paid API, model
-download, training, DEV selection or final TEST inference ran. Individual QA, raw
-sources, annotations and weights remain local. PR8 remains draft; LangGraph is
-unchanged and real generation remains paused under the prior Ollama-unavailable record.
+The prior 102 named local tests and five successful CI jobs apply to the unchanged
+code; they were not rerun locally. New alias validation ran once. No model call,
+download, paid API, training or DEV/TEST inference ran. QA, source text, annotations
+and weights remain local. PR8 remains draft, LangGraph is unchanged, and real
+generation remains paused under the prior Ollama-unavailable record.
 
 Review ledgers are deltas: absence from the latest ledger does not release an
 earlier hold. Follow their hash-linked ancestry and preserve exclusions unless an
