@@ -14,6 +14,10 @@ It preserves provenance, supports BM25 fusion and legacy vector migration, and
 defaults explicitly to the 512-dimensional local-hashing baseline (not BGE).
 Existing historical/UI entry points remain compatible. No external MCP client
 is registered by this change.
+The explicit `python main.py knowledge-search` route now uses Chroma. A local
+16-document DOL historical snapshot has been imported as 303 provenance-bound
+chunks and verified through real MCP calls and process restarts; see the guide
+for the exact collection, source scope and command.
 
 ## Research snapshot and evaluation scope
 

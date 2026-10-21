@@ -63,6 +63,14 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="InsureRAG-VLM retrieval and inference pipeline")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
+    from .clause_store_cli import common_parser
+    knowledge_parser = subparsers.add_parser(
+        "knowledge-search", parents=[common_parser("", add_help=False)],
+        help="Retrieve clauses from the explicitly selected local Chroma store (no generation)")
+    knowledge_parser.add_argument("question")
+    knowledge_parser.add_argument("--top-k", type=int, default=5)
+    knowledge_parser.add_argument("--filters", help="JSON object of allowlisted equality filters")
+
     build_parser = subparsers.add_parser("build-index", help="Build a page index from a data folder")
     build_parser.add_argument("data_folder", type=Path, help="Path to the folder containing text, image, or PDF files")
     build_parser.add_argument("--retrieval-model", default=ModelConfig().retrieval_model)
@@ -328,6 +336,11 @@ def main() -> None:
     extract_parser.add_argument("--render", action="store_true", help="Render page images to the output directory")
 
     args = parser.parse_args()
+
+    if args.command == "knowledge-search":
+        from .clause_search import search_from_args
+        print(json.dumps(search_from_args(args), ensure_ascii=False, indent=2))
+        return
     use_hf_api = True
     if args.command in {"query", "evaluate"}:
         use_hf_api = not args.use_openai

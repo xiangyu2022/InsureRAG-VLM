@@ -8,8 +8,8 @@ import numpy as np
 from .chroma_knowledge import ClauseStore
 
 
-def common_parser(description):
-    parser = argparse.ArgumentParser(description=description)
+def common_parser(description, *, add_help=True):
+    parser = argparse.ArgumentParser(description=description, add_help=add_help)
     parser.add_argument("--store", type=Path, default=Path(".knowledge/chroma"))
     parser.add_argument("--collection", default="insurance_clauses")
     parser.add_argument("--model", default="local-hashing", help="local-hashing or existing local model directory; no downloads")

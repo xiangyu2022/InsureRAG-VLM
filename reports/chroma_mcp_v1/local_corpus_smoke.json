@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "scope": "local historical-source retrieval plumbing, not benchmark acceptance",
+  "collection": "dol_aca_20261001",
+  "store_relative_path": ".knowledge/dol-aca-20261001/db",
+  "snapshot": {
+    "snapshot": "dol_additional_v1@2026-10-01",
+    "snapshot_sha256": "54b596fd4228fae8e71c3bf474bcbb33a2d0e06a57193d328d4998b1f8f1f1bf",
+    "documents": 16,
+    "chunks": 303,
+    "chunk_max_characters": 1600,
+    "rights_basis": "US federal government publication; preserve source/date; not a determination of current legal status.",
+    "source_scope": "DOL ACA implementation parts 56-71",
+    "source_bytes_modified": false,
+    "qa_labels_imported": false,
+    "text_hashes_verified": 16,
+    "original_html_rehashed": false,
+    "current_legal_applicability_validated": false,
+    "clauses_sha256": "e7e6227cd2e1c354c2b0354e54cf47bc3c384aafef0e496274a6ac38f1950460"
+  },
+  "embedding": {
+    "schema_version": 1,
+    "backend": "local-hashing",
+    "model": "local-hashing",
+    "is_baseline": true,
+    "query_instruction": "",
+    "pooling": null,
+    "max_length": null,
+    "normalization": "l2",
+    "embedding_dim": 512,
+    "hash_algorithm": "sha256-token-count-v1"
+  },
+  "first_import_written": 303,
+  "repeat_import_written": 0,
+  "repeat_import_unchanged": 303,
+  "smoke": {
+    "status": "passed",
+    "collection": "dol_aca_20261001",
+    "source_documents": 16,
+    "embedding": "local-hashing",
+    "dimension": 512,
+    "server_processes": 2,
+    "search_calls": 4,
+    "read_calls": 12,
+    "restart_evidence_stable": true,
+    "source_offsets_verified": true,
+    "project_cli_matches_mcp": true,
+    "source_bytes_unchanged": true,
+    "model_quality_evaluated": false
+  },
+  "tests": {
+    "targeted_passed": 23,
+    "duration_seconds": 10.25
+  },
+  "production_or_current_coverage_validated": false,
+  "external_client_registered": false,
+  "formal_test_dev_training_modified": false,
+  "holdout_accepted": 0,
+  "holdout_frozen": false,
+  "model_downloads": 0,
+  "paid_api_calls": 0
+}

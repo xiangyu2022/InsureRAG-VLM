@@ -182,3 +182,67 @@ Formal TEST/DEV/training files and source-review checkpoints are untouched.
 The 1,000-question holdout remains provisional, accepted=0 and unfrozen. Source
 clearance blockers are not solved by putting data into Chroma. No synthetic
 customer-policy module, paid API call or model download is part of this change.
+
+## Actual local corpus connection (October 21, 2026)
+
+The local store `.knowledge/dol-aca-20261001/db`, collection
+`dol_aca_20261001`, now contains **303 chunks from 16 existing DOL ACA guidance
+documents (parts 56-71)**. The selected snapshot is
+`data/research_corpus/dol_additional_v1`, cached October 1, 2026. Its records-file
+SHA-256 is `54b596fd4228fae8e71c3bf474bcbb33a2d0e06a57193d328d4998b1f8f1f1bf`.
+This is archived federal guidance, not a customer policy database or a finding
+that every provision remains applicable today. The existing acquisition records
+identify US federal government publications and require source/date preservation.
+All 16 cached text hashes and the snapshot manifest hash were verified. Original
+HTML hashes are retained from acquisition; raw HTML was not fetched or rehashed.
+
+Only source text and provenance were imported. Source-authored FAQ prose may
+contain questions, but no formal TEST/DEV questions, answers, labels, training
+examples, or new holdout annotations are imported. Nothing is read from the
+holdout candidate pool. Source files remain byte unchanged. Denied OPM/TRICARE
+paths were not accessed. This does not clear outstanding holdout source gates.
+
+The actual imported vectors use **local-hashing, 512 dimensions**. The old
+384-dimensional caches were not loaded or relabeled. The first import wrote
+303 records; an identical second import wrote zero and skipped all 303.
+Chunks retain the original source record ID, URL, acquisition HTML hash, cached
+text hash, snapshot hash, header date where present, and exact original-text
+character offsets. HTML page_number is explicitly 0, not a fabricated PDF page.
+
+Use the project's explicit Chroma retrieval path:
+
+```powershell
+python main.py knowledge-search "prescription drug health care spending reporting" --store .knowledge/dol-aca-20261001/db --collection dol_aca_20261001 --top-k 3
+python -m src.insurerag_vlm.clause_mcp --store .knowledge/dol-aca-20261001/db --collection dol_aca_20261001
+```
+
+`knowledge-search` calls the same `ClauseStore.search_clauses` implementation as
+MCP. It retrieves evidence without generation. `--filters` accepts a JSON object
+with the same allowlisted fields. Older `query`/UI/evaluation routes retain their
+existing behavior; choosing `knowledge-search` explicitly selects Chroma.
+
+The real-cache smoke test used two separate MCP stdio server processes: four
+search calls and twelve `read_evidence` calls, including a document filter.
+Every read matched its search result and the exact cached-source text slice;
+IDs and version hashes remained identical after restart. The project CLI
+returned the same IDs for the same scoped query. Queries covered prescription
+drug spending reporting and contraceptive services coverage. This establishes
+retrieval/provenance plumbing, not answer correctness or current legal validity.
+See the [aggregate receipt](../reports/chroma_mcp_v1/local_corpus_smoke.json).
+Per-evidence receipts and the database remain local. External MCP hosts are
+still unregistered, and no network service remains running.
+
+For a machine with that already-authorized source snapshot restored locally:
+
+```powershell
+python -m src.insurerag_vlm.clause_snapshot --output-dir .knowledge/dol-aca-20261001/import
+python -m src.insurerag_vlm.clause_store_cli --records .knowledge/dol-aca-20261001/import/clauses.jsonl --store .knowledge/dol-aca-20261001/db --collection dol_aca_20261001
+python scripts/smoke_chroma_dol.py --store .knowledge/dol-aca-20261001/db --collection dol_aca_20261001 --output .knowledge/dol-aca-20261001/smoke_receipt.json
+```
+
+The snapshot adapter rejects different file hashes, membership, rights notices,
+source URLs or cached text hashes. It does not download missing sources, discover
+new datasets, or broaden access. A fresh clone without the private source cache
+cannot recreate this collection until that authorized snapshot is restored.
+The seven new synthetic adapter/CLI tests plus the sixteen existing Chroma tests
+passed (23 total); these are distinct from the actual-source smoke above.
