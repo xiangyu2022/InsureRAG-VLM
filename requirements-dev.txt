@@ -6,3 +6,5 @@ PyMuPDF==1.28.2
 Pillow==12.3.0
 
 -r requirements-agent.txt
+
+-r requirements-knowledge.txt

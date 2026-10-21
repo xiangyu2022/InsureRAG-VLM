@@ -8,6 +8,13 @@ Its current validation uses synthetic fixtures; the local generation runtime
 was unavailable in the October 20 check. The separate 1,000-question holdout is
 still provisional, **accepted=0 and not frozen**.
 
+The [local Chroma knowledge service](docs/CHROMA_MCP.md) adds persistent clause
+storage and two read-only MCP stdio tools: `search_clauses` and `read_evidence`.
+It preserves provenance, supports BM25 fusion and legacy vector migration, and
+defaults explicitly to the 512-dimensional local-hashing baseline (not BGE).
+Existing historical/UI entry points remain compatible. No external MCP client
+is registered by this change.
+
 ## Research snapshot and evaluation scope
 
 The [October 3 research release](https://github.com/xiangyu2022/InsureRAG-VLM/releases/tag/research-prototype-2026-10-03)

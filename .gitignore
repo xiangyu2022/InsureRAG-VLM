@@ -226,3 +226,6 @@ data/research_corpus/hicric_public_v1/*.jsonl
 
 # Private LangGraph state, draft answers, evidence and operator review records.
 .agent-state/
+
+# Private local clause database (never commit source data or vectors).
+.knowledge/
