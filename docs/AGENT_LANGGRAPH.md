@@ -188,3 +188,7 @@ and [current aggregate](../reports/holdout1000_v1/stage781_progress.json).
 LangGraph implementation is unchanged. Real generation remains paused under the
 prior Ollama-unavailable record; no model download, paid API, final holdout inference
 or tuning on TEST results occurred. Synthetic workflow verification is not real-model effectiveness.
+
+The [local MCP Agent entry point](AGENT_MCP_LOCAL.md) connects real Chroma stdio
+search/read tools to this review graph, including evidence-version checks before
+approval and reviewed refusal drafts. Deterministic integration validation is not real model quality.

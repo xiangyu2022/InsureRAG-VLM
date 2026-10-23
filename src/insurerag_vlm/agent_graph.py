@@ -99,14 +99,17 @@ class ReviewAgent:
     itself is internal; callers use start/status/resume, never update_state.
     """
 
-    def __init__(self, database, retriever, controller, *, runtime_id, limits=None):
+    def __init__(self, database, retriever, controller, *, runtime_id, limits=None, review_abstentions=False):
         self.database = Path(database).resolve()
         if not self.database.parent.is_dir():
             raise ValueError('Create a private database directory first')
         self.retriever, self.controller = retriever, controller
         self.limits = limits or Limits()
+        self.review_abstentions = review_abstentions
         self.profile = {'schema': SCHEMA, 'runtime_id': string(runtime_id, 300),
                         'limits': asdict(self.limits)}
+        if review_abstentions:
+            self.profile['review_abstentions'] = True
 
     @contextmanager
     def _session(self):
@@ -161,7 +164,7 @@ class ReviewAgent:
                     'active_seconds': 0.0, 'answer': None, 'draft': None, 'version': 0,
                     'approval': None, 'decision': None, 'reviews': [],
                     'status': 'running', 'stop_reason': None,
-                    'review_feedback': None, 'retrieval_round': 0,
+                    'review_feedback': None, 'retrieval_round': 0, 'abstention': None,
                 }, config)
             return self._view(graph.get_state(config))
 
@@ -207,7 +210,7 @@ class ReviewAgent:
     def _validate_review(self, s, d):
         try:
             action = d.get('action')
-            extras = {'approve': [], 'reject': [], 'edit': ['claims'], 'retrieve': ['query', 'gap']}
+            extras = {'approve': [], 'reject': [], 'edit': ['reason'] if s.get('abstention') else ['claims'], 'retrieve': ['query', 'gap']}
             if action not in extras:
                 raise ReviewError('Choose approve, edit, retrieve or reject explicitly')
             keys(d, ['decision_id', 'reviewer', 'version', 'approval_id', 'action', *extras[action]])
@@ -218,9 +221,18 @@ class ReviewAgent:
             if type(d['version']) is not int or d['version'] != s['version'] or d['approval_id'] != s['approval']['approval_id']:
                 raise ReviewError('Stale or wrong-thread approval')
             if action == 'edit':
-                validate_claims(d['claims'], s['evidence'])
-                if d['claims'] == s['draft']:
-                    raise ReviewError('Edit must change the draft; it cannot approve it')
+                if s.get('abstention'):
+                    string(d['reason'], 600)
+                    if d['reason'] == s['abstention']:
+                        raise ReviewError('Edit must change the refusal')
+                else:
+                    validate_claims(d['claims'], s['evidence'])
+                    if d['claims'] == s['draft']:
+                        raise ReviewError('Edit must change the draft; it cannot approve it')
+            if action in {'approve', 'edit'} and any('reference' in row for row in s['evidence'].values()):
+                if not hasattr(self.retriever, 'validate_evidence'):
+                    raise ReviewError('MCP evidence requires a live validating retriever before approval or edit')
+                self.retriever.validate_evidence(s['evidence'])
             if action == 'retrieve':
                 query = string(d['query'], 400)
                 string(d['gap'], 300)
@@ -238,6 +250,10 @@ class ReviewAgent:
             'approval', 'reviews', 'evidence', 'calculations', 'remaining', 'usage',
             'active_seconds', 'trace', 'error', 'abstention')})
         result['remaining']['seconds'] = round(max(0, self.limits.seconds - s['active_seconds']), 6)
+        result['released_response'] = None
+        if s['status'] == 'approved':
+            result['released_response'] = ({'kind': 'abstention', 'reason': s['abstention']} if s.get('abstention')
+                                           else {'kind': 'answer', 'claims': copy.deepcopy(s['answer'])})
         return result
 
     def _operation(self, conn, s, name, call):
@@ -304,6 +320,8 @@ class ReviewAgent:
                 eid = sha256((source + '\0' + text).encode()).hexdigest()[:16]
                 s['known'][eid] = {'id': eid, 'source': source, 'text': text,
                                    'truncated': len(raw) > len(text)}
+                if 'reference' in row:
+                    s['known'][eid]['reference'] = copy.deepcopy(row['reference'])
                 s['candidates'][eid] = {'id': eid, 'source': source, 'preview': text[:200]}
                 ids.append(eid)
             s['trace'].append({'action': 'SEARCH', 'parameters': {'query': query}, 'result_ids': ids})
@@ -385,6 +403,13 @@ class ReviewAgent:
                     if eid not in s['known'] or eid in s['evidence']:
                         raise InvalidAction('READ requires an unread retrieved ID')
                 for eid in ids:
+                    if hasattr(self.retriever, 'read_evidence'):
+                        result = self._operation(conn, s, 'read-' + eid, lambda: self.retriever.read_evidence(s['known'][eid]))
+                        s['active_seconds'] += result['seconds']
+                        if result['seconds'] > lim.call_seconds or s['active_seconds'] > lim.seconds:
+                            raise TimeoutError()
+                        if result['value']['text'][:lim.evidence_chars] != s['known'][eid]['text']:
+                            raise InvalidAction('MCP read differs from retrieved evidence')
                     s['evidence'][eid] = copy.deepcopy(s['known'][eid])
             elif kind == 'CALCULATE':
                 s['calculations'].append(calculate(p, s['evidence'], s['question']))
@@ -392,6 +417,7 @@ class ReviewAgent:
                 keys(p, ['claims'])
                 if s['gaps']:
                     raise InvalidAction('Cannot answer with unresolved gaps')
+                s['abstention'] = None
                 s['draft'] = validate_claims(p['claims'], s['evidence'])
                 s['status'] = 'draft'
             elif kind == 'ABSTAIN':
@@ -400,6 +426,9 @@ class ReviewAgent:
                 if not s['gaps']:
                     raise InvalidAction('ABSTAIN requires a concrete gap')
                 s['abstention'] = p['reason']
+                if self.review_abstentions:
+                    s.update(status='draft', draft=[])
+                    return s
                 return self._stop(s, 'abstained')
             else:
                 raise InvalidAction('Unknown action')
@@ -411,9 +440,12 @@ class ReviewAgent:
             s['status'] = 'awaiting_review'
             binding = {k: s[k] for k in ('thread_id', 'question', 'profile', 'version',
                                         'draft', 'evidence', 'calculations')}
+            if self.review_abstentions:
+                binding['abstention'] = s.get('abstention')
             s['approval'] = {'approval_id': digest(binding), 'version': s['version'],
                              'trigger': 'Every ANSWER draft and every human edit requires review',
                              'draft': copy.deepcopy(s['draft']),
+                             'abstention': s.get('abstention'),
                              'evidence': copy.deepcopy(s['evidence']),
                              'calculations': copy.deepcopy(s['calculations']),
                              'actions': ['approve', 'edit', 'retrieve', 'reject'],
@@ -437,9 +469,12 @@ class ReviewAgent:
             elif d['action'] == 'reject':
                 s.update(status='rejected', stop_reason='human_rejected', answer=None)
             elif d['action'] == 'edit':
-                s.update(status='draft', draft=copy.deepcopy(d['claims']), answer=None)
+                if s.get('abstention'):
+                    s.update(status='draft', abstention=d['reason'], answer=None)
+                else:
+                    s.update(status='draft', draft=copy.deepcopy(d['claims']), answer=None)
             else:
-                s.update(status='retrieving', draft=None, answer=None,
+                s.update(status='retrieving', draft=None, answer=None, abstention=None,
                          review_feedback={'query': d['query'], 'gap': d['gap']},
                          gaps=[d['gap']], retrieval_round=s['retrieval_round'] + 1)
             return s
@@ -448,6 +483,8 @@ class ReviewAgent:
         def retrieve_again(s):
             s['remaining']['searches'] -= 1
             s['status'] = 'running'
+            if hasattr(self.retriever, 'read_evidence'):
+                s.update(known={}, candidates={}, evidence={}, calculations=[])
             return search(s, s['review_feedback']['query'])
 
         def after_execute(s):
