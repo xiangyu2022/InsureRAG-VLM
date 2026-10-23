@@ -1,0 +1,85 @@
+{
+  "recorded_utc": "2026-10-04T17:02:45.668505+00:00",
+  "status": "IN_PROGRESS_NOT_FROZEN_NOT_1000_ACCEPTED",
+  "source_registry_count": 64,
+  "approved_local_research_publishers": 14,
+  "canonical_documents": 1285,
+  "source_faq_candidates": 2036,
+  "extraction_snapshot": "extraction_batch_07",
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "provisional_pool_snapshot": "snapshot06; re-audit against later additions required",
+  "provisional_test_passing_item_gates": 50,
+  "provisional_dev_passing_item_gates": 1,
+  "provisional_test_tasks": {
+    "ordinary_qa": 34,
+    "insufficient_evidence": 6,
+    "multi_evidence": 5,
+    "numerical_calculation": 5
+  },
+  "provisional_test_publishers": 10,
+  "provisional_test_document_groups": 26,
+  "provisional_validation_errors": [
+    "test_count_below_target",
+    "dev_count_below_target",
+    "publisher_overrepresentation",
+    "too_few_document_groups",
+    "task_count_below_target:ordinary_qa",
+    "task_count_below_target:numerical_calculation",
+    "task_count_below_target:multi_evidence",
+    "task_count_below_target:insufficient_evidence"
+  ],
+  "provisional_item_errors": {},
+  "clearance_ledger_sha256": "d61c7ab6a6a948ed68fdfb143022ad5f78583c4b9a72a99a6968ad9aadb7cca8",
+  "review_label": "Codex agent review plus automatic checks; not human or insurance-expert adjudication.",
+  "curator_advisory": {
+    "processed": 1742,
+    "schema_valid": 1710,
+    "schema_invalid_manual": 32,
+    "accepted_by_model": 0
+  },
+  "complex_draft_pilots": {
+    "drafts": 20,
+    "rejected": 17,
+    "held": 3,
+    "accepted": 0,
+    "action": "Stopped bulk drafting after source-scope, arithmetic and unsupported-claim failures."
+  },
+  "historical_audit_scope": {
+    "accessible_strings": 724751,
+    "accessible_questions": 44581,
+    "prior_exposed_source_faq": 218,
+    "denied_paths_retried": false
+  },
+  "critical_source_holds": [
+    "NC Medicare and continuation-rights guidance",
+    "UT HIPAA certificate guidance",
+    "CA long-term-care Medicare home-health assertion",
+    "OPM Health Savings Accounts and Temporary Continuation of Coverage",
+    "OPM carrier-procurement FAQ scope/merged extraction"
+  ],
+  "engineering_validation": {
+    "full_suite": "415 passed,6 skipped,58 subtests (stage2b)",
+    "full_suite_log_sha256": "b4fea3f03aca444eb0869306dc1efc6adccc8d4a33ea528c769c3a479c78c8d1",
+    "subsequent_focused": "28 passed; pytest cache permission warning only (stage2c)",
+    "focused_log_sha256": "4131d05f115a8115f6947ce03ac062b8eae07f039de1816578deec22e3ad3a75",
+    "authorization": "Initial escalation rejected against obsolete read-only scope; exact retry succeeded after explicit user continuation/testing authorization."
+  },
+  "published_draft_pr": "https://github.com/xiangyu2022/InsureRAG-VLM/pull/8",
+  "published_head": "a27372af214bf7af3f1702a9ad2ff4f5e912c828",
+  "published_ci": "run37211181450 all5jobs successful;419tests+58subtests",
+  "local_changes": "Stage2 changes remain uncommitted at this checkpoint.",
+  "final_benchmark_inference_runs": 0,
+  "training_runs": 0,
+  "remaining_work": [
+    "Audit snapshot07 and reconcile provisional duplicate reservations.",
+    "At least1000 independent test plus150 dev; substantive numeric/multi-evidence/refusal coverage still far below protocol targets.",
+    "Complete content/currency/rights/history review, enforce document/source splits and freeze input hashes before final evaluation."
+  ],
+  "limits": [
+    "No claim of foundation-pretraining independence.",
+    "No denied path or blocked-source bypass.",
+    "No merge, production deployment, resume edit, raw-source publication or model-weight upload."
+  ]
+}

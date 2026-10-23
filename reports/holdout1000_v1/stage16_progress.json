@@ -1,0 +1,98 @@
+{
+  "created_utc": "2026-10-05T20:52:21.709518+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 280,
+    "dev": 42
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 11,
+    "retained": 9,
+    "held": 2,
+    "retained_tasks": {
+      "numerical_calculation": 4,
+      "insufficient_evidence": 2,
+      "ordinary_qa": 2,
+      "multi_evidence": 1
+    },
+    "content_holds_despite_no_automated_flags": 2,
+    "prior_revocations": 0
+  },
+  "test_task_counts": {
+    "ordinary_qa": 206,
+    "insufficient_evidence": 18,
+    "multi_evidence": 28,
+    "numerical_calculation": 28
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 9,
+    "multi_evidence": 6,
+    "numerical_calculation": 6
+  },
+  "test_document_families": 101,
+  "new_source_family_groups": 3,
+  "net_new_families": 2,
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "dev_task_count_below_target:insufficient_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "new_history_flags": 0,
+    "new_semantic_pair_flags": 0,
+    "changed_active_neighbors_reviewed": 10
+  },
+  "usage": {
+    "base_report_sha256": "081c03633974f775faf16a253fd88d3ebb7bca0db195df7b92b22d9ae9427637",
+    "base_candidates_sha256": "bdf8a7922c57cc5188fc98415cbbb8c3e484eaf56974553af5de2f008b48141c",
+    "new_candidates_sha256": "121ea82be919b97a351ee9db3c9b0e94fed6b4a3c7bc90c45415a86c17458f1d",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2570,
+    "old_old_pairs_reused": 659,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 11,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "93bf55db2a639c986fba51255c05ac3c263407f9d28aa3f757b344bf185756af",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 286.33646199991927,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage16_source_decisions.json": "47f81836623a61a578cd679edb8105dda7b00bf15f0f67884c50fcb3a198eb9c",
+    "stage16_final_review.json": "cb53164c75832ee785e5c6a705d7ad7a57af5ab2f7e569b1e481d9510275e2bf",
+    "review_pool_19_clearance_ledger.json": "570a084345f7b66b0a8defe8b9d4684ee4948e16750660d92f1cac12e5451a0c",
+    "provisional_item_pool_19.jsonl": "9c32ea95d8aad443fda36cb563226efafd2cab6612f5353d6d4090001b31e095",
+    "provisional_item_pool_19_validation.json": "9b65952849d2b710e701163d51d9eabf5b7338d103b2097ada4642203746b94d"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 394,
+    "numerical_calculation": 122,
+    "multi_evidence": 122,
+    "insufficient_evidence": 82
+  },
+  "limits": [
+    "Still720TESTshort of1000minimum;DEV8short andtaskquotasunmet.",
+    "No freeze,finalinference,tuning,merge,rawsource/item/weightupload.",
+    "Prior15historicalrevocations,allsourceholds andnew2itemholdspreserved.",
+    "Priorpublished dfa65c0CI endedfailure:3pass/2cancelledbeforesteps;rerun403notbypassed."
+  ]
+}

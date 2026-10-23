@@ -1,0 +1,99 @@
+{
+  "created_utc": "2026-10-07T21:18:38.334079+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 664,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 0,
+    "retained": 0,
+    "held": 0,
+    "previous_items_revoked": 5
+  },
+  "prior_checkpoint": "stage103_progress.json:669TEST/58DEV/145families",
+  "test_task_counts": {
+    "ordinary_qa": 427,
+    "insufficient_evidence": 56,
+    "multi_evidence": 88,
+    "numerical_calculation": 93
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 144,
+  "publisher_counts": {
+    "northcarolina_doi": 23,
+    "canada_fcac": 20,
+    "newyork_dfs": 49,
+    "california_cdi": 45,
+    "wisconsin_oci": 52,
+    "utah_uid": 12,
+    "us_opm": 102,
+    "us_va": 41,
+    "us_tricare": 116,
+    "newjersey_dobi": 36,
+    "alberta_goa": 36,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ]
+  },
+  "usage": {
+    "new_candidate_vectors_encoded": 0,
+    "local_model_processes": 0,
+    "forward_batches": 0,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "new_source_requests": 0,
+    "new_source_bytes": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0
+  },
+  "evidence_sha256": {
+    "stage107_source_decisions.json": "9339deb72b17282f45e0a7c85bd45b3b54318d168d2c419d3099c8cd07f531b9",
+    "stage107_final_review.json": "c9c96f339887a25faa97a61b4f6529a4fad0a686246b8022b9a75af6fc5ef3f9",
+    "review_pool_89_clearance_ledger.json": "64ae19be7033e85b4e481374e008c8d4e0e8d2a17f5b1ed11590d710aac50467",
+    "provisional_item_pool_89.jsonl": "80bd4e7c66ad99e34ca5f10524f45c59b375a4ae5894cfd588387feb65a96d27",
+    "provisional_item_pool_89_validation.json": "331fed549ce7b9aad5959a55deff80f138a382cc26fcd9aa772a0e892eb3b602"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 173,
+    "numerical_calculation": 57,
+    "multi_evidence": 62,
+    "insufficient_evidence": 44
+  },
+  "pbgc_dependency_audit": {
+    "retained_items_checked": 727,
+    "evidence_documents_checked": 231,
+    "hits": 0,
+    "revocations_required": 0,
+    "private_report_sha256": "9b5d6edffdaaab01969049c3c64c455ac6c6bc59161744b2f53283a4babe8af2"
+  },
+  "limits": [
+    "336independentTESTstillneeded;DEVminimamet;accepted0/notfrozen.",
+    "FivepriorTESTheldafter newlyresolved NYsurprisebill/healthrights sourcefamily closure exceedsunchanged20cap;all25affectedQAsread.",
+    "No newdrafts,models,sourceHTTP orpaidservices. PBGC permissionhold preserved.",
+    "Partial historical and gapreview is notfullcorpus contentclearance; noquestions authored fromthose prospects."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-07T15:34:14.093271+00:00",
+  "status": "SOURCE_ONLY_NO_NEW_ITEMS",
+  "source_review_record_sha256": "6ce7313b25242822299d0217f8b212549b4de0b4deda383c5f52c2b5928416ff",
+  "sources_reviewed": 2,
+  "new_candidates": 0,
+  "new_source_requests": 0,
+  "local_model_processes": 0,
+  "accepted_test_items": 0,
+  "frozen": false,
+  "note": "Historical source URL exposure prevents use of one cached guide; another awaits related-source family review. Earlier third-party and source-alias holds remain. No question count increase."
+}

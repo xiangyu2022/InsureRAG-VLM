@@ -1,0 +1,165 @@
+{
+  "created_utc": "2026-10-16T22:50:45.636284+00:00",
+  "status": "CONSTRUCTION_AND_GLOBAL_REVIEW_CONTINUE",
+  "provisional_item_gate_counts": {
+    "test": 986,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 594,
+    "insufficient_evidence": 95,
+    "multi_evidence": 147,
+    "numerical_calculation": 150
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 181,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 51,
+    "california_cdi": 50,
+    "wisconsin_oci": 63,
+    "utah_uid": 16,
+    "us_opm": 118,
+    "us_va": 41,
+    "us_tricare": 137,
+    "newjersey_dobi": 41,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 44,
+    "canada_esdc_ei": 101,
+    "newjersey_labor_leave": 8,
+    "canada_vac": 27,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 16
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 6,
+    "numerical_calculation": 0,
+    "multi_evidence": 3,
+    "insufficient_evidence": 5
+  },
+  "remaining_independent_test": 14,
+  "pool_version": 135,
+  "admitted_global_candidate_version": 134,
+  "source_snapshot": 33,
+  "corpus_preparation": {
+    "documents": 1426,
+    "include": 590,
+    "exclude": 358,
+    "pending": 478,
+    "partial_chunks": 1092
+  },
+  "all_test_declared_span_mapping": {
+    "complete": 544,
+    "pending": 442
+  },
+  "dev_support_review": {
+    "items": 57,
+    "declared_spans": 75,
+    "answerable": 46,
+    "refusals": 11,
+    "necessary_units": 61,
+    "reviewed_Spanish_aliases": 19,
+    "global_clearance_complete": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "changes": {
+    "reviewed_drafts": 10,
+    "new_TEST_retained": 9,
+    "new_draft_held": 1,
+    "existing_TEST_revoked_for_provider_regulatory_scope": 1,
+    "net_TEST_increase": 8,
+    "source_bodies_fully_reviewed": 24,
+    "source_decisions": {
+      "include": 18,
+      "exclude": 4,
+      "pending": 2
+    },
+    "additional_unreviewed_drafts_not_counted": 14,
+    "DEV_texts_changed": 0,
+    "new_DEV_support_aliases": 0
+  },
+  "review_evidence": {
+    "targeted_history_records_fully_read": 51,
+    "focused_history_records": 131,
+    "reverse_focused_history_records": 7,
+    "focused_review": "All matching windows were read; no claim of reading whole long records.",
+    "unique_neighbor_and_changed_candidate_QAs_read": 92,
+    "additional_same_family_IRB_QAs_read": 14,
+    "prior_ledger_chain_verified": true,
+    "global_review_complete": false
+  },
+  "validation": {
+    "focused_tests_passed": 82,
+    "explicit_top_level_test_files": 4,
+    "retained_item_errors": 0,
+    "latest_full_code_regression": {
+      "commit": "114bf4119b5f87a184c635b9ed1f96d5ccccc50f",
+      "tests": 632,
+      "subtests": 58,
+      "explicit_files": 60
+    },
+    "global_dataset_gates_passed": false,
+    "log_sha256": "7f051a4d84d5197fff7d6d9e7bee5a64ef93dbc3964c1d9b953c832efc6a7b14"
+  },
+  "usage": {
+    "scope": "Admitted ten-draft stage353 audit; separate stage362 fourteen-draft audit remains uncounted",
+    "new_question_vectors": 10,
+    "model_forward_batches": 1,
+    "old_candidate_vectors_reused": 3474,
+    "history_vectors_reused": 44581,
+    "source_network_calls": 0,
+    "external_model_API_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_queries": 0,
+    "actual_TEST_queries": 0,
+    "subagents": 0,
+    "remaining_quota": "not observable"
+  },
+  "limits": [
+    "14 independent TEST and all global source/alias/family/history/DEV gates remain.",
+    "All inherited holds and revocations remain; provider financial-admission question revoked for consumer-scope mismatch.",
+    "Source inclusion restores no held QA.",
+    "No actual DEV/TEST evaluation, configuration selection, selection lock or freeze. Local generation service unavailable at last check.",
+    "Single sequential Codex content review, not human/expert review. No raw corpus, individual QA or weights published.",
+    "Agent scaffold is separate from the frozen-baseline protocol and is unchanged in this checkpoint."
+  ],
+  "evidence_sha256": {
+    "stage357_final_review.json": "4fccdfd3283ba1f9faa05cf00052326cf839203ca4840fd6bb4a53a659e6363f",
+    "stage357_summary.json": "90245f7a7364812db8a3e5bd241e03cf217f95181a5938da98e43c2a08533fbc",
+    "stage358_source_disposition_review.json": "6d15098fb227381250528dfba0b5a1a90f7dbac66eea8fcafadf2d2df2bfb8d7",
+    "stage358_corpus_mapping_summary.json": "3fa069989349ae6d2955490df8fedf02483990eddb32e099f6a4de9eb5703b87",
+    "stage361_scope_review.json": "02e6a8bb582efcbb761178354132d372ecb50412bbe12af7b9a2aed90ef67f80",
+    "stage361_summary.json": "7a6531e6b8be3ab5b43a7a988495365a65c842afb543eb4cfa7fe4c136eba172",
+    "stage361_dev_readiness.json": "7a8416f8b3ebee1de009c3f662db39ff04584d15b1ce6d25e8f48a5c765c6b54",
+    "provisional_item_pool_135_validation.json": "ad5a7fd8874e170eb6527e48b69eaad7b04d20e533239c1afea1a5c2ee8bc92e"
+  }
+}

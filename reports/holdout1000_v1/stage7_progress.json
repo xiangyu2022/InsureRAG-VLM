@@ -1,0 +1,170 @@
+{
+  "created_utc": "2026-10-04T20:37:49.934128+00:00",
+  "status": "CONSTRUCTION_IN_PROGRESS_NOT_ACCEPTED_BENCHMARK",
+  "supersedes_current_counts_in": "stage6_progress.json; immutable historical checkpoint, not additive acceptance",
+  "previous_published_commit": "a0b04b99e6820475724978ff38d2f9f65fb032af",
+  "previous_exact_commit_ci": {
+    "run_id": 37229942855,
+    "conclusion": "success",
+    "matrix": "Windows/Ubuntu x Python3.11/3.12; no-key smoke"
+  },
+  "provisional_item_gate_counts": {
+    "test": 210,
+    "dev": 40,
+    "total": 250
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "training_runs_this_construction": 0,
+  "final_qa_inference_runs": 0,
+  "current_validation_errors": [
+    "test_count_below_target",
+    "dev_count_below_target",
+    "too_few_document_groups",
+    "dev_task_count_below_target:numerical_calculation",
+    "dev_task_count_below_target:multi_evidence",
+    "dev_task_count_below_target:insufficient_evidence",
+    "task_count_below_target:ordinary_qa",
+    "task_count_below_target:numerical_calculation",
+    "task_count_below_target:multi_evidence",
+    "task_count_below_target:insufficient_evidence"
+  ],
+  "item_errors": {},
+  "test_task_counts": {
+    "ordinary_qa": 158,
+    "insufficient_evidence": 12,
+    "multi_evidence": 22,
+    "numerical_calculation": 18
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 9,
+    "multi_evidence": 6,
+    "numerical_calculation": 4
+  },
+  "test_publishers": {
+    "northcarolina_doi": 7,
+    "canada_fcac": 10,
+    "newyork_dfs": 40,
+    "california_cdi": 15,
+    "wisconsin_oci": 10,
+    "utah_uid": 6,
+    "us_opm": 29,
+    "us_va": 24,
+    "us_tricare": 29,
+    "newjersey_dobi": 25,
+    "alberta_goa": 11,
+    "australia_apra": 2,
+    "alabama_doi": 2
+  },
+  "test_document_families": 84,
+  "review_dispositions": {
+    "original15_disputed_test_items": "All held/revoked in stage5; none awaiting disposition or included in current pool.",
+    "prior_multi_necessity_or_consumer_scope_revocations": {
+      "test": 11,
+      "dev": 1,
+      "same_id_repairs_subsequently_restored": 2
+    },
+    "batch10": {
+      "input": 32,
+      "retained": 32,
+      "historical_numeric_table_near_flag": 1,
+      "flag_disposition": "Full hash-bound historical text contains unrelated numerical ranges; explicit lexical false-positive decision retained alongside original flag. Threshold unchanged."
+    },
+    "batch11": {
+      "input": 11,
+      "retained": 8,
+      "held": 3,
+      "same_id_repairs": 2,
+      "same_id_repairs_counted_as_new_questions": 0,
+      "hold_reasons": [
+        "Historical family-psychotherapy information core",
+        "Historical family-daycare liability minimum with numerical wrapping",
+        "Towing-regulator question outside policy/coverage/claim scope"
+      ]
+    },
+    "batch12": {
+      "input": 2,
+      "retained": 2,
+      "held": 0,
+      "publisher": "alabama_doi"
+    },
+    "reviewer": "Codex agents with root review; not human or insurance-expert adjudication"
+  },
+  "registry_counts": {
+    "document_holds": 101,
+    "reviewed_family_groups": 54
+  },
+  "provisional_corpus": {
+    "snapshot": "extraction_batch_09",
+    "documents": 1277,
+    "source_faq_candidates": 2036,
+    "pdf_addition": "One official blank two-page NY form with explicit page offsets and raw/text hashes; grouped with existing healthcare-rights family."
+  },
+  "new_source_acquisition": {
+    "publisher": "au_privatehealth_ombudsman",
+    "pages": 25,
+    "blocked": null,
+    "queue_remaining": 0,
+    "terms_sha256": "6a944c7388ec291857b20ba5dda7392761d7c61adce59a637bc1143a74a51c0f",
+    "accepted_items": 0,
+    "scope": "Approved static government prose for local noncommercial research; third-party insurer/PHIS content and dynamic services excluded. Acquired pages are not accepted questions."
+  },
+  "verification": {
+    "full_unit_suite": {
+      "passed": 460,
+      "skipped": 6,
+      "subtests_passed": 58,
+      "seconds": 11.72
+    },
+    "focused_acquisition_tests": 29,
+    "access_controls": [
+      "Conservative union of named AI robot and wildcard restrictions",
+      "Initial, redirect and cached-final URL guards",
+      "Maximum applicable crawl delay",
+      "Separate approved terms host without content-scope expansion",
+      "Required terms hash match",
+      "Stop a source on network or parser acquisition errors"
+    ],
+    "item_gates": "pass; dataset size/task/family gates remain unmet"
+  },
+  "publication": {
+    "destination": "Existing draft PR8; no merge",
+    "contents": "Code, tests and aggregate reports only; no source bodies, Q/A/evidence text or weights",
+    "pr_description": "Existing integration403 remains blocked; no alternative write channel used"
+  },
+  "limits": [
+    "1000test and50dev minimums plus all coverage gates remain unmet; no final benchmark or model-quality gain is established.",
+    "New sources and candidates require complete content/history/family audits; source access approval alone gives no quality clearance.",
+    "Known denied local paths, unextracted historical PDFs and foundation-model pretraining remain outside accessible audit.",
+    "Zero automatic flags, full-window containment and top3 neighbor review do not prove exhaustive semantic independence."
+  ],
+  "evidence_sha256": {
+    "provisional_item_pool_10.jsonl": "1b4fc00ac72df4bb193837f0527221d6f1783cb9cdda8c42ce14a8b76835b014",
+    "provisional_item_pool_10_validation.json": "88c08ecaf1c296318462107b0a3fd2afe349935e9a4289661a9cffa7354985f0",
+    "review_pool_10_clearance_ledger.json": "139bbdc4482755faff6ef333cf6373e3f297d0cd87ffafa1808bd52d26a956b9",
+    "agent_sem12_summary.json": "ecd46c50f275fe4e4d518f67a92878169c6f9a6e1217d69f7c80399c79e2aa8d",
+    "agent_pool09_clue_family_scope_review01.json": "6a23676c3ae0c14f93d28dbe6a6e3ed21031581c97237f05a38a9dd3ccb31ee5",
+    "stage7_opm07_family_merge.json": "a17b4c9f7505d3d17547a100949547ee1887e95b0e7415ecee7203652450f266",
+    "stage7_alabama06_hold_merge.json": "f629a82bcd4a0a3dcddba4ac68d3560f606a53077db9fb34c9ef054f8e0901bb",
+    "provisional_item_pool_09.jsonl": "85519f3de7be4f0ea83628fb0837d940b75056e26a476aadd62c29e57550fec1",
+    "provisional_item_pool_09_validation.json": "71b8f6a42359bac8ab5ad12a450f2a772a03ac04cf3cf1350feaeb99749a5ac6",
+    "review_pool_09_clearance_ledger.json": "8187bb6f63cab50396bc41573553e20cfca07570f51ffcbb453e3ddfc1b6227b",
+    "review_pool_08_clearance_ledger.json": "3b04f62faf5c441bd6aac415ec1621dae4231286dbb5b65ddba1924fa3a62646",
+    "stage7_prior_clearance_revocations.json": "bf5772b17b04de2582652ce9d51013aa5b4c792060a3aeebc28dd74330b69563",
+    "agent_pool07_multi_scope_review.json": "5f46dba7f1f4357ed3cfdfaa8e6d8a8c8b3b3d712b07e68f87d6e309e6dd3c14",
+    "agent_sem10_a_summary.json": "d0a57d2b21eec3e3e1593b3df2886aedd8ebd1bb8f6532b23fab7bed285dadcd",
+    "agent_sem10_b_summary_v2.json": "7fc237791eadf39c569be67b9def58c0022075228be8848a6d6361b2415a8864",
+    "agent_sem11_summary.json": "abee04e11ca025fd303830c256b9b670d7a8d2fb3deee9409f5a65ef1c3d615d",
+    "root_batch10_near_false_positive01.json": "85da83400bf7313a2e70fe435e4044fc8012e69a1462b4fbf026e80624a1fae6",
+    "root_snapshot09_old_refusal_delta01.json": "9fb7f3496c4b2cc3088405be909a370db60703d8214f53490c31c4366f9b3347",
+    "agent_new_sources08_rights_completion.json": "7f6ccb49f086dc2fd7c5df7848c76c70dd28b3b12ce685b183a4ba00e71cd742"
+  },
+  "public_registry_sha256": {
+    "document_holds.json": "bc2f6e346d68222086dbfef53b82f695f34ef4cf1e35ae88148cd815b95a62f7",
+    "document_families.json": "0eb608e13889d7fcad8141bc71535cbbae1fb55be3b7095c95bce34a7212db6d",
+    "source_approvals.json": "82b648d2390c056ab9a7bd068228a6edb67aae6c14db7f9884792fd6daeeb125",
+    "protocol.json": "0039135884ead8091d3b8be849ebb472c2295862d9a8280711cc51550587074e"
+  }
+}

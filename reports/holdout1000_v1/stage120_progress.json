@@ -1,0 +1,107 @@
+{
+  "created_utc": "2026-10-16T00:42:29.246184+00:00",
+  "status": "CONSTRUCTION_AND_EXPERIMENT_PREPARATION_CHECKPOINT_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 748,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_document_families": 149,
+  "prior_published_counts": {
+    "test": 722,
+    "dev": 58
+  },
+  "trial": {
+    "drafts": 29,
+    "new_retained_test": 26,
+    "new_held": 3,
+    "prior_test_revoked": 0,
+    "net_test": 26
+  },
+  "test_task_counts": {
+    "ordinary_qa": 468,
+    "insufficient_evidence": 63,
+    "multi_evidence": 105,
+    "numerical_calculation": 112
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 132,
+    "numerical_calculation": 38,
+    "multi_evidence": 45,
+    "insufficient_evidence": 37
+  },
+  "remaining_independent_test": 252,
+  "usage": {
+    "new_candidate_vectors_encoded": 29,
+    "local_model_processes": 2,
+    "forward_batches": 3,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "new_source_requests_this_resume": 0,
+    "new_source_bytes_this_resume": 0,
+    "browser_discovery_calls_this_resume": 0,
+    "prior_oct7_ei_source_requests": 14,
+    "prior_oct7_ei_source_bytes": 453735
+  },
+  "verification": {
+    "retained_item_gates_pass": true,
+    "global_gates_pass": false,
+    "ledger_links": 96,
+    "split_isolation": true,
+    "family_cap": 20,
+    "publisher_cap": 0.2,
+    "prior_revocations_preserved": true,
+    "same_id_repairs_unchanged": 3,
+    "unchanged_vectors_reused": true,
+    "pbgc_retained_dependency_hits": 0,
+    "offline_tests_passed": 487,
+    "offline_subtests_passed": 58,
+    "offline_seconds": 12.38
+  },
+  "evidence_sha256": {
+    "provisional_item_pool_96.jsonl": "128b5efd33522b07191db234fde598376e55786894ed672c85cd4afea940b17a",
+    "review_pool_96_clearance_ledger.json": "86ee987427282a3d8916c4cb4a0d8df8a5b701aefd313e9942c34d191aaac572",
+    "provisional_item_pool_96_validation.json": "d1251101f3b22182d53de9297527d480828f527a9442e035209fa22e91a618e7",
+    "stage120_pbgc_dependency_check.json": "31c3297c3a2a9582877c7fe13c8814a13edac25b51b5bfb02a909c236f767beb",
+    "stage120_cpu_tests.log": "8b7fb1705b62daf4513f3072b510f5cfcd98e44366f0c730f7342a852924fb99",
+    "stage120_runtime_preflight.json": "a4aeaaf4b0172fd0c0be9c1efb3a5d577b66317e86a9ae5a56dca1b8a41ce7c5"
+  },
+  "experiment_preparation": {
+    "protocol": "evaluation_protocol_v1.json",
+    "protocol_sha256": "a9905d15a8aae7c47c4453fc94dee76fae2da44cef62194e9c382a92f24a22bf",
+    "registered_retrieval_arms": 6,
+    "dev_selection_locked": false,
+    "source_only_corpus_and_relevance_mapping_complete": false,
+    "metric_helpers_tested": true,
+    "baseline_and_adapted_query_and_reranker_weights_verified": true,
+    "real_generation_runtime_verified": false,
+    "new_dev_comparisons": 0,
+    "new_test_inference": 0,
+    "final_metrics_available": false
+  },
+  "blockers": [
+    "Usual Ollama executable and Qwen manifest absent; loopback11434/11437 timed out in unsandboxed read-only probes. Current installation path or endpoint needed; no automatic download/substitution.",
+    "252 independent TEST and existing per-task targets still needed. No claim that cached sources are exhausted.",
+    "Source-only corpus inclusion/chunk relevance mapping and DEV selection lock remain unfinished."
+  ],
+  "limits": [
+    "Single sequential Codex content review, not human/expert adjudication.",
+    "All prior holds remain, including15 original revocations; no acceptance/freeze/final evaluation.",
+    "Accessible historical scope only; no claim of unknown pretraining absence.",
+    "29 new vectors in two sequential local model processes/three forwards; zero new source HTTP this resume. Oct7 EI acquisition is historical accounting, not new network use.",
+    "Public commits contain code, synthetic tests, protocols, aggregates and source metadata only. Raw sources, per-question records and weights remain local.",
+    "FSCS remains robots/homepage preflight only: no terms approval, new acquisition or questions.",
+    "No paid API, download, subagent, training or TEST-driven tuning."
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "created_utc": "2026-10-20T19:29:08.479211+00:00",
+  "status": "ELIGIBLE_CACHE_SUPPORT_REVIEW_COMPLETE_GLOBAL_ACCEPTANCE_BLOCKED",
+  "reviewer_type": "Single sequential Codex content review,not human or expert",
+  "pool": 171,
+  "snapshot": 36,
+  "source_version": 725,
+  "global_candidates_version": 151,
+  "test_provisional": 999,
+  "dev_provisional": 57,
+  "test_families": 186,
+  "accepted_test": 0,
+  "accepted_dev": 0,
+  "frozen": false,
+  "test_tasks": {
+    "ordinary_qa": 599,
+    "numerical_calculation": 150,
+    "multi_evidence": 150,
+    "insufficient_evidence": 100
+  },
+  "target_test_tasks": {
+    "ordinary_qa": 600,
+    "numerical_calculation": 150,
+    "multi_evidence": 150,
+    "insufficient_evidence": 100
+  },
+  "coverage_shortfall": {
+    "ordinary_qa": 1
+  },
+  "coverage_validation_errors": [
+    "test_count_below_target",
+    "task_count_below_target:ordinary_qa"
+  ],
+  "item_errors": {},
+  "declared_mapping": {
+    "complete": 888,
+    "pending": 111,
+    "pending_sources": 24,
+    "version": 737
+  },
+  "necessary_support": {
+    "annotated_items": 858,
+    "answerable_items": 771,
+    "necessary_units": 1031,
+    "refusal_diagnostics": 87,
+    "remaining_items": 141,
+    "currently_eligible_remaining": 0,
+    "version": 768,
+    "global_alias_clearance": false,
+    "whole_TEST_clearance": false
+  },
+  "cross_tab": {
+    "mapped_annotated": 858,
+    "mapped_unannotated_open_issue_blocked": 30,
+    "unmapped_unannotated": 111
+  },
+  "reconciliation": {
+    "previous_stage732": {
+      "TEST_denominator": 995,
+      "pool": 170,
+      "mapped": 884,
+      "pending_mapping": 111,
+      "support_annotated": 310,
+      "support_remaining": 685
+    },
+    "TEST_added": 4,
+    "TEST_removed": 0,
+    "support_annotations_added": 548,
+    "necessary_units_added": 612,
+    "refusal_diagnostics_added": 56,
+    "old310annotations_unchanged": true,
+    "prior995TESTand57DEV_content_unchanged": true,
+    "interpretation": "Mapping gained4newTESTitems;111oldmappinggaps unchanged. Support gained548items.30mapped items on8included sources remain blocked by open consistency/temporal/alias issues. Earlier123and790counts describe different layers,not progress regression."
+  },
+  "candidate_review": {
+    "previous5drafts_disposed": 5,
+    "new_TEST_retained": 4,
+    "new_historical_mechanism_hold": 1,
+    "fully_reviewed_unselected_reserves": 0,
+    "old_family_cap_deferred_drafts": 3,
+    "additional_walkin_candidate_not_selected_due_to_temporary_closure_banner": true,
+    "old_withdrawals_restored": 0,
+    "quotas_or_thresholds_relaxed": false,
+    "old_natural_hazard_temporal_ambiguity_withdrawal_preserved": true
+  },
+  "sources": {
+    "include": 796,
+    "exclude": 606,
+    "pending": 24,
+    "open_issues": 22,
+    "total_issue_records": 69,
+    "resolved_by_exclusion": 47,
+    "source_only_chunks": 4078,
+    "included_sources_with30blocked_items": 8,
+    "source_snapshot_and_chunks_unchanged": true,
+    "previously_known_OPM_terms_scope_blocks": 7,
+    "blocked_OPM_retries": 0,
+    "all_remaining_issues_are_access_failures": false
+  },
+  "checks": {
+    "ledger_links": 171,
+    "effective_item_holds": 452,
+    "active_held_items": 0,
+    "active_semantic_pairs": 61,
+    "support_spans_structurally_verified": 1202,
+    "alternative_chunk_sets_structurally_verified": 1078,
+    "verified_nonessential_context_records": 3,
+    "stage750_cached_validation_items_reused": 514,
+    "new_items_validated_after_stage750": 344,
+    "current_report_bindings_verified": true
+  },
+  "tests": {
+    "passed": 102,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 0.452,
+    "modules": [
+      "test_holdout_source_urls.py",
+      "test_holdout_authoring_preflight.py",
+      "test_holdout_source_state.py",
+      "test_holdout_quality.py",
+      "test_holdout_corpus.py",
+      "test_holdout_dev_runner.py",
+      "test_holdout_pdf_layout.py"
+    ],
+    "scope": "Seven explicitly named modules only;no full test-tree traversal",
+    "production_code_unchanged_from": "bebf977409b254692ddf7642fee481f1a6fe5830"
+  },
+  "usage": {
+    "new_candidate_vectors": 5,
+    "embedding_forward_batches": 1,
+    "old_candidate_vectors_reused": 3541,
+    "historical_vectors_reused": 44581,
+    "generation_calls": 0,
+    "paid_API_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0,
+    "training": 0,
+    "subagents": 0,
+    "new_source_fetches": 0,
+    "full_historical_rescan": false,
+    "bounded_linked_history_review": "Two previously inventoried benchmark files verified;13linkedgoldanswers inspected for7nearestquestions. One draftheld despite subthreshold similarities.",
+    "publication_batches": 1
+  },
+  "previous_exact_commit_CI": {
+    "commit": "bebf977409b254692ddf7642fee481f1a6fe5830",
+    "run_id": 39474519571,
+    "all5passed": true
+  },
+  "evidence_sha256": {
+    "stage735_linked_history_answers.json": "bfbe6f5570fa60a5a18157c723e1694a5f1acc09d24caf5479a7a5e4364dc383",
+    "stage736_content_review.json": "410c9f22d419c667e2fc3def79df8e258589d0810e92578f6d53689f656acf2a",
+    "stage737_global_preflight.json": "8a6f832d5b4f11f7ee111ed5f498278c8e4f49d4b2110e369b0bd1e92b56835d",
+    "stage737_pair_review_rebind.json": "93f2bffae715d03940e90f37c217fc4978d7ee166c21bf747bae402813500d96",
+    "stage737_all_test_declared_span_mapping.json": "2a07a4a7639b2c508542c3e84d541702484f4735ba2094bcce38b74ad9592c6b",
+    "stage768_test_support_units_draft.json": "b08b885f7ce7187a604486295e38a73035ed2a2b788d88ee97fdd08383825a1d",
+    "stage769_support_mapping_validation.json": "baaac1d6da34d1a276cb3500c007ef5e023847ba5a79a7c631f2d12f2b62b2dd",
+    "stage769_remaining_source_gates.json": "6e709b18d69eb98404932e550169f39a1a9f4d9b80a8e12adbb9055b8cd17c0c",
+    "stage743_existing_candidate_precheck_v2.json": "c3493a5c9808df0a25fae94a21f29000e5fb7dc879a90ab243a39021ba5be92f",
+    "stage770_test_receipt.json": "a2b80cbedaa0b0e0d8daae6b676d0b5f2a81ce02503ff46ea14a9c5ed236653c"
+  },
+  "remaining": [
+    "Reconcile whole-source scope, temporal exceptions and semantic aliases for8included sources/30mappeditems. These are substantive review gates,not all external-access failures.",
+    "Resolve24pending sources/111unmappeditems including7knownOPMterms-scope accessblocks;do not retryunchangedguards.",
+    "Find1independentordinaryTESTcandidate underunchanged600/150/150/100quota;no acceptedreserve remains.",
+    "Completeglobalalias/family/history/legacy and finalacceptance checks beforefreeze.",
+    "Realmodelgeneration remains blocked by unavailableOllama;no paidAPI/download."
+  ]
+}

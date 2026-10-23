@@ -1,0 +1,33 @@
+{
+  "scope": "Incremental page v2 ingestion and provenance through hybrid, Chroma, MCP and review Agent",
+  "final_targeted_tests": {
+    "tests": "64",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "107.627"
+  },
+  "final_command": "python -m pytest tests/test_page_ingest.py tests/test_agent_mcp.py tests/test_agent_graph.py -q",
+  "prior_broader_regression": {
+    "tests_passed": 114,
+    "subtests_passed": 8,
+    "seconds": 117,
+    "scope": "ingestion, Chroma, snapshot, Agent, upload, app serving and hybrid; before final Unicode-output and pending-summary fixes"
+  },
+  "counts_are_overlapping_not_additive": true,
+  "real_native_cache_smoke": "native_cache_smoke.json",
+  "visual_recognition_quality_validated": false,
+  "controller_quality_validated": false,
+  "formal_test_dev_changed": false,
+  "holdout_provisional_test": 1000,
+  "holdout_provisional_dev": 57,
+  "holdout_accepted": 0,
+  "holdout_frozen": false,
+  "limitations": [
+    "Existing Ollama socket access error 10013 not retried; real vision quality unverified.",
+    "Historical DOL applicability not revalidated.",
+    "Structural semantic boundaries and page-route heuristics require review.",
+    "No automatic migration of old collections; isolate schema 2.",
+    "No external MCP client registration, merge or deployment."
+  ]
+}

@@ -2,6 +2,23 @@
 
 A local research prototype for citation-grounded insurance document QA. The current verified serving target is **Qwen3.5-4B through Ollama**, with hybrid retrieval, page-level evidence, explicit abstention, and an optional image-QA API.
 
+The [LangGraph Agent prototype](docs/AGENT_LANGGRAPH.md) adds durable SQLite
+checkpoints and mandatory, version-bound human approval before answer release.
+Its current validation uses synthetic fixtures; the local generation runtime
+was unavailable in the October 20 check. The separate 1,000-question holdout is
+still provisional, **accepted=0 and not frozen**.
+
+The [local Chroma knowledge service](docs/CHROMA_MCP.md) adds persistent clause
+storage and two read-only MCP stdio tools: `search_clauses` and `read_evidence`.
+It preserves provenance, supports BM25 fusion and legacy vector migration, and
+defaults explicitly to the 512-dimensional local-hashing baseline (not BGE).
+Existing historical/UI entry points remain compatible. No external MCP client
+is registered by this change.
+The explicit `python main.py knowledge-search` route now uses Chroma. A local
+16-document DOL historical snapshot has been imported as 303 provenance-bound
+chunks and verified through real MCP calls and process restarts; see the guide
+for the exact collection, source scope and command.
+
 ## Research snapshot and evaluation scope
 
 The [October 3 research release](https://github.com/xiangyu2022/InsureRAG-VLM/releases/tag/research-prototype-2026-10-03)
@@ -443,3 +460,5 @@ adds frozen publisher splits, historical overlap checks and raw-versus-served
 diagnostics. No candidate was promoted: test publisher-macro retention rose while
 both arms retained 20/37 complete answers, its two-publisher interval crossed zero,
 and served answer coverage declined. It does not establish an end-to-end gain.
+
+Strict page ingestion is documented in [PAGE_INGEST_V2](docs/PAGE_INGEST_V2.md): page-first semantic structure, typed metadata, contextual retrieval, and isolated schema-v2 Chroma migration.

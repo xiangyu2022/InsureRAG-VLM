@@ -1,0 +1,90 @@
+{
+  "created_utc": "2026-10-05T20:04:25.665667+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 265,
+    "dev": 42
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 4,
+    "retained": 1,
+    "held": 3,
+    "hold_reasons": [
+      "numeric temporal applicability",
+      "refusal question directly answered as public-rule QA",
+      "redundant multi-evidence"
+    ],
+    "prior_revocations": 0
+  },
+  "test_task_counts": {
+    "ordinary_qa": 202,
+    "insufficient_evidence": 14,
+    "multi_evidence": 26,
+    "numerical_calculation": 23
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 9,
+    "multi_evidence": 6,
+    "numerical_calculation": 6
+  },
+  "test_document_families": 99,
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "too_few_document_groups",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "dev_task_count_below_target:insufficient_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "targeted_tests": {
+      "passed": 29,
+      "seconds": 0.25,
+      "scope": "Existing quality-gate and containment tests run during stage15 resumption"
+    }
+  },
+  "usage": {
+    "new_model_runs_this_resumption": 0,
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "prior_completed_incremental_audit": {
+      "base_report_sha256": "9bc42efd4d9d2776dbbb17e2a5cca1af1a02d6fb91b2ef9fa2d0604e62933d48",
+      "base_candidates_sha256": "2b0f057cf7df028d96f986444c0674757548353d1d1c7c65f7dd2f10cc2da755",
+      "new_candidates_sha256": "5a15d91cbdda99fd90c153c6132b1414367f9129b71bc2f59ccbcd52697845f6",
+      "history_embeddings_reused": 44581,
+      "old_history_audit_rows_reused": 2560,
+      "old_old_pairs_reused": 657,
+      "candidate_vectors_bootstrapped_once": 0,
+      "new_candidate_vectors_encoded": 4,
+      "local_model_processes": 1,
+      "forward_batches": 1,
+      "external_model_api_calls": 0,
+      "model_downloads": 0,
+      "training_runs": 0,
+      "cache_manifest_sha256": "587a0ac974afa4d97d6f209cc9bd6a028bfbb6d755abd967448274f6caafcaba",
+      "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed."
+    },
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage14_final_review.json": "84f4d74ea47f97522156b0f2b3f88b4b4dbf33803097b43f0a35df702fa0b1bf",
+    "review_pool_17_clearance_ledger.json": "78e8293b63c94bb0772b439a91426f284e4e5dc7e2108b05a8f7b9bc3c5d4da3",
+    "provisional_item_pool_17.jsonl": "25da6a10c3286fdb7f16f9d432dd9eb12c244085bef8c2adecffe86ef788ac66",
+    "provisional_item_pool_17_validation.json": "8d7a06ca203ca8abe302d34fda1d187dfef0310e73028b0adb9d486b850bfa61"
+  },
+  "limits": [
+    "Still below1000TEST and50DEV; no freeze or final inference.",
+    "Three held drafts are not counted or silently reclassified.",
+    "No raw sources, item-level QA or weights published."
+  ]
+}

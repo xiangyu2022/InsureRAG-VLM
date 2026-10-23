@@ -1,0 +1,106 @@
+{
+  "created_utc": "2026-10-18T16:17:32.265689+00:00",
+  "status": "SYNTHETIC_AGENT_SCAFFOLD_REAL_GENERATION_RUNTIME_UNAVAILABLE",
+  "base_commit": "f04b7b9b1684691ffb485a9e464d730796fc43c8",
+  "implementation_sha256": {
+    "src/insurerag_vlm/agent_draft.py": "ef1b9fe432e6d3b779494c0b2000cb720758704fa8bb4ca1ec9350f75e8fb9af",
+    "src/insurerag_vlm/agent_demo.py": "ee08e929b7942b97115791f072c501c433a41f138c5f31c3efb744250cd61423",
+    "tests/test_agent_draft.py": "6e24a4c653d9cd59fdb4ac9061e078ad08965d3a11d2d8eb70e0212361acb6cb",
+    "reports/agent_draft/synthetic_traces.json": "d0d9658421024f3f6ef5f833f935bbe6d5b7023cc364a3cb8f0573dac07a95cc"
+  },
+  "implementation_unchanged": true,
+  "existing_tools": [
+    "SEARCH",
+    "READ",
+    "CALCULATE",
+    "ANSWER",
+    "ABSTAIN"
+  ],
+  "fresh_validation": {
+    "command": "python -X utf8 -m pytest -q tests/test_agent_draft.py",
+    "passed": 48,
+    "failed": 0,
+    "elapsed_seconds": 1.01,
+    "scope": "Existing synthetic contract tests; no holdout data or real model generation."
+  },
+  "prior_full_suite": {
+    "passed": 632,
+    "subtests_passed": 58,
+    "source": "reports/agent_draft/validation_summary.json",
+    "rerun": false
+  },
+  "runtime": {
+    "probe": "GET http://127.0.0.1:11434/api/tags",
+    "available": false,
+    "result": "Connection refused after approved read-only localhost probe; no service start attempted.",
+    "executable_found_on_PATH": false,
+    "standard_user_ollama_models_directory_exists": false,
+    "standard_Ollama_executable_paths_exist": false,
+    "configured_alternate_endpoint_found": false,
+    "search_scope": "Process/PATH, explicit model environment variables, standard per-user Ollama paths and project models only; no assertion about every disk location."
+  },
+  "existing_local_weights": [
+    {
+      "name": "bge-small-en-v1.5",
+      "architectures": [
+        "BertModel"
+      ],
+      "model_type": "bert",
+      "weight_file_exists": true,
+      "weight_bytes": 133466304,
+      "new_weight_inference": false
+    },
+    {
+      "name": "insurerag-condition-listwise-v1-seed-123/epoch-1",
+      "architectures": [
+        "BertForSequenceClassification"
+      ],
+      "model_type": "bert",
+      "weight_file_exists": true,
+      "weight_bytes": 90866412,
+      "new_weight_inference": false
+    },
+    {
+      "name": "insurerag-evidence-reranker-v1-seed-123/epoch-2",
+      "architectures": [
+        "BertForSequenceClassification"
+      ],
+      "model_type": "bert",
+      "weight_file_exists": true,
+      "weight_bytes": 90866412,
+      "new_weight_inference": false
+    },
+    {
+      "name": "insurerag-query-adaptation-v1-seed-42/epoch-2",
+      "architectures": [
+        "BertModel"
+      ],
+      "model_type": "bert",
+      "weight_file_exists": true,
+      "weight_bytes": 133462128,
+      "new_weight_inference": false
+    }
+  ],
+  "limitations": [
+    "No real generation-model controller loop validated.",
+    "Exact quotation checks do not prove claim entailment, correct jurisdiction/date or correct gap clearing.",
+    "Injection test proves rejected unauthorized tool execution in synthetic scenario, not semantic immunity.",
+    "Synchronous retrieval uses cooperative time checks, not hard process cancellation.",
+    "UTF8 charging is conservative budget accounting, not measured tokenizer usage."
+  ],
+  "next_steps": [
+    "Complete holdout global source/alias/family/history acceptance independently of generation runtime.",
+    "When an existing generation model endpoint is available, verify inventory/digest and run one independent synthetic controller case with usage trace; no model download or paid API.",
+    "Do not run formal TEST inference until full acceptance and registered freeze."
+  ],
+  "usage": {
+    "real_model_generation_calls": 0,
+    "external_paid_model_calls": 0,
+    "model_downloads": 0,
+    "new_source_acquisitions": 0,
+    "subagents": 0,
+    "formal_TEST_inference": 0,
+    "remaining_quota": "not observable"
+  },
+  "holdout_checkpoint": "../holdout1000_v1/stage420_progress.json"
+}

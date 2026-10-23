@@ -1,0 +1,64 @@
+{
+  "created_utc": "2026-10-20T17:10:56.684731+00:00",
+  "status": "LANGGRAPH_DURABLE_REVIEW_SYNTHETIC_VALIDATED_LOCAL_GENERATOR_UNAVAILABLE",
+  "implementation": {
+    "langgraph": "1.2.16",
+    "sqlite_checkpointer": "3.1.2",
+    "mandatory_approval": "Every ANSWER draft and every human edit",
+    "decisions": [
+      "approve",
+      "edit",
+      "retrieve",
+      "reject"
+    ],
+    "same_thread_restart": true,
+    "approval_bound_to_version_and_evidence": true,
+    "duplicate_command_idempotence": true,
+    "concurrent_local_process_exclusion": true,
+    "completed_call_cache": true,
+    "uncertain_call_recovery": "Stop without automatic retry",
+    "tracing_enabled": false,
+    "saved_review_works_without_model_service": true
+  },
+  "tests": {
+    "tests": 85,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 10.79,
+    "langgraph_tests": 37,
+    "legacy_agent_tests": 48,
+    "command": "python -m pytest -q tests/test_agent_graph.py tests/test_agent_draft.py",
+    "scope": "Named local tests only; no whole local test-tree traversal"
+  },
+  "runtime_probe": {
+    "checked_utc": "2026-10-20T17:04:14.991220+00:00",
+    "ollama_on_path": false,
+    "standard_model_store_exists": false,
+    "alternate_ollama_host_configured": false,
+    "model_calls": 0,
+    "downloads": 0,
+    "services_started": 0,
+    "connection_error": "ConnectionError",
+    "ollama_process_found": false
+  },
+  "model_quality_validated": false,
+  "actual_holdout_inference": 0,
+  "paid_model_calls": 0,
+  "model_downloads": 0,
+  "source_sha256": {
+    "src/insurerag_vlm/agent_graph.py": "126a052835e4ee1b52ee9267b91e187f7d170f966147f308083f2a65b7a6e879",
+    "src/insurerag_vlm/agent_graph_demo.py": "849d5e5394700313962441941e35f942decb8de7fc083086eb65067048ad5355",
+    "tests/test_agent_graph.py": "e30f76289c8a0c784c8c083891629c27ee1039cb40afc3811318b1bc115b5bb4",
+    "requirements-agent.txt": "6d389baa0de328bd0b2130629d7609819b39298c6987ea7652683a4e74cde635"
+  },
+  "limitations": [
+    "Trusted local operator labels, not authenticated identities or multiuser authorization.",
+    "No approval web UI, encrypted database, multi-host execution or hard worker cancellation.",
+    "Exact citations do not establish semantic entailment; review remains necessary.",
+    "Actual generation runtime unavailable in checked locations.",
+    "Synthetic tests establish control flow, not real-model insurance accuracy.",
+    "Holdout1000 remains provisional, accepted=0 and frozen=false; downstream pool169 report rebinding required."
+  ],
+  "updated_utc": "2026-10-20T17:14:09.602894+00:00"
+}

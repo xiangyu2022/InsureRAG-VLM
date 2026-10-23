@@ -1,0 +1,224 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 1000,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 150,
+    "ordinary_qa": 600
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 184,
+  "publisher_counts": {
+    "canada_fcac": 20,
+    "us_va": 42,
+    "us_tricare": 138,
+    "newjersey_dobi": 41,
+    "newyork_dfs": 53,
+    "california_cdi": 51,
+    "alberta_goa": 38,
+    "northcarolina_doi": 39,
+    "us_opm": 121,
+    "wisconsin_oci": 65,
+    "us_usda_rma": 40,
+    "au_privatehealth_ombudsman": 20,
+    "utah_uid": 15,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 40,
+    "canada_esdc_ei": 103,
+    "alabama_doi": 5,
+    "newjersey_labor_leave": 9,
+    "canada_vac": 28,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 20,
+    "australia_apra": 2
+  },
+  "pool_version": 154,
+  "admitted_global_candidate_version": 146,
+  "source_snapshot": 33,
+  "all_test_declared_span_mapping": {
+    "complete": 878,
+    "pending": 122
+  },
+  "global_preflight": {
+    "ledger_links_verified": 154,
+    "effective_inherited_item_holds": 437,
+    "held_active_items": 0,
+    "item_errors": 0,
+    "coverage_errors": [],
+    "global_acceptance_passed": false
+  },
+  "dev_support_review": {
+    "items": 57,
+    "declared_spans": 75,
+    "answerable": 46,
+    "refusals": 11,
+    "necessary_units": 61,
+    "reviewed_Spanish_aliases": 19,
+    "global_clearance_complete": false
+  },
+  "identified_semantic_pair_review": {
+    "original_pairs": 63,
+    "retained_active_pairs": 61,
+    "identity_rebind_version": 585,
+    "below_threshold_pairs_exhaustively_reviewed": false
+  },
+  "created_utc": "2026-10-18T22:52:53.245556+00:00",
+  "status": "PROVISIONAL_1000_SOURCE_HEADER_REPAIR_GLOBAL_REVIEW_CONTINUES",
+  "corpus_preparation": {
+    "documents": 1426,
+    "include": 792,
+    "exclude": 526,
+    "pending": 108,
+    "partial_chunks": 3928,
+    "pending_sources_without_admission_review_record": 0
+  },
+  "source_quality_issues": {
+    "mandatory_register_version": 597,
+    "total_recorded_issues": 66,
+    "open_issues": 51,
+    "resolved_for_current_corpus_by_whole_source_exclusion": 15
+  },
+  "pdf_layout_preparation": {
+    "source_pages": 35,
+    "source_words": 13377,
+    "all_words_assigned_exactly_once": true,
+    "rendered_groups": 624,
+    "rendered_characters": 83584,
+    "geometry_straddles_above_one_point": 0,
+    "unchanged_normalized_word_order_pages_reused": 23,
+    "literal_word_order_review_complete": true,
+    "actual_renderer_passed": true,
+    "source_quality_or_rights_cleared": false,
+    "source_context_and_licensed_range_chunks_complete": false,
+    "new_extraction_admitted": false,
+    "canonical_snapshot_changed": false,
+    "evidence_rebinding_performed": false
+  },
+  "engineering": {
+    "module": "src/insurerag_vlm/holdout_pdf_layout.py",
+    "purpose": "Render an explicitly reviewed source-only word order with exact offsets, original geometric provenance, source/inventory/layout hashes and complete-word coverage; never infer source quality, rights or evidence clearance.",
+    "fail_closed": [
+      "Unreviewed layout or QA inputs",
+      "Changed source or inventory hash",
+      "Omitted, duplicated or out-of-range word assignments",
+      "Incomplete or reordered page inventory",
+      "Malformed geometry or unexpected payload fields"
+    ],
+    "production_pipeline_integration": false
+  },
+  "validation": {
+    "synthetic_tests_passed": 125,
+    "extraction_and_mathml_tests": 31,
+    "holdout_tests": 94,
+    "actual_new_source_preflight_succeeded": true,
+    "source_preflight_is_clearance": false,
+    "all1426manifest_source_hashes_verified": true,
+    "all1000declared_TESTmappings_verified": true,
+    "DEV57items61units19aliases_unchanged": true,
+    "all_3534global_candidate_questions_unchanged": true,
+    "global_dataset_gates_passed": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Manifest does not bind the complete source snapshot",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "previous_exact_commit_ci": {
+    "commit": "eb66203cbfd25653a5acb432f77b9977e67816ad",
+    "run_id": 39172684544,
+    "all_five_jobs_success": true
+  },
+  "limits": [
+    "1000TEST is provisional;accepted0 andnotfrozen.",
+    "108pending sources and51openissues;122TESTdeclaredmappings remain incomplete.",
+    "Necessarysupport,semantic aliases,sourcefamilies,historyandlegacy globalchecks areunfinished.",
+    "One historicalNYsource nowmapped;its oldnew-authoring restrictions andheldrelatedFAQ remain inforce.",
+    "One headerrepair isapplied;reviewedNYtable andFEGLIPDF structure/context issues remain.",
+    "Registeredgenerationruntime wasunavailable atstage591;independentdatawork continues, no newdownload orfallback.",
+    "No DEVselectionlock,TESTfreeze orfinalevaluation.",
+    "Rawsource,QA,annotations andweights remainlocal;PR8draftunmerged."
+  ],
+  "evidence_sha256": {
+    "stage594_source_disposition_review.json": "e683e1fe0caf5332524a694dc19fe2f76602a1b0169329d56fc2159be76f17e2",
+    "stage594_source_structure_review.json": "5a29b1d0874dca65a4db72a416d8fea343015fe8d8c726a2b8510b43838ec1a4",
+    "stage595_all_test_declared_span_mapping.json": "32e50e0fd1f30a7731932833789c4f47a37a3872e1d9aadb70a686126a3c4ebb",
+    "stage596_source_disposition_review.json": "42de4886ee7afcbf6249d37e9b97305df06b3be9ab9aae61e1c10fb43d0713ca",
+    "stage597_source_disposition_review.json": "c7ded8a5c7046f02570d07ef950dfecdf62b16555414485c2c6e5cf3c5b7009a",
+    "extraction_batch_34/summary.json": "47b23c796d3aafa857accb86164ee2abbf9ebe579bc334795cff9821503d820a",
+    "stage598_global_preflight.json": "271467edccdb17d562d2a96f5686dfd2abd4d71ac181645168010191ab0eb6f4",
+    "stage599_test_receipt.json": "d81fca38b2a1c35fbae94324ca1cf1b59888e73081e7e81fc72920ef2856b07b",
+    "stage597_extraction_pytest.log": "a1409f9d6b2189ec07ad1af1b02554c44c7051226e87fe1e61ad31c8fb54c6fc",
+    "stage599_header_authoring_preflight.json": "69fea8a615dc98c137665b49488e4113df0956c673cc4f5c7abfc1c403ed6e9a",
+    "stage592_publication_receipt.json": "71996fcdba8652a6bf65e6ec8ed76f5ec4966533353a228ba34c47c733f95132"
+  },
+  "runtime": {
+    "created_utc": "2026-10-18T22:31:11.579215+00:00",
+    "status": "REGISTERED_RUNTIME_READ_ONLY_PROBE",
+    "url": "http://127.0.0.1:11434/api/tags",
+    "ollama_on_PATH": false,
+    "model_downloads": 0,
+    "paid_calls": 0,
+    "proxy_or_security_settings_changed": false,
+    "service_start_attempts": 0,
+    "error_type": "ConnectionError",
+    "response_received": false
+  },
+  "document_snapshot": 34,
+  "code_change": {
+    "problem": "Unconditional header removal discarded substantive product-category labels.",
+    "behavior": "Explicit reviewed CSS selectors can preserve body headers for both document and originalFAQ extraction. Default behavior unchanged. Missing,non-header or excluded-navigation matches fail.",
+    "real_source_validation": "Six original labels restored;29featureitems andentireoriginalsuffix preserved. SourceFAQbytes andall active/globalQA unchanged. No inferredproductlabel.",
+    "tests": "Five new synthetic regressions;31extraction/MathMLtests and94holdouttests pass."
+  },
+  "source_review_since_stage592": {
+    "primary_source_bodies_reviewed": 7,
+    "new_inclusions": 2,
+    "new_exclusions": 1,
+    "active_QA_changed": 0,
+    "source_issues_resolved_by_whole_source_exclusion": 1,
+    "canonical_source_header_repair_applied": 1,
+    "other_document_lines_byte_identical": 1425,
+    "old3920chunks_byte_identical": true,
+    "new_chunks": 8,
+    "additional_TEST_declared_mapping_complete": 1,
+    "source_header_labels_restored": 6,
+    "new_questions": 0,
+    "prior_authoring_and_item_holds_retained": true
+  },
+  "usage_since_stage592": {
+    "web_open_actions": 2,
+    "reference_attempts_without_requested_legal_text": 2,
+    "reference_pages_added_to_canonical_corpus": 0,
+    "underlying_HTTP_requests_or_bytes": "not exposed",
+    "local_embedding_forward_batches": 0,
+    "new_question_vectors": 0,
+    "old_chunks_retokenized": 0,
+    "external_model_api_calls": 0,
+    "paid_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0
+  }
+}

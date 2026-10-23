@@ -1,0 +1,114 @@
+{
+  "created_utc": "2026-10-07T21:39:36.219917+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 670,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 9,
+    "retained": 6,
+    "held": 3,
+    "retained_tasks": {
+      "ordinary_qa": 4,
+      "insufficient_evidence": 1,
+      "multi_evidence": 1
+    }
+  },
+  "prior_checkpoint": "stage107_progress.json:664TEST/58DEV/144families",
+  "test_task_counts": {
+    "ordinary_qa": 431,
+    "insufficient_evidence": 57,
+    "multi_evidence": 89,
+    "numerical_calculation": 93
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 145,
+  "publisher_counts": {
+    "northcarolina_doi": 23,
+    "canada_fcac": 20,
+    "newyork_dfs": 49,
+    "california_cdi": 45,
+    "wisconsin_oci": 52,
+    "utah_uid": 12,
+    "us_opm": 105,
+    "us_va": 41,
+    "us_tricare": 119,
+    "newjersey_dobi": 36,
+    "alberta_goa": 36,
+    "australia_apra": 2,
+    "alabama_doi": 2,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 18
+  },
+  "usage": {
+    "base_report_sha256": "27749252725dafe54e4918399a6b4e3ef0930d891900a3bbc34cc15736c8327f",
+    "base_candidates_sha256": "56fe6eaec599e45e71e7f9b860993619913a386e84828e7b032e76482faac82a",
+    "new_candidates_sha256": "c7a879e7490ba0a022746b8d41e72fc236a4f14b6af5fb3df99906dabd113ef9",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 3087,
+    "old_old_pairs_reused": 700,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 9,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "297dabb7d9429d9a73817a4abdd0c881f74af86b5c90cee0658d7345af5017a3",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_source_bytes": 0,
+    "new_html_documents": 0,
+    "source_acquisition_accounted_in_stage99": false,
+    "new_pdf_documents": 0,
+    "browser_discovery_calls": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 292.33132070000283,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage110_source_decisions.json": "a7898ad06f8e98d510e804c30ec0d17795702d9dad408c8467586de6e83ead73",
+    "stage110_final_review.json": "5aa0802ac1a7598d1722de383f968ec5e65046d6a886d6bbc4bf2eec59159643",
+    "review_pool_90_clearance_ledger.json": "c8a9cf4434e34d0c4f1bf38006485d3278224f080f4842e0f331faf06304a5a5",
+    "provisional_item_pool_90.jsonl": "2d0c1924cf585ca9785cbb040b5248a21bd188383e9993f91ad7694d8380135c",
+    "provisional_item_pool_90_validation.json": "62014c4413252a7632510886e56f780ed955510296c345f820cef4e176501c67"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 169,
+    "numerical_calculation": 57,
+    "multi_evidence": 61,
+    "insufficient_evidence": 43
+  },
+  "limits": [
+    "330 independent TEST still needed;DEVminima provisionallymet.",
+    "Unchangedsnapshot18; no newsourceacquisition and nooldvectorsreencoded.",
+    "Existingfamiliesunchanged; substantivepremiumoverlapalreadygrouped; sharednavigationexcludedfromclosure.",
+    "Nearesthistory andnew/changedcandidate relations reviewed; seehashboundcontentrecords.",
+    "Prior metadata errata andall inheritedholds preserved; newholdsdocumentedinlocalledger.",
+    "Single sequentialCodexcontentreview, nothuman/expertreview."
+  ]
+}

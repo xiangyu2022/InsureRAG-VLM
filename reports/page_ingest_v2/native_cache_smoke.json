@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "corpus": "one existing DOL part-56 text derivative; no formal QA",
+  "source_snapshot_sha256": "54b596fd4228fae8e71c3bf474bcbb33a2d0e06a57193d328d4998b1f8f1f1bf",
+  "source_url": "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/faqs/aca-part-56",
+  "chunks": 38,
+  "collection": "dol56_text_page_v2_smoke",
+  "record_schema": 2,
+  "embedding": "local-hashing-512 (not BGE)",
+  "native_route": true,
+  "physical_pdf_pages": false,
+  "idempotent_upsert": true,
+  "real_stdio_search_read": true,
+  "agent_processes": 3,
+  "restart_pending_review_preserved": true,
+  "released_response": null,
+  "human_approval_submitted": false,
+  "controller": "mock-excerpt",
+  "model_quality_validated": false,
+  "source_unchanged": true,
+  "windows_stdout_encoding_failure_repaired": true,
+  "limitations": "Historical DOL applicability not revalidated; visual extraction tested only with mocks."
+}

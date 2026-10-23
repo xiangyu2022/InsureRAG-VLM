@@ -1,0 +1,218 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 1000,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 150,
+    "ordinary_qa": 600
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 184,
+  "publisher_counts": {
+    "canada_fcac": 20,
+    "us_va": 42,
+    "us_tricare": 138,
+    "newjersey_dobi": 41,
+    "newyork_dfs": 53,
+    "california_cdi": 51,
+    "alberta_goa": 38,
+    "northcarolina_doi": 39,
+    "us_opm": 121,
+    "wisconsin_oci": 65,
+    "us_usda_rma": 40,
+    "au_privatehealth_ombudsman": 20,
+    "utah_uid": 15,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 40,
+    "canada_esdc_ei": 103,
+    "alabama_doi": 5,
+    "newjersey_labor_leave": 9,
+    "canada_vac": 28,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 20,
+    "australia_apra": 2
+  },
+  "pool_version": 154,
+  "admitted_global_candidate_version": 146,
+  "source_snapshot": 33,
+  "all_test_declared_span_mapping": {
+    "complete": 877,
+    "pending": 123
+  },
+  "global_preflight": {
+    "ledger_links_verified": 154,
+    "effective_inherited_item_holds": 437,
+    "held_active_items": 0,
+    "item_errors": 0,
+    "coverage_errors": [],
+    "global_acceptance_passed": false
+  },
+  "dev_support_review": {
+    "items": 57,
+    "declared_spans": 75,
+    "answerable": 46,
+    "refusals": 11,
+    "necessary_units": 61,
+    "reviewed_Spanish_aliases": 19,
+    "global_clearance_complete": false
+  },
+  "identified_semantic_pair_review": {
+    "original_pairs": 63,
+    "retained_active_pairs": 61,
+    "identity_rebind_version": 585,
+    "below_threshold_pairs_exhaustively_reviewed": false
+  },
+  "created_utc": "2026-10-18T22:31:58.598603+00:00",
+  "status": "PROVISIONAL_1000_GLOBAL_QUALITY_PENDING_RUNTIME_UNAVAILABLE",
+  "corpus_preparation": {
+    "documents": 1426,
+    "include": 790,
+    "exclude": 525,
+    "pending": 111,
+    "partial_chunks": 3920,
+    "pending_sources_without_admission_review_record": 0
+  },
+  "source_quality_issues": {
+    "mandatory_register_version": 589,
+    "total_recorded_issues": 66,
+    "open_issues": 52,
+    "resolved_for_current_corpus_by_whole_source_exclusion": 14
+  },
+  "pdf_layout_preparation": {
+    "source_pages": 35,
+    "source_words": 13377,
+    "all_words_assigned_exactly_once": true,
+    "rendered_groups": 624,
+    "rendered_characters": 83584,
+    "geometry_straddles_above_one_point": 0,
+    "unchanged_normalized_word_order_pages_reused": 23,
+    "literal_word_order_review_complete": true,
+    "actual_renderer_passed": true,
+    "source_quality_or_rights_cleared": false,
+    "source_context_and_licensed_range_chunks_complete": false,
+    "new_extraction_admitted": false,
+    "canonical_snapshot_changed": false,
+    "evidence_rebinding_performed": false
+  },
+  "engineering": {
+    "module": "src/insurerag_vlm/holdout_pdf_layout.py",
+    "purpose": "Render an explicitly reviewed source-only word order with exact offsets, original geometric provenance, source/inventory/layout hashes and complete-word coverage; never infer source quality, rights or evidence clearance.",
+    "fail_closed": [
+      "Unreviewed layout or QA inputs",
+      "Changed source or inventory hash",
+      "Omitted, duplicated or out-of-range word assignments",
+      "Incomplete or reordered page inventory",
+      "Malformed geometry or unexpected payload fields"
+    ],
+    "production_pipeline_integration": false
+  },
+  "validation": {
+    "synthetic_tests_last_passed": 94,
+    "test_receipt_stage": 585,
+    "code_and_tests_unchanged_from": "30f844e03542fb70c764548fedcd576125b7ad9f",
+    "checks_reused_by_hash": true,
+    "fresh_deterministic_checks": [
+      "Pool154,ledger154,semantic146 and public holds retain previous hashes",
+      "All changed sources have no active declared QA and no corpus chunks",
+      "Source register has52open and14resolved issues;66total",
+      "All3920chunk bytes unchanged",
+      "DEV support units and19 reviewed aliases unchanged",
+      "Declared TEST mapping remains877complete123pending",
+      "DEV readiness remains false"
+    ],
+    "global_dataset_gates_passed": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "previous_exact_commit_ci": {
+    "commit": "ed6d4b5f36409478dee8f8b13245e896c572cd2c",
+    "run_id": 39172060527,
+    "all_five_jobs_success": true
+  },
+  "limits": [
+    "The1000TEST count is provisional;global independent-benchmark acceptance remains incomplete.",
+    "111source decisions,52open issues and global necessary-support/aliases/family/history/legacy checks remain.",
+    "Declared evidence mappings877/123 are not semantic-support acceptance.",
+    "Two HTML structures recovered from original markup remain pending canonical repair and chunk validation.",
+    "The registered local generation service still fails to connect and Ollama is not on PATH;no fallback or download performed.",
+    "No DEVselectionlock,TESTfreeze or final evaluation.",
+    "Only aggregate summaries published;raw sources,QA,annotations andweights remain local."
+  ],
+  "evidence_sha256": {
+    "stage587_source_disposition_review.json": "829a3fb68d2732a9871cddc6847a40ab3edee423b497a1a1c1d5c8eb173b0ca2",
+    "stage587_original_structure_proofs.json": "78db1996f3a136f7b709fdcff16b6c12ab216bc7711849c525051c0c0489ab63",
+    "stage589_source_disposition_review.json": "790e08476a09f01de22c37b0607bdfce20cfb29acfe101060879dbe65824c860",
+    "stage589_official_scope_references.json": "9e4bfe7e68631a320a313c26d588f8f8c343b64fe55868bb0dfc1f59d506511f",
+    "stage590_global_preflight.json": "163b2194f517db5858e4989c7493d5a081420dd342e2d06ecdb8e6ac2e67ece1",
+    "stage591_runtime_probe.json": "a8da81581ccd8b66f9c551616ccb445b652dfe420777006c1115950dddbd0b37",
+    "stage591_bounded_reference_followup.json": "dd5e16aa24d03fd81a4167815f8cd67c066407fb5c506c3f787e3da3d61d7c88",
+    "stage585_test_receipt.json": "46d16da35bf9614093381a909de504c2477d57073dd57ce577a88b49c133a1b0",
+    "stage586_publication_receipt.json": "5ab7b7ea2f26cba86a32ae9b8425e509ea9e7a188d35be4bc5d35886ba41dd0f"
+  },
+  "source_review_since_stage586": {
+    "full_bodies_reviewed": 10,
+    "new_exclusions": 6,
+    "new_inclusions": 0,
+    "source_disposition_changes_affecting_active_QA": 0,
+    "source_issues_resolved_by_whole_source_exclusion": 1,
+    "HTML_structure_repairs_prepared_not_applied": 2,
+    "all_3920_existing_chunks_byte_identical": true,
+    "canonical_document_snapshot_changed": false,
+    "original_and_later_item_withdrawals_retained": true
+  },
+  "usage_since_stage586": {
+    "web_search_tool_calls": 2,
+    "search_query_actions": 4,
+    "official_open_actions": 7,
+    "official_open_actions_successful": 6,
+    "official_open_actions_failed": 1,
+    "official_find_actions": 1,
+    "reference_pages_added_to_canonical_corpus": 0,
+    "underlying_HTTP_requests_or_bytes": "not exposed",
+    "local_embedding_forward_batches": 0,
+    "new_question_vectors": 0,
+    "new_questions": 0,
+    "external_model_api_calls": 0,
+    "paid_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0
+  },
+  "runtime": {
+    "created_utc": "2026-10-18T22:31:11.579215+00:00",
+    "status": "REGISTERED_RUNTIME_READ_ONLY_PROBE",
+    "url": "http://127.0.0.1:11434/api/tags",
+    "ollama_on_PATH": false,
+    "model_downloads": 0,
+    "paid_calls": 0,
+    "proxy_or_security_settings_changed": false,
+    "service_start_attempts": 0,
+    "error_type": "ConnectionError",
+    "response_received": false
+  }
+}

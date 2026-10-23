@@ -334,6 +334,12 @@ class SparseRetriever:
 
     def build_index(self, texts: List[str], index_path: Path) -> Dict[str, object]:
         index_path.parent.mkdir(parents=True, exist_ok=True)
+        payload = self.build(texts)
+        index_path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        return payload
+
+    def build(self, texts: List[str]) -> Dict[str, object]:
+        """Build the existing BM25 representation without filesystem writes."""
         doc_term_freqs: List[Dict[str, int]] = []
         doc_lengths: List[int] = []
         document_frequency: Counter[str] = Counter()
@@ -359,7 +365,6 @@ class SparseRetriever:
             "idf": idf,
             "doc_term_freqs": doc_term_freqs,
         }
-        index_path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
         return payload
 
     def search(

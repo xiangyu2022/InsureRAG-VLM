@@ -1,0 +1,99 @@
+{
+  "created_utc": "2026-10-05T21:14:31.214917+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 291,
+    "dev": 42
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 13,
+    "retained": 11,
+    "held": 2,
+    "retained_tasks": {
+      "numerical_calculation": 2,
+      "ordinary_qa": 5,
+      "multi_evidence": 3,
+      "insufficient_evidence": 1
+    },
+    "prior_revocations": 0
+  },
+  "test_task_counts": {
+    "ordinary_qa": 211,
+    "insufficient_evidence": 19,
+    "multi_evidence": 31,
+    "numerical_calculation": 30
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 9,
+    "multi_evidence": 6,
+    "numerical_calculation": 6
+  },
+  "test_document_families": 99,
+  "new_source_family_groups": 1,
+  "net_new_families": -2,
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "too_few_document_groups",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "dev_task_count_below_target:insufficient_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "new_history_flags": 1,
+    "new_semantic_pair_flags": 1,
+    "flag_dispositions": "Lexical flag belongs to held comparison; semantic pair is revised question and held predecessor.",
+    "changed_active_neighbors_reviewed": 13
+  },
+  "usage": {
+    "base_report_sha256": "e643285818fddf061d469a612d1f97295b4ae4d9038d3597e3f5a0e3080f2d89",
+    "base_candidates_sha256": "52a3d0719ec18750066fd4b98404c8a65cb1b85e44799184b022b15d7ed42762",
+    "new_candidates_sha256": "a32d4f17c1252cfcbc401ca6d774c62bbf8915f1f598ea8a714039c28fcad4f4",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2581,
+    "old_old_pairs_reused": 659,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 13,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "d71899d51adb7e1b4c215e02744fa26cb5ceab42f9462139905de1c3276eab83",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 294.9134313999675,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage17_source_decisions.json": "6add7246d45e01d71404fbeec4018bea837ac0488ae0f74387fc1914f7a6047d",
+    "stage17_final_review.json": "3d9fa8ed46888a590b6a4509331e58b6d3ca0aafc40ff61a3a225c0453353cd8",
+    "review_pool_20_clearance_ledger.json": "58bd1b74432761b36ed382debc93dc9b86ad2750fa402c57b1819cffaeefe221",
+    "provisional_item_pool_20.jsonl": "4811985ef51b5183fed9dd7258638bd31c96f9b67cb41cac639a22b3cb8e4d19",
+    "provisional_item_pool_20_validation.json": "4bfdc482dcda964c3f8635336e5541f6ea33158b51049ef3e9309f60b399d1df"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 389,
+    "numerical_calculation": 120,
+    "multi_evidence": 119,
+    "insufficient_evidence": 81
+  },
+  "limits": [
+    "709TESTshort of1000;DEV8short;taskquotas and100familyminimum unmet.",
+    "Conservative related-source grouping reduces101families to99; no relaxed coverage gate.",
+    "Prior15revocations and all inheritedholds preserved.",
+    "Prior12a6154CI endedfailure:2pass/3cancelledbeforesteps;existingrerun403notbypassed."
+  ]
+}

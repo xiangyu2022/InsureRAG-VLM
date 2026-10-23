@@ -1,0 +1,217 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 1000,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 600,
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 150
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 183,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 53,
+    "california_cdi": 50,
+    "wisconsin_oci": 65,
+    "utah_uid": 15,
+    "us_opm": 120,
+    "us_va": 42,
+    "us_tricare": 139,
+    "newjersey_dobi": 41,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 44,
+    "canada_esdc_ei": 103,
+    "newjersey_labor_leave": 8,
+    "canada_vac": 27,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 20
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 0,
+    "numerical_calculation": 0,
+    "multi_evidence": 0,
+    "insufficient_evidence": 0
+  },
+  "remaining_independent_test_to_item_count_minimum": 0,
+  "source_snapshot": 33,
+  "dev_support_review": {
+    "items": 57,
+    "declared_spans": 75,
+    "answerable": 46,
+    "refusals": 11,
+    "necessary_units": 61,
+    "reviewed_Spanish_aliases": 19,
+    "global_clearance_complete": false
+  },
+  "agent_review": {
+    "status": "SYNTHETIC_SCAFFOLD_REAL_MODEL_RUNTIME_UNAVAILABLE",
+    "fresh_synthetic_tests_passed": 48,
+    "implementation_unchanged": true,
+    "real_model_generation_calls": 0,
+    "report": "../agent_draft/status_20261018.json"
+  },
+  "corpus_preparation": {
+    "documents": 1426,
+    "exclude": 477,
+    "include": 787,
+    "pending": 162,
+    "partial_chunks": 3909
+  },
+  "all_test_declared_span_mapping": {
+    "complete": 869,
+    "pending": 131
+  },
+  "active_QA_source_dispositions": {
+    "include": 926,
+    "pending": 128,
+    "include+pending": 3
+  },
+  "active_source_dispositions": {
+    "include": 305,
+    "pending": 33
+  },
+  "created_utc": "2026-10-18T19:36:38.280842+00:00",
+  "status": "GLOBAL_ACCEPTANCE_IN_PROGRESS_NOT_FROZEN",
+  "pool_version": 147,
+  "admitted_global_candidate_version": 142,
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "global_preflight": {
+    "ledger_links_verified": 147,
+    "effective_inherited_item_holds": 429,
+    "held_active_items": 0,
+    "item_errors": 0,
+    "coverage_errors": 0
+  },
+  "identified_semantic_pair_review": {
+    "pairs": 63,
+    "unique_QAs": 77,
+    "connected_components": 27,
+    "identity_rebind_version": 506,
+    "below_threshold_pairs_exhaustively_reviewed": false,
+    "new_reserve_active_pairs_reviewed": 1
+  },
+  "source_quality_issues": {
+    "mandatory_register_version": 505,
+    "total_recorded_issues": 58,
+    "open_issues": 47,
+    "resolved_for_current_corpus_by_whole_source_exclusion": 11,
+    "newly_registered_preexisting_scope_or_family_leads": 3
+  },
+  "replacement_preparation": {
+    "registration_version": 499,
+    "current_pending_source_TEST": 131,
+    "by_task": {
+      "ordinary_qa": 79,
+      "numerical_calculation": 18,
+      "multi_evidence": 23,
+      "insufficient_evidence": 11
+    },
+    "batch_version": 504,
+    "drafts_adjudicated": 10,
+    "reviewed_unselected_reserves": 1,
+    "held_drafts": 9,
+    "total_stage500_504_unselected_reserves": 4,
+    "new_active_items": 0,
+    "changed_old_working_set_neighbors_reviewed": 25,
+    "quotas_thresholds_seed_unchanged": true
+  },
+  "authoring_preflight": {
+    "version": 505,
+    "deterministic": true,
+    "network_calls": 0,
+    "model_calls": 0,
+    "full_historical_candidates_including_inactive": true,
+    "inherited_holds_and_ledger_links_checked": true,
+    "related_source_and_legacy_restriction_leads": true,
+    "real_cache_regressions_visible": 3,
+    "not_semantic_or_source_clearance": true,
+    "private_packet_only": true
+  },
+  "validation": {
+    "fresh_targeted_tests": {
+      "passed": 73,
+      "seconds": 0.44,
+      "files": [
+        "tests/test_holdout_authoring_preflight.py",
+        "tests/test_holdout_source_state.py",
+        "tests/test_holdout_quality.py",
+        "tests/test_holdout_corpus.py",
+        "tests/test_holdout_dev_runner.py"
+      ]
+    },
+    "global_dataset_gates_passed": false,
+    "unchanged_active_content_and_support_hashes_verified": true
+  },
+  "usage": {
+    "scope": "Since stage503",
+    "new_question_vectors": 10,
+    "model_forward_batches": 1,
+    "old_candidate_vectors_reused": 3519,
+    "historical_vectors_reused": 44581,
+    "paid_calls": 0,
+    "new_model_downloads": 0,
+    "source_acquisitions": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0
+  },
+  "previous_exact_commit_ci": {
+    "commit": "cd7462a92415823cd845c9d718a1743157fc4fd2",
+    "run_id": 39157553191,
+    "job_count": 5,
+    "all_success": true,
+    "url": "https://github.com/xiangyu2022/InsureRAG-VLM/actions/runs/39157553191"
+  },
+  "limits": [
+    "1000TEST is a provisional individual-review count, not benchmark acceptance.",
+    "162 source decisions,47 registered source issues, necessary support/aliases, family/history/legacy reconciliation remain incomplete.",
+    "The new deterministic packet exposes known and exact-window related leads; it cannot certify semantic independence or automatically release restrictions.",
+    "FEGLI PDF layout and licensed-range preparation remains pending.",
+    "Registered real generation runtime remains unavailable; no model selection lock, TEST freeze or final evaluation.",
+    "All review is sequential Codex content review, not human or expert review. Raw sources, per-item data and weights remain local."
+  ],
+  "evidence_sha256": {
+    "stage504_summary.json": "a1d1d10bddaa0494f342eff9cf7a7bdbd125d1f01cbb9b5709b8eeae1c534877",
+    "stage504_content_review.json": "5120d385d2858c0c39d5e0de408ba3fe78ce27a7774028f2b5030c23eefdf84e",
+    "stage504_reviewed_reserves.jsonl": "34b5c5d01abe4b491688ef79c8202677329447e803b4fd099a18dba1966cc81b",
+    "stage505_authoring_preflight.json": "5b8a045a53accbbbca2396eab5e484497e6417bca9bb08dc28ffe121317700e5",
+    "stage505_source_consistency_issue_register.json": "65f661d22c2315547b75e4f74b7f0dca43542907c3efbd4c848b4b7b0b3a58bb",
+    "stage506_global_preflight.json": "7f8ffeed37682dc29e9dd3fe0c92e4c4c6991fa876f06679589cbe6ac3279433",
+    "stage506_pair_review_rebind.json": "0f2b6b123f38828fa6184ff1af64b357a025ecb822bc4eb8999b5e7bda2976dd",
+    "stage506_summary.json": "2d759b2e52b613c23979a614e9aa2bf0a9f3f2ea8494576e8f95799a35e9a6f0",
+    "review_pool_147_clearance_ledger.json": "5a588d0a91630314f6172cb9b53a9f69c5f2c0b7410513292120bcb95609187a",
+    "provisional_item_pool_147_validation.json": "3ab6f448376af4781003962821d57c15c5656aa86b335be3a16ae0f3377f7d82",
+    "stage503_publication_receipt.json": "18c75b08d681e37d5b4f01c10abe55cdab0343b347bae2f4b5c59be0871835b7"
+  }
+}

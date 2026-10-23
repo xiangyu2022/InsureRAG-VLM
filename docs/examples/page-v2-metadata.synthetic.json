@@ -1,0 +1,1070 @@
+{
+  "example_kind": "Entirely fictional mock schema illustration; not verified visual recognition or a customer policy",
+  "record": {
+    "schema_version": 2,
+    "record_id": "synthetic-example::p000002::b0004::c0001",
+    "chunk_id": "synthetic-example::p000002::b0004::c0001",
+    "chunk_sequence": 4,
+    "doc_id": "synthetic-example",
+    "source_file": "synthetic-layout.pdf",
+    "source_sha256": "fcafd6ae0f8662e6f53c94d0120acec9b1ba0e62615f2db16554c94725981176",
+    "page_id": "synthetic-example::p000002",
+    "page_number": 2,
+    "text": "Benefits | Values\nItem | Units\nAlpha | 10\nBeta | 20\nGamma | 30",
+    "source_text": "Benefits | Values\nItem | Units\nAlpha | 10\nBeta | 20\nGamma | 30",
+    "summary_text": null,
+    "content_type": "table_rows",
+    "evidence_origin": "multimodal_transcription",
+    "citation": "synthetic-layout.pdf#page=2&block=synthetic-example::p000002::b0004",
+    "processing": {
+      "route": "compressed_multimodal",
+      "parser_version": "page-structure-v2.0/PyMuPDF-1.28.2",
+      "model_version": "MOCK-layout-fixture-v1-not-a-model",
+      "image": {
+        "asset": "page-000002.jpg",
+        "sha256": "eca6964892e331f86074f64fe06506289347bf90f0f2cfcce4ca9cd4570b3d39",
+        "format": "JPEG",
+        "dpi": 144,
+        "quality": 85,
+        "max_edge": 2000,
+        "width": 1190,
+        "height": 1684,
+        "original_width": 595.0,
+        "original_height": 842.0,
+        "resize_filter": "LANCZOS; PDF render scaled before raster allocation",
+        "converter_version": "Pillow-12.3.0/page-structure-v2.0/PyMuPDF-1.28.2",
+        "min_native_font_pixels": null,
+        "readability_status": "backend_declared_readable"
+      },
+      "extraction_reviewed": false
+    },
+    "page_metadata": {
+      "page_id": "synthetic-example::p000002",
+      "page_number": 2,
+      "physical_page": {
+        "status": "observed",
+        "value": 2,
+        "extractor": "page-structure-v2.0/PyMuPDF-1.28.2",
+        "confidence": 1.0,
+        "needs_review": false
+      },
+      "printed_page": {
+        "status": "observed",
+        "value": "iii",
+        "extractor": "MOCK-layout-fixture-v1-not-a-model",
+        "confidence": null,
+        "needs_review": true
+      },
+      "headers": {
+        "status": "observed",
+        "value": [
+          {
+            "block_id": "synthetic-example::p000002::b0001",
+            "kind": "header",
+            "order": 1,
+            "parent_id": null,
+            "location": {
+              "page_id": "synthetic-example::p000002",
+              "physical_page": 2,
+              "bbox": {
+                "x0": 0.1,
+                "y0": 0.01,
+                "x1": 0.9,
+                "y1": 0.04
+              },
+              "char_start": 0,
+              "char_end": 21,
+              "coordinate_basis": "normalized_original_page"
+            },
+            "text": "Fictional page header",
+            "heading_level": {
+              "status": "not_applicable",
+              "value": null,
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            }
+          }
+        ],
+        "extractor": "page-structure-v2.0/PyMuPDF-1.28.2",
+        "confidence": null,
+        "needs_review": true
+      },
+      "footers": {
+        "status": "observed",
+        "value": [
+          {
+            "block_id": "synthetic-example::p000002::b0006",
+            "kind": "footer",
+            "order": 6,
+            "parent_id": "synthetic-example::p000002::b0002",
+            "location": {
+              "page_id": "synthetic-example::p000002",
+              "physical_page": 2,
+              "bbox": {
+                "x0": 0.1,
+                "y0": 0.95,
+                "x1": 0.9,
+                "y1": 0.98
+              },
+              "char_start": 275,
+              "char_end": 297,
+              "coordinate_basis": "normalized_original_page"
+            },
+            "text": "Fictional footer - iii",
+            "heading_level": {
+              "status": "not_applicable",
+              "value": null,
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            }
+          }
+        ],
+        "extractor": "page-structure-v2.0/PyMuPDF-1.28.2",
+        "confidence": null,
+        "needs_review": true
+      },
+      "headings": {
+        "status": "observed",
+        "value": [
+          {
+            "block_id": "synthetic-example::p000002::b0002",
+            "kind": "heading",
+            "order": 2,
+            "parent_id": null,
+            "location": {
+              "page_id": "synthetic-example::p000002",
+              "physical_page": 2,
+              "bbox": {
+                "x0": 0.1,
+                "y0": 0.08,
+                "x1": 0.9,
+                "y1": 0.12
+              },
+              "char_start": 23,
+              "char_end": 51,
+              "coordinate_basis": "normalized_original_page"
+            },
+            "text": "Section 2 Fictional benefits",
+            "heading_level": {
+              "status": "observed",
+              "value": 1,
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            }
+          }
+        ],
+        "extractor": "page-structure-v2.0/PyMuPDF-1.28.2",
+        "confidence": null,
+        "needs_review": true
+      },
+      "sections": {
+        "status": "observed",
+        "value": [
+          {
+            "heading_id": "synthetic-example::p000002::b0002",
+            "title": "Section 2 Fictional benefits",
+            "level": {
+              "status": "observed",
+              "value": 1,
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "source_page_id": "synthetic-example::p000002",
+            "inherited": false,
+            "source_location": {
+              "page_id": "synthetic-example::p000002",
+              "physical_page": 2,
+              "bbox": {
+                "x0": 0.1,
+                "y0": 0.08,
+                "x1": 0.9,
+                "y1": 0.12
+              },
+              "char_start": 23,
+              "char_end": 51,
+              "coordinate_basis": "normalized_original_page"
+            }
+          }
+        ],
+        "extractor": "page-structure-v2.0/PyMuPDF-1.28.2",
+        "confidence": null,
+        "needs_review": true
+      },
+      "captions": {
+        "status": "not_found",
+        "value": null,
+        "extractor": "page-structure-v2.0/PyMuPDF-1.28.2",
+        "confidence": null,
+        "needs_review": true
+      },
+      "paragraphs": {
+        "status": "observed",
+        "value": [
+          {
+            "block_id": "synthetic-example::p000002::b0003",
+            "kind": "paragraph",
+            "order": 3,
+            "parent_id": "synthetic-example::p000002::b0002",
+            "location": {
+              "page_id": "synthetic-example::p000002",
+              "physical_page": 2,
+              "bbox": {
+                "x0": 0.1,
+                "y0": 0.15,
+                "x1": 0.9,
+                "y1": 0.22
+              },
+              "char_start": 53,
+              "char_end": 119,
+              "coordinate_basis": "normalized_original_page"
+            },
+            "text": "Fictional paragraph: consult the original page for all conditions.",
+            "heading_level": {
+              "status": "not_applicable",
+              "value": null,
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            }
+          }
+        ],
+        "extractor": "page-structure-v2.0/PyMuPDF-1.28.2",
+        "confidence": null,
+        "needs_review": true
+      },
+      "tables": {
+        "status": "observed",
+        "value": [
+          {
+            "table_id": "synthetic-example::p000002::b0004",
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.3,
+              "x1": 0.9,
+              "y1": 0.55
+            },
+            "number": {
+              "status": "observed",
+              "value": "Table 1",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "caption": {
+              "status": "observed",
+              "value": "Fictional benefits",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "header_rows": {
+              "status": "observed",
+              "value": [
+                0,
+                1
+              ],
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "cells": [
+              {
+                "row": 0,
+                "column": 0,
+                "row_span": 1,
+                "column_span": 1,
+                "text": {
+                  "status": "observed",
+                  "value": "Benefits",
+                  "extractor": "MOCK-layout-fixture-v1-not-a-model",
+                  "confidence": null,
+                  "needs_review": true
+                },
+                "bbox": {
+                  "x0": 0.1,
+                  "y0": 0.3,
+                  "x1": 0.5,
+                  "y1": 0.34
+                }
+              },
+              {
+                "row": 0,
+                "column": 1,
+                "row_span": 1,
+                "column_span": 1,
+                "text": {
+                  "status": "observed",
+                  "value": "Values",
+                  "extractor": "MOCK-layout-fixture-v1-not-a-model",
+                  "confidence": null,
+                  "needs_review": true
+                },
+                "bbox": {
+                  "x0": 0.5,
+                  "y0": 0.3,
+                  "x1": 0.9,
+                  "y1": 0.34
+                }
+              },
+              {
+                "row": 1,
+                "column": 0,
+                "row_span": 1,
+                "column_span": 1,
+                "text": {
+                  "status": "observed",
+                  "value": "Item",
+                  "extractor": "MOCK-layout-fixture-v1-not-a-model",
+                  "confidence": null,
+                  "needs_review": true
+                },
+                "bbox": {
+                  "x0": 0.1,
+                  "y0": 0.33999999999999997,
+                  "x1": 0.5,
+                  "y1": 0.38
+                }
+              },
+              {
+                "row": 1,
+                "column": 1,
+                "row_span": 1,
+                "column_span": 1,
+                "text": {
+                  "status": "observed",
+                  "value": "Units",
+                  "extractor": "MOCK-layout-fixture-v1-not-a-model",
+                  "confidence": null,
+                  "needs_review": true
+                },
+                "bbox": {
+                  "x0": 0.5,
+                  "y0": 0.33999999999999997,
+                  "x1": 0.9,
+                  "y1": 0.38
+                }
+              },
+              {
+                "row": 2,
+                "column": 0,
+                "row_span": 1,
+                "column_span": 1,
+                "text": {
+                  "status": "observed",
+                  "value": "Alpha",
+                  "extractor": "MOCK-layout-fixture-v1-not-a-model",
+                  "confidence": null,
+                  "needs_review": true
+                },
+                "bbox": {
+                  "x0": 0.1,
+                  "y0": 0.38,
+                  "x1": 0.5,
+                  "y1": 0.42000000000000004
+                }
+              },
+              {
+                "row": 2,
+                "column": 1,
+                "row_span": 1,
+                "column_span": 1,
+                "text": {
+                  "status": "observed",
+                  "value": "10",
+                  "extractor": "MOCK-layout-fixture-v1-not-a-model",
+                  "confidence": null,
+                  "needs_review": true
+                },
+                "bbox": {
+                  "x0": 0.5,
+                  "y0": 0.38,
+                  "x1": 0.9,
+                  "y1": 0.42000000000000004
+                }
+              },
+              {
+                "row": 3,
+                "column": 0,
+                "row_span": 1,
+                "column_span": 1,
+                "text": {
+                  "status": "observed",
+                  "value": "Beta",
+                  "extractor": "MOCK-layout-fixture-v1-not-a-model",
+                  "confidence": null,
+                  "needs_review": true
+                },
+                "bbox": {
+                  "x0": 0.1,
+                  "y0": 0.42,
+                  "x1": 0.5,
+                  "y1": 0.46
+                }
+              },
+              {
+                "row": 3,
+                "column": 1,
+                "row_span": 1,
+                "column_span": 1,
+                "text": {
+                  "status": "observed",
+                  "value": "20",
+                  "extractor": "MOCK-layout-fixture-v1-not-a-model",
+                  "confidence": null,
+                  "needs_review": true
+                },
+                "bbox": {
+                  "x0": 0.5,
+                  "y0": 0.42,
+                  "x1": 0.9,
+                  "y1": 0.46
+                }
+              },
+              {
+                "row": 4,
+                "column": 0,
+                "row_span": 1,
+                "column_span": 1,
+                "text": {
+                  "status": "observed",
+                  "value": "Gamma",
+                  "extractor": "MOCK-layout-fixture-v1-not-a-model",
+                  "confidence": null,
+                  "needs_review": true
+                },
+                "bbox": {
+                  "x0": 0.1,
+                  "y0": 0.45999999999999996,
+                  "x1": 0.5,
+                  "y1": 0.5
+                }
+              },
+              {
+                "row": 4,
+                "column": 1,
+                "row_span": 1,
+                "column_span": 1,
+                "text": {
+                  "status": "observed",
+                  "value": "30",
+                  "extractor": "MOCK-layout-fixture-v1-not-a-model",
+                  "confidence": null,
+                  "needs_review": true
+                },
+                "bbox": {
+                  "x0": 0.5,
+                  "y0": 0.45999999999999996,
+                  "x1": 0.9,
+                  "y1": 0.5
+                }
+              }
+            ],
+            "units": {
+              "status": "observed",
+              "value": [
+                "illustrative units"
+              ],
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "footnotes": {
+              "status": "observed",
+              "value": [
+                "Fictional example only"
+              ],
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "continued": {
+              "status": "observed",
+              "value": false,
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            }
+          }
+        ],
+        "extractor": "MOCK-layout-fixture-v1-not-a-model",
+        "confidence": null,
+        "needs_review": true
+      },
+      "figures": {
+        "status": "observed",
+        "value": [
+          {
+            "figure_id": "synthetic-example::p000002::b0005",
+            "kind": "chart",
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.6,
+              "x1": 0.9,
+              "y1": 0.9
+            },
+            "caption": {
+              "status": "observed",
+              "value": "Figure 1: fictional trend",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "summary": {
+              "status": "observed",
+              "value": "Generated fixture summary: the illustrated line trends upward; exact values are unclear.",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "axes": {
+              "status": "observed",
+              "value": [
+                "horizontal: time",
+                "vertical: illustrative units"
+              ],
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "legend": {
+              "status": "not_found",
+              "value": null,
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "units": {
+              "status": "observed",
+              "value": [
+                "illustrative units"
+              ],
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "numeric_uncertainty": {
+              "status": "observed",
+              "value": [
+                "Exact chart values are unreadable; no numeric estimates."
+              ],
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            }
+          }
+        ],
+        "extractor": "MOCK-layout-fixture-v1-not-a-model",
+        "confidence": null,
+        "needs_review": true
+      },
+      "blocks": [
+        {
+          "block_id": "synthetic-example::p000002::b0001",
+          "kind": "header",
+          "order": 1,
+          "parent_id": null,
+          "location": {
+            "page_id": "synthetic-example::p000002",
+            "physical_page": 2,
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.01,
+              "x1": 0.9,
+              "y1": 0.04
+            },
+            "char_start": 0,
+            "char_end": 21,
+            "coordinate_basis": "normalized_original_page"
+          },
+          "text": "Fictional page header",
+          "heading_level": {
+            "status": "not_applicable",
+            "value": null,
+            "extractor": "MOCK-layout-fixture-v1-not-a-model",
+            "confidence": null,
+            "needs_review": true
+          }
+        },
+        {
+          "block_id": "synthetic-example::p000002::b0002",
+          "kind": "heading",
+          "order": 2,
+          "parent_id": null,
+          "location": {
+            "page_id": "synthetic-example::p000002",
+            "physical_page": 2,
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.08,
+              "x1": 0.9,
+              "y1": 0.12
+            },
+            "char_start": 23,
+            "char_end": 51,
+            "coordinate_basis": "normalized_original_page"
+          },
+          "text": "Section 2 Fictional benefits",
+          "heading_level": {
+            "status": "observed",
+            "value": 1,
+            "extractor": "MOCK-layout-fixture-v1-not-a-model",
+            "confidence": null,
+            "needs_review": true
+          }
+        },
+        {
+          "block_id": "synthetic-example::p000002::b0003",
+          "kind": "paragraph",
+          "order": 3,
+          "parent_id": "synthetic-example::p000002::b0002",
+          "location": {
+            "page_id": "synthetic-example::p000002",
+            "physical_page": 2,
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.15,
+              "x1": 0.9,
+              "y1": 0.22
+            },
+            "char_start": 53,
+            "char_end": 119,
+            "coordinate_basis": "normalized_original_page"
+          },
+          "text": "Fictional paragraph: consult the original page for all conditions.",
+          "heading_level": {
+            "status": "not_applicable",
+            "value": null,
+            "extractor": "MOCK-layout-fixture-v1-not-a-model",
+            "confidence": null,
+            "needs_review": true
+          }
+        },
+        {
+          "block_id": "synthetic-example::p000002::b0004",
+          "kind": "table_rows",
+          "order": 4,
+          "parent_id": "synthetic-example::p000002::b0002",
+          "location": {
+            "page_id": "synthetic-example::p000002",
+            "physical_page": 2,
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.3,
+              "x1": 0.9,
+              "y1": 0.55
+            },
+            "char_start": 121,
+            "char_end": 183,
+            "coordinate_basis": "normalized_original_page"
+          },
+          "text": "Benefits | Values\nItem | Units\nAlpha | 10\nBeta | 20\nGamma | 30",
+          "heading_level": {
+            "status": "not_applicable",
+            "value": null,
+            "extractor": "page-structure-v2.0/PyMuPDF-1.28.2",
+            "confidence": null,
+            "needs_review": true
+          }
+        },
+        {
+          "block_id": "synthetic-example::p000002::b0005",
+          "kind": "figure_summary",
+          "order": 5,
+          "parent_id": "synthetic-example::p000002::b0002",
+          "location": {
+            "page_id": "synthetic-example::p000002",
+            "physical_page": 2,
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.6,
+              "x1": 0.9,
+              "y1": 0.9
+            },
+            "char_start": 185,
+            "char_end": 273,
+            "coordinate_basis": "normalized_original_page"
+          },
+          "text": "Generated fixture summary: the illustrated line trends upward; exact values are unclear.",
+          "heading_level": {
+            "status": "not_applicable",
+            "value": null,
+            "extractor": "page-structure-v2.0/PyMuPDF-1.28.2",
+            "confidence": null,
+            "needs_review": true
+          }
+        },
+        {
+          "block_id": "synthetic-example::p000002::b0006",
+          "kind": "footer",
+          "order": 6,
+          "parent_id": "synthetic-example::p000002::b0002",
+          "location": {
+            "page_id": "synthetic-example::p000002",
+            "physical_page": 2,
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.95,
+              "x1": 0.9,
+              "y1": 0.98
+            },
+            "char_start": 275,
+            "char_end": 297,
+            "coordinate_basis": "normalized_original_page"
+          },
+          "text": "Fictional footer - iii",
+          "heading_level": {
+            "status": "not_applicable",
+            "value": null,
+            "extractor": "MOCK-layout-fixture-v1-not-a-model",
+            "confidence": null,
+            "needs_review": true
+          }
+        }
+      ]
+    },
+    "chunk_metadata": {
+      "chunk_id": "synthetic-example::p000002::b0004::c0001",
+      "sequence": 4,
+      "unit_id": "synthetic-example::p000002::b0004",
+      "block_ids": [
+        "synthetic-example::p000002::b0004"
+      ],
+      "locations": [
+        {
+          "page_id": "synthetic-example::p000002",
+          "physical_page": 2,
+          "bbox": {
+            "x0": 0.1,
+            "y0": 0.3,
+            "x1": 0.9,
+            "y1": 0.55
+          },
+          "char_start": 121,
+          "char_end": 183,
+          "coordinate_basis": "normalized_original_page"
+        }
+      ],
+      "content_type": "table_rows",
+      "evidence_origin": "multimodal_transcription",
+      "semantic_boundary": "table_row_group",
+      "continuation_index": 1,
+      "oversized_unsplit": false,
+      "table_id": "synthetic-example::p000002::b0004",
+      "table": {
+        "table_id": "synthetic-example::p000002::b0004",
+        "bbox": {
+          "x0": 0.1,
+          "y0": 0.3,
+          "x1": 0.9,
+          "y1": 0.55
+        },
+        "number": {
+          "status": "observed",
+          "value": "Table 1",
+          "extractor": "MOCK-layout-fixture-v1-not-a-model",
+          "confidence": null,
+          "needs_review": true
+        },
+        "caption": {
+          "status": "observed",
+          "value": "Fictional benefits",
+          "extractor": "MOCK-layout-fixture-v1-not-a-model",
+          "confidence": null,
+          "needs_review": true
+        },
+        "header_rows": {
+          "status": "observed",
+          "value": [
+            0,
+            1
+          ],
+          "extractor": "MOCK-layout-fixture-v1-not-a-model",
+          "confidence": null,
+          "needs_review": true
+        },
+        "cells": [
+          {
+            "row": 0,
+            "column": 0,
+            "row_span": 1,
+            "column_span": 1,
+            "text": {
+              "status": "observed",
+              "value": "Benefits",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.3,
+              "x1": 0.5,
+              "y1": 0.34
+            }
+          },
+          {
+            "row": 0,
+            "column": 1,
+            "row_span": 1,
+            "column_span": 1,
+            "text": {
+              "status": "observed",
+              "value": "Values",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "bbox": {
+              "x0": 0.5,
+              "y0": 0.3,
+              "x1": 0.9,
+              "y1": 0.34
+            }
+          },
+          {
+            "row": 1,
+            "column": 0,
+            "row_span": 1,
+            "column_span": 1,
+            "text": {
+              "status": "observed",
+              "value": "Item",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.33999999999999997,
+              "x1": 0.5,
+              "y1": 0.38
+            }
+          },
+          {
+            "row": 1,
+            "column": 1,
+            "row_span": 1,
+            "column_span": 1,
+            "text": {
+              "status": "observed",
+              "value": "Units",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "bbox": {
+              "x0": 0.5,
+              "y0": 0.33999999999999997,
+              "x1": 0.9,
+              "y1": 0.38
+            }
+          },
+          {
+            "row": 2,
+            "column": 0,
+            "row_span": 1,
+            "column_span": 1,
+            "text": {
+              "status": "observed",
+              "value": "Alpha",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.38,
+              "x1": 0.5,
+              "y1": 0.42000000000000004
+            }
+          },
+          {
+            "row": 2,
+            "column": 1,
+            "row_span": 1,
+            "column_span": 1,
+            "text": {
+              "status": "observed",
+              "value": "10",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "bbox": {
+              "x0": 0.5,
+              "y0": 0.38,
+              "x1": 0.9,
+              "y1": 0.42000000000000004
+            }
+          },
+          {
+            "row": 3,
+            "column": 0,
+            "row_span": 1,
+            "column_span": 1,
+            "text": {
+              "status": "observed",
+              "value": "Beta",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.42,
+              "x1": 0.5,
+              "y1": 0.46
+            }
+          },
+          {
+            "row": 3,
+            "column": 1,
+            "row_span": 1,
+            "column_span": 1,
+            "text": {
+              "status": "observed",
+              "value": "20",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "bbox": {
+              "x0": 0.5,
+              "y0": 0.42,
+              "x1": 0.9,
+              "y1": 0.46
+            }
+          },
+          {
+            "row": 4,
+            "column": 0,
+            "row_span": 1,
+            "column_span": 1,
+            "text": {
+              "status": "observed",
+              "value": "Gamma",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.45999999999999996,
+              "x1": 0.5,
+              "y1": 0.5
+            }
+          },
+          {
+            "row": 4,
+            "column": 1,
+            "row_span": 1,
+            "column_span": 1,
+            "text": {
+              "status": "observed",
+              "value": "30",
+              "extractor": "MOCK-layout-fixture-v1-not-a-model",
+              "confidence": null,
+              "needs_review": true
+            },
+            "bbox": {
+              "x0": 0.5,
+              "y0": 0.45999999999999996,
+              "x1": 0.9,
+              "y1": 0.5
+            }
+          }
+        ],
+        "units": {
+          "status": "observed",
+          "value": [
+            "illustrative units"
+          ],
+          "extractor": "MOCK-layout-fixture-v1-not-a-model",
+          "confidence": null,
+          "needs_review": true
+        },
+        "footnotes": {
+          "status": "observed",
+          "value": [
+            "Fictional example only"
+          ],
+          "extractor": "MOCK-layout-fixture-v1-not-a-model",
+          "confidence": null,
+          "needs_review": true
+        },
+        "continued": {
+          "status": "observed",
+          "value": false,
+          "extractor": "MOCK-layout-fixture-v1-not-a-model",
+          "confidence": null,
+          "needs_review": true
+        }
+      },
+      "row_indices": [
+        2,
+        3,
+        4
+      ],
+      "cross_page_table_group": {
+        "status": "observed",
+        "value": "table-link-0476eb83b863864c93cdab0c",
+        "extractor": "page-structure-v2.0/PyMuPDF-1.28.2",
+        "confidence": 0.5,
+        "needs_review": true
+      },
+      "figure_id": null,
+      "figure": null
+    },
+    "offset_basis": "page-local structured extraction, not original file byte offsets",
+    "clause_types": [
+      "general"
+    ],
+    "context_prefix": "Document: synthetic-example (synthetic-layout.pdf). Page: 2. Observed heading context (hierarchy may need review): Section 2 Fictional benefits. Content type: table_rows. Topic anchor (source label/excerpt, not inferred): Fictional benefits. Explicit question/purpose: unknown; not stated. ",
+    "context_metadata": {
+      "method": "deterministic_structure_template",
+      "version": "structure-prefix-v1",
+      "model_version": null,
+      "status": "incomplete_context",
+      "source_text_sha256": "2ce653dd60865c779040b9e9eaaeb3dcf904ee05aab7f954c829d596bd5e24f4",
+      "source_page_id": "synthetic-example::p000002",
+      "section_sources": [
+        {
+          "heading_id": "synthetic-example::p000002::b0002",
+          "title": "Section 2 Fictional benefits",
+          "level": {
+            "status": "observed",
+            "value": 1,
+            "extractor": "MOCK-layout-fixture-v1-not-a-model",
+            "confidence": null,
+            "needs_review": true
+          },
+          "source_page_id": "synthetic-example::p000002",
+          "inherited": false,
+          "source_location": {
+            "page_id": "synthetic-example::p000002",
+            "physical_page": 2,
+            "bbox": {
+              "x0": 0.1,
+              "y0": 0.08,
+              "x1": 0.9,
+              "y1": 0.12
+            },
+            "char_start": 23,
+            "char_end": 51,
+            "coordinate_basis": "normalized_original_page"
+          }
+        }
+      ],
+      "topic_basis": "table/figure label or exact leading excerpt; not semantic inference",
+      "purpose_status": "unknown"
+    },
+    "retrieval_text": "Document: synthetic-example (synthetic-layout.pdf). Page: 2. Observed heading context (hierarchy may need review): Section 2 Fictional benefits. Content type: table_rows. Topic anchor (source label/excerpt, not inferred): Fictional benefits. Explicit question/purpose: unknown; not stated. \n\nBenefits | Values\nItem | Units\nAlpha | 10\nBeta | 20\nGamma | 30",
+    "text_sha256": "2ce653dd60865c779040b9e9eaaeb3dcf904ee05aab7f954c829d596bd5e24f4",
+    "evidence_id": "5bda0e221327bb092852bbf070011cfb619e91d0d4ce799548704de2fd423779",
+    "record_sha256": "3d719ac91f62e546f067516f88b7667c68d5f723529502827a1743c0d98eca6d"
+  }
+}

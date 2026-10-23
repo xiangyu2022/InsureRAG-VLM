@@ -1,0 +1,211 @@
+{
+  "created_utc": "2026-10-20T17:37:55.806911+00:00",
+  "status": "PROVISIONAL_1000_SUPPORT_250_REVIEW_LAYERS_RECONCILED",
+  "reviewer_type": "Single sequential Codex content review,not human or expert",
+  "pool": 169,
+  "snapshot": 36,
+  "global_candidates": 150,
+  "test_provisional": 1000,
+  "dev_provisional": 57,
+  "test_families": 187,
+  "accepted_test": 0,
+  "accepted_dev": 0,
+  "frozen": false,
+  "test_tasks": {
+    "ordinary_qa": 600,
+    "numerical_calculation": 150,
+    "multi_evidence": 150,
+    "insufficient_evidence": 100
+  },
+  "declared_mapping": {
+    "complete": 883,
+    "pending": 117,
+    "pending_sources": 26
+  },
+  "necessary_support": {
+    "annotated_items": 250,
+    "answerable_items": 225,
+    "necessary_units": 345,
+    "refusal_diagnostics": 25,
+    "remaining_items": 750,
+    "global_alias_clearance": false,
+    "whole_TEST_clearance": false
+  },
+  "reconciliation": {
+    "historical_stage593": {
+      "pool": 154,
+      "snapshot": 33,
+      "global_candidates": 146,
+      "denominator_TEST_items": 1000,
+      "declared_mapping_complete": 877,
+      "declared_mapping_pending": 123,
+      "pending_documents": 31,
+      "definition": "Every existing declared evidence span must map to source-only chunks in an included source. Item-level all-spans conjunction; does not establish minimal sufficient answer support or semantic alternatives.",
+      "necessary_TEST_support_count_not_reported": true
+    },
+    "stage707": {
+      "pool": 169,
+      "snapshot": 36,
+      "global_candidates": 150,
+      "denominator_TEST_items": 1000,
+      "necessary_support_annotated_items": 210,
+      "necessary_support_pending_items": 790,
+      "answerable_annotated_items": 189,
+      "necessary_units": 290,
+      "refusal_diagnostic_items": 21,
+      "definition": "Content review identifies separately required answer obligations and support spans, checks numerical operands/conditions, maps each obligation to complete chunk sets; refusals need gap-context/rationale and no answer-retrieval gold. Semantic aliases and whole-TEST global clearance are separate unfinished gates."
+    },
+    "rebound_stage708": {
+      "pool": 169,
+      "denominator_TEST_items": 1000,
+      "declared_mapping_complete": 883,
+      "declared_mapping_pending": 117,
+      "pending_documents": 26,
+      "necessary_support_annotated_items": 210,
+      "necessary_support_pending_items": 790,
+      "cross_tab": [
+        {
+          "mapping": "mapped",
+          "necessary_support": "support_annotated",
+          "items": 210
+        },
+        {
+          "mapping": "mapped",
+          "necessary_support": "support_pending",
+          "items": 673
+        },
+        {
+          "mapping": "unmapped",
+          "necessary_support": "support_pending",
+          "items": 117
+        }
+      ]
+    },
+    "common_item_transitions": [
+      {
+        "previous": "complete",
+        "current": "complete",
+        "items": 876
+      },
+      {
+        "previous": "pending",
+        "current": "complete",
+        "items": 2
+      },
+      {
+        "previous": "pending",
+        "current": "pending",
+        "items": 117
+      }
+    ],
+    "removed_items": 5,
+    "removed_previously_mapped": 1,
+    "removed_previously_unmapped": 4,
+    "added_items": 5,
+    "added_mapped": 5,
+    "current_cross_tab": [
+      {
+        "mapping": "mapped",
+        "support": "annotated",
+        "items": 250
+      },
+      {
+        "mapping": "mapped",
+        "support": "pending",
+        "items": 633
+      },
+      {
+        "mapping": "unmapped",
+        "support": "pending",
+        "items": 117
+      }
+    ],
+    "not_a_progress_reversal": true
+  },
+  "batch_changes": {
+    "new_support_items": 40,
+    "newly_annotated_answerable_items": 36,
+    "new_refusal_diagnostics": 4,
+    "necessary_unit_net_increase": 55,
+    "newly_annotated_unit_reclassified_as_nonessential": 1,
+    "original210_item_records_unchanged": true,
+    "active_QA_changes": 0,
+    "old_holds_restored": 0,
+    "new_questions_generated": 0,
+    "thresholds_or_quotas_changed": false
+  },
+  "sources": {
+    "include": 797,
+    "exclude": 603,
+    "pending": 26,
+    "open_issues": 23,
+    "resolved_by_whole_source_exclusion": 44,
+    "new_whole_source_exclusions": 1,
+    "active_QA_affected": 0,
+    "canonical_snapshot_unchanged": true,
+    "source_only_chunks": 4080,
+    "chunks_unchanged": true
+  },
+  "checks": {
+    "ledger_links": 169,
+    "effective_holds": 445,
+    "active_held_items": 0,
+    "active_semantic_pairs": 61,
+    "source_and_pool_report_bindings_current": true,
+    "support_spans_verified": 404,
+    "alternative_chunk_sets_verified": 352,
+    "nonessential_reference_context_records_verified": 3
+  },
+  "tests": {
+    "passed": 102,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 0.578,
+    "modules": [
+      "tests/test_holdout_source_urls.py",
+      "tests/test_holdout_authoring_preflight.py",
+      "tests/test_holdout_source_state.py",
+      "tests/test_holdout_quality.py",
+      "tests/test_holdout_corpus.py",
+      "tests/test_holdout_dev_runner.py",
+      "tests/test_holdout_pdf_layout.py"
+    ],
+    "scope": "Same seven named holdout quality modules;no whole local test-tree traversal",
+    "production_code_unchanged_from": "73aa396589b35265cd94e6f2028c7e0f3a023e00"
+  },
+  "usage": {
+    "new_vectors": 0,
+    "embedding_forward_calls": 0,
+    "generation_calls": 0,
+    "paid_API_calls": 0,
+    "model_downloads": 0,
+    "web_requests": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0,
+    "subagents": 0
+  },
+  "previous_exact_commit_CI": {
+    "commit": "73aa396589b35265cd94e6f2028c7e0f3a023e00",
+    "run_id": 39464332078,
+    "all5passed": true
+  },
+  "evidence_sha256": {
+    "stage593_resume_checkpoint.json": "401e51ce9d26a28de96ec658196398eb046d75863cfb221305e027b66f8bfab5",
+    "stage709_progress_layer_reconciliation.json": "04ba77e3fa8f9c1e61234fb068bb4eb6970fbe742aad8f3fc8b8b1d3c641f1cc",
+    "stage712_source_disposition_review.json": "dcf58651ea92b425d5b82830bfef81bea4014db6d64af7c2cc783688775d3232",
+    "stage712_inclusion_manifest_draft.json": "de6c23f6c99582c360954da08af2ad4892ce1d96a524bce667b2bc985c5e278b",
+    "stage712_source_consistency_issue_register.json": "09d6fc0fa421438c48a69db3217aeda3d0372174bd3b27310c38b68d361ff439",
+    "stage713_global_preflight.json": "fabe63c048b2942c13d90fff3be6663fb919369f99a7ca7b65503b8ac6e0c42c",
+    "stage713_all_test_declared_span_mapping.json": "4504d4ff9df062801b8bbebd7ea06a0dffc6e5113e57f1638500c21f30b2ced3",
+    "stage714_test_support_units_draft.json": "1038f384f17b72e7e4f4a9a97c5fed111dee9ba3558a6045f90d342deb762e0a",
+    "stage715_support_mapping_validation.json": "7363f5e900d1be050c4bd98448fca28fa7631130dd9b3bc7cb0a3f87b0d1c182",
+    "stage716_test_receipt.json": "088b266e8d5e65c1aafdd0790eb2bcfeb4b6821d1e42b1e75db7ca6a1b6b9f81"
+  },
+  "remaining": [
+    "750support annotations and global equivalent-support/semantic-alias review.",
+    "26pending sources and23open source issues.",
+    "Whole TEST family/history/legacy acceptance and all registered gates before freeze.",
+    "Ollama generation runtime remains unavailable;this doesnot block independent data review."
+  ]
+}

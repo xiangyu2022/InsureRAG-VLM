@@ -1,0 +1,183 @@
+{
+  "created_utc": "2026-10-16T19:33:10.734164+00:00",
+  "status": "SOURCE_REVIEW_CONTINUES_WITH_ONE_TEST_SCOPE_REVOCATION",
+  "provisional_item_gate_counts": {
+    "test": 957,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 581,
+    "insufficient_evidence": 90,
+    "multi_evidence": 140,
+    "numerical_calculation": 146
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 177,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 51,
+    "california_cdi": 49,
+    "wisconsin_oci": 63,
+    "utah_uid": 16,
+    "us_opm": 114,
+    "us_va": 41,
+    "us_tricare": 131,
+    "newjersey_dobi": 40,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 44,
+    "canada_esdc_ei": 91,
+    "newjersey_labor_leave": 7,
+    "canada_vac": 24,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 13
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 19,
+    "numerical_calculation": 4,
+    "multi_evidence": 10,
+    "insufficient_evidence": 10
+  },
+  "remaining_independent_test": 43,
+  "pool_version": 128,
+  "global_candidate_version": 129,
+  "source_snapshot": 33,
+  "new_questions": 0,
+  "previous_TEST_revoked": 1,
+  "scope_correction": "One overseas plan-search ZIP input question withdrawn as interface-only task. This does not test coverage, purchaser eligibility, policy benefits, claims or specific insurance dispute recourse. No cosmetic rewrite permitted.",
+  "rights_correction": {
+    "new_explicit_source_holds": 1,
+    "basis": "Government-hosted page explicitly excerpts a commercial1992publication; hosting does not establish thirdpartyreuse permission. Whole source excluded.",
+    "active_items_affected": 0
+  },
+  "source_review_since289": {
+    "complete_cached_bodies_read": 80,
+    "new_includes": 39,
+    "new_excludes": 30,
+    "reviewed_still_pending": 11
+  },
+  "corpus_preparation": {
+    "created_utc": "2026-10-16T19:32:17.654586+00:00",
+    "status": "SOURCE_REVIEW_CONTINUES_WITH_ONE_TEST_SCOPE_REVOCATION",
+    "test": 957,
+    "dev": 57,
+    "test_families": 177,
+    "accepted": 0,
+    "frozen": false,
+    "TEST_tasks": {
+      "ordinary_qa": 581,
+      "insufficient_evidence": 90,
+      "multi_evidence": 140,
+      "numerical_calculation": 146
+    },
+    "source_dispositions": {
+      "exclude": 300,
+      "include": 476,
+      "pending": 650
+    },
+    "chunks": 885,
+    "TEST_declared_spans_complete": 453,
+    "TEST_declared_spans_pending": 504,
+    "DEV_units": 61,
+    "DEV_aliases": 18,
+    "new_questions": 0,
+    "revoked_TEST": 1,
+    "new_source_rights_holds": 1,
+    "new_vectors": 0,
+    "model_forwards": 0,
+    "network_calls": 0
+  },
+  "all_test_declared_span_mapping": {
+    "complete": 453,
+    "pending": 504
+  },
+  "dev_support_review": {
+    "items": 57,
+    "answerable": 46,
+    "refusals": 11,
+    "families": 27,
+    "declared_spans": 75,
+    "necessary_units": 61,
+    "reviewed_spanish_aliases": 18,
+    "mappings_unchanged": true,
+    "global_clearance": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "validation": {
+    "retained_item_errors": 0,
+    "global_dataset_gates_passed": false,
+    "code_or_tests_changed": false,
+    "unchanged_code_regression": {
+      "tests_passed": 553,
+      "subtests_passed": 58,
+      "explicit_top_level_files": 57,
+      "elapsed_seconds": 11.91,
+      "new_synthetic_mathml_cases": 19,
+      "log_sha256": "bc841e1bc78a0845232c6eb9c189710e8fa040c3c1484ea8807ab820fcc471f6"
+    },
+    "all_chunks_checked_against_current_document_holds": true,
+    "remaining_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ]
+  },
+  "usage": {
+    "new_vectors": 0,
+    "model_forwards": 0,
+    "source_network_calls": 0,
+    "browser_calls": 0,
+    "paid_calls": 0,
+    "actual_DEV_queries": 0,
+    "actual_TEST_queries": 0,
+    "subagents": 0,
+    "remaining_quota": "not observable"
+  },
+  "limits": [
+    "957TESTstill43short:19ordinary,4numeric,10multi-evidence,10refusal. Accepted0/unfrozen.",
+    "650whole-source dispositions andglobalDEVsemantic aliases/family/history/legacyhold reconciliation incomplete.",
+    "No modelselection lock or actualDEV/TEST evaluation; TESTresults never used for tuning.",
+    "Sequential Codexcontentreview,not human/expert review. No rawcorpus,individualQA,annotations,vectors orweights published."
+  ],
+  "evidence_sha256": {
+    "stage290_source_disposition_review.json": "2648d42134bd65252f65483e1bcc67379ed2fa09f0a5ddaa4c5acc4182468723",
+    "stage293_source_disposition_review.json": "88d0a5cb6d8239f75ecc9c1adbd9302e72be4d1772c8f013b358ce5db2a6ded9",
+    "stage294_scope_and_rights_review.json": "bb23c7c851ab4bd5468df98021509f2e3ab19ce7e3585ea8ea72d3307d7c7d9e",
+    "stage294_summary.json": "539efd5bd4cdc8a6a60ae12b68558e609160e0a64de99386b01f1a46f369606b",
+    "review_pool_128_clearance_ledger.json": "b2ceaad07fceb5c9bdcede310e0dfaa070072df2769c07f0fe57cb9fc493893e",
+    "provisional_item_pool_128_validation.json": "fc057d74cc0d6aadc8fa7a1b551206a798739898283bf37d378e7db604ff910c",
+    "stage294_dev_readiness.json": "7a8416f8b3ebee1de009c3f662db39ff04584d15b1ce6d25e8f48a5c765c6b54",
+    "stage294_all_test_declared_span_mapping.json": "aa77203248b0af1bc885ae6951d35f90ca3b79fb14d2bcd4868684d1933454fd",
+    "stage294_prescreen_count_erratum.json": "cd88280a5b80a0db70584bff876fbf777863a70e07d984b7a49d4586ab090307"
+  }
+}

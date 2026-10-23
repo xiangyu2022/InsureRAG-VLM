@@ -1,0 +1,197 @@
+{
+  "created_utc": "2026-10-20T18:22:27.398168+00:00",
+  "status": "PROVISIONAL_995_SUPPORT_310_PAUSE_AFTER_BATCH_NOT_ACCEPTED",
+  "reviewer_type": "Single sequential Codex content review,not human or expert",
+  "pool": 170,
+  "snapshot": 36,
+  "global_candidates": 150,
+  "test_provisional": 995,
+  "dev_provisional": 57,
+  "test_families": 186,
+  "accepted_test": 0,
+  "accepted_dev": 0,
+  "frozen": false,
+  "test_tasks": {
+    "ordinary_qa": 596,
+    "numerical_calculation": 150,
+    "multi_evidence": 149,
+    "insufficient_evidence": 100
+  },
+  "target_test_tasks": {
+    "ordinary_qa": 600,
+    "numerical_calculation": 150,
+    "multi_evidence": 150,
+    "insufficient_evidence": 100
+  },
+  "coverage_shortfall": {
+    "ordinary_qa": 4,
+    "multi_evidence": 1
+  },
+  "coverage_validation_errors": [
+    "test_count_below_target",
+    "task_count_below_target:ordinary_qa",
+    "task_count_below_target:multi_evidence"
+  ],
+  "item_errors": {},
+  "declared_mapping": {
+    "complete": 884,
+    "pending": 111,
+    "pending_sources": 24
+  },
+  "necessary_support": {
+    "annotated_items": 310,
+    "answerable_items": 279,
+    "necessary_units": 419,
+    "refusal_diagnostics": 31,
+    "remaining_items": 685,
+    "global_alias_clearance": false,
+    "whole_TEST_clearance": false
+  },
+  "reconciliation": {
+    "previous_stage718": {
+      "TEST_denominator": 1000,
+      "pool": 169,
+      "mapped": 883,
+      "unmapped": 117,
+      "support_annotated": 250,
+      "support_pending": 750
+    },
+    "current": {
+      "TEST_denominator": 995,
+      "pool": 170,
+      "mapped": 884,
+      "unmapped": 111,
+      "support_annotated": 310,
+      "support_pending": 685,
+      "cross_tab": [
+        {
+          "mapping": "mapped",
+          "support": "annotated",
+          "items": 310
+        },
+        {
+          "mapping": "mapped",
+          "support": "pending",
+          "items": 574
+        },
+        {
+          "mapping": "unmapped",
+          "support": "pending",
+          "items": 111
+        }
+      ]
+    },
+    "membership_delta": {
+      "withdrawn_items": 6,
+      "withdrawn_previously_unmapped": 6,
+      "added_previously_reviewed_numeric_reserve": 1,
+      "added_mapped": 1,
+      "unchanged_common_items": 994
+    },
+    "annotation_delta": 60,
+    "original250_annotations_unchanged": true,
+    "historical_stage593_stage707": "Different layers;seeversioned reconciliation document.123unmapped and790unannotated cannot be subtracted as a trend."
+  },
+  "batch_changes": {
+    "new_support_items": 60,
+    "necessary_unit_increase": 74,
+    "new_refusal_diagnostics": 6,
+    "withdrawn_TEST": 6,
+    "selected_previously_reviewed_numeric_reserve": 1,
+    "new_drafts_not_counted": 5,
+    "older_drafts_deferred_family_cap": 3,
+    "fully_reviewed_unselected_reserves": 0,
+    "retained994TEST_QA_evidence_unchanged": true,
+    "audit_metadata_rebound_to_ledger170": true,
+    "old_holds_restored": 0,
+    "thresholds_or_quotas_changed": false
+  },
+  "sources": {
+    "include": 796,
+    "exclude": 606,
+    "pending": 24,
+    "open_issues": 22,
+    "total_issue_records": 69,
+    "resolved_by_whole_source_exclusion": 47,
+    "new_whole_source_exclusions": 3,
+    "new_missing_rights_issues_registered_and_resolved": 2,
+    "previous_open_issues_closed": 1,
+    "canonical_snapshot_unchanged": true,
+    "source_only_chunks": 4078,
+    "unused_excluded_source_chunks_removed": 2,
+    "version_check": {
+      "documents": 24,
+      "fetched": 17,
+      "extracted_body_unchanged": 15,
+      "changed_bodies_not_resolving_issues": 2,
+      "OPM_terms_scope_blocked_before_fetch": 7,
+      "new_snapshot_or_permission_approval": false
+    }
+  },
+  "checks": {
+    "ledger_links": 170,
+    "effective_holds": 451,
+    "active_held_items": 0,
+    "active_semantic_pairs": 61,
+    "source_and_pool_report_bindings_current": true,
+    "support_spans_verified": 485,
+    "alternative_chunk_sets_verified": 427,
+    "nonessential_reference_context_records_verified": 3
+  },
+  "tests": {
+    "passed": 102,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 0.434,
+    "modules": [
+      "test_holdout_source_urls.py",
+      "test_holdout_authoring_preflight.py",
+      "test_holdout_source_state.py",
+      "test_holdout_quality.py",
+      "test_holdout_corpus.py",
+      "test_holdout_dev_runner.py",
+      "test_holdout_pdf_layout.py"
+    ],
+    "scope": "Seven explicitly named modules only;no recursive local test-tree traversal",
+    "production_code_unchanged_from": "9c82fc5ecfc1a6299bb426b664eccf97d28ca86a"
+  },
+  "usage": {
+    "new_vectors": 0,
+    "embedding_forward_calls": 0,
+    "generation_calls": 0,
+    "paid_API_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0,
+    "subagents": 0,
+    "network": "One bounded24documentversion pass plus initialCanada diagnostic and official-site lookups;no repeated blocked OPM requests. Network request total not asserted.",
+    "deterministic_candidate_audits": "Five drafts only;not a full candidate regeneration. Pending semantic/fullnearest review remains uncounted."
+  },
+  "previous_exact_commit_CI": {
+    "commit": "9c82fc5ecfc1a6299bb426b664eccf97d28ca86a",
+    "run_id": 39467925558,
+    "all5passed": true
+  },
+  "evidence_sha256": {
+    "stage721_source_disposition_review.json": "6ea5ed15d4351b7f99de0c2a8adcd8947f0d3ff1461124b8a205072ce1f98b08",
+    "stage725_source_disposition_review.json": "7df57cbf53a931bd9ad3a8c605acce81de0bbe136930c6d6f8f65bb6b1bd0492",
+    "stage725_inclusion_manifest_draft.json": "9e0af0efa0b8a59b3d221879e705a72f87e7bc0907fc8a1985cbe2bac5a7f4f7",
+    "stage725_source_consistency_issue_register.json": "f5f0823b40f6e08584892e61e0e79ee83ba21f74f1aea62caa147306309aee23",
+    "stage726_global_preflight.json": "3bc4a788b551a3134f504231693227cfafa88fa3b5b1d70947dbb0e75cf32674",
+    "stage726_all_test_declared_span_mapping.json": "0cd72d4c685fcc7172b8adf2c56a9849d3df023f82a33fa4b327c077d49dd09c",
+    "stage730_test_support_units_draft.json": "9e87dac98655b9d157404d408e1dad8d8400307c0f07e42ffc883116635c8ec4",
+    "stage731_support_mapping_validation.json": "972ec4b5298943bff9ce42d3c2b697c8737bd6ce24b40366b93ae6e5c3461a69",
+    "stage731_current_layer_reconciliation.json": "f77bdc647e06e56047f3979ab79943e39885f4cb9ea6a6f2ec84daf4e363cd22",
+    "stage731_source_followup_summary.json": "01a6cc25e20544291ad367f391ed03da731cbd57bcef1786504c2f4e45d6e962",
+    "stage732_test_receipt.json": "b86bf4fe930434fb7b72ce9cbd1f5f4bb18ab0b692fa2ed9a3c88ae4584c418e"
+  },
+  "remaining": [
+    "5independentTESTitems to restore unchanged quotas;five private drafts not counted.",
+    "685support annotations:574mapped but unannotated,111unmapped.",
+    "24pending sources/22openissues plusglobalaliases,family,historyandlegacy acceptance gates.",
+    "SevenOPMrefreshesblockedbytermsredirectscopeguard;no retry or bypass.",
+    "Ollamaunavailable;realgenerationpaused.",
+    "StopafterthisbatchandoneexactcommitCIperuserbudgetinstruction."
+  ]
+}

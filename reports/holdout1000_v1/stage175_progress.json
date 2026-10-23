@@ -1,0 +1,195 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 790,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 490,
+    "insufficient_evidence": 69,
+    "multi_evidence": 114,
+    "numerical_calculation": 117
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 161,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 49,
+    "california_cdi": 45,
+    "wisconsin_oci": 63,
+    "utah_uid": 14,
+    "us_opm": 115,
+    "us_va": 41,
+    "us_tricare": 128,
+    "newjersey_dobi": 38,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 24,
+    "canada_esdc_ei": 19
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 110,
+    "numerical_calculation": 33,
+    "multi_evidence": 36,
+    "insufficient_evidence": 31
+  },
+  "created_utc": "2026-10-16T06:20:32.648933+00:00",
+  "status": "CONSTRUCTION_AND_CORPUS_REVIEW_ACTIVE_NOT_FROZEN",
+  "remaining_independent_test": 210,
+  "question_batches": {
+    "stage168": {
+      "drafted": 6,
+      "retained": 6,
+      "ordinary": 3,
+      "numeric": 1,
+      "multi": 1,
+      "refusal": 1
+    },
+    "stage172": {
+      "drafted": 3,
+      "retained": 2,
+      "ordinary": 1,
+      "refusal": 1,
+      "historical_core_hold": 1
+    }
+  },
+  "corpus_preparation": {
+    "created_utc": "2026-10-16T06:04:08.608831+00:00",
+    "status": "PARTIAL_SOURCE_CORPUS_NOT_DEV_READY",
+    "test": 790,
+    "dev": 58,
+    "accepted": 0,
+    "frozen": false,
+    "source_dispositions": {
+      "pending": 1035,
+      "include": 173,
+      "exclude": 136
+    },
+    "new_dispositions": {
+      "include": 3
+    },
+    "partial_chunks": 390,
+    "max_tokens": 512,
+    "max_encoder_chars": 2400,
+    "all_included_characters_preserved": true,
+    "previous_chunks_unchanged": 369,
+    "old_chunks_retokenized": 0,
+    "dev_items_fully_mapped": 58,
+    "dev_declared_spans_mapped": 76,
+    "actual_dev_queries": 0,
+    "test_queries": 0,
+    "model_forwards": 0,
+    "source_requests": 0,
+    "count_note": "Pool107 finalization changed question count after immutable source171 summary; chunks and source dispositions unchanged."
+  },
+  "dev_support_review": {
+    "dev_items": 58,
+    "answerable": 47,
+    "refusal_context_only": 11,
+    "declared_spans_mapped": 76,
+    "necessary_units": 62,
+    "reviewed_spanish_aliases": 18,
+    "global_alias_review_complete": false,
+    "dev_QA_and_families_changed": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 58,
+    "source_count": 1344,
+    "generation_required": false
+  },
+  "validation": {
+    "retained_item_gate_errors": 0,
+    "global_dataset_gates_passed": false,
+    "remaining_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "unchanged_code_regression": {
+      "stage": 159,
+      "tests_passed": 534,
+      "subtests_passed": 58,
+      "explicit_top_level_test_files": 56
+    },
+    "code_or_tests_changed": false,
+    "changed_active_neighbors_reviewed": 40
+  },
+  "source_structure": {
+    "complete_EI_table_rows_with_exact_header_context": 41,
+    "RRB_canonical_article_roots_reconciled": 2,
+    "complete_RRB_list_members_with_exact_source_context": 4,
+    "previous_chunks_unchanged": 369,
+    "rendered_limits": {
+      "tokens": 512,
+      "characters": 2400
+    },
+    "old_chunks_retokenized": 0,
+    "all_included_primary_text_preserved": true,
+    "source_context_not_automatically_gold_alias": true
+  },
+  "metadata_errata": {
+    "old_Alberta_auto_task_insurance_type_corrected": 2,
+    "audited_questions_answers_evidence_tasks_ids_changed": false,
+    "old_vectors_reencoded": 0,
+    "original_audit_drafts_preserved": true
+  },
+  "usage": {
+    "new_source_requests": 0,
+    "paid_api_calls": 0,
+    "curation_vectors_since_published167": 9,
+    "curation_forward_batches": 2,
+    "old_vectors_reencoded": 0,
+    "historical_question_vectors_reused": 44581,
+    "corpus_model_forwards": 0,
+    "actual_dev_queries": 0,
+    "actual_test_queries": 0,
+    "generation_calls": 0,
+    "new_subagents": 0,
+    "model_downloads": 0,
+    "remaining_quota": "not observable"
+  },
+  "limits": [
+    "790 provisional TEST remains210short; accepted0 and unfrozen.",
+    "173included136excluded1035pending of1344sources; no unreviewed-source exclusion to obtain DEV scores.",
+    "390source-only chunks preserve all included primary text within512tokens/2400characters including copied context.",
+    "All prior question/source holds and15historical revocations retained. One new driver-exclusion draft held after content review despite passing automatic thresholds.",
+    "Global aliases and wholeDEV quality clearance unfinished. No realDEV/TEST inference, selection lock or generation.",
+    "Single sequential Codex content review; not human/expert adjudication. Raw sources, per-question data, review annotations and weights remain private."
+  ],
+  "evidence_sha256": {
+    "review_pool_107_clearance_ledger.json": "2be6be1d4a710c623a7d76e2bf4c922cb394dc66b173cf66c4b2335b6d0d4988",
+    "provisional_item_pool_107_validation.json": "9ebee42366c1b6883b14dcf60168f7c7fb759d6a4e2ed714da134b142ee6b053",
+    "stage168_final_review.json": "c328c60b1ae8e315289a8d3589ef99fa0690c32daa67a3c9d98c2aae2b4dcc39",
+    "stage172_final_review.json": "277733dd1027b2853fb800fd111448a48025ab45413c588d3891acab29f924fa",
+    "stage169_source_disposition_review.json": "5669e17498c737602a952e7a66cd81728f23d57afeb2f7e3e54736050e7e81ee",
+    "stage170_source_disposition_review.json": "102397f9df1510ffb2ff5f23524cc8b8daacc30d4b8394ebbcc961f686a1c8fd",
+    "stage171_source_disposition_review.json": "0b78ab5ccf775cc1f37f4061ba00f434a3316330cce47b161b2ca42241c224b7",
+    "stage175_dev_support_units_draft.json": "f9b75a849591e59d7056d268eed3a3424dea5498d605b730dc2f2288b8821c36",
+    "stage175_dev_readiness.json": "dbde4cdc901261da4e02d8f8f41ccc1b17d002837e01a48ec840979757e07d3f"
+  }
+}

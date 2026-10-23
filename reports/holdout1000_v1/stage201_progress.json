@@ -1,0 +1,118 @@
+{
+  "created_utc": "2026-10-16T09:51:23.410905+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 854,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 8,
+    "retained": 7,
+    "held": 1,
+    "retained_tasks": {
+      "numerical_calculation": 1,
+      "ordinary_qa": 5,
+      "insufficient_evidence": 1
+    }
+  },
+  "prior_checkpoint": "stage200_progress.json:847TEST/58DEV/169families",
+  "test_task_counts": {
+    "ordinary_qa": 535,
+    "insufficient_evidence": 76,
+    "multi_evidence": 119,
+    "numerical_calculation": 124
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 170,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 50,
+    "california_cdi": 50,
+    "wisconsin_oci": 63,
+    "utah_uid": 16,
+    "us_opm": 115,
+    "us_va": 41,
+    "us_tricare": 130,
+    "newjersey_dobi": 38,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 43,
+    "canada_esdc_ei": 47,
+    "newjersey_labor_leave": 7
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "changed_active_neighbors_reviewed": 2
+  },
+  "usage": {
+    "base_report_sha256": "59a6448f75bc8c856983c64db3bcedf4e9b78f2e5588d67bbfb0dca57987d245",
+    "base_candidates_sha256": "dabc71bfb429565a3c1004f49a7ca1020e6f7e4f4ec7f10ec1ba08bc2f40ecd7",
+    "new_candidates_sha256": "583f9a32ed4f0f22c9e515e77824a000881d4a120097fa1c1acc3171b6a5b811",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 3305,
+    "old_old_pairs_reused": 723,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 8,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "b05e830099284b676b6079e34247ecc77100e96523192be65cec12bf03934b1e",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 12,
+    "new_source_bytes": 765912,
+    "new_html_documents": 5,
+    "source_acquisition_accounted_in_stage99": false,
+    "new_pdf_documents": 0,
+    "browser_discovery_calls": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 246.39354789999197,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage201_source_decisions.json": "b0e6a5a6f600a5cb70ac79fb1605b34984e51d43c8429695f72acd1a3fb04650",
+    "stage201_final_review.json": "9a6657c79c17fc22f7bd08712a10918f5bb9d5cc69553d76dfccf25831ce6f02",
+    "review_pool_114_clearance_ledger.json": "3ee47accb3562da1ba93ceaec2dfae353f1cd0d07b31d606436247c7aa3d943e",
+    "provisional_item_pool_114.jsonl": "9dbb0bb59777c00ff8efb83c56387f05b682f146cd2454cb3c30e3b832479ece",
+    "provisional_item_pool_114_validation.json": "cbe6b9b42dae771238f4791e84aea8dfb01c7158e7ffc650c17e3832ce0e831c"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 65,
+    "numerical_calculation": 26,
+    "multi_evidence": 31,
+    "insufficient_evidence": 24
+  },
+  "limits": [
+    "146 independent TEST still needed;DEVminima provisionallymet.",
+    "Snapshot26 extends1383 unchanged documents to1388; 2317 sourceFAQ unchanged; no old vectors reencoded.",
+    "7independenttasks retained:5ordinary,1numeric,0multi,1refusal. Onejobprotectionitemheldforincompleteevidencecoverageofadditionalanswerassertion. NoDEVmovementorholdrelaxation.",
+    "Nearesthistory andnew/changedcandidate relations reviewed; seehashboundcontentrecords.",
+    "Prior metadata errata andall inheritedholds preserved; newholdsdocumentedinlocalledger.",
+    "Single sequentialCodexcontentreview, nothuman/expertreview."
+  ]
+}

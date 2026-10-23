@@ -1,0 +1,85 @@
+{
+  "created_utc": "2026-10-05T15:30:03.256873+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 249,
+    "dev": 40
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "new_test_items": 28,
+  "new_dev_items": 0,
+  "item_errors": {},
+  "dataset_gate_errors": [
+    "test_count_below_target",
+    "dev_count_below_target",
+    "too_few_document_groups",
+    "dev_task_count_below_target:numerical_calculation",
+    "dev_task_count_below_target:multi_evidence",
+    "dev_task_count_below_target:insufficient_evidence",
+    "task_count_below_target:ordinary_qa",
+    "task_count_below_target:numerical_calculation",
+    "task_count_below_target:multi_evidence",
+    "task_count_below_target:insufficient_evidence"
+  ],
+  "test_task_counts": {
+    "ordinary_qa": 196,
+    "insufficient_evidence": 12,
+    "multi_evidence": 22,
+    "numerical_calculation": 19
+  },
+  "test_publishers": 15,
+  "test_document_families": 92,
+  "rma_review": {
+    "source_documents_read": 9,
+    "candidates_triaged": 239,
+    "candidate_dispositions": {
+      "held_source": 136,
+      "provisional_item_pass": 28,
+      "reserved_not_cleared": 75
+    },
+    "whole_source_holds_added": 4,
+    "reviewed_family_components_added": 2,
+    "old_active_pool_neighbor_reviews": 8,
+    "old_refusal_delta_reviews": 21,
+    "prior_items_revoked": 0,
+    "omitted_raw_panels_excluded": 7
+  },
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "publisher_and_family_caps_pass": true,
+    "source_and_evidence_hashes_verified": true,
+    "dataset_gates_pass": false,
+    "targeted_tests": {
+      "command": "python -B -m pytest tests/test_holdout_quality.py tests/test_holdout_containment.py tests/test_holdout_faq_extraction.py tests/test_holdout_html_formats.py -q -p no:cacheprovider",
+      "passed": 42,
+      "seconds": 0.4,
+      "initial_invocation_note": "First invocation rejected unsupported --basetmp before collection; corrected invocation passed."
+    }
+  },
+  "usage": {
+    "new_source_requests": 0,
+    "new_model_runs": 0,
+    "new_subagents": 0,
+    "history_method": "142unique hash-verified byte-offset lookups; no repeated full-history screening"
+  },
+  "source_holds": 112,
+  "evidence_sha256": {
+    "stage9_rma_final_review.json": "28deda8556fe9348d8059e1752b62de11a6809b9ace3b2bb93f712710a038098",
+    "review_pool_13_clearance_ledger.json": "ec210c5c78a161af5236370b40f098ce60b1141967b110842778aae399ed928b",
+    "provisional_item_pool_13.jsonl": "6a727ac08c044312d484c7deba974eee19a3916fa472005d31404ffaf4cc67fd",
+    "provisional_item_pool_13_validation.json": "976ed2c5bb3db4a0590913882a446d26e49544f1593457a7098de1db20b4a15a"
+  },
+  "public_registry_sha256": {
+    "document_holds.json": "dc7e5ec93b35f1edbdca4992eaebc4b9b3e2b0a0d6037351cad5e84c6b4c9ced",
+    "document_families.json": "84fb342b1d75c47bf3912aafeee8bcb3803aa794e64d16c43b9f3428bdb7c943"
+  },
+  "limits": [
+    "Accessible history only, no guarantee about denied files or public-model pretraining.",
+    "Unselected candidates remain reserved or held; no claim all239 individually cleared.",
+    "No new task-model inference, training, frozen or accepted benchmark.",
+    "75RMA candidates remain reserved; expanding acronyms or archival scope changes question text and requires new audits.",
+    "The1000test/50dev task and family targets remain unmet; RMA is a TEST-only publisher."
+  ]
+}

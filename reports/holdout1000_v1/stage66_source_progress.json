@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-07T11:33:10.382136+00:00",
+  "status": "SOURCE_ONLY_CHECKPOINT_NO_NEW_ITEMS",
+  "provisional_item_gate_counts": {
+    "test": 534,
+    "dev": 52
+  },
+  "accepted_test_items": 0,
+  "frozen": false,
+  "source_review": {
+    "documents_full_read": 3,
+    "new_drafts": 0,
+    "related_family_selection_blocked": true,
+    "redline_rendering_checked": true,
+    "historical_topic_matches": 0
+  },
+  "reason": "Related NC external-review pages require reconciliation with an existing whole-page timeline-conflict hold; no apparently correct paragraph used to bypass it.",
+  "usage": {
+    "new_source_requests": 0,
+    "model_processes": 0,
+    "forward_batches": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0
+  },
+  "local_evidence_sha256": "e2946d28676e38553edc8d753a4838783a9d9065b8896f04c2ddef25bb749c66",
+  "limits": [
+    "No item/pool/vector/hold-registry mutation. Existing formal source hold preserved.",
+    "No online acquisition, legal currency verification or finalQA inference.",
+    "No claim that low lexical overlap proves source-family independence."
+  ]
+}

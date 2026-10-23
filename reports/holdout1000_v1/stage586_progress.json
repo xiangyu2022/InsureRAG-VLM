@@ -1,0 +1,205 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 1000,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 150,
+    "ordinary_qa": 600
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 184,
+  "publisher_counts": {
+    "canada_fcac": 20,
+    "us_va": 42,
+    "us_tricare": 138,
+    "newjersey_dobi": 41,
+    "newyork_dfs": 53,
+    "california_cdi": 51,
+    "alberta_goa": 38,
+    "northcarolina_doi": 39,
+    "us_opm": 121,
+    "wisconsin_oci": 65,
+    "us_usda_rma": 40,
+    "au_privatehealth_ombudsman": 20,
+    "utah_uid": 15,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 40,
+    "canada_esdc_ei": 103,
+    "alabama_doi": 5,
+    "newjersey_labor_leave": 9,
+    "canada_vac": 28,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 20,
+    "australia_apra": 2
+  },
+  "pool_version": 154,
+  "admitted_global_candidate_version": 146,
+  "source_snapshot": 33,
+  "all_test_declared_span_mapping": {
+    "complete": 877,
+    "pending": 123
+  },
+  "global_preflight": {
+    "ledger_links_verified": 154,
+    "effective_inherited_item_holds": 437,
+    "held_active_items": 0,
+    "item_errors": 0,
+    "coverage_errors": [],
+    "global_acceptance_passed": false
+  },
+  "dev_support_review": {
+    "items": 57,
+    "declared_spans": 75,
+    "answerable": 46,
+    "refusals": 11,
+    "necessary_units": 61,
+    "reviewed_Spanish_aliases": 19,
+    "global_clearance_complete": false
+  },
+  "identified_semantic_pair_review": {
+    "original_pairs": 63,
+    "retained_active_pairs": 61,
+    "identity_rebind_version": 585,
+    "below_threshold_pairs_exhaustively_reviewed": false
+  },
+  "created_utc": "2026-10-18T22:21:21.173565+00:00",
+  "status": "PROVISIONAL_1000_RESTORED_AFTER_SOURCE_WITHDRAWAL_GLOBAL_ACCEPTANCE_PENDING",
+  "corpus_preparation": {
+    "documents": 1426,
+    "include": 790,
+    "exclude": 519,
+    "pending": 117,
+    "partial_chunks": 3920,
+    "pending_sources_without_admission_review_record": 0
+  },
+  "source_quality_issues": {
+    "mandatory_register_version": 582,
+    "total_recorded_issues": 66,
+    "open_issues": 53,
+    "resolved_for_current_corpus_by_whole_source_exclusion": 13
+  },
+  "pdf_layout_preparation": {
+    "source_pages": 35,
+    "source_words": 13377,
+    "all_words_assigned_exactly_once": true,
+    "rendered_groups": 624,
+    "rendered_characters": 83584,
+    "geometry_straddles_above_one_point": 0,
+    "unchanged_normalized_word_order_pages_reused": 23,
+    "literal_word_order_review_complete": true,
+    "actual_renderer_passed": true,
+    "source_quality_or_rights_cleared": false,
+    "source_context_and_licensed_range_chunks_complete": false,
+    "new_extraction_admitted": false,
+    "canonical_snapshot_changed": false,
+    "evidence_rebinding_performed": false
+  },
+  "engineering": {
+    "module": "src/insurerag_vlm/holdout_pdf_layout.py",
+    "purpose": "Render an explicitly reviewed source-only word order with exact offsets, original geometric provenance, source/inventory/layout hashes and complete-word coverage; never infer source quality, rights or evidence clearance.",
+    "fail_closed": [
+      "Unreviewed layout or QA inputs",
+      "Changed source or inventory hash",
+      "Omitted, duplicated or out-of-range word assignments",
+      "Incomplete or reordered page inventory",
+      "Malformed geometry or unexpected payload fields"
+    ],
+    "production_pipeline_integration": false
+  },
+  "validation": {
+    "fresh_synthetic_tests_passed": 94,
+    "code_and_tests_unchanged_from": "30f844e03542fb70c764548fedcd576125b7ad9f",
+    "fresh_deterministic_checks": [
+      "One newly held source has no active QA;original15 andAB31withdrawals retained",
+      "All154ledger links and437 effective holds verified;none active",
+      "One replacement passed source/evidence/exact/containment/near/semantic content review",
+      "Original seed42,task quotas,family20 andpublisher200 caps preserved",
+      "All1000declaredTESTspan mappings recomputed:877complete123pending",
+      "DEV content,61units,19reviewedaliases andtheir chunksets unchanged;no globalalias clearance",
+      "All61active semantic pairs retain previously reviewed identities",
+      "DEV readiness remains false"
+    ],
+    "global_dataset_gates_passed": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "previous_exact_commit_ci": {
+    "commit": "77ca65a718f0e3eab6e63f96cbf5d81bad7832e0",
+    "run_id": 39170381185,
+    "all_five_jobs_success": true
+  },
+  "limits": [
+    "1000 is provisional; global independent-benchmark acceptance remains incomplete.",
+    "117 pending source decisions,53 open issues and global support/alias/family/history/legacy checks remain.",
+    "877 complete declared mappings do not establish necessary-support or semantic-alias clearance.",
+    "PDF literal order passed, but source contexts,licensed ranges andan original unit ambiguity remain unresolved; no source admission or canonical replacement.",
+    "Registered generation runtime unavailable at last check; no selection lock,freeze or final evaluation.",
+    "Only aggregate summaries and source-hold metadata published; raw sources,QA,annotations andweights remain local."
+  ],
+  "evidence_sha256": {
+    "stage578_source_disposition_review.json": "5f3b08c10c7e55ef0a9d5c6253f988d391b8b2e4f300b834446d802894b6b4db",
+    "stage580_source_disposition_review.json": "cd2a66ee244d5d3ada14cb5810d99d1b4c4d99bceda25384f1ad7c390eeddec3",
+    "stage582_source_scope_review.json": "e21fa35777595d4364000a37c5c8b38aa0fd0b9261b17c82ce19e9a356c9edef",
+    "stage583_content_review.json": "3d83fbea3c08f51a2939023035df05c7307f76c4814c6527af84c8ada1cbd7e2",
+    "stage584_selection_review.json": "8fdd72a6136f5a2334217344c4c2ed6e14a40a159f22e9c854f0420ef6524aeb",
+    "stage585_global_preflight.json": "3a577d6063f12ed11bbafa48ce3424305f24a05acd89b9b6d79a33f404fc48cd",
+    "stage585_all_test_declared_span_mapping.json": "a4765e466afa0220a19f256235cf3ea38fe761baaa971f81bab8f723fb4c3318",
+    "stage585_test_receipt.json": "46d16da35bf9614093381a909de504c2477d57073dd57ce577a88b49c133a1b0",
+    "stage577_publication_receipt.json": "765ba551c25fca37471ecab41946b9095c290476552f5b5fe93833af29a42997"
+  },
+  "source_review_since_stage577": {
+    "new_inclusions": 2,
+    "new_exclusions": 4,
+    "remaining_pending_reduction": 6,
+    "new_chunks": 2,
+    "old_chunks_unchanged": 3918,
+    "old_chunks_retokenized": 0,
+    "source_withdrawn_active_TEST": 1,
+    "replacement_TEST_individually_reviewed_and_selected": 1,
+    "old_nonselected_ordinary_reserves_still_family_capped": 3,
+    "seed": 42,
+    "thresholds_or_quotas_relaxed": false,
+    "test_results_used": false
+  },
+  "usage_since_stage577": {
+    "web_search_tool_calls": 1,
+    "search_query_actions": 2,
+    "official_page_open_actions": 3,
+    "underlying_HTTP_requests_or_bytes": "not exposed",
+    "reference_pages_added_to_canonical_corpus": 0,
+    "local_embedding_forward_batches": 1,
+    "new_question_vectors": 1,
+    "prior_candidate_vectors_reused": 3533,
+    "history_question_vectors_reused": 44581,
+    "external_model_api_calls": 0,
+    "paid_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0
+  }
+}

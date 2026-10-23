@@ -1,0 +1,224 @@
+{
+  "created_utc": "2026-10-18T19:53:00.264816+00:00",
+  "status": "BELOW_TARGET_AFTER_SOURCE_WITHDRAWAL_NOT_FROZEN",
+  "provisional_item_gate_counts": {
+    "test": 995,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 599,
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 146
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 182,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 53,
+    "california_cdi": 50,
+    "wisconsin_oci": 65,
+    "utah_uid": 15,
+    "us_opm": 120,
+    "us_va": 42,
+    "us_tricare": 139,
+    "newjersey_dobi": 41,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 39,
+    "canada_esdc_ei": 103,
+    "newjersey_labor_leave": 8,
+    "canada_vac": 27,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 20
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 1,
+    "numerical_calculation": 4,
+    "multi_evidence": 0,
+    "insufficient_evidence": 0
+  },
+  "remaining_independent_test_to_item_count_minimum": 5,
+  "pool_version": 148,
+  "admitted_global_candidate_version": 142,
+  "source_snapshot": 33,
+  "source_withdrawal": {
+    "active_TEST_withdrawn": 5,
+    "unselected_reserve_withdrawn": 1,
+    "tasks": {
+      "ordinary_qa": 1,
+      "numerical_calculation": 4
+    },
+    "reason": "Unresolved whole-source scope: RRB disability-freeze Medicare termination versus separate age65 eligibility. Fresh official comparison did not resolve the cached wording; other plausible clauses were not salvaged.",
+    "reference_versions": [
+      "AB-31 December2025",
+      "Medicare for Railroad Families November2024"
+    ],
+    "earlier_revoked_items_restored": 0,
+    "new_replacements_selected": 0
+  },
+  "dev_support_review": {
+    "items": 57,
+    "declared_spans": 75,
+    "answerable": 46,
+    "refusals": 11,
+    "necessary_units": 61,
+    "reviewed_Spanish_aliases": 19,
+    "global_clearance_complete": false
+  },
+  "agent_review": {
+    "status": "SYNTHETIC_SCAFFOLD_REAL_MODEL_RUNTIME_UNAVAILABLE",
+    "fresh_synthetic_tests_passed": 48,
+    "implementation_unchanged": true,
+    "real_model_generation_calls": 0,
+    "report": "../agent_draft/status_20261018.json"
+  },
+  "corpus_preparation": {
+    "documents": 1426,
+    "exclude": 482,
+    "include": 786,
+    "pending": 158,
+    "partial_chunks": 3907
+  },
+  "all_test_declared_span_mapping": {
+    "complete": 864,
+    "pending": 131
+  },
+  "global_preflight": {
+    "ledger_links_verified": 148,
+    "effective_inherited_item_holds": 435,
+    "held_active_items": 0,
+    "item_errors": 0,
+    "coverage_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation"
+    ]
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "identified_semantic_pair_review": {
+    "original_pairs": 63,
+    "retained_active_pairs": 61,
+    "identity_subset_rebind_version": 516,
+    "below_threshold_pairs_exhaustively_reviewed": false
+  },
+  "source_quality_issues": {
+    "mandatory_register_version": 515,
+    "total_recorded_issues": 60,
+    "open_issues": 48,
+    "resolved_for_current_corpus_by_whole_source_exclusion": 12
+  },
+  "source_review_since_stage507": {
+    "complete_cached_bodies_read": 6,
+    "cached_body_characters": 66896,
+    "whole_source_exclusions": 5,
+    "pending_source_reduction": 4,
+    "one_previously_included_source_excluded": true,
+    "prior_chunks_removed": 2,
+    "remaining_chunks_unchanged": 3907
+  },
+  "replacement_preparation": {
+    "registration_version": 499,
+    "remaining_stage500_reviewed_unselected_reserves": 3,
+    "new_active_items": 0,
+    "quotas_thresholds_seed_unchanged": true
+  },
+  "authoring_preflight": {
+    "required_current_source_issue_register": true,
+    "current_hold_and_withdrawn_items_visible": true,
+    "private_packet_only": true,
+    "models_called": 0
+  },
+  "validation": {
+    "fresh_targeted_tests": {
+      "passed": 73,
+      "seconds": 0.5,
+      "files": [
+        "tests/test_holdout_authoring_preflight.py",
+        "tests/test_holdout_source_state.py",
+        "tests/test_holdout_quality.py",
+        "tests/test_holdout_corpus.py",
+        "tests/test_holdout_dev_runner.py"
+      ]
+    },
+    "global_dataset_gates_passed": false,
+    "retained_QA_evidence_families_and_DEV_support_hashes_verified": true
+  },
+  "usage": {
+    "scope": "Since stage507",
+    "new_question_vectors": 0,
+    "model_forward_batches": 0,
+    "paid_calls": 0,
+    "model_downloads": 0,
+    "new_corpus_documents": 0,
+    "official_reference_content_pages_fetched": 3,
+    "robots_and_terms_bodies_fetched": 2,
+    "reference_and_preflight_body_bytes": 294018,
+    "official_access_probe_response_body_read": false,
+    "proxy_or_security_settings_changed": false,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0
+  },
+  "previous_exact_commit_ci": {
+    "commit": "6c06f4760aeae86d4c265bd5f6e781db9486e7f7",
+    "run_id": 39159580329,
+    "job_count": 5,
+    "all_success": true,
+    "url": "https://github.com/xiangyu2022/InsureRAG-VLM/actions/runs/39159580329"
+  },
+  "limits": [
+    "995 provisional TEST is below the minimum; ordinary and numerical coverage gates explicitly fail.",
+    "158 pending source decisions,48 mandatory source issues and global necessary-support/alias/family/history/legacy checks remain.",
+    "Three reviewed stage500 reserves remain unselected; the stage504 refusal reserve was withdrawn with its held source.",
+    "Official RRB access works with existing settings. Changed terms bytes stopped content fetch until complete new rights review; no access guard or restriction was bypassed. New references are isolated and not admitted to the corpus.",
+    "Registered generation runtime still gives ConnectionError and Ollama is not on PATH; no service start, model download, model-selection lock or final evaluation.",
+    "Sequential Codex content review is not human or expert review. Raw sources, per-item data and weights remain local."
+  ],
+  "evidence_sha256": {
+    "stage508_source_disposition_review.json": "497d5592b22fa1cc463c3d18244475914706f0cbd0671214a484df4b00bb8677",
+    "stage510_access_probe.json": "577836a72aaebfad95c6f3a13c16b6f3140956c5566d6acade85a7e01b24d5e8",
+    "stage511_rrb_access_review.json": "fc54f176f558fd52aa53a0800ad040da4656632fdaaf64422c66969220f73bd9",
+    "stage512_rrb_terms_revalidation.json": "a4c59c887fbd541fa810d720727ae540163befdcffff53de4eeb15001e586a99",
+    "stage512_substantive_body_comparison.json": "4c5a2151997efc11c84fe65138644d224e90cdd5e49bd6ec0816f662acd53ce5",
+    "stage513_rrb_scope_review.json": "fb3f198990962e38d1b07dddb97d25907b7a6c394eb47ffc0a1fd2dcd8ca0e3c",
+    "stage513_rrb_fetch.json": "229d2b52e95c516ee97e4006f3c590827ba59bbaa188211c6c8d784066bbe46b",
+    "stage514_rrb_scope_review.json": "1aeae0eb287e51410583448fcdc67336ddb19354f58e8351d34fb227ab203b57",
+    "stage514_rrb_fetch.json": "0c148627958f5bccc607cd3d4a4ab1de7dda25fbaab7eda2a44bbf2204ac1132",
+    "stage515_source_scope_review.json": "17272e57387032177b93f8f6a97403b7d3b6cbcb5b0f456075e76a13c1ae356c",
+    "stage515_summary.json": "4500ab13dbe43a8a789b4b84cf68e57145edf28e80c6aaf737e4506dbf3202c2",
+    "stage515_source_consistency_issue_register.json": "0d618f4eed7b9a50e37d592f64939895cc2ada94ddddebaadcc53cb85c5fb6d6",
+    "stage516_global_preflight.json": "9af48d35961818f32c871fe51f4a00b319ca4bec4ffd1380430ad7fa168fc320",
+    "stage516_active_pair_subset.json": "7dca70c368d45877e9cfbc0f33e9bee3e68b5e98e55162c50f7c3286de5332f9",
+    "stage516_authoring_preflight.json": "9f341c67b0fa6cc224f15a4bdb9b77800dbda5a86a1000818e46db8a8c128cac",
+    "review_pool_148_clearance_ledger.json": "e0437b7edc6789a549ab5a5bef55f5b11119e15fcc2a9f9817eafe31a3f82297",
+    "stage507_publication_receipt.json": "30016f525980249e3c81da90a1bd67ab1ba6c87e427ad6dc853172f5e35b7c8d"
+  }
+}

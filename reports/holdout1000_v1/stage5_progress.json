@@ -1,0 +1,117 @@
+{
+  "created_utc": "2026-10-04T19:25:49.864330+00:00",
+  "status": "CONSTRUCTION_IN_PROGRESS_NOT_ACCEPTED_BENCHMARK",
+  "previous_published_commit": "2c50f9a6eeec5a947fd2e77e63891303c280f75b",
+  "previous_exact_commit_ci": {
+    "run_id": 37223063176,
+    "conclusion": "success"
+  },
+  "provisional_item_gate_counts": {
+    "test": 137,
+    "dev": 26,
+    "total": 163
+  },
+  "accepted_test_items": 0,
+  "frozen": false,
+  "final_qa_inference_runs": 0,
+  "training_runs_this_construction": 0,
+  "current_validation_errors": [
+    "test_count_below_target",
+    "dev_count_below_target",
+    "publisher_overrepresentation",
+    "too_few_document_groups",
+    "dev_task_count_below_target:numerical_calculation",
+    "dev_task_count_below_target:multi_evidence",
+    "dev_task_count_below_target:insufficient_evidence",
+    "task_count_below_target:ordinary_qa",
+    "task_count_below_target:numerical_calculation",
+    "task_count_below_target:multi_evidence",
+    "task_count_below_target:insufficient_evidence"
+  ],
+  "test_task_counts": {
+    "ordinary_qa": 104,
+    "insufficient_evidence": 7,
+    "multi_evidence": 18,
+    "numerical_calculation": 8
+  },
+  "test_publishers": {
+    "northcarolina_doi": 12,
+    "canada_fcac": 7,
+    "newyork_dfs": 35,
+    "california_cdi": 1,
+    "wisconsin_oci": 7,
+    "utah_uid": 6,
+    "us_opm": 5,
+    "us_va": 21,
+    "us_tricare": 20,
+    "newjersey_dobi": 23
+  },
+  "test_document_families": 53,
+  "previous_clearances_revoked": {
+    "test": 15,
+    "dev": 1,
+    "reason_summary": "Source scope/currency/logic conflicts, arithmetic not requiring retrieval, and newly identified historical mortgage-disbursement overlap."
+  },
+  "new_candidates_retained": 87,
+  "same_id_repairs_counted_as_new": 0,
+  "extraction": {
+    "snapshot": "extraction_batch_08",
+    "documents": 1276,
+    "source_faq_candidates": 2036,
+    "non_html_xlsx_removed": 9,
+    "source_faq_bytes_identical_to_snapshot07": true,
+    "warning": "Extracted documents and queued candidates are not content/independence acceptance."
+  },
+  "quality_gate_changes": [
+    "Reject non-HTML binary/download payloads before FAQ extraction.",
+    "Verify evidence projection against source document hash and exact offsets before full-window containment audit; generic text mode explicitly unverified.",
+    "Require final source-hold and family registries; held secondary evidence blocks acceptance, family labels cannot override reviewed source hashes and exact-body aliases.",
+    "Require source-dependent numerical rule and explicit content-review necessity; arithmetic-only and weakly coupled questions held.",
+    "Require independent dev coverage across at least10families andfour tasks, with maximum20items/family; minimum50dev, preferred150, user test minimum1000 unchanged."
+  ],
+  "registry_counts": {
+    "document_holds": 56,
+    "reviewed_family_groups": 53
+  },
+  "verification": {
+    "full_unit_suite": {
+      "passed": 434,
+      "skipped": 6,
+      "subtests_passed": 58,
+      "seconds": 6.78
+    },
+    "git_diff_check": "passed",
+    "windows_test_execution": "Offline full suite used authorized elevated test execution after sandbox pytest temporary-directory ACL failure; no model or network test workload."
+  },
+  "evidence_sha256": {
+    "provisional_item_pool_05.jsonl": "0b9b819eac5d9c1bbc6ec25c03eb5b2ed134a43040c4435a884aa29eb0c8c8da",
+    "provisional_item_pool_05_validation.json": "d4dc238aac65ec4a005d406212a159ac646876f6b29aeae4f99fa6302e90b124",
+    "review_pool_05_clearance_ledger.json": "54ab819e2b62ad6a0cf26ba32902d577240b66337a1737c6ee2957d03886a64d",
+    "stage5_prior_clearance_revocations.json": "2a9301f27fb7b9e05e76fffa02543640f173b1249ac29472bb65dcdda16837c9",
+    "agent_sem05_summary.json": "b2cf07b6f100c66f4944fdbb812766e90bbb9636d24bec55ce05bf51ff99ae1b",
+    "agent_sem06_summary.json": "14e72a508a9814ea3e3373e957e40584857dba43801611c5e633783b4944afaa",
+    "agent_family01_findings.json": "353674409e84d0f7a771c48c407c48bf8f54a13f998ad5970b7c16f00885e8a7",
+    "agent_numeric01_neccessity_review.json": "8a1c29f4748c2bd7149ae2537e26479fe3d229b616e7fd022f055f2793e59fe3",
+    "agent_sem06_refusal_gap_findings.json": "cab025dc6bc2496242ac4c6f59d3b7ce98de9e01af31aaa0ee289b6d905adff2",
+    "extraction_batch_08/summary.json": "abc6e41dea10f88ba224035a79f95cceb6021dd2b014e70cba511572a3c2c168"
+  },
+  "pending_batches": {
+    "07": 47,
+    "08": 18,
+    "warning": "Candidate records under separate semantic/content audits, not additive accepted counts."
+  },
+  "access_and_reuse": {
+    "new_sources_approved": 0,
+    "ssa": "Stopped on live403.",
+    "manitoba": "Stopped on named-agent robots prohibition; one erroneous seed request and no-content-adoption preserved in local preflight and source_status.",
+    "ontario_fsra": "Conditional terms interpretation remains held; no bulk adoption.",
+    "pr_description": "Existing integration403 prevents description update; do not bypass. Draft remains unmerged; progress delivered through repository aggregate reports."
+  },
+  "limitations": [
+    "Provisional137test/26dev is a checkpoint, not1000accepted items or a final independence guarantee.",
+    "Current task/source/family quotas fail; continue suitable source acquisition/curation and content review.",
+    "All content reviews are Codex-agent reviews, not human or insurance-expert adjudication.",
+    "History covers accessible project caches only; known denied paths, unextracted PDFs and foundation pretraining remain unverified.",
+    "No raw sources, question/answer/evidence text, weights or private data included in this aggregate report."
+  ]
+}

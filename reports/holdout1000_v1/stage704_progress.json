@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-10-20T17:08:23.276000+00:00",
+  "status": "PROVISIONAL_1000_TEMPORAL_AMBIGUITY_REPLACEMENT",
+  "reviewer_type": "Single sequential Codex content review, not human or expert",
+  "test_provisional": 1000,
+  "dev_provisional": 57,
+  "test_document_families": 187,
+  "test_tasks": {
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 150,
+    "ordinary_qa": 600
+  },
+  "accepted_test": 0,
+  "accepted_dev": 0,
+  "frozen": false,
+  "pool_version": 169,
+  "clearance_ledger_version": 169,
+  "global_candidate_version": 150,
+  "document_snapshot": 36,
+  "review_since_stage701": {
+    "ambiguous_active_item_withdrawn": 1,
+    "already_reviewed_reserve_selected": 1,
+    "new_items_generated": 0,
+    "old_holds_restored": 0,
+    "reviewed_unselected_reserves": 4,
+    "reason": "Relative assessment-time window did not establish the source rule measured from the natural-hazard event.",
+    "thresholds_relaxed": false,
+    "quotas_changed": false
+  },
+  "support": {
+    "preserved_items": 210,
+    "preserved_units": 290,
+    "refusal_diagnostics": 21,
+    "remaining_items": 790,
+    "stage703_unfinalized_not_counted": true,
+    "global_clearance": false
+  },
+  "corpus": {
+    "included": 797,
+    "excluded": 602,
+    "pending": 27,
+    "open_issues": 24,
+    "partial_chunks": 4080
+  },
+  "validation": {
+    "pool_structural_errors": 0,
+    "item_errors": 0,
+    "hash_chain_links_verified": 169,
+    "effective_item_holds": 445,
+    "held_active_items": 0
+  },
+  "downstream_report_rebind_required": true,
+  "previous_pool_only_declared_mapping": {
+    "complete": 883,
+    "pending": 117,
+    "pending_sources": 26
+  },
+  "actual_DEV_inference": 0,
+  "actual_TEST_inference": 0,
+  "new_embeddings": 0,
+  "previous_exact_commit_ci": {
+    "commit": "30af51e097130175ae33357316e6a75532be1e67",
+    "run_id": 39188863457,
+    "all_five_jobs_success": true
+  },
+  "evidence_sha256": {
+    "stage704_content_review.json": "bef02b15c1f10c63a1342d4b386f8a042a7058fe645edad1f563a9778d91f79c",
+    "provisional_item_pool_169_validation.json": "00c78695d703e9cda0557c198d7d033cb6fee9abdaa3edca7268ee0d7fa64aee",
+    "stage704_resume_checkpoint.json": "63f0f798912d395df55f708742c5eec9dde82179b34ca98c5c86d568f45e3744",
+    "stage699_test_support_units_draft.json": "4e5a325512c8fa7c04721ebd10f933d7d7101364ec22b1fc1dac15fedd903509"
+  },
+  "limits": [
+    "Per-item provisional review is not global acceptance.",
+    "Source and support review, aliases and global contamination/family gates remain unfinished.",
+    "Downstream global/mapping/support report bindings must be refreshed for pool 169 before they can clear it.",
+    "No freeze, final evaluation, DEV selection lock or tuning on TEST outputs."
+  ]
+}

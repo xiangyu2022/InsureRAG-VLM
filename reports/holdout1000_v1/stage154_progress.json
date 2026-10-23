@@ -1,0 +1,184 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 771,
+    "dev": 58
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 478,
+    "insufficient_evidence": 67,
+    "multi_evidence": 111,
+    "numerical_calculation": 115
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 25,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 157,
+  "publisher_counts": {
+    "northcarolina_doi": 36,
+    "canada_fcac": 20,
+    "newyork_dfs": 49,
+    "california_cdi": 45,
+    "wisconsin_oci": 52,
+    "utah_uid": 14,
+    "us_opm": 115,
+    "us_va": 41,
+    "us_tricare": 124,
+    "newjersey_dobi": 38,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 3,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 24,
+    "canada_esdc_ei": 19
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 122,
+    "numerical_calculation": 35,
+    "multi_evidence": 39,
+    "insufficient_evidence": 33
+  },
+  "created_utc": "2026-10-16T04:51:38.516976+00:00",
+  "status": "CONSTRUCTION_AND_DEV_CORPUS_REVIEW_ACTIVE_NOT_FROZEN",
+  "remaining_independent_test": 229,
+  "question_batch": {
+    "stage151": {
+      "drafted": 5,
+      "retained_ordinary": 2,
+      "retained_multi": 1,
+      "retained_refusal": 1,
+      "held_historical_core_exposure": 1
+    }
+  },
+  "corpus_preparation": {
+    "created_utc": "2026-10-16T04:46:37.178366+00:00",
+    "status": "PARTIAL_SOURCE_CORPUS_NOT_DEV_READY",
+    "test": 771,
+    "dev": 58,
+    "accepted": 0,
+    "frozen": false,
+    "source_dispositions": {
+      "pending": 1082,
+      "exclude": 136,
+      "include": 126
+    },
+    "new_dispositions": {
+      "include": 15,
+      "pending": 5
+    },
+    "partial_chunks": 220,
+    "max_tokens": 512,
+    "max_chars": 2400,
+    "all_included_characters_preserved": true,
+    "previous_chunks_unchanged": 194,
+    "dev_items_fully_mapped": 58,
+    "dev_declared_spans_mapped": 76,
+    "lineage_bindings_verified": true,
+    "actual_dev_queries": 0,
+    "test_queries": 0,
+    "model_forwards": 0,
+    "source_requests": 0,
+    "count_note": "Current count after stage151; immutable stage153 corpus summary recorded767 before question finalization."
+  },
+  "corpus_since_stage141": {
+    "new_includes": 79,
+    "new_excludes": 21,
+    "pending_reduction": 100,
+    "new_chunks": 101,
+    "whole_source_exclusion_policy": "Entire redirect-only/outbound-link-only snapshots without substantive insurance information, entire non-insurance safety pages, or explicitly third-party restricted reprints. Unreviewed sources remain pending; no exclusions to obtain DEV scores."
+  },
+  "provenance_errata": {
+    "corrected_predecessor_hash_labels": 3,
+    "original_records_preserved": true,
+    "original_manifest_transitions_verified": true,
+    "source_content_or_disposition_changed_by_errata": false,
+    "prior_chunk_ids_offsets_text_unchanged": 180,
+    "chunk_provenance_hashes_rebound": 46
+  },
+  "dev_support_review": {
+    "dev_items": 58,
+    "answerable": 47,
+    "refusal_context_only": 11,
+    "declared_spans_mapped": 76,
+    "necessary_units": 62,
+    "reviewed_spanish_aliases": 18,
+    "compound_alias_rejected": 1,
+    "global_alias_review_complete": false,
+    "retained_dev_QA_and_families_changed": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 58,
+    "source_count": 1344,
+    "generation_required": false
+  },
+  "validation": {
+    "retained_item_gate_errors": 0,
+    "global_dataset_gates_passed": false,
+    "remaining_gate_errors": [
+      "test_count_below_target",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "latest_unchanged_code_regression": {
+      "stage": 134,
+      "tests_passed": 523,
+      "subtests_passed": 58,
+      "explicit_top_level_test_files": 56
+    },
+    "this_checkpoint_changed_code_or_tests": false
+  },
+  "usage": {
+    "new_source_requests": 0,
+    "paid_api_calls": 0,
+    "curation_vectors_since_published141": 5,
+    "curation_forward_batches": 1,
+    "old_candidate_vectors_reused": 3213,
+    "historical_question_vectors_reused": 44581,
+    "old_vectors_reencoded": 0,
+    "corpus_model_forwards": 0,
+    "actual_dev_queries": 0,
+    "actual_test_queries": 0,
+    "generation_calls": 0,
+    "new_subagents": 0,
+    "model_downloads": 0,
+    "remaining_quota": "not observable"
+  },
+  "limits": [
+    "771 provisional TEST remains229short; accepted0,unfrozen.",
+    "All1344sources require disposition:126included136excluded1082pending;5reviewed sources still need safe whole-source chunk structures.",
+    "220source-onlychunks preserve allincludedcharacters, atmost512tokens2400characters. No gold-filtered corpus.",
+    "Allpriorquestion/sourceholds remain. A newbid-bond draft failed historicalcontent review despite automatic scores belowthreshold.",
+    "Whole-corpus aliases andwholeDEVclearance remainunfinished. NoactualDEVscore, TESTinference, selectionlock or generation.",
+    "Single sequential Codex content review, nothuman/expertreview. Rawtext/QA/annotations/weights remainlocal."
+  ],
+  "evidence_sha256": {
+    "review_pool_103_clearance_ledger.json": "fdee2d47318e1ab7bfb138de7b429655882cc95bff4b024072edbae30a3d29eb",
+    "provisional_item_pool_103_validation.json": "fca1d74cc3e1aaec453d41e4cae0a32296baba037e57f367a7171776b4fdeb4f",
+    "stage151_final_review.json": "bec65caf2a9df9df716425e4aad438ae60adff69cd965c2db75572e1391352e5",
+    "stage152_lineage_errata.json": "85a4dc33937bf2aadf05d168d7e95819a545e8c6ab65d153ac149aa9f60daf7c",
+    "stage152_source_disposition_review.json": "fe1ef4a906bbebe13391aed786a6d967a33fb4b3d98205e469c51f7eb67adc88",
+    "stage153_source_disposition_review.json": "815f338e29fa231dc9c718a8767b1821f94023210729a84ccaa9349172f550bd",
+    "stage154_dev_support_units_draft.json": "5af5ec8d2741c45b1662289448e594b272e6bb31b773b36b780dcbff19f6b787",
+    "stage154_dev_readiness.json": "dbde4cdc901261da4e02d8f8f41ccc1b17d002837e01a48ec840979757e07d3f"
+  }
+}

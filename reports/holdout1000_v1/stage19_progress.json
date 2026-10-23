@@ -1,0 +1,97 @@
+{
+  "created_utc": "2026-10-05T21:57:35.881802+00:00",
+  "status": "CONSTRUCTION_ACTIVE_NOT_ACCEPTED_BENCHMARK",
+  "provisional_item_gate_counts": {
+    "test": 304,
+    "dev": 42
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "trial": {
+    "drafts": 12,
+    "retained": 7,
+    "held": 5,
+    "retained_tasks": {
+      "numerical_calculation": 2,
+      "multi_evidence": 1,
+      "insufficient_evidence": 1,
+      "ordinary_qa": 3
+    },
+    "prior_revocations": 0
+  },
+  "test_task_counts": {
+    "ordinary_qa": 218,
+    "insufficient_evidence": 20,
+    "multi_evidence": 33,
+    "numerical_calculation": 33
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 21,
+    "insufficient_evidence": 9,
+    "multi_evidence": 6,
+    "numerical_calculation": 6
+  },
+  "test_document_families": 101,
+  "net_new_families": 4,
+  "validation": {
+    "all_retained_item_gates_pass": true,
+    "dataset_gates_pass": false,
+    "dataset_gate_errors": [
+      "test_count_below_target",
+      "dev_count_below_target",
+      "dev_task_count_below_target:numerical_calculation",
+      "dev_task_count_below_target:multi_evidence",
+      "dev_task_count_below_target:insufficient_evidence",
+      "task_count_below_target:ordinary_qa",
+      "task_count_below_target:numerical_calculation",
+      "task_count_below_target:multi_evidence",
+      "task_count_below_target:insufficient_evidence"
+    ],
+    "new_history_flags": 0,
+    "new_semantic_pair_flags": 0,
+    "changed_active_neighbors_reviewed": 1
+  },
+  "usage": {
+    "base_report_sha256": "acfd511887b291f7a8c41b272064c083bfd862d27529c6203b65a9d1f10c981d",
+    "base_candidates_sha256": "960f7379bef90c8ced135a3e0b290b516a16035c0cdac6c3a986dd62ae6ef9ea",
+    "new_candidates_sha256": "6c3a32b99331943e7b66b0adc99dfc5f52d17a85b6e53a3ce73dfd7cbe60e45d",
+    "history_embeddings_reused": 44581,
+    "old_history_audit_rows_reused": 2610,
+    "old_old_pairs_reused": 660,
+    "candidate_vectors_bootstrapped_once": 0,
+    "new_candidate_vectors_encoded": 12,
+    "local_model_processes": 1,
+    "forward_batches": 1,
+    "external_model_api_calls": 0,
+    "model_downloads": 0,
+    "training_runs": 0,
+    "cache_manifest_sha256": "66f923f693bf5c4bd68430c414dac01822d7234ffd25a7a45bfd363d3e781698",
+    "cache_limit": "Candidate vector cache is bound to question, model, normalization and precision hashes. Old history audit rows and old-old pairs are preserved; new relations alone are computed.",
+    "new_source_requests": 0,
+    "new_subagents": 0,
+    "final_qa_inference_runs": 0,
+    "lexical_audit_seconds": 296.19805620005354,
+    "remaining_quota": "not observable"
+  },
+  "evidence_sha256": {
+    "stage19_source_decisions.json": "13764c140586bdce518d42b13917e95b90293545b9ad1d59cc31922c701718c3",
+    "stage19_final_review.json": "528559bc9c3218e5747a566327205dadc0099a173eb3a2a36b936227ca2cff39",
+    "review_pool_22_clearance_ledger.json": "cc7bb4cf6705c5ef9c1302f4e61a39fefdca6297248d41947722b7a842331f82",
+    "provisional_item_pool_22.jsonl": "9ad89b5af4cbfd735664c193d14bdaa259af7e4e62d4c1f7eca84ef0bb6f08e5",
+    "provisional_item_pool_22_validation.json": "c48d06e313fe0f64ba5caafcbc18fc5b9002ef32f892104f111a5f7ba0008edd"
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 382,
+    "numerical_calculation": 117,
+    "multi_evidence": 117,
+    "insufficient_evidence": 80
+  },
+  "limits": [
+    "696 TEST short of1000; DEV8short; task quotas unmet.",
+    "Five drafts held for historical/active duplication or unresolved source authorship.",
+    "Four new TESTfamilies bring count to101; size/task gates still fail.",
+    "Prior15revocations and all inheritedholds preserved.",
+    "Previous published2549511 exact-head CI passed all5jobs."
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "provisional_item_gate_counts": {
+    "test": 1000,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 150,
+    "ordinary_qa": 600
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 183,
+  "publisher_counts": {
+    "canada_fcac": 20,
+    "us_va": 42,
+    "us_tricare": 139,
+    "newjersey_dobi": 41,
+    "newyork_dfs": 53,
+    "california_cdi": 51,
+    "alberta_goa": 38,
+    "northcarolina_doi": 39,
+    "us_opm": 120,
+    "wisconsin_oci": 65,
+    "us_usda_rma": 40,
+    "au_privatehealth_ombudsman": 20,
+    "utah_uid": 15,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 40,
+    "canada_esdc_ei": 103,
+    "alabama_doi": 5,
+    "newjersey_labor_leave": 9,
+    "canada_vac": 28,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 20,
+    "australia_apra": 2
+  },
+  "pool_version": 151,
+  "admitted_global_candidate_version": 145,
+  "source_snapshot": 33,
+  "all_test_declared_span_mapping": {
+    "complete": 876,
+    "pending": 124
+  },
+  "global_preflight": {
+    "ledger_links_verified": 151,
+    "effective_inherited_item_holds": 436,
+    "held_active_items": 0,
+    "item_errors": 0,
+    "coverage_errors": [],
+    "global_acceptance_passed": false
+  },
+  "dev_support_review": {
+    "items": 57,
+    "declared_spans": 75,
+    "answerable": 46,
+    "refusals": 11,
+    "necessary_units": 61,
+    "reviewed_Spanish_aliases": 19,
+    "global_clearance_complete": false
+  },
+  "identified_semantic_pair_review": {
+    "original_pairs": 63,
+    "retained_active_pairs": 61,
+    "identity_rebind_version": 526,
+    "below_threshold_pairs_exhaustively_reviewed": false
+  },
+  "created_utc": "2026-10-18T21:09:32.757804+00:00",
+  "status": "PROVISIONAL_1000_FEDVIP_SCOPE_RECONCILED_GLOBAL_ACCEPTANCE_PENDING",
+  "corpus_preparation": {
+    "documents": 1426,
+    "include": 788,
+    "exclude": 499,
+    "pending": 139,
+    "partial_chunks": 3918,
+    "full_body_unreviewed_pending": 23
+  },
+  "source_quality_issues": {
+    "mandatory_register_version": 546,
+    "total_recorded_issues": 66,
+    "open_issues": 54,
+    "resolved_for_current_corpus_by_whole_source_exclusion": 12
+  },
+  "pdf_layout_preparation": {
+    "source_pages": 35,
+    "source_words": 13377,
+    "all_words_assigned_exactly_once": true,
+    "table_or_worksheet_pages_reviewed": 10,
+    "geometry_straddles_above_one_point": 0,
+    "word_order_corrections": 1,
+    "unchanged_normalized_word_order_pages": 23,
+    "whole_layout_review_complete": false,
+    "new_extraction_admitted": false,
+    "evidence_rebinding_performed": false
+  },
+  "engineering": {
+    "module": "src/insurerag_vlm/holdout_pdf_layout.py",
+    "purpose": "Render an explicitly reviewed source-only word order with exact offsets, original geometric provenance, source/inventory/layout hashes and complete-word coverage; never infer source quality, rights or evidence clearance.",
+    "fail_closed": [
+      "Unreviewed layout or QA inputs",
+      "Changed source or inventory hash",
+      "Omitted, duplicated or out-of-range word assignments",
+      "Incomplete or reordered page inventory",
+      "Malformed geometry or unexpected payload fields"
+    ],
+    "production_pipeline_integration": false
+  },
+  "validation": {
+    "synthetic_tests_reused_from_exact_commit": {
+      "passed": 94,
+      "new_pdf_module_cases": 21,
+      "commit": "30f844e03542fb70c764548fedcd576125b7ad9f",
+      "code_and_test_hashes_unchanged": true
+    },
+    "fresh_deterministic_checks": [
+      "Whole included source preserved by three chunks",
+      "New chunks within512tokens/2400characters with exact source context",
+      "All3915previouschunks unchanged",
+      "Seven affectedTESTdeclaredspans mapped;993 unaffected mappings reused",
+      "Pool/public/ledger/semantic/support hashes verified",
+      "ActualDEVreadiness remains false"
+    ],
+    "new_chunk_tokens": [
+      486,
+      405,
+      148
+    ],
+    "new_chunk_encoder_chars": [
+      2390,
+      1936,
+      685
+    ],
+    "global_dataset_gates_passed": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "previous_exact_commit_ci": {
+    "commit": "30f844e03542fb70c764548fedcd576125b7ad9f",
+    "run_id": 39165454104,
+    "all_five_jobs_success": true
+  },
+  "limits": [
+    "1000 is provisional; global independent-benchmark acceptance remains incomplete.",
+    "139pending source decisions,54open issues and globalsupport/alias/family/history/legacy checks remain.",
+    "876complete declared mappings do not establish necessary-support or semantic-alias clearance.",
+    "PDF draft remains unadmitted; registered generation runtime unavailable at lastcheck. No selectionlock,freeze or final evaluation.",
+    "Only aggregate summaries are published in this checkpoint. Rawsource,QA,annotations andweights remain local."
+  ],
+  "evidence_sha256": {
+    "stage540_source_disposition_review.json": "7f2179948a8248e1588add9725b6bf9ce71c463d133838fbe5e5dd7ae8082937",
+    "stage542_source_disposition_review.json": "48c1742f967285c24bff15fd8c3305ef504c7ffbf26e3d5b13ea4f216d0a3e0e",
+    "stage544_source_disposition_review.json": "cef23eb6953ca099f654b963b1b021ef4d19b552b581c4343c1a68e0ccaa7e5c",
+    "stage546_source_disposition_review.json": "b91de74c0e350e2e2573e8b1ddb4318a8561667b31679dc079d70e21e663df55",
+    "stage547_global_preflight.json": "49250f0733ff86dc27294fea90f807a69516d56fbb0ec4582a33a08375f33cac",
+    "stage545_all_test_declared_span_mapping.json": "055cb18601dfdcd5aef3161c98f25ca238244a44e257b7d4b41c876ddddbd8d5",
+    "stage539_publication_receipt.json": "eaca9e88de8f898bd35e39b44ff0196a31e3cd316e9b3f9afd53f60ad56522b0"
+  },
+  "source_review_since_stage539": {
+    "full_cached_body_readings": 9,
+    "full_cached_body_characters": 132482,
+    "includes_counterpart_rereadings": true,
+    "additional_whole_source_exclusions_from_hash_verified_legacy_restrictions_without_claimed_full_rereading": 4,
+    "new_inclusions": 1,
+    "total_new_exclusions": 8,
+    "remaining_pending_reduction": 9,
+    "new_chunks": 3,
+    "old_chunks_unchanged": 3915,
+    "old_chunks_retokenized": 0,
+    "source_scope_reconciliation": "Prior non-Postal item-review scope was distinguished from the actual OPM authorship permission. Whole FEDVIP source and included overview reread; all cohorts, lists and qualifiers retained. Other OPM restrictions remain.",
+    "newly_mapped_existing_TEST": 7,
+    "questions_answers_or_individual_clearances_changed": 0
+  },
+  "usage_since_stage539": {
+    "network_source_requests": 0,
+    "local_model_forwards": 0,
+    "new_vectors": 0,
+    "paid_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_inference": 0,
+    "actual_TEST_inference": 0,
+    "tokenizer": "Existing local tokenizer only; no inference or download. A520token trial candidate was rejected by the chunk budget; all actual new chunks pass."
+  }
+}

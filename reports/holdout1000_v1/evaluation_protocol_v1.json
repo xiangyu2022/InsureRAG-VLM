@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "created_utc": "2026-10-16T00:29:50.027412+00:00",
+  "status": "PROSPECTIVE_DESIGN_NOT_DEV_SELECTION_LOCK_NOT_TEST_FREEZE",
+  "benchmark": "holdout1000_v1",
+  "purpose": "Independent consumer-insurance evidence retrieval and grounded QA; historical tests remain regression-only.",
+  "quality_gate": "At least1000 independent TEST, all existing source/split/task/family/rights/contamination gates pass; accepted0 until then. Never restore holds to meet quotas.",
+  "selection_scope": {
+    "data": "Only source-separated accepted DEV; existing minimum50 and per-task/family minima unchanged. Current58 is provisional, not an adequate sample for broad model superiority claims.",
+    "training": "No new fine-tuning scheduled. Existing query/reranker weights are fixed inherited artifacts; never train on holdout DEV/TEST or their source families.",
+    "candidate_grid": "Six registered retrieval arms only; no post-TEST grid expansion.",
+    "primary": "Document-family macro complete-evidence@5 on answerable DEV",
+    "tie_breaks": [
+      "family-macro Recall@5",
+      "family-macro nDCG@10",
+      "lower measured retrieval p95",
+      "registered arm order"
+    ],
+    "lock": "Write immutable selection lock with DEV data, corpus, model/tokenizer, code, prompt, packing, rubric and configuration hashes before any TEST model inference. Content-curation inspection is disclosed and must not guide inference tuning."
+  },
+  "arms": [
+    {
+      "id": "bm25",
+      "query": "none",
+      "lexical_weight": 1,
+      "cross_weight": 0
+    },
+    {
+      "id": "dense_original",
+      "query": "BAAI/bge-small-en-v1.5",
+      "lexical_weight": 0,
+      "cross_weight": 0
+    },
+    {
+      "id": "hybrid_original",
+      "query": "BAAI/bge-small-en-v1.5",
+      "lexical_weight": 0.2,
+      "cross_weight": 0
+    },
+    {
+      "id": "hybrid_adapted",
+      "query": "50/50 normalized original and inherited seed42/epoch2 query blend",
+      "lexical_weight": 0.2,
+      "cross_weight": 0
+    },
+    {
+      "id": "rerank_original",
+      "query": "BAAI/bge-small-en-v1.5",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    },
+    {
+      "id": "rerank_adapted",
+      "query": "50/50 normalized original and inherited seed42/epoch2 query blend",
+      "lexical_weight": 0.2,
+      "cross_weight": 0.5
+    }
+  ],
+  "retrieval_contract": {
+    "document_encoder": "Unchanged BAAI/bge-small-en-v1.5, normalized CLS,512token limit; all arms share corpus and vectors.",
+    "reranker": "Inherited MiniLM-L6-v2 evidence reranker seed123/epoch2; exact weight/tokenizer fingerprints verified before use.",
+    "candidate_budget": "Dense top100 plus positive-score BM25 top100 union<=200; deterministic score/ID ties. Sparse/dense solo arms return their own ranks.",
+    "fusion": "Existing per-query min-max score fusion; dense.8 + lexical.2; reranked arms blend fused score.5 + cross.5.",
+    "corpus_scope": "Global search over a source-only, permission-cleared corpus. No gold-document filter, evidence-only corpus, answer-key chunking, synthetic reference answers or label-guided candidate insertion.",
+    "corpus_gate": "Source-only inclusion manifest and deterministic chunking must be reviewed/hashed before DEV scoring. Preserve table headers and qualifiers; exclude third-party/permission-held text. Catalog existence alone is not corpus clearance.",
+    "relevance": "Freeze chunk IDs and all reviewed alternative support labels before model results. Binary annotated-chunk nDCG@10 and Recall@5 are label-based. Separately require every necessary evidence unit for complete-evidence@5; aliases cannot multiply independent evidence units. Mapping validation is still pending.",
+    "refusals": "Do not treat citations supporting an information gap as answer-relevance gold. Retrieval recall/nDCG/complete metrics N/A for refusal task; report gap-context retrieval separately with that diagnostic label."
+  },
+  "generation": {
+    "model": "Ollama qwen3.5:4b Q4_K_M, unadapted",
+    "digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 4096,
+    "num_predict": 384,
+    "top_k_evidence": 5,
+    "context_char_limit": 8000,
+    "per_page_char_limit": 2400,
+    "prompt": "Reuse research mode of answer_evidence_reranker; freeze exact prompt and guards on DEV. No adaptive model substitution or paid fallback.",
+    "test_comparisons": "Run dense_original and DEV-selected arm on all frozen TEST cases; if selected=dense_original, only one unique generation run. Retrieval all6 arms. Shared retrieved context may be cached only when exact prompt/model/parameters match.",
+    "trace": "Keep exact supplied evidence, prompt, raw output, served output, guard alterations, errors, truncation, model digest, timing and token counts private. Inferencer receives id/question/retrieved context only; no task label, answer, formula, gap annotations or gold spans.",
+    "runtime_status": "Historical Ollama endpoints timed out and usual installation/model manifest absent on resume; awaiting current path/address. No new generation performed."
+  },
+  "metrics": {
+    "retrieval": [
+      "Recall@5=annotated relevant chunks retrieved/annotated relevant chunks",
+      "Hit@5 separately",
+      "complete-evidence@5=all necessary support units retrieved",
+      "binary nDCG@10",
+      "complete evidence retained after context packing"
+    ],
+    "generation": [
+      "evidence-supported answer rate",
+      "citation ID validity distinct from claim support",
+      "citation support precision over emitted claim-citation pairs and citation completeness over factual claims",
+      "correct numeric result with unit/rounding",
+      "refusal precision and recall (positive class=unanswerable)",
+      "answerable coverage",
+      "error and truncated-output rates"
+    ],
+    "denominators": "Publish exact N, valid outputs, failures, numerators and denominators per task and arm. Retrieval/generation failures remain in intended answerable denominators as zero; refusal failures are not successful abstentions. Undefined ratios are null, never zero or100%. Raw/served evaluated separately.",
+    "semantic_review": "Before TEST inference select100paired cases,25per task, deterministically by seeded family-stratified sampling, at most2per family per task. Freeze IDs and rubric. Codex content review of support/citation claims on this subset only, not expert review and not whole-test accuracy; lexical checks on all outputs are separately labeled proxies. Record unresolved judgments and sensitivity bounds.",
+    "statistics": "Paired whole-document-family cluster bootstrap2000draws seed42; report question-macro and equal-family macro separately. Ratios such as refusal precision bootstrap summed numerator/denominator, not mean per-row ratios. Few-family strata carry explicit uncertainty limits. No independent-question CI, hidden denominator reduction or universal-superiority claim.",
+    "cost": "Log cold setup separately, warm query encode/retrieve/rerank/generate timings, p50/p95, total elapsed, actual token counts and hardware/library versions. Shared-desktop results are observations, not production latency guarantees."
+  },
+  "execution_gates": [
+    "Finish candidate quality and source-only corpus/relevance mapping",
+    "Verify current local Qwen runtime and model digest",
+    "Run DEV only and freeze selection/rubric/code",
+    "Global quality acceptance>=1000 then immutable TEST/corpus/code/model/prompt freeze",
+    "Run registered TEST arms once with resumable exact-hash outputs; no tuning from results",
+    "Publish aggregates/code/tests only; verify exact-head CI; do not merge"
+  ],
+  "results_status": "No new DEV comparison, TEST inference, final metrics, frozen dataset or end-to-end success claimed by this protocol."
+}

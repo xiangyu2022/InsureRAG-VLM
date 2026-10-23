@@ -1,0 +1,16 @@
+{
+  "status": "SOURCE_ONLY_NO_DRAFTS",
+  "source_hash_checks": 6,
+  "new_candidates": 0,
+  "new_model_calls": 0,
+  "new_source_requests": 0,
+  "provisional_test_items": 638,
+  "provisional_dev_items": 58,
+  "accepted_items": 0,
+  "frozen": false,
+  "source_selection_sha256": "e7d9a065cb1699b98045297f7886e094f6f3359541b9a45c900112864497047a",
+  "notes": [
+    "CachedOPM andWIprospects reviewed with explicit history/currency/family limits; no new questions counted.",
+    "No model,download,training or finalQA inference."
+  ]
+}

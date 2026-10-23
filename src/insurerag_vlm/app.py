@@ -1069,7 +1069,7 @@ class DemoHandler(BaseHTTPRequestHandler):
 
     @classmethod
     def use_uploaded_folder(cls, data_folder: Path, index_dir: Path, required_document: str | None = None) -> None:
-        config = ModelConfig(index_dir=index_dir, corpus_source="documents", pdf_render_dir=index_dir / "rendered_pages")
+        config = ModelConfig(index_dir=index_dir, corpus_source="documents", pdf_render_dir=index_dir / "rendered_pages", ingestion_policy="page_v2")
         pipeline = DocumentRetrievalPipeline(config)
         pipeline.build_index(data_folder)
         if required_document:
@@ -1104,6 +1104,12 @@ class DemoHandler(BaseHTTPRequestHandler):
                 (candidate_docs / filename).write_bytes(content)
                 cls.use_uploaded_folder(candidate_docs, candidate_root / "index", required_document=filename)
         except Exception:
+            # Preserve hash-named originals, compressed pages and pending reports
+            # outside active corpora before discarding the candidate index.
+            strict_artifacts = candidate_root / "index" / "strict_pages_v2"
+            if strict_artifacts.is_dir():
+                pending = UPLOAD_DIR.parent / "pending-page-v2" / candidate_root.name
+                shutil.copytree(strict_artifacts, pending)
             # Both paths are created locally above; never delete an active or
             # user-selected folder while rolling back a failed upload.
             if candidate_root.parent == sessions_root and candidate_root.name.startswith("candidate-"):

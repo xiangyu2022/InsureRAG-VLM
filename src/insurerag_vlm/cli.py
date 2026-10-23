@@ -63,12 +63,22 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="InsureRAG-VLM retrieval and inference pipeline")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
+    from .clause_store_cli import common_parser
+    knowledge_parser = subparsers.add_parser(
+        "knowledge-search", parents=[common_parser("", add_help=False)],
+        help="Retrieve clauses from the explicitly selected local Chroma store (no generation)")
+    knowledge_parser.add_argument("question")
+    knowledge_parser.add_argument("--top-k", type=int, default=5)
+    knowledge_parser.add_argument("--filters", help="JSON object of allowlisted equality filters")
+
     build_parser = subparsers.add_parser("build-index", help="Build a page index from a data folder")
     build_parser.add_argument("data_folder", type=Path, help="Path to the folder containing text, image, or PDF files")
     build_parser.add_argument("--retrieval-model", default=ModelConfig().retrieval_model)
     build_parser.add_argument("--index-dir", type=Path, default=ModelConfig().index_dir)
     build_parser.add_argument("--render-pdf-pages", action="store_true", help="Render PDF pages as images for page-image indexing")
     build_parser.add_argument("--pdf-render-dir", type=Path, default=ModelConfig().pdf_render_dir)
+    build_parser.add_argument("--ingestion-policy", choices=["legacy", "page_v2"], default="legacy",
+                              help="Historical index compatibility; use ingest-pages for strict Chroma ingestion")
     _add_retrieval_mode_args(build_parser)
 
     preprocess_parser = subparsers.add_parser(
@@ -328,6 +338,11 @@ def main() -> None:
     extract_parser.add_argument("--render", action="store_true", help="Render page images to the output directory")
 
     args = parser.parse_args()
+
+    if args.command == "knowledge-search":
+        from .clause_search import search_from_args
+        print(json.dumps(search_from_args(args), ensure_ascii=False, indent=2))
+        return
     use_hf_api = True
     if args.command in {"query", "evaluate"}:
         use_hf_api = not args.use_openai
@@ -336,6 +351,7 @@ def main() -> None:
 
     config = ModelConfig(
         retrieval_model=getattr(args, "retrieval_model", ModelConfig().retrieval_model),
+        ingestion_policy=getattr(args, "ingestion_policy", "legacy"),
         vlm_model=getattr(args, "vlm_model", ModelConfig().vlm_model),
         use_hf_api=use_hf_api,
         hf_api_token=getattr(args, "hf_token", None),

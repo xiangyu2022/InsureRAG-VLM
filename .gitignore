@@ -1,4 +1,5 @@
 __pycache__/
+/reports/holdout1000_v1/local/
 .pytest_cache/
 pytest-cache-files-*/
 # Keep full model outputs and public-source excerpts local; publish summaries only.
@@ -222,3 +223,9 @@ data/research_corpus/hicric_public_v1/*.jsonl
 /reports/retention_v2/valid_new_previous/scores.jsonl
 /reports/retention_v2/valid_new_public/scores.jsonl
 /reports/source_holdout_v1/local/
+
+# Private LangGraph state, draft answers, evidence and operator review records.
+.agent-state/
+
+# Private local clause database (never commit source data or vectors).
+.knowledge/

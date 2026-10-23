@@ -1,0 +1,177 @@
+{
+  "created_utc": "2026-10-16T23:41:37.013058+00:00",
+  "status": "THOUSAND_PROVISIONAL_ITEMS_GLOBAL_ACCEPTANCE_PENDING",
+  "provisional_item_gate_counts": {
+    "test": 1000,
+    "dev": 57
+  },
+  "accepted_test_items": 0,
+  "accepted_dev_items": 0,
+  "frozen": false,
+  "test_task_counts": {
+    "ordinary_qa": 600,
+    "insufficient_evidence": 100,
+    "multi_evidence": 150,
+    "numerical_calculation": 150
+  },
+  "dev_task_counts": {
+    "ordinary_qa": 24,
+    "insufficient_evidence": 11,
+    "multi_evidence": 12,
+    "numerical_calculation": 10
+  },
+  "test_document_families": 184,
+  "publisher_counts": {
+    "northcarolina_doi": 38,
+    "canada_fcac": 20,
+    "newyork_dfs": 53,
+    "california_cdi": 50,
+    "wisconsin_oci": 65,
+    "utah_uid": 15,
+    "us_opm": 120,
+    "us_va": 42,
+    "us_tricare": 140,
+    "newjersey_dobi": 41,
+    "alberta_goa": 38,
+    "australia_apra": 2,
+    "alabama_doi": 5,
+    "au_privatehealth_ombudsman": 20,
+    "us_usda_rma": 40,
+    "nz_nhc": 51,
+    "nz_mbie_consumer": 17,
+    "eu_youreurope": 23,
+    "us_rrb": 44,
+    "canada_esdc_ei": 103,
+    "newjersey_labor_leave": 8,
+    "canada_vac": 27,
+    "ontario_wsib": 19,
+    "canada_worksafebc": 19
+  },
+  "remaining_test_tasks": {
+    "ordinary_qa": 0,
+    "numerical_calculation": 0,
+    "multi_evidence": 0,
+    "insufficient_evidence": 0
+  },
+  "remaining_independent_test_to_item_count_minimum": 0,
+  "pool_version": 141,
+  "admitted_global_candidate_version": 139,
+  "source_snapshot": 33,
+  "corpus_preparation": {
+    "documents": 1426,
+    "exclude": 361,
+    "include": 599,
+    "pending": 466,
+    "partial_chunks": 1110
+  },
+  "all_test_declared_span_mapping": {
+    "complete": 567,
+    "pending": 433
+  },
+  "active_QA_source_dispositions": {
+    "include": 624,
+    "pending": 430,
+    "include+pending": 3
+  },
+  "active_source_dispositions": {
+    "include": 222,
+    "pending": 116
+  },
+  "dev_support_review": {
+    "items": 57,
+    "declared_spans": 75,
+    "answerable": 46,
+    "refusals": 11,
+    "necessary_units": 61,
+    "reviewed_Spanish_aliases": 19,
+    "global_clearance_complete": false
+  },
+  "dev_readiness": {
+    "ready": false,
+    "blockers": [
+      "Corpus: Every source needs completed include/exclude review",
+      "DEV clearance must explicitly authorize reviewed DEV retrieval",
+      "Unfinished review: dev_quality_gate_passed",
+      "Unfinished review: source_family_isolation_reviewed",
+      "Unfinished review: historical_contamination_reviewed",
+      "Unfinished review: equivalent_support_aliases_reviewed"
+    ],
+    "request_count": 57,
+    "source_count": 1426,
+    "generation_required": false
+  },
+  "changes_since_stage363": {
+    "reviewed_drafts": 25,
+    "new_TEST_retained": 15,
+    "new_draft_held": 10,
+    "existing_TEST_revoked_for_professional_licensing_scope": 1,
+    "net_TEST_increase": 14,
+    "source_bodies_fully_reviewed": 12,
+    "source_decisions": {
+      "include": 9,
+      "exclude": 3,
+      "pending": 0
+    },
+    "DEV_texts_changed": 0,
+    "new_DEV_support_aliases": 0,
+    "document_family_merge": "Two OPM FEDVIP overview/eligibility documents consolidated; same TEST split, below family cap."
+  },
+  "global_preflight": {
+    "item_validator_errors": 0,
+    "coverage_validator_errors": 0,
+    "ledger_links_verified": 141,
+    "effective_inherited_item_holds": 416,
+    "held_item_intersection": 0,
+    "active_semantic_threshold_flags": 0,
+    "active_candidate_similarity_edges_requiring_global_disposition_reconciliation": 63,
+    "global_review_complete": false
+  },
+  "validation": {
+    "focused_tests_passed": 82,
+    "explicit_top_level_test_files": 4,
+    "latest_full_code_regression": {
+      "commit": "114bf4119b5f87a184c635b9ed1f96d5ccccc50f",
+      "tests": 632,
+      "subtests": 58,
+      "explicit_files": 60
+    },
+    "global_dataset_gates_passed": false,
+    "log_sha256": "d3c18989396531b8a081734b76385e2816397e68d9998f84740bfdb96dda150e"
+  },
+  "usage": {
+    "scope": "Five admitted audit batches since stage363:14+4+3+1+3 drafted questions",
+    "new_question_vectors": 25,
+    "model_forward_batches": 5,
+    "old_candidate_vector_reencoding": 0,
+    "history_vectors_reused": 44581,
+    "source_network_calls": 0,
+    "external_model_API_calls": 0,
+    "model_downloads": 0,
+    "actual_DEV_queries": 0,
+    "actual_TEST_queries": 0,
+    "subagents": 0,
+    "remaining_quota": "not observable"
+  },
+  "limits": [
+    "1,000 is the provisional item count, not accepted/frozen benchmark size.",
+    "466 source decisions remain;116 pending sources support433 current TEST items.",
+    "Global equivalent aliases, source-family/history and legacy disposition reconciliation remain unfinished.",
+    "All inherited holds and revocations remain; no changed-ID restoration.",
+    "No actual DEV/TEST evaluation, configuration selection, selection lock or freeze. Local generation service unavailable at last check.",
+    "Single sequential Codex content review, not human/expert review. No raw corpus, individual QA or weights published.",
+    "Agent scaffold unchanged; no TEST-driven tuning."
+  ],
+  "evidence_sha256": {
+    "stage364_summary.json": "788a8663f1e52381961f923863d10c757196418c1c823bb2acdae8fa41d33f2a",
+    "stage366_source_disposition_review.json": "1b633f5d63ed7a35c4fefa5ba5f0b82661d6e681f18a6bf79e04e33e0efdcc7d",
+    "stage369_summary.json": "cc593242618a31e5f62d355baa7a16bb075e43c4f202b20f43b35ec3bd04dd65",
+    "stage371_summary.json": "7c2e5847870ebae817d9d77d1df1ed108bcf4b09b42374326f7931275d42e3fe",
+    "stage373_summary.json": "ead55627c76a552832d1ecc89c5bbd5d6f02fdb84320c234385b42910509a2a2",
+    "stage375_summary.json": "18e6a7e0842bd8cdee5f564a6aad54e7031168ad396b165a70c83a8bbd904ad8",
+    "stage377_summary.json": "e299e99b4a14556b7e211d96b428625f54833ef46afef5b230100024fd7d44d3",
+    "stage378_summary.json": "1d260d9758c219aff7332f30aecb2b958db321621c10060251a50198c92ade54",
+    "stage378_global_preflight.json": "f96563f00d55c67372b5c36f65a424b709b1c20a70911efcc917f7078928868f",
+    "stage378_dev_readiness.json": "7a8416f8b3ebee1de009c3f662db39ff04584d15b1ce6d25e8f48a5c765c6b54",
+    "provisional_item_pool_141_validation.json": "ebd0fe23ac82876573ec23626746aba5371ffb0243b0eaf6d3d14c60d08f9031"
+  }
+}
