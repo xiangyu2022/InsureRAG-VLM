@@ -147,3 +147,7 @@ which calls MCP search/read, verifies exact source offsets, and restarts into
 the same pending approval. That smoke run deliberately submits **no approval**.
 Its private session and receipt live under `.agent-state/mcp-integration-20261023/`.
 This establishes real-corpus workflow wiring, not real-model answer quality.
+
+## Page-aware evidence
+
+Pass `--record-schema 2` with the isolated v2 store/collection for [page-aware ingestion](PAGE_INGEST_V2.md). Complete layout/context metadata survives MCP and the approval checkpoint. Generated figure summaries cannot serve as verbatim source quotations or numeric operands; context prefixes are retrieval aids only. Schema-1 pending approvals retain compatibility for unchanged evidence hashes.

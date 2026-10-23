@@ -77,6 +77,8 @@ def main() -> None:
     build_parser.add_argument("--index-dir", type=Path, default=ModelConfig().index_dir)
     build_parser.add_argument("--render-pdf-pages", action="store_true", help="Render PDF pages as images for page-image indexing")
     build_parser.add_argument("--pdf-render-dir", type=Path, default=ModelConfig().pdf_render_dir)
+    build_parser.add_argument("--ingestion-policy", choices=["legacy", "page_v2"], default="legacy",
+                              help="Historical index compatibility; use ingest-pages for strict Chroma ingestion")
     _add_retrieval_mode_args(build_parser)
 
     preprocess_parser = subparsers.add_parser(
@@ -349,6 +351,7 @@ def main() -> None:
 
     config = ModelConfig(
         retrieval_model=getattr(args, "retrieval_model", ModelConfig().retrieval_model),
+        ingestion_policy=getattr(args, "ingestion_policy", "legacy"),
         vlm_model=getattr(args, "vlm_model", ModelConfig().vlm_model),
         use_hf_api=use_hf_api,
         hf_api_token=getattr(args, "hf_token", None),

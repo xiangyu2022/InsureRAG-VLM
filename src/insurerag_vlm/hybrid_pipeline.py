@@ -259,7 +259,12 @@ class DocumentRetrievalPipeline:
             else:
                 digest = cached[1]
             hashes[path.relative_to(root).as_posix()] = digest
-        return {"mode": mode, "root": str(root), "files_sha256": hashes}
+        identity = {"mode": mode, "root": str(root), "files_sha256": hashes}
+        if self.config.ingestion_policy != "legacy":
+            identity["ingestion_policy"] = self.config.ingestion_policy
+            identity["page_vision_model"] = self.config.page_vision_model
+            identity["page_vision_digest"] = self.config.page_vision_digest
+        return identity
 
     def _load_documents(self, data_folder: Path, render_pdf_pages: Optional[bool] = None) -> List[PageDocument]:
         render_pdf_pages = self.config.render_pdf_pages if render_pdf_pages is None else render_pdf_pages
@@ -389,6 +394,9 @@ class DocumentRetrievalPipeline:
         return corpus
 
     def _load_document_corpus(self, data_folder: Path, include_images: bool = False) -> Dict[str, List[Dict[str, Any]]]:
+        if self.config.ingestion_policy == "page_v2":
+            from .strict_page_pipeline import strict_document_corpus
+            return strict_document_corpus(self, data_folder)
         render_pdf_pages = include_images and self.config.enable_image_signal
         documents = self._load_documents(data_folder, render_pdf_pages=render_pdf_pages)
         statuses = [
@@ -511,11 +519,11 @@ class DocumentRetrievalPipeline:
         table_records = build_table_records(corpus["pages"])
         graph_edges = build_document_graph(corpus["pages"], table_records)
 
-        snippet_dense = self.retriever.embed_texts([record["text"] for record in corpus["snippets"]])
+        snippet_dense = self.retriever.embed_texts([record.get("retrieval_text", record["text"]) for record in corpus["snippets"]])
         page_dense = self.retriever.embed_texts([record["text"] for record in corpus["pages"]])
         np.save(paths["snippet_dense"], snippet_dense)
         np.save(paths["page_dense"], page_dense)
-        self.sparse_retriever.build_index([record["text"] for record in corpus["snippets"]], paths["snippet_sparse"])
+        self.sparse_retriever.build_index([record.get("retrieval_text", record["text"]) for record in corpus["snippets"]], paths["snippet_sparse"])
         self.sparse_retriever.build_index([record["text"] for record in corpus["pages"]], paths["page_sparse"])
         self.sparse_retriever.build_index([serialize_table_record(record) for record in table_records], paths["table_sparse"])
         self._write_jsonl(corpus["snippets"], paths["snippet_meta"])

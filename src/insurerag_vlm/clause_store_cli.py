@@ -12,6 +12,7 @@ def common_parser(description, *, add_help=True):
     parser = argparse.ArgumentParser(description=description, add_help=add_help)
     parser.add_argument("--store", type=Path, default=Path(".knowledge/chroma"))
     parser.add_argument("--collection", default="insurance_clauses")
+    parser.add_argument("--record-schema", type=int, choices=(1, 2), default=1)
     parser.add_argument("--model", default="local-hashing", help="local-hashing or existing local model directory; no downloads")
     parser.add_argument("--pooling", choices=("auto", "cls", "mean"), default="auto")
     parser.add_argument("--query-instruction", default="")
@@ -20,7 +21,7 @@ def common_parser(description, *, add_help=True):
 
 
 def store_options(args):
-    return {key: getattr(args, key) for key in ("collection", "model", "pooling", "query_instruction", "max_length")}
+    return {key: getattr(args, key) for key in ("collection", "model", "pooling", "query_instruction", "max_length", "record_schema")}
 
 
 def read_records(path):

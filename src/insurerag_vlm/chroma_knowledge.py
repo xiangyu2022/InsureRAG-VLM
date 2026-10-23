@@ -36,6 +36,9 @@ def hash_value(value, name):
 def normalize_record(record):
     """Preserve original fields; never infer a raw-source hash from snippet text."""
     row = dict(record)
+    if row.get("schema_version") == 2 or "page_metadata" in row:
+        from .page_schema import validate_page_record
+        validate_page_record(row)
     row["record_id"] = bounded_string(row.get("record_id"), "record_id", 2000)
     row["doc_id"] = bounded_string(row.get("doc_id"), "doc_id", 2000)
     row["text"] = bounded_string(row.get("text"), "text", 100000)
@@ -108,7 +111,7 @@ class ClauseStore:
     """
 
     def __init__(self, path, *, collection="insurance_clauses", model="local-hashing",
-                 pooling="auto", query_instruction="", max_length=None, writable=False):
+                 pooling="auto", query_instruction="", max_length=None, writable=False, record_schema=1):
         if model != "local-hashing" and not Path(model).is_dir():
             raise ValueError("Embedding model must be local-hashing or an existing local directory")
         self.embedder = EmbeddingRetriever(model, pooling=pooling, query_instruction=query_instruction,
@@ -119,6 +122,9 @@ class ClauseStore:
             raise ValueError("Embedding dimension must be explicit")
         self.path = Path(path).resolve()
         self.writable = writable
+        if record_schema not in (1, 2):
+            raise ValueError("Unsupported record schema")
+        self.record_schema = record_schema
         self.name = collection
         self._cache = None
         self._lock = None
@@ -137,6 +143,9 @@ class ClauseStore:
             self.client = chromadb.PersistentClient(path=str(self.path), settings=Settings(anonymized_telemetry=False))
             contract = {"insurerag_schema": 1, "embedding_contract": canonical(self.fingerprint),
                         "dimension": self.dimension, "distance": "cosine"}
+            if self.record_schema == 2:
+                contract["record_schema"] = 2
+                contract["context_template"] = "structure-prefix-v1"
             if self.writable:
                 self.collection = self.client.get_or_create_collection(
                     self.name, embedding_function=None, metadata=contract,
@@ -169,6 +178,10 @@ class ClauseStore:
         if not self.writable:
             raise PermissionError("This store was opened read-only")
         rows = [normalize_record(row) for row in records]
+        if any(row.get("schema_version", 1) != self.record_schema for row in rows):
+            raise ValueError("Record schema does not match isolated collection")
+        if self.record_schema == 2 and vectors is not None:
+            raise ValueError("V2 contextual vectors must be rebuilt; unbound legacy vectors are forbidden")
         ids = [row["evidence_id"] for row in rows]
         if len(set(ids)) != len(ids):
             raise ValueError("Duplicate record_id in import batch")
@@ -192,7 +205,7 @@ class ClauseStore:
         # multi-batch writes can safely be rerun; there is no automatic deletion.
         if changed:
             embeddings = self._vectors(vectors[changed] if vectors is not None else
-                                       self.embedder.embed_texts([rows[i]["text"] for i in changed]), len(changed))
+                                       self.embedder.embed_texts([rows[i].get("retrieval_text", rows[i]["text"]) for i in changed]), len(changed))
             for offset in range(0, len(changed), 200):
                 indices = changed[offset:offset + 200]
                 selected = [rows[i] for i in indices]
@@ -200,7 +213,7 @@ class ClauseStore:
                               "record_sha256", "jurisdiction", "publisher") if key in row},
                               "record_json": canonical(row)} for row in selected]
                 self.collection.upsert(ids=[row["evidence_id"] for row in selected],
-                                       documents=[row["text"] for row in selected], metadatas=metadatas,
+                                       documents=[row.get("retrieval_text", row["text"]) for row in selected], metadatas=metadatas,
                                        embeddings=embeddings[offset:offset + len(indices)].tolist())
             self._cache = None
         return {"total": len(rows), "written": len(changed), "unchanged": len(rows) - len(changed)}
@@ -215,7 +228,13 @@ class ClauseStore:
         row = json.loads(result["metadatas"][0]["record_json"])
         if expected_sha256 is not None and expected_sha256 != row["record_sha256"]:
             return {"status": "stale", "evidence_id": evidence_id, "record_sha256": row["record_sha256"]}
-        return {"status": "found", "evidence": row}
+        return {"status": "found", "evidence": row,
+                "source_text": row.get("source_text", row["text"]),
+                "generated_context": row.get("context_prefix"),
+                "context_status": row.get("context_metadata", {}).get("status", "unknown_legacy"),
+                "layout_compatibility":
+                {"status": "typed_v2" if row.get("schema_version") == 2 else "unknown_legacy",
+                 "reason": "Original legacy layout fields were not recorded; no reconstruction is implied" if row.get("schema_version", 1) == 1 else None}}
 
     @staticmethod
     def _where(filters):

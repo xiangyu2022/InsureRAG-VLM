@@ -460,3 +460,5 @@ adds frozen publisher splits, historical overlap checks and raw-versus-served
 diagnostics. No candidate was promoted: test publisher-macro retention rose while
 both arms retained 20/37 complete answers, its two-publisher interval crossed zero,
 and served answer coverage declined. It does not establish an end-to-end gain.
+
+Strict page ingestion is documented in [PAGE_INGEST_V2](docs/PAGE_INGEST_V2.md): page-first semantic structure, typed metadata, contextual retrieval, and isolated schema-v2 Chroma migration.

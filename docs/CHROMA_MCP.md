@@ -246,3 +246,7 @@ new datasets, or broaden access. A fresh clone without the private source cache
 cannot recreate this collection until that authorized snapshot is restored.
 The seven new synthetic adapter/CLI tests plus the sixteen existing Chroma tests
 passed (23 total); these are distinct from the actual-source smoke above.
+
+## Page schema 2
+
+New page-aware records use an isolated store/collection with `--record-schema 2`. See [PAGE_INGEST_V2](PAGE_INGEST_V2.md) for ingestion, context prefixes, full nested metadata and migration. The existing 303-chunk DOL collection is unchanged.

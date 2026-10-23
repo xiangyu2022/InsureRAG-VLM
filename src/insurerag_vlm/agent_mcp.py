@@ -22,11 +22,12 @@ class MCPClauseRetriever:
     One session owns the store lock for the entire Agent command, including review
     validation and release. A new process revalidates evidence before approval.
     """
-    def __init__(self, store, collection, *, timeout=10, filters=None):
+    def __init__(self, store, collection, *, timeout=10, filters=None, record_schema=1):
         self.store = str(Path(store).resolve())
         self.collection = collection
         self.timeout = timeout
         self.filters = filters
+        self.record_schema = record_schema
         self.calls = []
         self._verified = {}
 
@@ -34,7 +35,7 @@ class MCPClauseRetriever:
     async def _session(self):
         params = StdioServerParameters(command=sys.executable, cwd=str(Path(__file__).resolve().parents[2]),
             args=['-m', 'src.insurerag_vlm.clause_mcp', '--store', self.store,
-                  '--collection', self.collection, '--model', 'local-hashing'])
+                  '--collection', self.collection, '--model', 'local-hashing', '--record-schema', str(self.record_schema)])
         async with stdio_client(params) as (reader, writer):
             async with ClientSession(reader, writer) as session:
                 await asyncio.wait_for(session.initialize(), self.timeout)
@@ -76,10 +77,9 @@ class MCPClauseRetriever:
         checked = normalize_record(evidence)
         if checked != evidence:
             raise ValueError('MCP evidence integrity mismatch')
-        provenance = {key: evidence[key] for key in (
-            'evidence_id', 'record_sha256', 'source_sha256', 'text_sha256', 'doc_id', 'page_id',
-            'page_number', 'citation', 'char_start', 'char_end', 'snapshot', 'snapshot_sha256',
-            'source_header_date', 'retrieved_utc', 'applicability', 'offset_basis', 'source_hash_basis') if key in evidence}
+        provenance = {key: value for key, value in evidence.items() if key != 'text'}
+        if evidence.get('schema_version', 1) == 1:
+            provenance['layout_status'] = {'status': 'unknown_legacy', 'extractor': 'legacy-compat-v1', 'needs_review': True}
         source = canonical({key: evidence[key] for key in ('evidence_id', 'record_sha256', 'citation')})
         return {'source': source, 'text': evidence['text'], 'reference': provenance}
 
@@ -98,7 +98,10 @@ class MCPClauseRetriever:
                 raise ValueError('MCP evidence unavailable: ' + str(result.get('status')))
             self._verified[key] = self._row(result['evidence'])
         actual = self._verified[key]
-        if actual['reference'] != reference or actual['source'] != known['source']:
+        compatible_legacy = ('record_id' not in reference and actual['reference'].get('schema_version', 1) == 1)
+        metadata_matches = (all(actual['reference'].get(k) == v for k, v in reference.items()) if compatible_legacy
+                            else actual['reference'] == reference)
+        if not metadata_matches or actual['source'] != known['source']:
             raise ValueError('MCP evidence identity changed')
         if not actual['text'].startswith(known['text']):
             raise ValueError('MCP evidence text changed')

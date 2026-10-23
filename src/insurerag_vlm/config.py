@@ -67,7 +67,15 @@ class ModelConfig:
         "Context:\n{context}\n\nQuestion:\n{question}\n\nAnswer:"
     )
 
+    ingestion_policy: str = "legacy"
+    page_vision_model: str | None = None
+    page_vision_digest: str | None = None
+
     def __post_init__(self) -> None:
+        if self.ingestion_policy not in {"legacy", "page_v2"}:
+            raise ValueError("Invalid ingestion policy")
+        if bool(self.page_vision_model) != bool(self.page_vision_digest):
+            raise ValueError("Explicit local vision model and digest required together")
         if self.graph_mode not in {"off", "explicit", "all"}:
             raise ValueError("graph_mode must be off, explicit, or all")
         if self.graph_seed_pages < 1 or self.graph_max_hops < 0 or self.graph_max_expansions < 0:

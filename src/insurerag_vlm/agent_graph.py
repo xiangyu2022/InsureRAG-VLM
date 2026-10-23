@@ -86,6 +86,8 @@ def validate_claims(claims, evidence):
         for citation in sequence(claim['citations'], 5):
             keys(citation, ['id', 'quote'])
             eid, quote = string(citation['id'], 64), string(citation['quote'], 600)
+            if eid in evidence and evidence[eid].get('reference', {}).get('evidence_origin') == 'generated_summary':
+                raise InvalidAction('Generated figure summaries are retrieval aids, not verbatim source evidence')
             if eid not in evidence or quote not in evidence[eid]['text']:
                 raise InvalidAction('Citation must quote read evidence exactly')
     return copy.deepcopy(claims)
@@ -343,6 +345,10 @@ class ReviewAgent:
                                       'gaps', 'calculations', 'remaining', 'review_feedback')}
             view['called_parameters'] = [{'action': e['action'], 'parameters': e['parameters']}
                                          for e in s['trace']]
+            view = copy.deepcopy(view)
+            for row in view['evidence'].values():
+                if 'reference' in row:
+                    row['reference'] = {k: row['reference'][k] for k in ('doc_id', 'page_number', 'content_type', 'evidence_origin', 'context_prefix', 'record_sha256') if k in row['reference']}
             payload = encoded(view)
             prompt_charge = len((SYSTEM + payload).encode('utf8')) + 256
             charge = prompt_charge + lim.output_tokens
@@ -412,6 +418,10 @@ class ReviewAgent:
                             raise InvalidAction('MCP read differs from retrieved evidence')
                     s['evidence'][eid] = copy.deepcopy(s['known'][eid])
             elif kind == 'CALCULATE':
+                for operand in p.get('operands', []):
+                    source = operand.get('source') if isinstance(operand, dict) else None
+                    if source in s['evidence'] and s['evidence'][source].get('reference', {}).get('evidence_origin') == 'generated_summary':
+                        raise InvalidAction('Generated summaries cannot supply calculation operands')
                 s['calculations'].append(calculate(p, s['evidence'], s['question']))
             elif kind == 'ANSWER':
                 keys(p, ['claims'])

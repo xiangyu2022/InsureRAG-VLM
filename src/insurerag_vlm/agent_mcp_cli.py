@@ -58,6 +58,7 @@ def main(argv=None):
     parser.add_argument('--db', type=Path, default=Path('.agent-state/mcp-review.sqlite'))
     parser.add_argument('--store', type=Path, default=Path('.knowledge/dol-aca-20261001/db'))
     parser.add_argument('--collection', default='dol_aca_20261001')
+    parser.add_argument('--record-schema', type=int, choices=(1, 2), default=1)
     parser.add_argument('--controller', choices=['mock-excerpt', 'mock-refusal', 'ollama'], default='mock-excerpt')
     parser.add_argument('--model', default='ollama:qwen3.5:4b')
     parser.add_argument('--expected-digest')
@@ -74,6 +75,8 @@ def main(argv=None):
                       'embedding': 'local-hashing-512', 'controller': args.controller,
                       'model': args.model if args.controller == 'ollama' else None,
                       'model_digest': args.expected_digest, 'limitations': LIMITATIONS})
+    if args.record_schema != 1:
+        runtime = digest({'previous_runtime': runtime, 'record_schema': args.record_schema})
     limits = Limits(top_k=2, evidence_chars=1600, context_tokens=16384, token_budget=100000)
     args.db.parent.mkdir(parents=True, exist_ok=True)
     # Status needs only SQLite; rejection also works while MCP/model are unavailable.
@@ -89,12 +92,12 @@ def main(argv=None):
         result = run(None)
         calls = []
     else:
-        with MCPClauseRetriever(args.store, args.collection) as retriever:
+        with MCPClauseRetriever(args.store, args.collection, record_schema=args.record_schema) as retriever:
             result = run(retriever)
             calls = retriever.calls
     print(json.dumps({'controller': args.controller, 'model_quality_validated': False,
                       'limitations': LIMITATIONS, 'mcp_calls_this_command': calls, 'result': result},
-                     ensure_ascii=False, indent=2))
+                     ensure_ascii=True, indent=2))
 
 
 if __name__ == '__main__':
